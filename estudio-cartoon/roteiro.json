@@ -1,0 +1,88 @@
+{
+  "titulo": "Por que o céu é azul?",
+  "fps": 30,
+  "duracaoSegundos": 60,
+  "personagem": "tito",
+  "voz": {
+    "edge": "pt-BR-AntonioNeural",
+    "edgeRate": "+8%",
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48
+  },
+  "musica": {
+    "bpm": 100,
+    "tom": -9
+  },
+  "cenas": [
+    {
+      "id": "gancho",
+      "ato": "começo",
+      "falas": [
+        "Se a luz do Sol é branca, por que o céu é azul?"
+      ]
+    },
+    {
+      "id": "problema",
+      "ato": "começo",
+      "falas": [
+        "Parece mágica, mas é física!",
+        "E tudo começa lá no Sol.",
+        "Bora descobrir juntos?"
+      ]
+    },
+    {
+      "id": "prisma",
+      "ato": "desenvolvimento",
+      "falas": [
+        "A luz do Sol parece branca,",
+        "mas é uma mistura de todas as cores do arco-íris.",
+        "Vermelho, laranja, amarelo, verde, azul e violeta, tudo junto!"
+      ]
+    },
+    {
+      "id": "espalhamento",
+      "ato": "desenvolvimento",
+      "falas": [
+        "Quando ela chega na Terra, bate em partículas minúsculas do ar.",
+        "A luz azul quica muito mais que as outras cores,",
+        "e se espalha pelo céu inteiro!",
+        "Já o vermelho passa quase reto, como se nem visse o ar."
+      ]
+    },
+    {
+      "id": "violeta",
+      "ato": "desenvolvimento",
+      "falas": [
+        "E o violeta? Ele se espalha ainda mais,",
+        "mas o Sol manda pouco violeta, e nossos olhos enxergam melhor o azul."
+      ]
+    },
+    {
+      "id": "por-do-sol",
+      "ato": "desenvolvimento",
+      "falas": [
+        "No fim da tarde, a luz atravessa muito mais ar.",
+        "O azul se perde no caminho, e sobram o laranja e o vermelho!",
+        "Por isso o fim de tarde fica tão bonito!"
+      ]
+    },
+    {
+      "id": "marte",
+      "ato": "desenvolvimento",
+      "falas": [
+        "Em Marte é ao contrário: o céu é cor de caramelo, e o pôr do sol é azul!",
+        "Lá, a poeira fina do ar muda tudo!"
+      ]
+    },
+    {
+      "id": "conclusao",
+      "ato": "conclusão",
+      "falas": [
+        "Resumindo: o céu é azul porque o ar espalha a luz azul para todo lado.",
+        "Agora, quando olhar pra cima, você já sabe o segredo!",
+        "Que pergunta eu respondo no próximo vídeo? Comenta aqui!"
+      ]
+    }
+  ]
+}

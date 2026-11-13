@@ -1,54 +1,24 @@
-# Remotion video
+# Estúdio Cartoon: vídeos educativos animados 2D (Remotion)
 
-<p align="center">
-  <a href="https://github.com/remotion-dev/logo">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-dark.apng">
-      <img alt="Animated Remotion Logo" src="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-light.gif">
-    </picture>
-  </a>
-</p>
+Projeto Remotion com a skill **`cartoon-explainer`** (`.claude/skills/cartoon-explainer/SKILL.md`):
+vídeos verticais 9:16 (1080x1920, 30 fps, 60 s), com personagem cartoon consistente, cenários vetoriais,
+câmera, transições, narração em pt-BR, legendas sincronizadas, efeitos sonoros e música, exportados em MP4.
 
-Welcome to your Remotion project!
+Exemplo incluído: **"Por que o céu é azul?"** (`roteiro.json` + `src/cartoon/scenes/`).
 
-## Commands
+## Requisitos
+Node 20+, Python 3 com `numpy`, `ffmpeg`. Voz: `pip install edge-tts` (neural, recomendado) ou
+`apt install espeak-ng mbrola mbrola-br3` (offline).
 
-**Install Dependencies**
-
-```console
-npm i --loglevel=error
+## Comandos
+```bash
+npm install
+npm run audio    # roteiro.json → narração, música, SFX, src/cartoon/timeline.json
+npm run studio   # pré-visualização
+npm run render   # out/video.mp4
+npm run qa       # conferência final + out/qa/contato.png
+npm run video    # tudo de uma vez
 ```
 
-**Start Preview**
-
-```console
-npm run dev
-```
-
-**Render video**
-
-```console
-npx remotion render
-```
-
-**Upgrade Remotion**
-
-```console
-npx remotion upgrade
-```
-
-## Docs
-
-Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
-
-## Help
-
-We provide help on our [Discord server](https://discord.gg/6VzzNDwUwV).
-
-## Issues
-
-Found an issue with Remotion? [File an issue here](https://github.com/remotion-dev/remotion/issues/new).
-
-## License
-
-Note that for some entities a company license is needed. [Read the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
+Para pedir um vídeo novo ao Claude Code, abra-o nesta pasta e peça, por exemplo:
+"Use a skill cartoon-explainer para fazer um vídeo sobre como as abelhas fazem mel".

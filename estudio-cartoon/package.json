@@ -1,7 +1,7 @@
 {
   "name": "estudio-cartoon",
   "version": "1.0.0",
-  "description": "My Remotion video",
+  "description": "Estúdio de vídeos educativos animados em 2D (skill cartoon-explainer) com Remotion",
   "repository": {},
   "license": "UNLICENSED",
   "engines": {
@@ -9,7 +9,10 @@
   },
   "private": true,
   "dependencies": {
+    "@fontsource/baloo-2": "^5.3.0",
+    "@fontsource/nunito": "^5.3.0",
     "@remotion/cli": "4.0.543",
+    "@remotion/transitions": "^4.0.543",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "remotion": "4.0.543"
@@ -26,7 +29,14 @@
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc",
+    "audio": "python3 .claude/skills/cartoon-explainer/scripts/generate_audio.py",
+    "studio": "remotion studio",
+    "still": "remotion still CartoonExplainer out/thumb.png --frame=45",
+    "render": "remotion render CartoonExplainer out/video.mp4",
+    "qa": "python3 .claude/skills/cartoon-explainer/scripts/qa_check.py out/video.mp4",
+    "video": "npm run audio && npm run render && npm run qa",
+    "typecheck": "tsc --noEmit"
   },
   "allowScripts": {
     "esbuild": false
