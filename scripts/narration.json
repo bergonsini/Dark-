@@ -1,0 +1,48 @@
+{
+  "fps": 30,
+  "voice": {
+    "edge": "pt-BR-AntonioNeural",
+    "edgeRate": "+12%",
+    "mbrola": "mb-br3",
+    "espeakSpeed": 168,
+    "espeakPitch": 42
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "lines": ["Você sobreviveria um dia como homem das cavernas?"]
+    },
+    {
+      "id": "intro",
+      "lines": ["Há mais de dez mil anos,", "não existia casa,", "nem mercado,", "nem celular!"]
+    },
+    {
+      "id": "hunger",
+      "lines": ["Bateu a fome?", "Só tinha dois jeitos de comer."]
+    },
+    {
+      "id": "choice",
+      "lines": [
+        "Opção A: caçar um mamute gigante com uma lança.",
+        "Opção B: coletar frutas e raízes,",
+        "mas cuidado com as venenosas!"
+      ]
+    },
+    {
+      "id": "curiosity",
+      "lines": [
+        "Curiosidade:",
+        "o ser humano já usava o fogo há cerca de um milhão de anos.",
+        "E cozinhar a comida pode ter ajudado o nosso cérebro a crescer!"
+      ]
+    },
+    {
+      "id": "night",
+      "lines": ["À noite, todos se reuniam perto da fogueira,", "e pintavam histórias nas paredes da caverna."]
+    },
+    {
+      "id": "cta",
+      "lines": ["E você?", "Caçaria o mamute, ou coletaria frutas?", "Comenta aqui embaixo!"]
+    }
+  ]
+}

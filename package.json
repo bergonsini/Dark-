@@ -1,0 +1,28 @@
+{
+  "name": "caveman-reels",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vídeo vertical animado (Reels/TikTok) sobre a vida de um homem das cavernas, feito com Remotion",
+  "scripts": {
+    "audio": "python3 scripts/generate_audio.py",
+    "dev": "remotion studio",
+    "studio": "remotion studio",
+    "render": "remotion render CavemanReel out/homem-das-cavernas.mp4",
+    "still": "remotion still CavemanReel out/thumb.png --frame=45",
+    "build": "npm run audio && npm run render",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource/luckiest-guy": "^5.3.0",
+    "@fontsource/nunito": "^5.3.0",
+    "@remotion/cli": "^4.0.543",
+    "@remotion/transitions": "^4.0.543",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "^4.0.543"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "typescript": "^7.0.2"
+  }
+}

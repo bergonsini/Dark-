@@ -1,0 +1,18 @@
+export const C = {
+  skin: "#F2B27A",
+  skinShade: "#D98E57",
+  hairUgo: "#3B2314",
+  hairLia: "#E0602A",
+  furUgo: "#F2A23A",
+  furUgoSpot: "#8A4B1C",
+  furLia: "#4FB06B",
+  furLiaSpot: "#2E7A45",
+  outline: "#2A1A10",
+  white: "#FFFFFF",
+  yellow: "#FFD93B",
+  red: "#FF4D3D",
+  green: "#3DDC84",
+  blue: "#3DB2FF",
+  purple: "#9B5DE5",
+  dark: "#1B1020",
+};
