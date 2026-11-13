@@ -1,0 +1,15 @@
+{
+  "voice": "pm_alex",
+  "speed": 1.08,
+  "segments": [
+    { "id": "hook",     "pauseAfter": 0.35, "text": "Você sobreviveria um dia sendo um homem das cavernas?" },
+    { "id": "intro",    "pauseAfter": 0.30, "text": "Há mais de cem mil anos, esse é o Ugo. E o dia dele começa antes do sol nascer." },
+    { "id": "hunger",   "pauseAfter": 0.30, "text": "Sem mercado, sem geladeira... Se ele quiser comer, vai ter que se virar." },
+    { "id": "choice",   "pauseAfter": 0.35, "text": "Então, escolha: caçar um mamute gigante com uma lança... ou coletar frutas e raízes na floresta?" },
+    { "id": "hunt",     "pauseAfter": 0.25, "text": "Caçar enche a barriga do grupo por dias, mas um erro pode custar a vida." },
+    { "id": "gather",   "pauseAfter": 0.35, "text": "Coletar é mais seguro, mas exige andar quilômetros, todos os dias." },
+    { "id": "fire",     "pauseAfter": 0.30, "text": "À noite, o fogo era tudo: aquecia, espantava predadores e cozinhava a comida." },
+    { "id": "fact",     "pauseAfter": 0.35, "text": "Curiosidade: muitos cientistas acreditam que cozinhar os alimentos ajudou o nosso cérebro a crescer, porque a comida cozida libera muito mais energia." },
+    { "id": "cta",      "pauseAfter": 1.20, "text": "E você? Seria caçador ou coletor? Comenta aqui embaixo!" }
+  ]
+}

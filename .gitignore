@@ -1,0 +1,5 @@
+node_modules/
+out/
+tts/models/
+*.raw.wav
+__pycache__/

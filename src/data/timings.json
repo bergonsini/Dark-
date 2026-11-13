@@ -1,0 +1,713 @@
+{
+  "fps": 30,
+  "totalSeconds": 45.184,
+  "segments": [
+    {
+      "id": "hook",
+      "text": "Você sobreviveria um dia sendo um homem das cavernas?",
+      "start": 0.2,
+      "end": 3.343,
+      "words": [
+        {
+          "word": "Você",
+          "start": 0.2,
+          "end": 0.549
+        },
+        {
+          "word": "sobreviveria",
+          "start": 0.549,
+          "end": 1.302
+        },
+        {
+          "word": "um",
+          "start": 1.302,
+          "end": 1.516
+        },
+        {
+          "word": "dia",
+          "start": 1.516,
+          "end": 1.731
+        },
+        {
+          "word": "sendo",
+          "start": 1.731,
+          "end": 2.081
+        },
+        {
+          "word": "um",
+          "start": 2.081,
+          "end": 2.296
+        },
+        {
+          "word": "homem",
+          "start": 2.296,
+          "end": 2.645
+        },
+        {
+          "word": "das",
+          "start": 2.645,
+          "end": 2.86
+        },
+        {
+          "word": "cavernas?",
+          "start": 2.86,
+          "end": 3.343
+        }
+      ]
+    },
+    {
+      "id": "intro",
+      "text": "Há mais de cem mil anos, esse é o Ugo. E o dia dele começa antes do sol nascer.",
+      "start": 3.693,
+      "end": 8.041,
+      "words": [
+        {
+          "word": "Há",
+          "start": 3.693,
+          "end": 3.876
+        },
+        {
+          "word": "mais",
+          "start": 3.876,
+          "end": 4.059
+        },
+        {
+          "word": "de",
+          "start": 4.059,
+          "end": 4.241
+        },
+        {
+          "word": "cem",
+          "start": 4.241,
+          "end": 4.424
+        },
+        {
+          "word": "mil",
+          "start": 4.424,
+          "end": 4.607
+        },
+        {
+          "word": "anos,",
+          "start": 4.607,
+          "end": 4.903
+        },
+        {
+          "word": "esse",
+          "start": 5.183,
+          "end": 5.412
+        },
+        {
+          "word": "é",
+          "start": 5.412,
+          "end": 5.553
+        },
+        {
+          "word": "o",
+          "start": 5.553,
+          "end": 5.694
+        },
+        {
+          "word": "Ugo.",
+          "start": 5.694,
+          "end": 5.923
+        },
+        {
+          "word": "E",
+          "start": 5.993,
+          "end": 6.162
+        },
+        {
+          "word": "o",
+          "start": 6.162,
+          "end": 6.331
+        },
+        {
+          "word": "dia",
+          "start": 6.331,
+          "end": 6.5
+        },
+        {
+          "word": "dele",
+          "start": 6.5,
+          "end": 6.775
+        },
+        {
+          "word": "começa",
+          "start": 6.775,
+          "end": 7.155
+        },
+        {
+          "word": "antes",
+          "start": 7.155,
+          "end": 7.429
+        },
+        {
+          "word": "do",
+          "start": 7.429,
+          "end": 7.598
+        },
+        {
+          "word": "sol",
+          "start": 7.598,
+          "end": 7.767
+        },
+        {
+          "word": "nascer.",
+          "start": 7.767,
+          "end": 8.041
+        }
+      ]
+    },
+    {
+      "id": "hunger",
+      "text": "Sem mercado, sem geladeira... Se ele quiser comer, vai ter que se virar.",
+      "start": 8.341,
+      "end": 12.063,
+      "words": [
+        {
+          "word": "Sem",
+          "start": 8.341,
+          "end": 8.443
+        },
+        {
+          "word": "mercado,",
+          "start": 8.443,
+          "end": 8.671
+        },
+        {
+          "word": "sem",
+          "start": 8.691,
+          "end": 9.04
+        },
+        {
+          "word": "geladeira...",
+          "start": 9.04,
+          "end": 10.041
+        },
+        {
+          "word": "Se",
+          "start": 10.091,
+          "end": 10.199
+        },
+        {
+          "word": "ele",
+          "start": 10.199,
+          "end": 10.373
+        },
+        {
+          "word": "quiser",
+          "start": 10.373,
+          "end": 10.547
+        },
+        {
+          "word": "comer,",
+          "start": 10.547,
+          "end": 10.721
+        },
+        {
+          "word": "vai",
+          "start": 10.741,
+          "end": 10.976
+        },
+        {
+          "word": "ter",
+          "start": 10.976,
+          "end": 11.211
+        },
+        {
+          "word": "que",
+          "start": 11.211,
+          "end": 11.446
+        },
+        {
+          "word": "se",
+          "start": 11.446,
+          "end": 11.681
+        },
+        {
+          "word": "virar.",
+          "start": 11.681,
+          "end": 12.063
+        }
+      ]
+    },
+    {
+      "id": "choice",
+      "text": "Então, escolha: caçar um mamute gigante com uma lança... ou coletar frutas e raízes na floresta?",
+      "start": 12.363,
+      "end": 18.013,
+      "words": [
+        {
+          "word": "Então,",
+          "start": 12.363,
+          "end": 12.563
+        },
+        {
+          "word": "escolha:",
+          "start": 12.583,
+          "end": 13.353
+        },
+        {
+          "word": "caçar",
+          "start": 13.373,
+          "end": 13.667
+        },
+        {
+          "word": "um",
+          "start": 13.667,
+          "end": 13.849
+        },
+        {
+          "word": "mamute",
+          "start": 13.849,
+          "end": 14.256
+        },
+        {
+          "word": "gigante",
+          "start": 14.256,
+          "end": 14.663
+        },
+        {
+          "word": "com",
+          "start": 14.663,
+          "end": 14.845
+        },
+        {
+          "word": "uma",
+          "start": 14.845,
+          "end": 15.139
+        },
+        {
+          "word": "lança...",
+          "start": 15.139,
+          "end": 15.433
+        },
+        {
+          "word": "ou",
+          "start": 15.683,
+          "end": 15.9
+        },
+        {
+          "word": "coletar",
+          "start": 15.9,
+          "end": 16.387
+        },
+        {
+          "word": "frutas",
+          "start": 16.387,
+          "end": 16.74
+        },
+        {
+          "word": "e",
+          "start": 16.74,
+          "end": 16.956
+        },
+        {
+          "word": "raízes",
+          "start": 16.956,
+          "end": 17.309
+        },
+        {
+          "word": "na",
+          "start": 17.309,
+          "end": 17.525
+        },
+        {
+          "word": "floresta?",
+          "start": 17.525,
+          "end": 18.013
+        }
+      ]
+    },
+    {
+      "id": "hunt",
+      "text": "Caçar enche a barriga do grupo por dias, mas um erro pode custar a vida.",
+      "start": 18.363,
+      "end": 22.337,
+      "words": [
+        {
+          "word": "Caçar",
+          "start": 18.363,
+          "end": 18.686
+        },
+        {
+          "word": "enche",
+          "start": 18.686,
+          "end": 19.008
+        },
+        {
+          "word": "a",
+          "start": 19.008,
+          "end": 19.207
+        },
+        {
+          "word": "barriga",
+          "start": 19.207,
+          "end": 19.654
+        },
+        {
+          "word": "do",
+          "start": 19.654,
+          "end": 19.853
+        },
+        {
+          "word": "grupo",
+          "start": 19.853,
+          "end": 20.176
+        },
+        {
+          "word": "por",
+          "start": 20.176,
+          "end": 20.374
+        },
+        {
+          "word": "dias,",
+          "start": 20.374,
+          "end": 20.573
+        },
+        {
+          "word": "mas",
+          "start": 20.663,
+          "end": 20.839
+        },
+        {
+          "word": "um",
+          "start": 20.839,
+          "end": 21.015
+        },
+        {
+          "word": "erro",
+          "start": 21.015,
+          "end": 21.302
+        },
+        {
+          "word": "pode",
+          "start": 21.302,
+          "end": 21.588
+        },
+        {
+          "word": "custar",
+          "start": 21.588,
+          "end": 21.875
+        },
+        {
+          "word": "a",
+          "start": 21.875,
+          "end": 22.051
+        },
+        {
+          "word": "vida.",
+          "start": 22.051,
+          "end": 22.337
+        }
+      ]
+    },
+    {
+      "id": "gather",
+      "text": "Coletar é mais seguro, mas exige andar quilômetros, todos os dias.",
+      "start": 22.587,
+      "end": 26.32,
+      "words": [
+        {
+          "word": "Coletar",
+          "start": 22.587,
+          "end": 23.01
+        },
+        {
+          "word": "é",
+          "start": 23.01,
+          "end": 23.197
+        },
+        {
+          "word": "mais",
+          "start": 23.197,
+          "end": 23.385
+        },
+        {
+          "word": "seguro,",
+          "start": 23.385,
+          "end": 23.807
+        },
+        {
+          "word": "mas",
+          "start": 23.887,
+          "end": 24.074
+        },
+        {
+          "word": "exige",
+          "start": 24.074,
+          "end": 24.495
+        },
+        {
+          "word": "andar",
+          "start": 24.495,
+          "end": 24.799
+        },
+        {
+          "word": "quilômetros,",
+          "start": 24.799,
+          "end": 25.337
+        },
+        {
+          "word": "todos",
+          "start": 25.367,
+          "end": 25.795
+        },
+        {
+          "word": "os",
+          "start": 25.795,
+          "end": 26.057
+        },
+        {
+          "word": "dias.",
+          "start": 26.057,
+          "end": 26.32
+        }
+      ]
+    },
+    {
+      "id": "fire",
+      "text": "À noite, o fogo era tudo: aquecia, espantava predadores e cozinhava a comida.",
+      "start": 26.67,
+      "end": 31.158,
+      "words": [
+        {
+          "word": "À",
+          "start": 26.67,
+          "end": 26.792
+        },
+        {
+          "word": "noite,",
+          "start": 26.792,
+          "end": 26.99
+        },
+        {
+          "word": "o",
+          "start": 27.03,
+          "end": 27.223
+        },
+        {
+          "word": "fogo",
+          "start": 27.223,
+          "end": 27.535
+        },
+        {
+          "word": "era",
+          "start": 27.535,
+          "end": 27.848
+        },
+        {
+          "word": "tudo:",
+          "start": 27.848,
+          "end": 28.16
+        },
+        {
+          "word": "aquecia,",
+          "start": 28.26,
+          "end": 28.99
+        },
+        {
+          "word": "espantava",
+          "start": 29.01,
+          "end": 29.49
+        },
+        {
+          "word": "predadores",
+          "start": 29.49,
+          "end": 29.969
+        },
+        {
+          "word": "e",
+          "start": 29.969,
+          "end": 30.136
+        },
+        {
+          "word": "cozinhava",
+          "start": 30.136,
+          "end": 30.616
+        },
+        {
+          "word": "a",
+          "start": 30.616,
+          "end": 30.782
+        },
+        {
+          "word": "comida.",
+          "start": 30.782,
+          "end": 31.158
+        }
+      ]
+    },
+    {
+      "id": "fact",
+      "text": "Curiosidade: muitos cientistas acreditam que cozinhar os alimentos ajudou o nosso cérebro a crescer, porque a comida cozida libera muito mais energia.",
+      "start": 31.458,
+      "end": 40.444,
+      "words": [
+        {
+          "word": "Curiosidade:",
+          "start": 31.458,
+          "end": 32.338
+        },
+        {
+          "word": "muitos",
+          "start": 32.458,
+          "end": 32.82
+        },
+        {
+          "word": "cientistas",
+          "start": 32.82,
+          "end": 33.322
+        },
+        {
+          "word": "acreditam",
+          "start": 33.322,
+          "end": 33.963
+        },
+        {
+          "word": "que",
+          "start": 33.963,
+          "end": 34.186
+        },
+        {
+          "word": "cozinhar",
+          "start": 34.186,
+          "end": 34.688
+        },
+        {
+          "word": "os",
+          "start": 34.688,
+          "end": 34.911
+        },
+        {
+          "word": "alimentos",
+          "start": 34.911,
+          "end": 35.553
+        },
+        {
+          "word": "ajudou",
+          "start": 35.553,
+          "end": 36.055
+        },
+        {
+          "word": "o",
+          "start": 36.055,
+          "end": 36.278
+        },
+        {
+          "word": "nosso",
+          "start": 36.278,
+          "end": 36.64
+        },
+        {
+          "word": "cérebro",
+          "start": 36.64,
+          "end": 37.142
+        },
+        {
+          "word": "a",
+          "start": 37.142,
+          "end": 37.365
+        },
+        {
+          "word": "crescer,",
+          "start": 37.365,
+          "end": 37.728
+        },
+        {
+          "word": "porque",
+          "start": 37.748,
+          "end": 38.055
+        },
+        {
+          "word": "a",
+          "start": 38.055,
+          "end": 38.244
+        },
+        {
+          "word": "comida",
+          "start": 38.244,
+          "end": 38.67
+        },
+        {
+          "word": "cozida",
+          "start": 38.67,
+          "end": 39.096
+        },
+        {
+          "word": "libera",
+          "start": 39.096,
+          "end": 39.521
+        },
+        {
+          "word": "muito",
+          "start": 39.521,
+          "end": 39.829
+        },
+        {
+          "word": "mais",
+          "start": 39.829,
+          "end": 40.018
+        },
+        {
+          "word": "energia.",
+          "start": 40.018,
+          "end": 40.444
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "text": "E você? Seria caçador ou coletor? Comenta aqui embaixo!",
+      "start": 40.794,
+      "end": 43.984,
+      "words": [
+        {
+          "word": "E",
+          "start": 40.794,
+          "end": 41.079
+        },
+        {
+          "word": "você?",
+          "start": 41.079,
+          "end": 41.544
+        },
+        {
+          "word": "Seria",
+          "start": 41.574,
+          "end": 41.765
+        },
+        {
+          "word": "caçador",
+          "start": 41.765,
+          "end": 42.031
+        },
+        {
+          "word": "ou",
+          "start": 42.031,
+          "end": 42.148
+        },
+        {
+          "word": "coletor?",
+          "start": 42.148,
+          "end": 42.414
+        },
+        {
+          "word": "Comenta",
+          "start": 42.434,
+          "end": 43.003
+        },
+        {
+          "word": "aqui",
+          "start": 43.003,
+          "end": 43.414
+        },
+        {
+          "word": "embaixo!",
+          "start": 43.414,
+          "end": 43.984
+        }
+      ]
+    }
+  ]
+}
