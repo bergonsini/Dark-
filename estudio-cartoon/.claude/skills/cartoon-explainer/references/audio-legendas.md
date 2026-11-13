@@ -50,8 +50,8 @@ Dica de dicção: frases curtas, vírgulas onde se respira, evite siglas e núme
 Cada fala sintetizada fica em `.cache/tts/falas/` (chave = motor + texto + configurações). Rodar de novo
 sem mudar o texto não sintetiza de novo, o que é importante para não gastar créditos de serviços pagos.
 
-## ElevenLabs (configurada, PAGA, só com autorização)
-Nunca é usada no modo auto. Configuração atual: SDK oficial `@elevenlabs/elevenlabs-js`
+## ElevenLabs (PADRÃO deste projeto, PAGA, só com autorização)
+É o motor padrão do `roteiro.json` (`"motor": "elevenlabs"`), mas nunca é usada no modo `auto`. Configuração atual: SDK oficial `@elevenlabs/elevenlabs-js`
 (`scripts/elevenlabs_tts.mjs` na raiz do projeto), modelo `eleven_v4`, idioma `pt`, voz **Edmilson**
 (`9luRA11KwacKAVmLyqUs`, masculina, brasileira, feita para documentário e conteúdo educativo),
 estabilidade 0.6 e similaridade 0.6 (perfil "narração" da ElevenLabs, um pouco mais expressivo).

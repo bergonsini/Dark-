@@ -77,10 +77,14 @@ Leia `references/roteiro.md`. Escreva `roteiro.json`:
 Leia `references/audio-legendas.md`. Na primeira vez: `npm run voz:instalar` (vozes gratuitas).
 Depois `npm run audio`: narração pt-BR em **estilo documentário** (ritmo envolvente, pausas por pontuação,
 voz encorpada, dicção clara), música, SFX e `timeline.json` com o tempo de cada palavra.
-- Motores **gratuitos** em ordem: edge-tts (neural, online) → Kokoro (neural, offline) → MBROLA (reserva).
-- **ElevenLabs é pago**: está preparado mas nunca roda sozinho. Só use se o usuário autorizar, com
-  `--engine elevenlabs --autorizo-custo` e a chave em `ELEVENLABS_API_KEY`. Nunca contrate serviço nem
-  faça chamada paga sem autorização explícita.
+- Motores **gratuitos** (modo `auto`) em ordem: edge-tts (neural, online) → Kokoro (neural, offline) → MBROLA (reserva).
+- **Voz padrão deste projeto: ElevenLabs** (`"motor": "elevenlabs"` no roteiro; voz Edmilson, pt-BR, documentário).
+  É **paga**: `npm run audio` só mostra quantos caracteres serão cobrados e não envia nada. Antes de gerar,
+  peça autorização ao usuário informando o custo; só com um "autorizo" explícito rode
+  `npm run audio -- --autorizo-custo` (chave em `ELEVENLABS_API_KEY` ou `.env.local`; em nuvem,
+  `ELEVENLABS_API_KEY=proxy-injected`). Nunca contrate serviço nem faça chamada paga sem autorização.
+  Sem autorização, ou para rascunhos, use a voz gratuita: `npm run audio -- --engine auto`.
+- Ritmo da voz Edmilson: ~155 palavras/min → escreva **~130 palavras para 60 s**.
 - Avisos do script: "sobram X s" → escreva mais; "passa da duração alvo" → corte texto (~150–160
   palavras para 60 s); "gancho termina em X s" → encurte a primeira frase. Repita até não haver avisos.
 - Números, siglas e palavras difíceis: use `{"texto": ..., "pronuncia": ...}` na fala.
