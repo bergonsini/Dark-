@@ -21,7 +21,7 @@
 - Frases curtas (≤ 14 palavras), voz ativa, "você", tom de conversa. Uma ideia por frase.
 - Cada item de `falas` vira um trecho de áudio + legenda. Quebre frases longas em 2 itens.
 - Escreva números e siglas por extenso ("dez mil", não "10.000"), porque o TTS lê melhor.
-- Ritmo: ~2,4–2,8 palavras/s. 60 s ≈ 130–150 palavras no total.
+- Ritmo documentário: ~2,5–3 palavras/s. 60 s ≈ 140–160 palavras no total.
 - Termine com pergunta aberta para gerar comentários.
 - Verifique cada fato. Na dúvida, simplifique sem distorcer ("pode ter ajudado", "cerca de").
 
@@ -32,7 +32,7 @@
   "fps": 30,
   "duracaoSegundos": 60,
   "personagem": "tito",
-  "voz": { "edge": "pt-BR-AntonioNeural", "edgeRate": "+8%", "mbrola": "mb-br3", "espeakSpeed": 160, "espeakPitch": 48 },
+  "voz": { "motor": "auto", "estilo": "documentario", "kokoro": { "voz": "pm_alex" } },
   "musica": { "bpm": 100, "tom": -9 },
   "cenas": [
     { "id": "gancho", "ato": "começo", "falas": ["…"] },
@@ -41,7 +41,7 @@
 }
 ```
 - `id` = nome da cena no código (`SCENES` em `CartoonExplainer.tsx`). Use minúsculas e hífen.
-- Vozes edge pt-BR: `pt-BR-AntonioNeural` (masc.), `pt-BR-FranciscaNeural` (fem.), `pt-BR-ThalitaMultilingualNeural`.
+- Voz: veja `audio-legendas.md` (motores, estilo documentário, `pronuncia`, ElevenLabs).
 - `musica.bpm` 90–110 para explicação leve; `tom` em semitons relativos a Lá4 (-9 = Dó).
 
 ## Planejamento visual (antes de codar)

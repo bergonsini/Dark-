@@ -23,7 +23,7 @@ export const S1Gancho: React.FC<SceneProps> = ({ scene }) => {
         <PersonagemEm x={540} pe={1290} altura={700} boca={mouth} expressao={f < azul ? "surpreso" : "animado"} pose={f < azul ? "assustado" : "apontandoCima"} poseDe="assustado" poseT={(f - azul) / 8} olharX={0.5} olharY={-0.8} squash={f < 6 ? -0.15 + f * 0.025 : 0} />
         <Brilhos x={540} y={330} at={azul} cor={C.blue} n={12} raio={300} />
       </Camera>
-      <TitleSlam text="SE A LUZ DO SOL É BRANCA..." top={170} size={92} color={C.white} at={0} />
+      <TitleSlam text="SE O SOL É BRANCO..." top={170} size={92} color={C.white} at={0} />
       <TitleSlam text="POR QUE O CÉU É AZUL?" top={1340} size={112} color={C.yellow} at={azul - 6} rotate={2} />
       <AbsoluteFill style={{ background: C.white, opacity: flash, pointerEvents: "none" }} />
       <Sfx at={0} name="boom" volume={0.9} />

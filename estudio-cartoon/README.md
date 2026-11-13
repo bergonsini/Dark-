@@ -7,12 +7,14 @@ câmera, transições, narração em pt-BR, legendas sincronizadas, efeitos sono
 Exemplo incluído: **"Por que o céu é azul?"** (`roteiro.json` + `src/cartoon/scenes/`).
 
 ## Requisitos
-Node 20+, Python 3 com `numpy`, `ffmpeg`. Voz: `pip install edge-tts` (neural, recomendado) ou
-`apt install espeak-ng mbrola mbrola-br3` (offline).
+Node 20+, Python 3 com `numpy`, `ffmpeg`. Vozes gratuitas em pt-BR: `npm run voz:instalar`
+(Kokoro neural offline + edge-tts). ElevenLabs (pago) está preparado, mas só roda com autorização explícita
+(veja `.claude/skills/cartoon-explainer/references/audio-legendas.md`).
 
 ## Comandos
 ```bash
 npm install
+npm run voz:instalar  # 1ª vez
 npm run audio    # roteiro.json → narração, música, SFX, src/cartoon/timeline.json
 npm run studio   # pré-visualização
 npm run render   # out/video.mp4

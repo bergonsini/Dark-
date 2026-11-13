@@ -28,7 +28,9 @@ Este projeto (`estudio-cartoon/`) já traz o kit pronto e um vídeo de exemplo f
 ```
 roteiro.json                       ← o roteiro (você escreve): cenas, falas, voz, música
 .claude/skills/cartoon-explainer/
-  scripts/generate_audio.py        ← narração TTS + música + SFX + src/cartoon/timeline.json
+  scripts/generate_audio.py        ← narração + música + SFX + src/cartoon/timeline.json
+  scripts/voz.py                   ← motores de voz pt-BR (edge, kokoro, elevenlabs, mbrola) + alinhamento
+  scripts/instalar_voz.py          ← instala as vozes gratuitas
   scripts/qa_check.py              ← conferência final do MP4
   references/*.md                  ← detalhes (leia quando indicado abaixo)
 src/Root.tsx                       ← registra a composição CartoonExplainer
@@ -50,6 +52,7 @@ src/cartoon/
 Comandos (rode na raiz `estudio-cartoon/`):
 
 ```bash
+npm run voz:instalar  # 1ª vez: vozes gratuitas (Kokoro offline + edge-tts)
 npm run audio      # roteiro.json → narração, música, SFX e timeline.json
 npm run studio     # pré-visualização interativa
 npm run render     # gera out/video.mp4
@@ -70,13 +73,17 @@ Leia `references/roteiro.md`. Escreva `roteiro.json`:
 - 6 a 9 cenas no total; frases curtas e faladas; cerca de 130–150 palavras para 60 s.
 - Confira os fatos. Conteúdo educativo não pode ter erro.
 
-### 2. Áudio e linha do tempo
-`npm run audio`. O script mostra a duração da fala e avisa se sobra ou falta tempo.
-- "sobram X s no final" → escreva mais narração (o ideal é final ≤ 4 s).
-- "passa da duração alvo" → corte texto.
-- "gancho termina em X s" → encurte a primeira frase.
-Repita até não haver avisos. Voz: `edge-tts` (neural, melhor) → MBROLA → espeak. Detalhes em
-`references/audio-legendas.md`.
+### 2. Voz, áudio e linha do tempo
+Leia `references/audio-legendas.md`. Na primeira vez: `npm run voz:instalar` (vozes gratuitas).
+Depois `npm run audio`: narração pt-BR em **estilo documentário** (ritmo envolvente, pausas por pontuação,
+voz encorpada, dicção clara), música, SFX e `timeline.json` com o tempo de cada palavra.
+- Motores **gratuitos** em ordem: edge-tts (neural, online) → Kokoro (neural, offline) → MBROLA (reserva).
+- **ElevenLabs é pago**: está preparado mas nunca roda sozinho. Só use se o usuário autorizar, com
+  `--engine elevenlabs --autorizo-custo` e a chave em `ELEVENLABS_API_KEY`. Nunca contrate serviço nem
+  faça chamada paga sem autorização explícita.
+- Avisos do script: "sobram X s" → escreva mais; "passa da duração alvo" → corte texto (~150–160
+  palavras para 60 s); "gancho termina em X s" → encurte a primeira frase. Repita até não haver avisos.
+- Números, siglas e palavras difíceis: use `{"texto": ..., "pronuncia": ...}` na fala.
 
 ### 3. Personagem: o MESMO do começo ao fim
 Leia `references/personagem.md`. Use **somente** `<PersonagemEm>` / `<Personagem>` de
@@ -125,8 +132,7 @@ personagem consistente, cenários, textos, legendas e enquadramento. Só entregu
 
 ### 8. Entrega
 Informe o caminho do MP4 (`out/video.mp4`), a duração, o motor de voz usado e o resultado da
-conferência. Se a voz saiu pelo MBROLA (sem internet para o edge-tts), diga que `npm run video` numa
-máquina com internet gera a versão com voz neural, sem mudar nada no código.
+conferência. Se a voz saiu pelo MBROLA (reserva robótica), diga como instalar o Kokoro/edge-tts.
 
 ## Integração com as skills oficiais do Remotion
 As skills `remotion-*` deste projeto (`.claude/skills/remotion-*`) complementam esta. Consulte:

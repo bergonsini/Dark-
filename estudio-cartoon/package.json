@@ -36,7 +36,8 @@
     "render": "remotion render CartoonExplainer out/video.mp4",
     "qa": "python3 .claude/skills/cartoon-explainer/scripts/qa_check.py out/video.mp4",
     "video": "npm run audio && npm run render && npm run qa",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "voz:instalar": "python3 .claude/skills/cartoon-explainer/scripts/instalar_voz.py"
   },
   "allowScripts": {
     "esbuild": false

@@ -106,7 +106,38 @@ def main():
                 if not (s["startFrame"] <= ln["startFrame"] and ln["endFrame"] <= s["endFrame"]):
                     bad.append("fora da cena: " + ln["text"][:30])
         check(not bad, "legendas sincronizadas com a narração", "; ".join(bad) or "ok")
-        check(tl.get("engine") != "espeak", "voz natural (edge ou mbrola, não espeak puro)", tl.get("engine"), required=False)
+        # sincronia acústica: cada palavra precisa cair sobre fala real no narration.wav
+        narr = os.path.join(ROOT, "public", "audio", "narration.wav")
+        if os.path.exists(narr):
+            import wave
+            import numpy as np
+            with wave.open(narr, "rb") as w:
+                sr = w.getframerate()
+                x = np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16).astype(np.float32) / 32768.0
+            hop = sr // 100
+            rms = np.array([np.sqrt(np.mean(x[i:i + hop] ** 2)) for i in range(0, len(x) - hop, hop)])
+            voiced = rms > max(0.01, np.percentile(rms, 95) * 0.06)
+            fora = []
+            total_w = 0
+            for s in sc:
+                for ln in s["lines"]:
+                    for wd in ln["words"]:
+                        total_w += 1
+                        a0 = int(wd["startFrame"] / f * 100)
+                        b0 = max(a0 + 1, int(wd["endFrame"] / f * 100))
+                        if voiced[a0:b0].mean() < 0.3:
+                            fora.append(f'{wd["text"]}@{wd["startFrame"] / f:.1f}s')
+            pct = 100 * (1 - len(fora) / max(1, total_w))
+            check(pct >= 95, "palavras das legendas caem sobre a fala real (sincronia acústica)",
+                  f"{pct:.0f}% de {total_w}" + (f"; fora: {', '.join(fora[:6])}" if fora else ""))
+            # fala da narração coberta por legenda (nenhuma fala sem legenda)
+            cover = np.zeros(len(voiced), bool)
+            for s in sc:
+                for ln in s["lines"]:
+                    cover[int(ln["startFrame"] / f * 100):int(ln["endFrame"] / f * 100) + 3] = True
+            sem = voiced & ~cover
+            check(sem.sum() < 30, "toda fala tem legenda", f"{sem.sum() * 10} ms de fala sem legenda")
+        check(tl.get("engine") in ("edge", "kokoro", "elevenlabs"), "voz neural natural (edge, kokoro ou elevenlabs)", tl.get("engine"), required=False)
 
     # ---------------- folha de contato para inspeção visual
     qa = os.path.join(os.path.dirname(os.path.abspath(args.video)), "qa")
