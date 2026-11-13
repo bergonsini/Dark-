@@ -1,0 +1,5 @@
+numpy
+soundfile
+kokoro-onnx
+# opcionais:
+# edge-tts      (TTS_PROVIDER=edge)
