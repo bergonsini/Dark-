@@ -330,6 +330,22 @@ def main():
         clips = sintetizar_tudo(falas, motor, cfg, fator)
         natural, speech = montar(falas, clips, script, st, target)
 
+    if voz.MOTORES[motor].pago:
+        # sem nova cobrança: ajuste fino local do ritmo (±7%, sem mudar o tom)
+        avail = target - (natural - speech)
+        fx = 1.0
+        if natural > target:
+            fx = speech / max(1.0, avail - 0.2)
+        elif target - natural > folga_max:
+            fx = speech / max(1.0, avail - folga_max * 0.5)
+        fx = max(0.93, min(1.07, fx))
+        if abs(fx - 1) >= 0.01:
+            print(f"  ajuste local de ritmo (sem custo): x{fx:.3f}")
+            clips = [voz.esticar(a, w, fx) for a, w in clips]
+            natural, speech = montar(falas, clips, script, st, target)
+            fator = fx
+        print(f"  ElevenLabs: {voz.ElevenLabs.caracteres} caracteres cobrados nesta execução (0 = veio do cache)")
+
     n_scenes = len(script["cenas"])
     spare = max(0.0, target - natural)
     extra_gap = min(MAX_SCENE_GAP - SCENE_GAP, spare / max(1, n_scenes - 1)) if n_scenes > 1 else 0

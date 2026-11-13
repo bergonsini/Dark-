@@ -16,12 +16,12 @@
       "tom": "-3Hz"
     },
     "elevenlabs": {
-      "voiceId": "",
-      "modelo": "eleven_multilingual_v2",
-      "estabilidade": 0.45,
-      "similaridade": 0.8,
-      "estilo": 0.35,
-      "velocidade": 0.95
+      "voiceId": "9luRA11KwacKAVmLyqUs",
+      "nome": "Edmilson (pt-BR, documentário)",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.6,
+      "similaridade": 0.6
     },
     "mbrola": "mb-br3",
     "espeakSpeed": 160,

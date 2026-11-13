@@ -10,7 +10,7 @@ Instalação das vozes gratuitas: `npm run voz:instalar` (= `python3 scripts/ins
 | `kokoro` | gratuito, Apache 2.0, **offline** | neural, natural (`pm_alex`, `pm_santa`, `pf_dora`) | alinhamento acústico | `pip install kokoro-onnx soundfile` + modelo (~350 MB, GitHub) |
 | `mbrola` | gratuito, offline | robótico (só reserva) | alinhamento acústico | `apt install espeak-ng mbrola mbrola-br3` |
 | `espeak` | gratuito, offline | muito robótico | alinhamento acústico | `apt install espeak-ng` |
-| `elevenlabs` | **PAGO** | premium | exato (do serviço) | chave + autorização explícita (abaixo) |
+| `elevenlabs` | **PAGO** | premium (voz Edmilson, `eleven_v4`) | exato (do serviço) | chave + autorização explícita (abaixo) |
 
 `"motor": "auto"` tenta **só os gratuitos**, nesta ordem: edge → kokoro → mbrola → espeak. Um único motor é
 escolhido para o vídeo inteiro (nunca mistura vozes). Forçar: `npm run audio -- --engine kokoro`.
@@ -50,15 +50,24 @@ Dica de dicção: frases curtas, vírgulas onde se respira, evite siglas e núme
 Cada fala sintetizada fica em `.cache/tts/falas/` (chave = motor + texto + configurações). Rodar de novo
 sem mudar o texto não sintetiza de novo, o que é importante para não gastar créditos de serviços pagos.
 
-## ElevenLabs (preparado, DESLIGADO por padrão)
-Nunca é usado no modo auto. Para usar (apenas com autorização do usuário):
-1. Crie a chave na conta ElevenLabs do usuário e exporte só no terminal: `export ELEVENLABS_API_KEY=...`
-   (nunca grave a chave no roteiro, no código ou no git).
-2. Preencha `voz.elevenlabs.voiceId` no `roteiro.json` (ID de uma voz pt-BR da biblioteca).
-3. Rode `npm run audio -- --engine elevenlabs`: o script mostra quantos caracteres serão cobrados e **não envia
-   nada**. Só depois de o usuário autorizar: `npm run audio -- --engine elevenlabs --autorizo-custo`.
-A integração usa `/v1/text-to-speech/{voice_id}/with-timestamps` (tempo exato por caractere → por palavra),
-envia `previous_text`/`next_text` para manter a entonação entre frases e não refaz chamadas para ajustar duração.
+## ElevenLabs (configurada, PAGA, só com autorização)
+Nunca é usada no modo auto. Configuração atual: SDK oficial `@elevenlabs/elevenlabs-js`
+(`scripts/elevenlabs_tts.mjs` na raiz do projeto), modelo `eleven_v4`, idioma `pt`, voz **Edmilson**
+(`9luRA11KwacKAVmLyqUs`, masculina, brasileira, feita para documentário e conteúdo educativo),
+estabilidade 0.6 e similaridade 0.6 (perfil "narração" da ElevenLabs, um pouco mais expressivo).
+Alternativa mais grave: Antônio (`oQtRiHTYSl1XeCm4tuUw`).
+
+- Chave: `ELEVENLABS_API_KEY` no ambiente ou no `.env.local` (criado por `npx @elevenlabs/cli onboard init`,
+  ignorado pelo Git). Em ambiente de nuvem com a chave nos segredos de rede, rode com
+  `ELEVENLABS_API_KEY=proxy-injected` (o proxy troca pelo valor real). Nunca coloque a chave no código ou no chat.
+- Gerar: `npm run audio -- --engine elevenlabs` mostra quantos caracteres serão cobrados e **não envia nada**.
+  Só com autorização explícita do usuário: `npm run audio -- --engine elevenlabs --autorizo-custo`.
+- Tempo exato de cada palavra vem do `convertWithTimestamps`; `previousText`/`nextText` mantêm a entonação
+  contínua entre as frases.
+- Sem novas cobranças: falas ficam em cache (`.cache/tts/falas/`), e o ajuste à duração alvo é feito
+  localmente (ffmpeg `atempo`, ±7%, sem mudar o tom), nunca gerando de novo.
+- O v4 não aceita `speed`/`style`: ritmo e emoção vêm da pontuação (reticências = pausa) e de tags como `[calmly]`.
+- Verificar a integração: `ELEVENLABS_API_KEY=... npx -y @elevenlabs/cli@latest onboard check --answered --env-path .env.local`.
 
 ## timeline.json (gerado) e sincronia
 Para cada cena: `startFrame`/`endFrame`; para cada fala: frames e **cada palavra** com seu frame; e o array

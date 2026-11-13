@@ -20,7 +20,6 @@ Tempo das palavras (legendas e animações):
                         "encaixadas" nos vales de energia do áudio (fronteiras reais entre palavras).
 """
 import asyncio
-import base64
 import hashlib
 import json
 import os
@@ -28,7 +27,6 @@ import re
 import shutil
 import subprocess
 import tempfile
-import urllib.request
 import wave
 
 import numpy as np
@@ -323,59 +321,55 @@ class Edge(Motor):
 
 
 class ElevenLabs(Motor):
-    """PAGO. Só roda com --engine elevenlabs --autorizo-custo e ELEVENLABS_API_KEY definida."""
+    """PAGO. Só roda com --engine elevenlabs --autorizo-custo. Usa o SDK oficial (elevenlabs_tts.mjs).
+    Chave: ELEVENLABS_API_KEY no ambiente ou no .env.local do projeto (criado por `elevenlabs onboard`).
+    Em ambiente de nuvem com a chave nos segredos de rede, use ELEVENLABS_API_KEY=proxy-injected."""
     nome = "elevenlabs"
     pago = True
+    caracteres = 0  # total cobrado nesta execução (cabeçalho x-character-count)
 
     def disponivel(self):
-        return bool(os.environ.get("ELEVENLABS_API_KEY"))
+        if os.environ.get("ELEVENLABS_API_KEY"):
+            return True
+        env = os.path.join(ROOT, ".env.local")
+        if os.path.exists(env):  # só verifica se a linha tem valor; nunca imprime a chave
+            for line in open(env, encoding="utf-8"):
+                if line.strip().startswith("ELEVENLABS_API_KEY=") and line.split("=", 1)[1].strip():
+                    return True
+        return False
 
     def sintetizar(self, texto, ctx, cfg, tmp):
         ec = cfg.get("elevenlabs", {})
         voice_id = ec.get("voiceId")
         if not voice_id:
             raise RuntimeError('defina "voz.elevenlabs.voiceId" no roteiro.json')
-        body = {
-            "text": texto,
-            "model_id": ec.get("modelo", "eleven_multilingual_v2"),
-            "voice_settings": {
-                "stability": ec.get("estabilidade", 0.45),
-                "similarity_boost": ec.get("similaridade", 0.8),
-                "style": ec.get("estilo", 0.35),
-                "use_speaker_boost": True,
-                "speed": float(ec.get("velocidade", 0.95)) * float(ctx.get("velocidade", 1.0)),
-            },
-        }
-        # contexto das falas vizinhas: entonação contínua entre frases
-        if ctx.get("anterior"):
-            body["previous_text"] = ctx["anterior"]
-        if ctx.get("proxima"):
-            body["next_text"] = ctx["proxima"]
-        req = urllib.request.Request(
-            f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}/with-timestamps?output_format=mp3_44100_128",
-            data=json.dumps(body).encode(),
-            headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"], "Content-Type": "application/json"},
-        )
-        with urllib.request.urlopen(req, timeout=60) as r:
-            res = json.loads(r.read())
         out = os.path.join(tmp, "x.mp3")
-        with open(out, "wb") as f:
-            f.write(base64.b64decode(res["audio_base64"]))
-        al = res.get("alignment") or {}
-        chars, st, en = al.get("characters", []), al.get("character_start_times_seconds", []), al.get("character_end_times_seconds", [])
-        words, cur, t0, t1 = [], "", None, None
-        for c, a, b in zip(chars, st, en):
-            if c.isspace():
-                if cur:
-                    words.append((cur, t0, t1))
-                cur, t0 = "", None
-            else:
-                cur += c
-                t0 = a if t0 is None else t0
-                t1 = b
-        if cur:
-            words.append((cur, t0, t1))
-        return out, words or None
+        req = {
+            "text": texto,
+            "voiceId": voice_id,
+            "modelId": ec.get("modelo", "eleven_v4"),
+            "languageCode": ec.get("idioma", "pt"),
+            "voiceSettings": {
+                "stability": ec.get("estabilidade", 0.6),
+                "similarityBoost": ec.get("similaridade", 0.6),
+                "style": ec.get("estilo", 0.3),
+                "speed": float(ec.get("velocidade", 1.0)) * float(ctx.get("velocidade", 1.0)),
+            },
+            "previousText": ctx.get("anterior"),  # entonação contínua entre as frases
+            "nextText": ctx.get("proxima"),
+            "out": out,
+        }
+        env = dict(os.environ)
+        if env.get("HTTPS_PROXY") or env.get("https_proxy"):
+            env["NODE_USE_ENV_PROXY"] = "1"  # o fetch do Node passa a respeitar o proxy
+        env["NODE_NO_WARNINGS"] = "1"
+        r = subprocess.run(["node", os.path.join(ROOT, "scripts", "elevenlabs_tts.mjs")], input=json.dumps(req), text=True,
+                           capture_output=True, env=env, cwd=ROOT, timeout=120)
+        if r.returncode != 0:
+            raise RuntimeError(r.stderr.strip()[-300:] or "falha na ElevenLabs")
+        res = json.loads(r.stdout)
+        ElevenLabs.caracteres += int(res.get("characters", 0))
+        return out, [tuple(w) for w in res["words"]] or None
 
 
 class Espeak(Motor):
@@ -397,6 +391,24 @@ class Espeak(Motor):
         out = os.path.join(tmp, "s.wav")
         run([exe, "-v", voz, "-s", str(spd), "-p", str(cfg.get("espeakPitch", 45)), "-w", out, texto])
         return out, None
+
+
+def esticar(audio, words, fator):
+    """Muda o ritmo de um áudio já gerado SEM mudar o tom (ffmpeg atempo). fator > 1 = mais rápido.
+    Usado com motores pagos, para caber na duração sem pagar outra geração."""
+    if abs(fator - 1) < 0.005:
+        return audio, words
+    with tempfile.TemporaryDirectory() as tmp:
+        a, b = os.path.join(tmp, "a.wav"), os.path.join(tmp, "b.wav")
+        pcm = (np.clip(audio, -1, 1) * 32767).astype(np.int16)
+        with wave.open(a, "wb") as w:
+            w.setnchannels(1)
+            w.setsampwidth(2)
+            w.setframerate(SR)
+            w.writeframes(pcm.tobytes())
+        run(["ffmpeg", "-y", "-i", a, "-af", f"atempo={fator:.4f}", "-ar", str(SR), b])
+        out = read_wav(b)
+    return out, [(t, round(s0 / fator, 3), round(e0 / fator, 3)) for (t, s0, e0) in words]
 
 
 MOTORES = {"kokoro": Kokoro(), "edge": Edge(), "elevenlabs": ElevenLabs(), "mbrola": Espeak(True), "espeak": Espeak(False)}
