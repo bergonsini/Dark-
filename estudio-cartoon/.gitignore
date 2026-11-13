@@ -8,3 +8,5 @@ out
 
 # Modelos de voz e cache de falas (gerados por scripts/instalar_voz.py e generate_audio.py)
 .cache
+# Local secrets written by `elevenlabs onboard`
+/.env.local
