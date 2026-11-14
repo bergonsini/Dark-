@@ -299,6 +299,8 @@ def main():
     ap.add_argument("--roteiro", default=os.path.join(ROOT, "roteiro.json"))
     ap.add_argument("--autorizo-custo", action="store_true", help="necessário para usar um motor PAGO (ElevenLabs)")
     ap.add_argument("--sem-ajuste", action="store_true", help="não ajustar a velocidade da voz à duração alvo")
+    ap.add_argument("--somente-cache", action="store_true",
+                    help="não gera fala nova num motor pago: só reprocessa o que já está no cache (custo zero)")
     args = ap.parse_args()
 
     with open(args.roteiro, encoding="utf-8") as fh:
@@ -314,11 +316,14 @@ def main():
         chars = sum(len(f["falar"]) for f in falas)
         print(f"ATENÇÃO: '{pedido}' é um serviço PAGO. Este roteiro tem {chars} caracteres "
               f"(consome créditos do seu plano; ajustes de duração não são refeitos para não gastar de novo).")
-        if not args.autorizo_custo:
+        if args.somente_cache:
+            print("  --somente-cache: nada novo será enviado; só o cache local é reprocessado (custo zero).")
+        elif not args.autorizo_custo:
             print("Nada foi enviado. Para autorizar, rode de novo com --autorizo-custo.", file=sys.stderr)
             sys.exit(2)
         args.sem_ajuste = True
 
+    voz.SOMENTE_CACHE = args.somente_cache
     motor = voz.escolher_motor(pedido, cfg)
     print(f"  motor de voz: {motor}  | estilo: {cfg.get('estilo', 'documentario')}")
     os.makedirs(os.path.join(AUDIO_DIR, "sfx"), exist_ok=True)

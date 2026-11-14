@@ -48,9 +48,11 @@ ESTILOS = {
         "pausaVirgula": 0.14,   # pausa extra entre falas terminadas em vírgula (s)
         "pausaPonto": 0.38,     # depois de "." ou "!"
         "pausaPergunta": 0.5,   # depois de "?" (deixa a pergunta "respirar")
-        "eq": "highpass=f=75,equalizer=f=140:t=q:w=1.0:g=2.5,equalizer=f=320:t=q:w=1.2:g=-1.5,"
-              "equalizer=f=3200:t=q:w=1.4:g=3,equalizer=f=9000:t=q:w=1.5:g=1,deesser=i=0.35,"
-              "acompressor=threshold=-20dB:ratio=3.2:attack=4:release=80:makeup=2",
+        # clareza: menos grave embolado (170 Hz) e som "de caixa" (380 Hz), mais articulação (2,8 kHz),
+        # presença (5,5 kHz) e ar (9 kHz). A versão antiga reforçava 140 Hz e deixava a voz abafada.
+        "eq": "highpass=f=100,equalizer=f=170:t=q:w=1.0:g=-2.5,equalizer=f=380:t=q:w=1.0:g=-4,"
+              "equalizer=f=2800:t=q:w=1.0:g=4,equalizer=f=5500:t=q:w=1.4:g=3,treble=g=2.5:f=9000,deesser=i=0.3,"
+              "acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60:makeup=1.5",
     },
     "animado": {
         "kokoroVelocidade": 1.02,
@@ -83,8 +85,8 @@ def read_wav(path):
 
 
 def finalizar(src, dst, eq):
-    """Converte para mono 48 kHz com a cadeia de locução (EQ, de-esser, compressor) + loudness -16 LUFS."""
-    run(["ffmpeg", "-y", "-i", src, "-af", f"{eq},loudnorm=I=-16:TP=-1.5:LRA=7", "-ac", "1", "-ar", str(SR), dst])
+    """Converte para mono 48 kHz com a cadeia de locução (EQ, de-esser, compressor) + loudness -14 LUFS (padrão das redes)."""
+    run(["ffmpeg", "-y", "-i", src, "-af", f"{eq},loudnorm=I=-14:TP=-1.5:LRA=7", "-ac", "1", "-ar", str(SR), dst])
 
 
 def trim_silence(x, thr=0.015):
@@ -422,26 +424,59 @@ def chave_cache(motor, texto, ctx, cfg):
     return hashlib.sha1(raw.encode()).hexdigest()[:16]
 
 
+SOMENTE_CACHE = False  # True: nunca chama motor pago, só reprocessa o que já foi gerado
+
+# Correção para falas antigas que só têm a versão processada com a EQ antiga (abafada), sem o áudio cru.
+CORRECAO_LEGADO = ("highpass=f=110,equalizer=f=150:t=q:w=1:g=-4,equalizer=f=380:t=q:w=1:g=-4,"
+                   "equalizer=f=2800:t=q:w=1:g=4.5,equalizer=f=5500:t=q:w=1.4:g=4,treble=g=3:f=9000,deesser=i=0.3,"
+                   "acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60:makeup=1.5")
+
+
 def gerar_fala(motor_nome, texto, ctx, cfg):
-    """Sintetiza uma fala (com cache em .cache/tts/falas). Devolve (audio float32 48k, [(palavra, ini, fim)])."""
+    """Sintetiza uma fala, com cache em .cache/tts/falas. Devolve (audio float32 48k, [(palavra, ini, fim)]).
+    Guarda o áudio CRU do motor: se a equalização mudar, só reprocessa (sem sintetizar nem pagar de novo)."""
     motor = MOTORES[motor_nome]
-    os.makedirs(os.path.join(CACHE, "falas"), exist_ok=True)
+    pasta = os.path.join(CACHE, "falas")
+    os.makedirs(pasta, exist_ok=True)
     key = chave_cache(motor_nome, texto, ctx, cfg)
-    wav_c = os.path.join(CACHE, "falas", key + ".wav")
-    js_c = os.path.join(CACHE, "falas", key + ".json")
+    eq = estilo(cfg)["eq"]
+    pkey = key + "-" + hashlib.sha1(eq.encode()).hexdigest()[:8]
+    wav_c = os.path.join(pasta, pkey + ".wav")
+    js_c = os.path.join(pasta, pkey + ".json")
     if os.path.exists(wav_c) and os.path.exists(js_c):
         return read_wav(wav_c), [tuple(x) for x in json.load(open(js_c, encoding="utf-8"))]
+    raws = [x for x in os.listdir(pasta) if x.startswith(key + ".raw.") and not x.endswith(".json")]
+    raw_js = os.path.join(pasta, key + ".raw.json")
+    legado = os.path.join(pasta, key + ".wav")
     with tempfile.TemporaryDirectory() as tmp:
-        raw, words = motor.sintetizar(texto, ctx, cfg, tmp)
+        if raws and os.path.exists(raw_js):
+            raw = os.path.join(pasta, raws[0])
+            words = json.load(open(raw_js, encoding="utf-8"))
+            words = [tuple(w) for w in words] if words else None
+        elif os.path.exists(legado) and os.path.exists(os.path.join(pasta, key + ".json")):
+            # fala antiga (sem áudio cru): corrige a versão processada em vez de gerar de novo
+            raw = legado
+            words = None
+            eq = CORRECAO_LEGADO
+            legado_al = [tuple(x) for x in json.load(open(os.path.join(pasta, key + ".json"), encoding="utf-8"))]
+        else:
+            if SOMENTE_CACHE and motor.pago:
+                raise RuntimeError(f"--somente-cache: a fala não está no cache e o motor é pago: {texto[:40]}")
+            raw, words = motor.sintetizar(texto, ctx, cfg, tmp)
+            ext = os.path.splitext(raw)[1] or ".wav"
+            shutil.copy(raw, os.path.join(pasta, key + ".raw" + ext))
+            json.dump(words or [], open(raw_js, "w", encoding="utf-8"), ensure_ascii=False)
         fin = os.path.join(tmp, "fin.wav")
-        finalizar(raw, fin, estilo(cfg)["eq"])
+        finalizar(raw, fin, eq)
         audio, cut = trim_silence(read_wav(fin))
     off = cut / SR
     dur = len(audio) / SR
-    if words and len(words) == len(palavras(ctx.get("legenda", texto))):
+    leg = palavras(ctx.get("legenda", texto))
+    if words and len(words) == len(leg):
         # tempos do serviço, deslocados pelo corte de silêncio; textos da legenda
-        leg = palavras(ctx.get("legenda", texto))
         al = [(leg[i], round(max(0, a - off), 3), round(min(dur, b - off), 3)) for i, (_, a, b) in enumerate(words)]
+    elif eq is CORRECAO_LEGADO:
+        al = [(w, round(max(0, a - off), 3), round(min(dur, b - off), 3)) for (w, a, b) in legado_al]
     else:
         al = alinhar(audio, ctx.get("legenda", texto))
     pcm = (np.clip(audio, -1, 1) * 32767).astype(np.int16)

@@ -137,6 +137,17 @@ def main():
                     cover[int(ln["startFrame"] / f * 100):int(ln["endFrame"] / f * 100) + 3] = True
             sem = voiced & ~cover
             check(sem.sum() < 30, "toda fala tem legenda", f"{sem.sum() * 10} ms de fala sem legenda")
+            # nitidez da voz: energia na faixa de articulação/presença (1-6 kHz) vs graves que embolam (60-250 Hz)
+            fala = np.repeat(voiced, hop)[: len(x)]
+            v = x[: len(fala)][fala][: sr * 30]
+            if len(v) > sr:
+                X = np.abs(np.fft.rfft(v)) ** 2
+                fr = np.fft.rfftfreq(len(v), 1 / sr)
+                tot = X.sum() + 1e-12
+                pres = 100 * X[(fr >= 1000) & (fr < 6000)].sum() / tot
+                grave = 100 * X[(fr >= 60) & (fr < 250)].sum() / tot
+                check(pres >= 20 and grave <= 28, "voz nítida (presença 1-6 kHz ≥ 20%, graves ≤ 28%)",
+                      f"presença {pres:.0f}% | graves {grave:.0f}%")
         check(tl.get("engine") in ("edge", "kokoro", "elevenlabs"), "voz neural natural (edge, kokoro ou elevenlabs)", tl.get("engine"), required=False)
 
     # ---------------- folha de contato para inspeção visual

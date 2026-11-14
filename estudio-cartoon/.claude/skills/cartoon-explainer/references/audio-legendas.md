@@ -32,8 +32,11 @@ escolhido para o vídeo inteiro (nunca mistura vozes). Forçar: `npm run audio -
 ### Estilo "documentario"
 - Ritmo: voz um pouco mais lenta (Kokoro 0.9, edge -6%, tom -3 Hz), ajustada depois à duração alvo.
 - Pausas por pontuação entre falas: vírgula 0,14 s, ponto 0,38 s, pergunta 0,5 s; entre cenas ≥ 0,55 s.
-- Cadeia de locução (ffmpeg): passa-alta 75 Hz, corpo +2,5 dB em 140 Hz, menos "embolado" em 320 Hz,
-  **presença +3 dB em 3,2 kHz (dicção)**, brilho leve em 9 kHz, de-esser, compressor e loudness -16 LUFS.
+- Cadeia de locução com foco em **clareza** (ffmpeg): passa-alta 100 Hz, -2,5 dB em 170 Hz (grave que embola),
+  -4 dB em 380 Hz (som "de caixa"/sala fechada), +4 dB em 2,8 kHz (articulação), +3 dB em 5,5 kHz (presença),
+  +2,5 dB de agudos a partir de 9 kHz (ar), de-esser, compressor 2,5:1 e loudness **-14 LUFS** (padrão das redes).
+  A cadeia antiga reforçava 140 Hz e deixava a voz abafada, "de longe": não volte a reforçar graves.
+- A conferência mede a nitidez: presença (1–6 kHz) ≥ 20% e graves (60–250 Hz) ≤ 28% da energia da fala.
 - Ajuste de duração: se a fala não cabe nos 60 s, a velocidade sobe até ×1.12; se sobra muito, desce até ×0.9.
   Se ainda assim não couber, o script avisa: **encurte o texto** (alvo ~150–160 palavras por minuto de vídeo).
 
@@ -46,9 +49,12 @@ Uma fala pode ser objeto em vez de texto:
 vírgulas e reticências); `velocidade` multiplica o ritmo só dessa fala; `pausaDepois` define a pausa seguinte.
 Dica de dicção: frases curtas, vírgulas onde se respira, evite siglas e números escritos.
 
-### Cache
-Cada fala sintetizada fica em `.cache/tts/falas/` (chave = motor + texto + configurações). Rodar de novo
-sem mudar o texto não sintetiza de novo, o que é importante para não gastar créditos de serviços pagos.
+### Cache (nunca pagar duas vezes)
+Cada fala guarda o **áudio cru** do motor em `.cache/tts/falas/` (chave = motor + texto + configurações) e a versão
+processada (chave + hash da equalização). Mudou a equalização? Só reprocessa, sem sintetizar de novo.
+Para refazer o áudio de um vídeo pago com **custo zero garantido**: `npm run audio -- --somente-cache`
+(falha em vez de chamar a ElevenLabs se faltar alguma fala). Falas antigas sem áudio cru recebem uma correção
+de equalização sobre a versão processada (`CORRECAO_LEGADO` em `voz.py`).
 
 ## ElevenLabs (PADRÃO deste projeto, PAGA, só com autorização)
 É o motor padrão do `roteiro.json` (`"motor": "elevenlabs"`), mas nunca é usada no modo `auto`. Configuração atual: SDK oficial `@elevenlabs/elevenlabs-js`
