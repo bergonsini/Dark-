@@ -26,6 +26,7 @@ import os
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 import wave
 
@@ -103,8 +104,16 @@ def trim_silence(x, thr=0.015):
 PUNCT_END = re.compile(r"[,.;:!?…]+[\"')\]]*$")
 
 
+TAG = re.compile(r"\[[^\]]*\]\s*")
+
+
+def sem_tags(texto):
+    """Remove tags de emoção ([excited]...) para motores que não as entendem e para a legenda."""
+    return TAG.sub("", texto).strip()
+
+
 def palavras(texto):
-    return texto.split()
+    return sem_tags(texto).split()
 
 
 def limpa(w):
@@ -371,6 +380,9 @@ class ElevenLabs(Motor):
             raise RuntimeError(r.stderr.strip()[-300:] or "falha na ElevenLabs")
         res = json.loads(r.stdout)
         ElevenLabs.caracteres += int(res.get("characters", 0))
+        for t, a, b in res.get("tags", []):
+            if b - a > 0.25:  # a voz leu a tag em voz alta em vez de interpretá-la
+                print(f"  AVISO: a tag {t} parece ter sido FALADA ({b - a:.2f}s) em: {texto[:50]}", file=sys.stderr)
         return out, [tuple(w) for w in res["words"]] or None
 
 
@@ -436,6 +448,8 @@ def gerar_fala(motor_nome, texto, ctx, cfg):
     """Sintetiza uma fala, com cache em .cache/tts/falas. Devolve (audio float32 48k, [(palavra, ini, fim)]).
     Guarda o áudio CRU do motor: se a equalização mudar, só reprocessa (sem sintetizar nem pagar de novo)."""
     motor = MOTORES[motor_nome]
+    if motor_nome != "elevenlabs":
+        texto = sem_tags(texto)  # só o eleven_v4 interpreta tags de emoção
     pasta = os.path.join(CACHE, "falas")
     os.makedirs(pasta, exist_ok=True)
     key = chave_cache(motor_nome, texto, ctx, cfg)

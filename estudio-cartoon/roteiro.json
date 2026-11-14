@@ -21,12 +21,13 @@
       "nome": "Edmilson (pt-BR, documentário)",
       "modelo": "eleven_v4",
       "idioma": "pt",
-      "estabilidade": 0.6,
-      "similaridade": 0.6
+      "estabilidade": 0.4,
+      "similaridade": 0.75
     },
     "mbrola": "mb-br3",
     "espeakSpeed": 160,
-    "espeakPitch": 48
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
   },
   "musica": {
     "bpm": 104,
@@ -46,55 +47,94 @@
       "id": "gancho",
       "ato": "começo",
       "falas": [
-        "Por que o panetone só aparece no Natal?"
+        {
+          "texto": "Por que o panetone só aparece no Natal?",
+          "pronuncia": "[curious] Por que o panetone SÓ aparece no Natal?"
+        }
       ]
     },
     {
       "id": "origem",
       "ato": "começo",
       "falas": [
-        "Ele nasceu em Milão, na Itália.",
-        "Dizem que um ajudante chamado Toni o inventou numa ceia de Natal…",
-        "mas, pros historiadores, é só lenda."
+        {
+          "texto": "Ele nasceu em Milão, na Itália.",
+          "pronuncia": "[excited] Ele nasceu em Milão, na Itália!"
+        },
+        {
+          "texto": "Dizem que um ajudante chamado Toni o inventou numa ceia de Natal…",
+          "pronuncia": "[whispers] Dizem que um ajudante chamado Toni o inventou numa ceia de Natal…"
+        },
+        {
+          "texto": "mas, pros historiadores, é só lenda.",
+          "pronuncia": "[laughs] mas, pros historiadores… é só LENDA!"
+        }
       ]
     },
     {
       "id": "luxo",
       "ato": "desenvolvimento",
       "falas": [
-        "A verdade é mais simples: manteiga, ovos, açúcar e frutas eram caríssimos.",
-        "Então esse pão rico era guardado pra maior festa do ano."
+        {
+          "texto": "A verdade é mais simples: manteiga, ovos, açúcar e frutas eram caríssimos.",
+          "pronuncia": "[excited] A verdade é mais simples: manteiga, ovos, açúcar e frutas eram CARÍSSIMOS!"
+        },
+        {
+          "texto": "Então esse pão rico era guardado pra maior festa do ano.",
+          "pronuncia": "Então esse pão rico era guardado pra MAIOR festa do ano!"
+        }
       ]
     },
     {
       "id": "trabalho",
       "ato": "desenvolvimento",
       "falas": [
-        "E dá trabalho: a massa tradicional fermenta por mais de um dia,",
-        "e ainda esfria de cabeça pra baixo, pra não murchar!"
+        {
+          "texto": "E dá trabalho: a massa tradicional fermenta por mais de um dia,",
+          "pronuncia": "E dá trabalho: a massa tradicional fermenta por mais de UM DIA,"
+        },
+        {
+          "texto": "e ainda esfria de cabeça pra baixo, pra não murchar!",
+          "pronuncia": "[laughs] e ainda esfria de cabeça pra baixo, pra não murchar!"
+        }
       ]
     },
     {
       "id": "fabrica",
       "ato": "desenvolvimento",
       "falas": [
-        "Há uns cem anos, Angelo Motta deixou o panetone alto, como a gente conhece.",
-        "Hoje, as fábricas começam meses antes, lá por julho."
+        {
+          "texto": "Há uns cem anos, Angelo Motta deixou o panetone alto, como a gente conhece.",
+          "pronuncia": "Há uns cem anos, Angelo Motta deixou o panetone ALTO, como a gente conhece."
+        },
+        {
+          "texto": "Hoje, as fábricas começam meses antes, lá por julho.",
+          "pronuncia": "[surprised] Hoje, as fábricas começam meses antes… lá por JULHO!"
+        }
       ]
     },
     {
       "id": "pascoa",
       "ato": "desenvolvimento",
       "falas": [
-        "E na Páscoa? Uma massa parecida vira colomba pascal, pras máquinas não pararem!"
+        {
+          "texto": "E na Páscoa? Uma massa parecida vira colomba pascal, pras máquinas não pararem!",
+          "pronuncia": "[curious] E na Páscoa? [excited] Uma massa parecida vira colomba pascal, pras máquinas não pararem!"
+        }
       ]
     },
     {
       "id": "conclusao",
       "ato": "conclusão",
       "falas": [
-        "Ou seja: é tradição, um pão de festa que virou símbolo.",
-        "E você, é time panetone ou chocotone? Comenta aqui!"
+        {
+          "texto": "Ou seja: é tradição, um pão de festa que virou símbolo.",
+          "pronuncia": "[happy] Ou seja: é tradição, um pão de festa que virou símbolo."
+        },
+        {
+          "texto": "E você, é time panetone ou chocotone? Comenta aqui!",
+          "pronuncia": "[excited] E você, é time panetone ou chocotone? Comenta aqui!"
+        }
       ]
     }
   ]

@@ -6,7 +6,8 @@
  *   npm run audio -- --engine elevenlabs --autorizo-custo
  *
  * Entrada (stdin, JSON): { text, voiceId, modelId, languageCode, previousText, nextText, voiceSettings, out }
- * Saída  (stdout, JSON): { out, words: [[palavra, inicio_s, fim_s], ...], characters }
+ * Saída  (stdout, JSON): { out, words: [[palavra, inicio_s, fim_s], ...], tags: [[tag, ini, fim]], characters }
+ * Tags de emoção do eleven_v4 ([excited], [whispers]...) saem de `words` e vão para `tags`.
  *
  * A chave vem de ELEVENLABS_API_KEY (ambiente) ou do arquivo .env.local do projeto. Nunca coloque a chave no código.
  */
@@ -69,8 +70,26 @@ try {
     }
   });
   if (cur) words.push([cur, t0, t1]);
+  // tags de emoção ([excited], [laughs softly]...) não são palavras da legenda: separa e mede a duração
+  const falas = [];
+  const tags = [];
+  let tag = null;
+  for (const w of words) {
+    if (tag) {
+      tag = [tag[0] + " " + w[0], tag[1], w[2]];
+      if (w[0].includes("]")) {
+        tags.push(tag);
+        tag = null;
+      }
+    } else if (w[0].startsWith("[")) {
+      if (w[0].includes("]")) tags.push(w);
+      else tag = w;
+    } else {
+      falas.push(w);
+    }
+  }
   const characters = Number(rawResponse.headers.get("x-character-count") || req.text.length);
-  process.stdout.write(JSON.stringify({ out: req.out, words, characters }));
+  process.stdout.write(JSON.stringify({ out: req.out, words: falas, tags, characters }));
 } catch (e) {
   console.error(`ElevenLabs: ${e.statusCode ?? ""} ${JSON.stringify(e.body ?? e.message).slice(0, 300)}`);
   process.exit(4);

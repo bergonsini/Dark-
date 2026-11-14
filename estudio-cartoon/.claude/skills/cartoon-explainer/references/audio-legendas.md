@@ -72,7 +72,11 @@ Alternativa mais grave: Antônio (`oQtRiHTYSl1XeCm4tuUw`).
   contínua entre as frases.
 - Sem novas cobranças: falas ficam em cache (`.cache/tts/falas/`), e o ajuste à duração alvo é feito
   localmente (ffmpeg `atempo`, ±7%, sem mudar o tom), nunca gerando de novo.
-- O v4 não aceita `speed`/`style`: ritmo e emoção vêm da pontuação (reticências = pausa) e de tags como `[calmly]`.
+- O v4 não aceita `speed`/`style`: ritmo e emoção vêm da pontuação (reticências = pausa), MAIÚSCULAS (ênfase)
+  e **tags de emoção** na `pronuncia` (`[curious]`, `[excited]`, `[whispers]`, `[laughs]`, `[surprised]`, `[happy]`).
+  Padrão do projeto: narração **viva**, estabilidade 0.4 e similaridade 0.75 (estabilidade baixa = mais emoção).
+  As tags saem da legenda (`texto`) e dos motores gratuitos; o `elevenlabs_tts.mjs` separa as tags do alinhamento e
+  o `voz.py` avisa se alguma tag foi lida em voz alta (duração > 0,25 s).
 - Verificar a integração: `ELEVENLABS_API_KEY=... npx -y @elevenlabs/cli@latest onboard check --answered --env-path .env.local`.
 
 ## timeline.json (gerado) e sincronia

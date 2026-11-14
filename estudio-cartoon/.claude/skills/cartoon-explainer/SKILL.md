@@ -85,6 +85,12 @@ voz encorpada, dicção clara), música, SFX e `timeline.json` com o tempo de ca
   `ELEVENLABS_API_KEY=proxy-injected`). Nunca contrate serviço nem faça chamada paga sem autorização.
   Sem autorização, ou para rascunhos, use a voz gratuita: `npm run audio -- --engine auto`.
 - Ritmo da voz Edmilson: ~155 palavras/min → escreva **~130 palavras para 60 s**.
+- **Narração VIVA (padrão, preferência do usuário):** estabilidade 0.4 e similaridade 0.75 no eleven_v4, e cada fala
+  com `{"texto": legenda, "pronuncia": versão interpretada}`, em que a pronúncia leva **tags de emoção**
+  (`[curious]` em perguntas, `[excited]` em revelações, `[whispers]` em suspense/lenda, `[laughs]` em humor,
+  `[surprised]`, `[happy]`), **MAIÚSCULAS** na palavra-chave e exclamações/reticências. Mantenha o mesmo número
+  de palavras entre texto e pronúncia (sem contar as tags). As tags são removidas da legenda e dos motores
+  gratuitos; o script avisa se a voz "falou" uma tag. Tags também contam como caracteres no custo.
 - Avisos do script: "sobram X s" → escreva mais; "passa da duração alvo" → corte texto (~150–160
   palavras para 60 s); "gancho termina em X s" → encurte a primeira frase. Repita até não haver avisos.
 - Números, siglas e palavras difíceis: use `{"texto": ..., "pronuncia": ...}` na fala.
