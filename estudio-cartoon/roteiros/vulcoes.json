@@ -1,0 +1,96 @@
+{
+  "video": "vulcoes",
+  "titulo": "Por que vulcões existem?",
+  "fps": 30,
+  "duracaoSegundos": 60,
+  "personagem": "tito",
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "9luRA11KwacKAVmLyqUs",
+      "nome": "Edmilson (pt-BR, documentário)",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.6,
+      "similaridade": 0.6
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48
+  },
+  "musica": {
+    "bpm": 92,
+    "tom": -12
+  },
+  "cenas": [
+    {
+      "id": "gancho",
+      "ato": "começo",
+      "falas": [
+        "Por que a Terra cospe fogo?"
+      ]
+    },
+    {
+      "id": "descida",
+      "ato": "começo",
+      "falas": [
+        "Pra entender os vulcões,",
+        "a gente precisa descer até o centro do planeta."
+      ]
+    },
+    {
+      "id": "interior",
+      "ato": "desenvolvimento",
+      "falas": [
+        "Lá embaixo, a Terra é quente como a superfície do Sol.",
+        "E esse calor quer escapar."
+      ]
+    },
+    {
+      "id": "placas",
+      "ato": "desenvolvimento",
+      "falas": [
+        "A casca da Terra é quebrada em placas gigantes,",
+        "que se movem devagar, como unhas crescendo."
+      ]
+    },
+    {
+      "id": "magma",
+      "ato": "desenvolvimento",
+      "falas": [
+        "Quando uma placa afunda embaixo da outra, a rocha derrete e vira magma.",
+        "Mais leve, ele sobe,",
+        "junta pressão…",
+        "e explode: erupção!"
+      ]
+    },
+    {
+      "id": "brasil",
+      "ato": "desenvolvimento",
+      "falas": [
+        "E o Brasil? Fica no meio de uma placa, longe das bordas.",
+        "Por isso não temos vulcões ativos.",
+        "Mas Fernando de Noronha nasceu de um vulcão antigo!"
+      ]
+    },
+    {
+      "id": "conclusao",
+      "ato": "conclusão",
+      "falas": [
+        "Vulcões são a Terra soltando o calor de dentro.",
+        "E ainda criam ilhas e solo fértil.",
+        "Que fenômeno eu explico no próximo vídeo? Comenta aqui!"
+      ]
+    }
+  ]
+}

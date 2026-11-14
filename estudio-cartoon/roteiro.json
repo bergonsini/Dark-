@@ -1,6 +1,6 @@
 {
-  "video": "vulcoes",
-  "titulo": "Por que vulcões existem?",
+  "video": "sistema-solar",
+  "titulo": "Como surgiu o Sistema Solar?",
   "fps": 30,
   "duracaoSegundos": 60,
   "personagem": "tito",
@@ -29,67 +29,75 @@
     "espeakPitch": 48
   },
   "musica": {
-    "bpm": 92,
-    "tom": -12
+    "bpm": 84,
+    "tom": -14
   },
   "cenas": [
     {
       "id": "gancho",
       "ato": "começo",
       "falas": [
-        "Por que a Terra cospe fogo?"
+        "De onde veio o Sistema Solar?"
       ]
     },
     {
-      "id": "descida",
+      "id": "nuvem",
       "ato": "começo",
       "falas": [
-        "Pra entender os vulcões,",
-        "a gente precisa descer até o centro do planeta."
+        {
+          "texto": "Há 4,6 bilhões de anos,",
+          "pronuncia": "Há quatro vírgula seis bilhões de anos,"
+        },
+        "existia só uma nuvem gigante de gás e poeira."
       ]
     },
     {
-      "id": "interior",
+      "id": "colapso",
       "ato": "desenvolvimento",
       "falas": [
-        "Lá embaixo, a Terra é quente como a superfície do Sol.",
-        "E esse calor quer escapar."
+        "Até que algo, talvez uma estrela explodindo perto, deu um empurrão.",
+        "E a gravidade puxou tudo pro centro."
       ]
     },
     {
-      "id": "placas",
+      "id": "disco",
       "ato": "desenvolvimento",
       "falas": [
-        "A casca da Terra é quebrada em placas gigantes,",
-        "que se movem devagar, como unhas crescendo."
+        "A nuvem começou a girar cada vez mais rápido,",
+        "e achatou, como massa de pizza girando."
       ]
     },
     {
-      "id": "magma",
+      "id": "sol",
       "ato": "desenvolvimento",
       "falas": [
-        "Quando uma placa afunda embaixo da outra, a rocha derrete e vira magma.",
-        "Mais leve, ele sobe,",
-        "junta pressão…",
-        "e explode: erupção!"
+        "No centro, o calor e a pressão ficaram tão grandes que acendeu uma estrela:",
+        "nasceu o Sol!"
       ]
     },
     {
-      "id": "brasil",
+      "id": "planetas",
       "ato": "desenvolvimento",
       "falas": [
-        "E o Brasil? Fica no meio de uma placa, longe das bordas.",
-        "Por isso não temos vulcões ativos.",
-        "Mas Fernando de Noronha nasceu de um vulcão antigo!"
+        "Em volta, grãos de poeira grudaram e viraram planetas.",
+        "Perto do Sol, planetas de rocha.",
+        "Longe, no frio, gigantes de gás e gelo."
+      ]
+    },
+    {
+      "id": "lua",
+      "ato": "desenvolvimento",
+      "falas": [
+        "E a Lua? Nasceu de uma batida gigante na Terra jovem!"
       ]
     },
     {
       "id": "conclusao",
       "ato": "conclusão",
       "falas": [
-        "Vulcões são a Terra soltando o calor de dentro.",
-        "E ainda criam ilhas e solo fértil.",
-        "Que fenômeno eu explico no próximo vídeo? Comenta aqui!"
+        "Então, tudo veio da mesma nuvem.",
+        "Até você é feito de poeira de estrelas!",
+        "Que mistério do universo eu explico depois? Comenta aqui!"
       ]
     }
   ]

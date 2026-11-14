@@ -107,6 +107,10 @@ export type PersonagemProps = {
   andando?: boolean;
   /** espelha (olha para a esquerda) */
   espelhar?: boolean;
+  /** acessório temático por cima do MESMO personagem (acompanha a cabeça) */
+  acessorio?: "capaceteEspacial";
+  /** sem sombra no chão (ex.: flutuando no espaço) */
+  semSombra?: boolean;
   altura?: number;
   style?: React.CSSProperties;
 };
@@ -170,6 +174,8 @@ export const Personagem: React.FC<PersonagemProps> = ({
   squash = 0,
   andando = false,
   espelhar = false,
+  acessorio,
+  semSombra = false,
   altura = 800,
   style,
 }) => {
@@ -206,7 +212,7 @@ export const Personagem: React.FC<PersonagemProps> = ({
     >
       <g transform={`${espelhar ? "translate(400 0) scale(-1 1)" : ""}`}>
         {/* sombra no chão */}
-        <ellipse cx={200} cy={735} rx={120 * (1 - (corpoY + bob) / -400)} ry={18} fill="rgba(0,0,0,0.18)" />
+        {!semSombra && <ellipse cx={200} cy={735} rx={120 * (1 - (corpoY + bob) / -400)} ry={18} fill="rgba(0,0,0,0.18)" />}
         <g transform={`translate(0 ${corpoY + bob}) translate(200 730) scale(${sx} ${sy}) translate(-200 -730)`}>
           <Perna lado="L" ang={passo * 24} />
           <Perna lado="R" ang={-passo * 24} />
@@ -290,6 +296,15 @@ export const Personagem: React.FC<PersonagemProps> = ({
                 <path d={`M ${-bw} 0 Q 0 ${curve * 1.2} ${bw} 0`} stroke={C.outline} strokeWidth={8} strokeLinecap="round" fill="none" />
               )}
             </g>
+            {acessorio === "capaceteEspacial" && (
+              <g>
+                <circle cx={200} cy={195} r={168} fill="rgba(190,230,255,0.10)" stroke={C.white} strokeWidth={12} />
+                <circle cx={200} cy={195} r={168} fill="none" stroke={C.outline} strokeWidth={4} />
+                <path d="M 90 120 Q 120 70 175 52" stroke={C.white} strokeWidth={14} strokeLinecap="round" fill="none" opacity={0.85} />
+                <path d="M 300 250 Q 310 220 312 200" stroke={C.white} strokeWidth={9} strokeLinecap="round" fill="none" opacity={0.6} />
+                <ellipse cx={200} cy={352} rx={110} ry={26} fill="#D9DEE8" stroke={C.outline} strokeWidth={6} />
+              </g>
+            )}
           </g>
           <BracoSVG lado="R" b={R} />
         </g>

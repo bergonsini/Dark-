@@ -2,6 +2,7 @@ import React from "react";
 import { SceneProps } from "./scenes/common";
 import * as ceuAzul from "./scenes/ceu-azul";
 import * as vulcoes from "./scenes/vulcoes";
+import * as sistemaSolar from "./scenes/sistema-solar";
 
 /**
  * Catálogo de vídeos. Cada vídeo tem sua pasta em ./scenes/<id>/ com um index.ts que exporta CENAS
@@ -13,6 +14,7 @@ export type Cena = { id: string; Comp: React.FC<SceneProps> };
 export const VIDEOS: Record<string, Cena[]> = {
   "ceu-azul": ceuAzul.CENAS,
   vulcoes: vulcoes.CENAS,
+  "sistema-solar": sistemaSolar.CENAS,
 };
 
 export const cenasDoVideo = (video?: string): Cena[] => {
