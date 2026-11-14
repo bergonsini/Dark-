@@ -12,6 +12,7 @@ import { Captions } from "./components/Captions";
 import { C } from "./theme";
 import { getScene, isSpeaking, timeline } from "./timeline";
 import { cenasDoVideo } from "./videos";
+import { SceneTiming } from "./scenes/common";
 
 /** Cenas do vídeo atual: escolhidas pelo campo "video" do roteiro (gravado no timeline.json). */
 export const SCENES = cenasDoVideo(timeline.video);
@@ -48,7 +49,9 @@ export const CartoonExplainer: React.FC = () => {
           return (
             <React.Fragment key={id}>
               <TransitionSeries.Sequence durationInFrames={isLast ? len : len + T} name={id}>
-                <Comp scene={scene} />
+                <SceneTiming.Provider value={{ len, first: i === 0, last: isLast }}>
+                  <Comp scene={scene} />
+                </SceneTiming.Provider>
               </TransitionSeries.Sequence>
               {!isLast && (
                 <TransitionSeries.Transition

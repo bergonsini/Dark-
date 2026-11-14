@@ -1,0 +1,141 @@
+{
+  "video": "panetone",
+  "titulo": "Por que o panetone só aparece no Natal?",
+  "fps": 30,
+  "duracaoSegundos": 60,
+  "personagem": "tito",
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "9luRA11KwacKAVmLyqUs",
+      "nome": "Edmilson (pt-BR, documentário)",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.4,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
+  },
+  "musica": {
+    "bpm": 104,
+    "tom": -7
+  },
+  "fontes": [
+    "Origem em Milão / lenda do Toni sem fundamento: Massimo Montanari (via O Hoje, 2023); Flamigni; Wikipedia 'Panettone'",
+    "Ingredientes caros = pão de festa: O Povo (2023); Bom Gourmet; Wikipedia 'Panettone'",
+    "Fermentação longa: Wikipedia 'Panettone'; artigos sobre Motta (3 levedações, ~20 h) e produção artesanal (36 h + fermento de 48 h)",
+    "Esfriar de cabeça pra baixo: Universidade da Basileia (unibas.ch); Cuisine Fiend",
+    "Angelo Motta, 1919, formato alto: Wikipedia 'Angelo Motta'; Wikipedia 'Panettone'",
+    "Produção começa julho/agosto: Bom Gourmet; O Povo (2023)",
+    "Colomba pascal (Motta, Dino Villani, anos 1930; massa parecida com a do panetone, com casca cristalizada e sem passas; reaproveita as máquinas): Wikipedia 'Colomba pasquale'; Gambero Rosso; Italy Segreta"
+  ],
+  "cenas": [
+    {
+      "id": "gancho",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Por que o panetone só aparece no Natal?",
+          "pronuncia": "[curious] Por que o panetone SÓ aparece no Natal?"
+        }
+      ]
+    },
+    {
+      "id": "origem",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Ele nasceu em Milão, na Itália.",
+          "pronuncia": "[excited] Ele nasceu em Milão, na Itália!"
+        },
+        {
+          "texto": "Dizem que um ajudante chamado Toni o inventou numa ceia de Natal…",
+          "pronuncia": "[whispers] Dizem que um ajudante chamado Toni o inventou numa ceia de Natal…"
+        },
+        {
+          "texto": "mas, pros historiadores, é só lenda.",
+          "pronuncia": "[laughs] mas, pros historiadores… é só LENDA!"
+        }
+      ]
+    },
+    {
+      "id": "luxo",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "A verdade é mais simples: manteiga, ovos, açúcar e frutas eram caríssimos.",
+          "pronuncia": "[excited] A verdade é mais simples: manteiga, ovos, açúcar e frutas eram CARÍSSIMOS!"
+        },
+        {
+          "texto": "Então esse pão rico era guardado pra maior festa do ano.",
+          "pronuncia": "Então esse pão rico era guardado pra MAIOR festa do ano!"
+        }
+      ]
+    },
+    {
+      "id": "trabalho",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E dá trabalho: a massa tradicional fermenta por mais de um dia,",
+          "pronuncia": "E dá trabalho: a massa tradicional fermenta por mais de UM DIA,"
+        },
+        {
+          "texto": "e ainda esfria de cabeça pra baixo, pra não murchar!",
+          "pronuncia": "[laughs] e ainda esfria de cabeça pra baixo, pra não murchar!"
+        }
+      ]
+    },
+    {
+      "id": "fabrica",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Há uns cem anos, Angelo Motta deixou o panetone alto, como a gente conhece.",
+          "pronuncia": "Há uns cem anos, Angelo Motta deixou o panetone ALTO, como a gente conhece."
+        },
+        {
+          "texto": "Hoje, as fábricas começam meses antes, lá por julho.",
+          "pronuncia": "[surprised] Hoje, as fábricas começam meses antes… lá por JULHO!"
+        }
+      ]
+    },
+    {
+      "id": "pascoa",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E na Páscoa? Uma massa parecida vira colomba pascal, pras máquinas não pararem!",
+          "pronuncia": "[curious] E na Páscoa? [excited] Uma massa parecida vira colomba pascal, pras máquinas não pararem!"
+        }
+      ]
+    },
+    {
+      "id": "conclusao",
+      "ato": "conclusão",
+      "falas": [
+        {
+          "texto": "Ou seja: é tradição, um pão de festa que virou símbolo.",
+          "pronuncia": "[happy] Ou seja: é tradição, um pão de festa que virou símbolo."
+        },
+        {
+          "texto": "E você, é time panetone ou chocotone? Comenta aqui!",
+          "pronuncia": "[excited] E você, é time panetone ou chocotone? Comenta aqui!"
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
-  "video": "panetone",
-  "titulo": "Por que o panetone só aparece no Natal?",
+  "video": "sem-lua",
+  "titulo": "E se a Lua sumisse?",
   "fps": 30,
   "duracaoSegundos": 60,
   "personagem": "tito",
@@ -30,17 +30,14 @@
     "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
   },
   "musica": {
-    "bpm": 104,
-    "tom": -7
+    "bpm": 96,
+    "tom": -10
   },
   "fontes": [
-    "Origem em Milão / lenda do Toni sem fundamento: Massimo Montanari (via O Hoje, 2023); Flamigni; Wikipedia 'Panettone'",
-    "Ingredientes caros = pão de festa: O Povo (2023); Bom Gourmet; Wikipedia 'Panettone'",
-    "Fermentação longa: Wikipedia 'Panettone'; artigos sobre Motta (3 levedações, ~20 h) e produção artesanal (36 h + fermento de 48 h)",
-    "Esfriar de cabeça pra baixo: Universidade da Basileia (unibas.ch); Cuisine Fiend",
-    "Angelo Motta, 1919, formato alto: Wikipedia 'Angelo Motta'; Wikipedia 'Panettone'",
-    "Produção começa julho/agosto: Bom Gourmet; O Povo (2023)",
-    "Colomba pascal (Motta, Dino Villani, anos 1930; massa parecida com a do panetone, com casca cristalizada e sem passas; reaproveita as máquinas): Wikipedia 'Colomba pasquale'; Gambero Rosso; Italy Segreta"
+    "Marés: força de maré do Sol ≈ metade (46%) da da Lua: NOAA Tides Tutorial; Bowditch (American Practical Navigator); Popular Science / Live Science (marés bem menores sem a Lua)",
+    "Inclinação: Laskar et al. 1993 (Nature) – Lua estabiliza a obliquidade; Lissauer/Barnes 2011 – variação maior que a atual em ~100 mil anos, porém limitada (Júpiter também ajuda) → 'ajuda a segurar', 'mais instável', 'milhares de anos'",
+    "Corais: Kaniewska et al. 2015 (eLife) – luar é estímulo importante para a desova em massa; Levy et al. 2007 (Science) – gene Cry2 ativado pela luz da lua cheia",
+    "Noites mais escuras sem o luar; lobisomem = piada (folclore)"
   ],
   "cenas": [
     {
@@ -48,78 +45,79 @@
       "ato": "começo",
       "falas": [
         {
-          "texto": "Por que o panetone só aparece no Natal?",
-          "pronuncia": "[curious] Por que o panetone SÓ aparece no Natal?"
+          "texto": "E se a Lua sumisse… agora?",
+          "pronuncia": "[curious] E se a Lua sumisse… AGORA?"
         }
       ]
     },
     {
-      "id": "origem",
+      "id": "puf",
       "ato": "começo",
       "falas": [
         {
-          "texto": "Ele nasceu em Milão, na Itália.",
-          "pronuncia": "[excited] Ele nasceu em Milão, na Itália!"
+          "texto": "Três, dois, um… puf!",
+          "pronuncia": "Três, dois, um… [excited] PUF!"
         },
         {
-          "texto": "Dizem que um ajudante chamado Toni o inventou numa ceia de Natal…",
-          "pronuncia": "[whispers] Dizem que um ajudante chamado Toni o inventou numa ceia de Natal…"
-        },
-        {
-          "texto": "mas, pros historiadores, é só lenda.",
-          "pronuncia": "[laughs] mas, pros historiadores… é só LENDA!"
+          "texto": "Qual efeito você notaria primeiro? Pensa aí!",
+          "pronuncia": "[curious] Qual efeito você NOTARIA primeiro? Pensa aí!"
         }
       ]
     },
     {
-      "id": "luxo",
+      "id": "noite",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "A verdade é mais simples: manteiga, ovos, açúcar e frutas eram caríssimos.",
-          "pronuncia": "[excited] A verdade é mais simples: manteiga, ovos, açúcar e frutas eram CARÍSSIMOS!"
-        },
-        {
-          "texto": "Então esse pão rico era guardado pra maior festa do ano.",
-          "pronuncia": "Então esse pão rico era guardado pra MAIOR festa do ano!"
+          "texto": "Resposta: as noites! Sem o luar, ficariam muito mais escuras.",
+          "pronuncia": "[excited] Resposta: as NOITES! Sem o luar, ficariam muito mais escuras."
         }
       ]
     },
     {
-      "id": "trabalho",
+      "id": "mares",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "E dá trabalho: a massa tradicional fermenta por mais de um dia,",
-          "pronuncia": "E dá trabalho: a massa tradicional fermenta por mais de UM DIA,"
+          "texto": "E as marés? Quem mais puxa os oceanos é a Lua.",
+          "pronuncia": "[curious] E as marés? Quem mais puxa os oceanos é a LUA."
         },
         {
-          "texto": "e ainda esfria de cabeça pra baixo, pra não murchar!",
-          "pronuncia": "[laughs] e ainda esfria de cabeça pra baixo, pra não murchar!"
+          "texto": "Sem ela, só o Sol puxaria, com metade da força: marés bem menores.",
+          "pronuncia": "Sem ela, só o Sol puxaria, com METADE da força: marés bem menores."
         }
       ]
     },
     {
-      "id": "fabrica",
+      "id": "quiz",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Há uns cem anos, Angelo Motta deixou o panetone alto, como a gente conhece.",
-          "pronuncia": "Há uns cem anos, Angelo Motta deixou o panetone ALTO, como a gente conhece."
+          "texto": "Agora, um quiz: quem sentiria mais falta da Lua? Os corais… ou o lobisomem?",
+          "pronuncia": "[excited] Agora, um QUIZ: quem sentiria mais falta da Lua? Os corais… ou o lobisomem?"
         },
         {
-          "texto": "Hoje, as fábricas começam meses antes, lá por julho.",
-          "pronuncia": "[surprised] Hoje, as fábricas começam meses antes… lá por JULHO!"
+          "texto": "Os dois! O lobisomem ia ficar desempregado…",
+          "pronuncia": "[laughs] Os DOIS! O lobisomem ia ficar DESEMPREGADO…",
+          "pausaDepois": 0.6
+        },
+        {
+          "texto": "e muitos corais usam a lua cheia como sinal pra se reproduzir.",
+          "pronuncia": "e muitos corais usam a lua cheia como sinal pra se reproduzir."
         }
       ]
     },
     {
-      "id": "pascoa",
+      "id": "eixo",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "E na Páscoa? Uma massa parecida vira colomba pascal, pras máquinas não pararem!",
-          "pronuncia": "[curious] E na Páscoa? [excited] Uma massa parecida vira colomba pascal, pras máquinas não pararem!"
+          "texto": "E tem um efeito lento: a Lua ajuda a segurar a inclinação da Terra.",
+          "pronuncia": "E tem um efeito LENTO: a Lua ajuda a segurar a inclinação da Terra."
+        },
+        {
+          "texto": "Sem ela, o eixo ficaria mais instável, e as estações mudariam ao longo de milhares de anos.",
+          "pronuncia": "[surprised] Sem ela, o eixo ficaria mais instável, e as estações mudariam ao longo de MILHARES de anos."
         }
       ]
     },
@@ -128,12 +126,12 @@
       "ato": "conclusão",
       "falas": [
         {
-          "texto": "Ou seja: é tradição, um pão de festa que virou símbolo.",
-          "pronuncia": "[happy] Ou seja: é tradição, um pão de festa que virou símbolo."
+          "texto": "Ou seja: a Lua não é só enfeite, ela trabalha pra gente!",
+          "pronuncia": "[happy] Ou seja: a Lua não é só ENFEITE, ela trabalha pra gente!"
         },
         {
-          "texto": "E você, é time panetone ou chocotone? Comenta aqui!",
-          "pronuncia": "[excited] E você, é time panetone ou chocotone? Comenta aqui!"
+          "texto": "E você, ia sentir falta de quê? Comenta aqui!",
+          "pronuncia": "[excited] E você, ia sentir falta de quê? Comenta aqui!"
         }
       ]
     }
