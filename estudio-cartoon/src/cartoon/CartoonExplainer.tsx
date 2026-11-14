@@ -61,7 +61,7 @@ export const CartoonExplainer: React.FC = () => {
         })}
       </TransitionSeries>
 
-      <Captions hideScenes={["gancho"]} />
+      <Captions hideScenes={["gancho"]} top={1355} />
       <ProgressBar />
 
       {/* ÁUDIO: narração + música com ducking (abaixa quando a voz fala) + SFX dentro de cada cena */}

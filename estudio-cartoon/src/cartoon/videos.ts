@@ -3,6 +3,7 @@ import { SceneProps } from "./scenes/common";
 import * as ceuAzul from "./scenes/ceu-azul";
 import * as vulcoes from "./scenes/vulcoes";
 import * as sistemaSolar from "./scenes/sistema-solar";
+import * as panetone from "./scenes/panetone";
 
 /**
  * Catálogo de vídeos. Cada vídeo tem sua pasta em ./scenes/<id>/ com um index.ts que exporta CENAS
@@ -15,6 +16,7 @@ export const VIDEOS: Record<string, Cena[]> = {
   "ceu-azul": ceuAzul.CENAS,
   vulcoes: vulcoes.CENAS,
   "sistema-solar": sistemaSolar.CENAS,
+  panetone: panetone.CENAS,
 };
 
 export const cenasDoVideo = (video?: string): Cena[] => {

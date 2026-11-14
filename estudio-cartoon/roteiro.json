@@ -1,6 +1,6 @@
 {
-  "video": "sistema-solar",
-  "titulo": "Como surgiu o Sistema Solar?",
+  "video": "panetone",
+  "titulo": "Por que o panetone só aparece no Natal?",
   "fps": 30,
   "duracaoSegundos": 60,
   "personagem": "tito",
@@ -29,75 +29,72 @@
     "espeakPitch": 48
   },
   "musica": {
-    "bpm": 84,
-    "tom": -14
+    "bpm": 104,
+    "tom": -7
   },
+  "fontes": [
+    "Origem em Milão / lenda do Toni sem fundamento: Massimo Montanari (via O Hoje, 2023); Flamigni; Wikipedia 'Panettone'",
+    "Ingredientes caros = pão de festa: O Povo (2023); Bom Gourmet; Wikipedia 'Panettone'",
+    "Fermentação longa: Wikipedia 'Panettone'; artigos sobre Motta (3 levedações, ~20 h) e produção artesanal (36 h + fermento de 48 h)",
+    "Esfriar de cabeça pra baixo: Universidade da Basileia (unibas.ch); Cuisine Fiend",
+    "Angelo Motta, 1919, formato alto: Wikipedia 'Angelo Motta'; Wikipedia 'Panettone'",
+    "Produção começa julho/agosto: Bom Gourmet; O Povo (2023)",
+    "Colomba pascal (Motta, Dino Villani, anos 1930; massa parecida com a do panetone, com casca cristalizada e sem passas; reaproveita as máquinas): Wikipedia 'Colomba pasquale'; Gambero Rosso; Italy Segreta"
+  ],
   "cenas": [
     {
       "id": "gancho",
       "ato": "começo",
       "falas": [
-        "De onde veio o Sistema Solar?"
+        "Por que o panetone só aparece no Natal?"
       ]
     },
     {
-      "id": "nuvem",
+      "id": "origem",
       "ato": "começo",
       "falas": [
-        {
-          "texto": "Há 4,6 bilhões de anos,",
-          "pronuncia": "Há quatro vírgula seis bilhões de anos,"
-        },
-        "existia só uma nuvem gigante de gás e poeira."
+        "Ele nasceu em Milão, na Itália.",
+        "Dizem que um ajudante chamado Toni o inventou numa ceia de Natal…",
+        "mas, pros historiadores, é só lenda."
       ]
     },
     {
-      "id": "colapso",
+      "id": "luxo",
       "ato": "desenvolvimento",
       "falas": [
-        "Até que algo, talvez uma estrela explodindo perto, deu um empurrão.",
-        "E a gravidade puxou tudo pro centro."
+        "A verdade é mais simples: manteiga, ovos, açúcar e frutas eram caríssimos.",
+        "Então esse pão rico era guardado pra maior festa do ano."
       ]
     },
     {
-      "id": "disco",
+      "id": "trabalho",
       "ato": "desenvolvimento",
       "falas": [
-        "A nuvem começou a girar cada vez mais rápido,",
-        "e achatou, como massa de pizza girando."
+        "E dá trabalho: a massa tradicional fermenta por mais de um dia,",
+        "e ainda esfria de cabeça pra baixo, pra não murchar!"
       ]
     },
     {
-      "id": "sol",
+      "id": "fabrica",
       "ato": "desenvolvimento",
       "falas": [
-        "No centro, o calor e a pressão ficaram tão grandes que acendeu uma estrela:",
-        "nasceu o Sol!"
+        "Há uns cem anos, Angelo Motta deixou o panetone alto, como a gente conhece.",
+        "Hoje, as fábricas começam meses antes, lá por julho."
       ]
     },
     {
-      "id": "planetas",
+      "id": "pascoa",
       "ato": "desenvolvimento",
       "falas": [
-        "Em volta, grãos de poeira grudaram e viraram planetas.",
-        "Perto do Sol, planetas de rocha.",
-        "Longe, no frio, gigantes de gás e gelo."
-      ]
-    },
-    {
-      "id": "lua",
-      "ato": "desenvolvimento",
-      "falas": [
-        "E a Lua? Nasceu de uma batida gigante na Terra jovem!"
+        "E na Páscoa? Uma massa parecida vira colomba pascal, pras máquinas não pararem!"
       ]
     },
     {
       "id": "conclusao",
       "ato": "conclusão",
       "falas": [
-        "Então, tudo veio da mesma nuvem.",
-        "Até você é feito de poeira de estrelas!",
-        "Que mistério do universo eu explico depois? Comenta aqui!"
+        "Ou seja: é tradição, um pão de festa que virou símbolo.",
+        "E você, é time panetone ou chocotone? Comenta aqui!"
       ]
     }
   ]

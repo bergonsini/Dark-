@@ -108,7 +108,7 @@ export type PersonagemProps = {
   /** espelha (olha para a esquerda) */
   espelhar?: boolean;
   /** acessório temático por cima do MESMO personagem (acompanha a cabeça) */
-  acessorio?: "capaceteEspacial";
+  acessorio?: "capaceteEspacial" | "gorroNatal";
   /** sem sombra no chão (ex.: flutuando no espaço) */
   semSombra?: boolean;
   altura?: number;
@@ -296,6 +296,14 @@ export const Personagem: React.FC<PersonagemProps> = ({
                 <path d={`M ${-bw} 0 Q 0 ${curve * 1.2} ${bw} 0`} stroke={C.outline} strokeWidth={8} strokeLinecap="round" fill="none" />
               )}
             </g>
+            {acessorio === "gorroNatal" && (
+              <g>
+                <path d="M 78 128 Q 120 20 230 18 Q 300 22 352 92 Q 330 96 318 108 Q 280 70 230 70 Q 160 80 128 132 Z" fill="#E23B3B" stroke={C.outline} strokeWidth={7} strokeLinejoin="round" />
+                <path d="M 230 18 Q 300 22 352 92" stroke="#B82828" strokeWidth={10} fill="none" opacity={0.6} />
+                <circle cx={350} cy={102} r={30} fill={C.white} stroke={C.outline} strokeWidth={6} />
+                <path d="M 66 140 Q 200 88 330 128 Q 336 150 324 168 Q 200 128 76 176 Q 58 160 66 140 Z" fill={C.white} stroke={C.outline} strokeWidth={6} strokeLinejoin="round" />
+              </g>
+            )}
             {acessorio === "capaceteEspacial" && (
               <g>
                 <circle cx={200} cy={195} r={168} fill="rgba(190,230,255,0.10)" stroke={C.white} strokeWidth={12} />

@@ -1,0 +1,104 @@
+{
+  "video": "sistema-solar",
+  "titulo": "Como surgiu o Sistema Solar?",
+  "fps": 30,
+  "duracaoSegundos": 60,
+  "personagem": "tito",
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "9luRA11KwacKAVmLyqUs",
+      "nome": "Edmilson (pt-BR, documentário)",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.6,
+      "similaridade": 0.6
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48
+  },
+  "musica": {
+    "bpm": 84,
+    "tom": -14
+  },
+  "cenas": [
+    {
+      "id": "gancho",
+      "ato": "começo",
+      "falas": [
+        "De onde veio o Sistema Solar?"
+      ]
+    },
+    {
+      "id": "nuvem",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Há 4,6 bilhões de anos,",
+          "pronuncia": "Há quatro vírgula seis bilhões de anos,"
+        },
+        "existia só uma nuvem gigante de gás e poeira."
+      ]
+    },
+    {
+      "id": "colapso",
+      "ato": "desenvolvimento",
+      "falas": [
+        "Até que algo, talvez uma estrela explodindo perto, deu um empurrão.",
+        "E a gravidade puxou tudo pro centro."
+      ]
+    },
+    {
+      "id": "disco",
+      "ato": "desenvolvimento",
+      "falas": [
+        "A nuvem começou a girar cada vez mais rápido,",
+        "e achatou, como massa de pizza girando."
+      ]
+    },
+    {
+      "id": "sol",
+      "ato": "desenvolvimento",
+      "falas": [
+        "No centro, o calor e a pressão ficaram tão grandes que acendeu uma estrela:",
+        "nasceu o Sol!"
+      ]
+    },
+    {
+      "id": "planetas",
+      "ato": "desenvolvimento",
+      "falas": [
+        "Em volta, grãos de poeira grudaram e viraram planetas.",
+        "Perto do Sol, planetas de rocha.",
+        "Longe, no frio, gigantes de gás e gelo."
+      ]
+    },
+    {
+      "id": "lua",
+      "ato": "desenvolvimento",
+      "falas": [
+        "E a Lua? Nasceu de uma batida gigante na Terra jovem!"
+      ]
+    },
+    {
+      "id": "conclusao",
+      "ato": "conclusão",
+      "falas": [
+        "Então, tudo veio da mesma nuvem.",
+        "Até você é feito de poeira de estrelas!",
+        "Que mistério do universo eu explico depois? Comenta aqui!"
+      ]
+    }
+  ]
+}
