@@ -1,5 +1,6 @@
 {
-  "titulo": "Por que o céu é azul?",
+  "video": "vulcoes",
+  "titulo": "Por que vulcões existem?",
   "fps": 30,
   "duracaoSegundos": 60,
   "personagem": "tito",
@@ -28,77 +29,67 @@
     "espeakPitch": 48
   },
   "musica": {
-    "bpm": 100,
-    "tom": -9
+    "bpm": 92,
+    "tom": -12
   },
   "cenas": [
     {
       "id": "gancho",
       "ato": "começo",
       "falas": [
-        "Se o Sol é branco, por que o céu é azul?"
+        "Por que a Terra cospe fogo?"
       ]
     },
     {
-      "id": "problema",
+      "id": "descida",
       "ato": "começo",
       "falas": [
-        "Parece mágica, mas é física!",
-        "E tudo começa no Sol.",
-        "Bora descobrir?"
+        "Pra entender os vulcões,",
+        "a gente precisa descer até o centro do planeta."
       ]
     },
     {
-      "id": "prisma",
+      "id": "interior",
       "ato": "desenvolvimento",
       "falas": [
-        "A luz do Sol parece branca,",
-        "mas mistura todas as cores do arco-íris:",
-        "vermelho, laranja, amarelo, verde, azul e violeta, tudo junto!"
+        "Lá embaixo, a Terra é quente como a superfície do Sol.",
+        "E esse calor quer escapar."
       ]
     },
     {
-      "id": "espalhamento",
+      "id": "placas",
       "ato": "desenvolvimento",
       "falas": [
-        "No ar, ela bate em partículas minúsculas.",
-        "A luz azul quica muito mais,",
-        "e se espalha pelo céu inteiro!",
-        "Já o vermelho passa quase reto."
+        "A casca da Terra é quebrada em placas gigantes,",
+        "que se movem devagar, como unhas crescendo."
       ]
     },
     {
-      "id": "violeta",
+      "id": "magma",
       "ato": "desenvolvimento",
       "falas": [
-        "E o violeta? Espalha ainda mais,",
-        "mas o Sol manda pouco violeta, e nossos olhos preferem o azul."
+        "Quando uma placa afunda embaixo da outra, a rocha derrete e vira magma.",
+        "Mais leve, ele sobe,",
+        "junta pressão…",
+        "e explode: erupção!"
       ]
     },
     {
-      "id": "por-do-sol",
+      "id": "brasil",
       "ato": "desenvolvimento",
       "falas": [
-        "No fim da tarde, a luz atravessa muito mais ar.",
-        "O azul se perde, e sobram o laranja e o vermelho.",
-        "Por isso o céu fica dourado!"
-      ]
-    },
-    {
-      "id": "marte",
-      "ato": "desenvolvimento",
-      "falas": [
-        "Em Marte é ao contrário: céu cor de caramelo, e pôr do sol azul!",
-        "Culpa da poeira fina."
+        "E o Brasil? Fica no meio de uma placa, longe das bordas.",
+        "Por isso não temos vulcões ativos.",
+        "Mas Fernando de Noronha nasceu de um vulcão antigo!"
       ]
     },
     {
       "id": "conclusao",
       "ato": "conclusão",
       "falas": [
-        "Resumindo: o ar espalha a luz azul para todo lado.",
-        "Agora você sabe o segredo!",
-        "Que pergunta eu respondo no próximo vídeo? Comenta aqui!"
+        "Vulcões são a Terra soltando o calor de dentro.",
+        "E ainda criam ilhas e solo fértil.",
+        "Que fenômeno eu explico no próximo vídeo? Comenta aqui!"
       ]
     }
   ]

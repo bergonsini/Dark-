@@ -1,13 +1,13 @@
 import React from "react";
 import { interpolate, interpolateColors } from "remotion";
-import { PersonagemEm } from "../characters/Personagem";
-import { CeuCampo } from "../components/Backgrounds";
-import { Camera } from "../components/Camera";
-import { Brilhos, Planeta, Sol } from "../components/Props";
-import { Tag } from "../components/Text";
-import { C } from "../theme";
-import { lineStart, wordAt } from "../timeline";
-import { Full, SceneProps, Sfx, useSceneFrame, useSpringAt } from "./common";
+import { PersonagemEm } from "../../characters/Personagem";
+import { CeuCampo } from "../../components/Backgrounds";
+import { Camera } from "../../components/Camera";
+import { Brilhos, Planeta, Sol } from "../../components/Props";
+import { Tag } from "../../components/Text";
+import { C } from "../../theme";
+import { lineStart, wordAt } from "../../timeline";
+import { Full, SceneProps, Sfx, useSceneFrame, useSpringAt } from "../common";
 
 /** DESENVOLVIMENTO 5 (curiosidade): em Marte o céu é caramelo e o pôr do sol é azul. */
 export const S7Marte: React.FC<SceneProps> = ({ scene }) => {

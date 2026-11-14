@@ -33,7 +33,7 @@ export const Pos: React.FC<{
   </div>
 );
 
-export type SfxName = "whoosh" | "boom" | "pop" | "ding" | "sparkle" | "boing" | "click" | "riser" | "tada";
+export type SfxName = "whoosh" | "boom" | "pop" | "ding" | "sparkle" | "boing" | "click" | "riser" | "tada" | "ronco" | "borbulha";
 
 /** Efeito sonoro preso a um frame LOCAL da cena. */
 export const Sfx: React.FC<{ at: number; name: SfxName; volume?: number }> = ({ at, name, volume = 0.6 }) => (

@@ -1,13 +1,13 @@
 import React from "react";
 import { interpolate } from "remotion";
-import { PersonagemEm } from "../characters/Personagem";
-import { Espaco } from "../components/Backgrounds";
-import { Camera } from "../components/Camera";
-import { Molecula, OlhoGrande, RaioZigue, Sol } from "../components/Props";
-import { Tag } from "../components/Text";
-import { C, RAINBOW } from "../theme";
-import { lineStart, wordAt } from "../timeline";
-import { Full, SceneProps, Sfx, useSceneFrame, useSpringAt } from "./common";
+import { PersonagemEm } from "../../characters/Personagem";
+import { Espaco } from "../../components/Backgrounds";
+import { Camera } from "../../components/Camera";
+import { Molecula, OlhoGrande, RaioZigue, Sol } from "../../components/Props";
+import { Tag } from "../../components/Text";
+import { C, RAINBOW } from "../../theme";
+import { lineStart, wordAt } from "../../timeline";
+import { Full, SceneProps, Sfx, useSceneFrame, useSpringAt } from "../common";
 
 /** DESENVOLVIMENTO 3: e o violeta? O Sol manda pouco violeta e nossos olhos preferem o azul. */
 export const S5Violeta: React.FC<SceneProps> = ({ scene }) => {

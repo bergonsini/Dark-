@@ -1,13 +1,13 @@
 import React from "react";
 import { interpolate, interpolateColors } from "remotion";
-import { PersonagemEm } from "../characters/Personagem";
-import { CeuCampo } from "../components/Backgrounds";
-import { Camera } from "../components/Camera";
-import { Feixe, Molecula, RaioZigue, Sol } from "../components/Props";
-import { Tag } from "../components/Text";
-import { C } from "../theme";
-import { lineStart, wordAt } from "../timeline";
-import { Full, SceneProps, Sfx, useSceneFrame } from "./common";
+import { PersonagemEm } from "../../characters/Personagem";
+import { CeuCampo } from "../../components/Backgrounds";
+import { Camera } from "../../components/Camera";
+import { Feixe, Molecula, RaioZigue, Sol } from "../../components/Props";
+import { Tag } from "../../components/Text";
+import { C } from "../../theme";
+import { lineStart, wordAt } from "../../timeline";
+import { Full, SceneProps, Sfx, useSceneFrame } from "../common";
 
 /** DESENVOLVIMENTO 4: pôr do sol. A luz atravessa mais ar, o azul se perde, sobra laranja/vermelho. */
 export const S6PorDoSol: React.FC<SceneProps> = ({ scene }) => {

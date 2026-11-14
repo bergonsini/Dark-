@@ -8,6 +8,7 @@ export type Word = { text: string; startFrame: number; endFrame: number };
 export type Line = { text: string; startFrame: number; endFrame: number; words: Word[] };
 export type Scene = { id: string; startFrame: number; endFrame: number; lines: Line[] };
 export type Timeline = {
+  video?: string;
   titulo: string;
   fps: number;
   durationInFrames: number;

@@ -223,6 +223,20 @@ def make_sfx():
     for i, fr in enumerate([523.25, 659.25, 783.99, 1046.5]):
         place(tada, pluck(fr, 1.0), i * 0.07, 0.6)
     sfx["tada"] = tada
+    # ronco: tremor grave da terra (vulcão, terremoto)
+    d = 2.2
+    t = t_axis(d)
+    r = lowpass(noise(d, 12), 90) * 6 + np.sin(2 * np.pi * np.cumsum(38 + 6 * np.sin(2 * np.pi * 3 * t)) / SR) * 0.6
+    sfx["ronco"] = r * np.minimum(1, t / 0.4) * np.clip((d - t) / 0.6, 0, 1)
+    # borbulha: bolhas de magma/líquido grosso
+    bb = np.zeros(int(1.6 * SR))
+    rng = np.random.default_rng(21)
+    for _ in range(14):
+        dd = rng.uniform(0.05, 0.12)
+        tt = t_axis(dd)
+        f0 = rng.uniform(140, 320)
+        place(bb, np.sin(2 * np.pi * np.cumsum(f0 + 900 * tt) / SR) * np.sin(np.pi * tt / dd), rng.uniform(0, 1.45), rng.uniform(0.4, 1))
+    sfx["borbulha"] = lowpass(bb, 1500)
     for k, v in sfx.items():
         sfx[k] = v / (np.max(np.abs(v)) + 1e-9) * 0.9
     return sfx
@@ -399,6 +413,7 @@ def main():
 
     F = lambda s: int(round(s * fps))  # noqa: E731
     timeline = {
+        "video": script.get("video", "ceu-azul"),
         "titulo": script.get("titulo", ""),
         "fps": fps,
         "durationInFrames": n_frames,

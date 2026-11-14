@@ -1,13 +1,13 @@
 import React from "react";
 import { AbsoluteFill, interpolate } from "remotion";
-import { PersonagemEm } from "../characters/Personagem";
-import { CeuCampo } from "../components/Backgrounds";
-import { Camera } from "../components/Camera";
-import { Brilhos, Interrogacoes, Sol } from "../components/Props";
-import { TitleSlam } from "../components/Text";
-import { C } from "../theme";
-import { wordAt } from "../timeline";
-import { Full, SceneProps, Sfx, useSceneFrame } from "./common";
+import { PersonagemEm } from "../../characters/Personagem";
+import { CeuCampo } from "../../components/Backgrounds";
+import { Camera } from "../../components/Camera";
+import { Brilhos, Interrogacoes, Sol } from "../../components/Props";
+import { TitleSlam } from "../../components/Text";
+import { C } from "../../theme";
+import { wordAt } from "../../timeline";
+import { Full, SceneProps, Sfx, useSceneFrame } from "../common";
 
 /** COMEÇO, 0-3 s: GANCHO. Pergunta forte na tela no frame 0, impacto visual e sonoro. */
 export const S1Gancho: React.FC<SceneProps> = ({ scene }) => {

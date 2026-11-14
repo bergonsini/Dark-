@@ -1,0 +1,106 @@
+{
+  "video": "ceu-azul",
+  "titulo": "Por que o céu é azul?",
+  "fps": 30,
+  "duracaoSegundos": 60,
+  "personagem": "tito",
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "9luRA11KwacKAVmLyqUs",
+      "nome": "Edmilson (pt-BR, documentário)",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.6,
+      "similaridade": 0.6
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48
+  },
+  "musica": {
+    "bpm": 100,
+    "tom": -9
+  },
+  "cenas": [
+    {
+      "id": "gancho",
+      "ato": "começo",
+      "falas": [
+        "Se o Sol é branco, por que o céu é azul?"
+      ]
+    },
+    {
+      "id": "problema",
+      "ato": "começo",
+      "falas": [
+        "Parece mágica, mas é física!",
+        "E tudo começa no Sol.",
+        "Bora descobrir?"
+      ]
+    },
+    {
+      "id": "prisma",
+      "ato": "desenvolvimento",
+      "falas": [
+        "A luz do Sol parece branca,",
+        "mas mistura todas as cores do arco-íris:",
+        "vermelho, laranja, amarelo, verde, azul e violeta, tudo junto!"
+      ]
+    },
+    {
+      "id": "espalhamento",
+      "ato": "desenvolvimento",
+      "falas": [
+        "No ar, ela bate em partículas minúsculas.",
+        "A luz azul quica muito mais,",
+        "e se espalha pelo céu inteiro!",
+        "Já o vermelho passa quase reto."
+      ]
+    },
+    {
+      "id": "violeta",
+      "ato": "desenvolvimento",
+      "falas": [
+        "E o violeta? Espalha ainda mais,",
+        "mas o Sol manda pouco violeta, e nossos olhos preferem o azul."
+      ]
+    },
+    {
+      "id": "por-do-sol",
+      "ato": "desenvolvimento",
+      "falas": [
+        "No fim da tarde, a luz atravessa muito mais ar.",
+        "O azul se perde, e sobram o laranja e o vermelho.",
+        "Por isso o céu fica dourado!"
+      ]
+    },
+    {
+      "id": "marte",
+      "ato": "desenvolvimento",
+      "falas": [
+        "Em Marte é ao contrário: céu cor de caramelo, e pôr do sol azul!",
+        "Culpa da poeira fina."
+      ]
+    },
+    {
+      "id": "conclusao",
+      "ato": "conclusão",
+      "falas": [
+        "Resumindo: o ar espalha a luz azul para todo lado.",
+        "Agora você sabe o segredo!",
+        "Que pergunta eu respondo no próximo vídeo? Comenta aqui!"
+      ]
+    }
+  ]
+}

@@ -1,13 +1,13 @@
 import React from "react";
 import { AbsoluteFill, interpolate } from "remotion";
-import { PersonagemEm } from "../characters/Personagem";
-import { CeuCampo } from "../components/Backgrounds";
-import { Camera } from "../components/Camera";
-import { Feixe, Molecula, RaioZigue } from "../components/Props";
-import { Tag } from "../components/Text";
-import { C } from "../theme";
-import { lineStart } from "../timeline";
-import { Full, SceneProps, Sfx, useSceneFrame } from "./common";
+import { PersonagemEm } from "../../characters/Personagem";
+import { CeuCampo } from "../../components/Backgrounds";
+import { Camera } from "../../components/Camera";
+import { Feixe, Molecula, RaioZigue } from "../../components/Props";
+import { Tag } from "../../components/Text";
+import { C } from "../../theme";
+import { lineStart } from "../../timeline";
+import { Full, SceneProps, Sfx, useSceneFrame } from "../common";
 
 const MOL: [number, number][] = [
   [200, 380], [420, 300], [680, 360], [900, 280], [300, 600], [560, 560], [820, 620], [160, 820], [430, 860], [700, 820], [940, 880],

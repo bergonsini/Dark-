@@ -1,12 +1,12 @@
 import React from "react";
-import { PersonagemEm } from "../characters/Personagem";
-import { CeuCampo } from "../components/Backgrounds";
-import { Camera } from "../components/Camera";
-import { BalaoComentario, Brilhos, Seta, Sol } from "../components/Props";
-import { Tag, TitleSlam } from "../components/Text";
-import { C } from "../theme";
-import { lineStart, wordAt } from "../timeline";
-import { Full, SceneProps, Sfx, useSceneFrame, useSpringAt } from "./common";
+import { PersonagemEm } from "../../characters/Personagem";
+import { CeuCampo } from "../../components/Backgrounds";
+import { Camera } from "../../components/Camera";
+import { BalaoComentario, Brilhos, Seta, Sol } from "../../components/Props";
+import { Tag, TitleSlam } from "../../components/Text";
+import { C } from "../../theme";
+import { lineStart, wordAt } from "../../timeline";
+import { Full, SceneProps, Sfx, useSceneFrame, useSpringAt } from "../common";
 
 /** CONCLUSÃO: resumo da ideia + chamada para comentar. */
 export const S8Conclusao: React.FC<SceneProps> = ({ scene }) => {

@@ -11,30 +11,10 @@ import { HEIGHT, TRANSITION_FRAMES as T, WIDTH } from "./config";
 import { Captions } from "./components/Captions";
 import { C } from "./theme";
 import { getScene, isSpeaking, timeline } from "./timeline";
-import { SceneProps } from "./scenes/common";
-import { S1Gancho } from "./scenes/S1Gancho";
-import { S2Problema } from "./scenes/S2Problema";
-import { S3Prisma } from "./scenes/S3Prisma";
-import { S4Espalhamento } from "./scenes/S4Espalhamento";
-import { S5Violeta } from "./scenes/S5Violeta";
-import { S6PorDoSol } from "./scenes/S6PorDoSol";
-import { S7Marte } from "./scenes/S7Marte";
-import { S8Conclusao } from "./scenes/S8Conclusao";
+import { cenasDoVideo } from "./videos";
 
-/**
- * Lista de cenas na ordem do roteiro.json (ids precisam bater com "cenas[].id").
- * Para um vídeo novo: crie novas cenas em ./scenes e troque esta lista.
- */
-export const SCENES: { id: string; Comp: React.FC<SceneProps> }[] = [
-  { id: "gancho", Comp: S1Gancho },
-  { id: "problema", Comp: S2Problema },
-  { id: "prisma", Comp: S3Prisma },
-  { id: "espalhamento", Comp: S4Espalhamento },
-  { id: "violeta", Comp: S5Violeta },
-  { id: "por-do-sol", Comp: S6PorDoSol },
-  { id: "marte", Comp: S7Marte },
-  { id: "conclusao", Comp: S8Conclusao },
-];
+/** Cenas do vídeo atual: escolhidas pelo campo "video" do roteiro (gravado no timeline.json). */
+export const SCENES = cenasDoVideo(timeline.video);
 
 // Uma transição por corte (variar mantém o ritmo; não repita a mesma 3x seguidas).
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
