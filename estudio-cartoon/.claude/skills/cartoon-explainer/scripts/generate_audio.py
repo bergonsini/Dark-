@@ -305,6 +305,10 @@ def main():
 
     with open(args.roteiro, encoding="utf-8") as fh:
         script = json.load(fh)
+    # ajustes opcionais de pausas por roteiro: {"pausas": {"entreCenas": 0.4, "final": 1.8}}
+    global SCENE_GAP, MIN_OUTRO
+    SCENE_GAP = float(script.get("pausas", {}).get("entreCenas", SCENE_GAP))
+    MIN_OUTRO = float(script.get("pausas", {}).get("final", MIN_OUTRO))
     fps = script.get("fps", 30)
     target = float(script.get("duracaoSegundos", 60))
     cfg = script.get("voz", {})

@@ -99,7 +99,7 @@
         {
           "texto": "Os dois! O lobisomem ia ficar desempregado…",
           "pronuncia": "[laughs] Os DOIS! O lobisomem ia ficar DESEMPREGADO…",
-          "pausaDepois": 0.6
+          "pausaDepois": 0.35
         },
         {
           "texto": "e muitos corais usam a lua cheia como sinal pra se reproduzir.",
@@ -135,5 +135,9 @@
         }
       ]
     }
-  ]
+  ],
+  "pausas": {
+    "entreCenas": 0.4,
+    "final": 1.8
+  }
 }
