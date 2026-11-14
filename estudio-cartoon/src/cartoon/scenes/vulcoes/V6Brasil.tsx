@@ -35,8 +35,8 @@ export const V6Brasil: React.FC<SceneProps> = ({ scene }) => {
       {f < noronha + 14 && (
         <>
           <Tag text="BRASIL" x={720} y={860} at={brasil + 4} bg={C.yellow} size={52} />
-          {f >= bordas && <Tag text="BORDA DA PLACA" x={300} y={500} at={bordas + 4} bg={C.red} color={C.white} size={40} />}
-          {f >= l1 && <Tag text="SEM VULCÕES ATIVOS" x={620} y={430} at={l1 + 4} bg={C.white} size={44} />}
+          {f >= bordas && <Tag text="BORDA DA PLACA" x={250} y={560} at={bordas + 4} bg={C.red} color={C.white} size={40} />}
+          {f >= l1 && <Tag text="SEM VULCÕES ATIVOS" x={700} y={440} at={l1 + 4} bg={C.white} size={44} />}
         </>
       )}
       {ilha > 0 && (
