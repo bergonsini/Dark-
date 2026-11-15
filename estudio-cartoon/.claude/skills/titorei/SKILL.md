@@ -52,6 +52,13 @@ npm run titorei:render   # out/titorei.mp4
 npm run titorei:qa       # conferência (precisa APROVADO)
 ```
 
+## Série contínua (PADRÃO pedido pelo usuário)
+- Os episódios formam uma **história contínua**. Leia `titorei/serie.md` (bíblia da série) antes de escrever:
+  o episódio novo RETOMA o gancho deixado no fim do anterior.
+- Todo episódio **termina com um gancho de mistério** para o próximo (pergunta/objeto/personagem misterioso +
+  "Descobre no próximo episódio!") e o título **"CONTINUA…"** na tela no último plano.
+- Depois de entregar, **atualize `titorei/serie.md`** (episódio, título, gancho deixado, novos personagens/piadas).
+
 ## Fluxo
 1. **Roteiro** (`references/humor.md`): história original que ESCALA de forma absurda, **~140–150 palavras para 60 s**,
    frases curtas, 6–9 cenas (capítulos). Gancho absurdo nos 3 primeiros segundos, com o texto na tela no frame 0

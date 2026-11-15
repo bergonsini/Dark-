@@ -13,7 +13,7 @@
     "final": 1.6
   },
   "voz": {
-    "motor": "auto",
+    "motor": "elevenlabs",
     "estilo": "documentario",
     "kokoro": {
       "voz": "pm_alex",
@@ -25,17 +25,18 @@
       "tom": "-3Hz"
     },
     "elevenlabs": {
-      "voiceId": "9luRA11KwacKAVmLyqUs",
-      "nome": "Edmilson (pt-BR, documentário)",
+      "voiceId": "wTABSOIKENuRDeLiHYDF",
+      "nome": "Jonas (pt-BR, dinâmico, Titorei)",
       "modelo": "eleven_v4",
       "idioma": "pt",
-      "estabilidade": 0.4,
+      "estabilidade": 0.35,
       "similaridade": 0.75
     },
     "mbrola": "mb-br3",
     "espeakSpeed": 160,
     "espeakPitch": 48,
-    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências",
+    "eq": "highpass=f=120,equalizer=f=180:t=q:w=1.0:g=-4,equalizer=f=380:t=q:w=1.0:g=-4,equalizer=f=2800:t=q:w=1.0:g=4,equalizer=f=5500:t=q:w=1.4:g=3,treble=g=2.5:f=9000,deesser=i=0.3,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60:makeup=1.5"
   },
   "musica": {
     "bpm": 124,

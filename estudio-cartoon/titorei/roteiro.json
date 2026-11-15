@@ -1,9 +1,6 @@
 {
   "projeto": "titorei",
-  "video": "geladeira-demissao",
-  "titulo": "A geladeira pediu demissão",
   "fps": 30,
-  "duracaoSegundos": 60,
   "saida": {
     "timeline": "src/titorei/timeline.json",
     "audio": "public/titorei/audio"
@@ -42,106 +39,108 @@
     "bpm": 124,
     "tom": -5
   },
+  "video": "nuvem-funcionaria",
+  "titulo": "O funcionário nuvem",
+  "episodio": 2,
+  "duracaoSegundos": 60,
   "cenas": [
     {
       "id": "gancho",
-      "capitulo": "A GELADEIRA PEDIU DEMISSÃO",
+      "capitulo": "O NOVO FUNCIONÁRIO É UMA NUVEM",
       "falas": [
         {
-          "texto": "A geladeira do Tito pediu demissão.",
-          "pronuncia": "[excited] A geladeira do Tito pediu DEMISSÃO."
+          "texto": "O novo funcionário do Tito… é uma nuvem.",
+          "pronuncia": "[excited] O novo funcionário do Tito… é uma NUVEM."
         }
       ]
     },
     {
-      "id": "motivo",
+      "id": "recap",
       "capitulo": "",
       "falas": [
         {
-          "texto": "Disse que tava cansada de passar frio.",
-          "pronuncia": "[sighs] Disse que tava cansada de passar FRIO."
+          "texto": "Isso mesmo: uma nuvem de verdade.",
+          "pronuncia": "Isso mesmo: uma nuvem de verdade."
         },
         {
-          "texto": "Pegou os óculos escuros e foi pra praia.",
-          "pronuncia": "Pegou os óculos escuros e foi pra praia."
+          "texto": "Depois da geladeira e da capivara, faltava alguém pra regar as plantas.",
+          "pronuncia": "Depois da geladeira e da capivara, faltava alguém pra regar as plantas."
         }
       ]
     },
     {
-      "id": "praia",
-      "capitulo": "GELADEIRA DE FÉRIAS",
+      "id": "jardineira",
+      "capitulo": "NUVEM JARDINEIRA",
       "falas": [
         {
-          "texto": "Agora ela toma sol o dia inteiro, e derrete os próprios cubinhos de gelo.",
-          "pronuncia": "Agora ela toma sol o dia inteiro… e derrete os próprios cubinhos de gelo."
+          "texto": "A nuvem olhou o vaso… e choveu só nele.",
+          "pronuncia": "A nuvem olhou o vaso… e choveu só nele."
+        },
+        {
+          "texto": "A planta cresceu tanto que pediu aumento.",
+          "pronuncia": "[laughs] A planta cresceu tanto que pediu AUMENTO."
+        },
+        {
+          "texto": "Tudo perfeito… até ela espirrar.",
+          "pronuncia": "[deadpan] Tudo perfeito… até ela espirrar."
         }
       ]
     },
     {
-      "id": "capivara",
-      "capitulo": "CAPIVARA REFRIGERADORA",
+      "id": "tempestade",
+      "capitulo": "TEMPESTADE NA COZINHA",
       "falas": [
         {
-          "texto": "Sem geladeira, o Tito contratou uma capivara.",
-          "pronuncia": "Sem geladeira, o Tito contratou uma capivara."
+          "texto": "Atchim! O espirro virou tempestade.",
+          "pronuncia": "[excited] ATCHIM! O espirro virou TEMPESTADE."
         },
         {
-          "texto": "Ela não gela nada…",
-          "pronuncia": "[deadpan] Ela não gela NADA…"
+          "texto": "A capivara nem se mexeu,",
+          "pronuncia": "A capivara nem se mexeu,"
         },
         {
-          "texto": "mas é tão calma que o leite nem tem coragem de azedar.",
-          "pronuncia": "[laughs] mas é tão calma que o leite nem tem CORAGEM de azedar."
+          "texto": "a geladeira adorou o friozinho,",
+          "pronuncia": "a geladeira adorou o friozinho,"
+        },
+        {
+          "texto": "até o queijo parou de meditar,",
+          "pronuncia": "até o queijo parou de meditar,"
+        },
+        {
+          "texto": "e o Tito ficou encharcado da coroa ao tênis.",
+          "pronuncia": "[laughs] e o Tito ficou encharcado da coroa ao TÊNIS."
         }
       ]
     },
     {
-      "id": "zen",
-      "capitulo": "COZINHA ZEN",
+      "id": "musica",
+      "capitulo": "CANÇÃO PRA NUVEM",
       "falas": [
         {
-          "texto": "Agora o queijo medita, a manteiga faz ioga,",
-          "pronuncia": "Agora o queijo medita, a manteiga faz ioga,"
+          "texto": "Pra acalmar a nuvem, o Tito cantou uma música.",
+          "pronuncia": "Pra acalmar a nuvem, o Tito cantou uma música."
         },
         {
-          "texto": "e o Tito virou o rei da cozinha zen.",
-          "pronuncia": "[excited] e o Tito virou o REI da cozinha zen!"
+          "texto": "Desafinado, mas com coroa.",
+          "pronuncia": "[deadpan] Desafinado… mas com coroa."
+        },
+        {
+          "texto": "Ela gostou tanto que soltou um arco-íris!",
+          "pronuncia": "[excited] Ela gostou tanto que soltou um ARCO-ÍRIS!"
         }
       ]
     },
     {
-      "id": "ciumes",
-      "capitulo": "GELADEIRA COM CIÚMES",
+      "id": "arcoiris",
+      "capitulo": "ESCORREGADOR DE ARCO-ÍRIS",
       "falas": [
         {
-          "texto": "Só que a geladeira viu tudo pelo celular.",
-          "pronuncia": "[surprised] Só que a geladeira viu TUDO pelo celular."
+          "texto": "E o leite, que era medroso, desceu o arco-íris gritando de alegria.",
+          "pronuncia": "E o leite, que era medroso, desceu o arco-íris gritando de ALEGRIA."
         },
         {
-          "texto": "Ficou com tanto ciúme que voltou correndo da praia…",
-          "pronuncia": "Ficou com tanto CIÚME que voltou correndo da praia…"
-        },
-        {
-          "texto": "bronzeada, de chinelo e com a porta descascando.",
-          "pronuncia": "[laughs] bronzeada, de chinelo e com a porta descascando."
-        }
-      ]
-    },
-    {
-      "id": "entrevista",
-      "capitulo": "ENTREVISTA DE EMPREGO",
-      "falas": [
-        {
-          "texto": "O Tito fez uma entrevista com as duas.",
-          "pronuncia": "O Tito fez uma entrevista com as duas."
-        },
-        {
-          "texto": "A geladeira gelou um sorvete em três segundos.",
-          "pronuncia": "[excited] A geladeira gelou um sorvete em TRÊS segundos."
-        },
-        {
-          "texto": "A capivara só piscou… e o sorvete pediu pra ficar.",
-          "pronuncia": "[deadpan] A capivara só piscou… [laughs] e o sorvete pediu pra FICAR."
+          "texto": "A capivara foi atrás… bem devagarinho.",
+          "pronuncia": "[laughs] A capivara foi atrás… bem devagarinho."
         }
       ]
     },
@@ -150,12 +149,16 @@
       "capitulo": "",
       "falas": [
         {
-          "texto": "Agora as duas dividem a cozinha: uma gela, a outra acalma.",
-          "pronuncia": "[happy] Agora as duas dividem a cozinha: uma GELA, a outra ACALMA."
+          "texto": "Mas aí alguém bateu na porta…",
+          "pronuncia": "[whispers] Mas aí alguém bateu na porta…"
         },
         {
-          "texto": "Segue pra ver quem o Tito contrata amanhã!",
-          "pronuncia": "[excited] Segue pra ver quem o Tito contrata AMANHÃ!"
+          "texto": "e deixou uma caixa que fazia tic-tac.",
+          "pronuncia": "e deixou uma caixa que fazia TIC-TAC."
+        },
+        {
+          "texto": "O que tem dentro? Descobre no próximo episódio!",
+          "pronuncia": "[excited] O que tem dentro? Descobre no PRÓXIMO episódio!"
         }
       ]
     }

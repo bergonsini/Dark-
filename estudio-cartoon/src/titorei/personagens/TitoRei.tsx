@@ -48,7 +48,9 @@ export const TitoRei: React.FC<{
   cabeca?: [number, number];
   coroa?: number;
   brilhoCoroa?: number;
-}> = ({ pos = [0, 0, 0], rotY = 0, escala = 1, boca = 0, expr = "feliz", pose = "parado", bracoE, bracoD, andando = false, pulo = 0, olhar = [0, 0], cabeca = [0, 0], coroa = 0, brilhoCoroa = 0 }) => {
+  /** encharcado: gotas pingando do corpo */
+  molhado?: boolean;
+}> = ({ pos = [0, 0, 0], rotY = 0, escala = 1, boca = 0, expr = "feliz", pose = "parado", bracoE, bracoD, andando = false, pulo = 0, olhar = [0, 0], cabeca = [0, 0], coroa = 0, brilhoCoroa = 0, molhado = false }) => {
   const f = useCurrentFrame();
   const e = EXPR[expr];
   const pisc = usePiscar(3);
@@ -60,6 +62,18 @@ export const TitoRei: React.FC<{
   const ab = Math.max(boca, expr === "chocado" ? 0.75 : 0);
   return (
     <group position={[pos[0], pos[1] + pulo + bob, pos[2]]} rotation={[0, rotY, 0]} scale={escala}>
+      {molhado &&
+        [
+          [-0.35, 1.9, 0.3],
+          [0.3, 1.7, 0.35],
+          [-0.2, 1.2, 0.25],
+          [0.4, 1.0, 0.2],
+          [0.0, 2.4, 0.2],
+          [-0.45, 0.6, 0.1],
+        ].map(([x, y, z], i) => {
+          const q = ((f + i * 9) % 24) / 24;
+          return <Bola key={`g${i}`} p={[x, y - q * 0.6, z]} raio={0.05} d={0} c="#5AA9FF" />;
+        })}
       {/* pernas e tênis */}
       {[-1, 1].map((l) => (
         <group key={l} position={[l * 0.17, 0.62, 0]} rotation={[l * passo * 0.6, 0, 0]}>

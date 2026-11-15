@@ -5,7 +5,9 @@
 2. **Lógica interna séria**: o absurdo tem motivo ("cansada de passar frio") e consequência ("foi pra praia").
 3. **Cada cena sobe um degrau** e puxa a próxima: geladeira de férias → falta geladeira → contrata uma capivara →
    a capivara não gela, mas acalma → a cozinha inteira vira zen → o Tito vira o "rei da cozinha zen".
-4. **Virada final** curta + chamada: "Segue pra ver o que o Tito contrata amanhã!"
+4. **Gancho final de mistério** (padrão da série): algo inesperado acontece no último plano e fica sem resposta
+   ("…e deixou uma caixa que fazia tic-tac. O que tem dentro? Descobre no próximo episódio!") + título "CONTINUA…".
+5. **Continuidade**: o episódio seguinte começa resolvendo esse mistério (ver `titorei/serie.md`).
 
 ## Técnicas
 - **Personificação**: objetos e bichos com emprego, sentimentos, burocracia (demissão, férias, contrato, sindicato).

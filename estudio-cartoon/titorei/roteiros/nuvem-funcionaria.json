@@ -1,0 +1,166 @@
+{
+  "projeto": "titorei",
+  "fps": 30,
+  "saida": {
+    "timeline": "src/titorei/timeline.json",
+    "audio": "public/titorei/audio"
+  },
+  "pausas": {
+    "entreCenas": 0.25,
+    "final": 1.6
+  },
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "wTABSOIKENuRDeLiHYDF",
+      "nome": "Jonas (pt-BR, dinâmico, Titorei)",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.35,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências",
+    "eq": "highpass=f=120,equalizer=f=180:t=q:w=1.0:g=-4,equalizer=f=380:t=q:w=1.0:g=-4,equalizer=f=2800:t=q:w=1.0:g=4,equalizer=f=5500:t=q:w=1.4:g=3,treble=g=2.5:f=9000,deesser=i=0.3,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60:makeup=1.5"
+  },
+  "musica": {
+    "bpm": 124,
+    "tom": -5
+  },
+  "video": "nuvem-funcionaria",
+  "titulo": "O funcionário nuvem",
+  "episodio": 2,
+  "duracaoSegundos": 60,
+  "cenas": [
+    {
+      "id": "gancho",
+      "capitulo": "O NOVO FUNCIONÁRIO É UMA NUVEM",
+      "falas": [
+        {
+          "texto": "O novo funcionário do Tito… é uma nuvem.",
+          "pronuncia": "[excited] O novo funcionário do Tito… é uma NUVEM."
+        }
+      ]
+    },
+    {
+      "id": "recap",
+      "capitulo": "",
+      "falas": [
+        {
+          "texto": "Isso mesmo: uma nuvem de verdade.",
+          "pronuncia": "Isso mesmo: uma nuvem de verdade."
+        },
+        {
+          "texto": "Depois da geladeira e da capivara, faltava alguém pra regar as plantas.",
+          "pronuncia": "Depois da geladeira e da capivara, faltava alguém pra regar as plantas."
+        }
+      ]
+    },
+    {
+      "id": "jardineira",
+      "capitulo": "NUVEM JARDINEIRA",
+      "falas": [
+        {
+          "texto": "A nuvem olhou o vaso… e choveu só nele.",
+          "pronuncia": "A nuvem olhou o vaso… e choveu só nele."
+        },
+        {
+          "texto": "A planta cresceu tanto que pediu aumento.",
+          "pronuncia": "[laughs] A planta cresceu tanto que pediu AUMENTO."
+        },
+        {
+          "texto": "Tudo perfeito… até ela espirrar.",
+          "pronuncia": "[deadpan] Tudo perfeito… até ela espirrar."
+        }
+      ]
+    },
+    {
+      "id": "tempestade",
+      "capitulo": "TEMPESTADE NA COZINHA",
+      "falas": [
+        {
+          "texto": "Atchim! O espirro virou tempestade.",
+          "pronuncia": "[excited] ATCHIM! O espirro virou TEMPESTADE."
+        },
+        {
+          "texto": "A capivara nem se mexeu,",
+          "pronuncia": "A capivara nem se mexeu,"
+        },
+        {
+          "texto": "a geladeira adorou o friozinho,",
+          "pronuncia": "a geladeira adorou o friozinho,"
+        },
+        {
+          "texto": "até o queijo parou de meditar,",
+          "pronuncia": "até o queijo parou de meditar,"
+        },
+        {
+          "texto": "e o Tito ficou encharcado da coroa ao tênis.",
+          "pronuncia": "[laughs] e o Tito ficou encharcado da coroa ao TÊNIS."
+        }
+      ]
+    },
+    {
+      "id": "musica",
+      "capitulo": "CANÇÃO PRA NUVEM",
+      "falas": [
+        {
+          "texto": "Pra acalmar a nuvem, o Tito cantou uma música.",
+          "pronuncia": "Pra acalmar a nuvem, o Tito cantou uma música."
+        },
+        {
+          "texto": "Desafinado, mas com coroa.",
+          "pronuncia": "[deadpan] Desafinado… mas com coroa."
+        },
+        {
+          "texto": "Ela gostou tanto que soltou um arco-íris!",
+          "pronuncia": "[excited] Ela gostou tanto que soltou um ARCO-ÍRIS!"
+        }
+      ]
+    },
+    {
+      "id": "arcoiris",
+      "capitulo": "ESCORREGADOR DE ARCO-ÍRIS",
+      "falas": [
+        {
+          "texto": "E o leite, que era medroso, desceu o arco-íris gritando de alegria.",
+          "pronuncia": "E o leite, que era medroso, desceu o arco-íris gritando de ALEGRIA."
+        },
+        {
+          "texto": "A capivara foi atrás… bem devagarinho.",
+          "pronuncia": "[laughs] A capivara foi atrás… bem devagarinho."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "capitulo": "",
+      "falas": [
+        {
+          "texto": "Mas aí alguém bateu na porta…",
+          "pronuncia": "[whispers] Mas aí alguém bateu na porta…"
+        },
+        {
+          "texto": "e deixou uma caixa que fazia tic-tac.",
+          "pronuncia": "e deixou uma caixa que fazia TIC-TAC."
+        },
+        {
+          "texto": "O que tem dentro? Descobre no próximo episódio!",
+          "pronuncia": "[excited] O que tem dentro? Descobre no PRÓXIMO episódio!"
+        }
+      ]
+    }
+  ]
+}
