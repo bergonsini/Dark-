@@ -294,7 +294,7 @@ export const Entrevista: React.FC<CenaProps> = ({ scene }) => {
   const nasce = spring({ frame: f - sorvete, fps: 30, config: { damping: 8, stiffness: 200 } });
   const pisca = interpolate(f, [piscou, piscou + 8, piscou + 16], [0.75, 1, 0.75], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const vai = interpolate(f, [ficar, ficar + 20], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-  const sx = -0.55 + vai * 1.25;
+  const sx = -0.25 + vai * 0.95;
   return (
     <>
       <Canvas>
@@ -303,7 +303,7 @@ export const Entrevista: React.FC<CenaProps> = ({ scene }) => {
           keys={[
             { f: 0, pos: [0, 2.4, 9.0], alvo: [0, 1.2, 0.3], fov: 48 },
             { f: l1, ...frente([-1.3, 0, 1.0], 0.45, 4.0, 1.55, 36), corte: true },
-            { f: tres, pos: [-0.5, 1.4, 2.3], alvo: [-0.55, 1.25, 0.3], fov: 30, corte: true },
+            { f: tres, pos: [-0.1, 1.4, 2.3], alvo: [-0.25, 1.25, 0.45], fov: 30, corte: true },
             { f: l2, ...frente([1.3, 0, 1.0], -0.45, 2.9, 0.9, 34), corte: true },
             { f: ficar, pos: [0.2, 1.45, 2.5], alvo: [0.2, 1.25, 0.3], fov: 32, corte: true },
           ]}
@@ -313,7 +313,7 @@ export const Entrevista: React.FC<CenaProps> = ({ scene }) => {
         <Cozinha3D />
         <Mesa pos={[0, 0, 0.3]} />
         <TitoRei pos={[0, 0, -0.5]} expr={f >= ficar ? "chocado" : "malandro"} pose={f >= ficar ? "chocado" : "pensando"} />
-        <Geladeira pos={[-1.3, 0, 1.0]} rotY={0.45} expr={f >= ficar ? "chocado" : "feliz"} bracos={f >= sorvete - 6 ? 1 : 0} />
+        <Geladeira pos={[-1.3, 0, 1.0]} rotY={0.45} expr={f >= ficar ? "chocado" : "feliz"} bracos={f >= sorvete - 6 && f < tres ? 1 : 0} />
         <Capivara pos={[1.3, 0, 1.0]} rotY={-0.45} fechado={pisca} />
         {f >= sorvete && <Sorvete pos={[sx, 0.86, 0.45]} escala={nasce * 0.9} expr={f >= ficar ? "feliz" : "chocado"} />}
       </Canvas>
