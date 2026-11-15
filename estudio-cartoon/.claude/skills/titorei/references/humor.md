@@ -20,7 +20,7 @@
 ```json
 {
   "projeto": "titorei", "video": "slug-do-episodio", "titulo": "...",
-  "fps": 30, "duracaoSegundos": 35,
+  "fps": 30, "duracaoSegundos": 60,
   "saida": { "timeline": "src/titorei/timeline.json", "audio": "public/titorei/audio" },
   "pausas": { "entreCenas": 0.25, "final": 1.6 },
   "voz": { ... }, "musica": { "bpm": 124, "tom": -5 },
@@ -29,4 +29,5 @@
   ]
 }
 ```
-70–100 palavras para 35 s. Frases de 5–12 palavras. Pausas curtas (ritmo rápido).
+~140–150 palavras para 60 s (6–9 cenas). Frases de 5–12 palavras. Pausas curtas (ritmo rápido).
+Na voz Edmilson (~150 palavras/min) isso fica perto de 60 s; se passar, ajuste `pausas` (sem custo).

@@ -3,7 +3,7 @@
   "video": "geladeira-demissao",
   "titulo": "A geladeira pediu demissão",
   "fps": 30,
-  "duracaoSegundos": 35,
+  "duracaoSegundos": 60,
   "saida": {
     "timeline": "src/titorei/timeline.json",
     "audio": "public/titorei/audio"
@@ -109,12 +109,52 @@
       ]
     },
     {
+      "id": "ciumes",
+      "capitulo": "GELADEIRA COM CIÚMES",
+      "falas": [
+        {
+          "texto": "Só que a geladeira viu tudo pelo celular.",
+          "pronuncia": "[surprised] Só que a geladeira viu TUDO pelo celular."
+        },
+        {
+          "texto": "Ficou com tanto ciúme que voltou correndo da praia…",
+          "pronuncia": "Ficou com tanto CIÚME que voltou correndo da praia…"
+        },
+        {
+          "texto": "bronzeada, de chinelo e com a porta descascando.",
+          "pronuncia": "[laughs] bronzeada, de chinelo e com a porta descascando."
+        }
+      ]
+    },
+    {
+      "id": "entrevista",
+      "capitulo": "ENTREVISTA DE EMPREGO",
+      "falas": [
+        {
+          "texto": "O Tito fez uma entrevista com as duas.",
+          "pronuncia": "O Tito fez uma entrevista com as duas."
+        },
+        {
+          "texto": "A geladeira gelou um sorvete em três segundos.",
+          "pronuncia": "[excited] A geladeira gelou um sorvete em TRÊS segundos."
+        },
+        {
+          "texto": "A capivara só piscou… e o sorvete pediu pra ficar.",
+          "pronuncia": "[deadpan] A capivara só piscou… [laughs] e o sorvete pediu pra FICAR."
+        }
+      ]
+    },
+    {
       "id": "final",
       "capitulo": "",
       "falas": [
         {
-          "texto": "Segue pra ver o que o Tito contrata amanhã!",
-          "pronuncia": "[excited] Segue pra ver o que o Tito contrata AMANHÃ!"
+          "texto": "Agora as duas dividem a cozinha: uma gela, a outra acalma.",
+          "pronuncia": "[happy] Agora as duas dividem a cozinha: uma GELA, a outra ACALMA."
+        },
+        {
+          "texto": "Segue pra ver quem o Tito contrata amanhã!",
+          "pronuncia": "[excited] Segue pra ver quem o Tito contrata AMANHÃ!"
         }
       ]
     }

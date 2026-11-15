@@ -1,4 +1,4 @@
-import { CapivaraCena, Final, Gancho, Motivo, Praia, Zen } from "./cenas";
+import { CapivaraCena, Ciumes, Entrevista, Final, Gancho, Motivo, Praia, Zen } from "./cenas";
 
 /** Titorei · "A geladeira pediu demissão" (titorei/roteiros/geladeira-demissao.json) */
 export const CENAS = [
@@ -7,5 +7,7 @@ export const CENAS = [
   { id: "praia", Comp: Praia },
   { id: "capivara", Comp: CapivaraCena },
   { id: "zen", Comp: Zen },
+  { id: "ciumes", Comp: Ciumes },
+  { id: "entrevista", Comp: Entrevista },
   { id: "final", Comp: Final },
 ];

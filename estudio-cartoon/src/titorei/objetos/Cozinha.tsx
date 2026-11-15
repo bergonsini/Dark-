@@ -16,24 +16,60 @@ export const Geladeira: React.FC<{
   tremendo?: boolean;
   oculos?: number;
   andando?: boolean;
-}> = ({ pos = [0, 0, 0], rotY = 0, rotZ = 0, boca = 0, expr = "feliz", abertura = 0, tremendo = false, oculos = 0, andando = false }) => {
+  /** corrida (passos rápidos) */
+  correndo?: boolean;
+  /** cor do corpo (ex.: bronzeada "#E8C29A") */
+  cor?: string;
+  /** bracinhos 0..1 (aparecem) e celular na "mão" */
+  bracos?: number;
+  celular?: boolean;
+  chinelo?: boolean;
+  descascando?: boolean;
+}> = ({ pos = [0, 0, 0], rotY = 0, rotZ = 0, boca = 0, expr = "feliz", abertura = 0, tremendo = false, oculos = 0, andando = false, correndo = false, cor, bracos = 0, celular = false, chinelo = false, descascando = false }) => {
   const f = useCurrentFrame();
   const tx = tremendo ? Math.sin(f * 2.3) * 0.03 : 0;
-  const passo = andando ? Math.sin(f * 0.4) : 0;
-  const pe = andando ? 0.35 : 0;
+  andando = andando || correndo;
+  const passo = andando ? Math.sin(f * (correndo ? 0.9 : 0.4)) : 0;
+  const temPernas = andando || chinelo;
+  const corpo = cor ?? "#EEF3F8";
+  const porta = cor ?? "#F7FAFC";
+  const pe = andando || chinelo ? 0.35 : 0;
   return (
     <group position={[pos[0] + tx, pos[1] + pe + Math.abs(passo) * 0.06, pos[2]]} rotation={[0, rotY, rotZ + passo * 0.05]}>
-      {andando &&
+      {temPernas &&
         [-1, 1].map((l) => (
           <group key={l} position={[l * 0.3, 0, 0]} rotation={[l * passo * 0.6, 0, 0]}>
             <Caixa p={[0, -0.18, 0]} s={[0.14, 0.36, 0.14]} c="#9AA3B5" />
-            <Caixa p={[0, -0.36, 0.06]} s={[0.22, 0.08, 0.3]} c={P.tenis} />
+            <Caixa p={[0, -0.36, 0.06]} s={[0.22, chinelo ? 0.03 : 0.08, 0.3]} c={chinelo ? "#2FA36B" : P.tenis} />
+            {chinelo && <Caixa p={[0, -0.32, 0.12]} s={[0.04, 0.06, 0.12]} c="#2FA36B" />}
           </group>
         ))}
-      <Caixa p={[0, 1.1, 0]} s={[1.1, 2.2, 0.9]} c="#EEF3F8" />
+      <Caixa p={[0, 1.1, 0]} s={[1.1, 2.2, 0.9]} c={corpo} />
+      {bracos > 0 &&
+        [-1, 1].map((l) => (
+          <group key={l} position={[l * 0.58, 1.25, 0.1]} scale={bracos} rotation={[-1.1, 0, l * 0.25]}>
+            <Cilindro p={[0, -0.25, 0]} r1={0.05} h={0.5} lados={6} c="#9AA3B5" />
+            <Bola p={[0, -0.52, 0]} raio={0.08} d={0} c="#9AA3B5" />
+          </group>
+        ))}
+      {bracos > 0 && celular && (
+        <group position={[0, 1.42, 0.95]} rotation={[-0.4, 0, 0]} scale={bracos}>
+          <Caixa s={[0.42, 0.7, 0.05]} c="#1A1A1A" />
+          <Caixa p={[0, 0, 0.03]} s={[0.36, 0.6, 0.01]} c="#7FC8A9" />
+          <Bola p={[-0.05, -0.05, 0.05]} raio={0.09} d={0} c="#8B5A3C" />
+          <Caixa p={[0.08, 0.12, 0.05]} s={[0.1, 0.12, 0.02]} c="#FFD23F" />
+        </group>
+      )}
       {/* porta com dobradiça à esquerda */}
       <group position={[-0.55, 1.1, 0.46]} rotation={[0, -abertura * 1.9, 0]}>
-        <Caixa p={[0.55, 0, 0.03]} s={[1.1, 2.18, 0.08]} c="#F7FAFC" />
+        <Caixa p={[0.55, 0, 0.03]} s={[1.1, 2.18, 0.08]} c={porta} />
+        {descascando &&
+          [
+            [0.3, -0.5, 0.25],
+            [0.8, -0.2, 0.18],
+            [0.25, 0.85, 0.15],
+            [0.85, 0.7, 0.2],
+          ].map(([x, y, r], i) => <Caixa key={i} p={[x, y, 0.075]} r={[0, 0, i * 0.7]} s={[r, r * 0.7, 0.01]} c="#FFF6EC" />)}
         <Caixa p={[1.0, 0.25, 0.1]} s={[0.06, 0.6, 0.06]} c="#9AA3B5" />
         <Rostinho p={[0.55, 0.45, 0.08]} s={1.6} boca={boca} expr={expr} seed={2} />
         {oculos > 0 && (
@@ -128,5 +164,35 @@ export const Bancada: React.FC<{ pos?: V3 }> = ({ pos = [0, 0, 0] }) => (
     <Caixa p={[0, 1.03, 0]} s={[2.5, 0.08, 0.9]} c="#EFE6D6" />
     <Cilindro p={[0.6, 1.25, -0.2]} r1={0.04} h={0.4} c="#9AA3B5" />
     <Cone p={[-0.7, 1.25, 0]} raio={0.15} h={0.35} lados={6} c={P.verde} />
+  </group>
+);
+
+/** Sorvete de casquinha com rosto (e escala para "nascer" gelado). */
+export const Sorvete: React.FC<{ pos?: V3; escala?: number; boca?: number; expr?: "feliz" | "chocado" | "zen" | "nervoso" }> = ({ pos = [0, 0, 0], escala = 1, boca = 0, expr = "feliz" }) => {
+  const f = useCurrentFrame();
+  return (
+    <group position={pos} scale={escala} rotation={[0, Math.sin(f * 0.1) * 0.15, 0]}>
+      <Cone p={[0, 0.25, 0]} r={[Math.PI, 0, 0]} raio={0.18} h={0.5} lados={6} c="#D9985A" />
+      <Bola p={[0, 0.58, 0]} raio={0.24} d={1} c="#FF9AC8" />
+      <Bola p={[0, 0.82, 0]} raio={0.18} d={1} c="#FFF0D0" />
+      <Bola p={[0, 0.99, 0]} raio={0.05} d={0} c="#E23B3B" />
+      <Rostinho p={[0, 0.58, 0.22]} s={0.5} boca={boca} expr={expr} seed={11} />
+    </group>
+  );
+};
+
+/** Mesa de entrevista simples. */
+export const Mesa: React.FC<{ pos?: V3 }> = ({ pos = [0, 0, 0] }) => (
+  <group position={pos}>
+    <Caixa p={[0, 0.82, 0]} s={[2.2, 0.08, 1.0]} c="#9C6A3A" />
+    {[
+      [-1, -0.42],
+      [1, -0.42],
+      [-1, 0.42],
+      [1, 0.42],
+    ].map(([x, z], i) => (
+      <Caixa key={i} p={[x, 0.4, z]} s={[0.08, 0.8, 0.08]} c="#7A4A26" />
+    ))}
+    <Caixa p={[-0.5, 0.88, 0.1]} r={[0, 0.2, 0]} s={[0.4, 0.02, 0.55]} c="#FFFFFF" />
   </group>
 );

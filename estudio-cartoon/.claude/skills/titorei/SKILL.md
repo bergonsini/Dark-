@@ -21,7 +21,7 @@ cada episódio é uma história original com o elenco do Titorei.
 | Item | Valor |
 |---|---|
 | Formato | 9:16, **1080x1920**, **30 fps**, MP4 H.264 + AAC |
-| Duração | **30–45 s** (padrão 35 s; o usuário pode pedir outra) |
+| Duração | **60 s** (padrão pedido pelo usuário; aceite outra se ele pedir) |
 | Composição Remotion | `TitoRei` (`src/Root.tsx`) |
 | Roteiro ativo | `titorei/roteiro.json` (episódios antigos em `titorei/roteiros/`) |
 | Saída | `out/titorei.mp4` → copie para `out/titorei-<episodio>.mp4` ao entregar |
@@ -53,8 +53,8 @@ npm run titorei:qa       # conferência (precisa APROVADO)
 ```
 
 ## Fluxo
-1. **Roteiro** (`references/humor.md`): história original que ESCALA de forma absurda, 70–100 palavras para 35 s,
-   frases curtas, 3–6 cenas. Gancho absurdo nos 3 primeiros segundos, com o texto na tela no frame 0
+1. **Roteiro** (`references/humor.md`): história original que ESCALA de forma absurda, **~140–150 palavras para 60 s**,
+   frases curtas, 6–9 cenas (capítulos). Gancho absurdo nos 3 primeiros segundos, com o texto na tela no frame 0
    (`capitulo` da cena de gancho). Cada cena pode ter `capitulo` (título amarelo, ex.: "CAPIVARA REFRIGERADORA").
    Termine com chamada ("Segue pra ver o que o Tito... amanhã!"). Arquive o anterior em `titorei/roteiros/`.
 2. **Áudio**: rascunho grátis `npm run titorei:audio -- --engine kokoro`. A voz paga (ElevenLabs) só com
