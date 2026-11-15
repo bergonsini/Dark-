@@ -48,8 +48,8 @@ export const Gancho: React.FC<CenaProps> = ({ scene }) => {
         <Cozinha3D />
         <Bancada pos={[-2.6, 0, -2.2]} />
         <TitoRei pos={[0.8, 0, 0.6]} rotY={-0.4} expr="animado" pose={f >= nuvem ? "apontando" : "bracosPraCima"} bracoD={f >= nuvem ? [-1.4, 0.6] : undefined} />
-        <group scale={f >= nuvem - 4 ? entra : 0.001}>
-          <Nuvem pos={[-0.6, 2.4, 0.3]} expr="feliz" danca={0.3} />
+        <group position={[-0.6, 2.4, 0.3]} scale={f >= nuvem - 4 ? entra : 0.001}>
+          <Nuvem pos={[0, 0, 0]} expr="feliz" danca={0.3} />
         </group>
       </Canvas>
       <Onomatopeia texto="TCHARAM!" at={nuvem} x={540} y={640} />
@@ -129,7 +129,7 @@ export const Jardineira: React.FC<CenaProps> = ({ scene }) => {
       <Placa texto="QUERO AUMENTO!" at={aumento} y={1430} ate={l2} />
       <Sfx at={4} nome="borbulha" vol={0.4} />
       <Sfx at={l1} nome="riser" vol={0.3} />
-      <Sfx at={aumento} nome="boing" vol={0.6} />
+      <Sfx at={aumento} nome="boing" vol={0.4} />
       <Sfx at={espirrar} nome="riser" vol={0.4} />
     </>
   );
@@ -218,7 +218,7 @@ export const Musica: React.FC<CenaProps> = ({ scene }) => {
       <Sfx at={4} nome="apito" vol={0.35} />
       <Sfx at={l1 + 10} nome="apito" vol={0.35} />
       <Sfx at={coroa} nome="sparkle" vol={0.5} />
-      <Sfx at={arco} nome="tada" vol={0.6} />
+      <Sfx at={arco} nome="tada" vol={0.45} />
     </>
   );
 };
@@ -260,8 +260,8 @@ export const Arcoiris: React.FC<CenaProps> = ({ scene }) => {
       </Canvas>
       {f >= desceu && f < l1 && <Onomatopeia texto="UHUUUU!" at={desceu} x={540} y={620} dur={45} />}
       {f >= deva && <Placa texto="1 CM POR HORA" at={deva} y={1430} />}
-      <Sfx at={desceu} nome="apito" vol={0.5} />
-      <Sfx at={desceu + 15} nome="whoosh" vol={0.5} />
+      <Sfx at={desceu} nome="apito" vol={0.3} />
+      <Sfx at={desceu + 15} nome="whoosh" vol={0.3} />
       <Sfx at={deva} nome="tum" vol={0.4} />
     </>
   );
