@@ -69,6 +69,8 @@ ESTILOS = {
 
 def estilo(cfg):
     base = dict(ESTILOS.get(cfg.get("estilo", "documentario"), ESTILOS["documentario"]))
+    if cfg.get("eq"):  # equalização própria do canal/voz (ex.: voz mais grave precisa cortar mais grave)
+        base["eq"] = cfg["eq"]
     return base
 
 
