@@ -76,7 +76,9 @@ Alternativa mais grave: Antônio (`oQtRiHTYSl1XeCm4tuUw`).
   e **tags de emoção** na `pronuncia` (`[curious]`, `[excited]`, `[whispers]`, `[laughs]`, `[surprised]`, `[happy]`).
   Padrão do projeto: narração **viva**, estabilidade 0.4 e similaridade 0.75 (estabilidade baixa = mais emoção).
   As tags saem da legenda (`texto`) e dos motores gratuitos; o `elevenlabs_tts.mjs` separa as tags do alinhamento e
-  o `voz.py` avisa se alguma tag foi lida em voz alta (duração > 0,25 s).
+  o `voz.py` avisa "CONFERIR NO OUVIDO" quando uma tag ocupa > 0,25 s: pode ser o som real (risada, suspiro)
+  ou a palavra lida em inglês. Recorte esses trechos do áudio cru (`.cache/tts/falas/*.raw.*`) e peça ao usuário
+  para ouvir antes de entregar. Com o Jonas (Titorei), `[sighs]` e `[laughs]` saem como som real (confirmado pelo usuário).
 - Verificar a integração: `ELEVENLABS_API_KEY=... npx -y @elevenlabs/cli@latest onboard check --answered --env-path .env.local`.
 
 ## timeline.json (gerado) e sincronia

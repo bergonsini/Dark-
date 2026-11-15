@@ -384,7 +384,9 @@ class ElevenLabs(Motor):
         ElevenLabs.caracteres += int(res.get("characters", 0))
         for t, a, b in res.get("tags", []):
             if b - a > 0.25:  # a voz leu a tag em voz alta em vez de interpretá-la
-                print(f"  AVISO: a tag {t} parece ter sido FALADA ({b - a:.2f}s) em: {texto[:50]}", file=sys.stderr)
+                # pode ser o som pedido (risada/suspiro de verdade) OU a palavra lida em inglês: só o ouvido decide
+                print(f"  CONFERIR NO OUVIDO: a tag {t} ocupou {b - a:.2f}s em: {texto[:50]} "
+                      f"(risada/suspiro real ou a palavra lida?)", file=sys.stderr)
         return out, [tuple(w) for w in res["words"]] or None
 
 
