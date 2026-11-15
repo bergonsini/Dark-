@@ -50,7 +50,8 @@
       "falas": [
         {
           "texto": "A caixa abriu… e era um relógio mandão.",
-          "pronuncia": "[whispers] A caixa abriu… [excited] e era um relógio MANDÃO."
+          "pronuncia": "[whispers] A caixa abriu… [excited] e era um relógio MANDÃO.",
+          "aceleraLocal": 1.12
         }
       ]
     },

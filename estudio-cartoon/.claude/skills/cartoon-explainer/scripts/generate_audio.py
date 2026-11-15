@@ -258,7 +258,8 @@ def make_sfx():
 # ----------------------------------------------------------------------------- roteiro
 def normaliza_falas(script):
     """Cada fala pode ser texto simples ou objeto:
-    {"texto": "...", "pronuncia": "...", "velocidade": 0.95, "pausaDepois": 0.4}
+    {"texto": "...", "pronuncia": "...", "velocidade": 0.95, "pausaDepois": 0.4, "aceleraLocal": 1.1}
+    (aceleraLocal: acelera só esta fala no pós-processamento, sem nova cobrança — útil p/ o gancho caber em 3 s)
       texto       -> o que aparece na legenda
       pronuncia   -> o que a voz fala (opcional: números por extenso, siglas, ênfase com pontuação)
       velocidade  -> multiplicador só desta fala
@@ -270,7 +271,8 @@ def normaliza_falas(script):
             if isinstance(f, str):
                 f = {"texto": f}
             out.append({"cena": si, "linha": li, "texto": f["texto"], "falar": f.get("pronuncia", f["texto"]),
-                        "vel": float(f.get("velocidade", 1.0)), "pausa": f.get("pausaDepois")})
+                        "vel": float(f.get("velocidade", 1.0)), "pausa": f.get("pausaDepois"),
+                        "acel": float(f.get("aceleraLocal", 1.0))})
     return out
 
 
@@ -290,6 +292,9 @@ def sintetizar_tudo(falas, motor, cfg, fator):
                "anterior": falas[i - 1]["falar"] if i else None,
                "proxima": falas[i + 1]["falar"] if i + 1 < len(falas) else None}
         audio, words = voz.gerar_fala(motor, f["falar"], ctx, cfg)
+        if abs(f["acel"] - 1) >= 0.005:
+            # aceleração LOCAL desta fala (fora do cache): não refaz a síntese nem cobra de novo
+            audio, words = voz.esticar(audio, words, f["acel"])
         res.append((audio, words))
     return res
 

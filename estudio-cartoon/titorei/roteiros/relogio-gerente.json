@@ -1,0 +1,165 @@
+{
+  "projeto": "titorei",
+  "fps": 30,
+  "saida": {
+    "timeline": "src/titorei/timeline.json",
+    "audio": "public/titorei/audio"
+  },
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "wTABSOIKENuRDeLiHYDF",
+      "nome": "Jonas (pt-BR, dinâmico, Titorei)",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.35,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências",
+    "eq": "highpass=f=120,equalizer=f=180:t=q:w=1.0:g=-4,equalizer=f=380:t=q:w=1.0:g=-4,equalizer=f=2800:t=q:w=1.0:g=4,equalizer=f=5500:t=q:w=1.4:g=3,treble=g=2.5:f=9000,deesser=i=0.3,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60:makeup=1.5"
+  },
+  "musica": {
+    "bpm": 124,
+    "tom": -5
+  },
+  "pausas": {
+    "entreCenas": 0.25,
+    "final": 1.4
+  },
+  "video": "relogio-gerente",
+  "titulo": "O relógio gerente",
+  "episodio": 3,
+  "duracaoSegundos": 60,
+  "cenas": [
+    {
+      "id": "gancho",
+      "capitulo": "A CAIXA ABRIU",
+      "falas": [
+        {
+          "texto": "A caixa abriu… e era um relógio mandão.",
+          "pronuncia": "[whispers] A caixa abriu… [excited] e era um relógio MANDÃO.",
+          "aceleraLocal": 1.12
+        }
+      ]
+    },
+    {
+      "id": "chefe",
+      "capitulo": "O NOVO GERENTE",
+      "falas": [
+        {
+          "texto": "Ele pulou na mesa e gritou: agora eu sou o gerente!",
+          "pronuncia": "Ele pulou na mesa e gritou: agora EU sou o gerente!"
+        },
+        {
+          "texto": "O Tito ficou sem palavras… e sem cargo.",
+          "pronuncia": "[deadpan] O Tito ficou sem palavras… e sem CARGO."
+        }
+      ]
+    },
+    {
+      "id": "horarios",
+      "capitulo": "QUADRO DE HORÁRIOS",
+      "falas": [
+        {
+          "texto": "Fez um quadro de horários pra todo mundo.",
+          "pronuncia": "Fez um quadro de horários pra todo mundo."
+        },
+        {
+          "texto": "Geladeira: gelar às oito.",
+          "pronuncia": "Geladeira: gelar às oito."
+        },
+        {
+          "texto": "Nuvem: chover às três.",
+          "pronuncia": "Nuvem: chover às três."
+        },
+        {
+          "texto": "Tito: ser rei só no fim de semana.",
+          "pronuncia": "Tito: ser rei só no fim de semana."
+        },
+        {
+          "texto": "Capivara: chegar no horário.",
+          "pronuncia": "Capivara: chegar no horário."
+        },
+        {
+          "texto": "Isso nunca vai acontecer.",
+          "pronuncia": "[deadpan] Isso nunca vai acontecer."
+        }
+      ]
+    },
+    {
+      "id": "turbo",
+      "capitulo": "MODO TURBO",
+      "falas": [
+        {
+          "texto": "Pra ninguém se atrasar, ele acelerou o tempo.",
+          "pronuncia": "[excited] Pra ninguém se atrasar, ele ACELEROU o tempo."
+        },
+        {
+          "texto": "A nuvem choveu em câmera rápida,",
+          "pronuncia": "A nuvem choveu em câmera rápida,"
+        },
+        {
+          "texto": "o leite envelheceu e virou queijo,",
+          "pronuncia": "[laughs] o leite envelheceu e virou QUEIJO,"
+        },
+        {
+          "texto": "e a capivara, pela primeira vez na vida, correu.",
+          "pronuncia": "e a capivara, pela primeira vez na vida… CORREU."
+        }
+      ]
+    },
+    {
+      "id": "soneca",
+      "capitulo": "RELÓGIO SUPERAQUECIDO",
+      "falas": [
+        {
+          "texto": "Tanto trabalho que o relógio superaqueceu",
+          "pronuncia": "Tanto trabalho que o relógio superaqueceu"
+        },
+        {
+          "texto": "e começou a apitar sem parar.",
+          "pronuncia": "e começou a apitar sem parar."
+        },
+        {
+          "texto": "O Tito apertou o botão de soneca…",
+          "pronuncia": "O Tito apertou o botão de soneca…"
+        },
+        {
+          "texto": "e o gerente dormiu na hora.",
+          "pronuncia": "[laughs] e o gerente dormiu na HORA."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "capitulo": "",
+      "falas": [
+        {
+          "texto": "Todo mundo comemorou… até o Tito perceber",
+          "pronuncia": "Todo mundo comemorou… até o Tito perceber"
+        },
+        {
+          "texto": "que a coroa dele tinha sumido!",
+          "pronuncia": "[surprised] que a COROA dele tinha sumido!"
+        },
+        {
+          "texto": "Quem levou? Descobre no próximo episódio!",
+          "pronuncia": "[whispers] Quem levou? [excited] Descobre no PRÓXIMO episódio!"
+        }
+      ]
+    }
+  ]
+}
