@@ -237,6 +237,14 @@ def make_sfx():
         f0 = rng.uniform(140, 320)
         place(bb, np.sin(2 * np.pi * np.cumsum(f0 + 900 * tt) / SR) * np.sin(np.pi * tt / dd), rng.uniform(0, 1.45), rng.uniform(0.4, 1))
     sfx["borbulha"] = lowpass(bb, 1500)
+    # apito de desenho animado (sobe e desce) e "tum" (pancada cômica)
+    d = 0.9
+    t = t_axis(d)
+    fa = 700 + 500 * np.sin(np.pi * t / d) + 25 * np.sin(2 * np.pi * 7 * t)
+    sfx["apito"] = np.sin(2 * np.pi * np.cumsum(fa) / SR) * np.minimum(1, t / 0.03) * np.clip((d - t) / 0.1, 0, 1)
+    d = 0.35
+    t = t_axis(d)
+    sfx["tum"] = np.sin(2 * np.pi * np.cumsum(160 + 220 * np.exp(-t * 40)) / SR) * np.exp(-t * 14) + lowpass(noise(d, 31), 900) * np.exp(-t * 40)
     for k, v in sfx.items():
         sfx[k] = v / (np.max(np.abs(v)) + 1e-9) * 0.9
     return sfx
@@ -305,6 +313,11 @@ def main():
 
     with open(args.roteiro, encoding="utf-8") as fh:
         script = json.load(fh)
+    # saída por projeto: Tito (padrão) ou Titorei ({"saida": {"timeline": "...", "audio": "..."}})
+    global TIMELINE, AUDIO_DIR
+    saida = script.get("saida", {})
+    TIMELINE = os.path.join(ROOT, saida.get("timeline", os.path.relpath(TIMELINE, ROOT)))
+    AUDIO_DIR = os.path.join(ROOT, saida.get("audio", os.path.relpath(AUDIO_DIR, ROOT)))
     # ajustes opcionais de pausas por roteiro: {"pausas": {"entreCenas": 0.4, "final": 1.8}}
     global SCENE_GAP, MIN_OUTRO
     SCENE_GAP = float(script.get("pausas", {}).get("entreCenas", SCENE_GAP))
@@ -432,6 +445,7 @@ def main():
         "scenes": [
             {
                 "id": s["id"],
+                "capitulo": script["cenas"][s["_si"]].get("capitulo", ""),
                 "startFrame": F(s["start"]),
                 "endFrame": F(s["end"]),
                 "lines": [

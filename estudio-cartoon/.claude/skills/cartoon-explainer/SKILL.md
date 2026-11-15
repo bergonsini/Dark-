@@ -1,6 +1,6 @@
 ---
 name: cartoon-explainer
-description: Produz vídeos educativos animados em 2D (cartoon) com Remotion, prontos para Reels/TikTok/Shorts. Formato 9:16, 1080x1920, 30 fps, 60 s por padrão, com personagem cartoon consistente, cenários vetoriais coloridos, expressões faciais, movimentos naturais, objetos animados, câmera, transições, narração em português brasileiro, legendas sincronizadas, efeitos sonoros e música de fundo. Gera MP4. Use quando o usuário pedir um vídeo explicativo, educativo, animado, cartoon, desenho, explainer, curiosidade ou "vídeo ensinando X".
+description: Vídeos do TITO (1º canal) — explicativos/educativos animados em 2D com Remotion. Use quando o usuário pedir "vídeo do Tito" ou um vídeo explicativo. NÃO use para "vídeo do Titorei" (humor absurdo 3D → skill titorei). Produz vídeos educativos animados em 2D (cartoon) com Remotion, prontos para Reels/TikTok/Shorts. Formato 9:16, 1080x1920, 30 fps, 60 s por padrão, com personagem cartoon consistente, cenários vetoriais coloridos, expressões faciais, movimentos naturais, objetos animados, câmera, transições, narração em português brasileiro, legendas sincronizadas, efeitos sonoros e música de fundo. Gera MP4. Use quando o usuário pedir um vídeo explicativo, educativo, animado, cartoon, desenho, explainer, curiosidade ou "vídeo ensinando X".
 ---
 
 # cartoon-explainer

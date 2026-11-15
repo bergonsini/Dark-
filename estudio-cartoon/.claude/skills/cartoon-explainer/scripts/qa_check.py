@@ -42,7 +42,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("video")
     ap.add_argument("--alvo", type=float, default=None, help="duração alvo em segundos (padrão: timeline.json)")
+    ap.add_argument("--timeline", default=None, help="timeline.json do projeto (Titorei: src/titorei/timeline.json)")
+    ap.add_argument("--audio", default=None, help="pasta de áudio do projeto (Titorei: public/titorei/audio)")
     args = ap.parse_args()
+    global TIMELINE
+    if args.timeline:
+        TIMELINE = os.path.join(ROOT, args.timeline)
     if not os.path.exists(args.video):
         print(f"Arquivo não encontrado: {args.video}")
         sys.exit(1)
@@ -107,7 +112,7 @@ def main():
                     bad.append("fora da cena: " + ln["text"][:30])
         check(not bad, "legendas sincronizadas com a narração", "; ".join(bad) or "ok")
         # sincronia acústica: cada palavra precisa cair sobre fala real no narration.wav
-        narr = os.path.join(ROOT, "public", "audio", "narration.wav")
+        narr = os.path.join(ROOT, args.audio or os.path.join("public", "audio"), "narration.wav")
         if os.path.exists(narr):
             import wave
             import numpy as np

@@ -12,15 +12,19 @@
     "@elevenlabs/elevenlabs-js": "^2.78.0",
     "@fontsource/baloo-2": "^5.3.0",
     "@fontsource/nunito": "^5.3.0",
+    "@react-three/fiber": "^9.8.2",
     "@remotion/cli": "4.0.543",
+    "@remotion/three": "^4.0.543",
     "@remotion/transitions": "^4.0.543",
     "react": "19.3.1",
     "react-dom": "19.3.1",
-    "remotion": "4.0.543"
+    "remotion": "4.0.543",
+    "three": "^0.171.0"
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.543",
     "@types/react": "19.3.0",
+    "@types/three": "^0.171.0",
     "@types/web": "0.0.166",
     "eslint": "10.12.0",
     "prettier": "3.8.1",
@@ -38,7 +42,11 @@
     "qa": "python3 .claude/skills/cartoon-explainer/scripts/qa_check.py out/video.mp4",
     "video": "npm run audio && npm run render && npm run qa",
     "typecheck": "tsc --noEmit",
-    "voz:instalar": "python3 .claude/skills/cartoon-explainer/scripts/instalar_voz.py"
+    "voz:instalar": "python3 .claude/skills/cartoon-explainer/scripts/instalar_voz.py",
+    "titorei:audio": "python3 .claude/skills/cartoon-explainer/scripts/generate_audio.py --roteiro titorei/roteiro.json",
+    "titorei:render": "remotion render TitoRei out/titorei.mp4",
+    "titorei:qa": "python3 .claude/skills/cartoon-explainer/scripts/qa_check.py out/titorei.mp4 --timeline src/titorei/timeline.json --audio public/titorei/audio",
+    "titorei:video": "npm run titorei:audio && npm run titorei:render && npm run titorei:qa"
   },
   "allowScripts": {
     "esbuild": false

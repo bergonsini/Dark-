@@ -3,11 +3,13 @@ import { Composition } from "remotion";
 import { CartoonExplainer } from "./cartoon/CartoonExplainer";
 import { FPS, HEIGHT, WIDTH } from "./cartoon/config";
 import { timeline } from "./cartoon/timeline";
+import { TitoReiVideo } from "./titorei/TitoReiVideo";
+import { timeline as timelineRei } from "./titorei/timeline";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
-      {/* Skill cartoon-explainer: 9:16, 1080x1920, 30 fps, duração vinda do timeline (padrão 60 s) */}
+      {/* 1º TITO: vídeos explicativos 2D. Skill cartoon-explainer: 9:16, 1080x1920, 30 fps, duração vinda do timeline (padrão 60 s) */}
       <Composition
         id="CartoonExplainer"
         component={CartoonExplainer}
@@ -16,6 +18,8 @@ export const RemotionRoot: React.FC = () => {
         width={WIDTH}
         height={HEIGHT}
       />
+      {/* 2º TITOREI: humor absurdo em 3D low-poly (skill titorei) */}
+      <Composition id="TitoRei" component={TitoReiVideo} durationInFrames={timelineRei.durationInFrames} fps={FPS} width={WIDTH} height={HEIGHT} />
     </>
   );
 };

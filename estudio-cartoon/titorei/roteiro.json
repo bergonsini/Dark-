@@ -1,0 +1,122 @@
+{
+  "projeto": "titorei",
+  "video": "geladeira-demissao",
+  "titulo": "A geladeira pediu demissão",
+  "fps": 30,
+  "duracaoSegundos": 35,
+  "saida": {
+    "timeline": "src/titorei/timeline.json",
+    "audio": "public/titorei/audio"
+  },
+  "pausas": {
+    "entreCenas": 0.25,
+    "final": 1.6
+  },
+  "voz": {
+    "motor": "auto",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "9luRA11KwacKAVmLyqUs",
+      "nome": "Edmilson (pt-BR, documentário)",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.4,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
+  },
+  "musica": {
+    "bpm": 124,
+    "tom": -5
+  },
+  "cenas": [
+    {
+      "id": "gancho",
+      "capitulo": "A GELADEIRA PEDIU DEMISSÃO",
+      "falas": [
+        {
+          "texto": "A geladeira do Tito pediu demissão.",
+          "pronuncia": "[excited] A geladeira do Tito pediu DEMISSÃO."
+        }
+      ]
+    },
+    {
+      "id": "motivo",
+      "capitulo": "",
+      "falas": [
+        {
+          "texto": "Disse que tava cansada de passar frio.",
+          "pronuncia": "[sighs] Disse que tava cansada de passar FRIO."
+        },
+        {
+          "texto": "Pegou os óculos escuros e foi pra praia.",
+          "pronuncia": "Pegou os óculos escuros e foi pra praia."
+        }
+      ]
+    },
+    {
+      "id": "praia",
+      "capitulo": "GELADEIRA DE FÉRIAS",
+      "falas": [
+        {
+          "texto": "Agora ela toma sol o dia inteiro, e derrete os próprios cubinhos de gelo.",
+          "pronuncia": "Agora ela toma sol o dia inteiro… e derrete os próprios cubinhos de gelo."
+        }
+      ]
+    },
+    {
+      "id": "capivara",
+      "capitulo": "CAPIVARA REFRIGERADORA",
+      "falas": [
+        {
+          "texto": "Sem geladeira, o Tito contratou uma capivara.",
+          "pronuncia": "Sem geladeira, o Tito contratou uma capivara."
+        },
+        {
+          "texto": "Ela não gela nada…",
+          "pronuncia": "[deadpan] Ela não gela NADA…"
+        },
+        {
+          "texto": "mas é tão calma que o leite nem tem coragem de azedar.",
+          "pronuncia": "[laughs] mas é tão calma que o leite nem tem CORAGEM de azedar."
+        }
+      ]
+    },
+    {
+      "id": "zen",
+      "capitulo": "COZINHA ZEN",
+      "falas": [
+        {
+          "texto": "Agora o queijo medita, a manteiga faz ioga,",
+          "pronuncia": "Agora o queijo medita, a manteiga faz ioga,"
+        },
+        {
+          "texto": "e o Tito virou o rei da cozinha zen.",
+          "pronuncia": "[excited] e o Tito virou o REI da cozinha zen!"
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "capitulo": "",
+      "falas": [
+        {
+          "texto": "Segue pra ver o que o Tito contrata amanhã!",
+          "pronuncia": "[excited] Segue pra ver o que o Tito contrata AMANHÃ!"
+        }
+      ]
+    }
+  ]
+}

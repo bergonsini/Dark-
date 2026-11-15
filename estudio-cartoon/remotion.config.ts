@@ -14,6 +14,8 @@ Config.setPixelFormat("yuv420p");
 Config.setAudioCodec("aac");
 Config.setOverwriteOutput(true);
 Config.setDefaultPremountInSeconds(2);
+// 3D (Titorei): WebGL por software, funciona sem placa de vídeo (servidores e nuvem)
+Config.setChromiumOpenGlRenderer("swangle");
 
 // Usa um Chromium já instalado se existir (ambientes sem internet); senão o Remotion baixa o dele.
 const candidates = [
