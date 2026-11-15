@@ -57,8 +57,10 @@ npm run titorei:qa       # conferência (precisa APROVADO)
    frases curtas, 6–9 cenas (capítulos). Gancho absurdo nos 3 primeiros segundos, com o texto na tela no frame 0
    (`capitulo` da cena de gancho). Cada cena pode ter `capitulo` (título amarelo, ex.: "CAPIVARA REFRIGERADORA").
    Termine com chamada ("Segue pra ver o que o Tito... amanhã!"). Arquive o anterior em `titorei/roteiros/`.
-2. **Áudio**: rascunho grátis `npm run titorei:audio -- --engine kokoro`. A voz paga (ElevenLabs) só com
-   autorização explícita do usuário informando o custo (mesma regra do Tito). Narração viva: tags
+2. **Áudio**: rascunho grátis `npm run titorei:audio -- --engine kokoro`. **Voz do Titorei: Jonas** (ElevenLabs,
+   `wTABSOIKENuRDeLiHYDF`, pt-BR dinâmico; estabilidade 0.35, similaridade 0.75) — diferente do Edmilson do Tito.
+   Voz paga só com autorização explícita do usuário informando o custo (mesma regra do Tito):
+   `npm run titorei:audio -- --autorizo-custo`. Narração viva: tags
    `[excited]`, `[laughs]`, `[deadpan]`, `[sighs]` e MAIÚSCULAS na `pronuncia`.
 3. **Cenas** (`references/kit3d.md`): uma função por cena em `src/titorei/episodios/<video>/cenas.tsx`,
    registradas em `index.ts` e em `src/titorei/episodios.ts`. Regras de ritmo:

@@ -8,6 +8,7 @@ Responda sempre em **português do Brasil**.
 | "vídeo do **Titorei**" / "Tito.rei" | 2º Titorei — humor puro, absurdo e aleatório, 3D low-poly | `titorei` | `TitoRei` |
 
 - Os dois canais convivem; não misture estilos.
+- Vozes (ElevenLabs): Tito = **Edmilson** (documentário); Titorei = **Jonas** (dinâmico).
 - Voz paga (ElevenLabs): só com autorização explícita do usuário, informando antes o custo em caracteres.
   Rascunhos sempre com voz grátis (`--engine kokoro`/`auto`).
 - Sempre rode a conferência (`npm run qa` / `npm run titorei:qa`) e olhe a folha de contato antes de entregar.
