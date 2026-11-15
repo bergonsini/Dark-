@@ -245,6 +245,11 @@ def make_sfx():
     d = 0.35
     t = t_axis(d)
     sfx["tum"] = np.sin(2 * np.pi * np.cumsum(160 + 220 * np.exp(-t * 40)) / SR) * np.exp(-t * 14) + lowpass(noise(d, 31), 900) * np.exp(-t * 40)
+    # alarme de despertador: campainha batendo rápido (tons alternados)
+    d = 1.4
+    t = t_axis(d)
+    bate = (np.sin(2 * np.pi * 22 * t) > 0).astype(float)
+    sfx["alarme"] = (np.sin(2 * np.pi * 1320 * t) * bate + np.sin(2 * np.pi * 1760 * t) * (1 - bate)) * np.exp(-((t % (1 / 22)) * 40)) * np.clip((d - t) / 0.1, 0, 1)
     for k, v in sfx.items():
         sfx[k] = v / (np.max(np.abs(v)) + 1e-9) * 0.9
     return sfx

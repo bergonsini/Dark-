@@ -44,13 +44,14 @@ export const Nuvem: React.FC<{
 };
 
 /** Chuva: gotas (caixinhas finas) caindo numa área (centro, largura, profundidade), de uma altura. */
-export const Chuva: React.FC<{ centro?: V3; largura?: number; prof?: number; altura?: number; intensidade?: number; cor?: string }> = ({
+export const Chuva: React.FC<{ centro?: V3; largura?: number; prof?: number; altura?: number; intensidade?: number; cor?: string; velocidade?: number }> = ({
   centro = [0, 0, 0],
   largura = 2,
   prof = 1,
   altura = 2.5,
   intensidade = 1,
   cor = "#5AA9FF",
+  velocidade = 1,
 }) => {
   const f = useCurrentFrame();
   const n = Math.round(60 * intensidade);
@@ -59,7 +60,7 @@ export const Chuva: React.FC<{ centro?: V3; largura?: number; prof?: number; alt
       {Array.from({ length: n }).map((_, i) => {
         const x = (hash(i, 1) - 0.5) * largura;
         const z = (hash(i, 2) - 0.5) * prof;
-        const y = altura - ((f * 0.22 + hash(i, 3) * altura) % altura);
+        const y = altura - ((f * 0.22 * velocidade + hash(i, 3) * altura) % altura);
         return <Caixa key={i} p={[x, y, z]} s={[0.03, 0.22, 0.03]} c={cor} o={0.85} />;
       })}
     </group>

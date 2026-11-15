@@ -13,7 +13,7 @@ export const useCena = (scene: Scene) => {
 /** Duração da cena (para o efeito sonoro terminar com fade antes do corte seco). */
 export const CenaTiming = createContext<{ len: number }>({ len: 1e9 });
 
-export type SfxNome = "whoosh" | "boom" | "pop" | "ding" | "sparkle" | "boing" | "click" | "riser" | "tada" | "ronco" | "borbulha" | "apito" | "tum";
+export type SfxNome = "whoosh" | "boom" | "pop" | "ding" | "sparkle" | "boing" | "click" | "riser" | "tada" | "ronco" | "borbulha" | "apito" | "tum" | "alarme";
 export const Sfx: React.FC<{ at: number; nome: SfxNome; vol?: number }> = ({ at, nome, vol = 0.6 }) => {
   const { len } = useContext(CenaTiming);
   const start = Math.max(0, Math.round(at));

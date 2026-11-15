@@ -50,7 +50,9 @@ export const TitoRei: React.FC<{
   brilhoCoroa?: number;
   /** encharcado: gotas pingando do corpo */
   molhado?: boolean;
-}> = ({ pos = [0, 0, 0], rotY = 0, escala = 1, boca = 0, expr = "feliz", pose = "parado", bracoE, bracoD, andando = false, pulo = 0, olhar = [0, 0], cabeca = [0, 0], coroa = 0, brilhoCoroa = 0, molhado = false }) => {
+  /** sem a coroa (ela sumiu!) */
+  semCoroa?: boolean;
+}> = ({ pos = [0, 0, 0], rotY = 0, escala = 1, boca = 0, expr = "feliz", pose = "parado", bracoE, bracoD, andando = false, pulo = 0, olhar = [0, 0], cabeca = [0, 0], coroa = 0, brilhoCoroa = 0, molhado = false, semCoroa = false }) => {
   const f = useCurrentFrame();
   const e = EXPR[expr];
   const pisc = usePiscar(3);
@@ -147,7 +149,7 @@ export const TitoRei: React.FC<{
           </mesh>
         )}
         {/* COROA dourada (Tito.rei) */}
-        <group position={[0.04, 0.45, 0]} rotation={[0, 0, -0.12 + coroa]}>
+        <group visible={!semCoroa} position={[0.04, 0.45, 0]} rotation={[0, 0, -0.12 + coroa]}>
           <Cilindro r1={0.27} h={0.16} lados={7} c={P.ouro} e={brilhoCoroa > 0 ? "#7A5200" : undefined} />
           {Array.from({ length: 7 }).map((_, i) => {
             const a = (i / 7) * Math.PI * 2;
