@@ -65,7 +65,7 @@ npm run titorei:qa       # conferência (precisa APROVADO)
    (`capitulo` da cena de gancho). Cada cena pode ter `capitulo` (título amarelo, ex.: "CAPIVARA REFRIGERADORA").
    Termine com chamada ("Segue pra ver o que o Tito... amanhã!"). Arquive o anterior em `titorei/roteiros/`.
 2. **Áudio**: rascunho grátis `npm run titorei:audio -- --engine kokoro`. **Voz do Titorei: Jonas** (ElevenLabs,
-   `wTABSOIKENuRDeLiHYDF`, pt-BR dinâmico; estabilidade 0.35, similaridade 0.75) — diferente do Edmilson do Tito.
+   `wTABSOIKENuRDeLiHYDF`, pt-BR dinâmico; estabilidade 0.35, similaridade 0.75) — diferente do Lax do Tito.
    Voz paga só com autorização explícita do usuário informando o custo (mesma regra do Tito):
    `npm run titorei:audio -- --autorizo-custo`. Narração viva: tags
    `[excited]`, `[laughs]`, `[deadpan]`, `[sighs]` e MAIÚSCULAS na `pronuncia`.

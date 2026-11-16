@@ -78,13 +78,13 @@ Leia `references/audio-legendas.md`. Na primeira vez: `npm run voz:instalar` (vo
 Depois `npm run audio`: narração pt-BR em **estilo documentário** (ritmo envolvente, pausas por pontuação,
 voz encorpada, dicção clara), música, SFX e `timeline.json` com o tempo de cada palavra.
 - Motores **gratuitos** (modo `auto`) em ordem: edge-tts (neural, online) → Kokoro (neural, offline) → MBROLA (reserva).
-- **Voz padrão deste projeto: ElevenLabs** (`"motor": "elevenlabs"` no roteiro; voz Edmilson, pt-BR, documentário).
+- **Voz padrão deste projeto: ElevenLabs** (`"motor": "elevenlabs"` no roteiro; voz **Lax** `tS45q0QcrDHqHoaWdCDR`, pt-BR, jovem e alegre — o usuário trocou o Edmilson por ela).
   É **paga**: `npm run audio` só mostra quantos caracteres serão cobrados e não envia nada. Antes de gerar,
   peça autorização ao usuário informando o custo; só com um "autorizo" explícito rode
   `npm run audio -- --autorizo-custo` (chave em `ELEVENLABS_API_KEY` ou `.env.local`; em nuvem,
   `ELEVENLABS_API_KEY=proxy-injected`). Nunca contrate serviço nem faça chamada paga sem autorização.
   Sem autorização, ou para rascunhos, use a voz gratuita: `npm run audio -- --engine auto`.
-- Ritmo da voz Edmilson: ~155 palavras/min → escreva **~130 palavras para 60 s**.
+- Ritmo da voz Lax: confira no primeiro vídeo (referência ~150–155 palavras/min) → escreva **~130 palavras para 60 s**.
 - **Narração VIVA (padrão, preferência do usuário):** estabilidade 0.4 e similaridade 0.75 no eleven_v4, e cada fala
   com `{"texto": legenda, "pronuncia": versão interpretada}`, em que a pronúncia leva **tags de emoção**
   (`[curious]` em perguntas, `[excited]` em revelações, `[whispers]` em suspense/lenda, `[laughs]` em humor,

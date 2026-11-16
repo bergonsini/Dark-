@@ -9,7 +9,7 @@ Responda sempre em **português do Brasil**.
 | "vídeo do **Inutilidades**" / "Inutilidades 0800" / "canal 3" | 3º Inutilidades 0800 — comerciais de televendas de produtos absurdos, 2D + VHS, 30–45 s | `inutilidades` | `Inutilidades` |
 
 - Os canais convivem; não misture estilos.
-- Vozes (ElevenLabs): Tito = **Edmilson** (documentário); Titorei = **Jonas** (dinâmico);
+- Vozes (ElevenLabs): Tito = **Lax** (jovem, alegre; trocado do Edmilson a pedido do usuário); Titorei = **Jonas** (dinâmico);
   Inutilidades = **Carlos** (Doutor Oferta) + **Silas** (Seu Kuka; afinado = o rato).
 - Voz paga (ElevenLabs): só com autorização explícita do usuário, informando antes o custo em caracteres.
   Rascunhos sempre com voz grátis (`--engine kokoro`/`auto`).

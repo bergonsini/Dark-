@@ -32,4 +32,4 @@
 }
 ```
 ~140–150 palavras para 60 s (6–9 cenas). Frases de 5–12 palavras. Pausas curtas (ritmo rápido).
-Na voz Edmilson (~150 palavras/min) isso fica perto de 60 s; se passar, ajuste `pausas` (sem custo).
+Na voz Jonas (~150 palavras/min) isso fica perto de 60 s; se passar, ajuste `pausas` (sem custo).

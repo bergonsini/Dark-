@@ -10,7 +10,7 @@ Instalação das vozes gratuitas: `npm run voz:instalar` (= `python3 scripts/ins
 | `kokoro` | gratuito, Apache 2.0, **offline** | neural, natural (`pm_alex`, `pm_santa`, `pf_dora`) | alinhamento acústico | `pip install kokoro-onnx soundfile` + modelo (~350 MB, GitHub) |
 | `mbrola` | gratuito, offline | robótico (só reserva) | alinhamento acústico | `apt install espeak-ng mbrola mbrola-br3` |
 | `espeak` | gratuito, offline | muito robótico | alinhamento acústico | `apt install espeak-ng` |
-| `elevenlabs` | **PAGO** | premium (voz Edmilson, `eleven_v4`) | exato (do serviço) | chave + autorização explícita (abaixo) |
+| `elevenlabs` | **PAGO** | premium (voz Lax, `eleven_v4`) | exato (do serviço) | chave + autorização explícita (abaixo) |
 
 `"motor": "auto"` tenta **só os gratuitos**, nesta ordem: edge → kokoro → mbrola → espeak. Um único motor é
 escolhido para o vídeo inteiro (nunca mistura vozes). Forçar: `npm run audio -- --engine kokoro`.
@@ -58,8 +58,8 @@ de equalização sobre a versão processada (`CORRECAO_LEGADO` em `voz.py`).
 
 ## ElevenLabs (PADRÃO deste projeto, PAGA, só com autorização)
 É o motor padrão do `roteiro.json` (`"motor": "elevenlabs"`), mas nunca é usada no modo `auto`. Configuração atual: SDK oficial `@elevenlabs/elevenlabs-js`
-(`scripts/elevenlabs_tts.mjs` na raiz do projeto), modelo `eleven_v4`, idioma `pt`, voz **Edmilson**
-(`9luRA11KwacKAVmLyqUs`, masculina, brasileira, feita para documentário e conteúdo educativo),
+(`scripts/elevenlabs_tts.mjs` na raiz do projeto), modelo `eleven_v4`, idioma `pt`, voz **Lax**
+(`tS45q0QcrDHqHoaWdCDR`, masculina, brasileira, jovem e alegre; substituiu o Edmilson `9luRA11KwacKAVmLyqUs` a pedido do usuário),
 estabilidade 0.6 e similaridade 0.6 (perfil "narração" da ElevenLabs, um pouco mais expressivo).
 Alternativa mais grave: Antônio (`oQtRiHTYSl1XeCm4tuUw`).
 
