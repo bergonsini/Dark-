@@ -1,0 +1,152 @@
+{
+  "video": "mar-salgado",
+  "titulo": "Por que o mar é salgado?",
+  "fps": 30,
+  "duracaoSegundos": 60,
+  "personagem": "tito",
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "tS45q0QcrDHqHoaWdCDR",
+      "nome": "Lax (pt-BR, jovem e alegre) — voz do TITO",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.4,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
+  },
+  "musica": {
+    "bpm": 100,
+    "tom": -7
+  },
+  "fontes": [
+    "NOAA Ocean Service — Why is the ocean salty? / Why are rivers not salty? (chuva desgasta rochas, rios levam os minerais; o rio é renovado pela chuva; o oceano hoje está em equilíbrio)",
+    "USGS Water Science School — Why is the ocean salty? (chuva levemente ácida desgasta rochas; fontes hidrotermais no fundo do mar; salinidade média ~35 partes por mil = ~35 g por litro)",
+    "NOAA via USGS — se o sal fosse espalhado sobre os continentes: camada de mais de 500 pés (166 m), ~altura de um prédio de 40 andares (estimativa)",
+    "WHOI — sódio e cloro não são retidos pela terra, por isso o sal se acumulou no mar ao longo do tempo"
+  ],
+  "cenas": [
+    {
+      "id": "gancho",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Por que o mar é salgado… e o rio não?",
+          "pronuncia": "[curious] Por que o mar é SALGADO… e o rio não?"
+        }
+      ]
+    },
+    {
+      "id": "chuva",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Tudo começa com a chuva.",
+          "pronuncia": "Tudo começa com a CHUVA."
+        },
+        {
+          "texto": "Ela é levemente ácida e vai desgastando as rochas, bem devagarinho.",
+          "pronuncia": "Ela é levemente ÁCIDA… e vai desgastando as rochas, bem devagarinho."
+        }
+      ]
+    },
+    {
+      "id": "rios",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Os rios carregam esses sais até o mar.",
+          "pronuncia": "Os rios carregam esses SAIS até o mar."
+        },
+        {
+          "texto": "Um pouquinho por vez, durante milhões de anos!",
+          "pronuncia": "Um pouquinho por vez… durante MILHÕES de anos!"
+        }
+      ]
+    },
+    {
+      "id": "evapora",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "No mar, o Sol evapora a água… mas o sal fica!",
+          "pronuncia": "No mar, o Sol evapora a água… [excited] mas o SAL fica!"
+        },
+        {
+          "texto": "E vai se acumulando.",
+          "pronuncia": "E vai se acumulando."
+        }
+      ]
+    },
+    {
+      "id": "fundo",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E tem mais: no fundo do mar, fontes quentes também soltam minerais.",
+          "pronuncia": "[whispers] E tem mais: no fundo do mar, fontes QUENTES também soltam minerais."
+        }
+      ]
+    },
+    {
+      "id": "quanto",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Hoje, cada litro de água do mar tem uns 35 gramas de sal!",
+          "pronuncia": "Hoje, cada litro de água do mar tem uns TRINTA E CINCO gramas de sal!"
+        },
+        {
+          "texto": "Espalhado na terra, daria uma camada do tamanho de um prédio de 40 andares!",
+          "pronuncia": "[excited] Espalhado na terra, daria uma camada do tamanho de um prédio de QUARENTA andares!"
+        }
+      ]
+    },
+    {
+      "id": "rio",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E o rio? Ele também leva sal, mas a chuva renova a água o tempo todo.",
+          "pronuncia": "[curious] E o rio? Ele também leva sal… mas a chuva RENOVA a água o tempo todo."
+        },
+        {
+          "texto": "Por isso ele continua docinho.",
+          "pronuncia": "Por isso ele continua DOCINHO."
+        }
+      ]
+    },
+    {
+      "id": "conclusao",
+      "ato": "conclusão",
+      "falas": [
+        {
+          "texto": "Resumindo: o mar guarda o sal de milhões de anos de chuva.",
+          "pronuncia": "Resumindo: o mar guarda o sal de MILHÕES de anos de chuva."
+        },
+        {
+          "texto": "Você já engoliu água do mar sem querer? Conta aí!",
+          "pronuncia": "[laughs] Você já engoliu água do mar sem querer? Conta aí!"
+        }
+      ]
+    }
+  ],
+  "pausas": {
+    "entreCenas": 0.4,
+    "final": 1.8
+  }
+}
