@@ -1,5 +1,6 @@
 import React from "react";
 import { CenaProps } from "./common";
+import * as escova from "./episodios/escova-turbo";
 import * as ratoeira from "./episodios/ratoeira-explosiva";
 
 export type Episodio = {
@@ -11,4 +12,5 @@ export type Episodio = {
 /** Catálogo de comerciais do INUTILIDADES 0800: id do vídeo (roteiro.json "video") -> cenas. */
 export const EPISODIOS: Record<string, Episodio> = {
   "ratoeira-explosiva": ratoeira.EPISODIO,
+  "escova-turbo": escova.EPISODIO,
 };

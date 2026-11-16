@@ -175,6 +175,7 @@ const POSES_KUKA: Record<string, { E: Pose2; D: Pose2 }> = {
   joinha: { E: { a1: -25, a2: 10 }, D: { a1: 135, a2: 35, mao: "joinha" } },
   bracosPraCima: { E: { a1: -150, a2: -10 }, D: { a1: 150, a2: 10 } },
   telefone: { E: { a1: -25, a2: 10 }, D: { a1: 30, a2: 150 } },
+  escovando: { E: { a1: -25, a2: 10 }, D: { a1: 200, a2: 30 } },
 };
 
 export const SeuKuka: React.FC<{
@@ -186,7 +187,19 @@ export const SeuKuka: React.FC<{
   pose?: keyof typeof POSES_KUKA;
   feliz?: boolean;
   flip?: boolean;
-}> = ({ x, y, escala = 1, boca = 0, estado = "normal", pose = "parado", feliz = false, flip = false }) => {
+  /** sem nenhum dente (gengiva rosa) */
+  banguela?: boolean;
+  /** espuma de pasta na boca (0..1) */
+  espuma?: number;
+  /** cabelo soprado para trás (vento/motor) */
+  arrepiado?: boolean;
+  /** gotas de suor */
+  suor?: boolean;
+  /** escova na mão (use com pose "escovando"); "turbo" = Escova Turbo V8 ligada */
+  escova?: "normal" | "turbo" | "turboDesligada";
+  /** tremedeira do corpo (px) */
+  treme?: number;
+}> = ({ x, y, escala = 1, boca = 0, estado = "normal", pose = "parado", feliz = false, flip = false, banguela = false, espuma = 0, arrepiado = false, suor = false, escova, treme = 0 }) => {
   const f = useCurrentFrame();
   const P = POSES_KUKA[pose];
   const tost = estado === "tostado";
@@ -202,7 +215,7 @@ export const SeuKuka: React.FC<{
       <rect x={40} y={-200} width={60} height={180} fill={PELE} />
       <ellipse cx={-75} cy={-10} rx={55} ry={26} fill="#fff" />
       <ellipse cx={75} cy={-10} rx={55} ry={26} fill="#fff" />
-      <g transform={`translate(0 ${bob})`}>
+      <g transform={`translate(${treme ? Math.sin(f * 3.1) * treme : 0} ${bob + (treme ? Math.cos(f * 2.3) * treme * 0.6 : 0)})`}>
         <path d="M-120 -280 L120 -280 L130 -170 L-130 -170 Z" fill="#3D6CC9" />
         <ellipse cx={0} cy={-410} rx={190} ry={175} fill={CAMISA} />
         {tost && (
@@ -220,7 +233,7 @@ export const SeuKuka: React.FC<{
         {/* cabeça */}
         <circle cx={0} cy={-740} r={170} fill={PELE} />
         {/* cabelo: black power volumoso (o "Beludo") — queimado vira carvão com fumaça */}
-        <g fill={tost ? "#2a2a2a" : "#3A2414"}>
+        <g fill={tost ? "#2a2a2a" : "#3A2414"} transform={arrepiado ? "translate(-90 -60) scale(1.35 0.9) rotate(-8 0 -800)" : undefined}>
           {[
             [-140, -850, 70],
             [-60, -910, 80],
@@ -283,7 +296,12 @@ export const SeuKuka: React.FC<{
           fill={tost ? "#333" : "#3A2414"}
         />
         {/* boca */}
-        {ab > 0.08 ? (
+        {banguela && ab <= 0.08 ? (
+          <g>
+            <path d="M-60 -655 Q0 -595 60 -655 Z" fill="#6B1020" />
+            <path d="M-56 -652 Q0 -640 56 -652" fill="none" stroke="#F28AA0" strokeWidth={10} />
+          </g>
+        ) : ab > 0.08 ? (
           <path d={`M-55 -655 Q0 ${-655 + 25 + ab * 70} 55 -655 Z`} fill="#6B1020" />
         ) : triste ? (
           <path d="M-45 -630 Q0 -660 45 -630" fill="none" strokeWidth={9} />
@@ -291,6 +309,44 @@ export const SeuKuka: React.FC<{
           <g>
             <path d="M-60 -655 Q0 -595 60 -655 Z" fill="#fff" />
             {(tost || feliz) && <rect x={-8} y={-655} width={22} height={26} fill={TINTA} stroke="none" />}
+          </g>
+        )}
+        {espuma > 0 && (
+          <g fill="#fff" strokeWidth={4}>
+            {[
+              [-70, -650, 26], [-30, -625, 30], [20, -628, 28], [65, -650, 24], [-95, -620, 18], [95, -615, 18], [0, -600, 22], [-50, -590, 16], [50, -592, 16],
+            ].slice(0, Math.ceil(9 * espuma)).map(([cx, cy, r], i) => (
+              <circle key={i} cx={cx} cy={cy + Math.sin(f * 0.4 + i) * 3} r={r * (0.7 + espuma * 0.5)} />
+            ))}
+          </g>
+        )}
+        {suor && (
+          <g fill="#7FD3FF" strokeWidth={4}>
+            {[[-150, -820], [160, -800], [130, -880]].map(([cx, cy], i) => {
+              const q = ((f + i * 9) % 26) / 26;
+              return <path key={i} d={`M${cx} ${cy + q * 70} q 14 22 0 30 q -14 -8 0 -30 Z`} opacity={1 - q * 0.6} />;
+            })}
+          </g>
+        )}
+        {escova && (
+          <g transform={escova === "turbo" ? `translate(${Math.sin(f * 4.1) * 7} ${Math.cos(f * 3.7) * 7})` : undefined}>
+            <rect x={-20} y={-668} width={250} height={26} rx={12} fill="#3DA5FF" />
+            <rect x={-30} y={-690} width={60} height={24} fill="#fff" strokeWidth={5} />
+            {escova !== "normal" && (
+              <g>
+                <rect x={220} y={-700} width={110} height={90} rx={10} fill="#E8282B" />
+                <rect x={232} y={-724} width={22} height={28} fill="#C9D0DC" />
+                <rect x={262} y={-724} width={22} height={28} fill="#C9D0DC" />
+                <rect x={292} y={-724} width={22} height={28} fill="#C9D0DC" />
+                <text x={275} y={-640} textAnchor="middle" fontSize={34} fill="#FFD23F" stroke="none" fontFamily="'Baloo 2'" fontWeight={800}>V8</text>
+                <path d="M330 -630 L370 -630 L370 -660" fill="none" strokeWidth={14} stroke="#777" />
+                {escova === "turbo" &&
+                  [0, 1, 2].map((i) => {
+                    const q = ((f + i * 6) % 18) / 18;
+                    return <circle key={i} cx={372 + q * 60} cy={-680 - q * 120} r={16 + q * 26} fill="#666" stroke="none" opacity={(1 - q) * 0.8} />;
+                  })}
+              </g>
+            )}
           </g>
         )}
       </g>

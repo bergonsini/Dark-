@@ -119,7 +119,7 @@ export const LigueJa: React.FC<{ at: number; numero?: string }> = ({ at, numero 
         textAlign: "center",
         fontFamily: FONTE,
         fontWeight: 800,
-        fontSize: 74,
+        fontSize: numero.length > 12 ? 60 : 74,
         color: "#fff",
         background: pisca ? "#E8282B" : "#C21A1D",
         border: "8px solid #fff",

@@ -217,3 +217,128 @@ export const Fumaca: React.FC<{ x: number; y: number; n?: number; escala?: numbe
     </g>
   );
 };
+
+/** Banheiro: azulejos azuis, espelho, pia. */
+export const Banheiro: React.FC<{ bagunca?: number }> = ({ bagunca = 0 }) => {
+  const lin: React.ReactNode[] = [];
+  for (let y = 0; y < 1380; y += 80) lin.push(<path key={`h${y}`} d={`M0 ${y} L1080 ${y}`} />);
+  for (let x = 0; x < 1080; x += 80) lin.push(<path key={`v${x}`} d={`M${x} 0 L${x} 1380`} />);
+  return (
+    <g strokeLinejoin="round" strokeLinecap="round">
+      <rect width={1080} height={1920} fill="#BFE6F5" />
+      <g stroke="#A3D4E8" strokeWidth={5} fill="none">
+        {lin}
+      </g>
+      <g stroke={TINTA} strokeWidth={8}>
+        <rect x={700} y={420} width={300} height={380} rx={24} fill="#E8F7FF" />
+        <path d="M740 470 L800 530 M760 520 L790 550" stroke="#fff" strokeWidth={14} />
+        <path d="M680 1060 L1020 1060 L990 1180 L710 1180 Z" fill="#fff" />
+        <rect x={830} y={1000} width={20} height={60} fill="#C9D0DC" />
+      </g>
+      <rect y={1380} width={1080} height={540} fill="#9CC9DA" />
+      <path d="M0 1380 L1080 1380" stroke={TINTA} strokeWidth={10} />
+      {bagunca > 0 && (
+        <g fill="#fff" stroke={TINTA} strokeWidth={5} opacity={bagunca}>
+          {[[150, 500, 60], [420, 300, 40], [880, 640, 50], [600, 900, 34], [300, 1100, 46], [960, 300, 30], [80, 900, 36]].map(([cx, cy, r], i) => (
+            <circle key={i} cx={cx} cy={cy} r={r} />
+          ))}
+        </g>
+      )}
+    </g>
+  );
+};
+
+/** A Escova de Dentes Turbo V8 (produto em destaque). */
+export const EscovaTurbo: React.FC<{ x: number; y: number; escala?: number; ligada?: boolean; rot?: number; cordinha?: number }> = ({ x, y, escala = 1, ligada = false, rot = 0, cordinha = 0 }) => {
+  const f = useCurrentFrame();
+  const v = ligada ? 6 : 0;
+  return (
+    <g transform={`translate(${x + Math.sin(f * 4.1) * v} ${y + Math.cos(f * 3.3) * v}) rotate(${rot}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round" strokeLinecap="round">
+      {/* cabo + cerdas */}
+      <rect x={-260} y={-30} width={300} height={44} rx={20} fill="#3DA5FF" />
+      <rect x={-290} y={-80} width={110} height={52} fill="#fff" strokeWidth={6} />
+      <path d="M-280 -80 L-280 -30 M-260 -80 L-260 -30 M-240 -80 L-240 -30 M-220 -80 L-220 -30 M-200 -80 L-200 -30" stroke="#7FD3FF" strokeWidth={5} />
+      {/* motor V8 */}
+      <rect x={30} y={-110} width={210} height={160} rx={16} fill="#E8282B" />
+      {[0, 1, 2, 3].map((i) => (
+        <rect key={i} x={45 + i * 48} y={-150} width={36} height={46} rx={4} fill="#C9D0DC" />
+      ))}
+      <text x={135} y={0} textAnchor="middle" fontSize={64} fill="#FFD23F" stroke={TINTA} strokeWidth={6} paintOrder="stroke" fontFamily="'Baloo 2'" fontWeight={800}>
+        V8
+      </text>
+      {/* escapamento */}
+      <path d="M240 20 L320 20 L320 -60" fill="none" stroke="#777" strokeWidth={26} />
+      <path d="M240 20 L320 20 L320 -60" fill="none" strokeWidth={4} />
+      {/* cordinha de partida */}
+      <path d={`M240 -40 L${280 + cordinha * 160} ${-40 + cordinha * 60}`} fill="none" strokeWidth={5} />
+      <rect x={270 + cordinha * 160} y={-55 + cordinha * 60} width={56} height={26} rx={10} fill="#222" />
+      {ligada &&
+        [0, 1, 2, 3].map((i) => {
+          const q = ((f + i * 5) % 20) / 20;
+          return <circle key={i} cx={320 + q * 70} cy={-80 - q * 170} r={22 + q * 34} fill="#666" stroke="none" opacity={(1 - q) * 0.8} />;
+        })}
+    </g>
+  );
+};
+
+/** Dentes voando para todo lado (t 0..1) e depois no chão, branquinhos. */
+export const DentesVoando: React.FC<{ x: number; y: number; t: number; n?: number }> = ({ x, y, t, n = 14 }) => (
+  <g stroke={TINTA} strokeWidth={5}>
+    {Array.from({ length: n }).map((_, i) => {
+      const a = (i / n) * Math.PI * 2 + i;
+      const v = 500 + (i % 4) * 180;
+      const dx = Math.cos(a) * v * t;
+      const dy = Math.sin(a) * v * t - 600 * t + 1500 * t * t;
+      return <path key={i} transform={`translate(${x + dx} ${y + dy}) rotate(${t * 900 + i * 40})`} d="M-16 -20 Q0 -28 16 -20 L14 10 L6 22 L0 12 L-6 22 L-14 10 Z" fill="#fff" />;
+    })}
+  </g>
+);
+
+/** Dentes enfileirados no chão, brilhando. */
+export const DentesNoChao: React.FC<{ x: number; y: number; escala?: number }> = ({ x, y, escala = 1 }) => {
+  const f = useCurrentFrame();
+  return (
+    <g transform={`translate(${x} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={5}>
+      {Array.from({ length: 12 }).map((_, i) => (
+        <path key={i} transform={`translate(${(i - 5.5) * 52} ${Math.sin(i * 1.7) * 14}) rotate(${(i * 37) % 40 - 20})`} d="M-16 -20 Q0 -28 16 -20 L14 10 L6 22 L0 12 L-6 22 L-14 10 Z" fill="#fff" />
+      ))}
+      {[0, 1, 2].map((i) => {
+        const k = Math.max(0, Math.sin(f * 0.25 + i * 2));
+        return <path key={`b${i}`} transform={`translate(${-200 + i * 190} ${-60 - i * 10}) scale(${k})`} d="M0 -30 L8 -8 L30 0 L8 8 L0 30 L-8 8 L-30 0 L-8 -8 Z" fill="#fff" stroke="#FFD23F" strokeWidth={4} />;
+      })}
+    </g>
+  );
+};
+
+/** Relógio de parede com contador grande (o "2 minutos"). */
+export const RelogioParede: React.FC<{ x: number; y: number; texto: string }> = ({ x, y, texto }) => (
+  <g transform={`translate(${x} ${y})`} stroke={TINTA} strokeWidth={8}>
+    <rect x={-170} y={-70} width={340} height={140} rx={20} fill="#222" />
+    <text y={36} textAnchor="middle" fontSize={100} fill="#FF4B3E" stroke="none" fontFamily="'DejaVu Sans Mono', monospace" fontWeight={700}>
+      {texto}
+    </text>
+  </g>
+);
+
+/** Pedestal de produto (estúdio). */
+export const Pedestal: React.FC<{ x: number; y: number; escala?: number }> = ({ x, y, escala = 1 }) => (
+  <g transform={`translate(${x} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
+    <path d="M-170 0 L170 0 L150 260 L-150 260 Z" fill="#fff" />
+    <rect x={-180} y={-20} width={360} height={40} rx={10} fill="#FFD23F" />
+  </g>
+);
+
+/** Linhas de velocidade/vibração (motor ligado). */
+export const LinhasVelocidade: React.FC<{ forca?: number }> = ({ forca = 1 }) => {
+  const f = useCurrentFrame();
+  if (forca <= 0) return null;
+  return (
+    <g fill="#fff" opacity={0.6 * forca}>
+      {Array.from({ length: 16 }).map((_, i) => {
+        const y = (i * 131 + f * 55) % 1920;
+        const x = (i * 271) % 1080;
+        return <rect key={i} x={x} y={y} width={12} height={180} rx={6} />;
+      })}
+    </g>
+  );
+};

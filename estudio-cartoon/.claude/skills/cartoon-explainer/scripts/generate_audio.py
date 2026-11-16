@@ -256,6 +256,13 @@ def make_sfx():
     bell = sum(np.sin(2 * np.pi * fr * t) * a for fr, a in ((2637, 1), (3520, 0.6), (5274, 0.3))) * np.exp(-t * 5)
     gav = lowpass(noise(d, 41), 1800) * np.exp(-t * 30)
     sfx["caixa"] = np.where(t > 0.12, np.roll(bell, int(0.12 * SR)), 0) + gav * 1.4
+    # motor a gasolina "VRUUUM" (ronco de 2 tempos)
+    d = 1.6
+    t = t_axis(d)
+    rot = 38 + 70 * np.clip(t / 0.4, 0, 1)
+    fase = 2 * np.pi * np.cumsum(rot) / SR
+    saw = ((fase / (2 * np.pi)) % 1) * 2 - 1
+    sfx["motor"] = lowpass(saw + 0.5 * np.sign(np.sin(fase * 2)) + noise(d, 43) * 0.3, 1400) * np.minimum(1, t / 0.05) * np.clip((d - t) / 0.2, 0, 1)
     # chiado/rebobinar de fita VHS (transição "a fita embolou")
     d = 0.6
     t = t_axis(d)
