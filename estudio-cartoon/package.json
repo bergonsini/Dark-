@@ -48,7 +48,7 @@
     "titorei:qa": "python3 .claude/skills/cartoon-explainer/scripts/qa_check.py out/titorei.mp4 --timeline src/titorei/timeline.json --audio public/titorei/audio",
     "titorei:video": "npm run titorei:audio && npm run titorei:render && npm run titorei:qa",
     "inutilidades:audio": "python3 .claude/skills/cartoon-explainer/scripts/generate_audio.py --roteiro inutilidades/roteiro.json",
-    "inutilidades:render": "remotion render Inutilidades out/inutilidades.mp4",
+    "inutilidades:render": "remotion render Inutilidades out/inutilidades.mp4 --concurrency=4",
     "inutilidades:qa": "python3 .claude/skills/cartoon-explainer/scripts/qa_check.py out/inutilidades.mp4 --timeline src/inutilidades/timeline.json --audio public/inutilidades/audio",
     "inutilidades:video": "npm run inutilidades:audio && npm run inutilidades:render && npm run inutilidades:qa"
   },

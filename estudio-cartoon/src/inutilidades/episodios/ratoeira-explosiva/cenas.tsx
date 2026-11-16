@@ -236,7 +236,7 @@ export const Letrinhas: React.FC<CenaProps> = ({ scene }) => {
         <Estudio cor="#1E3F8F" raio="#2B54B0" />
         <Pedestal x={540} y={1240} escala={0.8} />
         <Ratoeira x={540} y={1225} escala={0.85} />
-        <Rato x={900} y={1960 - sobe * 330} escala={0.95} capacete />
+        <Rato x={880} y={1990 - sobe * 560} escala={0.95} capacete />
       </Tela>
       <div style={{ position: "absolute", left: 0, right: 0, top: 300, textAlign: "center", fontFamily: "'Baloo 2'", fontWeight: 800, lineHeight: 0.95 }}>
         <div style={{ fontSize: 120, color: "#fff", WebkitTextStroke: `16px ${TINTA}`, paintOrder: "stroke fill", textShadow: `0 12px 0 ${TINTA}` }}>INUTILIDADES</div>

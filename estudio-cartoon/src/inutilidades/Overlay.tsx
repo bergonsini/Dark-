@@ -185,7 +185,7 @@ export const Terco: React.FC<{ nome: string; sub: string; at: number }> = ({ nom
       style={{
         position: "absolute",
         left: 40,
-        bottom: 130,
+        bottom: 80,
         background: TINTA,
         color: "#fff",
         padding: "12px 34px",
@@ -255,7 +255,7 @@ export const Miudo: React.FC<{ texto: string; at: number; bottom?: number; tam?:
  * Legenda: a frase em blocos de até 3 palavras; a palavra falada fica AMARELA e maior.
  * Cor do "dono" da fala: Doutor (branco), Kuka (verde-claro), Rato (rosa).
  */
-export const Legenda: React.FC<{ y?: number; pular?: string[] }> = ({ y = 1470, pular = [] }) => {
+export const Legenda: React.FC<{ y?: number; pular?: string[] }> = ({ y = 1360, pular = [] }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   for (const s of timeline.scenes)
