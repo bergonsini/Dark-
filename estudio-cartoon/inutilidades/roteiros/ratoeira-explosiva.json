@@ -5,7 +5,7 @@
   "video": "ratoeira-explosiva",
   "titulo": "Ratoeira Explosiva 3000",
   "episodio": 1,
-  "duracaoSegundos": 40,
+  "duracaoSegundos": 44,
   "pausas": {"entreCenas": 0.2, "final": 1.2},
   "musica": {"bpm": 128, "tom": -2},
   "voz": {
