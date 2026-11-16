@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Bangers;src:url(Bangers.woff2)}
+@font-face{font-family:Baloo;src:url(Baloo2-800.woff2);font-weight:800}
+body{margin:0;background:#000}.card{width:1080px;height:1080px}svg{display:block}
+</style></head><body><div id="root"></div>
+<script>
+const V=[
+ {id:17,bg1:'#ff2fb3',bg2:'#b5008a',ray:'#ff7ad1',burst:'#fff200',title:'#ff1e3c',plate:'#00e5ff',num:'#1a0033',name:'#ffffff',nameStroke:true},
+ {id:18,bg1:'#00c2ff',bg2:'#0047ff',ray:'#5ad8ff',burst:'#ffea00',title:'#ff1744',plate:'#ffffff',num:'#1a0033',name:'#ff00a8'},
+ {id:19,bg1:'#8c1aff',bg2:'#ff00c8',ray:'#c06bff',burst:'#ffe600',title:'#ff2d2d',plate:'#39ff14',num:'#1a0033',name:'#1a0033'},
+ {id:20,bg1:'#ff7b00',bg2:'#ff0054',ray:'#ffa94d',burst:'#ffffff',title:'#0066ff',plate:'#ffea00',num:'#1a0033',name:'#ff0054'},
+];
+const INK='#1a0a05';
+function burst(cx,cy,r1,r2,n,rot){let p='';for(let i=0;i<n*2;i++){const r=i%2?r1:r2,a=i/(n*2)*Math.PI*2;p+=(i?'L':'M')+(cx+r*Math.cos(a)).toFixed(1)+' '+(cy+r*Math.sin(a)).toFixed(1);}return p+'Z';}
+function rays(c){let s='';for(let i=0;i<18;i++){const a1=i/18*Math.PI*2,a2=(i+.5)/18*Math.PI*2,R=1400;s+=`<path d="M540 470 L${540+R*Math.cos(a1)} ${470+R*Math.sin(a1)} L${540+R*Math.cos(a2)} ${470+R*Math.sin(a2)}Z" fill="${c}" opacity=".45"/>`;}return s;}
+document.getElementById('root').innerHTML=V.map(v=>{const b=burst(540,470,300,410,20,0);return `
+<div class="card" id="c${v.id}"><svg width="1080" height="1080">
+<defs><radialGradient id="g${v.id}" cx=".5" cy=".45" r=".75"><stop offset="0" stop-color="${v.bg1}"/><stop offset="1" stop-color="${v.bg2}"/></radialGradient></defs>
+<rect width="1080" height="1080" fill="url(#g${v.id})"/>${rays(v.ray)}
+<path d="${b}" fill="${INK}" transform="translate(0 18) rotate(-6 540 470)"/>
+<path d="${b}" fill="${v.burst}" stroke="${INK}" stroke-width="16" stroke-linejoin="round" transform="rotate(-6 540 470)"/>
+<text x="540" y="530" text-anchor="middle" font-family="Bangers" font-size="220" fill="${v.title}" stroke="${INK}" stroke-width="16" paint-order="stroke" transform="rotate(-6 540 470)">LIGUE JÁ!</text>
+<g transform="translate(540 820) rotate(-6)">
+ <rect x="-340" y="-115" width="680" height="230" rx="28" fill="${INK}" transform="translate(0 16)"/>
+ <rect x="-340" y="-115" width="680" height="230" rx="28" fill="${v.plate}" stroke="${INK}" stroke-width="12"/>
+ <text y="10" text-anchor="middle" font-family="Bangers" font-size="135" fill="${v.num}" letter-spacing="10">0800</text>
+ <text y="90" text-anchor="middle" font-family="Baloo" font-weight="800" font-size="64" fill="${v.name}" letter-spacing="4" ${v.nameStroke?`stroke="${INK}" stroke-width="10" paint-order="stroke"`:''}>INUTILIDADES</text>
+</g></svg></div>`}).join('');
+</script></body></html>
