@@ -233,19 +233,41 @@ export const SeuKuka: React.FC<{
         {/* cabeça */}
         <circle cx={0} cy={-740} r={170} fill={PELE} />
         {/* cabelo: black power volumoso (o "Beludo") — queimado vira carvão com fumaça */}
-        <g fill={tost ? "#2a2a2a" : "#3A2414"} transform={arrepiado ? "translate(-90 -60) scale(1.35 0.9) rotate(-8 0 -800)" : undefined}>
-          {[
-            [-140, -850, 70],
-            [-60, -910, 80],
-            [50, -920, 82],
-            [140, -860, 72],
-            [160, -780, 50],
-            [-160, -770, 50],
-            [0, -950, 60],
-          ].map(([cx, cy, r], i) => (
-            <circle key={i} cx={cx} cy={cy} r={r} />
+        <g fill={tost ? "#2a2a2a" : "#3A2414"}>
+          {(arrepiado
+            ? [
+                // soprado para trás (vento do motor): o volume vai para a esquerda e para cima, sem cobrir o rosto
+                [-250, -860, 70],
+                [-190, -950, 82],
+                [-90, -990, 84],
+                [20, -985, 74],
+                [110, -940, 58],
+                [-280, -770, 52],
+                [-160, -880, 60],
+                [-30, -925, 66],
+                [150, -895, 40],
+              ]
+            : [
+                [-140, -850, 70],
+                [-60, -910, 80],
+                [50, -920, 82],
+                [140, -860, 72],
+                [160, -780, 50],
+                [-160, -770, 50],
+                [0, -950, 60],
+              ]
+          ).map(([cx, cy, r], i) => (
+            <circle key={i} cx={cx} cy={cy + (arrepiado ? Math.sin(f * 0.9 + i) * 3 : 0)} r={r} />
           ))}
         </g>
+        {arrepiado && (
+          <g fill="none" stroke={TINTA} strokeWidth={8}>
+            {[0, 1, 2].map((i) => {
+              const q = ((f * 2 + i * 13) % 30) / 30;
+              return <path key={i} d={`M${200 + q * 60} ${-960 + i * 60} l70 -8`} opacity={1 - q} />;
+            })}
+          </g>
+        )}
         {tost && (
           <>
             <g fill="#555" stroke="none">
