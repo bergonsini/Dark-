@@ -50,7 +50,8 @@
       "falas": [
         {
           "texto": "A coroa sumiu… e o Tito virou detetive!",
-          "pronuncia": "A coroa SUMIU… e o Tito virou DETETIVE!"
+          "pronuncia": "A coroa SUMIU… e o Tito virou DETETIVE!",
+          "aceleraLocal": 1.12
         }
       ]
     },
