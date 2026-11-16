@@ -1,0 +1,182 @@
+{
+  "projeto": "inutilidades",
+  "fps": 30,
+  "saida": {
+    "timeline": "src/inutilidades/timeline.json",
+    "audio": "public/inutilidades/audio"
+  },
+  "video": "tapete-turbo",
+  "titulo": "Tapete Escorregador Turbo",
+  "episodio": 4,
+  "duracaoSegundos": 44,
+  "pausas": {
+    "entreCenas": 0.2,
+    "final": 1.2
+  },
+  "musica": {
+    "bpm": 132,
+    "tom": -1
+  },
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_santa",
+      "velocidade": 1.05
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "+8%"
+    },
+    "elevenlabs": {
+      "voiceId": "xJ8U5HgW3Zps75qgYrFw",
+      "nome": "Carlos (pt-BR, ofertas) — DOUTOR OFERTA",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.35,
+      "similaridade": 0.75
+    },
+    "estiloInterpretacao": "televendas: empolgado, rápido, MAIÚSCULAS na ênfase"
+  },
+  "personagens": {
+    "doutor": {},
+    "kuka": {
+      "kokoro": {
+        "voz": "pm_alex",
+        "velocidade": 0.95
+      },
+      "elevenlabs": {
+        "voiceId": "mP51FBaz7jxNEIeFJwxX",
+        "nome": "Silas (pt-BR, interior) — SEU KUKA BELUDO",
+        "estabilidade": 0.45
+      }
+    },
+    "rato": {
+      "kokoro": {
+        "voz": "pm_alex",
+        "velocidade": 0.9
+      },
+      "elevenlabs": {
+        "voiceId": "mP51FBaz7jxNEIeFJwxX",
+        "nome": "Silas afinado — RATO",
+        "estabilidade": 0.45
+      },
+      "afinar": 1.45
+    }
+  },
+  "cenas": [
+    {
+      "id": "gancho",
+      "falas": [
+        {
+          "quem": "kuka",
+          "texto": "Fui na cozinha… e atravessei três paredes.",
+          "pronuncia": "[deadpan] Fui na cozinha… e atravessei TRÊS paredes.",
+          "aceleraLocal": 1.12
+        }
+      ]
+    },
+    {
+      "id": "problema",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Cansado de levar CINCO segundos do quarto até a cozinha?",
+          "pronuncia": "Cansado de levar CINCO segundos do quarto até a cozinha?"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Uma eternidade!",
+          "pronuncia": "Uma ETERNIDADE!"
+        }
+      ]
+    },
+    {
+      "id": "produto",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Seus problemas ACABARAM!",
+          "pronuncia": "[excited] Seus problemas ACABARAM!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Apresento o Tapete Escorregador Turbo!",
+          "pronuncia": "Apresento o TAPETE ESCORREGADOR TURBO!"
+        }
+      ]
+    },
+    {
+      "id": "demonstracao",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "É só pisar no tapete e…",
+          "pronuncia": "É só pisar no tapete e…",
+          "pausaDepois": 1.2
+        },
+        {
+          "quem": "doutor",
+          "texto": "Cozinha em meio segundo!",
+          "pronuncia": "[excited] Cozinha em MEIO segundo!"
+        }
+      ]
+    },
+    {
+      "id": "depoimento",
+      "falas": [
+        {
+          "quem": "kuka",
+          "texto": "Eu fui buscar um copo d'água…",
+          "pronuncia": "Eu fui buscar um copo d'água…"
+        },
+        {
+          "quem": "kuka",
+          "texto": "…e parei no bairro vizinho.",
+          "pronuncia": "[deadpan] …e parei no bairro VIZINHO."
+        },
+        {
+          "quem": "kuka",
+          "texto": "Mas cheguei rapidinho!",
+          "pronuncia": "[happy] Mas cheguei RAPIDINHO!"
+        }
+      ]
+    },
+    {
+      "id": "oferta",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "De 999 por apenas 49,90!",
+          "pronuncia": "De novecentos e noventa e nove por apenas QUARENTA E NOVE E NOVENTA!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "E ligando AGORA, ganhe um capacete de brinde!",
+          "pronuncia": "E ligando AGORA, ganhe um CAPACETE de brinde!"
+        },
+        {
+          "quem": "kuka",
+          "texto": "Manda dois!",
+          "pronuncia": "[excited] Manda DOIS!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Ligue já!",
+          "pronuncia": "LIGUE JÁ!"
+        }
+      ]
+    },
+    {
+      "id": "letrinhas",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Não pise no tapete. Paredes vendidas separadamente.",
+          "pronuncia": "Não pise no tapete. Paredes vendidas separadamente.",
+          "velocidade": 1.15
+        }
+      ]
+    }
+  ]
+}
