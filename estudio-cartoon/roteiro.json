@@ -1,6 +1,6 @@
 {
-  "video": "sem-lua",
-  "titulo": "E se a Lua sumisse?",
+  "video": "mar-salgado",
+  "titulo": "Por que o mar é salgado?",
   "fps": 30,
   "duracaoSegundos": 60,
   "personagem": "tito",
@@ -30,14 +30,14 @@
     "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
   },
   "musica": {
-    "bpm": 96,
-    "tom": -10
+    "bpm": 100,
+    "tom": -7
   },
   "fontes": [
-    "Marés: força de maré do Sol ≈ metade (46%) da da Lua: NOAA Tides Tutorial; Bowditch (American Practical Navigator); Popular Science / Live Science (marés bem menores sem a Lua)",
-    "Inclinação: Laskar et al. 1993 (Nature) – Lua estabiliza a obliquidade; Lissauer/Barnes 2011 – variação maior que a atual em ~100 mil anos, porém limitada (Júpiter também ajuda) → 'ajuda a segurar', 'mais instável', 'milhares de anos'",
-    "Corais: Kaniewska et al. 2015 (eLife) – luar é estímulo importante para a desova em massa; Levy et al. 2007 (Science) – gene Cry2 ativado pela luz da lua cheia",
-    "Noites mais escuras sem o luar; lobisomem = piada (folclore)"
+    "NOAA Ocean Service — Why is the ocean salty? / Why are rivers not salty? (chuva desgasta rochas, rios levam os minerais; o rio é renovado pela chuva; o oceano hoje está em equilíbrio)",
+    "USGS Water Science School — Why is the ocean salty? (chuva levemente ácida desgasta rochas; fontes hidrotermais no fundo do mar; salinidade média ~35 partes por mil = ~35 g por litro)",
+    "NOAA via USGS — se o sal fosse espalhado sobre os continentes: camada de mais de 500 pés (166 m), ~altura de um prédio de 40 andares (estimativa)",
+    "WHOI — sódio e cloro não são retidos pela terra, por isso o sal se acumulou no mar ao longo do tempo"
   ],
   "cenas": [
     {
@@ -45,79 +45,88 @@
       "ato": "começo",
       "falas": [
         {
-          "texto": "E se a Lua sumisse… agora?",
-          "pronuncia": "[curious] E se a Lua sumisse… AGORA?"
+          "texto": "Por que o mar é salgado… e o rio não?",
+          "pronuncia": "[curious] Por que o mar é SALGADO… e o rio não?"
         }
       ]
     },
     {
-      "id": "puf",
-      "ato": "começo",
-      "falas": [
-        {
-          "texto": "Três, dois, um… puf!",
-          "pronuncia": "Três, dois, um… [excited] PUF!"
-        },
-        {
-          "texto": "Qual efeito você notaria primeiro? Pensa aí!",
-          "pronuncia": "[curious] Qual efeito você NOTARIA primeiro? Pensa aí!"
-        }
-      ]
-    },
-    {
-      "id": "noite",
+      "id": "chuva",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Resposta: as noites! Sem o luar, ficariam muito mais escuras.",
-          "pronuncia": "[excited] Resposta: as NOITES! Sem o luar, ficariam muito mais escuras."
+          "texto": "Tudo começa com a chuva.",
+          "pronuncia": "Tudo começa com a CHUVA."
+        },
+        {
+          "texto": "Ela é levemente ácida e vai desgastando as rochas, bem devagarinho.",
+          "pronuncia": "Ela é levemente ÁCIDA… e vai desgastando as rochas, bem devagarinho."
         }
       ]
     },
     {
-      "id": "mares",
+      "id": "rios",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "E as marés? Quem mais puxa os oceanos é a Lua.",
-          "pronuncia": "[curious] E as marés? Quem mais puxa os oceanos é a LUA."
+          "texto": "Os rios carregam esses sais até o mar.",
+          "pronuncia": "Os rios carregam esses SAIS até o mar."
         },
         {
-          "texto": "Sem ela, só o Sol puxaria, com metade da força: marés bem menores.",
-          "pronuncia": "Sem ela, só o Sol puxaria, com METADE da força: marés bem menores."
+          "texto": "Um pouquinho por vez, durante milhões de anos!",
+          "pronuncia": "Um pouquinho por vez… durante MILHÕES de anos!"
         }
       ]
     },
     {
-      "id": "quiz",
+      "id": "evapora",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Agora, um quiz: quem sentiria mais falta da Lua? Os corais… ou o lobisomem?",
-          "pronuncia": "[excited] Agora, um QUIZ: quem sentiria mais falta da Lua? Os corais… ou o lobisomem?"
+          "texto": "No mar, o Sol evapora a água… mas o sal fica!",
+          "pronuncia": "No mar, o Sol evapora a água… [excited] mas o SAL fica!"
         },
         {
-          "texto": "Os dois! O lobisomem ia ficar desempregado…",
-          "pronuncia": "[laughs] Os DOIS! O lobisomem ia ficar DESEMPREGADO…",
-          "pausaDepois": 0.35
-        },
-        {
-          "texto": "e muitos corais usam a lua cheia como sinal pra se reproduzir.",
-          "pronuncia": "e muitos corais usam a lua cheia como sinal pra se reproduzir."
+          "texto": "E vai se acumulando.",
+          "pronuncia": "E vai se acumulando."
         }
       ]
     },
     {
-      "id": "eixo",
+      "id": "fundo",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "E tem um efeito lento: a Lua ajuda a segurar a inclinação da Terra.",
-          "pronuncia": "E tem um efeito LENTO: a Lua ajuda a segurar a inclinação da Terra."
+          "texto": "E tem mais: no fundo do mar, fontes quentes também soltam minerais.",
+          "pronuncia": "[whispers] E tem mais: no fundo do mar, fontes QUENTES também soltam minerais."
+        }
+      ]
+    },
+    {
+      "id": "quanto",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Hoje, cada litro de água do mar tem uns 35 gramas de sal!",
+          "pronuncia": "Hoje, cada litro de água do mar tem uns TRINTA E CINCO gramas de sal!"
         },
         {
-          "texto": "Sem ela, o eixo ficaria mais instável, e as estações mudariam ao longo de milhares de anos.",
-          "pronuncia": "[surprised] Sem ela, o eixo ficaria mais instável, e as estações mudariam ao longo de MILHARES de anos."
+          "texto": "Espalhado na terra, daria uma camada do tamanho de um prédio de 40 andares!",
+          "pronuncia": "[excited] Espalhado na terra, daria uma camada do tamanho de um prédio de QUARENTA andares!"
+        }
+      ]
+    },
+    {
+      "id": "rio",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E o rio? Ele também leva sal, mas a chuva renova a água o tempo todo.",
+          "pronuncia": "[curious] E o rio? Ele também leva sal… mas a chuva RENOVA a água o tempo todo."
+        },
+        {
+          "texto": "Por isso ele continua docinho.",
+          "pronuncia": "Por isso ele continua DOCINHO."
         }
       ]
     },
@@ -126,12 +135,12 @@
       "ato": "conclusão",
       "falas": [
         {
-          "texto": "Ou seja: a Lua não é só enfeite, ela trabalha pra gente!",
-          "pronuncia": "[happy] Ou seja: a Lua não é só ENFEITE, ela trabalha pra gente!"
+          "texto": "Resumindo: o mar guarda o sal de milhões de anos de chuva.",
+          "pronuncia": "Resumindo: o mar guarda o sal de MILHÕES de anos de chuva."
         },
         {
-          "texto": "E você, ia sentir falta de quê? Comenta aqui!",
-          "pronuncia": "[excited] E você, ia sentir falta de quê? Comenta aqui!"
+          "texto": "Você já engoliu água do mar sem querer? Conta aí!",
+          "pronuncia": "[laughs] Você já engoliu água do mar sem querer? Conta aí!"
         }
       ]
     }

@@ -1,0 +1,143 @@
+{
+  "video": "sem-lua",
+  "titulo": "E se a Lua sumisse?",
+  "fps": 30,
+  "duracaoSegundos": 60,
+  "personagem": "tito",
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "tS45q0QcrDHqHoaWdCDR",
+      "nome": "Lax (pt-BR, jovem e alegre) — voz do TITO",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.4,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
+  },
+  "musica": {
+    "bpm": 96,
+    "tom": -10
+  },
+  "fontes": [
+    "Marés: força de maré do Sol ≈ metade (46%) da da Lua: NOAA Tides Tutorial; Bowditch (American Practical Navigator); Popular Science / Live Science (marés bem menores sem a Lua)",
+    "Inclinação: Laskar et al. 1993 (Nature) – Lua estabiliza a obliquidade; Lissauer/Barnes 2011 – variação maior que a atual em ~100 mil anos, porém limitada (Júpiter também ajuda) → 'ajuda a segurar', 'mais instável', 'milhares de anos'",
+    "Corais: Kaniewska et al. 2015 (eLife) – luar é estímulo importante para a desova em massa; Levy et al. 2007 (Science) – gene Cry2 ativado pela luz da lua cheia",
+    "Noites mais escuras sem o luar; lobisomem = piada (folclore)"
+  ],
+  "cenas": [
+    {
+      "id": "gancho",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "E se a Lua sumisse… agora?",
+          "pronuncia": "[curious] E se a Lua sumisse… AGORA?"
+        }
+      ]
+    },
+    {
+      "id": "puf",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Três, dois, um… puf!",
+          "pronuncia": "Três, dois, um… [excited] PUF!"
+        },
+        {
+          "texto": "Qual efeito você notaria primeiro? Pensa aí!",
+          "pronuncia": "[curious] Qual efeito você NOTARIA primeiro? Pensa aí!"
+        }
+      ]
+    },
+    {
+      "id": "noite",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Resposta: as noites! Sem o luar, ficariam muito mais escuras.",
+          "pronuncia": "[excited] Resposta: as NOITES! Sem o luar, ficariam muito mais escuras."
+        }
+      ]
+    },
+    {
+      "id": "mares",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E as marés? Quem mais puxa os oceanos é a Lua.",
+          "pronuncia": "[curious] E as marés? Quem mais puxa os oceanos é a LUA."
+        },
+        {
+          "texto": "Sem ela, só o Sol puxaria, com metade da força: marés bem menores.",
+          "pronuncia": "Sem ela, só o Sol puxaria, com METADE da força: marés bem menores."
+        }
+      ]
+    },
+    {
+      "id": "quiz",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Agora, um quiz: quem sentiria mais falta da Lua? Os corais… ou o lobisomem?",
+          "pronuncia": "[excited] Agora, um QUIZ: quem sentiria mais falta da Lua? Os corais… ou o lobisomem?"
+        },
+        {
+          "texto": "Os dois! O lobisomem ia ficar desempregado…",
+          "pronuncia": "[laughs] Os DOIS! O lobisomem ia ficar DESEMPREGADO…",
+          "pausaDepois": 0.35
+        },
+        {
+          "texto": "e muitos corais usam a lua cheia como sinal pra se reproduzir.",
+          "pronuncia": "e muitos corais usam a lua cheia como sinal pra se reproduzir."
+        }
+      ]
+    },
+    {
+      "id": "eixo",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E tem um efeito lento: a Lua ajuda a segurar a inclinação da Terra.",
+          "pronuncia": "E tem um efeito LENTO: a Lua ajuda a segurar a inclinação da Terra."
+        },
+        {
+          "texto": "Sem ela, o eixo ficaria mais instável, e as estações mudariam ao longo de milhares de anos.",
+          "pronuncia": "[surprised] Sem ela, o eixo ficaria mais instável, e as estações mudariam ao longo de MILHARES de anos."
+        }
+      ]
+    },
+    {
+      "id": "conclusao",
+      "ato": "conclusão",
+      "falas": [
+        {
+          "texto": "Ou seja: a Lua não é só enfeite, ela trabalha pra gente!",
+          "pronuncia": "[happy] Ou seja: a Lua não é só ENFEITE, ela trabalha pra gente!"
+        },
+        {
+          "texto": "E você, ia sentir falta de quê? Comenta aqui!",
+          "pronuncia": "[excited] E você, ia sentir falta de quê? Comenta aqui!"
+        }
+      ]
+    }
+  ],
+  "pausas": {
+    "entreCenas": 0.4,
+    "final": 1.8
+  }
+}
