@@ -56,7 +56,7 @@ export const InutilidadesVideo: React.FC = () => {
         <LogoCanal />
       </AbsoluteFill>
       <Legenda pular={ep.semLegenda ?? []} />
-      <VHSInterface glitches={glitches} />
+      <VHSInterface glitches={glitches} pausas={ep.pausas ? ep.pausas() : []} />
       {glitches.map((a) => (
         <Sequence key={a} from={a} durationInFrames={20} layout="none">
           <Audio src={staticFile("inutilidades/audio/sfx/vhs.wav")} volume={0.35} />

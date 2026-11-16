@@ -38,7 +38,7 @@ export const Faixa: React.FC<{ texto: string; at: number; y?: number; cor?: stri
 };
 
 /** Nome do produto, gigante, batendo na tela. */
-export const NomeProduto: React.FC<{ linha1: string; linha2: string; at: number; y?: number }> = ({ linha1, linha2, at, y = 360 }) => {
+export const NomeProduto: React.FC<{ linha1: string; linha2: string; at: number; y?: number; tam?: number }> = ({ linha1, linha2, at, y = 360, tam = 128 }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const s1 = pop(f, at, fps, 300);
@@ -47,8 +47,8 @@ export const NomeProduto: React.FC<{ linha1: string; linha2: string; at: number;
   const base: React.CSSProperties = { fontFamily: FONTE, fontWeight: 800, lineHeight: 0.95, ...contorno(16), textShadow: `0 12px 0 ${TINTA}` };
   return (
     <div style={{ position: "absolute", left: 0, right: 0, top: y, textAlign: "center" }}>
-      <div style={{ ...base, fontSize: 128, color: "#fff", transform: `scale(${s1})` }}>{linha1}</div>
-      <div style={{ ...base, fontSize: 108, color: "#FF4B3E", transform: `scale(${s2}) rotate(-2deg)` }}>{linha2}</div>
+      <div style={{ ...base, fontSize: tam, color: "#fff", transform: `scale(${s1})` }}>{linha1}</div>
+      <div style={{ ...base, fontSize: tam * 0.85, color: "#FF4B3E", transform: `scale(${s2}) rotate(-2deg)` }}>{linha2}</div>
     </div>
   );
 };
@@ -322,12 +322,13 @@ export const LogoCanal: React.FC = () => (
 );
 
 /** Interface da fita VHS: PLAY ▶, contador SP, linhas, vinheta, chiado e a faixa de "tracking". */
-export const VHSInterface: React.FC<{ glitches: number[] }> = ({ glitches }) => {
+export const VHSInterface: React.FC<{ glitches: number[]; pausas?: [number, number][] }> = ({ glitches, pausas = [] }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const seg = Math.floor(f / fps);
   const hh = `SP 0:${String(Math.floor(seg / 60)).padStart(2, "0")}:${String(seg % 60).padStart(2, "0")}`;
   const g = glitches.some((a) => f >= a && f < a + 8);
+  const pausa = pausas.find(([a, b]) => f >= a && f < b);
   const faixaY = ((f * 9) % 2400) - 240;
   const hud: React.CSSProperties = { position: "absolute", fontFamily: "'DejaVu Sans Mono', monospace", fontWeight: 700, color: "#fff", textShadow: "3px 0 #f0f, -3px 0 #0ff" };
   return (
@@ -350,7 +351,10 @@ export const VHSInterface: React.FC<{ glitches: number[] }> = ({ glitches }) => 
             }}
           />
         ))}
-      <div style={{ ...hud, left: 40, top: 36, fontSize: 50 }}>{g ? "◀◀ REW" : "PLAY ▶"}</div>
+      {pausa && (
+        <div style={{ position: "absolute", left: 0, right: 0, top: 1500 + Math.sin(f * 1.3) * 30, height: 46, background: "rgba(255,255,255,.22)", filter: "blur(2px)", transform: `translateX(${Math.sin(f * 7) * 14}px)` }} />
+      )}
+      <div style={{ ...hud, left: 40, top: 36, fontSize: 50 }}>{g ? "◀◀ REW" : pausa ? "PAUSE ‖" : "PLAY ▶"}</div>
       <div style={{ ...hud, left: 40, top: 100, fontSize: 36 }}>{hh}</div>
     </div>
   );

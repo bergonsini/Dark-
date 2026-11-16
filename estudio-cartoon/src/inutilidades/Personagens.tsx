@@ -71,7 +71,11 @@ export const DoutorOferta: React.FC<{
   pose?: keyof typeof POSES_DOUTOR;
   queimado?: boolean;
   flip?: boolean;
-}> = ({ x, y, escala = 1, boca = 0, expr = "sorriso", pose = "parado", queimado = false, flip = false }) => {
+  /** depois de um acidente: topete arrepiado e curativo em X na testa */
+  curativo?: boolean;
+  /** rotação do corpo inteiro (graus), em torno do centro do corpo */
+  giro?: number;
+}> = ({ x, y, escala = 1, boca = 0, expr = "sorriso", pose = "parado", queimado = false, flip = false, curativo = false, giro = 0 }) => {
   const f = useCurrentFrame();
   const P = POSES_DOUTOR[pose];
   const PELE = queimado ? "#8C6A55" : "#F2C29B";
@@ -83,7 +87,7 @@ export const DoutorOferta: React.FC<{
   const sob = grita ? -18 : 0;
   const h = 40 + 95 * ab;
   return (
-    <g transform={`translate(${x} ${y}) scale(${flip ? -escala : escala} ${escala})`} stroke={TINTA} strokeWidth={SW} strokeLinejoin="round" strokeLinecap="round">
+    <g transform={`translate(${x} ${y}) scale(${flip ? -escala : escala} ${escala}) rotate(${giro} 0 -520)`} stroke={TINTA} strokeWidth={SW} strokeLinejoin="round" strokeLinecap="round">
       {/* pernas e sapatos */}
       <rect x={-75} y={-225} width={60} height={200} fill="#4B2A8C" />
       <rect x={15} y={-225} width={60} height={200} fill="#4B2A8C" />
@@ -105,6 +109,8 @@ export const DoutorOferta: React.FC<{
         {/* topete com gel */}
         {queimado ? (
           <path d="M-150 -865 C -160 -985, -30 -1005, 40 -975 C 90 -1010, 170 -990, 160 -905 C 100 -940, 0 -950, -150 -865 Z" fill="#222" />
+        ) : curativo ? (
+          <path d="M-150 -865 L-190 -960 L-110 -930 L-120 -1040 L-40 -960 L-10 -1080 L40 -970 L110 -1060 L110 -950 L200 -990 L160 -905 C 100 -940, 0 -950, -150 -865 Z" fill="#2B1A12" />
         ) : (
           <>
             <path d="M-150 -865 C -160 -1005, -30 -1025, 40 -995 C 90 -1065, 180 -1025, 160 -905 C 130 -945, 90 -950, 70 -935 C 10 -965, -90 -945, -150 -865 Z" fill="#2B1A12" />
@@ -151,6 +157,12 @@ export const DoutorOferta: React.FC<{
         {expr === "sorriso" && ab <= 0.08 && (
           <path d="M140 -735 L148 -715 L170 -709 L150 -701 L142 -679 L134 -701 L114 -709 L136 -715 Z" fill="#fff" stroke="#FFD23F" strokeWidth={4} />
         )}
+        {curativo && (
+          <g fill="#F5D6A6" strokeWidth={5}>
+            <rect x={-80} y={-950} width={130} height={34} rx={8} transform="rotate(25 -15 -933)" />
+            <rect x={-80} y={-950} width={130} height={34} rx={8} transform="rotate(-25 -15 -933)" />
+          </g>
+        )}
         {/* microfone de cabeça */}
         <path d="M156 -785 Q150 -705 40 -705" fill="none" strokeWidth={7} />
         <circle cx={38} cy={-705} r={14} fill="#333" />
@@ -176,6 +188,8 @@ const POSES_KUKA: Record<string, { E: Pose2; D: Pose2 }> = {
   bracosPraCima: { E: { a1: -150, a2: -10 }, D: { a1: 150, a2: 10 } },
   telefone: { E: { a1: -25, a2: 10 }, D: { a1: 30, a2: 150 } },
   escovando: { E: { a1: -25, a2: 10 }, D: { a1: 200, a2: 30 } },
+  /** braço direito esticado para a frente: a mão fica em (351, -477) — ali vai o controle remoto */
+  controle: { E: { a1: -25, a2: 10 }, D: { a1: 60, a2: 60 } },
 };
 
 export const SeuKuka: React.FC<{

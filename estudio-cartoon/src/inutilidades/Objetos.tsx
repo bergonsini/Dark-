@@ -342,3 +342,88 @@ export const LinhasVelocidade: React.FC<{ forca?: number }> = ({ forca = 1 }) =>
     </g>
   );
 };
+
+/** Sala de estar do Seu Kuka: parede listrada, sofá, TV de tubo (com canal trocando) e abajur. */
+export const Sala: React.FC<{ canal?: number; tvX?: number; sofa?: boolean }> = ({ canal = 0, tvX = 250, sofa = true }) => {
+  const cores = [["#E8282B", "#FFD23F", "#22A447", "#3DA5FF", "#9A62F5"], ["#444", "#888", "#ccc", "#888", "#444"], ["#FF8C1A", "#fff", "#FF8C1A", "#fff", "#FF8C1A"]];
+  const c = cores[Math.abs(canal) % cores.length];
+  return (
+    <g strokeLinejoin="round" strokeLinecap="round">
+      <rect width={1080} height={1920} fill="#E9D3F2" />
+      <g fill="#DDBFE9">
+        {Array.from({ length: 12 }).map((_, i) => (
+          <rect key={i} x={i * 100} y={0} width={46} height={1380} />
+        ))}
+      </g>
+      <rect y={1380} width={1080} height={540} fill="#B07A50" />
+      <path d="M0 1380 L1080 1380" stroke={TINTA} strokeWidth={10} />
+      <ellipse cx={560} cy={1640} rx={420} ry={90} fill="#E8282B" opacity={0.6} />
+      {/* TV de tubo */}
+      <g transform={`translate(${tvX} 1060)`} stroke={TINTA} strokeWidth={8}>
+        <rect x={-170} y={-150} width={340} height={280} rx={30} fill="#6B4A2E" />
+        <rect x={-140} y={-122} width={230} height={210} rx={20} fill="#222" />
+        {c.map((cor, i) => (
+          <rect key={i} x={-134 + i * 44} y={-116} width={44} height={198} fill={cor} stroke="none" />
+        ))}
+        <circle cx={130} cy={-60} r={16} fill="#C9D0DC" />
+        <circle cx={130} cy={0} r={16} fill="#C9D0DC" />
+        <path d="M-60 -150 L-110 -250 M40 -150 L90 -250" fill="none" strokeWidth={6} />
+        <rect x={-120} y={130} width={240} height={250} fill="#8B5A2B" />
+      </g>
+      {sofa && (
+        <g transform="translate(760 1420)" stroke={TINTA} strokeWidth={8}>
+          <rect x={-260} y={-260} width={520} height={190} rx={40} fill="#3D8F6B" />
+          <rect x={-300} y={-110} width={600} height={130} rx={30} fill="#4FAF80" />
+          <rect x={-320} y={-200} width={90} height={230} rx={30} fill="#3D8F6B" />
+          <rect x={230} y={-200} width={90} height={230} rx={30} fill="#3D8F6B" />
+        </g>
+      )}
+    </g>
+  );
+};
+
+/** O Controle Remoto Universal de Verdade (botões: ▶ ‖ ◀◀ ▶▶ ⏏). `aperta`: qual botão brilha. */
+export const ControleRemoto: React.FC<{ x: number; y: number; escala?: number; rot?: number; aperta?: "pause" | "ejetar" | "play" | null }> = ({ x, y, escala = 1, rot = 0, aperta = null }) => {
+  const f = useCurrentFrame();
+  const bot = (id: string, cx: number, cy: number, simb: string, cor: string) => {
+    const on = aperta === id && Math.floor(f / 4) % 2 === 0;
+    return (
+      <g key={id}>
+        <circle cx={cx} cy={cy} r={34} fill={on ? "#FFF59A" : cor} />
+        <text x={cx} y={cy + 13} textAnchor="middle" fontSize={36} fill={TINTA} stroke="none" fontFamily="'DejaVu Sans', sans-serif" fontWeight={700}>
+          {simb}
+        </text>
+      </g>
+    );
+  };
+  return (
+    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
+      <rect x={-90} y={-260} width={180} height={520} rx={60} fill="#2B2B33" />
+      <rect x={-50} y={-300} width={100} height={50} rx={14} fill="#E8282B" />
+      <circle cx={0} cy={-200} r={18} fill="#E8282B" />
+      {bot("play", 0, -110, "▶", "#22A447")}
+      {bot("pause", -45, -20, "‖", "#FFD23F")}
+      {bot("rew", 45, -20, "◀◀", "#3DA5FF")}
+      {bot("ff", -45, 70, "▶▶", "#3DA5FF")}
+      {bot("ejetar", 45, 70, "⏏", "#FF8C1A")}
+      <text x={0} y={200} textAnchor="middle" fontSize={34} fill="#FFD23F" stroke="none" fontFamily="'Baloo 2'" fontWeight={800}>
+        UNIVERSAL
+      </text>
+    </g>
+  );
+};
+
+/** Confete caindo (para mostrar o mundo congelado no PAUSE). */
+export const Confete: React.FC<{ n?: number }> = ({ n = 40 }) => {
+  const f = useCurrentFrame();
+  const cores = ["#FFD23F", "#E8282B", "#22A447", "#3DA5FF", "#fff", "#FF8C1A"];
+  return (
+    <g>
+      {Array.from({ length: n }).map((_, i) => {
+        const x = (i * 197) % 1080;
+        const y = ((i * 263 + f * (9 + (i % 5) * 2)) % 2000) - 80;
+        return <rect key={i} x={x + Math.sin(f * 0.2 + i) * 30} y={y} width={22} height={36} fill={cores[i % cores.length]} transform={`rotate(${f * 6 + i * 40} ${x} ${y})`} />;
+      })}
+    </g>
+  );
+};
