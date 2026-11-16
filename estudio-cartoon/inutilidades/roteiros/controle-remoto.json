@@ -1,0 +1,181 @@
+{
+  "projeto": "inutilidades",
+  "fps": 30,
+  "saida": {
+    "timeline": "src/inutilidades/timeline.json",
+    "audio": "public/inutilidades/audio"
+  },
+  "video": "controle-remoto",
+  "titulo": "Controle Remoto Universal de Verdade",
+  "episodio": 3,
+  "duracaoSegundos": 44,
+  "pausas": {
+    "entreCenas": 0.2,
+    "final": 1.2
+  },
+  "musica": {
+    "bpm": 126,
+    "tom": -4
+  },
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_santa",
+      "velocidade": 1.05
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "+8%"
+    },
+    "elevenlabs": {
+      "voiceId": "xJ8U5HgW3Zps75qgYrFw",
+      "nome": "Carlos (pt-BR, ofertas) — DOUTOR OFERTA",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.35,
+      "similaridade": 0.75
+    },
+    "estiloInterpretacao": "televendas: empolgado, rápido, MAIÚSCULAS na ênfase"
+  },
+  "personagens": {
+    "doutor": {},
+    "kuka": {
+      "kokoro": {
+        "voz": "pm_alex",
+        "velocidade": 0.95
+      },
+      "elevenlabs": {
+        "voiceId": "mP51FBaz7jxNEIeFJwxX",
+        "nome": "Silas (pt-BR, interior) — SEU KUKA BELUDO",
+        "estabilidade": 0.45
+      }
+    },
+    "rato": {
+      "kokoro": {
+        "voz": "pm_alex",
+        "velocidade": 0.9
+      },
+      "elevenlabs": {
+        "voiceId": "mP51FBaz7jxNEIeFJwxX",
+        "nome": "Silas afinado — RATO",
+        "estabilidade": 0.45
+      },
+      "afinar": 1.45
+    }
+  },
+  "cenas": [
+    {
+      "id": "gancho",
+      "falas": [
+        {
+          "quem": "kuka",
+          "texto": "Pausei o rato.",
+          "pronuncia": "[deadpan] Pausei o rato."
+        }
+      ]
+    },
+    {
+      "id": "problema",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Cansado de um controle remoto que só muda de canal?",
+          "pronuncia": "Cansado de um controle remoto que SÓ muda de canal?"
+        },
+        {
+          "quem": "doutor",
+          "texto": "E se a sua vida tivesse um botão de PAUSE?",
+          "pronuncia": "E se a sua VIDA tivesse um botão de PAUSE?"
+        }
+      ]
+    },
+    {
+      "id": "produto",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Seus problemas ACABARAM!",
+          "pronuncia": "[excited] Seus problemas ACABARAM!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Apresento o Controle Remoto Universal… de VERDADE!",
+          "pronuncia": "Apresento o CONTROLE REMOTO UNIVERSAL… de VERDADE!"
+        }
+      ]
+    },
+    {
+      "id": "demonstracao",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Aperte PAUSE e o mundo PARA!",
+          "pronuncia": "Aperte PAUSE e o mundo… PARA!",
+          "pausaDepois": 1.0
+        },
+        {
+          "quem": "kuka",
+          "texto": "E esse botão aqui?",
+          "pronuncia": "E esse botão aqui?"
+        }
+      ]
+    },
+    {
+      "id": "depoimento",
+      "falas": [
+        {
+          "quem": "kuka",
+          "texto": "Eu pausei o rato, adiantei a segunda-feira…",
+          "pronuncia": "Eu pausei o rato, adiantei a segunda-feira…"
+        },
+        {
+          "quem": "kuka",
+          "texto": "…e ejetei o apresentador.",
+          "pronuncia": "[deadpan] …e ejetei o apresentador."
+        },
+        {
+          "quem": "kuka",
+          "texto": "Melhor compra da minha vida!",
+          "pronuncia": "[happy] Melhor compra da minha vida!"
+        }
+      ]
+    },
+    {
+      "id": "oferta",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "De 999 por apenas 39,90!",
+          "pronuncia": "De novecentos e noventa e nove por apenas TRINTA E NOVE E NOVENTA!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "E ligando AGORA, ganhe um controle pra controlar o controle!",
+          "pronuncia": "E ligando AGORA, ganhe um controle pra controlar o CONTROLE!"
+        },
+        {
+          "quem": "kuka",
+          "texto": "Manda dois!",
+          "pronuncia": "[excited] Manda DOIS!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Ligue já!",
+          "pronuncia": "LIGUE JÁ!"
+        }
+      ]
+    },
+    {
+      "id": "letrinhas",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Não aperte ejetar perto do apresentador. Pilhas não inclusas.",
+          "pronuncia": "Não aperte ejetar perto do apresentador. Pilhas não inclusas.",
+          "velocidade": 1.15
+        }
+      ]
+    }
+  ]
+}
