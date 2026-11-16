@@ -5,6 +5,8 @@ import { FPS, HEIGHT, WIDTH } from "./cartoon/config";
 import { timeline } from "./cartoon/timeline";
 import { TitoReiVideo } from "./titorei/TitoReiVideo";
 import { timeline as timelineRei } from "./titorei/timeline";
+import { InutilidadesVideo } from "./inutilidades/InutilidadesVideo";
+import { timeline as timelineInu } from "./inutilidades/timeline";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -20,6 +22,8 @@ export const RemotionRoot: React.FC = () => {
       />
       {/* 2º TITOREI: humor absurdo em 3D low-poly (skill titorei) */}
       <Composition id="TitoRei" component={TitoReiVideo} durationInFrames={timelineRei.durationInFrames} fps={FPS} width={WIDTH} height={HEIGHT} />
+      {/* 3º INUTILIDADES 0800: comerciais de televendas de produtos absurdos, 2D + VHS (skill inutilidades) */}
+      <Composition id="Inutilidades" component={InutilidadesVideo} durationInFrames={timelineInu.durationInFrames} fps={FPS} width={WIDTH} height={HEIGHT} />
     </>
   );
 };

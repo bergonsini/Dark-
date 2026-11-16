@@ -250,6 +250,17 @@ def make_sfx():
     t = t_axis(d)
     bate = (np.sin(2 * np.pi * 22 * t) > 0).astype(float)
     sfx["alarme"] = (np.sin(2 * np.pi * 1320 * t) * bate + np.sin(2 * np.pi * 1760 * t) * (1 - bate)) * np.exp(-((t % (1 / 22)) * 40)) * np.clip((d - t) / 0.1, 0, 1)
+    # caixa registradora ("cha-ching!") para preços e ofertas
+    d = 0.7
+    t = t_axis(d)
+    bell = sum(np.sin(2 * np.pi * fr * t) * a for fr, a in ((2637, 1), (3520, 0.6), (5274, 0.3))) * np.exp(-t * 5)
+    gav = lowpass(noise(d, 41), 1800) * np.exp(-t * 30)
+    sfx["caixa"] = np.where(t > 0.12, np.roll(bell, int(0.12 * SR)), 0) + gav * 1.4
+    # chiado/rebobinar de fita VHS (transição "a fita embolou")
+    d = 0.6
+    t = t_axis(d)
+    ch = noise(d, 42) - lowpass(noise(d, 42), 900)
+    sfx["vhs"] = ch * (0.6 + 0.4 * np.sign(np.sin(2 * np.pi * 14 * t))) * np.clip((d - t) / 0.1, 0, 1) + np.sin(2 * np.pi * np.cumsum(300 + 1500 * t) / SR) * 0.3
     for k, v in sfx.items():
         sfx[k] = v / (np.max(np.abs(v)) + 1e-9) * 0.9
     return sfx
@@ -264,6 +275,9 @@ def normaliza_falas(script):
       pronuncia   -> o que a voz fala (opcional: números por extenso, siglas, ênfase com pontuação)
       velocidade  -> multiplicador só desta fala
       pausaDepois -> pausa (s) depois da fala, substitui a automática
+      quem        -> personagem que fala (vários dubladores no mesmo vídeo). O roteiro define
+                     "personagens": {"kuka": {"elevenlabs": {...}, "kokoro": {...}, "afinar": 1.0}};
+                     o que não for definido vem de "voz". "afinar" > 1 deixa a voz aguda (local, sem custo).
     """
     out = []
     for si, cena in enumerate(script["cenas"]):
@@ -272,7 +286,7 @@ def normaliza_falas(script):
                 f = {"texto": f}
             out.append({"cena": si, "linha": li, "texto": f["texto"], "falar": f.get("pronuncia", f["texto"]),
                         "vel": float(f.get("velocidade", 1.0)), "pausa": f.get("pausaDepois"),
-                        "acel": float(f.get("aceleraLocal", 1.0))})
+                        "acel": float(f.get("aceleraLocal", 1.0)), "quem": f.get("quem")})
     return out
 
 
@@ -285,13 +299,33 @@ def pausa_auto(texto, st):
     return st["pausaVirgula"]
 
 
+PERSONAGENS = {}
+
+
+def cfg_de(cfg, quem):
+    """Configuração de voz de um personagem: a do roteiro ("voz") com as trocas do personagem por cima."""
+    p = PERSONAGENS.get(quem) if quem else None
+    if not p:
+        return cfg, 1.0
+    out = dict(cfg)
+    for k, v in p.items():
+        if k == "afinar":
+            continue
+        out[k] = {**cfg.get(k, {}), **v} if isinstance(v, dict) and isinstance(cfg.get(k), dict) else v
+    return out, float(p.get("afinar", 1.0))
+
+
 def sintetizar_tudo(falas, motor, cfg, fator):
     res = []
     for i, f in enumerate(falas):
-        ctx = {"velocidade": f["vel"] * fator, "legenda": f["texto"],
-               "anterior": falas[i - 1]["falar"] if i else None,
-               "proxima": falas[i + 1]["falar"] if i + 1 < len(falas) else None}
-        audio, words = voz.gerar_fala(motor, f["falar"], ctx, cfg)
+        cf, tom = cfg_de(cfg, f["quem"])
+        # contexto de entonação só com falas do MESMO personagem
+        ant = next((g["falar"] for g in reversed(falas[:i]) if g["quem"] == f["quem"]), None)
+        prox = next((g["falar"] for g in falas[i + 1:] if g["quem"] == f["quem"]), None)
+        ctx = {"velocidade": f["vel"] * fator, "legenda": f["texto"], "anterior": ant, "proxima": prox}
+        audio, words = voz.gerar_fala(motor, f["falar"], ctx, cf)
+        if abs(tom - 1) >= 0.005:
+            audio, words = voz.afinar(audio, words, tom)
         if abs(f["acel"] - 1) >= 0.005:
             # aceleração LOCAL desta fala (fora do cache): não refaz a síntese nem cobra de novo
             audio, words = voz.esticar(audio, words, f["acel"])
@@ -335,6 +369,7 @@ def main():
     fps = script.get("fps", 30)
     target = float(script.get("duracaoSegundos", 60))
     cfg = script.get("voz", {})
+    PERSONAGENS.update(script.get("personagens", {}))
     st = voz.estilo(cfg)
     falas = normaliza_falas(script)
     pedido = args.engine or cfg.get("motor", "auto")
@@ -411,7 +446,7 @@ def main():
             t += prev["pausa"] if prev["pausa"] is not None else pausa_auto(prev["texto"], st)
         dur = len(audio) / SR
         wl = [{"text": w, "start": t + a, "end": t + b} for (w, a, b) in words]
-        scenes_out[-1]["lines"].append({"text": f["texto"], "start": t, "end": t + dur, "words": wl, "_audio": audio})
+        scenes_out[-1]["lines"].append({"text": f["texto"], "start": t, "end": t + dur, "words": wl, "_audio": audio, "quem": f["quem"]})
         t += dur
     total = t + outro
     for i, s in enumerate(scenes_out):
@@ -461,6 +496,7 @@ def main():
                 "lines": [
                     {
                         "text": ln["text"],
+                        **({"quem": ln["quem"]} if ln.get("quem") else {}),
                         "startFrame": F(ln["start"]),
                         "endFrame": F(ln["end"]),
                         "words": [{"text": w["text"], "startFrame": F(w["start"]), "endFrame": max(F(w["start"]) + 1, F(w["end"]))} for w in ln["words"]],

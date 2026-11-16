@@ -411,6 +411,24 @@ class Espeak(Motor):
         return out, None
 
 
+def afinar(audio, words, fator):
+    """Voz mais AGUDA e mais rápida (efeito "ratinho"/esquilo), feita localmente: asetrate. fator 1.4 = 40% mais agudo.
+    Processamento local, fora do cache: não refaz a síntese nem cobra de novo."""
+    if abs(fator - 1) < 0.005:
+        return audio, words
+    with tempfile.TemporaryDirectory() as tmp:
+        a, b = os.path.join(tmp, "a.wav"), os.path.join(tmp, "b.wav")
+        pcm = (np.clip(audio, -1, 1) * 32767).astype(np.int16)
+        with wave.open(a, "wb") as w:
+            w.setnchannels(1)
+            w.setsampwidth(2)
+            w.setframerate(SR)
+            w.writeframes(pcm.tobytes())
+        run(["ffmpeg", "-y", "-i", a, "-af", f"asetrate={int(SR * fator)},aresample={SR}", "-ar", str(SR), b])
+        out = read_wav(b)
+    return out, [(t, round(s0 / fator, 3), round(e0 / fator, 3)) for (t, s0, e0) in words]
+
+
 def esticar(audio, words, fator):
     """Muda o ritmo de um áudio já gerado SEM mudar o tom (ffmpeg atempo). fator > 1 = mais rápido.
     Usado com motores pagos, para caber na duração sem pagar outra geração."""

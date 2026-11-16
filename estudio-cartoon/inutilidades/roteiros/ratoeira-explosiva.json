@@ -1,0 +1,62 @@
+{
+  "projeto": "inutilidades",
+  "fps": 30,
+  "saida": {"timeline": "src/inutilidades/timeline.json", "audio": "public/inutilidades/audio"},
+  "video": "ratoeira-explosiva",
+  "titulo": "Ratoeira Explosiva 3000",
+  "episodio": 1,
+  "duracaoSegundos": 40,
+  "pausas": {"entreCenas": 0.2, "final": 1.2},
+  "musica": {"bpm": 128, "tom": -2},
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {"voz": "pm_santa", "velocidade": 1.05},
+    "edge": {"voz": "pt-BR-AntonioNeural", "velocidade": "+8%"},
+    "elevenlabs": {"voiceId": "xJ8U5HgW3Zps75qgYrFw", "nome": "Carlos (pt-BR, ofertas) — DOUTOR OFERTA", "modelo": "eleven_v4", "idioma": "pt", "estabilidade": 0.35, "similaridade": 0.75},
+    "estiloInterpretacao": "televendas: empolgado, rápido, MAIÚSCULAS na ênfase"
+  },
+  "personagens": {
+    "doutor": {},
+    "kuka": {
+      "kokoro": {"voz": "pm_alex", "velocidade": 0.95},
+      "elevenlabs": {"voiceId": "mP51FBaz7jxNEIeFJwxX", "nome": "Silas (pt-BR, interior) — SEU KUKA BELUDO", "estabilidade": 0.45}
+    },
+    "rato": {
+      "kokoro": {"voz": "pm_alex", "velocidade": 0.9},
+      "elevenlabs": {"voiceId": "mP51FBaz7jxNEIeFJwxX", "nome": "Silas afinado — RATO", "estabilidade": 0.45},
+      "afinar": 1.45
+    }
+  },
+  "cenas": [
+    {"id": "gancho", "falas": [
+      {"quem": "rato", "texto": "Faltou sal.", "pronuncia": "[deadpan] Faltou sal."}
+    ]},
+    {"id": "problema", "falas": [
+      {"quem": "doutor", "texto": "Cansado dos ratos ALMOÇANDO a sua comida?", "pronuncia": "Cansado dos ratos ALMOÇANDO a sua comida?"},
+      {"quem": "doutor", "texto": "E DERRUBANDO as paredes da sua casa?!", "pronuncia": "E DERRUBANDO as paredes da sua casa?!"}
+    ]},
+    {"id": "produto", "falas": [
+      {"quem": "doutor", "texto": "Seus problemas ACABARAM!", "pronuncia": "[excited] Seus problemas ACABARAM!"},
+      {"quem": "doutor", "texto": "Apresento a Ratoeira Explosiva 3000!", "pronuncia": "Apresento a RATOEIRA EXPLOSIVA três mil!"}
+    ]},
+    {"id": "demonstracao", "falas": [
+      {"quem": "doutor", "texto": "É só colocar o queijo, acender o pavio e…", "pronuncia": "É só colocar o queijo, acender o pavio e…", "pausaDepois": 1.1},
+      {"quem": "doutor", "texto": "Rato capturado com SUCESSO!", "pronuncia": "[excited] Rato capturado com SUCESSO!"}
+    ]},
+    {"id": "depoimento", "falas": [
+      {"quem": "kuka", "texto": "Eu tinha um problema com rato.", "pronuncia": "Eu tinha um problema com rato."},
+      {"quem": "kuka", "texto": "Agora não tenho mais rato… nem cozinha… nem sobrancelha.", "pronuncia": "Agora não tenho mais rato… nem cozinha… nem sobrancelha."},
+      {"quem": "kuka", "texto": "Mudou minha vida!", "pronuncia": "[happy] Mudou minha vida!"}
+    ]},
+    {"id": "oferta", "falas": [
+      {"quem": "doutor", "texto": "De 999 por apenas 19,90!", "pronuncia": "De novecentos e noventa e nove por apenas DEZENOVE E NOVENTA!"},
+      {"quem": "doutor", "texto": "E ligando AGORA, você ganha a segunda de brinde!", "pronuncia": "E ligando AGORA, você ganha a segunda de BRINDE!"},
+      {"quem": "kuka", "texto": "Eu quero duas!", "pronuncia": "[excited] Eu quero DUAS!"},
+      {"quem": "doutor", "texto": "Ligue já!", "pronuncia": "LIGUE JÁ!"}
+    ]},
+    {"id": "letrinhas", "falas": [
+      {"quem": "doutor", "texto": "Não nos responsabilizamos pela sua casa, cozinha, vizinhos ou dignidade. Rato não incluso.", "pronuncia": "Não nos responsabilizamos pela sua casa, cozinha, vizinhos ou dignidade. Rato não incluso.", "velocidade": 1.15}
+    ]}
+  ]
+}
