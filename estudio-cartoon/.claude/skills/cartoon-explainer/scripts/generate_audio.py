@@ -263,6 +263,10 @@ def make_sfx():
     fase = 2 * np.pi * np.cumsum(rot) / SR
     saw = ((fase / (2 * np.pi)) % 1) * 2 - 1
     sfx["motor"] = lowpass(saw + 0.5 * np.sign(np.sin(fase * 2)) + noise(d, 43) * 0.3, 1400) * np.minimum(1, t / 0.05) * np.clip((d - t) / 0.2, 0, 1)
+    # chuva (chiado suave e contínuo)
+    d = 1.8
+    t = t_axis(d)
+    sfx["chuva"] = (noise(d, 44) - lowpass(noise(d, 44), 1200)) * (0.7 + 0.3 * np.sin(2 * np.pi * 3 * t)) * np.minimum(1, t / 0.2) * np.clip((d - t) / 0.3, 0, 1)
     # chiado/rebobinar de fita VHS (transição "a fita embolou")
     d = 0.6
     t = t_axis(d)

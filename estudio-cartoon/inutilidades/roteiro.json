@@ -5,17 +5,17 @@
     "timeline": "src/inutilidades/timeline.json",
     "audio": "public/inutilidades/audio"
   },
-  "video": "controle-remoto",
-  "titulo": "Controle Remoto Universal de Verdade",
-  "episodio": 3,
+  "video": "guarda-chuva-peneira",
+  "titulo": "Guarda-Chuva Peneira",
+  "episodio": 4,
   "duracaoSegundos": 44,
   "pausas": {
     "entreCenas": 0.2,
     "final": 1.2
   },
   "musica": {
-    "bpm": 126,
-    "tom": -4
+    "bpm": 124,
+    "tom": -3
   },
   "voz": {
     "motor": "elevenlabs",
@@ -70,8 +70,8 @@
       "falas": [
         {
           "quem": "kuka",
-          "texto": "Pausei o rato.",
-          "pronuncia": "[deadpan] Pausei o rato."
+          "texto": "Choveu dentro do guarda-chuva.",
+          "pronuncia": "[deadpan] Choveu DENTRO do guarda-chuva."
         }
       ]
     },
@@ -80,13 +80,13 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Cansado de um controle remoto que só muda de canal?",
-          "pronuncia": "Cansado de um controle remoto que SÓ muda de canal?"
+          "texto": "Cansado de guarda-chuva que deixa a sua cabeça ABAFADA?",
+          "pronuncia": "Cansado de guarda-chuva que deixa a sua cabeça ABAFADA?"
         },
         {
           "quem": "doutor",
-          "texto": "E se a sua vida tivesse um botão de PAUSE?",
-          "pronuncia": "E se a sua VIDA tivesse um botão de PAUSE?"
+          "texto": "Sem ventilação nenhuma?!",
+          "pronuncia": "Sem ventilação NENHUMA?!"
         }
       ]
     },
@@ -100,8 +100,8 @@
         },
         {
           "quem": "doutor",
-          "texto": "Apresento o Controle Remoto Universal… de VERDADE!",
-          "pronuncia": "Apresento o CONTROLE REMOTO UNIVERSAL… de VERDADE!"
+          "texto": "Apresento o Guarda-Chuva Peneira!",
+          "pronuncia": "Apresento o GUARDA-CHUVA PENEIRA!"
         }
       ]
     },
@@ -110,14 +110,14 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Aperte PAUSE e o mundo PARA!",
-          "pronuncia": "Aperte PAUSE e o mundo… PARA!",
+          "texto": "São mil furinhos de ventilação!",
+          "pronuncia": "São MIL furinhos de ventilação!",
           "pausaDepois": 1.0
         },
         {
-          "quem": "kuka",
-          "texto": "E esse botão aqui?",
-          "pronuncia": "E esse botão aqui?"
+          "quem": "doutor",
+          "texto": "Banho e passeio ao mesmo tempo!",
+          "pronuncia": "[excited] Banho e passeio ao MESMO tempo!"
         }
       ]
     },
@@ -126,18 +126,18 @@
       "falas": [
         {
           "quem": "kuka",
-          "texto": "Eu pausei o rato, adiantei a segunda-feira…",
-          "pronuncia": "Eu pausei o rato, adiantei a segunda-feira…"
+          "texto": "Eu saí seco e cheguei lavado.",
+          "pronuncia": "Eu saí seco… e cheguei LAVADO."
         },
         {
           "quem": "kuka",
-          "texto": "…e ejetei o apresentador.",
-          "pronuncia": "[deadpan] …e ejetei o apresentador."
+          "texto": "Meu cabelo virou uma esponja.",
+          "pronuncia": "[deadpan] Meu cabelo virou uma esponja."
         },
         {
           "quem": "kuka",
-          "texto": "Melhor compra da minha vida!",
-          "pronuncia": "[happy] Melhor compra da minha vida!"
+          "texto": "Nunca economizei tanto chuveiro!",
+          "pronuncia": "[happy] Nunca economizei tanto CHUVEIRO!"
         }
       ]
     },
@@ -146,13 +146,13 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "De 999 por apenas 39,90!",
-          "pronuncia": "De novecentos e noventa e nove por apenas TRINTA E NOVE E NOVENTA!"
+          "texto": "De 999 por apenas 19,90!",
+          "pronuncia": "De novecentos e noventa e nove por apenas DEZENOVE E NOVENTA!"
         },
         {
           "quem": "doutor",
-          "texto": "E ligando AGORA, ganhe um controle pra controlar o controle!",
-          "pronuncia": "E ligando AGORA, ganhe um controle pra controlar o CONTROLE!"
+          "texto": "E ligando AGORA, ganhe um balde de brinde!",
+          "pronuncia": "E ligando AGORA, ganhe um BALDE de brinde!"
         },
         {
           "quem": "kuka",
@@ -171,8 +171,8 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Não aperte ejetar perto do apresentador. Pilhas não inclusas.",
-          "pronuncia": "Não aperte ejetar perto do apresentador. Pilhas não inclusas.",
+          "texto": "Não usar em dias de chuva. Nem de sol. Balde não segura chuva.",
+          "pronuncia": "Não usar em dias de chuva. Nem de sol. Balde não segura chuva.",
           "velocidade": 1.15
         }
       ]

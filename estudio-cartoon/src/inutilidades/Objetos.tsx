@@ -206,10 +206,10 @@ export const Explosao: React.FC<{ x: number; y: number; t: number; escala?: numb
 };
 
 /** Fumaça subindo (círculos cinza). */
-export const Fumaca: React.FC<{ x: number; y: number; n?: number; escala?: number }> = ({ x, y, n = 5, escala = 1 }) => {
+export const Fumaca: React.FC<{ x: number; y: number; n?: number; escala?: number; cor?: string }> = ({ x, y, n = 5, escala = 1, cor = "#8A8A99" }) => {
   const f = useCurrentFrame();
   return (
-    <g transform={`translate(${x} ${y}) scale(${escala})`} fill="#8A8A99" opacity={0.75}>
+    <g transform={`translate(${x} ${y}) scale(${escala})`} fill={cor} opacity={0.75}>
       {Array.from({ length: n }).map((_, i) => {
         const q = ((f + i * 11) % 50) / 50;
         return <circle key={i} cx={Math.sin(i * 2.1) * 120 + q * 40} cy={-q * 420} r={50 + q * 70} opacity={1 - q} />;
@@ -427,3 +427,99 @@ export const Confete: React.FC<{ n?: number }> = ({ n = 40 }) => {
     </g>
   );
 };
+
+/** Rua num dia cinzento: prédios, calçada e meio-fio. */
+export const Rua: React.FC<{ chuva?: boolean }> = ({ chuva = true }) => (
+  <g strokeLinejoin="round">
+    <rect width={1080} height={1920} fill={chuva ? "#8FA3B5" : "#9ED8FF"} />
+    <g stroke={TINTA} strokeWidth={8}>
+      {[
+        [-20, 360, 300, "#C9A27A"],
+        [260, 520, 260, "#E0B07A"],
+        [500, 300, 280, "#B88A6A"],
+        [760, 460, 340, "#D9BF92"],
+      ].map(([x, y, w, cor], i) => (
+        <g key={i}>
+          <rect x={x as number} y={y as number} width={w as number} height={1400 - (y as number)} fill={cor as string} />
+          {Array.from({ length: 6 }).map((_, r) =>
+            [0, 1].map((c) => <rect key={`${r}-${c}`} x={(x as number) + 40 + c * ((w as number) / 2)} y={(y as number) + 50 + r * 150} width={70} height={90} fill="#FFF3B0" strokeWidth={5} />),
+          )}
+        </g>
+      ))}
+    </g>
+    <rect y={1400} width={1080} height={120} fill="#B0B8C0" stroke={TINTA} strokeWidth={8} />
+    <rect y={1520} width={1080} height={400} fill="#5A6470" stroke={TINTA} strokeWidth={8} />
+    <path d="M60 1720 L260 1720 M420 1720 L620 1720 M780 1720 L980 1720" stroke="#E8E8E8" strokeWidth={18} />
+  </g>
+);
+
+/** Chuva: traços caindo na tela toda (ou numa faixa). */
+export const Chuva: React.FC<{ intensidade?: number; x0?: number; x1?: number; y1?: number }> = ({ intensidade = 1, x0 = 0, x1 = 1080, y1 = 1920 }) => {
+  const f = useCurrentFrame();
+  const n = Math.round(70 * intensidade);
+  return (
+    <g stroke="#CFEFFF" strokeWidth={7} strokeLinecap="round" opacity={0.85}>
+      {Array.from({ length: n }).map((_, i) => {
+        const x = x0 + ((i * 137) % Math.max(1, x1 - x0));
+        const y = (i * 251 + f * 42) % y1;
+        return <path key={i} d={`M${x} ${y} l-12 50`} />;
+      })}
+    </g>
+  );
+};
+
+/**
+ * Guarda-chuva. Origem = ponta de baixo do cabo (onde a mão segura). `peneira`: a cobertura é cheia de furos
+ * e, com `jorra`, a água passa direto pelos furinhos em filetes.
+ */
+export const GuardaChuva: React.FC<{ x: number; y: number; escala?: number; rot?: number; peneira?: boolean; jorra?: number; cor?: string }> = ({
+  x,
+  y,
+  escala = 1,
+  rot = 0,
+  peneira = false,
+  jorra = 0,
+  cor = "#E8282B",
+}) => {
+  const f = useCurrentFrame();
+  const furos: [number, number][] = [];
+  if (peneira) for (let r = 0; r < 3; r++) for (let c = -4 + r; c <= 4 - r; c++) furos.push([c * 52, -470 + r * 46 - Math.abs(c) * 6]);
+  return (
+    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round" strokeLinecap="round">
+      {/* filetes de água passando pelos furos */}
+      {peneira && jorra > 0 && (
+        <g stroke="#7FD3FF" strokeWidth={10} opacity={jorra}>
+          {furos.map(([fx, fy], i) => {
+            const q = ((f * 2 + i * 7) % 20) / 20;
+            return <path key={`j${i}`} d={`M${fx} ${fy + 20} L${fx - 6} ${fy + 120 + q * 60}`} />;
+          })}
+        </g>
+      )}
+      <path d="M0 0 L0 -560" fill="none" strokeWidth={14} />
+      <path d="M0 0 q -40 0 -40 -40" fill="none" strokeWidth={16} />
+      <path d="M-300 -470 Q 0 -760 300 -470 Q 250 -500 200 -470 Q 150 -500 100 -470 Q 50 -500 0 -470 Q -50 -500 -100 -470 Q -150 -500 -200 -470 Q -250 -500 -300 -470 Z" fill={cor} />
+      {peneira && (
+        <g fill="#BFE6F5" strokeWidth={4}>
+          {furos.map(([fx, fy], i) => (
+            <circle key={i} cx={fx} cy={fy - 60} r={13} />
+          ))}
+        </g>
+      )}
+      <circle cx={0} cy={-680} r={14} fill={TINTA} />
+    </g>
+  );
+};
+
+/** Poça d'água no chão. */
+export const Poca: React.FC<{ x: number; y: number; tam?: number }> = ({ x, y, tam = 1 }) => (
+  <ellipse cx={x} cy={y} rx={220 * tam} ry={40 * tam} fill="#7FD3FF" stroke={TINTA} strokeWidth={6} opacity={0.9} />
+);
+
+/** Balde (brinde). */
+export const Balde: React.FC<{ x: number; y: number; escala?: number }> = ({ x, y, escala = 1 }) => (
+  <g transform={`translate(${x} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
+    <path d="M-90 -170 L90 -170 L70 0 L-70 0 Z" fill="#3DA5FF" />
+    <path d="M-90 -170 Q 0 -280 90 -170" fill="none" strokeWidth={8} />
+    <ellipse cx={0} cy={-170} rx={90} ry={18} fill="#2B7FCC" />
+  </g>
+);

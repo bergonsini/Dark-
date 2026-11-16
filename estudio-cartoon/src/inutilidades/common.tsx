@@ -19,7 +19,7 @@ export const useCena = (scene: Scene) => {
 export const CenaTiming = createContext<{ len: number }>({ len: 1e9 });
 
 export type SfxNome =
-  | "whoosh" | "boom" | "pop" | "ding" | "sparkle" | "boing" | "click" | "riser" | "tada" | "ronco" | "borbulha" | "apito" | "tum" | "alarme" | "caixa" | "vhs" | "motor";
+  | "whoosh" | "boom" | "pop" | "ding" | "sparkle" | "boing" | "click" | "riser" | "tada" | "ronco" | "borbulha" | "apito" | "tum" | "alarme" | "caixa" | "vhs" | "motor" | "chuva";
 export const Sfx: React.FC<{ at: number; nome: SfxNome; vol?: number }> = ({ at, nome, vol = 0.6 }) => {
   const { len } = useContext(CenaTiming);
   const start = Math.max(0, Math.round(at));

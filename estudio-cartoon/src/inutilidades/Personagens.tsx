@@ -188,6 +188,8 @@ const POSES_KUKA: Record<string, { E: Pose2; D: Pose2 }> = {
   bracosPraCima: { E: { a1: -150, a2: -10 }, D: { a1: 150, a2: 10 } },
   telefone: { E: { a1: -25, a2: 10 }, D: { a1: 30, a2: 150 } },
   escovando: { E: { a1: -25, a2: 10 }, D: { a1: 200, a2: 30 } },
+  /** braço direito para cima segurando o cabo do guarda-chuva: a mão fica em (166, -691) */
+  guardaChuva: { E: { a1: -25, a2: 10 }, D: { a1: 170, a2: 20 } },
   /** braço direito esticado para a frente: a mão fica em (351, -477) — ali vai o controle remoto */
   controle: { E: { a1: -25, a2: 10 }, D: { a1: 60, a2: 60 } },
 };
@@ -213,12 +215,18 @@ export const SeuKuka: React.FC<{
   escova?: "normal" | "turbo" | "turboDesligada";
   /** tremedeira do corpo (px) */
   treme?: number;
-}> = ({ x, y, escala = 1, boca = 0, estado = "normal", pose = "parado", feliz = false, flip = false, banguela = false, espuma = 0, arrepiado = false, suor = false, escova, treme = 0 }) => {
+  /** encharcado: roupa mais escura e gotas pingando */
+  molhado?: boolean;
+  /** o black power encharcado vira uma ESPONJA (maior, com furinhos, pingando) */
+  esponja?: boolean;
+  /** cabeça abafada: vapor subindo */
+  abafado?: boolean;
+}> = ({ x, y, escala = 1, boca = 0, estado = "normal", pose = "parado", feliz = false, flip = false, banguela = false, espuma = 0, arrepiado = false, suor = false, escova, treme = 0, molhado = false, esponja = false, abafado = false }) => {
   const f = useCurrentFrame();
   const P = POSES_KUKA[pose];
   const tost = estado === "tostado";
   const PELE = tost ? "#B9805A" : "#E0A16E";
-  const CAMISA = tost ? "#3E8F52" : "#4FBF6A";
+  const CAMISA = tost ? "#3E8F52" : molhado ? "#33945A" : "#4FBF6A";
   const bob = Math.sin(f * 0.13 + 1) * 4;
   const pisca = piscar(f, 2);
   const triste = estado === "faminto";
@@ -247,7 +255,7 @@ export const SeuKuka: React.FC<{
         {/* cabeça */}
         <circle cx={0} cy={-740} r={170} fill={PELE} />
         {/* cabelo: black power volumoso (o "Beludo") — queimado vira carvão com fumaça */}
-        <g fill={tost ? "#2a2a2a" : "#3A2414"}>
+        <g fill={tost ? "#2a2a2a" : esponja ? "#5A4020" : "#3A2414"} transform={esponja ? "translate(0 -760) scale(1.3) translate(0 760)" : undefined}>
           {(arrepiado
             ? [
                 // soprado para trás (vento do motor): o volume vai para a esquerda e para cima, sem cobrir o rosto
@@ -274,6 +282,29 @@ export const SeuKuka: React.FC<{
             <circle key={i} cx={cx} cy={cy + (arrepiado ? Math.sin(f * 0.9 + i) * 3 : 0)} r={r} />
           ))}
         </g>
+        {esponja && (
+          <g fill="#2A1C0C" stroke="none" transform="translate(0 -760) scale(1.3) translate(0 760)">
+            {[[-140, -880], [-90, -940], [-20, -980], [60, -950], [130, -890], [-170, -800], [170, -810], [-50, -900], [40, -900], [100, -840], [-110, -850]].map(([cx, cy], i) => (
+              <ellipse key={i} cx={cx} cy={cy} rx={12} ry={9} />
+            ))}
+          </g>
+        )}
+        {(molhado || esponja) && (
+          <g fill="#7FD3FF" strokeWidth={4}>
+            {[[-200, -780], [-120, -700], [150, -760], [210, -820], [-60, -560], [90, -420], [-150, -330], [180, -300]].map(([cx, cy], i) => {
+              const q = ((f + i * 7) % 22) / 22;
+              return <path key={i} d={`M${cx} ${cy + q * 120} q 13 20 0 28 q -13 -8 0 -28 Z`} opacity={1 - q * 0.5} />;
+            })}
+          </g>
+        )}
+        {abafado && (
+          <g fill="none" stroke="#fff" strokeWidth={12} strokeLinecap="round">
+            {[0, 1, 2].map((i) => {
+              const q = ((f + i * 10) % 30) / 30;
+              return <path key={i} d={`M${-90 + i * 90} ${-990 - q * 110} q 22 -30 0 -60 q -22 -30 0 -60`} opacity={(1 - q) * 0.9} />;
+            })}
+          </g>
+        )}
         {arrepiado && (
           <g fill="none" stroke={TINTA} strokeWidth={8}>
             {[0, 1, 2].map((i) => {

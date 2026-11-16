@@ -2,6 +2,7 @@ import React from "react";
 import { CenaProps } from "./common";
 import * as controle from "./episodios/controle-remoto";
 import * as escova from "./episodios/escova-turbo";
+import * as guarda from "./episodios/guarda-chuva-peneira";
 import * as ratoeira from "./episodios/ratoeira-explosiva";
 
 export type Episodio = {
@@ -17,4 +18,5 @@ export const EPISODIOS: Record<string, Episodio> = {
   "ratoeira-explosiva": ratoeira.EPISODIO,
   "escova-turbo": escova.EPISODIO,
   "controle-remoto": controle.EPISODIO,
+  "guarda-chuva-peneira": guarda.EPISODIO,
 };
