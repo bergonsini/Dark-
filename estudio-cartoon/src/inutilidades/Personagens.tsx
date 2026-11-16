@@ -221,7 +221,11 @@ export const SeuKuka: React.FC<{
   esponja?: boolean;
   /** cabeça abafada: vapor subindo */
   abafado?: boolean;
-}> = ({ x, y, escala = 1, boca = 0, estado = "normal", pose = "parado", feliz = false, flip = false, banguela = false, espuma = 0, arrepiado = false, suor = false, escova, treme = 0, molhado = false, esponja = false, abafado = false }) => {
+  /** barba crescendo (0..1): a espera foi tão longa que nasceu barba */
+  barba?: number;
+  /** galos na cabeça + estrelinhas girando (bateu em algo) */
+  galos?: boolean;
+}> = ({ x, y, escala = 1, boca = 0, estado = "normal", pose = "parado", feliz = false, flip = false, banguela = false, espuma = 0, arrepiado = false, suor = false, escova, treme = 0, molhado = false, esponja = false, abafado = false, barba = 0, galos = false }) => {
   const f = useCurrentFrame();
   const P = POSES_KUKA[pose];
   const tost = estado === "tostado";
@@ -294,6 +298,31 @@ export const SeuKuka: React.FC<{
             {[[-200, -780], [-120, -700], [150, -760], [210, -820], [-60, -560], [90, -420], [-150, -330], [180, -300]].map(([cx, cy], i) => {
               const q = ((f + i * 7) % 22) / 22;
               return <path key={i} d={`M${cx} ${cy + q * 120} q 13 20 0 28 q -13 -8 0 -28 Z`} opacity={1 - q * 0.5} />;
+            })}
+          </g>
+        )}
+        {barba > 0 && (
+          <path
+            d={`M-120 -640 Q -130 ${-640 + 380 * barba} 0 ${-600 + 520 * barba} Q 130 ${-640 + 380 * barba} 120 -640 Q 60 -600 0 -610 Q -60 -600 -120 -640 Z`}
+            fill="#FAFAFA"
+            strokeWidth={8}
+          />
+        )}
+        {galos && (
+          <g>
+            <circle cx={-60} cy={-930} r={40} fill="#F28AA0" />
+            <circle cx={70} cy={-950} r={32} fill="#F28AA0" />
+            {[0, 1, 2].map((i) => {
+              const a = f * 0.25 + (i * Math.PI * 2) / 3;
+              return (
+                <path
+                  key={i}
+                  transform={`translate(${Math.cos(a) * 190} ${-1000 + Math.sin(a) * 40})`}
+                  d="M0 -26 L8 -8 L26 -6 L12 6 L16 26 L0 16 L-16 26 L-12 6 L-26 -6 L-8 -8 Z"
+                  fill="#FFD23F"
+                  strokeWidth={4}
+                />
+              );
             })}
           </g>
         )}

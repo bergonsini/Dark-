@@ -1,7 +1,7 @@
 import type { Episodio } from "../../episodios";
 import { Demonstracao, Depoimento, Gancho, Letrinhas, Oferta, Problema, Produto } from "./cenas";
 
-/** INUTILIDADES 0800 · Ep. 4 "Guarda-Chuva Peneira" */
+/** INUTILIDADES 0800 · Ep. 4 "Tapete Escorregador Turbo" */
 export const EPISODIO: Episodio = {
   cenas: [
     { id: "gancho", Comp: Gancho },

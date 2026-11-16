@@ -523,3 +523,66 @@ export const Balde: React.FC<{ x: number; y: number; escala?: number }> = ({ x, 
     <ellipse cx={0} cy={-170} rx={90} ry={18} fill="#2B7FCC" />
   </g>
 );
+
+/** O Tapete Escorregador Turbo: tapete vermelho com faixas de corrida e um propulsor a jato. `jato` 0..1 = fogo. */
+export const TapeteTurbo: React.FC<{ x: number; y: number; escala?: number; jato?: number; rot?: number }> = ({ x, y, escala = 1, jato = 0, rot = 0 }) => {
+  const f = useCurrentFrame();
+  const fl = jato * (1 + Math.sin(f * 2.1) * 0.2);
+  return (
+    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
+      {jato > 0 && (
+        <g>
+          <path d={`M-300 -40 L${-300 - 260 * fl} -10 L-300 20 Z`} fill="#FF8C1A" />
+          <path d={`M-300 -25 L${-300 - 160 * fl} -10 L-300 5 Z`} fill="#FFD23F" strokeWidth={4} />
+        </g>
+      )}
+      <rect x={-300} y={-60} width={40} height={100} rx={8} fill="#777" />
+      <path d="M-260 -50 L280 -50 L320 30 L-260 30 Z" fill="#E8282B" />
+      <path d="M-200 -50 L-140 30 M-90 -50 L-30 30 M20 -50 L80 30" stroke="#FFD23F" strokeWidth={18} />
+      <path d="M-260 -50 L280 -50 L320 30 L-260 30 Z" fill="none" />
+      <text x={160} y={8} textAnchor="middle" fontSize={44} fill="#fff" stroke={TINTA} strokeWidth={6} paintOrder="stroke" fontFamily="'Baloo 2'" fontWeight={800}>
+        TURBO
+      </text>
+      {[-230, 290].map((fx) => (
+        <path key={fx} d={`M${fx} 30 l-10 22 M${fx + 15} 30 l0 22 M${fx + 30} 30 l10 22`} strokeWidth={5} />
+      ))}
+    </g>
+  );
+};
+
+/** Parede com um buraco do FORMATO DO KUKA (cabeça black power + corpo redondo), com o céu do outro lado. */
+export const ParedeBuraco: React.FC<{ x: number; y: number; escala?: number; cor?: string }> = ({ x, y, escala = 1, cor = "#F4D9A8" }) => (
+  <g transform={`translate(${x} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
+    <mask id={`buraco-${x}-${y}`}>
+      <rect x={-600} y={-1300} width={1200} height={1400} fill="#fff" stroke="none" />
+      <g fill="#000" stroke="none">
+        <circle cx={0} cy={-760} r={200} />
+        <ellipse cx={0} cy={-420} rx={200} ry={185} />
+        <rect x={-110} y={-280} width={220} height={280} />
+        <rect x={-260} y={-560} width={520} height={90} rx={40} />
+      </g>
+    </mask>
+    <rect x={-600} y={-1300} width={1200} height={1400} fill="#8FD3FF" stroke="none" />
+    <ellipse cx={150} cy={-900} rx={140} ry={50} fill="#fff" stroke="none" />
+    <rect x={-600} y={-1300} width={1200} height={1400} fill={cor} mask={`url(#buraco-${x}-${y})`} />
+    <g fill="none" strokeWidth={6}>
+      <circle cx={0} cy={-760} r={200} />
+      <path d="M-200 -420 a200 185 0 0 0 400 0" />
+      <path d="M-120 -870 l-60 -80 M140 -800 l80 -40 M-210 -420 l-80 30 M120 -260 l60 60" />
+    </g>
+    <g fill="#ddd" strokeWidth={4}>
+      {[[-260, -60], [240, -30], [-120, 20], [180, 40]].map(([px, py], i) => (
+        <rect key={i} x={px} y={py} width={50} height={30} transform={`rotate(${i * 30} ${px} ${py})`} />
+      ))}
+    </g>
+  </g>
+);
+
+/** Capacete de obra (brinde). */
+export const Capacete: React.FC<{ x: number; y: number; escala?: number }> = ({ x, y, escala = 1 }) => (
+  <g transform={`translate(${x} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
+    <path d="M-120 0 Q -120 -150 0 -150 Q 120 -150 120 0 Z" fill="#FFC21A" />
+    <rect x={-160} y={-10} width={320} height={30} rx={12} fill="#FFC21A" />
+    <rect x={-14} y={-150} width={28} height={140} fill="#E5A800" strokeWidth={5} />
+  </g>
+);

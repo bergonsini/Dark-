@@ -5,8 +5,8 @@
     "timeline": "src/inutilidades/timeline.json",
     "audio": "public/inutilidades/audio"
   },
-  "video": "guarda-chuva-peneira",
-  "titulo": "Guarda-Chuva Peneira",
+  "video": "tapete-turbo",
+  "titulo": "Tapete Escorregador Turbo",
   "episodio": 4,
   "duracaoSegundos": 44,
   "pausas": {
@@ -14,8 +14,8 @@
     "final": 1.2
   },
   "musica": {
-    "bpm": 124,
-    "tom": -3
+    "bpm": 132,
+    "tom": -1
   },
   "voz": {
     "motor": "elevenlabs",
@@ -70,8 +70,8 @@
       "falas": [
         {
           "quem": "kuka",
-          "texto": "Choveu dentro do guarda-chuva.",
-          "pronuncia": "[deadpan] Choveu DENTRO do guarda-chuva."
+          "texto": "Fui na cozinha… e atravessei três paredes.",
+          "pronuncia": "[deadpan] Fui na cozinha… e atravessei TRÊS paredes."
         }
       ]
     },
@@ -80,13 +80,13 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Cansado de guarda-chuva que deixa a sua cabeça ABAFADA?",
-          "pronuncia": "Cansado de guarda-chuva que deixa a sua cabeça ABAFADA?"
+          "texto": "Cansado de levar CINCO segundos do quarto até a cozinha?",
+          "pronuncia": "Cansado de levar CINCO segundos do quarto até a cozinha?"
         },
         {
           "quem": "doutor",
-          "texto": "Sem ventilação nenhuma?!",
-          "pronuncia": "Sem ventilação NENHUMA?!"
+          "texto": "Uma eternidade!",
+          "pronuncia": "Uma ETERNIDADE!"
         }
       ]
     },
@@ -100,8 +100,8 @@
         },
         {
           "quem": "doutor",
-          "texto": "Apresento o Guarda-Chuva Peneira!",
-          "pronuncia": "Apresento o GUARDA-CHUVA PENEIRA!"
+          "texto": "Apresento o Tapete Escorregador Turbo!",
+          "pronuncia": "Apresento o TAPETE ESCORREGADOR TURBO!"
         }
       ]
     },
@@ -110,14 +110,14 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "São mil furinhos de ventilação!",
-          "pronuncia": "São MIL furinhos de ventilação!",
-          "pausaDepois": 1.0
+          "texto": "É só pisar no tapete e…",
+          "pronuncia": "É só pisar no tapete e…",
+          "pausaDepois": 1.2
         },
         {
           "quem": "doutor",
-          "texto": "Banho e passeio ao mesmo tempo!",
-          "pronuncia": "[excited] Banho e passeio ao MESMO tempo!"
+          "texto": "Cozinha em meio segundo!",
+          "pronuncia": "[excited] Cozinha em MEIO segundo!"
         }
       ]
     },
@@ -126,18 +126,18 @@
       "falas": [
         {
           "quem": "kuka",
-          "texto": "Eu saí seco e cheguei lavado.",
-          "pronuncia": "Eu saí seco… e cheguei LAVADO."
+          "texto": "Eu fui buscar um copo d'água…",
+          "pronuncia": "Eu fui buscar um copo d'água…"
         },
         {
           "quem": "kuka",
-          "texto": "Meu cabelo virou uma esponja.",
-          "pronuncia": "[deadpan] Meu cabelo virou uma esponja."
+          "texto": "…e parei no bairro vizinho.",
+          "pronuncia": "[deadpan] …e parei no bairro VIZINHO."
         },
         {
           "quem": "kuka",
-          "texto": "Nunca economizei tanto chuveiro!",
-          "pronuncia": "[happy] Nunca economizei tanto CHUVEIRO!"
+          "texto": "Mas cheguei rapidinho!",
+          "pronuncia": "[happy] Mas cheguei RAPIDINHO!"
         }
       ]
     },
@@ -146,13 +146,13 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "De 999 por apenas 19,90!",
-          "pronuncia": "De novecentos e noventa e nove por apenas DEZENOVE E NOVENTA!"
+          "texto": "De 999 por apenas 49,90!",
+          "pronuncia": "De novecentos e noventa e nove por apenas QUARENTA E NOVE E NOVENTA!"
         },
         {
           "quem": "doutor",
-          "texto": "E ligando AGORA, ganhe um balde de brinde!",
-          "pronuncia": "E ligando AGORA, ganhe um BALDE de brinde!"
+          "texto": "E ligando AGORA, ganhe um capacete de brinde!",
+          "pronuncia": "E ligando AGORA, ganhe um CAPACETE de brinde!"
         },
         {
           "quem": "kuka",
@@ -171,8 +171,8 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Não usar em dias de chuva. Nem de sol. Balde não segura chuva.",
-          "pronuncia": "Não usar em dias de chuva. Nem de sol. Balde não segura chuva.",
+          "texto": "Não pise no tapete. Paredes vendidas separadamente.",
+          "pronuncia": "Não pise no tapete. Paredes vendidas separadamente.",
           "velocidade": 1.15
         }
       ]
