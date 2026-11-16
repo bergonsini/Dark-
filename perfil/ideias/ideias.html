@@ -1,0 +1,64 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Bangers;src:url(Bangers.woff2)}
+@font-face{font-family:Baloo;src:url(Baloo2-800.woff2);font-weight:800}
+body{margin:0;background:#000}
+.card{width:1080px;height:1080px;position:relative;overflow:hidden}
+svg{display:block}
+</style></head><body>
+
+<!-- 1: Tito com selo 0800 -->
+<div class="card" id="c1"><svg width="1080" height="1080" viewBox="0 0 1080 1080">
+<defs><radialGradient id="g1"><stop offset="0" stop-color="#ffe066"/><stop offset="1" stop-color="#ff8500"/></radialGradient>
+<path id="arc1" d="M 140 540 A 400 400 0 0 1 940 540"/></defs>
+<rect width="1080" height="1080" fill="url(#g1)"/>
+<circle cx="540" cy="470" r="352" fill="#2a1608"/>
+<image href="tito.png" x="190" y="120" width="700" height="700" clip-path="circle(340px at 350px 350px)"/>
+<g transform="translate(540 905) rotate(-5)">
+ <rect x="-250" y="-75" width="500" height="150" rx="36" fill="#2a1608" transform="translate(0,14)"/>
+ <rect x="-250" y="-75" width="500" height="150" rx="36" fill="#e63946" stroke="#2a1608" stroke-width="12"/>
+ <text y="50" text-anchor="middle" font-family="Bangers" font-size="140" fill="#fff" stroke="#2a1608" stroke-width="10" paint-order="stroke" letter-spacing="8">0800</text>
+</g>
+</svg></div>
+
+<!-- 2: Tipográfico com selo circular -->
+<div class="card" id="c2"><svg width="1080" height="1080" viewBox="0 0 1080 1080">
+<defs><path id="ring" d="M 540 540 m -330 0 a 330 330 0 1 1 660 0 a 330 330 0 1 1 -660 0"/></defs>
+<rect width="1080" height="1080" fill="#3a0ca3"/>
+<circle cx="540" cy="540" r="430" fill="#ffd60a" stroke="#2a1608" stroke-width="16"/>
+<circle cx="540" cy="540" r="270" fill="#e63946" stroke="#2a1608" stroke-width="14"/>
+<text font-family="Baloo" font-weight="800" font-size="88" fill="#2a1608" letter-spacing="10"><textPath href="#ring" startOffset="0">INUTILIDADE • INUTILIDADE • INUTILIDADE •</textPath></text>
+<text x="540" y="605" text-anchor="middle" font-family="Bangers" font-size="215" fill="#fff" stroke="#2a1608" stroke-width="12" paint-order="stroke" letter-spacing="4" transform="rotate(-8 540 540)">0800</text>
+<text x="540" y="700" text-anchor="middle" font-family="Baloo" font-weight="800" font-size="52" fill="#ffd60a" transform="rotate(-8 540 540)">GRÁTIS</text>
+</svg></div>
+
+<!-- 3: Telefone retrô 0800 -->
+<div class="card" id="c3"><svg width="1080" height="1080" viewBox="0 0 1080 1080">
+<rect width="1080" height="1080" fill="#06d6a0"/>
+<g fill="#fff" opacity=".25">
+ <circle cx="140" cy="160" r="40"/><circle cx="950" cy="230" r="28"/><circle cx="900" cy="900" r="46"/><circle cx="170" cy="880" r="30"/>
+</g>
+<g transform="translate(540 590)" stroke="#2a1608" stroke-width="16" stroke-linejoin="round">
+ <path d="M -300 -40 Q -300 -230 0 -230 Q 300 -230 300 -40 L 230 -40 L 200 -120 L -200 -120 L -230 -40 Z" fill="#ef476f"/>
+ <path d="M -250 -40 L 250 -40 L 300 240 L -300 240 Z" fill="#ef476f"/>
+ <circle r="150" cy="100" fill="#fff"/>
+</g>
+<text x="540" y="245" text-anchor="middle" font-family="Bangers" font-size="190" fill="#ffd60a" stroke="#2a1608" stroke-width="14" paint-order="stroke" letter-spacing="6" transform="rotate(-5 540 200)">0800</text>
+<text x="540" y="712" text-anchor="middle" font-family="Baloo" font-weight="800" font-size="70" fill="#e63946">INÚTIL</text>
+</svg></div>
+
+<!-- 4: Lâmpada "ideia inútil" -->
+<div class="card" id="c4"><svg width="1080" height="1080" viewBox="0 0 1080 1080">
+<rect width="1080" height="1080" fill="#111827"/>
+<g stroke="#ffd60a" stroke-width="20" stroke-linecap="round" opacity=".9">
+ <line x1="540" y1="95" x2="540" y2="165"/><line x1="250" y1="210" x2="295" y2="260"/><line x1="830" y1="210" x2="785" y2="260"/><line x1="165" y1="470" x2="235" y2="470"/><line x1="915" y1="470" x2="845" y2="470"/>
+</g>
+<g stroke="#2a1608" stroke-width="16" stroke-linejoin="round">
+ <path d="M 540 210 C 360 210 290 380 330 490 C 365 590 430 620 440 720 L 640 720 C 650 620 715 590 750 490 C 790 380 720 210 540 210 Z" fill="#ffd60a"/>
+ <rect x="430" y="720" width="220" height="60" rx="14" fill="#adb5bd"/>
+ <rect x="440" y="780" width="200" height="60" rx="14" fill="#8d99ae"/>
+ <path d="M 470 840 L 610 840 L 580 890 L 500 890 Z" fill="#6c757d"/>
+</g>
+<text x="540" y="545" text-anchor="middle" font-family="Bangers" font-size="150" fill="#fff" stroke="#2a1608" stroke-width="12" paint-order="stroke" transform="rotate(-6 540 500)">0800</text>
+<text x="540" y="985" text-anchor="middle" font-family="Baloo" font-weight="800" font-size="62" fill="#fff" letter-spacing="4">INUTILIDADE</text>
+</svg></div>
+</body></html>
