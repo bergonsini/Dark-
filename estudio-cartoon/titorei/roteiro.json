@@ -32,132 +32,137 @@
     "eq": "highpass=f=120,equalizer=f=180:t=q:w=1.0:g=-4,equalizer=f=380:t=q:w=1.0:g=-4,equalizer=f=2800:t=q:w=1.0:g=4,equalizer=f=5500:t=q:w=1.4:g=3,treble=g=2.5:f=9000,deesser=i=0.3,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60:makeup=1.5"
   },
   "musica": {
-    "bpm": 124,
-    "tom": -5
+    "bpm": 118,
+    "tom": -7
   },
   "pausas": {
     "entreCenas": 0.25,
     "final": 1.4
   },
-  "video": "relogio-gerente",
-  "titulo": "O relógio gerente",
-  "episodio": 3,
+  "video": "planta-rainha",
+  "titulo": "A planta rainha",
+  "episodio": 4,
   "duracaoSegundos": 60,
   "cenas": [
     {
       "id": "gancho",
-      "capitulo": "A CAIXA ABRIU",
+      "capitulo": "QUEM LEVOU A COROA?",
       "falas": [
         {
-          "texto": "A caixa abriu… e era um relógio mandão.",
-          "pronuncia": "[whispers] A caixa abriu… [excited] e era um relógio MANDÃO.",
-          "aceleraLocal": 1.12
+          "texto": "A coroa sumiu… e o Tito virou detetive!",
+          "pronuncia": "A coroa SUMIU… e o Tito virou DETETIVE!"
         }
       ]
     },
     {
-      "id": "chefe",
-      "capitulo": "O NOVO GERENTE",
+      "id": "suspeitos",
+      "capitulo": "OS SUSPEITOS",
       "falas": [
         {
-          "texto": "Ele pulou na mesa e gritou: agora eu sou o gerente!",
-          "pronuncia": "Ele pulou na mesa e gritou: agora EU sou o gerente!"
+          "texto": "Suspeita número um: a geladeira.",
+          "pronuncia": "Suspeita número um: a GELADEIRA."
         },
         {
-          "texto": "O Tito ficou sem palavras… e sem cargo.",
-          "pronuncia": "[deadpan] O Tito ficou sem palavras… e sem CARGO."
+          "texto": "Ela jurou que estava gelando.",
+          "pronuncia": "[deadpan] Ela jurou que estava gelando."
+        },
+        {
+          "texto": "A nuvem tinha álibi: estava chovendo no banheiro.",
+          "pronuncia": "A nuvem tinha álibi: estava chovendo no BANHEIRO."
+        },
+        {
+          "texto": "E o relógio? Dormindo. Roncando.",
+          "pronuncia": "E o relógio? Dormindo. [deadpan] Roncando."
         }
       ]
     },
     {
-      "id": "horarios",
-      "capitulo": "QUADRO DE HORÁRIOS",
+      "id": "capivara",
+      "capitulo": "DETETIVE CAPIVARA",
       "falas": [
         {
-          "texto": "Fez um quadro de horários pra todo mundo.",
-          "pronuncia": "Fez um quadro de horários pra todo mundo."
+          "texto": "A capivara ajudou na investigação…",
+          "pronuncia": "A capivara ajudou na investigação…"
         },
         {
-          "texto": "Geladeira: gelar às oito.",
-          "pronuncia": "Geladeira: gelar às oito."
+          "texto": "a um centímetro por hora.",
+          "pronuncia": "[deadpan] a UM centímetro por hora."
         },
         {
-          "texto": "Nuvem: chover às três.",
-          "pronuncia": "Nuvem: chover às três."
-        },
-        {
-          "texto": "Tito: ser rei só no fim de semana.",
-          "pronuncia": "Tito: ser rei só no fim de semana."
-        },
-        {
-          "texto": "Capivara: chegar no horário.",
-          "pronuncia": "Capivara: chegar no horário."
-        },
-        {
-          "texto": "Isso nunca vai acontecer.",
-          "pronuncia": "[deadpan] Isso nunca vai acontecer."
+          "texto": "Achou a primeira pista… semana que vem.",
+          "pronuncia": "Achou a primeira pista… [deadpan] semana que vem."
         }
       ]
     },
     {
-      "id": "turbo",
-      "capitulo": "MODO TURBO",
+      "id": "pegadas",
+      "capitulo": "AS PEGADINHAS",
       "falas": [
         {
-          "texto": "Pra ninguém se atrasar, ele acelerou o tempo.",
-          "pronuncia": "[excited] Pra ninguém se atrasar, ele ACELEROU o tempo."
+          "texto": "Aí o Tito olhou as pegadinhas de perto…",
+          "pronuncia": "Aí o Tito olhou as pegadinhas de perto…"
         },
         {
-          "texto": "A nuvem choveu em câmera rápida,",
-          "pronuncia": "A nuvem choveu em câmera rápida,"
-        },
-        {
-          "texto": "o leite envelheceu e virou queijo,",
-          "pronuncia": "[laughs] o leite envelheceu e virou QUEIJO,"
-        },
-        {
-          "texto": "e a capivara, pela primeira vez na vida, correu.",
-          "pronuncia": "e a capivara, pela primeira vez na vida… CORREU."
+          "texto": "e elas eram de raiz!",
+          "pronuncia": "[excited] e elas eram de RAIZ!"
         }
       ]
     },
     {
-      "id": "soneca",
-      "capitulo": "RELÓGIO SUPERAQUECIDO",
+      "id": "culpada",
+      "capitulo": "A RAINHA PLANTA",
       "falas": [
         {
-          "texto": "Tanto trabalho que o relógio superaqueceu",
-          "pronuncia": "Tanto trabalho que o relógio superaqueceu"
+          "texto": "Era a planta!",
+          "pronuncia": "Era a PLANTA!"
         },
         {
-          "texto": "e começou a apitar sem parar.",
-          "pronuncia": "e começou a apitar sem parar."
+          "texto": "Ela tinha pedido aumento e ninguém deu.",
+          "pronuncia": "Ela tinha pedido aumento… e ninguém deu."
         },
         {
-          "texto": "O Tito apertou o botão de soneca…",
-          "pronuncia": "O Tito apertou o botão de soneca…"
+          "texto": "Então se promoveu sozinha: rainha da cozinha!",
+          "pronuncia": "Então se promoveu sozinha: [excited] RAINHA DA COZINHA!"
+        }
+      ]
+    },
+    {
+      "id": "negociacao",
+      "capitulo": "NEGOCIAÇÃO",
+      "falas": [
+        {
+          "texto": "O Tito ofereceu adubo, água e férias.",
+          "pronuncia": "O Tito ofereceu adubo, água e férias."
         },
         {
-          "texto": "e o gerente dormiu na hora.",
-          "pronuncia": "[laughs] e o gerente dormiu na HORA."
+          "texto": "Ela exigiu vaso maior, sol de praia e crachá.",
+          "pronuncia": "Ela exigiu vaso MAIOR, sol de praia e CRACHÁ."
+        },
+        {
+          "texto": "Ela aceitou o adubo… e ficou com a coroa.",
+          "pronuncia": "Ela aceitou o adubo… [deadpan] e ficou com a coroa."
         }
       ]
     },
     {
       "id": "final",
-      "capitulo": "",
+      "capitulo": "ELEIÇÃO!",
       "falas": [
         {
-          "texto": "Todo mundo comemorou… até o Tito perceber",
-          "pronuncia": "Todo mundo comemorou… até o Tito perceber"
+          "texto": "Agora vai ter eleição pra rei da cozinha.",
+          "pronuncia": "Agora vai ter ELEIÇÃO pra rei da cozinha."
         },
         {
-          "texto": "que a coroa dele tinha sumido!",
-          "pronuncia": "[surprised] que a COROA dele tinha sumido!"
+          "texto": "E o candidato surpresa acabou de chegar.",
+          "pronuncia": "E o candidato surpresa… acabou de chegar."
         },
         {
-          "texto": "Quem levou? Descobre no próximo episódio!",
-          "pronuncia": "[whispers] Quem levou? [excited] Descobre no PRÓXIMO episódio!"
+          "texto": "Ele tem uma coroa ainda maior.",
+          "pronuncia": "Ele tem uma coroa… ainda MAIOR."
+        },
+        {
+          "texto": "Quem é? Descobre no próximo episódio!",
+          "pronuncia": "Quem é? Descobre no próximo episódio!"
         }
       ]
     }

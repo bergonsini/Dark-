@@ -103,24 +103,98 @@ export const ArcoIris: React.FC<{ pos?: V3; raio?: number; mostra?: number; rotY
 };
 
 /** Vaso com planta que cresce (0..1); pode segurar uma plaquinha. */
-export const Vaso: React.FC<{ pos?: V3; cresce?: number; rosto?: boolean; expr?: "feliz" | "triste" | "chocado" }> = ({ pos = [0, 0, 0], cresce = 0, rosto = true, expr = "feliz" }) => {
+export const Vaso: React.FC<{
+  pos?: V3;
+  cresce?: number;
+  rosto?: boolean;
+  expr?: "feliz" | "triste" | "chocado" | "bravo" | "zen" | "nervoso";
+  /** fala (0..1) */
+  boca?: number;
+  /** usa a coroa do Tito (ep. 4: a RAINHA PLANTA) */
+  coroa?: boolean;
+  escala?: number;
+  /** tamanho do vaso (exigiu "vaso maior") */
+  vasoMaior?: number;
+  pulo?: number;
+}> = ({ pos = [0, 0, 0], cresce = 0, rosto = true, expr = "feliz", boca = 0, coroa = false, escala = 1, vasoMaior = 1, pulo = 0 }) => {
   const f = useCurrentFrame();
   const h = 0.3 + cresce * 1.5;
   const sw = Math.sin(f * 0.1) * 0.05;
+  const R = 0.16 + cresce * 0.12;
   return (
-    <group position={pos}>
-      <Cilindro p={[0, 0.2, 0]} r1={0.22} r2={0.28} h={0.4} lados={7} c="#C9683A" />
+    <group position={[pos[0], pos[1] + pulo, pos[2]]} scale={escala}>
+      {coroa && (
+        <group rotation={[0, 0, sw]}>
+          <Coroa p={[0, 0.45 + h + R * 0.85, 0]} escala={R / 0.3} brilho />
+        </group>
+      )}
+      <group scale={[vasoMaior, 1, vasoMaior]}>
+        <Cilindro p={[0, 0.2, 0]} r1={0.22} r2={0.28} h={0.4} lados={7} c="#C9683A" />
+      </group>
       <group rotation={[0, 0, sw]}>
         <Cilindro p={[0, 0.4 + h / 2, 0]} r1={0.04} h={h} lados={5} c="#2FA36B" />
         {[0.3, 0.55, 0.8].map((k, i) => (
           <Cone key={i} p={[(i % 2 ? 1 : -1) * 0.15, 0.4 + h * k, 0]} r={[0, 0, (i % 2 ? -1 : 1) * 1.1]} raio={0.1 + cresce * 0.06} h={0.3 + cresce * 0.15} lados={4} c="#3DDC84" />
         ))}
         <Bola p={[0, 0.45 + h, 0]} raio={0.16 + cresce * 0.12} d={1} c="#FF7AB6" />
-        {rosto && <Rostinho p={[0, 0.45 + h, 0.16 + cresce * 0.12]} s={0.45 + cresce * 0.3} expr={expr} seed={17} />}
+        {rosto && <Rostinho p={[0, 0.45 + h, 0.16 + cresce * 0.12]} s={0.45 + cresce * 0.3} expr={expr} boca={boca} seed={17} />}
       </group>
     </group>
   );
 };
+
+/** A COROA dourada do Tito, avulsa (mesmo desenho da que fica na cabeça dele). Base em p. */
+export const Coroa: React.FC<{ p?: V3; escala?: number; brilho?: boolean; rot?: V3 }> = ({ p = [0, 0, 0], escala = 1, brilho = false, rot = [0, 0, 0] }) => {
+  const f = useCurrentFrame();
+  return (
+    <group position={p} scale={escala} rotation={rot}>
+      <Cilindro r1={0.27} h={0.16} lados={7} c={P.ouro} e={brilho ? (Math.sin(f * 0.3) > 0 ? "#7A5200" : "#3A2800") : undefined} />
+      {Array.from({ length: 7 }).map((_, i) => {
+        const a = (i / 7) * Math.PI * 2;
+        return <Cone key={i} p={[Math.cos(a) * 0.24, 0.15, Math.sin(a) * 0.24]} raio={0.06} h={0.16} lados={4} c={P.ouro} />;
+      })}
+      <mesh position={[0, 0.02, 0.27]}>
+        <octahedronGeometry args={[0.055, 0]} />
+        <meshStandardMaterial color={P.rubi} flatShading />
+      </mesh>
+    </group>
+  );
+};
+
+/** Lupa de detetive (anel + vidro + cabo). Centro do vidro em p. */
+export const Lupa: React.FC<{ p?: V3; escala?: number; rot?: V3 }> = ({ p = [0, 0, 0], escala = 1, rot = [0, 0, 0] }) => (
+  <group position={p} scale={escala} rotation={rot}>
+    <mesh>
+      <torusGeometry args={[0.16, 0.03, 6, 14]} />
+      <meshStandardMaterial color="#5A3A22" flatShading />
+    </mesh>
+    <mesh>
+      <circleGeometry args={[0.15, 14]} />
+      <meshStandardMaterial color="#BFE6FF" transparent opacity={0.45} side={2} />
+    </mesh>
+    <Cilindro p={[0, -0.3, 0]} r1={0.035} h={0.3} lados={6} c="#2B1A12" />
+  </group>
+);
+
+/** Urna de votação (eleição!). */
+export const Urna: React.FC<{ pos?: V3; escala?: number }> = ({ pos = [0, 0, 0], escala = 1 }) => (
+  <group position={pos} scale={escala}>
+    <Caixa p={[0, 0.35, 0]} s={[0.7, 0.7, 0.6]} c={P.branco} />
+    <Caixa p={[0, 0.71, 0]} s={[0.36, 0.02, 0.06]} c={P.preto} />
+    <Caixa p={[0, 0.4, 0.31]} s={[0.5, 0.18, 0.01]} c="#2E6BE6" />
+  </group>
+);
+
+/** Silhueta misteriosa (o candidato surpresa): sombra preta com uma coroa ENORME brilhando. */
+export const Silhueta: React.FC<{ pos?: V3; escala?: number }> = ({ pos = [0, 0, 0], escala = 1 }) => (
+  <group position={pos} scale={escala}>
+    <Caixa p={[0, 0.75, 0]} s={[0.7, 1.3, 0.4]} c="#0D0B14" />
+    <Bola p={[0, 1.75, 0]} raio={0.45} d={1} c="#0D0B14" />
+    <Bola p={[-0.15, 1.8, 0.38]} raio={0.06} d={0} c="#FFF59A" />
+    <Bola p={[0.15, 1.8, 0.38]} raio={0.06} d={0} c="#FFF59A" />
+    <Coroa p={[0, 2.15, 0]} escala={2.2} brilho />
+  </group>
+);
 
 /** Nota musical 3D (bolinha + haste + bandeirinha) que sobe e balança. */
 export const NotaMusical: React.FC<{ pos: V3; at?: number; cor?: string }> = ({ pos, at = 0, cor = "#1F1B2E" }) => {
