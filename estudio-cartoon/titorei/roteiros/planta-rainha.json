@@ -1,0 +1,171 @@
+{
+  "projeto": "titorei",
+  "fps": 30,
+  "saida": {
+    "timeline": "src/titorei/timeline.json",
+    "audio": "public/titorei/audio"
+  },
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "wTABSOIKENuRDeLiHYDF",
+      "nome": "Jonas (pt-BR, dinâmico, Titorei)",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.35,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências",
+    "eq": "highpass=f=120,equalizer=f=180:t=q:w=1.0:g=-4,equalizer=f=380:t=q:w=1.0:g=-4,equalizer=f=2800:t=q:w=1.0:g=4,equalizer=f=5500:t=q:w=1.4:g=3,treble=g=2.5:f=9000,deesser=i=0.3,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60:makeup=1.5"
+  },
+  "musica": {
+    "bpm": 118,
+    "tom": -7
+  },
+  "pausas": {
+    "entreCenas": 0.25,
+    "final": 1.4
+  },
+  "video": "planta-rainha",
+  "titulo": "A planta rainha",
+  "episodio": 4,
+  "duracaoSegundos": 60,
+  "cenas": [
+    {
+      "id": "gancho",
+      "capitulo": "QUEM LEVOU A COROA?",
+      "falas": [
+        {
+          "texto": "A coroa sumiu… e o Tito virou detetive!",
+          "pronuncia": "A coroa SUMIU… e o Tito virou DETETIVE!",
+          "aceleraLocal": 1.12
+        }
+      ]
+    },
+    {
+      "id": "suspeitos",
+      "capitulo": "OS SUSPEITOS",
+      "falas": [
+        {
+          "texto": "Suspeita número um: a geladeira.",
+          "pronuncia": "Suspeita número um: a GELADEIRA."
+        },
+        {
+          "texto": "Ela jurou que estava gelando.",
+          "pronuncia": "[deadpan] Ela jurou que estava gelando."
+        },
+        {
+          "texto": "A nuvem tinha álibi: estava chovendo no banheiro.",
+          "pronuncia": "A nuvem tinha álibi: estava chovendo no BANHEIRO."
+        },
+        {
+          "texto": "E o relógio? Dormindo. Roncando.",
+          "pronuncia": "E o relógio? Dormindo. [deadpan] Roncando."
+        }
+      ]
+    },
+    {
+      "id": "capivara",
+      "capitulo": "DETETIVE CAPIVARA",
+      "falas": [
+        {
+          "texto": "A capivara ajudou na investigação…",
+          "pronuncia": "A capivara ajudou na investigação…"
+        },
+        {
+          "texto": "a um centímetro por hora.",
+          "pronuncia": "[deadpan] a UM centímetro por hora."
+        },
+        {
+          "texto": "Achou a primeira pista… semana que vem.",
+          "pronuncia": "Achou a primeira pista… [deadpan] semana que vem."
+        }
+      ]
+    },
+    {
+      "id": "pegadas",
+      "capitulo": "AS PEGADINHAS",
+      "falas": [
+        {
+          "texto": "Aí o Tito olhou as pegadinhas de perto…",
+          "pronuncia": "Aí o Tito olhou as pegadinhas de perto…"
+        },
+        {
+          "texto": "e elas eram de raiz!",
+          "pronuncia": "[excited] e elas eram de RAIZ!"
+        }
+      ]
+    },
+    {
+      "id": "culpada",
+      "capitulo": "A RAINHA PLANTA",
+      "falas": [
+        {
+          "texto": "Era a planta!",
+          "pronuncia": "Era a PLANTA!"
+        },
+        {
+          "texto": "Ela tinha pedido aumento e ninguém deu.",
+          "pronuncia": "Ela tinha pedido aumento… e ninguém deu."
+        },
+        {
+          "texto": "Então se promoveu sozinha: rainha da cozinha!",
+          "pronuncia": "Então se promoveu sozinha: [excited] RAINHA DA COZINHA!"
+        }
+      ]
+    },
+    {
+      "id": "negociacao",
+      "capitulo": "NEGOCIAÇÃO",
+      "falas": [
+        {
+          "texto": "O Tito ofereceu adubo, água e férias.",
+          "pronuncia": "O Tito ofereceu adubo, água e férias."
+        },
+        {
+          "texto": "Ela exigiu vaso maior, sol de praia e crachá.",
+          "pronuncia": "Ela exigiu vaso MAIOR, sol de praia e CRACHÁ."
+        },
+        {
+          "texto": "Ela aceitou o adubo… e ficou com a coroa.",
+          "pronuncia": "Ela aceitou o adubo… [deadpan] e ficou com a coroa."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "capitulo": "ELEIÇÃO!",
+      "falas": [
+        {
+          "texto": "Agora vai ter eleição pra rei da cozinha.",
+          "pronuncia": "Agora vai ter ELEIÇÃO pra rei da cozinha."
+        },
+        {
+          "texto": "E o candidato surpresa acabou de chegar.",
+          "pronuncia": "E o candidato surpresa… acabou de chegar."
+        },
+        {
+          "texto": "Ele tem uma coroa ainda maior.",
+          "pronuncia": "Ele tem uma coroa… ainda MAIOR."
+        },
+        {
+          "texto": "Quem é? Descobre no próximo episódio!",
+          "pronuncia": "Quem é? Descobre no próximo episódio!"
+        }
+      ]
+    }
+  ]
+}
