@@ -16,9 +16,10 @@ Loja de televendas fictícia. Comerciais em 2D + VHS, 30–45 s.
 | 1 | ratoeira-explosiva | Ratoeira Explosiva 3000 | de R$ 999 por R$ 19,90 (+1 grátis) | 0800-BUM-BUM | 1 → 3 (quis duas) |
 | 2 | escova-turbo | Escova de Dentes Turbo V8 | de R$ 999 por R$ 29,90 (+ fio dental motorizado) | 0800-VRUM-VRUM | 4 → 6 ("Manda duas!"); ficou banguela |
 | 3 | controle-remoto | Controle Remoto Universal de Verdade | de R$ 999 por R$ 39,90 (+ controle do controle) | 0800-PAUSE | 7 → 9 ("Manda dois!"); pausou o rato e EJETOU o Doutor |
+| 4 | tapete-turbo | Tapete Escorregador Turbo | de R$ 999 por R$ 49,90 (+ capacete) | 0800-ZUUUM | 10 → 12 ("Manda dois!"); atravessou 3 paredes e parou no bairro vizinho |
 
 ## Ideias na fila (lista aprovada pelo usuário; ✅ = já virou vídeo)
-- **Casa:** Guarda-chuva de Peneira · Travesseiro de Pedra · Ventilador Reverso · Cortina de Vidro Transparente · Tapete Escorregador Turbo ·
+- **Casa:** ~~Guarda-chuva de Peneira~~ (rascunho feito e descartado: o usuário não gostou do problema/solução "cabeça abafada") · Travesseiro de Pedra · Ventilador Reverso · Cortina de Vidro Transparente · ✅ Tapete Escorregador Turbo ·
   Lâmpada que Apaga · Porta Giratória Doméstica 2000 · Cama Elástica de Teto
 - **Cozinha:** Pipoca Pré-Mastigada · Garrafa de Água Vazia · Panela Antiaderente de Tudo · Liquidificador Sem Tampa Pro Max ·
   Geladeira Aquecida · Garfo de Sopa · Torradeira Lança-Pão 3000
@@ -28,3 +29,6 @@ Loja de televendas fictícia. Comerciais em 2D + VHS, 30–45 s.
 - **Transporte e lazer:** Sapato com Rodinha na Ponta · Kit Escada de 1 Degrau · Bicicleta Quadrada · Boia de Chumbo · Paraquedas de Abrir no Chão · Pipa de Concreto
 - **Pets e jardim:** Coleira para Peixe · ✅ Ratoeira Explosiva 3000 · Seguro contra a Ratoeira Explosiva · Regador de Fogo · Grama Sintética de Plantar
 - **Especiais:** Kit "Tudo que o Kuka Comprou" · Garantia Estendida de 5 Minutos · O Próprio Comercial
+
+## Lições
+- O PROBLEMA precisa ser exagerado e reconhecível (ex.: "5 segundos até a cozinha = eternidade") e a SOLUÇÃO tem que ser absurda e "funcionar" de um jeito desastroso. "Ventilação no guarda-chuva" ficou fraco.

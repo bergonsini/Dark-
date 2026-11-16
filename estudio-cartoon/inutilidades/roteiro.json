@@ -71,7 +71,8 @@
         {
           "quem": "kuka",
           "texto": "Fui na cozinha… e atravessei três paredes.",
-          "pronuncia": "[deadpan] Fui na cozinha… e atravessei TRÊS paredes."
+          "pronuncia": "[deadpan] Fui na cozinha… e atravessei TRÊS paredes.",
+          "aceleraLocal": 1.12
         }
       ]
     },
