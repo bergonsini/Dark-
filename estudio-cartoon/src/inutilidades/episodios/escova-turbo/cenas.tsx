@@ -131,7 +131,7 @@ export const Demonstracao: React.FC<CenaProps> = ({ scene }) => {
       {f >= vrum && f < l1 && <Onomatopeia texto="VRUUUUM!" at={vrum} dur={l1 - vrum} x={540} y={430} tam={140} cor="#FF8C1A" />}
       <Selo texto={"BRANCO\n100%*"} at={um} x={680} y={330} cor="#22A447" />
       <Sfx at={cordinha} nome="whoosh" vol={0.35} />
-      <Sfx at={vrum} nome="motor" vol={0.7} />
+      <Sfx at={vrum} nome="motor" vol={0.5} />
       <Sfx at={vrum + 8} nome="pop" vol={0.4} />
       <Sfx at={vrum + 12} nome="pop" vol={0.4} />
       <Sfx at={vrum + 16} nome="pop" vol={0.4} />
