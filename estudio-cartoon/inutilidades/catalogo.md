@@ -6,6 +6,9 @@ Loja de televendas fictícia. Comerciais em 2D + VHS, 30–45 s.
 - **Doutor Oferta** — apresentador (voz Carlos).
 - **Seu Kuka Beludo** — cliente fiel que compra tudo e se dá mal (voz Silas). Contador "produtos comprados" sobe a cada vídeo.
   Piada recorrente: sempre pede DUAS ("Eu quero duas!", "Manda duas!"). Desde o ep. 2 está BANGUELA (`banguela`).
+- **Dona Cleide** — cliente nova (ep. 5), cabelo laranja volumoso com coque, vestido roxo de bolinhas, brincos dourados, batom.
+  Voz **Raquel** (ElevenLabs `CS2gH5fPqUCmkVNpHsy4`; afinação nenhuma). Componente `DonaCleide` (poses: parado, boca, halter,
+  bracosPraCima, telefone; expr: feliz, triste, surpresa, assustada). Na Pílula Pena perdeu TODO o peso e saiu flutuando.
 - **O rato** — participação de vez em quando (voz Silas afinada). Ep. 1: almoçando na mesa, "Faltou sal."; no fim, "Rato não incluso".
   Ep. 3: congelado no ar pelo PAUSE.
 - **Doutor Oferta** pode se dar mal também: ep. 3 foi ejetado do comercial (volta com `curativo`).
@@ -17,6 +20,7 @@ Loja de televendas fictícia. Comerciais em 2D + VHS, 30–45 s.
 | 2 | escova-turbo | Escova de Dentes Turbo V8 | de R$ 999 por R$ 29,90 (+ fio dental motorizado) | 0800-VRUM-VRUM | 4 → 6 ("Manda duas!"); ficou banguela |
 | 3 | controle-remoto | Controle Remoto Universal de Verdade | de R$ 999 por R$ 39,90 (+ controle do controle) | 0800-PAUSE | 7 → 9 ("Manda dois!"); pausou o rato e EJETOU o Doutor |
 | 4 | tapete-turbo | Tapete Escorregador Turbo | de R$ 999 por R$ 49,90 (+ capacete) | 0800-ZUUUM | 10 → 12 ("Manda dois!"); atravessou 3 paredes e parou no bairro vizinho |
+| 5 | pilula-pena | Pílula Pena | de R$ 999 por R$ 39,90 (+ tijolo pra voltar pro chão) | 0800-LEVINHA | Kuka 14 (flutuando: "Manda DOIS!"); estreia da Dona Cleide |
 
 ## Ideias na fila (lista aprovada pelo usuário; ✅ = já virou vídeo)
 - **Casa:** ~~Guarda-chuva de Peneira~~ (rascunho feito e descartado: o usuário não gostou do problema/solução "cabeça abafada") · Travesseiro de Pedra · Ventilador Reverso · Cortina de Vidro Transparente · ✅ Tapete Escorregador Turbo ·
@@ -32,3 +36,6 @@ Loja de televendas fictícia. Comerciais em 2D + VHS, 30–45 s.
 
 ## Lições
 - O PROBLEMA precisa ser exagerado e reconhecível (ex.: "5 segundos até a cozinha = eternidade") e a SOLUÇÃO tem que ser absurda e "funcionar" de um jeito desastroso. "Ventilação no guarda-chuva" ficou fraco.
+- FORMATO CURTO (pedido no ep. 5): sem gancho separado e sem depoimento — começa direto no PROBLEMA (que já serve de gancho).
+- Gancho entre comerciais: a PÍLULA CHUMBO foi anunciada "no próximo comercial".
+- Piada sobre peso: a graça é LITERAL (perder o peso = flutuar), nunca sobre o corpo de ninguém.

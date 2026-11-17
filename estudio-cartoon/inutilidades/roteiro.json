@@ -8,7 +8,7 @@
   "video": "pilula-pena",
   "titulo": "Pílula Pena",
   "episodio": 5,
-  "duracaoSegundos": 45,
+  "duracaoSegundos": 48,
   "pausas": {
     "entreCenas": 0.2,
     "final": 1.2
@@ -82,17 +82,20 @@
         {
           "quem": "doutor",
           "texto": "Cansada de começar a dieta na segunda…",
-          "pronuncia": "Cansada de começar a dieta na SEGUNDA…"
+          "pronuncia": "Cansada de começar a dieta na SEGUNDA…",
+          "aceleraLocal": 1.1
         },
         {
           "quem": "doutor",
           "texto": "e desistir na segunda à tarde?",
-          "pronuncia": "e desistir na segunda à TARDE?"
+          "pronuncia": "e desistir na segunda à TARDE?",
+          "aceleraLocal": 1.1
         },
         {
           "quem": "doutor",
           "texto": "Quer perder peso sem esforço nenhum?",
-          "pronuncia": "Quer perder peso SEM ESFORÇO nenhum?"
+          "pronuncia": "Quer perder peso SEM ESFORÇO nenhum?",
+          "aceleraLocal": 1.1
         }
       ]
     },
@@ -102,12 +105,14 @@
         {
           "quem": "doutor",
           "texto": "Seus problemas ACABARAM!",
-          "pronuncia": "[excited] Seus problemas ACABARAM!"
+          "pronuncia": "[excited] Seus problemas ACABARAM!",
+          "aceleraLocal": 1.1
         },
         {
           "quem": "doutor",
           "texto": "Apresento a Pílula Pena!",
-          "pronuncia": "Apresento a PÍLULA PENA!"
+          "pronuncia": "Apresento a PÍLULA PENA!",
+          "aceleraLocal": 1.1
         }
       ]
     },
@@ -118,7 +123,8 @@
           "quem": "doutor",
           "texto": "Uma pílula e você perde todo o peso em cinco segundos!",
           "pronuncia": "Uma pílula… e você perde TODO o peso em cinco segundos!",
-          "pausaDepois": 1.2
+          "pausaDepois": 0.9,
+          "aceleraLocal": 1.1
         },
         {
           "quem": "cleide",
@@ -128,12 +134,14 @@
         {
           "quem": "doutor",
           "texto": "Calma, eu seguro!",
-          "pronuncia": "Calma, eu SEGURO!"
+          "pronuncia": "Calma, eu SEGURO!",
+          "aceleraLocal": 1.1
         },
         {
           "quem": "doutor",
           "texto": "Reparem: zero esforço… e zero chão!",
-          "pronuncia": "[excited] Reparem: ZERO esforço… e ZERO chão!"
+          "pronuncia": "[excited] Reparem: ZERO esforço… e ZERO chão!",
+          "aceleraLocal": 1.1
         },
         {
           "quem": "cleide",
@@ -148,23 +156,26 @@
         {
           "quem": "doutor",
           "texto": "De 999 por apenas 39,90!",
-          "pronuncia": "De novecentos e noventa e nove por apenas TRINTA E NOVE E NOVENTA!"
+          "pronuncia": "De novecentos e noventa e nove por apenas TRINTA E NOVE E NOVENTA!",
+          "aceleraLocal": 1.1
         },
         {
           "quem": "doutor",
           "texto": "E ligando AGORA, ganhe um tijolo de brinde, pra voltar pro chão!",
-          "pronuncia": "E ligando AGORA, ganhe um TIJOLO de brinde, pra voltar pro chão!"
+          "pronuncia": "E ligando AGORA, ganhe um TIJOLO de brinde, pra voltar pro chão!",
+          "aceleraLocal": 1.1
         },
         {
           "quem": "cleide",
           "texto": "Manda dois tijolos!",
           "pronuncia": "[excited] Manda DOIS tijolos!",
-          "pausaDepois": 0.9
+          "pausaDepois": 0.6
         },
         {
           "quem": "doutor",
           "texto": "Caiu rápido demais? Conheça a Pílula Chumbo… no próximo comercial!",
-          "pronuncia": "Caiu rápido demais? Conheça a PÍLULA CHUMBO… no próximo comercial!"
+          "pronuncia": "Caiu rápido demais? Conheça a PÍLULA CHUMBO… no próximo comercial!",
+          "aceleraLocal": 1.1
         },
         {
           "quem": "kuka",
@@ -174,7 +185,8 @@
         {
           "quem": "doutor",
           "texto": "Ligue já!",
-          "pronuncia": "LIGUE JÁ!"
+          "pronuncia": "LIGUE JÁ!",
+          "aceleraLocal": 1.1
         }
       ]
     },
@@ -185,7 +197,8 @@
           "quem": "doutor",
           "texto": "Efeitos colaterais: leveza, nuvens no cabelo e multa por voar sem brevê.",
           "pronuncia": "Efeitos colaterais: leveza, nuvens no cabelo e multa por voar sem brevê.",
-          "velocidade": 1.15
+          "velocidade": 1.15,
+          "aceleraLocal": 1.25
         }
       ]
     }

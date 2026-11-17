@@ -23,7 +23,14 @@ Loja de televendas **fictícia** (nada é vendido de verdade, é só humor). Cad
     Voz: Silas **afinado** (`"afinar": 1.45`, processamento local, sem custo extra).
 - **Bordão final:** letrinhas miúdas lidas bem rápido ("Não nos responsabilizamos…") + logo INUTILIDADES 0800.
 
-## Estrutura de cada comercial
+## Elenco extra
+- **Dona Cleide** (`DonaCleide`, voz Raquel `CS2gH5fPqUCmkVNpHsy4`): cliente nova desde o ep. 5.
+
+## Formato atual (pedido do usuário no ep. 5)
+Sem gancho separado e sem depoimento: **problema (P&B, já é o gancho) → produto → demonstração → oferta → letrinhas**.
+O formato antigo (gancho + depoimento) fica para quando o usuário pedir.
+
+## Estrutura de cada comercial (formato antigo, completo)
 1. **Gancho (0–2 s)**: imagem absurda e forte logo de cara (ep. 1: o rato almoçando: "Faltou sal.").
 2. **Problema exagerado** em PRETO E BRANCO (`<Tela pb>`): "Cansado de…?"
 3. **A solução**: estúdio colorido, "Seus problemas ACABARAM!", nome do produto gigante (`NomeProduto`).
