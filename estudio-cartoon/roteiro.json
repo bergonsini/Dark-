@@ -55,8 +55,8 @@
       "ato": "começo",
       "falas": [
         {
-          "texto": "Ela nem tá triste… mas esconde uma armadilha química.",
-          "pronuncia": "[laughs] Ela nem tá triste… mas esconde uma ARMADILHA química."
+          "texto": "Ela não te faz chorar porque toca sertanejo… e sim porque esconde uma armadilha química!",
+          "pronuncia": "[laughs] Ela não te faz chorar porque toca SERTANEJO… e sim porque esconde uma ARMADILHA química!"
         },
         {
           "texto": "Inteira, ela guarda os ingredientes separadinhos, cada um no seu cantinho.",
@@ -131,8 +131,8 @@
       "ato": "conclusão",
       "falas": [
         {
-          "texto": "Resumindo: não é tristeza, é química pura!",
-          "pronuncia": "Resumindo: não é tristeza… é QUÍMICA pura!"
+          "texto": "Resumindo: não é sofrência… é química pura!",
+          "pronuncia": "Resumindo: não é SOFRÊNCIA… é QUÍMICA pura!"
         },
         {
           "texto": "E aí, qual comida te faz chorar? Conta aí!",

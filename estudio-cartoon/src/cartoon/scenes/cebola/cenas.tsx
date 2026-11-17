@@ -40,6 +40,8 @@ export const C1Gancho: React.FC<SceneProps> = ({ scene }) => {
 /** Ela nem tá triste… mas tem uma ARMADILHA química: ingredientes separados, cada um no seu cantinho. */
 export const C2Armadilha: React.FC<SceneProps> = ({ scene }) => {
   const { f, mouth } = useSceneFrame(scene);
+  const sert = wordAt(scene, "sertanejo…");
+  const sim = wordAt(scene, "sim");
   const arm = wordAt(scene, "armadilha");
   const l1 = lineStart(scene, 1);
   return (
@@ -47,7 +49,7 @@ export const C2Armadilha: React.FC<SceneProps> = ({ scene }) => {
       {f < l1 ? (
         <Camera keys={[{ f: 0, zoom: 1.0 }, { f: arm, zoom: 1.15, y: 60 }]} shakes={[arm]}>
           <Cozinha />
-          <CebolaPersonagem x={600} y={1150} s={1.3} expr={f >= arm ? "malandra" : "feliz"} />
+          <CebolaPersonagem x={600} y={1150} s={1.3} expr={f >= arm ? "malandra" : f >= sim ? "surpresa" : "feliz"} sertaneja={f < sim} chapeuVoa={cl(f, sim, sim + 14)} />
           <PersonagemEm x={180} pe={1560} altura={380} boca={mouth} expressao={f >= arm ? "surpreso" : "feliz"} pose="apontando" olharX={0.8} />
         </Camera>
       ) : (
@@ -56,11 +58,14 @@ export const C2Armadilha: React.FC<SceneProps> = ({ scene }) => {
           <Celulas cx={540} cy={1000} rompe={0} />
         </Camera>
       )}
-      {f < arm && <Tag text="NEM TÁ TRISTE!" x={540} y={320} at={10} bg={C.white} size={56} />}
+      {f < sim && f >= sert - 6 && <Tag text="SOFRÊNCIA?" x={540} y={320} at={sert - 6} bg={C.white} size={60} />}
+      {f >= sim && f < arm && <Tag text="NÃO É ISSO!" x={540} y={320} at={sim} bg={C.red} color={C.white} size={60} />}
       {f >= arm && f < l1 && <Tag text="ARMADILHA QUÍMICA" x={540} y={320} at={arm} bg={C.yellow} size={58} />}
       {f >= l1 && <Tag text="CÉLULAS DA CEBOLA" x={540} y={300} at={l1 + 4} bg={C.violet} color={C.white} size={52} />}
       {f >= l1 + 40 && <Tag text="INGREDIENTES SEPARADOS" x={540} y={1400} at={l1 + 40} bg={C.white} size={48} />}
-      <Sfx at={10} name="pop" volume={0.4} />
+      <Sfx at={4} name="ding" volume={0.3} />
+      <Sfx at={22} name="ding" volume={0.3} />
+      <Sfx at={sim} name="whoosh" volume={0.5} />
       <Sfx at={arm} name="boing" volume={0.5} />
       <Sfx at={l1 + 4} name="whoosh" volume={0.4} />
       <Sfx at={l1 + 40} name="ding" volume={0.4} />
@@ -235,6 +240,7 @@ export const C8Conclusao: React.FC<SceneProps> = ({ scene }) => {
         <CebolaPersonagem x={760} y={1200} s={0.85} expr={f >= l1 ? "malandra" : "feliz"} />
         <PersonagemEm x={300} pe={1560} altura={520} boca={mouth} expressao={f >= l1 ? "animado" : "feliz"} pose={f >= l1 ? "acenando" : "explicando"} olharX={0.4} />
       </Camera>
+      {f < quimica && <Tag text="NÃO É SOFRÊNCIA…" x={540} y={320} at={8} bg={C.white} size={56} />}
       {f >= quimica && f < l1 && <TitleSlam text="É QUÍMICA PURA!" top={300} size={100} color={C.yellow} at={quimica} />}
       {f >= conta - 10 && <BalaoComentario x={540} y={400} s={1} texto="QUAL COMIDA TE FAZ CHORAR?" />}
       <Sfx at={quimica} name="tada" volume={0.5} />

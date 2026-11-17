@@ -18,13 +18,17 @@ const Tela: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 );
 
 /** A cebola-personagem: bulbo dourado com rostinho. `corte` 0..1 separa as metades e mostra os anéis. */
-export const CebolaPersonagem: React.FC<{ x: number; y: number; s?: number; expr?: "feliz" | "malandra" | "chorando" | "surpresa"; corte?: number }> = ({
-  x,
-  y,
-  s = 1,
-  expr = "feliz",
-  corte = 0,
-}) => {
+export const CebolaPersonagem: React.FC<{
+  x: number;
+  y: number;
+  s?: number;
+  expr?: "feliz" | "malandra" | "chorando" | "surpresa";
+  corte?: number;
+  /** modo sertanejo: chapéu de vaqueiro, violão e notinhas de sofrência */
+  sertaneja?: boolean;
+  /** 0..1: o chapéu sai voando */
+  chapeuVoa?: number;
+}> = ({ x, y, s = 1, expr = "feliz", corte = 0, sertaneja = false, chapeuVoa = 0 }) => {
   const f = useCurrentFrame();
   const bob = Math.sin(f * 0.12) * 6;
   const abre = corte * 120;
@@ -51,6 +55,34 @@ export const CebolaPersonagem: React.FC<{ x: number; y: number; s?: number; expr
         <path d="M0 -300 Q -20 -380 -60 -420 M0 -300 Q 30 -380 70 -410" fill="none" stroke="#4CAF50" strokeWidth={16} strokeLinecap="round" />
         {metade(-1)}
         {metade(1)}
+        {sertaneja && (
+          <g>
+            {/* violão */}
+            <g transform={`translate(190 30) rotate(${30 + Math.sin(f * 0.5) * 4})`}>
+              <rect x={-14} y={-300} width={28} height={220} fill="#8D6E63" {...OL} strokeWidth={5} />
+              <circle cx={0} cy={-40} r={70} fill="#E0A15A" {...OL} />
+              <circle cx={0} cy={40} r={86} fill="#E0A15A" {...OL} />
+              <circle cx={0} cy={-10} r={22} fill={C.outline} />
+              <path d="M-6 -300 L-6 60 M6 -300 L6 60" stroke="#eee" strokeWidth={2} />
+            </g>
+            {/* notinhas da sofrência */}
+            {[0, 1, 2].map((i) => {
+              const q = ((f + i * 14) % 42) / 42;
+              return (
+                <text key={i} x={160 + i * 60 + Math.sin(f * 0.2 + i) * 20} y={-260 - q * 260} fontSize={70} fill={C.outline} opacity={1 - q} fontFamily="'DejaVu Sans', sans-serif">
+                  ♪
+                </text>
+              );
+            })}
+          </g>
+        )}
+        {(sertaneja || chapeuVoa > 0) && (
+          <g transform={`translate(${chapeuVoa * 520} ${-chapeuVoa * 700}) rotate(${chapeuVoa * 540} 0 -330)`} opacity={chapeuVoa >= 1 ? 0 : 1}>
+            <path d="M-240 -300 Q 0 -250 240 -300 Q 200 -260 0 -250 Q -200 -260 -240 -300 Z" fill="#8D5524" {...OL} />
+            <path d="M-120 -290 Q -130 -420 0 -410 Q 130 -420 120 -290 Z" fill="#A0652F" {...OL} />
+            <path d="M-118 -320 L118 -320" stroke="#5D3A1A" strokeWidth={16} />
+          </g>
+        )}
         {corte < 0.3 && (
           <g>
             {expr === "chorando" ? (
