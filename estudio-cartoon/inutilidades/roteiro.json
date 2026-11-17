@@ -5,17 +5,17 @@
     "timeline": "src/inutilidades/timeline.json",
     "audio": "public/inutilidades/audio"
   },
-  "video": "tapete-turbo",
-  "titulo": "Tapete Escorregador Turbo",
-  "episodio": 4,
-  "duracaoSegundos": 44,
+  "video": "pilula-pena",
+  "titulo": "Pílula Pena",
+  "episodio": 5,
+  "duracaoSegundos": 40,
   "pausas": {
     "entreCenas": 0.2,
     "final": 1.2
   },
   "musica": {
-    "bpm": 132,
-    "tom": -1
+    "bpm": 120,
+    "tom": 2
   },
   "voz": {
     "motor": "elevenlabs",
@@ -62,32 +62,37 @@
         "estabilidade": 0.45
       },
       "afinar": 1.45
+    },
+    "cleide": {
+      "kokoro": {
+        "voz": "pf_dora",
+        "velocidade": 1.0
+      },
+      "elevenlabs": {
+        "voiceId": "",
+        "nome": "(a escolher) — DONA CLEIDE",
+        "estabilidade": 0.45
+      }
     }
   },
   "cenas": [
-    {
-      "id": "gancho",
-      "falas": [
-        {
-          "quem": "kuka",
-          "texto": "Fui na cozinha… e atravessei três paredes.",
-          "pronuncia": "[deadpan] Fui na cozinha… e atravessei TRÊS paredes.",
-          "aceleraLocal": 1.12
-        }
-      ]
-    },
     {
       "id": "problema",
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Cansado de levar CINCO segundos do quarto até a cozinha?",
-          "pronuncia": "Cansado de levar CINCO segundos do quarto até a cozinha?"
+          "texto": "Cansada de salada sem graça?",
+          "pronuncia": "Cansada de salada SEM GRAÇA?"
         },
         {
           "quem": "doutor",
-          "texto": "Uma eternidade!",
-          "pronuncia": "Uma ETERNIDADE!"
+          "texto": "E de academia todo santo dia?",
+          "pronuncia": "E de academia TODO SANTO DIA?"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Quer perder peso sem esforço nenhum?",
+          "pronuncia": "Quer perder peso SEM ESFORÇO nenhum?"
         }
       ]
     },
@@ -101,8 +106,8 @@
         },
         {
           "quem": "doutor",
-          "texto": "Apresento o Tapete Escorregador Turbo!",
-          "pronuncia": "Apresento o TAPETE ESCORREGADOR TURBO!"
+          "texto": "Apresento a Pílula Pena!",
+          "pronuncia": "Apresento a PÍLULA PENA!"
         }
       ]
     },
@@ -111,34 +116,19 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "É só pisar no tapete e…",
-          "pronuncia": "É só pisar no tapete e…",
+          "texto": "Uma pílula e você perde todo o peso em cinco segundos!",
+          "pronuncia": "Uma pílula… e você perde TODO o peso em cinco segundos!",
           "pausaDepois": 1.2
         },
         {
+          "quem": "cleide",
+          "texto": "Ué… eu tô flutuando!",
+          "pronuncia": "[surprised] Ué… eu tô FLUTUANDO!"
+        },
+        {
           "quem": "doutor",
-          "texto": "Cozinha em meio segundo!",
-          "pronuncia": "[excited] Cozinha em MEIO segundo!"
-        }
-      ]
-    },
-    {
-      "id": "depoimento",
-      "falas": [
-        {
-          "quem": "kuka",
-          "texto": "Eu fui buscar um copo d'água…",
-          "pronuncia": "Eu fui buscar um copo d'água…"
-        },
-        {
-          "quem": "kuka",
-          "texto": "…e parei no bairro vizinho.",
-          "pronuncia": "[deadpan] …e parei no bairro VIZINHO."
-        },
-        {
-          "quem": "kuka",
-          "texto": "Mas cheguei rapidinho!",
-          "pronuncia": "[happy] Mas cheguei RAPIDINHO!"
+          "texto": "Perdeu TODO o peso, como prometido!",
+          "pronuncia": "[excited] Perdeu TODO o peso, como prometido!"
         }
       ]
     },
@@ -147,18 +137,18 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "De 999 por apenas 49,90!",
-          "pronuncia": "De novecentos e noventa e nove por apenas QUARENTA E NOVE E NOVENTA!"
+          "texto": "De 999 por apenas 39,90!",
+          "pronuncia": "De novecentos e noventa e nove por apenas TRINTA E NOVE E NOVENTA!"
         },
         {
           "quem": "doutor",
-          "texto": "E ligando AGORA, ganhe um capacete de brinde!",
-          "pronuncia": "E ligando AGORA, ganhe um CAPACETE de brinde!"
+          "texto": "E ligando AGORA, ganhe um tijolo de brinde, pra voltar pro chão!",
+          "pronuncia": "E ligando AGORA, ganhe um TIJOLO de brinde, pra voltar pro chão!"
         },
         {
-          "quem": "kuka",
-          "texto": "Manda dois!",
-          "pronuncia": "[excited] Manda DOIS!"
+          "quem": "cleide",
+          "texto": "Manda dois tijolos!",
+          "pronuncia": "[excited] Manda DOIS tijolos!"
         },
         {
           "quem": "doutor",
@@ -172,8 +162,8 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Não pise no tapete. Paredes vendidas separadamente.",
-          "pronuncia": "Não pise no tapete. Paredes vendidas separadamente.",
+          "texto": "Não tomar perto de ventiladores. Não nos responsabilizamos por clientes em órbita.",
+          "pronuncia": "Não tomar perto de ventiladores. Não nos responsabilizamos por clientes em órbita.",
           "velocidade": 1.15
         }
       ]

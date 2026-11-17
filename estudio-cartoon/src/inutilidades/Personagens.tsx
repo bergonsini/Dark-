@@ -545,3 +545,103 @@ export const Rato: React.FC<{
     </g>
   );
 };
+
+// ============================================================================ DONA CLEIDE (cliente nova, ep. 5)
+export type ExprCleide = "feliz" | "triste" | "surpresa" | "assustada";
+const POSES_CLEIDE: Record<string, { E: Pose2; D: Pose2 }> = {
+  parado: { E: { a1: -15, a2: 5 }, D: { a1: 15, a2: -5 } },
+  /** mão direita na boca: garfo com alface / tomando a pílula. Mão em ≈ (18, -755) */
+  boca: { E: { a1: -15, a2: 5 }, D: { a1: 200, a2: 30 } },
+  /** halter acima da cabeça: mãos em ≈ (±160, -800) */
+  halter: { E: { a1: -170, a2: 0 }, D: { a1: 170, a2: 0 } },
+  bracosPraCima: { E: { a1: -150, a2: -10 }, D: { a1: 150, a2: 10 } },
+  telefone: { E: { a1: -15, a2: 5 }, D: { a1: 30, a2: 150 } },
+};
+
+export const DonaCleide: React.FC<{
+  x: number;
+  y: number;
+  escala?: number;
+  boca?: number;
+  expr?: ExprCleide;
+  pose?: keyof typeof POSES_CLEIDE;
+  suor?: boolean;
+  treme?: number;
+  /** gira o corpo inteiro (flutuando/voando) */
+  giro?: number;
+}> = ({ x, y, escala = 1, boca = 0, expr = "feliz", pose = "parado", suor = false, treme = 0, giro = 0 }) => {
+  const f = useCurrentFrame();
+  const P = POSES_CLEIDE[pose];
+  const PELE = "#C98B5E";
+  const VEST = "#9A3FD0";
+  const CAB = "#E8742B";
+  const pisca = piscar(f, 4);
+  const ab = Math.max(boca, expr === "surpresa" || expr === "assustada" ? 0.5 : 0);
+  const tx = treme ? Math.sin(f * 3.1) * treme : 0;
+  const sob = expr === "triste" ? 14 : expr === "surpresa" || expr === "assustada" ? -16 : 0;
+  return (
+    <g transform={`translate(${x + tx} ${y}) scale(${escala}) rotate(${giro} 0 -520)`} stroke={TINTA} strokeWidth={SW} strokeLinejoin="round" strokeLinecap="round">
+      {/* pernas e sapatos */}
+      <rect x={-70} y={-240} width={46} height={220} fill={PELE} />
+      <rect x={24} y={-240} width={46} height={220} fill={PELE} />
+      <path d="M-90 -20 L-20 -20 L-20 0 L-100 0 Z" fill="#E8282B" />
+      <path d="M20 -20 L90 -20 L100 0 L20 0 Z" fill="#E8282B" />
+      {/* vestido de bolinhas */}
+      <path d="M-120 -620 Q0 -660 120 -620 L190 -220 L-190 -220 Z" fill={VEST} />
+      <g fill="#fff" stroke="none">
+        {[[-80, -540], [40, -560], [-20, -450], [100, -430], [-120, -340], [10, -320], [130, -280], [-60, -260]].map(([cx, cy], i) => (
+          <circle key={i} cx={cx} cy={cy} r={14} />
+        ))}
+      </g>
+      <Braco o={[-120, -590]} {...P.E} cor={VEST} pele={PELE} grossura={48} l1={115} l2={105} />
+      <Braco o={[120, -590]} {...P.D} cor={VEST} pele={PELE} grossura={48} l1={115} l2={105} />
+      {/* pescoço + cabeça */}
+      <rect x={-30} y={-680} width={60} height={60} fill={PELE} />
+      {/* cabelo volumoso atrás + coque */}
+      <g fill={CAB}>
+        <circle cx={0} cy={-1020} r={70} />
+        {[[-150, -820, 80], [150, -820, 80], [-120, -930, 85], [120, -930, 85], [0, -970, 95], [-170, -720, 55], [170, -720, 55]].map(([cx, cy, r], i) => (
+          <circle key={i} cx={cx} cy={cy} r={r} />
+        ))}
+      </g>
+      <circle cx={0} cy={-800} r={150} fill={PELE} />
+      <path d="M-140 -850 Q -60 -960 0 -900 Q 60 -960 140 -850 Q 100 -930 0 -940 Q -100 -930 -140 -850 Z" fill={CAB} />
+      {/* brincos */}
+      <circle cx={-150} cy={-750} r={20} fill="#FFD23F" />
+      <circle cx={150} cy={-750} r={20} fill="#FFD23F" />
+      {/* sobrancelhas */}
+      <path d={`M-90 ${-875 + sob} Q -60 ${-895 + sob} -30 ${-878 + sob} M30 ${-878 + sob} Q 60 ${-895 + sob} 90 ${-875 + sob}`} fill="none" strokeWidth={9} />
+      {/* olhos com cílios */}
+      {pisca ? (
+        <path d="M-85 -825 Q -60 -810 -35 -825 M35 -825 Q 60 -810 85 -825" fill="none" strokeWidth={8} />
+      ) : (
+        <>
+          <ellipse cx={-60} cy={-825} rx={26} ry={expr === "assustada" ? 36 : 30} fill="#fff" />
+          <ellipse cx={60} cy={-825} rx={26} ry={expr === "assustada" ? 36 : 30} fill="#fff" />
+          <circle cx={-56} cy={expr === "triste" ? -818 : -822} r={13} fill={TINTA} />
+          <circle cx={56} cy={expr === "triste" ? -818 : -822} r={13} fill={TINTA} />
+          <path d="M-86 -846 l-14 -12 M-74 -853 l-8 -16 M86 -846 l14 -12 M74 -853 l8 -16" strokeWidth={6} />
+        </>
+      )}
+      <ellipse cx={-100} cy={-770} rx={22} ry={12} fill="#F28AA0" stroke="none" opacity={0.7} />
+      <ellipse cx={100} cy={-770} rx={22} ry={12} fill="#F28AA0" stroke="none" opacity={0.7} />
+      <path d="M0 -800 Q 12 -775 -4 -765" fill="none" strokeWidth={6} />
+      {/* boca com batom */}
+      {ab > 0.08 ? (
+        <ellipse cx={0} cy={-725} rx={34} ry={10 + ab * 26} fill="#6B1020" stroke="#D81B60" strokeWidth={9} />
+      ) : expr === "triste" ? (
+        <path d="M-36 -712 Q 0 -738 36 -712" fill="none" stroke="#D81B60" strokeWidth={11} />
+      ) : (
+        <path d="M-40 -735 Q 0 -700 40 -735" fill="none" stroke="#D81B60" strokeWidth={11} />
+      )}
+      {suor && (
+        <g fill="#7FD3FF" strokeWidth={4}>
+          {[[-170, -880], [175, -860], [140, -950]].map(([cx, cy], i) => {
+            const q = ((f + i * 9) % 26) / 26;
+            return <path key={i} d={`M${cx} ${cy + q * 70} q 14 22 0 30 q -14 -8 0 -30 Z`} opacity={1 - q * 0.6} />;
+          })}
+        </g>
+      )}
+    </g>
+  );
+};

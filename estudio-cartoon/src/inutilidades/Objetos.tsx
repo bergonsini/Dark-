@@ -586,3 +586,92 @@ export const Capacete: React.FC<{ x: number; y: number; escala?: number }> = ({ 
     <rect x={-14} y={-150} width={28} height={140} fill="#E5A800" strokeWidth={5} />
   </g>
 );
+
+/** Prato com UMA folha de alface (a salada sem graça). */
+export const PratoAlface: React.FC<{ x: number; y: number; escala?: number }> = ({ x, y, escala = 1 }) => (
+  <g transform={`translate(${x} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={7} strokeLinejoin="round">
+    <ellipse cx={0} cy={0} rx={190} ry={44} fill="#fff" />
+    <path d="M-50 -10 Q -60 -60 0 -50 Q 60 -70 50 -10 Q 0 6 -50 -10 Z" fill="#7CCB5C" />
+    <path d="M0 -50 L0 -8" stroke="#4E9A3A" strokeWidth={5} />
+  </g>
+);
+
+/** Halter (peso de academia). Centro em (x,y). */
+export const Halter: React.FC<{ x: number; y: number; escala?: number; rot?: number }> = ({ x, y, escala = 1, rot = 0 }) => (
+  <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${escala})`} stroke={TINTA} strokeWidth={7} strokeLinejoin="round">
+    <rect x={-200} y={-10} width={400} height={20} fill="#9AA4B5" />
+    <rect x={-220} y={-60} width={50} height={120} rx={10} fill="#333" />
+    <rect x={170} y={-60} width={50} height={120} rx={10} fill="#333" />
+  </g>
+);
+
+/** Cápsula da Pílula Pena (rosa e branca, com uma peninha). */
+export const Capsula: React.FC<{ x: number; y: number; escala?: number; rot?: number }> = ({ x, y, escala = 1, rot = 0 }) => (
+  <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${escala})`} stroke={TINTA} strokeWidth={7} strokeLinejoin="round">
+    <path d="M0 -40 L-60 -40 A40 40 0 0 0 -60 40 L0 40 Z" fill="#FF7AB6" />
+    <path d="M0 -40 L60 -40 A40 40 0 0 1 60 40 L0 40 Z" fill="#fff" />
+    <path d="M-20 -30 Q 40 -20 50 10" fill="none" stroke="#fff" strokeWidth={6} opacity={0.6} />
+  </g>
+);
+
+/** Frasco da Pílula Pena com uma pena no rótulo. */
+export const FrascoPilula: React.FC<{ x: number; y: number; escala?: number; rot?: number }> = ({ x, y, escala = 1, rot = 0 }) => (
+  <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
+    <rect x={-110} y={-330} width={220} height={330} rx={30} fill="#FF7AB6" />
+    <rect x={-90} y={-380} width={180} height={60} rx={14} fill="#fff" />
+    <rect x={-90} y={-250} width={180} height={150} rx={14} fill="#fff" />
+    <path d="M-50 -120 Q 0 -260 60 -230 Q 20 -200 -50 -120 Z" fill="#BFE6F5" strokeWidth={5} />
+    <path d="M-50 -120 L40 -215" fill="none" strokeWidth={4} />
+    <text x={0} y={-50} textAnchor="middle" fontSize={44} fill="#fff" stroke={TINTA} strokeWidth={6} paintOrder="stroke" fontFamily="'Baloo 2'" fontWeight={800}>
+      PENA
+    </text>
+  </g>
+);
+
+/** Tijolo (brinde: pra voltar pro chão). */
+export const Tijolo: React.FC<{ x: number; y: number; escala?: number; rot?: number }> = ({ x, y, escala = 1, rot = 0 }) => (
+  <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
+    <rect x={-150} y={-70} width={300} height={140} rx={8} fill="#C0583F" />
+    <circle cx={-70} cy={0} r={22} fill="#8E3E2C" />
+    <circle cx={0} cy={0} r={22} fill="#8E3E2C" />
+    <circle cx={70} cy={0} r={22} fill="#8E3E2C" />
+  </g>
+);
+
+/** Céu aberto: nuvens passando para baixo (dá sensação de subir), pássaros e um aviãozinho. */
+export const CeuAberto: React.FC<{ subindo?: number }> = ({ subindo = 1 }) => {
+  const f = useCurrentFrame();
+  return (
+    <g strokeLinejoin="round">
+      <rect width={1080} height={1920} fill="#6EC6FF" />
+      {[0, 1, 2, 3, 4].map((i) => {
+        const y = ((i * 430 + f * 14 * subindo) % 2300) - 200;
+        const x = (i * 337) % 900;
+        return (
+          <g key={i} transform={`translate(${x} ${y})`} fill="#fff" stroke={TINTA} strokeWidth={6}>
+            <path d="M0 60 Q -20 0 40 10 Q 60 -40 120 -10 Q 170 -40 200 20 Q 250 30 230 60 Z" />
+          </g>
+        );
+      })}
+      {[0, 1, 2].map((i) => {
+        const x = ((i * 380 - f * 9) % 1300 + 1300) % 1300 - 100;
+        const y = 300 + i * 260 + Math.sin(f * 0.2 + i) * 20;
+        const a = Math.sin(f * 0.6 + i) * 18;
+        return <path key={`p${i}`} d={`M${x - 40} ${y - a} Q ${x - 20} ${y - 20} ${x} ${y} Q ${x + 20} ${y - 20} ${x + 40} ${y - a}`} fill="none" stroke={TINTA} strokeWidth={8} />;
+      })}
+      <g transform={`translate(${((f * 12) % 1600) - 300} 1500)`} stroke={TINTA} strokeWidth={6} fill="#fff">
+        <path d="M0 0 L220 -10 Q 260 0 220 10 L0 10 Z" />
+        <path d="M80 0 L40 -70 L110 -70 L140 0 Z" fill="#E8282B" />
+        <path d="M10 0 L-20 -40 L20 -40 L40 0 Z" fill="#E8282B" />
+      </g>
+    </g>
+  );
+};
+
+/** Contagem regressiva grande (5, 4, 3, 2, 1). */
+export const Contagem: React.FC<{ n: number }> = ({ n }) =>
+  n <= 0 ? null : (
+    <text x={540} y={1100} textAnchor="middle" fontSize={460} fill="#FFD23F" stroke={TINTA} strokeWidth={22} paintOrder="stroke" fontFamily="'Baloo 2'" fontWeight={800} opacity={0.9}>
+      {n}
+    </text>
+  );

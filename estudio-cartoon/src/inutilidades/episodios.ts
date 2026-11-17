@@ -3,6 +3,7 @@ import { CenaProps } from "./common";
 import * as controle from "./episodios/controle-remoto";
 import * as escova from "./episodios/escova-turbo";
 import * as tapete from "./episodios/tapete-turbo";
+import * as pilula from "./episodios/pilula-pena";
 import * as ratoeira from "./episodios/ratoeira-explosiva";
 
 export type Episodio = {
@@ -19,4 +20,5 @@ export const EPISODIOS: Record<string, Episodio> = {
   "escova-turbo": escova.EPISODIO,
   "controle-remoto": controle.EPISODIO,
   "tapete-turbo": tapete.EPISODIO,
+  "pilula-pena": pilula.EPISODIO,
 };
