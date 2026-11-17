@@ -615,15 +615,15 @@ export const Capsula: React.FC<{ x: number; y: number; escala?: number; rot?: nu
 );
 
 /** Frasco da Pílula Pena com uma pena no rótulo. */
-export const FrascoPilula: React.FC<{ x: number; y: number; escala?: number; rot?: number }> = ({ x, y, escala = 1, rot = 0 }) => (
+export const FrascoPilula: React.FC<{ x: number; y: number; escala?: number; rot?: number; cor?: string; rotulo?: string }> = ({ x, y, escala = 1, rot = 0, cor = "#FF7AB6", rotulo = "PENA" }) => (
   <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
-    <rect x={-110} y={-330} width={220} height={330} rx={30} fill="#FF7AB6" />
+    <rect x={-110} y={-330} width={220} height={330} rx={30} fill={cor} />
     <rect x={-90} y={-380} width={180} height={60} rx={14} fill="#fff" />
     <rect x={-90} y={-250} width={180} height={150} rx={14} fill="#fff" />
     <path d="M-50 -120 Q 0 -260 60 -230 Q 20 -200 -50 -120 Z" fill="#BFE6F5" strokeWidth={5} />
     <path d="M-50 -120 L40 -215" fill="none" strokeWidth={4} />
     <text x={0} y={-50} textAnchor="middle" fontSize={44} fill="#fff" stroke={TINTA} strokeWidth={6} paintOrder="stroke" fontFamily="'Baloo 2'" fontWeight={800}>
-      PENA
+      {rotulo}
     </text>
   </g>
 );
@@ -675,3 +675,43 @@ export const Contagem: React.FC<{ n: number }> = ({ n }) =>
       {n}
     </text>
   );
+
+/** Calendário da dieta: "SEGUNDA 8h: DIETA ✓" e, quando `desiste`, "SEGUNDA 15h: DESISTIU ✗". */
+export const CalendarioDieta: React.FC<{ x: number; y: number; escala?: number; desiste?: boolean }> = ({ x, y, escala = 1, desiste = false }) => (
+  <g transform={`translate(${x} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
+    <rect x={-260} y={-200} width={520} height={400} rx={20} fill="#fff" />
+    <rect x={-260} y={-200} width={520} height={100} rx={20} fill="#E8282B" />
+    <text x={0} y={-128} textAnchor="middle" fontSize={64} fill="#fff" stroke="none" fontFamily="'Baloo 2'" fontWeight={800}>SEGUNDA</text>
+    <text x={-220} y={0} fontSize={52} fill={TINTA} stroke="none" fontFamily="'Baloo 2'" fontWeight={800}>8h  DIETA ✓</text>
+    {desiste && (
+      <text x={-220} y={120} fontSize={52} fill="#E8282B" stroke="none" fontFamily="'Baloo 2'" fontWeight={800}>15h DESISTIU ✗</text>
+    )}
+  </g>
+);
+
+/** Fatia de bolo de chocolate. */
+export const Bolo: React.FC<{ x: number; y: number; escala?: number }> = ({ x, y, escala = 1 }) => (
+  <g transform={`translate(${x} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={7} strokeLinejoin="round">
+    <path d="M-90 40 L90 40 L90 -40 L-90 -10 Z" fill="#6D3B1F" />
+    <path d="M-90 -10 L90 -40 L90 -60 L-90 -28 Z" fill="#FFF3E0" />
+    <circle cx={60} cy={-74} r={18} fill="#E8282B" />
+  </g>
+);
+
+/** Lustre pendurado no teto (a Dona Cleide se agarra nele). */
+export const Lustre: React.FC<{ x: number; y?: number; balanca?: number }> = ({ x, y = 0, balanca = 0 }) => {
+  const f = useCurrentFrame();
+  const r = Math.sin(f * 0.3) * 8 * balanca;
+  return (
+    <g transform={`translate(${x} ${y}) rotate(${r})`} stroke={TINTA} strokeWidth={7} strokeLinejoin="round">
+      <path d="M0 0 L0 220" strokeWidth={8} />
+      <path d="M-160 260 Q 0 200 160 260 L120 300 L-120 300 Z" fill="#FFD23F" />
+      {[-110, -40, 40, 110].map((cx) => (
+        <g key={cx}>
+          <rect x={cx - 8} y={300} width={16} height={40} fill="#fff" />
+          <path d={`M${cx} 300 q -10 -26 0 -40 q 10 14 0 40`} fill="#FF8C1A" strokeWidth={4} />
+        </g>
+      ))}
+    </g>
+  );
+};

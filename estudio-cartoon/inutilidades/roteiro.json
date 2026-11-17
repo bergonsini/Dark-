@@ -8,7 +8,7 @@
   "video": "pilula-pena",
   "titulo": "Pílula Pena",
   "episodio": 5,
-  "duracaoSegundos": 40,
+  "duracaoSegundos": 45,
   "pausas": {
     "entreCenas": 0.2,
     "final": 1.2
@@ -69,8 +69,8 @@
         "velocidade": 1.0
       },
       "elevenlabs": {
-        "voiceId": "",
-        "nome": "(a escolher) — DONA CLEIDE",
+        "voiceId": "CS2gH5fPqUCmkVNpHsy4",
+        "nome": "Raquel (pt-BR, 55 anos, interior) — DONA CLEIDE",
         "estabilidade": 0.45
       }
     }
@@ -81,13 +81,13 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Cansada de salada sem graça?",
-          "pronuncia": "Cansada de salada SEM GRAÇA?"
+          "texto": "Cansada de começar a dieta na segunda…",
+          "pronuncia": "Cansada de começar a dieta na SEGUNDA…"
         },
         {
           "quem": "doutor",
-          "texto": "E de academia todo santo dia?",
-          "pronuncia": "E de academia TODO SANTO DIA?"
+          "texto": "e desistir na segunda à tarde?",
+          "pronuncia": "e desistir na segunda à TARDE?"
         },
         {
           "quem": "doutor",
@@ -127,8 +127,18 @@
         },
         {
           "quem": "doutor",
-          "texto": "Perdeu TODO o peso, como prometido!",
-          "pronuncia": "[excited] Perdeu TODO o peso, como prometido!"
+          "texto": "Calma, eu seguro!",
+          "pronuncia": "Calma, eu SEGURO!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Reparem: zero esforço… e zero chão!",
+          "pronuncia": "[excited] Reparem: ZERO esforço… e ZERO chão!"
+        },
+        {
+          "quem": "cleide",
+          "texto": "Pelo menos aqui em cima não tem balança!",
+          "pronuncia": "[laughs] Pelo menos aqui em cima não tem BALANÇA!"
         }
       ]
     },
@@ -148,7 +158,18 @@
         {
           "quem": "cleide",
           "texto": "Manda dois tijolos!",
-          "pronuncia": "[excited] Manda DOIS tijolos!"
+          "pronuncia": "[excited] Manda DOIS tijolos!",
+          "pausaDepois": 0.9
+        },
+        {
+          "quem": "doutor",
+          "texto": "Caiu rápido demais? Conheça a Pílula Chumbo… no próximo comercial!",
+          "pronuncia": "Caiu rápido demais? Conheça a PÍLULA CHUMBO… no próximo comercial!"
+        },
+        {
+          "quem": "kuka",
+          "texto": "Manda dois!",
+          "pronuncia": "[excited] Manda DOIS!"
         },
         {
           "quem": "doutor",
@@ -162,8 +183,8 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Não tomar perto de ventiladores. Não nos responsabilizamos por clientes em órbita.",
-          "pronuncia": "Não tomar perto de ventiladores. Não nos responsabilizamos por clientes em órbita.",
+          "texto": "Efeitos colaterais: leveza, nuvens no cabelo e multa por voar sem brevê.",
+          "pronuncia": "Efeitos colaterais: leveza, nuvens no cabelo e multa por voar sem brevê.",
           "velocidade": 1.15
         }
       ]
