@@ -2,9 +2,10 @@ import React from "react";
 import { useCurrentFrame } from "remotion";
 import { P } from "../config";
 import { Bola, Caixa, Olho, usePiscar } from "../lowpoly";
+import { Coroa } from "../objetos/Clima";
 
 /** Capivara low-poly: calma absoluta (olhos meio fechados), respira devagar. Pés em y = 0, frente +z. */
-export const Capivara: React.FC<{ pos?: [number, number, number]; rotY?: number; escala?: number; boca?: number; zen?: boolean; fechado?: number; correndo?: boolean }> = ({ pos = [0, 0, 0], rotY = 0, escala = 1, boca = 0, zen = true, fechado, correndo = false }) => {
+export const Capivara: React.FC<{ pos?: [number, number, number]; rotY?: number; escala?: number; boca?: number; zen?: boolean; fechado?: number; correndo?: boolean; coroa?: boolean }> = ({ pos = [0, 0, 0], rotY = 0, escala = 1, boca = 0, zen = true, fechado, correndo = false, coroa = false }) => {
   const f = useCurrentFrame();
   const resp = 1 + Math.sin(f * 0.06) * 0.02;
   const pas = correndo ? Math.sin(f * 1.2) : 0;
@@ -36,6 +37,7 @@ export const Capivara: React.FC<{ pos?: [number, number, number]; rotY?: number;
           <Olho p={[0.22, 0.12, 0.31]} raio={0.06} fechado={fechado ?? (zen ? 0.75 : pisc)} />
           <Bola p={[-0.25, 0.3, -0.1]} raio={0.08} d={0} c={escuro} />
           <Bola p={[0.25, 0.3, -0.1]} raio={0.08} d={0} c={escuro} />
+          {coroa && <Coroa p={[0, 0.28, 0]} escala={0.95} brilho />}
         </group>
       </group>
     </group>
