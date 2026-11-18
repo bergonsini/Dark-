@@ -79,7 +79,7 @@ export const Gancho: React.FC<CenaProps> = ({ scene }) => {
       </Canvas>
       {luz && <Onomatopeia texto="PLIM!" at={mo} x={540} y={600} dur={22} />}
       <Sfx at={0} nome="riser" vol={0.35} />
-      <Sfx at={mo} nome="ding" vol={0.6} />
+      <Sfx at={mo} nome="ding" vol={0.4} />
       <Sfx at={mo + 22} nome="tum" vol={0.4} />
     </>
   );
@@ -159,9 +159,9 @@ export const Debate: React.FC<CenaProps> = ({ scene }) => {
       {f >= apitou && <Onomatopeia texto="PI! PI! PI!" at={apitou} x={540} y={600} dur={60} cor="#FF6B6B" />}
       <Sfx at={4} nome="tada" vol={0.3} />
       <Sfx at={girar} nome="ronco" vol={0.4} />
-      <Sfx at={apitou} nome="apito" vol={0.4} />
-      <Sfx at={apitou + 8} nome="apito" vol={0.4} />
-      <Sfx at={apitou + 16} nome="apito" vol={0.4} />
+      <Sfx at={apitou} nome="apito" vol={0.25} />
+      <Sfx at={apitou + 8} nome="apito" vol={0.25} />
+      <Sfx at={apitou + 16} nome="apito" vol={0.25} />
     </>
   );
 };
@@ -335,7 +335,7 @@ export const Final: React.FC<CenaProps> = ({ scene }) => {
       <Placa texto="CONTINUA…" at={proximo + 6} y={1430} />
       <Sfx at={l1} nome="riser" vol={0.4} />
       {[0, 1, 2, 3, 4, 5].map((i) => (
-        <Sfx key={i} at={regr + i * 12} nome="apito" vol={0.25} />
+        <Sfx key={i} at={regr + i * 12} nome="apito" vol={0.18} />
       ))}
       <Sfx at={proximo} nome="tum" vol={0.5} />
     </>
