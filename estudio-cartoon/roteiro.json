@@ -1,6 +1,6 @@
 {
-  "video": "cebola",
-  "titulo": "Por que a cebola faz chorar?",
+  "video": "gato-de-pe",
+  "titulo": "Como o gato sempre cai de pé?",
   "fps": 30,
   "duracaoSegundos": 60,
   "personagem": "tito",
@@ -30,14 +30,13 @@
     "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
   },
   "musica": {
-    "bpm": 104,
-    "tom": -5
+    "bpm": 108,
+    "tom": -2
   },
   "fontes": [
-    "Library of Congress — Everyday Mysteries: Why does chopping an onion make you cry? (células rompidas, enzimas, ácido sulfênico → propanotial-S-óxido, glândulas lacrimais; faca afiada estraga menos células)",
-    "Imai et al., Nature 419, 685 (2002) — 'An onion enzyme that makes the eyes water': descoberta da sintase do fator lacrimogêneo (House Foods, Japão)",
-    "Scientific American (2013) — IgNobel de Química 2013 para a descoberta; cebola sem lágrimas ainda experimental",
-    "Phys.org (2017, ACS Chemical Biology) e Science News Explores — detalhes do mecanismo; gelar a cebola deixa os compostos menos voláteis"
+    "Live Science — How do cats land on their feet? (sistema vestibular do ouvido interno; coluna flexível; sem clavícula funcional; frente e trás giram em direções diferentes)",
+    "Purina — Do cats land on their feet? (reflexo de endireitamento; filhotes começam com ~3 semanas; não é infalível)",
+    "Catster / Wikipedia (High-rise syndrome) — gatos NÃO caem sempre ilesos: fraturas e lesões; precisa de altura/tempo para girar (valores de altura mínima divergem entre fontes: por isso não citamos número)"
   ],
   "cenas": [
     {
@@ -45,84 +44,80 @@
       "ato": "começo",
       "falas": [
         {
-          "texto": "Por que a cebola faz a gente chorar?",
-          "pronuncia": "[curious] Por que a cebola faz a gente CHORAR?"
+          "texto": "Por que o gato sempre cai de pé?",
+          "pronuncia": "[curious] Por que o gato SEMPRE cai de pé?"
         }
       ]
     },
     {
-      "id": "armadilha",
+      "id": "reflexo",
       "ato": "começo",
       "falas": [
         {
-          "texto": "Ela não te faz chorar porque toca sertanejo… e sim porque esconde uma armadilha química!",
-          "pronuncia": "[laughs] Ela não te faz chorar porque toca SERTANEJO… e sim porque esconde uma ARMADILHA química!"
+          "texto": "Não, ele não fez aula de ginástica olímpica…",
+          "pronuncia": "[laughs] Não, ele não fez aula de ginástica olímpica…"
         },
         {
-          "texto": "Inteira, ela guarda os ingredientes separadinhos, cada um no seu cantinho.",
-          "pronuncia": "Inteira, ela guarda os ingredientes separadinhos… cada um no seu cantinho."
+          "texto": "é um superpoder chamado reflexo de endireitamento!",
+          "pronuncia": "é um SUPERPODER chamado reflexo de endireitamento!"
         }
       ]
     },
     {
-      "id": "corte",
+      "id": "ouvido",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Mas quando a faca corta, as células se rompem… e tudo se mistura!",
-          "pronuncia": "Mas quando a faca corta, as células se ROMPEM… [excited] e tudo se mistura!"
+          "texto": "Primeiro, um sensor no ouvido interno avisa: o chão é pra lá!",
+          "pronuncia": "Primeiro, um sensor no ouvido interno avisa: [excited] o chão é pra LÁ!"
         }
       ]
     },
     {
-      "id": "gas",
+      "id": "gira",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Uma enzima transforma essa mistura num gás invisível…",
-          "pronuncia": "Uma enzima transforma essa mistura num gás INVISÍVEL…"
+          "texto": "Aí ele gira a cabeça e a parte da frente do corpo…",
+          "pronuncia": "Aí ele gira a cabeça e a parte da FRENTE do corpo…"
         },
         {
-          "texto": "que voa direto pros seus olhos!",
-          "pronuncia": "que voa direto pros seus OLHOS!"
+          "texto": "e depois a parte de trás, tipo uma toalha sendo torcida!",
+          "pronuncia": "e depois a parte de TRÁS, tipo uma toalha sendo torcida!"
         }
       ]
     },
     {
-      "id": "olho",
+      "id": "coluna",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "O gás irrita os nervos do olho, e o corpo reage: solta lágrimas pra lavar tudo!",
-          "pronuncia": "O gás irrita os nervos do olho… e o corpo reage: solta LÁGRIMAS pra lavar tudo!"
+          "texto": "Isso funciona porque a coluna dele é superflexível e a clavícula é solta.",
+          "pronuncia": "Isso funciona porque a coluna dele é SUPERFLEXÍVEL… e a clavícula é solta."
         }
       ]
     },
     {
-      "id": "descoberta",
+      "id": "filhote",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Essa enzima só foi descoberta em 2002, por cientistas japoneses.",
-          "pronuncia": "Essa enzima só foi descoberta em DOIS MIL E DOIS, por cientistas japoneses."
+          "texto": "E os filhotes já começam a treinar com poucas semanas de vida!",
+          "pronuncia": "E os filhotes já começam a treinar com POUCAS semanas de vida!"
+        }
+      ]
+    },
+    {
+      "id": "cuidado",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Mas atenção: não é mágica! O gato pode se machucar feio.",
+          "pronuncia": "Mas atenção: não é MÁGICA! O gato pode se machucar feio."
         },
         {
-          "texto": "E a descoberta ganhou até o IgNobel, o prêmio das pesquisas que fazem rir e depois pensar!",
-          "pronuncia": "E a descoberta ganhou até o IG NOBEL, [laughs] o prêmio das pesquisas que fazem rir… e depois pensar!"
-        }
-      ]
-    },
-    {
-      "id": "dicas",
-      "ato": "desenvolvimento",
-      "falas": [
-        {
-          "texto": "Quer chorar menos? Use faca bem afiada, que estraga menos células.",
-          "pronuncia": "[curious] Quer chorar menos? Use faca BEM afiada, que estraga menos células."
-        },
-        {
-          "texto": "E deixe a cebola na geladeira antes de cortar.",
-          "pronuncia": "E deixe a cebola na GELADEIRA antes de cortar."
+          "texto": "Tem gato em casa? Tela de proteção na janela, sempre!",
+          "pronuncia": "Tem gato em casa? Tela de proteção na janela, SEMPRE!"
         }
       ]
     },
@@ -131,12 +126,12 @@
       "ato": "conclusão",
       "falas": [
         {
-          "texto": "Resumindo: não é sofrência… é química pura!",
-          "pronuncia": "Resumindo: não é SOFRÊNCIA… é QUÍMICA pura!"
+          "texto": "Resumindo: ouvido que sabe onde é o chão, e um corpo que gira em duas partes!",
+          "pronuncia": "Resumindo: ouvido que sabe onde é o chão… e um corpo que gira em DUAS partes!"
         },
         {
-          "texto": "E aí, qual comida te faz chorar? Conta aí!",
-          "pronuncia": "[laughs] E aí, qual comida te faz chorar? Conta aí!"
+          "texto": "Seu gato já fez alguma acrobacia? Conta aí!",
+          "pronuncia": "[laughs] Seu gato já fez alguma acrobacia? Conta aí!"
         }
       ]
     }
