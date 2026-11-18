@@ -50,7 +50,8 @@
       "falas": [
         {
           "texto": "O candidato misterioso era… um micro-ondas!",
-          "pronuncia": "O candidato misterioso era… [excited] um MICRO-ONDAS!"
+          "pronuncia": "O candidato misterioso era… [excited] um MICRO-ONDAS!",
+          "aceleraLocal": 1.18
         }
       ]
     },
