@@ -1,0 +1,138 @@
+{
+  "video": "chocolate",
+  "titulo": "Como surgiu o chocolate?",
+  "fps": 30,
+  "duracaoSegundos": 60,
+  "personagem": "tito",
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "tS45q0QcrDHqHoaWdCDR",
+      "nome": "Lax (pt-BR, jovem e alegre) — voz do TITO",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.4,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
+  },
+  "musica": {
+    "bpm": 100,
+    "tom": -3
+  },
+  "fontes": [
+    "Mental Floss — Chocolate history (olmecas e maias; bebida amarga e espumante com pimenta; astecas: sementes de cacau como moeda; Europa adoça com açúcar)",
+    "History.com — The sweet history of chocolate (chegada à Europa no séc. XVI; açúcar e canela)",
+    "Wikipedia (Chocolate bar / Milk chocolate) e Cocoa Runners — Fry & Sons, Bristol, 1847: uma das primeiras barras sólidas para comer (o 'primeira' é disputado); chocolate ao leite: Daniel Peter, Suíça, 1875 (com o leite condensado de Henri Nestlé)",
+    "Datas olmecas variam (1750–1500 a.C.): por isso 'mais de três mil anos'; etimologia de 'chocolate' é disputada: não citada"
+  ],
+  "cenas": [
+    {
+      "id": "gancho",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Sabia que o chocolate já foi dinheiro?",
+          "pronuncia": "[curious] Sabia que o chocolate já foi DINHEIRO?"
+        }
+      ]
+    },
+    {
+      "id": "origem",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Mais de três mil anos atrás, povos do México e da América Central já usavam o cacau.",
+          "pronuncia": "Mais de TRÊS MIL anos atrás, povos do México e da América Central já usavam o cacau."
+        },
+        {
+          "texto": "Ele nasce numa fruta assim, cheia de sementes.",
+          "pronuncia": "Ele nasce numa fruta assim… cheia de SEMENTES."
+        }
+      ]
+    },
+    {
+      "id": "maias",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Os maias faziam uma bebida amarga e espumante… às vezes com pimenta!",
+          "pronuncia": "Os maias faziam uma bebida AMARGA e espumante… às vezes com PIMENTA!"
+        },
+        {
+          "texto": "Nada de docinho!",
+          "pronuncia": "[laughs] Nada de docinho!"
+        }
+      ]
+    },
+    {
+      "id": "dinheiro",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Já os astecas usavam as sementes de cacau como moeda!",
+          "pronuncia": "Já os astecas usavam as sementes de cacau como MOEDA!"
+        },
+        {
+          "texto": "Imagina pagar o pão… e receber o troco em sementinhas!",
+          "pronuncia": "[laughs] Imagina pagar o pão… e receber o troco em SEMENTINHAS!"
+        }
+      ]
+    },
+    {
+      "id": "europa",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "No século dezesseis, o cacau chegou à Europa… e lá ganhou açúcar!",
+          "pronuncia": "No século dezesseis, o cacau chegou à Europa… [excited] e lá ganhou AÇÚCAR!"
+        }
+      ]
+    },
+    {
+      "id": "barra",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Em 1847, uma fábrica inglesa criou uma das primeiras barras de chocolate pra comer.",
+          "pronuncia": "Em mil oitocentos e quarenta e sete, uma fábrica inglesa criou uma das primeiras BARRAS de chocolate pra comer."
+        },
+        {
+          "texto": "E em 1875, na Suíça, nasceu o chocolate ao leite!",
+          "pronuncia": "E em mil oitocentos e setenta e cinco, na Suíça, nasceu o chocolate ao LEITE!"
+        }
+      ]
+    },
+    {
+      "id": "conclusao",
+      "ato": "conclusão",
+      "falas": [
+        {
+          "texto": "Resumindo: de bebida amarga e dinheiro… a docinho de sobremesa!",
+          "pronuncia": "Resumindo: de bebida amarga e dinheiro… a DOCINHO de sobremesa!"
+        },
+        {
+          "texto": "E o seu favorito: ao leite, amargo ou branco? Conta aí!",
+          "pronuncia": "[curious] E o seu favorito: ao leite, amargo ou branco? Conta aí!"
+        }
+      ]
+    }
+  ],
+  "pausas": {
+    "entreCenas": 0.4,
+    "final": 1.8
+  }
+}
