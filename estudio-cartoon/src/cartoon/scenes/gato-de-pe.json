@@ -1,0 +1,143 @@
+{
+  "video": "gato-de-pe",
+  "titulo": "Como o gato sempre cai de pé?",
+  "fps": 30,
+  "duracaoSegundos": 60,
+  "personagem": "tito",
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "tS45q0QcrDHqHoaWdCDR",
+      "nome": "Lax (pt-BR, jovem e alegre) — voz do TITO",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.4,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
+  },
+  "musica": {
+    "bpm": 108,
+    "tom": -2
+  },
+  "fontes": [
+    "Live Science — How do cats land on their feet? (sistema vestibular do ouvido interno; coluna flexível; sem clavícula funcional; frente e trás giram em direções diferentes)",
+    "Purina — Do cats land on their feet? (reflexo de endireitamento; filhotes começam com ~3 semanas; não é infalível)",
+    "Catster / Wikipedia (High-rise syndrome) — gatos NÃO caem sempre ilesos: fraturas e lesões; precisa de altura/tempo para girar (valores de altura mínima divergem entre fontes: por isso não citamos número)"
+  ],
+  "cenas": [
+    {
+      "id": "gancho",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Por que o gato sempre cai de pé?",
+          "pronuncia": "[curious] Por que o gato SEMPRE cai de pé?"
+        }
+      ]
+    },
+    {
+      "id": "reflexo",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Não, ele não fez aula de ginástica olímpica…",
+          "pronuncia": "[laughs] Não, ele não fez aula de ginástica olímpica…"
+        },
+        {
+          "texto": "é um superpoder chamado reflexo de endireitamento!",
+          "pronuncia": "é um SUPERPODER chamado reflexo de endireitamento!"
+        }
+      ]
+    },
+    {
+      "id": "ouvido",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Primeiro, um sensor no ouvido interno avisa: o chão é pra lá!",
+          "pronuncia": "Primeiro, um sensor no ouvido interno avisa: [excited] o chão é pra LÁ!"
+        }
+      ]
+    },
+    {
+      "id": "gira",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Aí ele gira a cabeça e a parte da frente do corpo…",
+          "pronuncia": "Aí ele gira a cabeça e a parte da FRENTE do corpo…"
+        },
+        {
+          "texto": "e depois a parte de trás, tipo uma toalha sendo torcida!",
+          "pronuncia": "e depois a parte de TRÁS, tipo uma toalha sendo torcida!"
+        }
+      ]
+    },
+    {
+      "id": "coluna",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Isso funciona porque a coluna dele é superflexível e a clavícula é solta.",
+          "pronuncia": "Isso funciona porque a coluna dele é SUPERFLEXÍVEL… e a clavícula é solta."
+        }
+      ]
+    },
+    {
+      "id": "filhote",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E os filhotes já começam a treinar com poucas semanas de vida!",
+          "pronuncia": "E os filhotes já começam a treinar com POUCAS semanas de vida!"
+        }
+      ]
+    },
+    {
+      "id": "cuidado",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Mas atenção: não é mágica! O gato pode se machucar feio.",
+          "pronuncia": "Mas atenção: não é MÁGICA! O gato pode se machucar feio."
+        },
+        {
+          "texto": "Tem gato em casa? Tela de proteção na janela, sempre!",
+          "pronuncia": "Tem gato em casa? Tela de proteção na janela, SEMPRE!"
+        }
+      ]
+    },
+    {
+      "id": "conclusao",
+      "ato": "conclusão",
+      "falas": [
+        {
+          "texto": "Resumindo: ouvido que sabe onde é o chão, e um corpo que gira em duas partes!",
+          "pronuncia": "Resumindo: ouvido que sabe onde é o chão… e um corpo que gira em DUAS partes!"
+        },
+        {
+          "texto": "Seu gato já fez alguma acrobacia? Conta aí!",
+          "pronuncia": "[laughs] Seu gato já fez alguma acrobacia? Conta aí!"
+        }
+      ]
+    }
+  ],
+  "pausas": {
+    "entreCenas": 0.4,
+    "final": 1.8
+  }
+}
