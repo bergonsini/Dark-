@@ -1,6 +1,6 @@
 {
-  "video": "gato-de-pe",
-  "titulo": "Como o gato sempre cai de pé?",
+  "video": "chocolate",
+  "titulo": "Como surgiu o chocolate?",
   "fps": 30,
   "duracaoSegundos": 60,
   "personagem": "tito",
@@ -30,13 +30,14 @@
     "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
   },
   "musica": {
-    "bpm": 108,
-    "tom": -2
+    "bpm": 100,
+    "tom": -3
   },
   "fontes": [
-    "Live Science — How do cats land on their feet? (sistema vestibular do ouvido interno; coluna flexível; sem clavícula funcional; frente e trás giram em direções diferentes)",
-    "Purina — Do cats land on their feet? (reflexo de endireitamento; filhotes começam com ~3 semanas; não é infalível)",
-    "Catster / Wikipedia (High-rise syndrome) — gatos NÃO caem sempre ilesos: fraturas e lesões; precisa de altura/tempo para girar (valores de altura mínima divergem entre fontes: por isso não citamos número)"
+    "Mental Floss — Chocolate history (olmecas e maias; bebida amarga e espumante com pimenta; astecas: sementes de cacau como moeda; Europa adoça com açúcar)",
+    "History.com — The sweet history of chocolate (chegada à Europa no séc. XVI; açúcar e canela)",
+    "Wikipedia (Chocolate bar / Milk chocolate) e Cocoa Runners — Fry & Sons, Bristol, 1847: uma das primeiras barras sólidas para comer (o 'primeira' é disputado); chocolate ao leite: Daniel Peter, Suíça, 1875 (com o leite condensado de Henri Nestlé)",
+    "Datas olmecas variam (1750–1500 a.C.): por isso 'mais de três mil anos'; etimologia de 'chocolate' é disputada: não citada"
   ],
   "cenas": [
     {
@@ -44,80 +45,74 @@
       "ato": "começo",
       "falas": [
         {
-          "texto": "Por que o gato sempre cai de pé?",
-          "pronuncia": "[curious] Por que o gato SEMPRE cai de pé?"
+          "texto": "Sabia que o chocolate já foi dinheiro?",
+          "pronuncia": "[curious] Sabia que o chocolate já foi DINHEIRO?"
         }
       ]
     },
     {
-      "id": "reflexo",
+      "id": "origem",
       "ato": "começo",
       "falas": [
         {
-          "texto": "Não, ele não fez aula de ginástica olímpica…",
-          "pronuncia": "[laughs] Não, ele não fez aula de ginástica olímpica…"
+          "texto": "Mais de três mil anos atrás, povos do México e da América Central já usavam o cacau.",
+          "pronuncia": "Mais de TRÊS MIL anos atrás, povos do México e da América Central já usavam o cacau."
         },
         {
-          "texto": "é um superpoder chamado reflexo de endireitamento!",
-          "pronuncia": "é um SUPERPODER chamado reflexo de endireitamento!"
+          "texto": "Ele nasce numa fruta assim, cheia de sementes.",
+          "pronuncia": "Ele nasce numa fruta assim… cheia de SEMENTES."
         }
       ]
     },
     {
-      "id": "ouvido",
+      "id": "maias",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Primeiro, um sensor no ouvido interno avisa: o chão é pra lá!",
-          "pronuncia": "Primeiro, um sensor no ouvido interno avisa: [excited] o chão é pra LÁ!"
-        }
-      ]
-    },
-    {
-      "id": "gira",
-      "ato": "desenvolvimento",
-      "falas": [
-        {
-          "texto": "Aí ele gira a cabeça e a parte da frente do corpo…",
-          "pronuncia": "Aí ele gira a cabeça e a parte da FRENTE do corpo…"
+          "texto": "Os maias faziam uma bebida amarga e espumante… às vezes com pimenta!",
+          "pronuncia": "Os maias faziam uma bebida AMARGA e espumante… às vezes com PIMENTA!"
         },
         {
-          "texto": "e depois a parte de trás, tipo uma toalha sendo torcida!",
-          "pronuncia": "e depois a parte de TRÁS, tipo uma toalha sendo torcida!"
+          "texto": "Nada de docinho!",
+          "pronuncia": "[laughs] Nada de docinho!"
         }
       ]
     },
     {
-      "id": "coluna",
+      "id": "dinheiro",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Isso funciona porque a coluna dele é superflexível e a clavícula é solta.",
-          "pronuncia": "Isso funciona porque a coluna dele é SUPERFLEXÍVEL… e a clavícula é solta."
-        }
-      ]
-    },
-    {
-      "id": "filhote",
-      "ato": "desenvolvimento",
-      "falas": [
-        {
-          "texto": "E os filhotes já começam a treinar com poucas semanas de vida!",
-          "pronuncia": "E os filhotes já começam a treinar com POUCAS semanas de vida!"
-        }
-      ]
-    },
-    {
-      "id": "cuidado",
-      "ato": "desenvolvimento",
-      "falas": [
-        {
-          "texto": "Mas atenção: não é mágica! O gato pode se machucar feio.",
-          "pronuncia": "Mas atenção: não é MÁGICA! O gato pode se machucar feio."
+          "texto": "Já os astecas usavam as sementes de cacau como moeda!",
+          "pronuncia": "Já os astecas usavam as sementes de cacau como MOEDA!"
         },
         {
-          "texto": "Tem gato em casa? Tela de proteção na janela, sempre!",
-          "pronuncia": "Tem gato em casa? Tela de proteção na janela, SEMPRE!"
+          "texto": "Imagina pagar o pão… e receber o troco em sementinhas!",
+          "pronuncia": "[laughs] Imagina pagar o pão… e receber o troco em SEMENTINHAS!"
+        }
+      ]
+    },
+    {
+      "id": "europa",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "No século dezesseis, o cacau chegou à Europa… e lá ganhou açúcar!",
+          "pronuncia": "No século dezesseis, o cacau chegou à Europa… [excited] e lá ganhou AÇÚCAR!"
+        }
+      ]
+    },
+    {
+      "id": "barra",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Em 1847, uma fábrica inglesa criou uma das primeiras barras de chocolate pra comer.",
+          "pronuncia": "Em mil oitocentos e quarenta e sete, uma fábrica inglesa criou uma das primeiras BARRAS de chocolate pra comer."
+        },
+        {
+          "texto": "E em 1875, na Suíça, nasceu o chocolate ao leite!",
+          "pronuncia": "E em mil oitocentos e setenta e cinco, na Suíça, nasceu o chocolate ao LEITE!"
         }
       ]
     },
@@ -126,12 +121,12 @@
       "ato": "conclusão",
       "falas": [
         {
-          "texto": "Resumindo: ouvido que sabe onde é o chão, e um corpo que gira em duas partes!",
-          "pronuncia": "Resumindo: ouvido que sabe onde é o chão… e um corpo que gira em DUAS partes!"
+          "texto": "Resumindo: de bebida amarga e dinheiro… a docinho de sobremesa!",
+          "pronuncia": "Resumindo: de bebida amarga e dinheiro… a DOCINHO de sobremesa!"
         },
         {
-          "texto": "Seu gato já fez alguma acrobacia? Conta aí!",
-          "pronuncia": "[laughs] Seu gato já fez alguma acrobacia? Conta aí!"
+          "texto": "E o seu favorito: ao leite, amargo ou branco? Conta aí!",
+          "pronuncia": "[curious] E o seu favorito: ao leite, amargo ou branco? Conta aí!"
         }
       ]
     }
