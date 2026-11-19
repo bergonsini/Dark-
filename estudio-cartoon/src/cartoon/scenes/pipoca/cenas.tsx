@@ -193,7 +193,7 @@ export const S7Historia: React.FC<SceneProps> = ({ scene }) => {
         </Camera>
       )}
       <Tag text="PERU" x={540} y={300} at={peru} bg={C.red} color={C.white} size={60} />
-      {f >= mil && <TitleSlam text="MILHARES DE ANOS!" top={1200} size={96} color={C.yellow} at={mil} />}
+      {f >= mil && <TitleSlam text="MILHARES DE ANOS!" top={480} size={96} color={C.yellow} at={mil} />}
       <Sfx at={peru} name="pop" volume={0.45} />
       <Sfx at={arq} name="whoosh" volume={0.45} />
       <Sfx at={mil} name="tada" volume={0.45} />

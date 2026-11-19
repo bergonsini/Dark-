@@ -87,7 +87,7 @@ export const GraoPipoca: React.FC<{
 }> = ({ x, y, s = 1, corte = 0, vapor = 0, pressao = 0, estouro = -999, furos = false, seco = false, humor = "feliz", rosto = true, destaqueCasca = false }) => {
   const f = useCurrentFrame();
   const t = f - estouro;
-  if (t >= 0) {
+  if (estouro > -999 && t >= 0) {
     const pop = t < 10 ? 0.4 + (t / 10) * 0.9 : 1.3 - Math.min(0.3, (t - 10) * 0.03);
     return (
       <Tela>
