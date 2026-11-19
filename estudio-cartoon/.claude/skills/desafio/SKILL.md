@@ -14,9 +14,12 @@ MELHORADO: arte própria neon/arcade, tensão sonora, quadro secreto de vitória
 - **Sem narração** (custo zero de voz): só texto na tela, efeitos sonoros e música arcade.
 - Visual **neon/arcade**: fundo roxo escuro com grade rosa em perspectiva, estrelas, contornos que brilham (`filter="url(#neon)"`),
   textos com `brilho(cor)`. Cuidado: filtro de brilho em LINHA reta (bbox de altura 0) some — use `rect` fino.
-- 15–20 s: abertura (1,5 s) → 4–6 tentativas cada vez mais rápidas → cartão final "E VOCÊ? COMENTA QUANTOS ms 👇 / ↻ TENTA DE NOVO".
-- **Quadro secreto**: exatamente 1 frame (no 0:00.00) com "PERFEITO! COMENTA '…' 👇" nas tentativas em que o objeto passa do alvo.
-- Resultados mostrados variam (cedo demais, cedo, perto, bateu) para provocar.
+- **O VÍDEO NUNCA PAUSA SOZINHO (regra do usuário):** ele roda em LOOP contínuo e quem pausa é o ESPECTADOR. Nada de
+  "pausa simulada", "PAUSOU" ou resultado pré-definido: o PAINEL É AO VIVO e mostra, a cada frame, o que aconteceria se a pessoa
+  pausasse ali ("CEDO DEMAIS -1833 ms" → "CEDO" → "PERTO! -33 ms" → "BATEU! +33 ms").
+- Sem abertura nem cartão final (quebram o loop): título fixo no topo, 4–6 tentativas seguidas cada vez mais rápidas, e o fim
+  emenda no começo. 12–20 s.
+- **Quadro secreto**: exatamente 1 frame (no 0:00.00) de CADA tentativa, com "PERFEITO! COMENTA '…' 👇".
 
 ## Arquivos
 - `desafios/ativo.json` — desafio ativo (`desafio`, `duracaoFrames`, `musica`).
@@ -32,4 +35,4 @@ MELHORADO: arte própria neon/arcade, tensão sonora, quadro secreto de vitória
 ## Desafios feitos
 | # | id | Desafio |
 |---|---|---|
-| 1 | foguete | Pause antes do foguete bater na Lua (0:00.00), 5 tentativas, quadro secreto "SALVEI" |
+| 1 | foguete | Pause antes do foguete bater na Lua (0:00.00), 5 tentativas em loop, painel ao vivo, quadro secreto "SALVEI" |

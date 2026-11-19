@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Sequence, spring, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Sequence, useCurrentFrame } from "remotion";
 import { brilho, Cronometro, DefsNeon, FONTE, FundoNeon, MONO, NEON, PainelResultado, Resultado, Som } from "../neon";
 
 /**
@@ -8,18 +8,11 @@ import { brilho, Cronometro, DefsNeon, FONTE, FundoNeon, MONO, NEON, PainelResul
  * (nas tentativas em que o foguete passa da linha) aparece "PERFEITO! COMENTA SALVEI" por 1 frame só.
  */
 
-const INTRO = 45;
-const FIM = 54;
-type Rodada = { L: number; T: number; res: Resultado; para?: number; ms: number };
-/** L = duração da tentativa; T = frame em que o nariz chega na linha (0:00.00); para = frame da "pausa" simulada. */
-export const RODADAS: Rodada[] = [
-  { L: 100, T: 75, res: "cedoDemais", para: 46, ms: -967 },
-  { L: 92, T: 66, res: "bateu", ms: 267 },
-  { L: 84, T: 58, res: "perto", para: 56, ms: -67 },
-  { L: 78, T: 52, res: "cedo", para: 44, ms: -267 },
-  { L: 72, T: 46, res: "bateu", ms: 200 },
-];
-export const DURACAO = INTRO + RODADAS.reduce((a, r) => a + r.L, 0) + FIM;
+/** Rodadas em LOOP (o vídeo nunca pausa sozinho: quem pausa é o espectador). T = frame em que o nariz chega no 0:00.00. */
+type Rodada = { T: number };
+export const RODADAS: Rodada[] = [{ T: 75 }, { T: 66 }, { T: 58 }, { T: 52 }, { T: 46 }];
+const POS = 22; // depois do 0:00.00: bate (6 frames) + explosão, e já sai o próximo
+export const DURACAO = RODADAS.reduce((a, r) => a + r.T + POS, 0);
 
 const Y_INICIO = 1440; // nariz do foguete na plataforma
 const Y_LINHA = 960; // linha vermelha (0:00.00)
@@ -81,17 +74,22 @@ const Explosao: React.FC<{ t: number }> = ({ t }) => {
   );
 };
 
-/** Uma tentativa (frame local 0..L). */
+/** Veredito AO VIVO: o que aconteceria se o espectador pausasse neste frame. */
+const veredito = (f: number, T: number): { res: Resultado; ms: number } => {
+  const ms = Math.round(((f - T) * 1000) / 30);
+  if (f > T) return { res: "bateu", ms };
+  if (ms < -1000) return { res: "cedoDemais", ms };
+  if (ms < -300) return { res: "cedo", ms };
+  return { res: "perto", ms };
+};
+
+/** Uma tentativa (frame local 0..T+POS): o foguete sobe, passa do 0:00.00 e bate na Lua. */
 const Tentativa: React.FC<{ r: Rodada; n: number }> = ({ r, n }) => {
   const f = useCurrentFrame();
-  const parado = r.para !== undefined && f >= r.para;
-  const tPos = parado ? (r.para as number) : f;
-  const bate = r.res === "bateu" ? r.T + 6 : 9999;
-  const voando = !parado && f < bate;
-  const y = yNariz(tPos, r.T);
-  const restante = (r.T - tPos) / 30;
-  const fimVeredito = parado ? (r.para as number) + 2 : r.res === "bateu" ? bate + 2 : r.T;
-  const secreto = r.res === "bateu" && f === r.T;
+  const bate = r.T + 6;
+  const y = yNariz(f, r.T);
+  const { res, ms } = veredito(f, r.T);
+  const secreto = f === r.T;
   return (
     <AbsoluteFill>
       <svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{ position: "absolute", inset: 0 }}>
@@ -107,15 +105,11 @@ const Tentativa: React.FC<{ r: Rodada; n: number }> = ({ r, n }) => {
           0:00.00
         </text>
         <rect x={410} y={Y_INICIO + 250} width={260} height={30} rx={8} fill="#12052A" stroke={NEON.rosa} strokeWidth={6} filter="url(#neon)" />
-        {f < bate && <Foguete y={y} fogo={voando ? 1 : 0.25} tremor={voando ? 2 : 0} />}
+        {f < bate && <Foguete y={y} fogo={1} tremor={2} />}
         <Explosao t={f - bate} />
       </svg>
-      {parado && <div style={{ position: "absolute", inset: 0, background: "rgba(43,243,255,.10)" }} />}
-      {parado && (
-        <div style={{ position: "absolute", left: 0, right: 0, top: 1180, textAlign: "center", fontFamily: FONTE, fontWeight: 800, fontSize: 90, ...brilho(NEON.ciano, 0.8) }}>‖ PAUSOU</div>
-      )}
-      <PainelResultado n={n} total={RODADAS.length} res={r.res} ms={r.ms} at={fimVeredito} y={330} />
-      <Cronometro seg={f >= bate ? -(f - r.T) / 30 : restante} y={1730} cor={parado ? NEON.ciano : NEON.vermelho} piscando={parado} />
+      <PainelResultado n={n} total={RODADAS.length} res={res} ms={ms} at={-999} y={330} />
+      <Cronometro seg={(r.T - f) / 30} y={1730} />
       {secreto && (
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,.6)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", fontFamily: FONTE, fontWeight: 800 }}>
           <div style={{ fontSize: 150, ...brilho(NEON.verde, 1.2) }}>PERFEITO!</div>
@@ -123,82 +117,27 @@ const Tentativa: React.FC<{ r: Rodada; n: number }> = ({ r, n }) => {
           <div style={{ fontSize: 64, marginTop: 30, ...brilho(NEON.rosa, 0.8) }}>COMENTA "SALVEI" 👇</div>
         </div>
       )}
-      <Som at={0} nome="riser" vol={0.35} />
-      {[16, 10, 6, 3].map((d) => (r.T - d > 0 && (!r.para || r.T - d < r.para) ? <Som key={d} at={r.T - d} nome="click" vol={0.4} dur={8} /> : null))}
-      {r.para !== undefined && <Som at={r.para} nome="vhs" vol={0.4} dur={20} />}
-      {r.res === "perto" && <Som at={fimVeredito} nome="ding" vol={0.45} />}
-      {r.res === "bateu" && <Som at={bate} nome="boom" vol={0.6} />}
-    </AbsoluteFill>
-  );
-};
-
-/** Abertura (título que bate na tela) e cartão final ("E VOCÊ?"). */
-const Intro: React.FC = () => {
-  const f = useCurrentFrame();
-  const s = spring({ frame: f, fps: 30, config: { damping: 9, stiffness: 200 } });
-  return (
-    <AbsoluteFill>
-      <svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{ position: "absolute", inset: 0 }}>
-        <DefsNeon />
-        <FundoNeon />
-        <Lua />
-        <Foguete y={Y_INICIO} fogo={0.3} tremor={2} />
-      </svg>
-      <Cronometro seg={RODADAS[0].T / 30} y={1730} />
-      <Som at={0} nome="pop" vol={0.5} />
-      <Som at={10} nome="tada" vol={0.35} />
-      <div style={{ position: "absolute", left: 0, right: 0, top: 430, textAlign: "center", fontFamily: FONTE, fontWeight: 800, transform: `scale(${s})` }}>
-        <div style={{ fontSize: 96, ...brilho(NEON.ciano, 0.9) }}>PAUSE NO</div>
-        <div style={{ fontFamily: MONO, fontSize: 150, ...brilho(NEON.vermelho, 1) }}>0:00.00</div>
-      </div>
-    </AbsoluteFill>
-  );
-};
-
-const Final: React.FC = () => {
-  const f = useCurrentFrame();
-  const s = spring({ frame: f, fps: 30, config: { damping: 10, stiffness: 200 } });
-  return (
-    <AbsoluteFill>
-      <svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{ position: "absolute", inset: 0 }}>
-        <DefsNeon />
-        <FundoNeon />
-        <Lua />
-        <Foguete y={Y_INICIO} fogo={0.3} />
-      </svg>
-      <div style={{ position: "absolute", inset: 0, background: "rgba(10,0,25,.55)" }} />
-      <div style={{ position: "absolute", left: 0, right: 0, top: 560, textAlign: "center", fontFamily: FONTE, fontWeight: 800, transform: `scale(${s})` }}>
-        <div style={{ fontSize: 130, ...brilho(NEON.rosa, 1) }}>E VOCÊ?</div>
-        <div style={{ fontSize: 70, marginTop: 30, ...brilho(NEON.ciano, 0.7) }}>CONSEGUE PAUSAR NO</div>
-        <div style={{ fontFamily: MONO, fontSize: 140, ...brilho(NEON.vermelho, 1) }}>0:00.00?</div>
-        <div style={{ fontSize: 60, marginTop: 40, ...brilho(NEON.amarelo, 0.7) }}>COMENTA QUANTOS ms 👇</div>
-        <div style={{ fontSize: 60, marginTop: 20, opacity: Math.floor(f / 8) % 2 ? 1 : 0.4, ...brilho(NEON.verde, 0.7) }}>↻ TENTA DE NOVO</div>
-      </div>
-      <Som at={2} nome="tada" vol={0.4} />
+      <Som at={0} nome="riser" vol={0.3} />
+      {[16, 10, 6, 3].map((d) => (r.T - d > 0 ? <Som key={d} at={r.T - d} nome="click" vol={0.4} dur={8} /> : null))}
+      <Som at={bate} nome="boom" vol={0.6} dur={POS - 6} />
     </AbsoluteFill>
   );
 };
 
 export const DesafioFoguete: React.FC = () => {
-  let t = INTRO;
+  let t = 0;
   return (
     <AbsoluteFill style={{ background: NEON.fundo1 }}>
-      <Sequence from={0} durationInFrames={INTRO} name="intro">
-        <Intro />
-      </Sequence>
       {RODADAS.map((r, i) => {
         const from = t;
-        t += r.L;
+        t += r.T + POS;
         return (
-          <Sequence key={i} from={from} durationInFrames={r.L} name={`foguete ${i + 1}`}>
+          <Sequence key={i} from={from} durationInFrames={r.T + POS} name={`foguete ${i + 1}`}>
             <Tentativa r={r} n={i + 1} />
           </Sequence>
         );
       })}
-      <Sequence from={t} durationInFrames={FIM} name="final">
-        <Final />
-      </Sequence>
-      {/* título fixo no topo */}
+      {/* título fixo no topo (o vídeo roda em loop: quem pausa é o espectador) */}
       <div style={{ position: "absolute", left: 0, right: 0, top: 90, textAlign: "center", fontFamily: FONTE, fontWeight: 800, lineHeight: 1.0 }}>
         <div style={{ fontSize: 76, ...brilho(NEON.rosa, 0.9) }}>PAUSE ANTES DO FOGUETE</div>
         <div style={{ fontSize: 76, ...brilho(NEON.ciano, 0.9) }}>BATER NA LUA! 🚀</div>

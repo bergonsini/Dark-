@@ -145,7 +145,7 @@ export const PainelResultado: React.FC<{ n: number; total: number; res: Resultad
         <span>ALVO: 0:00.00</span>
       </div>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", height: 104 }}>
-        <span style={{ fontSize: 86, transform: `scale(${mostra ? 0.6 + s * 0.4 : 1})`, transformOrigin: "left center", ...brilho(mostra ? cor : NEON.ciano, 0.8) }}>
+        <span style={{ fontSize: 86, transform: `scale(${mostra && at > -999 ? 0.6 + s * 0.4 : 1})`, transformOrigin: "left center", ...brilho(mostra ? cor : NEON.ciano, 0.8) }}>
           {mostra ? txt : "• • •"}
         </span>
         <span style={{ fontFamily: MONO, fontSize: 46, ...brilho(mostra ? cor : NEON.ciano, 0.6) }}>{mostra ? `${ms > 0 ? "+" : ""}${ms} ms` : ""}</span>
