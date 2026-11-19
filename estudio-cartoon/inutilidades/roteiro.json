@@ -5,17 +5,17 @@
     "timeline": "src/inutilidades/timeline.json",
     "audio": "public/inutilidades/audio"
   },
-  "video": "secador-jato",
-  "titulo": "Secador a Jato",
-  "episodio": 6,
-  "duracaoSegundos": 45,
+  "video": "despertador-soco",
+  "titulo": "Despertador com Soco",
+  "episodio": 7,
+  "duracaoSegundos": 42,
   "pausas": {
     "entreCenas": 0.2,
     "final": 1.2
   },
   "musica": {
-    "bpm": 130,
-    "tom": -1
+    "bpm": 128,
+    "tom": 1
   },
   "voz": {
     "motor": "elevenlabs",
@@ -81,13 +81,13 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Cansada de esperar o cabelo secar?",
-          "pronuncia": "Cansada de esperar o cabelo SECAR?"
+          "texto": "Cansado de apertar a soneca quinze vezes?",
+          "pronuncia": "Cansado de apertar a SONECA quinze vezes?"
         },
         {
           "quem": "doutor",
-          "texto": "Vinte minutos, o braço cansa… e você chega atrasada!",
-          "pronuncia": "VINTE minutos, o braço cansa… e você chega ATRASADA!"
+          "texto": "O despertador grita… e você nem se mexe!",
+          "pronuncia": "O despertador GRITA… e você nem se MEXE!"
         }
       ]
     },
@@ -101,8 +101,8 @@
         },
         {
           "quem": "doutor",
-          "texto": "Apresento o Secador a Jato!",
-          "pronuncia": "Apresento o SECADOR A JATO!"
+          "texto": "Apresento o Despertador com Soco!",
+          "pronuncia": "Apresento o DESPERTADOR COM SOCO!"
         }
       ]
     },
@@ -111,24 +111,20 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Seca em um segundo!",
-          "pronuncia": "Seca em UM segundo!",
-          "pausaDepois": 1.0
-        },
-        {
-          "quem": "cleide",
-          "texto": "Socorro… mas tá sequinho!",
-          "pronuncia": "[surprised] Socorro… mas tá SEQUINHO!"
+          "texto": "Tocou? Acordou!",
+          "pronuncia": "Tocou? ACORDOU!",
+          "pausaDepois": 1.1
         },
         {
           "quem": "kuka",
-          "texto": "Meu cabelo!",
-          "pronuncia": "[surprised] Meu CABELO!"
+          "texto": "Acordei… no quintal do vizinho!",
+          "pronuncia": "[surprised] Acordei… no quintal do VIZINHO!"
         },
         {
           "quem": "doutor",
-          "texto": "Penteado aerodinâmico GARANTIDO!",
-          "pronuncia": "[excited] Penteado AERODINÂMICO garantido!"
+          "texto": "E no modo soneca: soco DUPLO!",
+          "pronuncia": "[excited] E no modo soneca: soco DUPLO!",
+          "pausaDepois": 0.9
         }
       ]
     },
@@ -137,18 +133,18 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "De 999 por apenas 59,90!",
-          "pronuncia": "De novecentos e noventa e nove por apenas CINQUENTA E NOVE E NOVENTA!"
+          "texto": "De 999 por apenas 34,90!",
+          "pronuncia": "De novecentos e noventa e nove por apenas TRINTA E QUATRO E NOVENTA!"
         },
         {
           "quem": "doutor",
-          "texto": "E ligando AGORA, ganhe um capacete de piloto de brinde!",
-          "pronuncia": "E ligando AGORA, ganhe um CAPACETE de piloto de brinde!"
+          "texto": "E ligando AGORA, ganhe um travesseiro de capacete!",
+          "pronuncia": "E ligando AGORA, ganhe um travesseiro de CAPACETE!"
         },
         {
-          "quem": "cleide",
-          "texto": "Manda dois… e um paraquedas!",
-          "pronuncia": "[excited] Manda DOIS… e um PARAQUEDAS!"
+          "quem": "kuka",
+          "texto": "Manda dois… um é pra segunda-feira!",
+          "pronuncia": "[excited] Manda DOIS… um é pra SEGUNDA-FEIRA!"
         },
         {
           "quem": "doutor",
@@ -162,8 +158,8 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Não usar em ambientes fechados. Nem abertos. Cabelo não incluso.",
-          "pronuncia": "Não usar em ambientes fechados. Nem abertos. Cabelo não incluso.",
+          "texto": "Não tem botão de desligar. Nem de soneca. Dentes não inclusos.",
+          "pronuncia": "Não tem botão de desligar. Nem de soneca. Dentes não inclusos.",
           "velocidade": 1.15
         }
       ]

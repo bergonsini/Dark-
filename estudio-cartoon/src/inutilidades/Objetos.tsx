@@ -843,3 +843,179 @@ export const CapacetePiloto: React.FC<{ x: number; y: number; escala?: number }>
     <circle cx={60} cy={-72} r={44} fill="#BFE6FF" />
   </g>
 );
+
+/* ------------------------------------------------------------------ Ep. 7 — Despertador com Soco */
+
+/** Quarto do Seu Kuka: parede azul de bolinhas, janela (de noite/dia) e piso de madeira. `janelaQuebrada` = buraco em forma de Kuka. */
+export const Quarto: React.FC<{ noite?: boolean; janelaQuebrada?: boolean }> = ({ noite = false, janelaQuebrada = false }) => (
+  <g strokeLinejoin="round" strokeLinecap="round">
+    <rect width={1080} height={1920} fill="#BFD8F2" />
+    <g fill="#A9C8EA">
+      {Array.from({ length: 70 }).map((_, i) => (
+        <circle key={i} cx={(i % 10) * 120 + ((Math.floor(i / 10) % 2) * 60)} cy={Math.floor(i / 10) * 190 + 60} r={16} />
+      ))}
+    </g>
+    <rect y={1460} width={1080} height={460} fill="#B07A50" />
+    <g stroke="#8A5A36" strokeWidth={6}>
+      {[1560, 1680, 1800].map((y) => (
+        <path key={y} d={`M0 ${y} L1080 ${y}`} />
+      ))}
+    </g>
+    <path d="M0 1460 L1080 1460" stroke={TINTA} strokeWidth={10} />
+    {/* janela */}
+    <g transform="translate(800 520)" stroke={TINTA} strokeWidth={10}>
+      <rect x={-200} y={-230} width={400} height={460} rx={14} fill={noite ? "#1D2A5C" : "#9ED8FF"} />
+      {noite ? (
+        <g stroke="none">
+          <circle cx={-80} cy={-120} r={46} fill="#FFF3B0" />
+          <circle cx={-60} cy={-135} r={40} fill="#1D2A5C" />
+          {[[60, -150], [120, -60], [-120, 60], [90, 120]].map(([sx, sy], i) => (
+            <circle key={i} cx={sx} cy={sy} r={6} fill="#fff" />
+          ))}
+        </g>
+      ) : (
+        <circle cx={110} cy={-130} r={54} fill="#FFD23F" stroke="none" />
+      )}
+      {janelaQuebrada ? (
+        <g>
+          <path d="M-110 -140 Q -40 -230 30 -150 L 90 -170 L 120 -60 Q 160 40 80 90 L 60 200 L -70 200 L -90 90 Q -170 0 -110 -140 Z" fill={noite ? "#0E1640" : "#7FC6F5"} strokeWidth={6} />
+          <path d="M-200 -230 L-110 -140 M200 -230 L90 -170 M200 230 L60 200 M-200 230 L-70 200" strokeWidth={6} />
+        </g>
+      ) : (
+        <path d="M0 -230 L0 230 M-200 0 L200 0" />
+      )}
+      <rect x={-230} y={230} width={460} height={34} rx={10} fill="#fff" />
+    </g>
+  </g>
+);
+
+/** Cabeceira da cama (vai ATRÁS do personagem). */
+export const CamaCabeceira: React.FC<{ x?: number; y?: number }> = ({ x = 420, y = 1180 }) => (
+  <g transform={`translate(${x} ${y})`} stroke={TINTA} strokeWidth={10} strokeLinejoin="round">
+    <path d="M-330 300 L-330 -120 Q -330 -220 -230 -220 L230 -220 Q 330 -220 330 -120 L330 300 Z" fill="#8B5A2B" />
+    <path d="M-260 300 L-260 -100 Q -260 -150 -210 -150 L210 -150 Q 260 -150 260 -100 L260 300" fill="#A8703A" strokeWidth={6} />
+    <ellipse cx={0} cy={60} rx={220} ry={90} fill="#fff" />
+  </g>
+);
+
+/** Cobertor + pé da cama (vai NA FRENTE do personagem, cobrindo do peito pra baixo). */
+export const CamaFrente: React.FC<{ x?: number; y?: number }> = ({ x = 420, y = 1180 }) => (
+  <g transform={`translate(${x} ${y})`} stroke={TINTA} strokeWidth={10} strokeLinejoin="round">
+    <path d="M-370 170 Q -300 120 -200 150 Q 0 110 200 150 Q 300 120 370 170 L380 470 L-380 470 Z" fill="#E8282B" />
+    <g fill="#FFD23F" stroke="none">
+      {[[-250, 260], [-80, 320], [90, 250], [250, 330], [-180, 410], [160, 420]].map(([cx, cy], i) => (
+        <path key={i} d={`M${cx} ${cy - 26} l 8 18 20 2 -15 13 5 20 -18 -11 -18 11 5 -20 -15 -13 20 -2 Z`} />
+      ))}
+    </g>
+    <rect x={-390} y={460} width={780} height={70} rx={14} fill="#8B5A2B" />
+    <rect x={-380} y={520} width={40} height={60} fill="#6B4320" />
+    <rect x={340} y={520} width={40} height={60} fill="#6B4320" />
+  </g>
+);
+
+/** Criado-mudo (mesinha de cabeceira). */
+export const CriadoMudo: React.FC<{ x: number; y: number; escala?: number }> = ({ x, y, escala = 1 }) => (
+  <g transform={`translate(${x} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
+    <rect x={-130} y={0} width={260} height={300} rx={12} fill="#A8703A" />
+    <rect x={-110} y={30} width={220} height={110} rx={8} fill="#C08A50" />
+    <circle cx={0} cy={85} r={12} fill="#FFD23F" />
+    <rect x={-145} y={-16} width={290} height={30} rx={8} fill="#8B5A2B" />
+  </g>
+);
+
+/**
+ * O DESPERTADOR COM SOCO: relógio vermelho de dois sinos com uma luva de boxe numa mola sanfonada.
+ * `tocando` faz tremer e soltar ondas; `soco` 0..1 estica a mola (para a direita; use `flip` p/ esquerda);
+ * `duplo` = duas luvas (modo soneca); `texto` = hora no visor.
+ */
+export const Despertador: React.FC<{ x: number; y: number; escala?: number; tocando?: boolean; soco?: number; duplo?: boolean; flip?: boolean; texto?: string; rot?: number }> = ({
+  x,
+  y,
+  escala = 1,
+  tocando = false,
+  soco = 0,
+  duplo = false,
+  flip = false,
+  texto = "6:00",
+  rot = 0,
+}) => {
+  const f = useCurrentFrame();
+  const tr = tocando ? Math.sin(f * 2.1) * 7 : 0;
+  const alc = 40 + soco * 520;
+  const luva = (dy: number, k: number) => {
+    const n = 7;
+    let d = `M0 ${dy}`;
+    for (let i = 1; i <= n; i++) d += ` L${(alc * i) / n} ${dy + (i % 2 ? -26 : 26)}`;
+    return (
+      <g key={k}>
+        <path d={d} fill="none" stroke="#9AA3AE" strokeWidth={12} />
+        <g transform={`translate(${alc} ${dy})`}>
+          <path d="M-20 -60 Q 90 -95 110 -10 Q 120 70 30 75 Q -30 78 -30 40 Z" fill="#E8282B" />
+          <path d="M20 -70 Q 70 -110 95 -50" fill="#E8282B" />
+          <path d="M-36 -40 L-36 60 L-10 60 L-10 -50 Z" fill="#fff" />
+          <path d="M40 -30 Q 70 -10 60 30" fill="none" stroke="#fff" strokeWidth={8} opacity={0.6} />
+        </g>
+      </g>
+    );
+  };
+  return (
+    <g transform={`translate(${x} ${y}) scale(${(flip ? -1 : 1) * escala} ${escala}) rotate(${rot + tr})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round" strokeLinecap="round">
+      {/* luva(s) saem da lateral */}
+      <g transform="translate(150 -40)">{duplo ? [luva(-80, 0), luva(70, 1)] : luva(0, 0)}</g>
+      {/* sinos */}
+      <g transform={`rotate(${tocando ? Math.sin(f * 3) * 12 : 0} -110 -170)`}>
+        <path d="M-180 -150 Q -180 -250 -90 -250 Q -60 -200 -90 -150 Z" fill="#C9D0DC" />
+      </g>
+      <g transform={`rotate(${tocando ? -Math.sin(f * 3) * 12 : 0} 110 -170)`}>
+        <path d="M180 -150 Q 180 -250 90 -250 Q 60 -200 90 -150 Z" fill="#C9D0DC" />
+      </g>
+      <path d="M0 -175 L0 -230" strokeWidth={14} />
+      <circle cx={0} cy={-238} r={18} fill="#C9D0DC" />
+      {/* pés */}
+      <path d="M-110 140 L-150 200 M110 140 L150 200" strokeWidth={18} />
+      {/* corpo */}
+      <circle r={175} fill="#E8282B" />
+      <circle r={140} fill="#FFF8E7" />
+      <text y={36} textAnchor="middle" fontSize={92} fill={TINTA} stroke="none" fontFamily="'DejaVu Sans Mono', monospace" fontWeight={700} transform={flip ? "scale(-1 1)" : undefined}>
+        {texto}
+      </text>
+      <path d="M-60 -70 L-30 -50 M60 -70 L30 -50" strokeWidth={10} />
+      {tocando && (
+        <g fill="none" stroke="#FFD23F" strokeWidth={12} opacity={0.9}>
+          {[0, 1].map((i) => {
+            const q = ((f * 1.5 + i * 15) % 30) / 30;
+            const r = 210 + q * 120;
+            return <path key={i} d={`M${-r * 0.7} ${-r * 0.7} A ${r} ${r} 0 0 0 ${-r * 0.7} ${r * 0.7} M${r * 0.7} ${-r * 0.7} A ${r} ${r} 0 0 1 ${r * 0.7} ${r * 0.7}`} opacity={1 - q} />;
+          })}
+        </g>
+      )}
+    </g>
+  );
+};
+
+/** "Z z z" subindo (alguém dormindo). */
+export const Zzz: React.FC<{ x: number; y: number }> = ({ x, y }) => {
+  const f = useCurrentFrame();
+  return (
+    <g fontFamily="'Baloo 2'" fontWeight={800} fill="#fff" stroke={TINTA} strokeWidth={8} paintOrder="stroke">
+      {[0, 1, 2].map((i) => {
+        const q = ((f + i * 20) % 60) / 60;
+        return (
+          <text key={i} x={x + q * 80 + i * 10} y={y - q * 200} fontSize={60 + q * 50} opacity={q < 0.8 ? 1 : (1 - q) * 5}>
+            Z
+          </text>
+        );
+      })}
+    </g>
+  );
+};
+
+/** Travesseiro de capacete (brinde): travesseiro branco com casco amarelo de obra por cima. */
+export const TravesseiroCapacete: React.FC<{ x: number; y: number; escala?: number }> = ({ x, y, escala = 1 }) => (
+  <g transform={`translate(${x} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
+    <path d="M-190 -60 Q -200 -110 -140 -100 Q 0 -130 140 -100 Q 200 -110 190 -60 Q 210 0 190 60 Q 200 110 140 100 Q 0 130 -140 100 Q -200 110 -190 60 Q -210 0 -190 -60 Z" fill="#fff" />
+    <path d="M-120 -40 Q -120 -190 0 -190 Q 120 -190 120 -40 Z" fill="#FFC21A" />
+    <rect x={-160} y={-50} width={320} height={30} rx={12} fill="#FFC21A" />
+    <rect x={-14} y={-190} width={28} height={140} fill="#E5A800" strokeWidth={5} />
+  </g>
+);

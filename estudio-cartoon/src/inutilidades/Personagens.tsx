@@ -227,14 +227,16 @@ export const SeuKuka: React.FC<{
   galos?: boolean;
   /** sem cabelo nenhum (o black power voou) */
   careca?: boolean;
-}> = ({ x, y, escala = 1, boca = 0, estado = "normal", pose = "parado", feliz = false, flip = false, banguela = false, espuma = 0, arrepiado = false, suor = false, escova, treme = 0, molhado = false, esponja = false, abafado = false, barba = 0, galos = false, careca = false }) => {
+  /** de olhos fechados (dormindo) */
+  dormindo?: boolean;
+}> = ({ x, y, escala = 1, boca = 0, estado = "normal", pose = "parado", feliz = false, flip = false, banguela = false, espuma = 0, arrepiado = false, suor = false, escova, treme = 0, molhado = false, esponja = false, abafado = false, barba = 0, galos = false, careca = false, dormindo = false }) => {
   const f = useCurrentFrame();
   const P = POSES_KUKA[pose];
   const tost = estado === "tostado";
   const PELE = tost ? "#B9805A" : "#E0A16E";
   const CAMISA = tost ? "#3E8F52" : molhado ? "#33945A" : "#4FBF6A";
   const bob = Math.sin(f * 0.13 + 1) * 4;
-  const pisca = piscar(f, 2);
+  const pisca = dormindo || piscar(f, 2);
   const triste = estado === "faminto";
   const ab = boca;
   return (

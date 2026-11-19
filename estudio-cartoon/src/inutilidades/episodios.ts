@@ -6,6 +6,7 @@ import * as tapete from "./episodios/tapete-turbo";
 import * as pilula from "./episodios/pilula-pena";
 import * as secador from "./episodios/secador-jato";
 import * as ratoeira from "./episodios/ratoeira-explosiva";
+import * as despertador from "./episodios/despertador-soco";
 
 export type Episodio = {
   cenas: { id: string; Comp: React.FC<CenaProps>; glitch?: boolean; glitchEm?: number }[];
@@ -23,4 +24,5 @@ export const EPISODIOS: Record<string, Episodio> = {
   "tapete-turbo": tapete.EPISODIO,
   "pilula-pena": pilula.EPISODIO,
   "secador-jato": secador.EPISODIO,
+  "despertador-soco": despertador.EPISODIO,
 };
