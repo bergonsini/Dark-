@@ -1,0 +1,168 @@
+{
+  "projeto": "inutilidades",
+  "fps": 30,
+  "saida": {
+    "timeline": "src/inutilidades/timeline.json",
+    "audio": "public/inutilidades/audio"
+  },
+  "video": "despertador-soco",
+  "titulo": "Despertador com Soco",
+  "episodio": 7,
+  "duracaoSegundos": 42,
+  "pausas": {
+    "entreCenas": 0.2,
+    "final": 1.2
+  },
+  "musica": {
+    "bpm": 128,
+    "tom": 1
+  },
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_santa",
+      "velocidade": 1.05
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "+8%"
+    },
+    "elevenlabs": {
+      "voiceId": "xJ8U5HgW3Zps75qgYrFw",
+      "nome": "Carlos (pt-BR, ofertas) — DOUTOR OFERTA",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.35,
+      "similaridade": 0.75
+    },
+    "estiloInterpretacao": "televendas: empolgado, rápido, MAIÚSCULAS na ênfase"
+  },
+  "personagens": {
+    "doutor": {},
+    "kuka": {
+      "kokoro": {
+        "voz": "pm_alex",
+        "velocidade": 0.95
+      },
+      "elevenlabs": {
+        "voiceId": "mP51FBaz7jxNEIeFJwxX",
+        "nome": "Silas (pt-BR, interior) — SEU KUKA BELUDO",
+        "estabilidade": 0.45
+      }
+    },
+    "rato": {
+      "kokoro": {
+        "voz": "pm_alex",
+        "velocidade": 0.9
+      },
+      "elevenlabs": {
+        "voiceId": "mP51FBaz7jxNEIeFJwxX",
+        "nome": "Silas afinado — RATO",
+        "estabilidade": 0.45
+      },
+      "afinar": 1.45
+    },
+    "cleide": {
+      "kokoro": {
+        "voz": "pf_dora",
+        "velocidade": 1.0
+      },
+      "elevenlabs": {
+        "voiceId": "CS2gH5fPqUCmkVNpHsy4",
+        "nome": "Raquel (pt-BR, 55 anos, interior) — DONA CLEIDE",
+        "estabilidade": 0.45
+      }
+    }
+  },
+  "cenas": [
+    {
+      "id": "problema",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Cansado de apertar a soneca quinze vezes?",
+          "pronuncia": "Cansado de apertar a SONECA quinze vezes?"
+        },
+        {
+          "quem": "doutor",
+          "texto": "O despertador grita… e você nem se mexe!",
+          "pronuncia": "O despertador GRITA… e você nem se MEXE!"
+        }
+      ]
+    },
+    {
+      "id": "produto",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Seus problemas ACABARAM!",
+          "pronuncia": "[excited] Seus problemas ACABARAM!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Apresento o Despertador com Soco!",
+          "pronuncia": "Apresento o DESPERTADOR COM SOCO!"
+        }
+      ]
+    },
+    {
+      "id": "demonstracao",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Tocou? Acordou!",
+          "pronuncia": "Tocou? ACORDOU!",
+          "pausaDepois": 1.1
+        },
+        {
+          "quem": "kuka",
+          "texto": "Acordei… no quintal do vizinho!",
+          "pronuncia": "[surprised] Acordei… no quintal do VIZINHO!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "E no modo soneca: soco DUPLO!",
+          "pronuncia": "[excited] E no modo soneca: soco DUPLO!",
+          "pausaDepois": 0.9
+        }
+      ]
+    },
+    {
+      "id": "oferta",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "De 999 por apenas 34,90!",
+          "pronuncia": "De novecentos e noventa e nove por apenas TRINTA E QUATRO E NOVENTA!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "E ligando AGORA, ganhe um travesseiro de capacete!",
+          "pronuncia": "E ligando AGORA, ganhe um travesseiro de CAPACETE!"
+        },
+        {
+          "quem": "kuka",
+          "texto": "Manda dois… um é pra segunda-feira!",
+          "pronuncia": "[excited] Manda DOIS… um é pra SEGUNDA-FEIRA!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Ligue já!",
+          "pronuncia": "LIGUE JÁ!"
+        }
+      ]
+    },
+    {
+      "id": "letrinhas",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Não tem botão de desligar. Nem de soneca. Dentes não inclusos.",
+          "pronuncia": "Não tem botão de desligar. Nem de soneca. Dentes não inclusos.",
+          "velocidade": 1.15
+        }
+      ]
+    }
+  ]
+}
