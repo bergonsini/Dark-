@@ -1,6 +1,6 @@
 {
-  "video": "pipoca",
-  "titulo": "Por que a pipoca estoura?",
+  "video": "cocegas",
+  "titulo": "Por que não dá pra fazer cócegas em si mesmo?",
   "fps": 30,
   "duracaoSegundos": 60,
   "personagem": "tito",
@@ -30,14 +30,13 @@
     "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
   },
   "musica": {
-    "bpm": 112,
-    "tom": -2
+    "bpm": 118,
+    "tom": 2
   },
   "fontes": [
-    "Scientific American / Popular Science / Mental Floss — ~13,5–14% de umidade; casca (pericarpo) quase impermeável prende o vapor; estoura por volta de 180 °C; amido gelatiniza e expande em espuma",
-    "USDA National Agricultural Library / Live Science — milho comum tem casca porosa e o vapor escapa; pouca umidade = não estoura (piruá)",
-    "Smithsonian / Live Science / National Geographic (2012) — restos de milho e pipoca no Peru (Paredones e Huaca Prieta), milhares de anos",
-    "Expansão: fontes variam (20–50x): por isso 'dezenas de vezes'"
+    "Blakemore, Wolpert & Frith (Nature Neuroscience 1998; NeuroReport 2000) / UCL — o cerebelo prevê a sensação dos próprios movimentos e atenua a resposta; fMRI",
+    "Scientific American / Mental Floss / ScienceAlert — com um robô intermediário, um pequeno atraso fazia a autocócega voltar a ser sentida",
+    "Panksepp & Burgdorf (1999), Scientific American, NPR (2016, Ishiyama & Brecht, Science) — ratos fazem chiados ultrassônicos (~50 kHz, inaudíveis pra nós) quando ganham cócegas"
   ],
   "cenas": [
     {
@@ -45,80 +44,70 @@
       "ato": "começo",
       "falas": [
         {
-          "texto": "Por que a pipoca estoura?",
-          "pronuncia": "[curious] Por que a pipoca ESTOURA?"
+          "texto": "Por que cócega sozinho não funciona?",
+          "pronuncia": "[curious] Por que CÓCEGA sozinho não funciona?"
         }
       ]
     },
     {
-      "id": "grao",
+      "id": "cerebelo",
       "ato": "começo",
       "falas": [
         {
-          "texto": "Cada grão de milho de pipoca guarda um pouquinho de água lá dentro.",
-          "pronuncia": "Cada grão de milho de pipoca guarda um pouquinho de ÁGUA lá dentro."
+          "texto": "Quem estraga a brincadeira é o seu cérebro.",
+          "pronuncia": "Quem estraga a brincadeira é o seu CÉREBRO."
         },
         {
-          "texto": "E tem uma casca bem durinha, que não deixa nada escapar.",
-          "pronuncia": "E tem uma casca bem DURINHA, que não deixa nada escapar."
+          "texto": "Mais exatamente, o cerebelo, aqui atrás da cabeça.",
+          "pronuncia": "Mais exatamente, o CEREBELO, aqui atrás da cabeça."
         }
       ]
     },
     {
-      "id": "pressao",
+      "id": "previsao",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Na panela, a água vira vapor… e a pressão vai subindo, subindo…",
-          "pronuncia": "Na panela, a água vira VAPOR… e a pressão vai subindo, subindo…"
-        }
-      ]
-    },
-    {
-      "id": "pop",
-      "ato": "desenvolvimento",
-      "falas": [
-        {
-          "texto": "Até a casca não aguentar e… pop!",
-          "pronuncia": "Até a casca não aguentar e… [excited] POP!"
+          "texto": "Quando você se mexe, ele prevê o que você vai sentir…",
+          "pronuncia": "Quando você se mexe, ele PREVÊ o que você vai sentir…"
         },
         {
-          "texto": "O amido de dentro vira uma espuma branquinha, dezenas de vezes maior!",
-          "pronuncia": "O amido de dentro vira uma espuma branquinha, DEZENAS de vezes maior!"
+          "texto": "e abaixa o volume da sensação.",
+          "pronuncia": "e ABAIXA o volume da sensação."
         }
       ]
     },
     {
-      "id": "milho",
+      "id": "surpresa",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "E por que o milho comum não vira pipoca?",
-          "pronuncia": "[curious] E por que o milho comum não vira pipoca?"
+          "texto": "Só que cócega precisa de surpresa!",
+          "pronuncia": "Só que cócega precisa de SURPRESA!"
         },
         {
-          "texto": "A casca dele é cheia de furinhos, e o vapor escapa antes de estourar.",
-          "pronuncia": "A casca dele é cheia de FURINHOS, e o vapor escapa antes de estourar."
+          "texto": "Quando é outra pessoa, o cérebro não sabe onde vai ser… e aí, risada!",
+          "pronuncia": "Quando é OUTRA pessoa, o cérebro não sabe onde vai ser… e aí, [laughs] risada!"
         }
       ]
     },
     {
-      "id": "pirua",
+      "id": "robo",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "E o piruá? É o grão que secou demais: sem água, sem vapor, sem pop.",
-          "pronuncia": "E o piruá? É o grão que secou demais: sem água, sem vapor… sem POP."
+          "texto": "Cientistas testaram com um robô: com um atrasinho no movimento, a cócega voltava!",
+          "pronuncia": "Cientistas testaram com um ROBÔ: com um atrasinho no movimento, a cócega VOLTAVA!"
         }
       ]
     },
     {
-      "id": "historia",
+      "id": "ratos",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "E no Peru, arqueólogos acharam pipoca com milhares de anos!",
-          "pronuncia": "[excited] E no Peru, arqueólogos acharam pipoca com MILHARES de anos!"
+          "texto": "E ratos também dão risadinhas com cócegas, num som fino demais pro nosso ouvido!",
+          "pronuncia": "[excited] E RATOS também dão risadinhas com cócegas, num som fino demais pro nosso ouvido!"
         }
       ]
     },
@@ -127,12 +116,12 @@
       "ato": "conclusão",
       "falas": [
         {
-          "texto": "Resumindo: pipoca é o milho que não aguentou a pressão… igual a gente em dia de prova!",
-          "pronuncia": "Resumindo: pipoca é o milho que não aguentou a PRESSÃO… [laughs] igual a gente em dia de prova!"
+          "texto": "Resumindo: o cérebro é tipo o amigo que conta o final do filme… sem surpresa, sem graça!",
+          "pronuncia": "Resumindo: o cérebro é tipo o amigo que conta o FINAL do filme… sem surpresa, sem GRAÇA!"
         },
         {
-          "texto": "E você, prefere doce ou salgada? Conta aí!",
-          "pronuncia": "[curious] E você, prefere doce ou salgada? Conta aí!"
+          "texto": "E você, tem muita cócega? Conta aí!",
+          "pronuncia": "[curious] E você, tem MUITA cócega? Conta aí!"
         }
       ]
     }

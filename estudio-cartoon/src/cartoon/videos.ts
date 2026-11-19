@@ -11,6 +11,7 @@ import * as gatoDePe from "./scenes/gato-de-pe";
 import * as chocolate from "./scenes/chocolate";
 import * as soluco from "./scenes/soluco";
 import * as pipoca from "./scenes/pipoca";
+import * as cocegas from "./scenes/cocegas";
 
 /**
  * Catálogo de vídeos. Cada vídeo tem sua pasta em ./scenes/<id>/ com um index.ts que exporta CENAS
@@ -31,6 +32,7 @@ export const VIDEOS: Record<string, Cena[]> = {
   chocolate: chocolate.CENAS,
   soluco: soluco.CENAS,
   pipoca: pipoca.CENAS,
+  cocegas: cocegas.CENAS,
 };
 
 export const cenasDoVideo = (video?: string): Cena[] => {
