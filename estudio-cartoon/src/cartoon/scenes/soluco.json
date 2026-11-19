@@ -1,0 +1,147 @@
+{
+  "video": "soluco",
+  "titulo": "Por que a gente soluça?",
+  "fps": 30,
+  "duracaoSegundos": 60,
+  "personagem": "tito",
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "tS45q0QcrDHqHoaWdCDR",
+      "nome": "Lax (pt-BR, jovem e alegre) — voz do TITO",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.4,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
+  },
+  "musica": {
+    "bpm": 110,
+    "tom": 0
+  },
+  "fontes": [
+    "Mayo Clinic / MedicineNet / Science Notes — espasmo involuntário do diafragma + fechamento da glote (cordas vocais) = 'hic'; gatilhos: comer rápido/demais, bebidas gaseificadas, nervosismo/empolgação; procurar médico se durar > 48 h",
+    "ScienceAlert / Wikipedia (Hiccup) — Charles Osborne: ~68 anos de soluço (1922–1990), recorde do Guinness",
+    "Discover Magazine / Wikipedia — fetos soluçam (ultrassom); remédios caseiros sem comprovação científica de qualidade; a maioria passa sozinha"
+  ],
+  "cenas": [
+    {
+      "id": "gancho",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Por que a gente soluça do nada?",
+          "pronuncia": "[curious] Por que a gente SOLUÇA do nada?"
+        }
+      ]
+    },
+    {
+      "id": "diafragma",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Embaixo dos pulmões tem um músculo chamado diafragma.",
+          "pronuncia": "Embaixo dos pulmões tem um músculo chamado DIAFRAGMA."
+        },
+        {
+          "texto": "Ele sobe e desce pra você respirar, tipo um trampolim.",
+          "pronuncia": "Ele sobe e desce pra você respirar… tipo um TRAMPOLIM."
+        }
+      ]
+    },
+    {
+      "id": "tranco",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "No soluço, ele dá um tranco sem avisar… e você puxa o ar de repente.",
+          "pronuncia": "No soluço, ele dá um TRANCO sem avisar… e você puxa o ar de repente."
+        }
+      ]
+    },
+    {
+      "id": "hic",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Aí as cordas vocais fecham na hora… e sai o famoso hic!",
+          "pronuncia": "Aí as cordas vocais FECHAM na hora… [laughs] e sai o famoso HIC!"
+        }
+      ]
+    },
+    {
+      "id": "gatilhos",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Comer rápido demais, refrigerante e até nervosismo podem irritar esse músculo.",
+          "pronuncia": "Comer rápido DEMAIS, refrigerante… e até nervosismo podem irritar esse músculo."
+        }
+      ]
+    },
+    {
+      "id": "recorde",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E o recorde? Um americano soluçou por sessenta e oito anos!",
+          "pronuncia": "[excited] E o recorde? Um americano soluçou por SESSENTA E OITO anos!"
+        },
+        {
+          "texto": "E até bebê na barriga da mãe soluça!",
+          "pronuncia": "E até bebê na barriga da mãe SOLUÇA!"
+        }
+      ]
+    },
+    {
+      "id": "simpatias",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E as simpatias? Água de cabeça pra baixo, susto, açúcar…",
+          "pronuncia": "[curious] E as simpatias? Água de cabeça pra baixo, SUSTO, açúcar…"
+        },
+        {
+          "texto": "A ciência não comprovou nenhuma. Quase sempre passa sozinho!",
+          "pronuncia": "A ciência não comprovou NENHUMA. Quase sempre passa sozinho!"
+        },
+        {
+          "texto": "Mas se durar mais de dois dias, procure um médico.",
+          "pronuncia": "Mas se durar mais de DOIS dias, procure um médico."
+        }
+      ]
+    },
+    {
+      "id": "conclusao",
+      "ato": "conclusão",
+      "falas": [
+        {
+          "texto": "Resumindo: o diafragma dá um tranco e as cordas vocais fazem hic!",
+          "pronuncia": "Resumindo: o diafragma dá um tranco… e as cordas vocais fazem HIC!"
+        },
+        {
+          "texto": "E você, qual simpatia usa? Conta aí!",
+          "pronuncia": "[laughs] E você, qual simpatia usa? Conta aí!"
+        }
+      ]
+    }
+  ],
+  "pausas": {
+    "entreCenas": 0.4,
+    "final": 1.8
+  }
+}
