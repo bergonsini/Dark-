@@ -7,6 +7,7 @@ import { TitoReiVideo } from "./titorei/TitoReiVideo";
 import { timeline as timelineRei } from "./titorei/timeline";
 import { InutilidadesVideo } from "./inutilidades/InutilidadesVideo";
 import { timeline as timelineInu } from "./inutilidades/timeline";
+import { DesafioVideo, desafioAtivo } from "./desafio/DesafioVideo";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -24,6 +25,8 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="TitoRei" component={TitoReiVideo} durationInFrames={timelineRei.durationInFrames} fps={FPS} width={WIDTH} height={HEIGHT} />
       {/* 3º INUTILIDADES 0800: comerciais de televendas de produtos absurdos, 2D + VHS (skill inutilidades) */}
       <Composition id="Inutilidades" component={InutilidadesVideo} durationInFrames={timelineInu.durationInFrames} fps={FPS} width={WIDTH} height={HEIGHT} />
+      {/* 4º canal (nome a definir): DESAFIO DO PAUSE, neon/arcade, sem narração (skill desafio) */}
+      <Composition id="Desafio" component={DesafioVideo} durationInFrames={desafioAtivo().duracao} fps={FPS} width={WIDTH} height={HEIGHT} />
     </>
   );
 };

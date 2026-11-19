@@ -1,0 +1,29 @@
+import React from "react";
+import { AbsoluteFill, Audio, interpolate, staticFile } from "remotion";
+import "../cartoon/fonts";
+import ativo from "../../desafios/ativo.json";
+import { DesafioFoguete, DURACAO as DUR_FOGUETE } from "./desafios/foguete";
+
+/**
+ * CANAL 4 — desafio do pause (nome a definir). Neon/arcade, sem personagem fixo, SEM narração.
+ * Catálogo de desafios: id (desafios/ativo.json "desafio") → componente + duração.
+ */
+export const DESAFIOS: Record<string, { Comp: React.FC; duracao: number }> = {
+  foguete: { Comp: DesafioFoguete, duracao: DUR_FOGUETE },
+};
+
+export const desafioAtivo = () => {
+  const d = DESAFIOS[ativo.desafio];
+  if (!d) throw new Error(`Desafio desconhecido: ${ativo.desafio}. Registre em src/desafio/DesafioVideo.tsx`);
+  return d;
+};
+
+export const DesafioVideo: React.FC = () => {
+  const { Comp, duracao } = desafioAtivo();
+  return (
+    <AbsoluteFill>
+      <Comp />
+      <Audio src={staticFile("desafio/audio/music.wav")} volume={(f) => 0.6 * interpolate(f, [duracao - 20, duracao], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })} />
+    </AbsoluteFill>
+  );
+};

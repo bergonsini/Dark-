@@ -50,7 +50,11 @@
     "inutilidades:audio": "python3 .claude/skills/cartoon-explainer/scripts/generate_audio.py --roteiro inutilidades/roteiro.json",
     "inutilidades:render": "remotion render Inutilidades out/inutilidades.mp4 --concurrency=4",
     "inutilidades:qa": "python3 .claude/skills/cartoon-explainer/scripts/qa_check.py out/inutilidades.mp4 --timeline src/inutilidades/timeline.json --audio public/inutilidades/audio",
-    "inutilidades:video": "npm run inutilidades:audio && npm run inutilidades:render && npm run inutilidades:qa"
+    "inutilidades:video": "npm run inutilidades:audio && npm run inutilidades:render && npm run inutilidades:qa",
+    "desafio:audio": "python3 .claude/skills/desafio/scripts/desafio_audio.py",
+    "desafio:render": "remotion render Desafio out/desafio.mp4 --concurrency=4",
+    "desafio:qa": "python3 .claude/skills/desafio/scripts/desafio_qa.py",
+    "desafio:video": "npm run desafio:audio && npm run desafio:render && npm run desafio:qa"
   },
   "allowScripts": {
     "esbuild": false
