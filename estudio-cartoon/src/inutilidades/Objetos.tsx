@@ -715,3 +715,67 @@ export const Lustre: React.FC<{ x: number; y?: number; balanca?: number }> = ({ 
     </g>
   );
 };
+
+/** Rajadas de vento (traços curvos atravessando a tela da esquerda pra direita). */
+export const Vento: React.FC<{ forca?: number }> = ({ forca = 1 }) => {
+  const f = useCurrentFrame();
+  return (
+    <g fill="none" stroke="#fff" strokeWidth={10} strokeLinecap="round" opacity={0.75 * forca}>
+      {Array.from({ length: 9 }).map((_, i) => {
+        const x = ((i * 233 + f * 48) % 1500) - 300;
+        const y = 300 + i * 160;
+        return <path key={i} d={`M${x} ${y} q 120 -30 240 0 q 60 15 90 -10`} />;
+      })}
+    </g>
+  );
+};
+
+/** Chapéu de aba (o da Dona Cleide). */
+export const Chapeu: React.FC<{ x: number; y: number; escala?: number; rot?: number }> = ({ x, y, escala = 1, rot = 0 }) => (
+  <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${escala})`} stroke={TINTA} strokeWidth={7} strokeLinejoin="round">
+    <ellipse cx={0} cy={0} rx={150} ry={30} fill="#E8282B" />
+    <path d="M-80 0 Q -80 -110 0 -110 Q 80 -110 80 0 Z" fill="#E8282B" />
+    <path d="M-80 -20 L80 -20" stroke="#FFD23F" strokeWidth={16} />
+  </g>
+);
+
+/**
+ * Prédio em corte: apartamento de CIMA (y 0..900) e de BAIXO (y 980..1920), separados pela laje (900..980).
+ * `racha` 0..1 desenha rachaduras; `buraco` abre um rombo na laje (x 380..700).
+ */
+export const PredioCorte: React.FC<{ racha?: number; buraco?: boolean }> = ({ racha = 0, buraco = false }) => (
+  <g strokeLinejoin="round">
+    <rect y={0} width={1080} height={900} fill="#E9D3F2" />
+    <g fill="#DDBFE9">
+      {Array.from({ length: 12 }).map((_, i) => (
+        <rect key={i} x={i * 100} y={0} width={46} height={900} />
+      ))}
+    </g>
+    <rect y={980} width={1080} height={940} fill="#F4D9A8" />
+    <g stroke="#E5C38E" strokeWidth={5}>
+      {Array.from({ length: 10 }).map((_, i) => (
+        <path key={i} d={`M0 ${1000 + i * 90} L1080 ${1000 + i * 90}`} />
+      ))}
+    </g>
+    <rect y={1800} width={1080} height={120} fill="#C9A27A" stroke={TINTA} strokeWidth={8} />
+    {/* laje */}
+    {buraco ? (
+      <g>
+        <path d="M-10 900 L380 900 L400 930 L370 960 L390 980 L-10 980 Z" fill="#9E9E9E" stroke={TINTA} strokeWidth={8} />
+        <path d="M1090 900 L700 900 L680 935 L710 955 L690 980 L1090 980 Z" fill="#9E9E9E" stroke={TINTA} strokeWidth={8} />
+      </g>
+    ) : (
+      <rect x={-10} y={900} width={1100} height={80} fill="#9E9E9E" stroke={TINTA} strokeWidth={8} />
+    )}
+    {racha > 0 && !buraco && (
+      <path d="M540 900 l -30 30 l 40 20 l -20 30 M540 900 l 50 25 l -30 30" fill="none" stroke={TINTA} strokeWidth={8} opacity={racha} />
+    )}
+    {buraco && (
+      <g fill="#9E9E9E" stroke={TINTA} strokeWidth={6}>
+        {[[420, 1760, 20], [600, 1770, -15], [500, 1785, 40], [680, 1740, 10]].map(([cx, cy, r], i) => (
+          <rect key={i} x={cx} y={cy} width={70} height={40} transform={`rotate(${r} ${cx + 35} ${cy + 20})`} />
+        ))}
+      </g>
+    )}
+  </g>
+);
