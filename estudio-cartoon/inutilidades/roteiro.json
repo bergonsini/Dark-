@@ -5,8 +5,8 @@
     "timeline": "src/inutilidades/timeline.json",
     "audio": "public/inutilidades/audio"
   },
-  "video": "pilula-chumbo",
-  "titulo": "Pílula Chumbo",
+  "video": "secador-jato",
+  "titulo": "Secador a Jato",
   "episodio": 6,
   "duracaoSegundos": 45,
   "pausas": {
@@ -14,8 +14,8 @@
     "final": 1.2
   },
   "musica": {
-    "bpm": 118,
-    "tom": -6
+    "bpm": 130,
+    "tom": -1
   },
   "voz": {
     "motor": "elevenlabs",
@@ -81,13 +81,13 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Cansada de ser levada pelo vento?",
-          "pronuncia": "Cansada de ser LEVADA pelo vento?"
+          "texto": "Cansada de esperar o cabelo secar?",
+          "pronuncia": "Cansada de esperar o cabelo SECAR?"
         },
         {
           "quem": "doutor",
-          "texto": "Primeiro o chapéu, depois o guarda-chuva… e depois você?!",
-          "pronuncia": "Primeiro o chapéu, depois o guarda-chuva… e depois VOCÊ?!"
+          "texto": "Vinte minutos, o braço cansa… e você chega atrasada!",
+          "pronuncia": "VINTE minutos, o braço cansa… e você chega ATRASADA!"
         }
       ]
     },
@@ -101,8 +101,8 @@
         },
         {
           "quem": "doutor",
-          "texto": "Apresento a Pílula Chumbo!",
-          "pronuncia": "Apresento a PÍLULA CHUMBO!"
+          "texto": "Apresento o Secador a Jato!",
+          "pronuncia": "Apresento o SECADOR A JATO!"
         }
       ]
     },
@@ -111,24 +111,24 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Uma pílula e você fica firme como uma rocha!",
-          "pronuncia": "Uma pílula… e você fica FIRME como uma rocha!",
+          "texto": "Seca em um segundo!",
+          "pronuncia": "Seca em UM segundo!",
           "pausaDepois": 1.0
         },
         {
           "quem": "cleide",
-          "texto": "Ué… cadê o chão?",
-          "pronuncia": "[surprised] Ué… cadê o CHÃO?"
+          "texto": "Socorro… mas tá sequinho!",
+          "pronuncia": "[surprised] Socorro… mas tá SEQUINHO!"
         },
         {
           "quem": "kuka",
-          "texto": "Boa tarde, Dona Cleide.",
-          "pronuncia": "[deadpan] Boa tarde, Dona Cleide."
+          "texto": "Meu cabelo!",
+          "pronuncia": "[surprised] Meu CABELO!"
         },
         {
           "quem": "doutor",
-          "texto": "Firmeza GARANTIDA!",
-          "pronuncia": "[excited] Firmeza GARANTIDA!"
+          "texto": "Penteado aerodinâmico GARANTIDO!",
+          "pronuncia": "[excited] Penteado AERODINÂMICO garantido!"
         }
       ]
     },
@@ -137,23 +137,18 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "De 999 por apenas 39,90!",
-          "pronuncia": "De novecentos e noventa e nove por apenas TRINTA E NOVE E NOVENTA!"
+          "texto": "De 999 por apenas 59,90!",
+          "pronuncia": "De novecentos e noventa e nove por apenas CINQUENTA E NOVE E NOVENTA!"
         },
         {
           "quem": "doutor",
-          "texto": "E ligando AGORA, ganhe uma Pílula Pena de brinde, pra equilibrar!",
-          "pronuncia": "E ligando AGORA, ganhe uma PÍLULA PENA de brinde, pra equilibrar!"
+          "texto": "E ligando AGORA, ganhe um capacete de piloto de brinde!",
+          "pronuncia": "E ligando AGORA, ganhe um CAPACETE de piloto de brinde!"
         },
         {
           "quem": "cleide",
-          "texto": "Tomei as duas… e agora?",
-          "pronuncia": "[sighs] Tomei as duas… e AGORA?"
-        },
-        {
-          "quem": "kuka",
-          "texto": "Manda duas!",
-          "pronuncia": "[excited] Manda DUAS!"
+          "texto": "Manda dois… e um paraquedas!",
+          "pronuncia": "[excited] Manda DOIS… e um PARAQUEDAS!"
         },
         {
           "quem": "doutor",
@@ -167,8 +162,8 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Não tomar no segundo andar. O vizinho de baixo agradece.",
-          "pronuncia": "Não tomar no segundo andar. O vizinho de baixo agradece.",
+          "texto": "Não usar em ambientes fechados. Nem abertos. Cabelo não incluso.",
+          "pronuncia": "Não usar em ambientes fechados. Nem abertos. Cabelo não incluso.",
           "velocidade": 1.15
         }
       ]

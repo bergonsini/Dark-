@@ -225,7 +225,9 @@ export const SeuKuka: React.FC<{
   barba?: number;
   /** galos na cabeça + estrelinhas girando (bateu em algo) */
   galos?: boolean;
-}> = ({ x, y, escala = 1, boca = 0, estado = "normal", pose = "parado", feliz = false, flip = false, banguela = false, espuma = 0, arrepiado = false, suor = false, escova, treme = 0, molhado = false, esponja = false, abafado = false, barba = 0, galos = false }) => {
+  /** sem cabelo nenhum (o black power voou) */
+  careca?: boolean;
+}> = ({ x, y, escala = 1, boca = 0, estado = "normal", pose = "parado", feliz = false, flip = false, banguela = false, espuma = 0, arrepiado = false, suor = false, escova, treme = 0, molhado = false, esponja = false, abafado = false, barba = 0, galos = false, careca = false }) => {
   const f = useCurrentFrame();
   const P = POSES_KUKA[pose];
   const tost = estado === "tostado";
@@ -259,7 +261,7 @@ export const SeuKuka: React.FC<{
         {/* cabeça */}
         <circle cx={0} cy={-740} r={170} fill={PELE} />
         {/* cabelo: black power volumoso (o "Beludo") — queimado vira carvão com fumaça */}
-        <g fill={tost ? "#2a2a2a" : esponja ? "#5A4020" : "#3A2414"} transform={esponja ? "translate(0 -760) scale(1.3) translate(0 760)" : undefined}>
+        <g fill={tost ? "#2a2a2a" : esponja ? "#5A4020" : "#3A2414"} transform={esponja ? "translate(0 -760) scale(1.3) translate(0 760)" : undefined} opacity={careca ? 0 : 1}>
           {(arrepiado
             ? [
                 // soprado para trás (vento do motor): o volume vai para a esquerda e para cima, sem cobrir o rosto
@@ -359,6 +361,7 @@ export const SeuKuka: React.FC<{
             <path d="M90 -790 L160 -820 M110 -835 L140 -775" stroke="#E8282B" strokeWidth={16} />
           </>
         )}
+        {careca && <path d="M-80 -880 Q 0 -920 80 -880" fill="none" stroke="#fff" strokeWidth={14} opacity={0.6} />}
         {/* sobrancelhas (o Kuka tostado NÃO tem sobrancelha) */}
         {!tost && (
           <path
@@ -569,12 +572,16 @@ export const DonaCleide: React.FC<{
   treme?: number;
   /** gira o corpo inteiro (flutuando/voando) */
   giro?: number;
-}> = ({ x, y, escala = 1, boca = 0, expr = "feliz", pose = "parado", suor = false, treme = 0, giro = 0 }) => {
+  /** cabelo molhado: mais escuro e pingando */
+  molhada?: boolean;
+  /** cabelo esticado pra trás feito cauda de cometa (vento do secador a jato) */
+  cometa?: boolean;
+}> = ({ x, y, escala = 1, boca = 0, expr = "feliz", pose = "parado", suor = false, treme = 0, giro = 0, molhada = false, cometa = false }) => {
   const f = useCurrentFrame();
   const P = POSES_CLEIDE[pose];
   const PELE = "#C98B5E";
   const VEST = "#9A3FD0";
-  const CAB = "#E8742B";
+  const CAB = molhada ? "#A8501C" : "#E8742B";
   const pisca = piscar(f, 4);
   const ab = Math.max(boca, expr === "surpresa" || expr === "assustada" ? 0.5 : 0);
   const tx = treme ? Math.sin(f * 3.1) * treme : 0;
@@ -597,8 +604,15 @@ export const DonaCleide: React.FC<{
       <Braco o={[120, -590]} {...P.D} cor={VEST} pele={PELE} grossura={48} l1={115} l2={105} />
       {/* pescoço + cabeça */}
       <rect x={-30} y={-680} width={60} height={60} fill={PELE} />
+      {cometa && (
+        <g fill={CAB}>
+          {[-60, 0, 60].map((dy, i) => (
+            <path key={i} d={`M-100 ${-860 + dy} Q -420 ${-900 + dy + Math.sin(f * 0.8 + i) * 30} -760 ${-860 + dy * 2 + Math.sin(f * 0.6 + i) * 50} Q -420 ${-820 + dy} -100 ${-800 + dy} Z`} />
+          ))}
+        </g>
+      )}
       {/* cabelo volumoso atrás + coque */}
-      <g fill={CAB}>
+      <g fill={CAB} transform={cometa ? "translate(-60 0) scale(0.8 0.9)" : undefined}>
         <circle cx={0} cy={-1020} r={70} />
         {[[-150, -820, 80], [150, -820, 80], [-120, -930, 85], [120, -930, 85], [0, -970, 95], [-170, -720, 55], [170, -720, 55]].map(([cx, cy, r], i) => (
           <circle key={i} cx={cx} cy={cy} r={r} />
@@ -633,6 +647,14 @@ export const DonaCleide: React.FC<{
         <path d="M-36 -712 Q 0 -738 36 -712" fill="none" stroke="#D81B60" strokeWidth={11} />
       ) : (
         <path d="M-40 -735 Q 0 -700 40 -735" fill="none" stroke="#D81B60" strokeWidth={11} />
+      )}
+      {molhada && (
+        <g fill="#7FD3FF" strokeWidth={4}>
+          {[[-190, -760], [-140, -680], [170, -700], [200, -780], [0, -1060]].map(([cx, cy], i) => {
+            const q = ((f + i * 7) % 24) / 24;
+            return <path key={i} d={`M${cx} ${cy + q * 110} q 13 20 0 28 q -13 -8 0 -28 Z`} opacity={1 - q * 0.5} />;
+          })}
+        </g>
       )}
       {suor && (
         <g fill="#7FD3FF" strokeWidth={4}>

@@ -779,3 +779,67 @@ export const PredioCorte: React.FC<{ racha?: number; buraco?: boolean }> = ({ ra
     )}
   </g>
 );
+
+/** Secador de cabelo comum (fraquinho), bico pra direita. Origem no cabo. */
+export const SecadorComum: React.FC<{ x: number; y: number; escala?: number; rot?: number }> = ({ x, y, escala = 1, rot = 0 }) => {
+  const f = useCurrentFrame();
+  return (
+    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${escala})`} stroke={TINTA} strokeWidth={7} strokeLinejoin="round">
+      <rect x={-30} y={-10} width={60} height={160} rx={20} fill="#FF7AB6" />
+      <rect x={-90} y={-110} width={220} height={110} rx={50} fill="#FF7AB6" />
+      <rect x={130} y={-90} width={60} height={70} rx={10} fill="#E05A9A" />
+      <g fill="none" stroke="#fff" strokeWidth={6} opacity={0.6}>
+        <path d={`M200 ${-70 + Math.sin(f * 0.4) * 4} q 20 6 40 0`} />
+        <path d={`M200 ${-40 + Math.sin(f * 0.4 + 1) * 4} q 20 6 40 0`} />
+      </g>
+    </g>
+  );
+};
+
+/** O SECADOR A JATO: corpo de secador com uma turbina de avião e fogo saindo. `ligado` 0..1. */
+export const SecadorJato: React.FC<{ x: number; y: number; escala?: number; rot?: number; ligado?: number }> = ({ x, y, escala = 1, rot = 0, ligado = 0 }) => {
+  const f = useCurrentFrame();
+  const fl = ligado * (1 + Math.sin(f * 2.3) * 0.2);
+  return (
+    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
+      {ligado > 0 && (
+        <g>
+          <path d={`M230 -110 L${230 + 380 * fl} -60 L230 -10 Z`} fill="#FF8C1A" />
+          <path d={`M230 -90 L${230 + 240 * fl} -60 L230 -30 Z`} fill="#FFD23F" strokeWidth={4} />
+        </g>
+      )}
+      <rect x={-30} y={0} width={70} height={180} rx={20} fill="#9AA4B5" />
+      <path d="M-160 -150 L180 -150 L240 -110 L240 -10 L180 30 L-160 30 Z" fill="#C9D0DC" />
+      <ellipse cx={-160} cy={-60} rx={40} ry={90} fill="#555" />
+      {[0, 1, 2, 3, 4, 5].map((i) => (
+        <path key={i} d={`M-160 -60 L${-160 + Math.cos(f * 0.9 * ligado + i) * 30} ${-60 + Math.sin(f * 0.9 * ligado + i) * 80}`} strokeWidth={6} />
+      ))}
+      <path d="M-100 -150 L-60 -200 L60 -200 L100 -150" fill="#E8282B" />
+      <text x={30} y={-45} textAnchor="middle" fontSize={56} fill="#E8282B" stroke={TINTA} strokeWidth={4} paintOrder="stroke" fontFamily="'Baloo 2'" fontWeight={800}>
+        JATO
+      </text>
+    </g>
+  );
+};
+
+/** Black power do Seu Kuka voando sozinho pelo céu, como algodão-doce. */
+export const BlackPowerVoando: React.FC<{ x: number; y: number; escala?: number }> = ({ x, y, escala = 1 }) => {
+  const f = useCurrentFrame();
+  return (
+    <g transform={`translate(${x} ${y}) rotate(${f * 4}) scale(${escala})`} fill="#3A2414" stroke={TINTA} strokeWidth={8}>
+      {[[-100, -40, 70], [-30, -90, 80], [60, -80, 76], [110, -10, 64], [40, 50, 70], [-60, 40, 66], [0, -10, 70]].map(([cx, cy, r], i) => (
+        <circle key={i} cx={cx} cy={cy} r={r} />
+      ))}
+    </g>
+  );
+};
+
+/** Capacete de piloto (couro + óculos de aviador). */
+export const CapacetePiloto: React.FC<{ x: number; y: number; escala?: number }> = ({ x, y, escala = 1 }) => (
+  <g transform={`translate(${x} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
+    <path d="M-150 40 Q -160 -170 0 -170 Q 160 -170 150 40 L110 60 L110 -10 L-110 -10 L-110 60 Z" fill="#8D5524" />
+    <rect x={-150} y={-90} width={300} height={36} rx={14} fill="#5D3A1A" />
+    <circle cx={-60} cy={-72} r={44} fill="#BFE6FF" />
+    <circle cx={60} cy={-72} r={44} fill="#BFE6FF" />
+  </g>
+);

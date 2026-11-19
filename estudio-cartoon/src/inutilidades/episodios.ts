@@ -4,7 +4,7 @@ import * as controle from "./episodios/controle-remoto";
 import * as escova from "./episodios/escova-turbo";
 import * as tapete from "./episodios/tapete-turbo";
 import * as pilula from "./episodios/pilula-pena";
-import * as chumbo from "./episodios/pilula-chumbo";
+import * as secador from "./episodios/secador-jato";
 import * as ratoeira from "./episodios/ratoeira-explosiva";
 
 export type Episodio = {
@@ -22,5 +22,5 @@ export const EPISODIOS: Record<string, Episodio> = {
   "controle-remoto": controle.EPISODIO,
   "tapete-turbo": tapete.EPISODIO,
   "pilula-pena": pilula.EPISODIO,
-  "pilula-chumbo": chumbo.EPISODIO,
+  "secador-jato": secador.EPISODIO,
 };

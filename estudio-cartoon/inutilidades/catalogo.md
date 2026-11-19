@@ -37,5 +37,5 @@ Loja de televendas fictícia. Comerciais em 2D + VHS, 30–45 s.
 ## Lições
 - O PROBLEMA precisa ser exagerado e reconhecível (ex.: "5 segundos até a cozinha = eternidade") e a SOLUÇÃO tem que ser absurda e "funcionar" de um jeito desastroso. "Ventilação no guarda-chuva" ficou fraco.
 - FORMATO CURTO (pedido no ep. 5): sem gancho separado e sem depoimento — começa direto no PROBLEMA (que já serve de gancho).
-- Gancho entre comerciais: a PÍLULA CHUMBO foi anunciada "no próximo comercial".
+- A PÍLULA CHUMBO foi anunciada no ep. 5, mas o usuário NÃO quis fazer (rascunho descartado): não retomar.
 - Piada sobre peso: a graça é LITERAL (perder o peso = flutuar), nunca sobre o corpo de ninguém.
