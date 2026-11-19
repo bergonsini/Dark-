@@ -21,13 +21,14 @@ Loja de televendas fictícia. Comerciais em 2D + VHS, 30–45 s.
 | 3 | controle-remoto | Controle Remoto Universal de Verdade | de R$ 999 por R$ 39,90 (+ controle do controle) | 0800-PAUSE | 7 → 9 ("Manda dois!"); pausou o rato e EJETOU o Doutor |
 | 4 | tapete-turbo | Tapete Escorregador Turbo | de R$ 999 por R$ 49,90 (+ capacete) | 0800-ZUUUM | 10 → 12 ("Manda dois!"); atravessou 3 paredes e parou no bairro vizinho |
 | 5 | pilula-pena | Pílula Pena | de R$ 999 por R$ 39,90 (+ tijolo pra voltar pro chão) | 0800-LEVINHA | Kuka 14 (flutuando: "Manda DOIS!"); estreia da Dona Cleide |
+| 6 | secador-jato | Secador a Jato | de R$ 999 por R$ 59,90 (+ capacete de piloto) | 0800-DECOLA | Kuka ficou CARECA (black power voou); Dona Cleide decolou com o cabelo de cometa |
 
 ## Ideias na fila (lista aprovada pelo usuário; ✅ = já virou vídeo)
 - **Casa:** ~~Guarda-chuva de Peneira~~ (rascunho feito e descartado: o usuário não gostou do problema/solução "cabeça abafada") · Travesseiro de Pedra · Ventilador Reverso · Cortina de Vidro Transparente · ✅ Tapete Escorregador Turbo ·
   Lâmpada que Apaga · Porta Giratória Doméstica 2000 · Cama Elástica de Teto
 - **Cozinha:** Pipoca Pré-Mastigada · Garrafa de Água Vazia · Panela Antiaderente de Tudo · Liquidificador Sem Tampa Pro Max ·
   Geladeira Aquecida · Garfo de Sopa · Torradeira Lança-Pão 3000
-- **Saúde e beleza:** ✅ Escova de Dentes Turbo V8 · Secador de Cabelo a Jato · Academia de Bolso · Protetor Solar de Tinta Branca ·
+- **Saúde e beleza:** ✅ Escova de Dentes Turbo V8 · ✅ Secador de Cabelo a Jato · Academia de Bolso · Protetor Solar de Tinta Branca ·
   Shampoo Fortalecedor de Cimento · Óculos Escuros de Tijolo
 - **Tecnologia:** GPS Pessimista · Celular de Madeira · Despertador com Soco · ✅ Controle Remoto Universal de Verdade · Wi-Fi de Fio · Fone Antirruído Extremo
 - **Transporte e lazer:** Sapato com Rodinha na Ponta · Kit Escada de 1 Degrau · Bicicleta Quadrada · Boia de Chumbo · Paraquedas de Abrir no Chão · Pipa de Concreto
