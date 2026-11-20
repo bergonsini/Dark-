@@ -50,7 +50,8 @@
       "falas": [
         {
           "texto": "Chegou no zero e… PIM! Era só pipoca.",
-          "pronuncia": "[excited] Chegou no ZERO e… PIM! [deadpan] Era só pipoca."
+          "pronuncia": "[excited] Chegou no ZERO e… PIM! [deadpan] Era só pipoca.",
+          "aceleraLocal": 1.28
         }
       ]
     },
