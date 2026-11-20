@@ -116,11 +116,12 @@ const ROTULO: Record<Resultado, [string, string]> = {
  * Painel de resultado (no topo): "FOGUETE 2/5", o veredito colorido, a diferença em ms e uma régua com o alvo no meio.
  * `ms` negativo = pausou antes; positivo = passou do ponto. `at` = frame em que o veredito aparece (antes disso: "…").
  */
-export const PainelResultado: React.FC<{ n: number; total: number; res: Resultado; ms: number; at: number; y?: number }> = ({ n, total, res, ms, at, y = 330 }) => {
+export const PainelResultado: React.FC<{ n: number; total: number; res: Resultado; ms: number; at: number; y?: number; nome?: string; rotulos?: Partial<Record<Resultado, string>> }> = ({ n, total, res, ms, at, y = 330, nome = "FOGUETE", rotulos }) => {
   const f = useCurrentFrame();
   const mostra = f >= at;
   const s = mostra ? spring({ frame: f - at, fps: 30, config: { damping: 10, stiffness: 260, mass: 0.5 } }) : 0;
-  const [txt, cor] = ROTULO[res];
+  const [txt0, cor] = ROTULO[res];
+  const txt = rotulos?.[res] ?? txt0;
   const pos = Math.max(0, Math.min(1, 0.5 + ms / 3000));
   return (
     <div
@@ -140,7 +141,7 @@ export const PainelResultado: React.FC<{ n: number; total: number; res: Resultad
     >
       <div style={{ display: "flex", justifyContent: "space-between", fontFamily: MONO, fontSize: 30, color: "#C9B8FF" }}>
         <span>
-          FOGUETE {n}/{total}
+          {nome} {n}/{total}
         </span>
         <span>ALVO: 0:00.00</span>
       </div>

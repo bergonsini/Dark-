@@ -1,9 +1,9 @@
 {
-  "desafio": "foguete",
-  "titulo": "Pause antes do foguete bater na Lua",
+  "desafio": "balao",
+  "titulo": "Pause antes do balão estourar",
   "duracaoFrames": 407,
   "musica": {
-    "bpm": 150,
-    "tom": -5
+    "bpm": 140,
+    "tom": -2
   }
 }

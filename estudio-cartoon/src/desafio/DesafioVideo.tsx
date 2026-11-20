@@ -3,6 +3,7 @@ import { AbsoluteFill, Audio, interpolate, staticFile } from "remotion";
 import "../cartoon/fonts";
 import ativo from "../../desafios/ativo.json";
 import { DesafioFoguete, DURACAO as DUR_FOGUETE } from "./desafios/foguete";
+import { DesafioBalao, DURACAO as DUR_BALAO } from "./desafios/balao";
 
 /**
  * CANAL 4 — desafio do pause (nome a definir). Neon/arcade, sem personagem fixo, SEM narração.
@@ -10,6 +11,7 @@ import { DesafioFoguete, DURACAO as DUR_FOGUETE } from "./desafios/foguete";
  */
 export const DESAFIOS: Record<string, { Comp: React.FC; duracao: number }> = {
   foguete: { Comp: DesafioFoguete, duracao: DUR_FOGUETE },
+  balao: { Comp: DesafioBalao, duracao: DUR_BALAO },
 };
 
 export const desafioAtivo = () => {
