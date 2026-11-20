@@ -14,9 +14,15 @@ export const RODADAS: Rodada[] = [{ T: 75 }, { T: 66 }, { T: 58 }, { T: 52 }, { 
 const POS = 22; // depois do 0:00.00: bate (6 frames) + explosão, e já sai o próximo
 export const DURACAO = RODADAS.reduce((a, r) => a + r.T + POS, 0);
 
+/*
+ * ZONAS SEGURAS (Reels/TikTok): o ícone de PLAY/PAUSE aparece no CENTRO da tela ao pausar, os botões (curtir,
+ * comentar…) ficam na DIREITA embaixo e o nome/legenda do post cobre o RODAPÉ. Por isso: cronômetro no topo,
+ * foguete e Lua à ESQUERDA (X_ACAO) e o quadro secreto entre o centro e o rodapé, alinhado à esquerda.
+ */
+const X_ACAO = 300; // eixo do foguete e da Lua (fora do ícone de play)
 const Y_INICIO = 1440; // nariz do foguete na plataforma
-const Y_LINHA = 960; // linha vermelha (0:00.00)
-const Y_LUA = 790; // centro da Lua (raio 150): a superfície fica em 940
+const Y_LINHA = 1010; // linha vermelha (0:00.00)
+const Y_LUA = 850; // centro da Lua (raio 150): a superfície fica em 1000
 const yNariz = (t: number, T: number) => (t <= T ? Y_INICIO - (Y_INICIO - Y_LINHA) * Math.pow(Math.max(0, t) / T, 1.7) : Y_LINHA - Math.min(1, (t - T) / 6) * 20);
 
 const Foguete: React.FC<{ y: number; fogo: number; tremor?: number }> = ({ y, fogo, tremor = 0 }) => {
@@ -24,7 +30,7 @@ const Foguete: React.FC<{ y: number; fogo: number; tremor?: number }> = ({ y, fo
   const tx = tremor ? Math.sin(f * 3.1) * tremor : 0;
   const ch = fogo * (1 + Math.sin(f * 2.1) * 0.25);
   return (
-    <g transform={`translate(${540 + tx} ${y})`}>
+    <g transform={`translate(${X_ACAO + tx} ${y})`}>
       {fogo > 0 && (
         <g filter="url(#neon)">
           <path d={`M-40 250 Q 0 ${250 + 220 * ch} 40 250 Z`} fill={NEON.laranja} />
@@ -45,7 +51,7 @@ const Lua: React.FC<{ treme?: number }> = ({ treme = 0 }) => {
   const f = useCurrentFrame();
   const tx = treme ? Math.sin(f * 2.7) * treme : 0;
   return (
-    <g transform={`translate(${540 + tx} ${Y_LUA})`} filter="url(#neon)">
+    <g transform={`translate(${X_ACAO + tx} ${Y_LUA})`} filter="url(#neon)">
       <circle r={150} fill="#2A1A40" stroke={NEON.amarelo} strokeWidth={8} />
       <g fill="none" stroke={NEON.amarelo} strokeWidth={5} opacity={0.8}>
         <circle cx={-50} cy={-40} r={30} />
@@ -61,7 +67,7 @@ const Explosao: React.FC<{ t: number }> = ({ t }) => {
   if (t < 0 || t > 30) return null;
   const k = t / 30;
   return (
-    <g transform={`translate(540 ${Y_LINHA - 20})`} filter="url(#neon)" opacity={1 - k}>
+    <g transform={`translate(${X_ACAO} ${Y_LINHA - 20})`} filter="url(#neon)" opacity={1 - k}>
       {[0, 1, 2].map((i) => (
         <circle key={i} r={(60 + i * 70) * (0.3 + k * 1.4)} fill="none" stroke={[NEON.amarelo, NEON.laranja, NEON.rosa][i]} strokeWidth={14 - i * 3} />
       ))}
@@ -97,24 +103,27 @@ const Tentativa: React.FC<{ r: Rodada; n: number }> = ({ r, n }) => {
         <FundoNeon />
         <Lua treme={f >= bate && f < bate + 12 ? 10 : 0} />
         <g filter="url(#neon)">
-          {Array.from({ length: 19 }).map((_, i) => (
-            <rect key={i} x={120 + i * 44} y={Y_LINHA - 4} width={28} height={8} rx={4} fill={NEON.vermelho} />
+          {Array.from({ length: 11 }).map((_, i) => (
+            <rect key={i} x={60 + i * 44} y={Y_LINHA - 4} width={28} height={8} rx={4} fill={NEON.vermelho} />
           ))}
         </g>
-        <text x={960} y={Y_LINHA - 18} textAnchor="end" fontSize={34} fill={NEON.vermelho} fontFamily={MONO} fontWeight={700}>
+        <text x={60} y={Y_LINHA + 50} textAnchor="start" fontSize={34} fill={NEON.vermelho} fontFamily={MONO} fontWeight={700}>
           0:00.00
         </text>
-        <rect x={410} y={Y_INICIO + 250} width={260} height={30} rx={8} fill="#12052A" stroke={NEON.rosa} strokeWidth={6} filter="url(#neon)" />
+        <rect x={X_ACAO - 130} y={Y_INICIO + 250} width={260} height={30} rx={8} fill="#12052A" stroke={NEON.rosa} strokeWidth={6} filter="url(#neon)" />
         {f < bate && <Foguete y={y} fogo={1} tremor={2} />}
         <Explosao t={f - bate} />
       </svg>
-      <PainelResultado n={n} total={RODADAS.length} res={res} ms={ms} at={-999} y={330} />
-      <Cronometro seg={(r.T - f) / 30} y={1730} />
+      <PainelResultado n={n} total={RODADAS.length} res={res} ms={ms} at={-999} y={270} />
+      <Cronometro seg={(r.T - f) / 30} y={505} />
       {secreto && (
-        <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,.6)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", fontFamily: FONTE, fontWeight: 800 }}>
-          <div style={{ fontSize: 150, ...brilho(NEON.verde, 1.2) }}>PERFEITO!</div>
-          <div style={{ fontSize: 70, marginTop: 20, ...brilho(NEON.amarelo, 0.8) }}>🏆 VOCÊ SALVOU O FOGUETE</div>
-          <div style={{ fontSize: 64, marginTop: 30, ...brilho(NEON.rosa, 0.8) }}>COMENTA "SALVEI" 👇</div>
+        <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,.6)" }}>
+          {/* faixa livre: abaixo do ícone de play (centro) e acima do nome/legenda do post; à esquerda dos botões */}
+          <div style={{ position: "absolute", left: 40, width: 860, top: 1070, textAlign: "center", fontFamily: FONTE, fontWeight: 800, lineHeight: 1.05 }}>
+            <div style={{ fontSize: 140, ...brilho(NEON.verde, 1.2) }}>PERFEITO!</div>
+            <div style={{ fontSize: 60, marginTop: 14, ...brilho(NEON.amarelo, 0.8) }}>🏆 VOCÊ SALVOU O FOGUETE</div>
+            <div style={{ fontSize: 58, marginTop: 18, ...brilho(NEON.rosa, 0.8) }}>COMENTA "SALVEI" 👇</div>
+          </div>
         </div>
       )}
       <Som at={0} nome="riser" vol={0.3} />

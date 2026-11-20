@@ -36,3 +36,12 @@ MELHORADO: arte própria neon/arcade, tensão sonora, quadro secreto de vitória
 | # | id | Desafio |
 |---|---|---|
 | 1 | foguete | Pause antes do foguete bater na Lua (0:00.00), 5 tentativas em loop, painel ao vivo, quadro secreto "SALVEI" |
+
+## Zonas seguras (pedido do usuário, depois do 1º post)
+Ao pausar, o Instagram/TikTok põe o **ícone de PLAY no centro** da tela (e o de som logo acima); os **botões** (curtir,
+comentar, compartilhar) ficam na **direita, da metade pra baixo**; o **nome do perfil e a legenda** cobrem o **rodapé**
+(y ≳ 1580). Então:
+- **Cronômetro no topo**, logo abaixo do painel (painel y≈270, cronômetro y≈505). Nada importante no rodapé.
+- A ação (foguete, Lua, linha do 0:00.00) fica **fora do centro** (ex.: `X_ACAO = 300`, à esquerda).
+- O **quadro secreto** ("PERFEITO!…") vai na faixa **y≈1070–1450**, em `left: 40, width: 860` (não encosta nos botões).
+- Confira com a simulação dos ícones (círculos no centro, faixa na direita e no rodapé) antes de renderizar.
