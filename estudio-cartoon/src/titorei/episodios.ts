@@ -5,6 +5,7 @@ import * as nuvem from "./episodios/nuvem-funcionaria";
 import * as relogio from "./episodios/relogio-gerente";
 import * as planta from "./episodios/planta-rainha";
 import * as eleicao from "./episodios/grande-eleicao";
+import * as pipoca from "./episodios/golpe-pipoca";
 
 /** Catálogo de episódios do Titorei: pasta ./episodios/<video>/ com index.ts exportando CENAS. */
 export const EPISODIOS: Record<string, { id: string; Comp: React.FC<CenaProps> }[]> = {
@@ -13,4 +14,5 @@ export const EPISODIOS: Record<string, { id: string; Comp: React.FC<CenaProps> }
   "relogio-gerente": relogio.CENAS,
   "planta-rainha": planta.CENAS,
   "grande-eleicao": eleicao.CENAS,
+  "golpe-pipoca": pipoca.CENAS,
 };

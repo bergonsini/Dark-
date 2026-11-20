@@ -32,104 +32,99 @@
     "eq": "highpass=f=150,equalizer=f=200:t=q:w=1.0:g=-6,equalizer=f=380:t=q:w=1.0:g=-4,equalizer=f=2800:t=q:w=1.0:g=4,equalizer=f=5500:t=q:w=1.4:g=3,treble=g=2.5:f=9000,deesser=i=0.3,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60:makeup=1.5"
   },
   "musica": {
-    "bpm": 122,
-    "tom": -4
+    "bpm": 126,
+    "tom": -2
   },
   "pausas": {
     "entreCenas": 0.25,
     "final": 1.4
   },
-  "video": "grande-eleicao",
-  "titulo": "A grande eleição",
-  "episodio": 5,
+  "video": "golpe-pipoca",
+  "titulo": "O golpe da pipoca",
+  "episodio": 6,
   "duracaoSegundos": 60,
   "cenas": [
     {
       "id": "gancho",
-      "capitulo": "O CANDIDATO MISTERIOSO",
+      "capitulo": "O ZERO",
       "falas": [
         {
-          "texto": "O candidato misterioso era… um micro-ondas!",
-          "pronuncia": "O candidato misterioso era… [excited] um MICRO-ONDAS!",
-          "aceleraLocal": 1.18
+          "texto": "Chegou no zero e… PIM! Era só pipoca.",
+          "pronuncia": "[excited] Chegou no ZERO e… PIM! [deadpan] Era só pipoca."
         }
       ]
     },
     {
-      "id": "promessas",
-      "capitulo": "AS PROMESSAS",
+      "id": "enchente",
+      "capitulo": "ENCHENTE DE PIPOCA",
       "falas": [
         {
-          "texto": "Ele prometeu tudo pronto em trinta segundos. Até as férias.",
-          "pronuncia": "Ele prometeu tudo pronto em TRINTA segundos. [deadpan] Até as férias."
+          "texto": "Só que era pipoca DEMAIS.",
+          "pronuncia": "Só que era pipoca DEMAIS."
         },
         {
-          "texto": "A planta prometeu sombra e água fresca.",
-          "pronuncia": "A planta prometeu sombra e água FRESCA."
+          "texto": "Encheu a cozinha até o teto.",
+          "pronuncia": "Encheu a cozinha até o TETO."
         },
         {
-          "texto": "E o Tito prometeu… pegar a coroa de volta.",
-          "pronuncia": "E o Tito prometeu… [sighs] pegar a coroa de volta."
+          "texto": "O leite saiu boiando, gritando de medo.",
+          "pronuncia": "O leite saiu BOIANDO, gritando de medo."
         }
       ]
     },
     {
-      "id": "debate",
-      "capitulo": "O DEBATE",
+      "id": "golpe",
+      "capitulo": "O GOLPE",
       "falas": [
         {
-          "texto": "No debate, o micro-ondas ficou nervoso e começou a girar.",
-          "pronuncia": "No debate, o micro-ondas ficou NERVOSO… e começou a girar."
+          "texto": "Aí o micro-ondas gritou: quem tem a pipoca, manda!",
+          "pronuncia": "Aí o micro-ondas gritou: [excited] quem tem a PIPOCA, manda!"
         },
         {
-          "texto": "E apitou no meio da resposta!",
-          "pronuncia": "E APITOU no meio da resposta!"
+          "texto": "E a cozinha inteira foi pro lado dele.",
+          "pronuncia": "E a cozinha INTEIRA foi pro lado dele."
         }
       ]
     },
     {
-      "id": "votacao",
-      "capitulo": "VOTAÇÃO",
+      "id": "decreto",
+      "capitulo": "DECRETO REAL",
       "falas": [
         {
-          "texto": "A geladeira votou. A nuvem votou… e choveu na urna.",
-          "pronuncia": "A geladeira votou. A nuvem votou… [deadpan] e choveu na urna."
+          "texto": "A rainha capivara nem se mexeu. Comeu uma pipoca… bem devagarinho.",
+          "pronuncia": "A rainha capivara nem se mexeu. [deadpan] Comeu uma pipoca… bem devagarinho."
         },
         {
-          "texto": "E a capivara? Nem votou. Ficou meditando.",
-          "pronuncia": "E a capivara? Nem votou. Ficou MEDITANDO."
+          "texto": "E decretou: micro-ondas agora é ministro da pipoca!",
+          "pronuncia": "E decretou: micro-ondas agora é MINISTRO da pipoca!"
         }
       ]
     },
     {
-      "id": "apuracao",
-      "capitulo": "APURAÇÃO",
+      "id": "tito",
+      "capitulo": "E O TITO?",
       "falas": [
         {
-          "texto": "Micro-ondas, dois votos. Planta, dois votos.",
-          "pronuncia": "Micro-ondas, DOIS votos. Planta, DOIS votos."
+          "texto": "O Tito pediu um cargo também.",
+          "pronuncia": "O Tito pediu um cargo também."
         },
         {
-          "texto": "Tito, um voto… o dele mesmo.",
-          "pronuncia": "Tito, UM voto… [deadpan] o dele mesmo."
-        },
-        {
-          "texto": "Empate! E a regra de desempate era: vence o mais calmo.",
-          "pronuncia": "EMPATE! E a regra de desempate era: vence o mais CALMO."
+          "texto": "Virou ministro do piruá.",
+          "pronuncia": "[sighs] Virou ministro do… PIRUÁ."
         }
       ]
     },
     {
-      "id": "resultado",
-      "capitulo": "RAINHA CAPIVARA",
+      "id": "relogio",
+      "capitulo": "HORA DA FAXINA",
       "falas": [
         {
-          "texto": "E quem é o ser mais calmo da cozinha?",
-          "pronuncia": "E quem é o ser mais calmo da cozinha?"
+          "texto": "O barulho acordou o relógio gerente.",
+          "pronuncia": "O barulho acordou o relógio GERENTE."
         },
         {
-          "texto": "A capivara! Nem era candidata… e virou rainha!",
-          "pronuncia": "[excited] A CAPIVARA! Nem era candidata… e virou RAINHA!"
+          "texto": "Ele apitou: hora da faxina! E todo mundo fingiu que dormia.",
+          "pronuncia": "Ele apitou: [excited] hora da FAXINA! [deadpan] E todo mundo fingiu que dormia."
         }
       ]
     },
@@ -138,16 +133,16 @@
       "capitulo": "CONTINUA…",
       "falas": [
         {
-          "texto": "Mas o micro-ondas não aceitou a derrota…",
-          "pronuncia": "Mas o micro-ondas não aceitou a derrota…"
+          "texto": "Mas no fundo da pipoca tinha um ovo gigante…",
+          "pronuncia": "Mas no fundo da pipoca tinha um OVO gigante…"
         },
         {
-          "texto": "e começou uma contagem regressiva.",
-          "pronuncia": "[whispers] e começou uma contagem REGRESSIVA."
+          "texto": "e ele começou a rachar.",
+          "pronuncia": "e ele começou a RACHAR."
         },
         {
-          "texto": "O que acontece no zero? Descobre no próximo episódio!",
-          "pronuncia": "O que acontece no zero? Descobre no próximo episódio!"
+          "texto": "O que vai nascer? Descobre no próximo episódio!",
+          "pronuncia": "[excited] O que vai NASCER? Descobre no próximo episódio!"
         }
       ]
     }
