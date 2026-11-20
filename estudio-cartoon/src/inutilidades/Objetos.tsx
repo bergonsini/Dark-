@@ -1019,3 +1019,113 @@ export const TravesseiroCapacete: React.FC<{ x: number; y: number; escala?: numb
     <rect x={-14} y={-190} width={28} height={140} fill="#E5A800" strokeWidth={5} />
   </g>
 );
+
+/* ------------------------------------------------------------------ Ep. 8 — Liquidificador Sem Tampa Pro Max */
+
+/** Morango cartoon. */
+export const Morango: React.FC<{ x: number; y: number; escala?: number; rot?: number }> = ({ x, y, escala = 1, rot = 0 }) => (
+  <g transform={`translate(${x} ${y}) scale(${escala}) rotate(${rot})`} stroke={TINTA} strokeWidth={6} strokeLinejoin="round">
+    <path d="M0 60 Q -60 20 -50 -20 Q -30 -50 0 -40 Q 30 -50 50 -20 Q 60 20 0 60 Z" fill="#E8282B" />
+    <path d="M-30 -40 L-10 -60 L0 -45 L10 -60 L30 -40 Z" fill="#22A447" />
+    <g fill="#FFD23F" stroke="none">
+      {[[-20, -10], [10, -15], [-5, 15], [22, 10], [-25, 20], [5, 38]].map(([cx, cy], i) => (
+        <ellipse key={i} cx={cx} cy={cy} rx={4} ry={6} />
+      ))}
+    </g>
+  </g>
+);
+
+/** Liquidificador velho e fraco: o morango só gira, inteiro. */
+export const LiquidificadorVelho: React.FC<{ x: number; y: number; escala?: number; ligado?: boolean }> = ({ x, y, escala = 1, ligado = false }) => {
+  const f = useCurrentFrame();
+  return (
+    <g transform={`translate(${x} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
+      <path d="M-110 -420 L110 -420 L80 -120 L-80 -120 Z" fill="#DDF3FF" opacity={0.9} />
+      <Morango x={ligado ? Math.sin(f * 0.3) * 25 : 0} y={-200} escala={0.9} rot={ligado ? f * 4 : 0} />
+      <rect x={-125} y={-450} width={250} height={40} rx={12} fill="#BDB49A" />
+      <path d="M-120 -120 L120 -120 L140 0 L-140 0 Z" fill="#CFC4A8" />
+      <circle cx={0} cy={-60} r={22} fill={ligado ? "#FFD23F" : "#8A8270"} />
+    </g>
+  );
+};
+
+/** O PRO MAX: cromado e vermelho, com raio e "PRO MAX", SEM TAMPA. `jato` 0..1 solta a coluna de vitamina pra cima. */
+export const LiquidificadorProMax: React.FC<{ x: number; y: number; escala?: number; ligado?: boolean; jato?: number; rot?: number }> = ({
+  x,
+  y,
+  escala = 1,
+  ligado = false,
+  jato = 0,
+  rot = 0,
+}) => {
+  const f = useCurrentFrame();
+  const tr = ligado ? Math.sin(f * 2.7) * 6 : 0;
+  const nivel = 1 - jato;
+  return (
+    <g transform={`translate(${x + tr} ${y}) scale(${escala}) rotate(${rot})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round" strokeLinecap="round">
+      {jato > 0 && (
+        <g>
+          <path d={`M-70 -430 Q ${-90 + Math.sin(f) * 20} ${-430 - 1200 * jato} 0 ${-430 - 1500 * jato} Q ${90 + Math.cos(f) * 20} ${-430 - 1200 * jato} 70 -430 Z`} fill="#FF8C1A" />
+          {Array.from({ length: 8 }).map((_, i) => {
+            const q = ((f * 2 + i * 9) % 30) / 30;
+            const a = -Math.PI / 2 + (i - 3.5) * 0.35;
+            return <circle key={i} cx={Math.cos(a) * (100 + q * 500)} cy={-440 + Math.sin(a) * (100 + q * 500)} r={22 + (i % 3) * 8} fill="#FF8C1A" />;
+          })}
+        </g>
+      )}
+      <path d="M-120 -440 L120 -440 L90 -120 L-90 -120 Z" fill="#DDF3FF" opacity={0.9} />
+      {nivel > 0.05 && <path d={`M${-90 - 20 * nivel} ${-120 - 300 * nivel} L${90 + 20 * nivel} ${-120 - 300 * nivel} L90 -120 L-90 -120 Z`} fill="#FF8C1A" stroke="none" opacity={0.95} />}
+      {ligado && (
+        <g fill="none" stroke="#fff" strokeWidth={6} opacity={0.8}>
+          <path d={`M-50 ${-200} q 50 ${-40 + Math.sin(f) * 20} 100 0`} />
+          <path d={`M-40 ${-260} q 40 ${30 + Math.cos(f) * 20} 80 0`} />
+        </g>
+      )}
+      <path d="M-130 -120 L130 -120 L160 20 L-160 20 Z" fill="#E8282B" />
+      <path d="M-100 -95 L100 -95" stroke="#C9D0DC" strokeWidth={14} />
+      <text y={-20} textAnchor="middle" fontSize={44} fill="#FFD23F" stroke={TINTA} strokeWidth={4} paintOrder="stroke" fontFamily="'Baloo 2'" fontWeight={800}>
+        PRO MAX
+      </text>
+      <path d="M150 -80 l 30 -40 l -10 30 l 30 -10 l -40 50" fill="#FFD23F" strokeWidth={5} />
+      <circle cx={-110} cy={-20} r={16} fill={ligado ? "#3DFF8A" : "#555"} />
+    </g>
+  );
+};
+
+/** Manchas de vitamina laranja espalhadas pela tela (`k` 0..1 = quantas). Use por cima do cenário e dos personagens. */
+export const Manchas: React.FC<{ k: number; seed?: number; area?: [number, number, number, number] }> = ({ k, seed = 0, area = [0, 0, 1080, 1700] }) => {
+  if (k <= 0) return null;
+  const n = Math.round(28 * k);
+  const rnd = (i: number, j: number) => {
+    const v = Math.sin((i + seed * 13) * 91.7 + j * 47.3) * 43758.5;
+    return v - Math.floor(v);
+  };
+  return (
+    <g>
+      {Array.from({ length: n }).map((_, i) => {
+        const cx = area[0] + rnd(i, 1) * area[2];
+        const cy = area[1] + rnd(i, 2) * area[3];
+        const r = 20 + rnd(i, 3) * 55;
+        return (
+          <g key={i} fill="#FF8C1A" stroke="none">
+            <ellipse cx={cx} cy={cy} rx={r} ry={r * (0.7 + rnd(i, 4) * 0.4)} />
+            <circle cx={cx + r * 0.9} cy={cy - r * 0.6} r={r * 0.25} />
+            <path d={`M${cx - r * 0.3} ${cy + r * 0.5} q ${r * 0.15} ${r * 1.2} ${r * 0.3} 0 Z`} />
+          </g>
+        );
+      })}
+    </g>
+  );
+};
+
+/** Capa de chuva amarela (brinde). */
+export const CapaChuva: React.FC<{ x: number; y: number; escala?: number }> = ({ x, y, escala = 1 }) => (
+  <g transform={`translate(${x} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
+    <path d="M-60 -200 Q 0 -260 60 -200 L120 160 L-120 160 Z" fill="#FFD23F" />
+    <path d="M-60 -200 Q 0 -150 60 -200" fill="#E5B800" />
+    <path d="M0 -170 L0 140" strokeWidth={5} />
+    {[-120, -60, 0, 60].map((cy) => (
+      <circle key={cy} cx={14} cy={cy} r={8} fill="#fff" strokeWidth={4} />
+    ))}
+  </g>
+);

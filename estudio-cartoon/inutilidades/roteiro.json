@@ -5,17 +5,17 @@
     "timeline": "src/inutilidades/timeline.json",
     "audio": "public/inutilidades/audio"
   },
-  "video": "despertador-soco",
-  "titulo": "Despertador com Soco",
-  "episodio": 7,
+  "video": "liquidificador-sem-tampa",
+  "titulo": "Liquidificador Sem Tampa Pro Max",
+  "episodio": 8,
   "duracaoSegundos": 42,
   "pausas": {
     "entreCenas": 0.2,
     "final": 1.2
   },
   "musica": {
-    "bpm": 128,
-    "tom": 1
+    "bpm": 132,
+    "tom": -3
   },
   "voz": {
     "motor": "elevenlabs",
@@ -81,13 +81,13 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Cansado de apertar a soneca quinze vezes?",
-          "pronuncia": "Cansado de apertar a SONECA quinze vezes?"
+          "texto": "Cansada de liquidificador que não tritura nada?",
+          "pronuncia": "Cansada de liquidificador que não TRITURA nada?"
         },
         {
           "quem": "doutor",
-          "texto": "O despertador grita… e você nem se mexe!",
-          "pronuncia": "O despertador GRITA… e você nem se MEXE!"
+          "texto": "Você aperta, aperta… e o morango continua inteiro!",
+          "pronuncia": "Você aperta, aperta… e o morango continua INTEIRO!"
         }
       ]
     },
@@ -101,8 +101,8 @@
         },
         {
           "quem": "doutor",
-          "texto": "Apresento o Despertador com Soco!",
-          "pronuncia": "Apresento o DESPERTADOR COM SOCO!"
+          "texto": "Apresento o Liquidificador Sem Tampa Pro Max!",
+          "pronuncia": "Apresento o LIQUIDIFICADOR SEM TAMPA Pro Max!"
         }
       ]
     },
@@ -111,20 +111,24 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Tocou? Acordou!",
-          "pronuncia": "Tocou? ACORDOU!",
-          "pausaDepois": 1.1
+          "texto": "Tritura em um segundo!",
+          "pronuncia": "Tritura em UM segundo!",
+          "pausaDepois": 1.0
+        },
+        {
+          "quem": "cleide",
+          "texto": "Ficou ótimo… mas cadê o suco?",
+          "pronuncia": "[surprised] Ficou ótimo… mas cadê o SUCO?"
         },
         {
           "quem": "kuka",
-          "texto": "Acordei… no quintal do vizinho!",
-          "pronuncia": "[surprised] Acordei… no quintal do VIZINHO!"
+          "texto": "Tá no teto. E em mim!",
+          "pronuncia": "Tá no TETO. E em MIM!"
         },
         {
           "quem": "doutor",
-          "texto": "E no modo soneca: soco DUPLO!",
-          "pronuncia": "[excited] E no modo soneca: soco DUPLO!",
-          "pausaDepois": 0.9
+          "texto": "Vitamina distribuída por igual!",
+          "pronuncia": "[excited] Vitamina DISTRIBUÍDA por igual!"
         }
       ]
     },
@@ -133,18 +137,18 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "De 999 por apenas 34,90!",
-          "pronuncia": "De novecentos e noventa e nove por apenas TRINTA E QUATRO E NOVENTA!"
+          "texto": "De 999 por apenas 44,90!",
+          "pronuncia": "De novecentos e noventa e nove por apenas QUARENTA E QUATRO E NOVENTA!"
         },
         {
           "quem": "doutor",
-          "texto": "E ligando AGORA, ganhe um travesseiro de capacete!",
-          "pronuncia": "E ligando AGORA, ganhe um travesseiro de CAPACETE!"
+          "texto": "E ligando AGORA, ganhe uma capa de chuva de brinde!",
+          "pronuncia": "E ligando AGORA, ganhe uma CAPA DE CHUVA de brinde!"
         },
         {
           "quem": "kuka",
-          "texto": "Manda dois… um é pra segunda-feira!",
-          "pronuncia": "[excited] Manda DOIS… um é pra SEGUNDA-FEIRA!"
+          "texto": "Manda dois… e um canudo bem comprido!",
+          "pronuncia": "[excited] Manda DOIS… e um canudo bem COMPRIDO!"
         },
         {
           "quem": "doutor",
@@ -158,8 +162,8 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Não tem botão de desligar. Nem de soneca. Dentes não inclusos.",
-          "pronuncia": "Não tem botão de desligar. Nem de soneca. Dentes não inclusos.",
+          "texto": "Tampa vendida separadamente. Teto não incluso. Lave a casa após o uso.",
+          "pronuncia": "Tampa vendida separadamente. Teto não incluso. Lave a casa após o uso.",
           "velocidade": 1.15
         }
       ]
