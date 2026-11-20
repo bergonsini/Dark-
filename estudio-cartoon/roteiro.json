@@ -2,7 +2,7 @@
   "video": "cocegas",
   "titulo": "Por que não dá pra fazer cócegas em si mesmo?",
   "fps": 30,
-  "duracaoSegundos": 60,
+  "duracaoSegundos": 51,
   "personagem": "tito",
   "voz": {
     "motor": "elevenlabs",
