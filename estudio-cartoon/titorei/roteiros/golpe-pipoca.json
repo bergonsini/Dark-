@@ -1,0 +1,151 @@
+{
+  "projeto": "titorei",
+  "fps": 30,
+  "saida": {
+    "timeline": "src/titorei/timeline.json",
+    "audio": "public/titorei/audio"
+  },
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "wTABSOIKENuRDeLiHYDF",
+      "nome": "Jonas (pt-BR, dinâmico, Titorei)",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.35,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências",
+    "eq": "highpass=f=150,equalizer=f=200:t=q:w=1.0:g=-6,equalizer=f=380:t=q:w=1.0:g=-4,equalizer=f=2800:t=q:w=1.0:g=4,equalizer=f=5500:t=q:w=1.4:g=3,treble=g=2.5:f=9000,deesser=i=0.3,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60:makeup=1.5"
+  },
+  "musica": {
+    "bpm": 126,
+    "tom": -2
+  },
+  "pausas": {
+    "entreCenas": 0.25,
+    "final": 1.4
+  },
+  "video": "golpe-pipoca",
+  "titulo": "O golpe da pipoca",
+  "episodio": 6,
+  "duracaoSegundos": 60,
+  "cenas": [
+    {
+      "id": "gancho",
+      "capitulo": "O ZERO",
+      "falas": [
+        {
+          "texto": "Chegou no zero e… PIM! Era só pipoca.",
+          "pronuncia": "[excited] Chegou no ZERO e… PIM! [deadpan] Era só pipoca.",
+          "aceleraLocal": 1.28
+        }
+      ]
+    },
+    {
+      "id": "enchente",
+      "capitulo": "ENCHENTE DE PIPOCA",
+      "falas": [
+        {
+          "texto": "Só que era pipoca DEMAIS.",
+          "pronuncia": "Só que era pipoca DEMAIS."
+        },
+        {
+          "texto": "Encheu a cozinha até o teto.",
+          "pronuncia": "Encheu a cozinha até o TETO."
+        },
+        {
+          "texto": "O leite saiu boiando, gritando de medo.",
+          "pronuncia": "O leite saiu BOIANDO, gritando de medo."
+        }
+      ]
+    },
+    {
+      "id": "golpe",
+      "capitulo": "O GOLPE",
+      "falas": [
+        {
+          "texto": "Aí o micro-ondas gritou: quem tem a pipoca, manda!",
+          "pronuncia": "Aí o micro-ondas gritou: [excited] quem tem a PIPOCA, manda!"
+        },
+        {
+          "texto": "E a cozinha inteira foi pro lado dele.",
+          "pronuncia": "E a cozinha INTEIRA foi pro lado dele."
+        }
+      ]
+    },
+    {
+      "id": "decreto",
+      "capitulo": "DECRETO REAL",
+      "falas": [
+        {
+          "texto": "A rainha capivara nem se mexeu. Comeu uma pipoca… bem devagarinho.",
+          "pronuncia": "A rainha capivara nem se mexeu. [deadpan] Comeu uma pipoca… bem devagarinho."
+        },
+        {
+          "texto": "E decretou: micro-ondas agora é ministro da pipoca!",
+          "pronuncia": "E decretou: micro-ondas agora é MINISTRO da pipoca!"
+        }
+      ]
+    },
+    {
+      "id": "tito",
+      "capitulo": "E O TITO?",
+      "falas": [
+        {
+          "texto": "O Tito pediu um cargo também.",
+          "pronuncia": "O Tito pediu um cargo também."
+        },
+        {
+          "texto": "Virou ministro do piruá.",
+          "pronuncia": "[sighs] Virou ministro do… PIRUÁ."
+        }
+      ]
+    },
+    {
+      "id": "relogio",
+      "capitulo": "HORA DA FAXINA",
+      "falas": [
+        {
+          "texto": "O barulho acordou o relógio gerente.",
+          "pronuncia": "O barulho acordou o relógio GERENTE."
+        },
+        {
+          "texto": "Ele apitou: hora da faxina! E todo mundo fingiu que dormia.",
+          "pronuncia": "Ele apitou: [excited] hora da FAXINA! [deadpan] E todo mundo fingiu que dormia."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "capitulo": "CONTINUA…",
+      "falas": [
+        {
+          "texto": "Mas no fundo da pipoca tinha um ovo gigante…",
+          "pronuncia": "Mas no fundo da pipoca tinha um OVO gigante…"
+        },
+        {
+          "texto": "e ele começou a rachar.",
+          "pronuncia": "e ele começou a RACHAR."
+        },
+        {
+          "texto": "O que vai nascer? Descobre no próximo episódio!",
+          "pronuncia": "[excited] O que vai NASCER? Descobre no próximo episódio!"
+        }
+      ]
+    }
+  ]
+}

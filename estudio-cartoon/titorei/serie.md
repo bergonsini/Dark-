@@ -23,6 +23,8 @@ Leia ANTES de escrever um episódio novo e ATUALIZE depois de entregar.
 - **Planta (RAINHA PLANTA)** — cresceu com a chuva da nuvem e pediu AUMENTO; como ninguém deu, LEVOU A COROA do Tito (ep. 4)
   e se promoveu a "Rainha da Cozinha". Exigiu vaso maior, sol de praia e crachá; aceitou o adubo e ficou com a coroa.
   Convocou uma ELEIÇÃO pra rei da cozinha. Componente: `Vaso` com `coroa`, `escala`, `boca`, `vasoMaior`.
+- **Micro-ondas** virou **MINISTRO DA PIPOCA** (ep. 6) depois do "golpe da pipoca" (a contagem do ep. 5 terminava em… PIM, pipoca).
+  O Tito virou **MINISTRO DO PIRUÁ**. Componentes novos: `Pipoca`, `MarDePipoca` (nível), `PipocasPulando`, `OvoGigante` (`racha`, `treme`) em `objetos/Pipoca.tsx`.
 - **Leite** — medroso, sua de nervoso (mas desceu o arco-íris gritando de alegria). **Queijo** — medita flutuando. **Manteiga** — faz ioga. **Sorvete** — pediu pra ficar.
 
 ## Piadas recorrentes
@@ -33,6 +35,7 @@ Leia ANTES de escrever um episódio novo e ATUALIZE depois de entregar.
 - Funcionários pedindo aumento/benefícios.
 - O Tito perdendo o posto de rei ("SEM CARGO", "rei só no fim de semana", coroa roubada pela planta, eleição).
 - A capivara "detetive" que investiga a 1 cm por hora.
+- Cargos inúteis de ministro ("ministro da pipoca", "ministro do piruá"). Todo mundo finge que dorme quando o relógio manda fazer faxina.
 
 ## Episódios
 | # | Vídeo (id) | Título | Gancho deixado no final |
@@ -42,3 +45,4 @@ Leia ANTES de escrever um episódio novo e ATUALIZE depois de entregar.
 | 3 | relogio-gerente | O relógio gerente | Na comemoração, **a coroa do Tito sumiu**; pegadinhas misteriosas vão até a janela. "Quem levou? Descobre no próximo episódio!" |
 | 4 | planta-rainha | A planta rainha | A planta convocou uma **ELEIÇÃO pra rei da cozinha**; bateram na porta e entrou um **candidato surpresa (silhueta) com uma coroa AINDA MAIOR**. "Quem é? Descobre no próximo episódio!" |
 | 5 | grande-eleicao | A grande eleição | A capivara virou rainha; o **micro-ondas não aceitou a derrota e começou uma CONTAGEM REGRESSIVA** (00:10, 00:09…). "O que acontece no zero? Descobre no próximo episódio!" |
+| 6 | golpe-pipoca | O golpe da pipoca | Depois da enchente de pipoca, apareceu um **OVO GIGANTE** no fundo da pipoca e ele **começou a rachar**. "O que vai nascer? Descobre no próximo episódio!" |
