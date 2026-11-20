@@ -1,0 +1,172 @@
+{
+  "projeto": "inutilidades",
+  "fps": 30,
+  "saida": {
+    "timeline": "src/inutilidades/timeline.json",
+    "audio": "public/inutilidades/audio"
+  },
+  "video": "liquidificador-sem-tampa",
+  "titulo": "Liquidificador Sem Tampa Pro Max",
+  "episodio": 8,
+  "duracaoSegundos": 42,
+  "pausas": {
+    "entreCenas": 0.2,
+    "final": 1.2
+  },
+  "musica": {
+    "bpm": 132,
+    "tom": -3
+  },
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_santa",
+      "velocidade": 1.05
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "+8%"
+    },
+    "elevenlabs": {
+      "voiceId": "xJ8U5HgW3Zps75qgYrFw",
+      "nome": "Carlos (pt-BR, ofertas) — DOUTOR OFERTA",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.35,
+      "similaridade": 0.75
+    },
+    "estiloInterpretacao": "televendas: empolgado, rápido, MAIÚSCULAS na ênfase"
+  },
+  "personagens": {
+    "doutor": {},
+    "kuka": {
+      "kokoro": {
+        "voz": "pm_alex",
+        "velocidade": 0.95
+      },
+      "elevenlabs": {
+        "voiceId": "mP51FBaz7jxNEIeFJwxX",
+        "nome": "Silas (pt-BR, interior) — SEU KUKA BELUDO",
+        "estabilidade": 0.45
+      }
+    },
+    "rato": {
+      "kokoro": {
+        "voz": "pm_alex",
+        "velocidade": 0.9
+      },
+      "elevenlabs": {
+        "voiceId": "mP51FBaz7jxNEIeFJwxX",
+        "nome": "Silas afinado — RATO",
+        "estabilidade": 0.45
+      },
+      "afinar": 1.45
+    },
+    "cleide": {
+      "kokoro": {
+        "voz": "pf_dora",
+        "velocidade": 1.0
+      },
+      "elevenlabs": {
+        "voiceId": "CS2gH5fPqUCmkVNpHsy4",
+        "nome": "Raquel (pt-BR, 55 anos, interior) — DONA CLEIDE",
+        "estabilidade": 0.45
+      }
+    }
+  },
+  "cenas": [
+    {
+      "id": "problema",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Cansada de liquidificador que não tritura nada?",
+          "pronuncia": "Cansada de liquidificador que não TRITURA nada?"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Você aperta, aperta… e o morango continua inteiro!",
+          "pronuncia": "Você aperta, aperta… e o morango continua INTEIRO!"
+        }
+      ]
+    },
+    {
+      "id": "produto",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Seus problemas ACABARAM!",
+          "pronuncia": "[excited] Seus problemas ACABARAM!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Apresento o Liquidificador Sem Tampa Pro Max!",
+          "pronuncia": "Apresento o LIQUIDIFICADOR SEM TAMPA Pro Max!"
+        }
+      ]
+    },
+    {
+      "id": "demonstracao",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Tritura em um segundo!",
+          "pronuncia": "Tritura em UM segundo!",
+          "pausaDepois": 1.0
+        },
+        {
+          "quem": "cleide",
+          "texto": "Ficou ótimo… mas cadê o suco?",
+          "pronuncia": "[surprised] Ficou ótimo… mas cadê o SUCO?"
+        },
+        {
+          "quem": "kuka",
+          "texto": "Tá no teto. E em mim!",
+          "pronuncia": "Tá no TETO. E em MIM!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Vitamina distribuída por igual!",
+          "pronuncia": "[excited] Vitamina DISTRIBUÍDA por igual!"
+        }
+      ]
+    },
+    {
+      "id": "oferta",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "De 999 por apenas 44,90!",
+          "pronuncia": "De novecentos e noventa e nove por apenas QUARENTA E QUATRO E NOVENTA!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "E ligando AGORA, ganhe uma capa de chuva de brinde!",
+          "pronuncia": "E ligando AGORA, ganhe uma CAPA DE CHUVA de brinde!"
+        },
+        {
+          "quem": "kuka",
+          "texto": "Manda dois… e um canudo bem comprido!",
+          "pronuncia": "[excited] Manda DOIS… e um canudo bem COMPRIDO!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Ligue já!",
+          "pronuncia": "LIGUE JÁ!"
+        }
+      ]
+    },
+    {
+      "id": "letrinhas",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Tampa vendida separadamente. Teto não incluso. Lave a casa após o uso.",
+          "pronuncia": "Tampa vendida separadamente. Teto não incluso. Lave a casa após o uso.",
+          "velocidade": 1.15
+        }
+      ]
+    }
+  ]
+}
