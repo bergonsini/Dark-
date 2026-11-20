@@ -114,9 +114,9 @@ export const Demonstracao: React.FC<CenaProps> = ({ scene }) => {
       {f >= l2 && f < l3 && <Onomatopeia texto="SLURP!" at={l2 + 30} dur={l3 - l2 - 30} x={540} y={420} tam={120} cor="#FFD23F" />}
       {f >= l3 && <Selo texto={"VITAMINA\nPOR IGUAL*"} at={l3 + 4} x={600} y={300} cor="#22A447" />}
       <Sfx at={um} nome="ding" vol={0.4} />
-      <Sfx at={liga} nome="motor" vol={0.6} />
-      <Sfx at={liga + 4} nome="boom" vol={0.45} />
-      <Sfx at={liga + 8} nome="borbulha" vol={0.55} />
+      <Sfx at={liga} nome="motor" vol={0.4} />
+      <Sfx at={liga + 4} nome="boom" vol={0.3} />
+      <Sfx at={liga + 8} nome="borbulha" vol={0.3} />
       <Sfx at={l2 + 30} nome="borbulha" vol={0.35} />
       <Sfx at={l3} nome="tada" vol={0.35} />
     </>
