@@ -32,100 +32,107 @@
     "eq": "highpass=f=150,equalizer=f=200:t=q:w=1.0:g=-6,equalizer=f=380:t=q:w=1.0:g=-4,equalizer=f=2800:t=q:w=1.0:g=4,equalizer=f=5500:t=q:w=1.4:g=3,treble=g=2.5:f=9000,deesser=i=0.3,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60:makeup=1.5"
   },
   "musica": {
-    "bpm": 126,
-    "tom": -2
+    "bpm": 124,
+    "tom": 1
   },
   "pausas": {
     "entreCenas": 0.25,
     "final": 1.4
   },
-  "video": "golpe-pipoca",
-  "titulo": "O golpe da pipoca",
-  "episodio": 6,
+  "video": "geladeirinha",
+  "titulo": "Nasceu a geladeirinha",
+  "episodio": 7,
   "duracaoSegundos": 60,
   "cenas": [
     {
       "id": "gancho",
-      "capitulo": "O ZERO",
+      "capitulo": "O OVO RACHOU",
       "falas": [
         {
-          "texto": "Chegou no zero e… PIM! Era só pipoca.",
-          "pronuncia": "[excited] Chegou no ZERO e… PIM! [deadpan] Era só pipoca.",
-          "aceleraLocal": 1.28
+          "texto": "O ovo rachou… e nasceu uma geladeirinha!",
+          "pronuncia": "O ovo rachou… e nasceu uma [excited] GELADEIRINHA!"
         }
       ]
     },
     {
-      "id": "enchente",
-      "capitulo": "ENCHENTE DE PIPOCA",
+      "id": "mamae",
+      "capitulo": "MAMÃE?",
       "falas": [
         {
-          "texto": "Só que era pipoca DEMAIS.",
-          "pronuncia": "Só que era pipoca DEMAIS."
+          "texto": "Ela olhou pra geladeira e disse: mamãe!",
+          "pronuncia": "Ela olhou pra geladeira e disse: MAMÃE!"
         },
         {
-          "texto": "Encheu a cozinha até o teto.",
-          "pronuncia": "Encheu a cozinha até o TETO."
-        },
-        {
-          "texto": "O leite saiu boiando, gritando de medo.",
-          "pronuncia": "O leite saiu BOIANDO, gritando de medo."
+          "texto": "A geladeira chorou… cubos de gelo.",
+          "pronuncia": "A geladeira chorou… [deadpan] cubos de GELO."
         }
       ]
     },
     {
-      "id": "golpe",
-      "capitulo": "O GOLPE",
+      "id": "fome",
+      "capitulo": "BEBÊ COM FOME",
       "falas": [
         {
-          "texto": "Aí o micro-ondas gritou: quem tem a pipoca, manda!",
-          "pronuncia": "Aí o micro-ondas gritou: [excited] quem tem a PIPOCA, manda!"
+          "texto": "Só que bebê geladeira come gelo. Muito gelo.",
+          "pronuncia": "Só que bebê geladeira come gelo. MUITO gelo."
         },
         {
-          "texto": "E a cozinha inteira foi pro lado dele.",
-          "pronuncia": "E a cozinha INTEIRA foi pro lado dele."
+          "texto": "E congelou a cozinha inteira.",
+          "pronuncia": "E CONGELOU a cozinha inteira."
+        },
+        {
+          "texto": "O leite virou picolé.",
+          "pronuncia": "[deadpan] O leite virou PICOLÉ."
         }
       ]
     },
     {
-      "id": "decreto",
-      "capitulo": "DECRETO REAL",
+      "id": "microondas",
+      "capitulo": "MINISTRO AO RESGATE",
       "falas": [
         {
-          "texto": "A rainha capivara nem se mexeu. Comeu uma pipoca… bem devagarinho.",
-          "pronuncia": "A rainha capivara nem se mexeu. [deadpan] Comeu uma pipoca… bem devagarinho."
+          "texto": "O ministro da pipoca tentou esquentar tudo…",
+          "pronuncia": "O ministro da pipoca tentou ESQUENTAR tudo…"
         },
         {
-          "texto": "E decretou: micro-ondas agora é ministro da pipoca!",
-          "pronuncia": "E decretou: micro-ondas agora é MINISTRO da pipoca!"
+          "texto": "e estourou pipoca de novo.",
+          "pronuncia": "[sighs] e estourou pipoca de NOVO."
+        },
+        {
+          "texto": "A geladeirinha bateu palma e pediu bis!",
+          "pronuncia": "A geladeirinha bateu palma e pediu [excited] BIS!"
         }
       ]
     },
     {
-      "id": "tito",
-      "capitulo": "E O TITO?",
+      "id": "batismo",
+      "capitulo": "BATISMO REAL",
       "falas": [
         {
-          "texto": "O Tito pediu um cargo também.",
-          "pronuncia": "O Tito pediu um cargo também."
+          "texto": "A rainha capivara escolheu o nome dela… bem devagarinho.",
+          "pronuncia": "A rainha capivara escolheu o nome dela… [deadpan] bem devagarinho."
         },
         {
-          "texto": "Virou ministro do piruá.",
-          "pronuncia": "[sighs] Virou ministro do… PIRUÁ."
+          "texto": "Demorou três dias. O nome é Gelinha.",
+          "pronuncia": "Demorou TRÊS dias. O nome é… GELINHA."
         }
       ]
     },
     {
-      "id": "relogio",
-      "capitulo": "HORA DA FAXINA",
+      "id": "baba",
+      "capitulo": "VAGA DE BABÁ",
       "falas": [
         {
-          "texto": "O barulho acordou o relógio gerente.",
-          "pronuncia": "O barulho acordou o relógio GERENTE."
+          "texto": "E o Tito? Ganhou mais um cargo: babá.",
+          "pronuncia": "E o Tito? Ganhou mais um cargo: [deadpan] BABÁ."
         },
         {
-          "texto": "Ele apitou: hora da faxina! E todo mundo fingiu que dormia.",
-          "pronuncia": "Ele apitou: [excited] hora da FAXINA! [deadpan] E todo mundo fingiu que dormia."
+          "texto": "Trocar fralda de geladeira é só degelar.",
+          "pronuncia": "Trocar fralda de geladeira é só DEGELAR."
+        },
+        {
+          "texto": "Ministro do piruá e babá. Sem salário.",
+          "pronuncia": "Ministro do piruá e babá. [sighs] Sem salário."
         }
       ]
     },
@@ -134,16 +141,16 @@
       "capitulo": "CONTINUA…",
       "falas": [
         {
-          "texto": "Mas no fundo da pipoca tinha um ovo gigante…",
-          "pronuncia": "Mas no fundo da pipoca tinha um OVO gigante…"
+          "texto": "Mas se a geladeira é a mãe…",
+          "pronuncia": "Mas se a geladeira é a MÃE…"
         },
         {
-          "texto": "e ele começou a rachar.",
-          "pronuncia": "e ele começou a RACHAR."
+          "texto": "quem é o pai?",
+          "pronuncia": "quem é o PAI?"
         },
         {
-          "texto": "O que vai nascer? Descobre no próximo episódio!",
-          "pronuncia": "[excited] O que vai NASCER? Descobre no próximo episódio!"
+          "texto": "Bateram na porta. Descobre no próximo episódio!",
+          "pronuncia": "Bateram na porta. [excited] Descobre no próximo episódio!"
         }
       ]
     }

@@ -74,3 +74,49 @@ export const OvoGigante: React.FC<{ pos?: V3; escala?: number; racha?: number; t
     </group>
   );
 };
+
+/** Casca do ovo aberta em duas metades (no chão). `abre` 0..1 afasta as metades. */
+export const CascaOvo: React.FC<{ pos?: V3; escala?: number; abre?: number }> = ({ pos = [0, 0, 0], escala = 1, abre = 1 }) => (
+  <group position={pos} scale={escala}>
+    <group position={[-0.6 * abre, 0, 0]} rotation={[0, 0, 0.5 * abre]}>
+      <Bola p={[0, 0.5, 0]} raio={0.8} d={1} esc={[0.85, 0.6, 0.85]} c="#F4ECD8" />
+    </group>
+    <group position={[0.6 * abre, 0, 0]} rotation={[0, 0, -0.5 * abre]}>
+      <Bola p={[0, 0.5, 0]} raio={0.8} d={1} esc={[0.85, 0.6, 0.85]} c="#F4ECD8" />
+    </group>
+  </group>
+);
+
+/** Cozinha congelada: chão de gelo, cubos espalhados, pingentes no topo da parede e neve caindo. `k` 0..1. */
+export const Congelada: React.FC<{ k: number }> = ({ k }) => {
+  const f = useCurrentFrame();
+  if (k <= 0.01) return null;
+  return (
+    <group>
+      <Caixa p={[0, 0.03, -0.2]} s={[12 * k, 0.06, 10]} c="#BFE9FF" o={0.85} />
+      {Array.from({ length: Math.round(14 * k) }).map((_, i) => (
+        <Caixa key={i} p={[(rnd(i, 11) - 0.5) * 7, 0.15, (rnd(i, 12) - 0.5) * 5]} r={[0, rnd(i, 13) * 3, 0]} s={[0.3, 0.3, 0.3]} c="#DFF6FF" o={0.9} />
+      ))}
+      {Array.from({ length: 16 }).map((_, i) => (
+        <mesh key={`p${i}`} position={[-6 + i * 0.8, 5.6 - 0.3 * k, -2.85]} rotation={[Math.PI, 0, 0]}>
+          <coneGeometry args={[0.12, 0.6 * k, 4]} />
+          <meshStandardMaterial color="#CFF1FF" flatShading />
+        </mesh>
+      ))}
+      {Array.from({ length: 40 }).map((_, i) => {
+        const q = ((f * 0.02 + rnd(i, 14)) % 1);
+        return <Bola key={`n${i}`} p={[(rnd(i, 15) - 0.5) * 8, 5 - q * 5, (rnd(i, 16) - 0.5) * 6]} raio={0.04} d={0} c="#FFFFFF" />;
+      })}
+    </group>
+  );
+};
+
+/** Silhueta alta e larga na porta (o "pai"): um FREEZER escuro com olhinhos brilhando. */
+export const SilhuetaFreezer: React.FC<{ pos?: V3; escala?: number }> = ({ pos = [0, 0, 0], escala = 1 }) => (
+  <group position={pos} scale={escala}>
+    <Caixa p={[0, 1.4, 0]} s={[1.5, 2.8, 0.6]} c="#0D0B14" />
+    <Caixa p={[0, 2.3, 0.31]} s={[1.4, 0.04, 0.02]} c="#1C1830" />
+    <Bola p={[-0.3, 2.0, 0.33]} raio={0.08} d={0} c="#9BE8FF" e="#4FC3F7" />
+    <Bola p={[0.3, 2.0, 0.33]} raio={0.08} d={0} c="#9BE8FF" e="#4FC3F7" />
+  </group>
+);
