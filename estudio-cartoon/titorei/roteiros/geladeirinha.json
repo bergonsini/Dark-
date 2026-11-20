@@ -1,0 +1,159 @@
+{
+  "projeto": "titorei",
+  "fps": 30,
+  "saida": {
+    "timeline": "src/titorei/timeline.json",
+    "audio": "public/titorei/audio"
+  },
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "wTABSOIKENuRDeLiHYDF",
+      "nome": "Jonas (pt-BR, dinâmico, Titorei)",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.35,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências",
+    "eq": "highpass=f=150,equalizer=f=200:t=q:w=1.0:g=-6,equalizer=f=380:t=q:w=1.0:g=-4,equalizer=f=2800:t=q:w=1.0:g=4,equalizer=f=5500:t=q:w=1.4:g=3,treble=g=2.5:f=9000,deesser=i=0.3,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60:makeup=1.5"
+  },
+  "musica": {
+    "bpm": 124,
+    "tom": 1
+  },
+  "pausas": {
+    "entreCenas": 0.25,
+    "final": 1.4
+  },
+  "video": "geladeirinha",
+  "titulo": "Nasceu a geladeirinha",
+  "episodio": 7,
+  "duracaoSegundos": 60,
+  "cenas": [
+    {
+      "id": "gancho",
+      "capitulo": "O OVO RACHOU",
+      "falas": [
+        {
+          "texto": "O ovo rachou… e nasceu uma geladeirinha!",
+          "pronuncia": "O ovo rachou… e nasceu uma [excited] GELADEIRINHA!",
+          "aceleraLocal": 1.33
+        }
+      ]
+    },
+    {
+      "id": "mamae",
+      "capitulo": "MAMÃE?",
+      "falas": [
+        {
+          "texto": "Ela olhou pra geladeira e disse: mamãe!",
+          "pronuncia": "Ela olhou pra geladeira e disse: MAMÃE!"
+        },
+        {
+          "texto": "A geladeira chorou… cubos de gelo.",
+          "pronuncia": "A geladeira chorou… [deadpan] cubos de GELO."
+        }
+      ]
+    },
+    {
+      "id": "fome",
+      "capitulo": "BEBÊ COM FOME",
+      "falas": [
+        {
+          "texto": "Só que bebê geladeira come gelo. Muito gelo.",
+          "pronuncia": "Só que bebê geladeira come gelo. MUITO gelo."
+        },
+        {
+          "texto": "E congelou a cozinha inteira.",
+          "pronuncia": "E CONGELOU a cozinha inteira."
+        },
+        {
+          "texto": "O leite virou picolé.",
+          "pronuncia": "[deadpan] O leite virou PICOLÉ."
+        }
+      ]
+    },
+    {
+      "id": "microondas",
+      "capitulo": "MINISTRO AO RESGATE",
+      "falas": [
+        {
+          "texto": "O ministro da pipoca tentou esquentar tudo…",
+          "pronuncia": "O ministro da pipoca tentou ESQUENTAR tudo…"
+        },
+        {
+          "texto": "e estourou pipoca de novo.",
+          "pronuncia": "[sighs] e estourou pipoca de NOVO."
+        },
+        {
+          "texto": "A geladeirinha bateu palma e pediu bis!",
+          "pronuncia": "A geladeirinha bateu palma e pediu [excited] BIS!"
+        }
+      ]
+    },
+    {
+      "id": "batismo",
+      "capitulo": "BATISMO REAL",
+      "falas": [
+        {
+          "texto": "A rainha capivara escolheu o nome dela… bem devagarinho.",
+          "pronuncia": "A rainha capivara escolheu o nome dela… [deadpan] bem devagarinho."
+        },
+        {
+          "texto": "Demorou três dias. O nome é Gelinha.",
+          "pronuncia": "Demorou TRÊS dias. O nome é… GELINHA."
+        }
+      ]
+    },
+    {
+      "id": "baba",
+      "capitulo": "VAGA DE BABÁ",
+      "falas": [
+        {
+          "texto": "E o Tito? Ganhou mais um cargo: babá.",
+          "pronuncia": "E o Tito? Ganhou mais um cargo: [deadpan] BABÁ."
+        },
+        {
+          "texto": "Trocar fralda de geladeira é só degelar.",
+          "pronuncia": "Trocar fralda de geladeira é só DEGELAR."
+        },
+        {
+          "texto": "Ministro do piruá e babá. Sem salário.",
+          "pronuncia": "Ministro do piruá e babá. [sighs] Sem salário."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "capitulo": "CONTINUA…",
+      "falas": [
+        {
+          "texto": "Mas se a geladeira é a mãe…",
+          "pronuncia": "Mas se a geladeira é a MÃE…"
+        },
+        {
+          "texto": "quem é o pai?",
+          "pronuncia": "quem é o PAI?"
+        },
+        {
+          "texto": "Bateram na porta. Descobre no próximo episódio!",
+          "pronuncia": "Bateram na porta. [excited] Descobre no próximo episódio!"
+        }
+      ]
+    }
+  ]
+}
