@@ -50,7 +50,8 @@
       "falas": [
         {
           "texto": "O ovo rachou… e nasceu uma geladeirinha!",
-          "pronuncia": "O ovo rachou… e nasceu uma [excited] GELADEIRINHA!"
+          "pronuncia": "O ovo rachou… e nasceu uma [excited] GELADEIRINHA!",
+          "aceleraLocal": 1.33
         }
       ]
     },
