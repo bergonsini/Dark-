@@ -1,8 +1,8 @@
 {
-  "video": "cocegas",
-  "titulo": "Por que não dá pra fazer cócegas em si mesmo?",
+  "video": "dedo-enrugado",
+  "titulo": "Por que o dedo enruga na água?",
   "fps": 30,
-  "duracaoSegundos": 51,
+  "duracaoSegundos": 60,
   "personagem": "tito",
   "voz": {
     "motor": "elevenlabs",
@@ -30,13 +30,14 @@
     "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
   },
   "musica": {
-    "bpm": 118,
-    "tom": 2
+    "bpm": 114,
+    "tom": 0
   },
   "fontes": [
-    "Blakemore, Wolpert & Frith (Nature Neuroscience 1998; NeuroReport 2000) / UCL — o cerebelo prevê a sensação dos próprios movimentos e atenua a resposta; fMRI",
-    "Scientific American / Mental Floss / ScienceAlert — com um robô intermediário, um pequeno atraso fazia a autocócega voltar a ser sentida",
-    "Panksepp & Burgdorf (1999), Scientific American, NPR (2016, Ishiyama & Brecht, Science) — ratos fazem chiados ultrassônicos (~50 kHz, inaudíveis pra nós) quando ganham cócegas"
+    "Smithsonian / NPR / Nature News — o enrugamento NÃO é a pele absorvendo água: o sistema nervoso (simpático) contrai os vasos sanguíneos sob a pele e ela se dobra",
+    "Smithsonian / Scientific American / Discover — desde 1935 médicos observaram que dedos com o nervo cortado (ex.: nervo mediano) não enrugam",
+    "Kareklas, Nettle & Smulders (Biology Letters, 2013) / Changizi (2011) — hipótese 'pneu de chuva': dedos enrugados passaram bolinhas/pesinhos molhados de um recipiente a outro mais rápido; ainda debatida (por isso 'uma teoria')",
+    "Binghamton University (2025, via Yahoo/ScienceAlert) — o padrão de rugas se repete do mesmo jeito em cada molho"
   ],
   "cenas": [
     {
@@ -44,70 +45,82 @@
       "ato": "começo",
       "falas": [
         {
-          "texto": "Por que cócega sozinho não funciona?",
-          "pronuncia": "[curious] Por que CÓCEGA sozinho não funciona?"
+          "texto": "Por que o dedo enruga na água?",
+          "pronuncia": "[curious] Por que o dedo ENRUGA na água?"
         }
       ]
     },
     {
-      "id": "cerebelo",
+      "id": "mito",
       "ato": "começo",
       "falas": [
         {
-          "texto": "Quem estraga a brincadeira é o seu cérebro.",
-          "pronuncia": "Quem estraga a brincadeira é o seu CÉREBRO."
+          "texto": "Muita gente acha que é a pele bebendo água.",
+          "pronuncia": "Muita gente acha que é a pele BEBENDO água."
         },
         {
-          "texto": "Mais exatamente, o cerebelo, aqui atrás da cabeça.",
-          "pronuncia": "Mais exatamente, o CEREBELO, aqui atrás da cabeça."
+          "texto": "Mas não é!",
+          "pronuncia": "Mas NÃO é!"
         }
       ]
     },
     {
-      "id": "previsao",
+      "id": "nervo",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Quando você se mexe, ele prevê o que você vai sentir…",
-          "pronuncia": "Quando você se mexe, ele PREVÊ o que você vai sentir…"
+          "texto": "Depois de uns minutinhos na água…",
+          "pronuncia": "Depois de uns minutinhos na água…"
         },
         {
-          "texto": "e abaixa o volume da sensação.",
-          "pronuncia": "e ABAIXA o volume da sensação."
-        }
-      ]
-    },
-    {
-      "id": "surpresa",
-      "ato": "desenvolvimento",
-      "falas": [
-        {
-          "texto": "Só que cócega precisa de surpresa!",
-          "pronuncia": "Só que cócega precisa de SURPRESA!"
+          "texto": "Quem manda é o sistema nervoso.",
+          "pronuncia": "Quem manda é o sistema NERVOSO."
         },
         {
-          "texto": "Quando é outra pessoa, o cérebro não sabe onde vai ser… e aí, risada!",
-          "pronuncia": "Quando é OUTRA pessoa, o cérebro não sabe onde vai ser… e aí, [laughs] risada!"
+          "texto": "Ele aperta os vasinhos de sangue debaixo da pele… e ela enruga.",
+          "pronuncia": "Ele APERTA os vasinhos de sangue debaixo da pele… e ela enruga."
         }
       ]
     },
     {
-      "id": "robo",
+      "id": "prova",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Cientistas testaram com um robô: com um atrasinho no movimento, a cócega voltava!",
-          "pronuncia": "Cientistas testaram com um ROBÔ: com um atrasinho no movimento, a cócega VOLTAVA!"
+          "texto": "A prova: em 1935, médicos viram que dedo com o nervo cortado não enrugava.",
+          "pronuncia": "A prova: em mil novecentos e trinta e cinco, médicos viram que dedo com o nervo cortado NÃO enrugava."
         }
       ]
     },
     {
-      "id": "ratos",
+      "id": "pneu",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "E ratos também dão risadinhas com cócegas, num som fino demais pro nosso ouvido!",
-          "pronuncia": "[excited] E RATOS também dão risadinhas com cócegas, num som fino demais pro nosso ouvido!"
+          "texto": "E pra que serve? Uma teoria diz que as rugas são tipo pneu de chuva…",
+          "pronuncia": "[curious] E pra que serve? Uma teoria diz que as rugas são tipo PNEU de chuva…"
+        },
+        {
+          "texto": "e ajudam a segurar coisas molhadas.",
+          "pronuncia": "e ajudam a SEGURAR coisas molhadas."
+        },
+        {
+          "texto": "Num teste, as pessoas passaram bolinhas molhadas de um pote pro outro mais rápido com o dedo enrugado!",
+          "pronuncia": "Num teste, as pessoas passaram bolinhas MOLHADAS de um pote pro outro mais rápido com o dedo enrugado!"
+        }
+      ]
+    },
+    {
+      "id": "digital",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E o mais curioso: o seu dedo enruga sempre do mesmo jeito!",
+          "pronuncia": "[excited] E o mais curioso: o seu dedo enruga SEMPRE do mesmo jeito!"
+        },
+        {
+          "texto": "Tipo uma impressão digital… de banheira!",
+          "pronuncia": "Tipo uma impressão digital… de BANHEIRA!"
         }
       ]
     },
@@ -116,12 +129,12 @@
       "ato": "conclusão",
       "falas": [
         {
-          "texto": "Resumindo: o cérebro é tipo o amigo que conta o final do filme… sem surpresa, sem graça!",
-          "pronuncia": "Resumindo: o cérebro é tipo o amigo que conta o FINAL do filme… sem surpresa, sem GRAÇA!"
+          "texto": "Resumindo: no banho, seu dedo troca de pneu sozinho… e nem cobra a calibragem!",
+          "pronuncia": "Resumindo: no banho, seu dedo troca de PNEU sozinho… [laughs] e nem cobra a calibragem!"
         },
         {
-          "texto": "E você, tem muita cócega? Conta aí!",
-          "pronuncia": "[curious] E você, tem MUITA cócega? Conta aí!"
+          "texto": "E você, demora muito no banho? Conta aí!",
+          "pronuncia": "[curious] E você, demora MUITO no banho? Conta aí!"
         }
       ]
     }
