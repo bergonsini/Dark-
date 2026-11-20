@@ -1,0 +1,133 @@
+{
+  "video": "cocegas",
+  "titulo": "Por que não dá pra fazer cócegas em si mesmo?",
+  "fps": 30,
+  "duracaoSegundos": 51,
+  "personagem": "tito",
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "tS45q0QcrDHqHoaWdCDR",
+      "nome": "Lax (pt-BR, jovem e alegre) — voz do TITO",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.4,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
+  },
+  "musica": {
+    "bpm": 118,
+    "tom": 2
+  },
+  "fontes": [
+    "Blakemore, Wolpert & Frith (Nature Neuroscience 1998; NeuroReport 2000) / UCL — o cerebelo prevê a sensação dos próprios movimentos e atenua a resposta; fMRI",
+    "Scientific American / Mental Floss / ScienceAlert — com um robô intermediário, um pequeno atraso fazia a autocócega voltar a ser sentida",
+    "Panksepp & Burgdorf (1999), Scientific American, NPR (2016, Ishiyama & Brecht, Science) — ratos fazem chiados ultrassônicos (~50 kHz, inaudíveis pra nós) quando ganham cócegas"
+  ],
+  "cenas": [
+    {
+      "id": "gancho",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Por que cócega sozinho não funciona?",
+          "pronuncia": "[curious] Por que CÓCEGA sozinho não funciona?"
+        }
+      ]
+    },
+    {
+      "id": "cerebelo",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Quem estraga a brincadeira é o seu cérebro.",
+          "pronuncia": "Quem estraga a brincadeira é o seu CÉREBRO."
+        },
+        {
+          "texto": "Mais exatamente, o cerebelo, aqui atrás da cabeça.",
+          "pronuncia": "Mais exatamente, o CEREBELO, aqui atrás da cabeça."
+        }
+      ]
+    },
+    {
+      "id": "previsao",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Quando você se mexe, ele prevê o que você vai sentir…",
+          "pronuncia": "Quando você se mexe, ele PREVÊ o que você vai sentir…"
+        },
+        {
+          "texto": "e abaixa o volume da sensação.",
+          "pronuncia": "e ABAIXA o volume da sensação."
+        }
+      ]
+    },
+    {
+      "id": "surpresa",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Só que cócega precisa de surpresa!",
+          "pronuncia": "Só que cócega precisa de SURPRESA!"
+        },
+        {
+          "texto": "Quando é outra pessoa, o cérebro não sabe onde vai ser… e aí, risada!",
+          "pronuncia": "Quando é OUTRA pessoa, o cérebro não sabe onde vai ser… e aí, [laughs] risada!"
+        }
+      ]
+    },
+    {
+      "id": "robo",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Cientistas testaram com um robô: com um atrasinho no movimento, a cócega voltava!",
+          "pronuncia": "Cientistas testaram com um ROBÔ: com um atrasinho no movimento, a cócega VOLTAVA!"
+        }
+      ]
+    },
+    {
+      "id": "ratos",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E ratos também dão risadinhas com cócegas, num som fino demais pro nosso ouvido!",
+          "pronuncia": "[excited] E RATOS também dão risadinhas com cócegas, num som fino demais pro nosso ouvido!"
+        }
+      ]
+    },
+    {
+      "id": "conclusao",
+      "ato": "conclusão",
+      "falas": [
+        {
+          "texto": "Resumindo: o cérebro é tipo o amigo que conta o final do filme… sem surpresa, sem graça!",
+          "pronuncia": "Resumindo: o cérebro é tipo o amigo que conta o FINAL do filme… sem surpresa, sem GRAÇA!"
+        },
+        {
+          "texto": "E você, tem muita cócega? Conta aí!",
+          "pronuncia": "[curious] E você, tem MUITA cócega? Conta aí!"
+        }
+      ]
+    }
+  ],
+  "pausas": {
+    "entreCenas": 0.4,
+    "final": 1.8
+  }
+}
