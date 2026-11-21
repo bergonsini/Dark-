@@ -100,10 +100,11 @@ description: Vídeos de QUIZ (pergunta, 3 alternativas, timer de 5 s, resposta).
     <li><strong>Renderizar</strong> (<code>npx remotion render NomeDaComposicao out/video.mp4</code>): gera o arquivo final. O Claude roda isso para você.</li>
     <li><strong>Quadros soltos</strong> (<code>npx remotion still NomeDaComposicao out/q.png --frame=120</code>): gera uma imagem de um instante específico. O Claude usa isso para "olhar" as cenas antes de renderizar tudo.</li>
   </ul>
+  <div class="box dica"><span class="t">No celular</span><p>O Remotion Studio é feito para tela grande. Pelo celular, peça <em>"me manda a grade de quadros-chave"</em> e <em>"me manda o rascunho"</em>: as imagens e o vídeo aparecem na própria conversa.</p></div>
   <div class="box info"><span class="t">O Claude consegue ver imagens</span><p>Esse é o segredo da qualidade: peça sempre <em>"gera os quadros-chave numa grade e confere o enquadramento antes de renderizar"</em>. Ele olha as imagens e corrige personagem cortado na borda, texto em cima de texto, câmera muito perto, e assim por diante.</p></div>
 
   <h2>3.6 Salvando versões (Git)</h2>
-  <p>Peça ao Claude: <em>"Inicializa o Git neste projeto, cria um .gitignore (node_modules, out, arquivos de chave) e faz o primeiro commit."</em> A partir daí, ao final de cada vídeo diga <em>"faz o commit"</em>. Se um dia algo quebrar, é só pedir <em>"volta o projeto para como estava ontem"</em>.</p>
+  <p><strong>No celular</strong> o projeto já nasce ligado ao GitHub (Caminho A); basta pedir <em>"faz o commit e o push"</em> ao fim de cada vídeo. <strong>No computador</strong>, peça ao Claude: <em>"Inicializa o Git neste projeto, cria um .gitignore (node_modules, out, arquivos de chave) e faz o primeiro commit."</em> A partir daí, ao final de cada vídeo diga <em>"faz o commit"</em>. Se um dia algo quebrar, é só pedir <em>"volta o projeto para como estava ontem"</em>.</p>
   <p>Para ter uma cópia na nuvem, crie uma conta gratuita no <strong>GitHub</strong>, crie um repositório <strong>privado</strong> e peça ao Claude para conectar o projeto a ele.</p>
   <div class="box atencao"><span class="t">Nunca suba chaves para o GitHub</span><p>Arquivos como <code>.env</code> ou <code>.env.local</code>, que guardam a chave do ElevenLabs, precisam estar no <code>.gitignore</code>. Confirme isso com o Claude antes do primeiro envio.</p></div>
 </section>
@@ -127,7 +128,7 @@ description: Vídeos de QUIZ (pergunta, 3 alternativas, timer de 5 s, resposta).
     <li>Crie uma conta em <code>elevenlabs.io</code> e escolha um plano. Planos gratuitos costumam ter limite de caracteres e <strong>restrições de uso comercial</strong>; para monetizar, confira os termos e use um plano pago.</li>
     <li>Na <strong>Voice Library</strong>, filtre por idioma <em>Portuguese</em> e sotaque <em>Brazilian</em>. Ouça várias e anote o <strong>Voice ID</strong> das favoritas (um código como <code>xJ8U5HgW...</code>).</li>
     <li>Crie uma <strong>chave de API</strong> (Profile → API Keys).</li>
-    <li>Guarde a chave numa <strong>variável de ambiente</strong> ou num arquivo <code>.env.local</code> que esteja no <code>.gitignore</code>. <strong>Nunca cole a chave na conversa com a IA</strong>: peça ao Claude para ler da variável <code>ELEVENLABS_API_KEY</code>.</li>
+    <li>No <strong>celular</strong>: cadastre a chave como segredo do ambiente na nuvem (veja o Caminho A, no Módulo 2). No <strong>computador</strong>: guarde a chave numa <strong>variável de ambiente</strong> ou num arquivo <code>.env.local</code> que esteja no <code>.gitignore</code>. <strong>Nunca cole a chave na conversa com a IA</strong>: peça ao Claude para ler da variável <code>ELEVENLABS_API_KEY</code>.</li>
   </ol>
   <div class="box custo"><span class="t">Fazendo as contas</span><p>O ElevenLabs cobra por caractere enviado. Um roteiro de 60 s tem ~130 palavras ≈ 700 caracteres. Use o painel da sua conta para ver quantos caracteres o seu plano inclui por mês e divida: esse é o número de vídeos narrados por mês. Para economizar, use voz grátis nos formatos que não dependem de interpretação (quiz, texto cinético) e a voz premium nos que vivem de personagem (humor, explicativo).</p></div>
   <h3>Escolhendo a voz certa por formato</h3>

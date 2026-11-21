@@ -1,0 +1,201 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: "Baloo 2"; font-weight: 800; src: url(../fonts/baloo-2-latin-800-normal.woff2); }
+@font-face { font-family: "Baloo 2"; font-weight: 700; src: url(../fonts/baloo-2-latin-700-normal.woff2); }
+@font-face { font-family: "Nunito"; font-weight: 900; src: url(../fonts/nunito-latin-900-normal.woff2); }
+body { margin: 0; background: #000; }
+.q { width: 1080px; height: 1920px; position: relative; overflow: hidden; }
+.q svg.full { position: absolute; inset: 0; }
+.leg { position: absolute; left: 0; right: 0; top: 1300px; text-align: center; font-family: "Baloo 2"; font-weight: 800; font-size: 96px; color: #fff; -webkit-text-stroke: 18px #1f1b2e; paint-order: stroke fill; letter-spacing: 1px; }
+.leg b { color: #ffd23f; font-size: 112px; }
+.tag { position: absolute; left: 50%; transform: translateX(-50%) rotate(-2deg); background: #fff; border: 8px solid #1f1b2e; border-radius: 26px; padding: 6px 34px; font-family: "Baloo 2"; font-weight: 800; font-size: 58px; color: #1f1b2e; white-space: nowrap; box-shadow: 0 10px 0 #1f1b2e; }
+</style></head><body>
+
+<!-- ================= F4 PALITINHO ================= -->
+<div class="q" id="f4" style="background:#fffdf6">
+  <svg class="full" width="1080" height="1920" viewBox="0 0 1080 1920">
+    <defs>
+      <pattern id="quad" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M54 0 L0 0 0 54" fill="none" stroke="#dfe6f5" stroke-width="3"/></pattern>
+      <filter id="treme"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="7"/></filter>
+    </defs>
+    <rect width="1080" height="1920" fill="url(#quad)"/>
+    <path d="M60 0 L60 1920" stroke="#ff9aa2" stroke-width="5"/>
+    <g filter="url(#treme)" fill="none" stroke="#1f1b2e" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+      <!-- mesa e notebook -->
+      <path d="M120 1180 L960 1180 M200 1180 L200 1500 M880 1180 L880 1500"/>
+      <path d="M390 1180 L430 990 L690 990 L650 1180 Z" fill="#fff"/>
+      <path d="M455 1030 L665 1030" stroke-width="10"/>
+      <!-- boneco 1 (desesperado, mãos na cabeça) -->
+      <circle cx="300" cy="760" r="78" fill="#fff"/>
+      <path d="M300 838 L300 1080 M300 900 L210 820 L250 720 M300 900 L390 820 L350 720 M300 1080 L240 1250 M300 1080 L360 1250"/>
+      <path d="M270 750 l12 12 M320 750 l-12 12 M282 738 l-12 12 M308 738 l12 12" stroke-width="8"/>
+      <ellipse cx="300" cy="800" rx="22" ry="26" fill="#1f1b2e" stroke="none"/>
+      <!-- boneco 2 (na tela do notebook, congelado) -->
+      <circle cx="780" cy="760" r="78" fill="#fff"/>
+      <path d="M780 838 L780 1080 M780 900 L700 980 M780 900 L870 840 M780 1080 L730 1250 M780 1080 L830 1250"/>
+      <circle cx="755" cy="750" r="10" fill="#1f1b2e"/><circle cx="805" cy="750" r="10" fill="#1f1b2e"/>
+      <path d="M752 795 L810 795" stroke-width="10"/>
+    </g>
+    <!-- balão -->
+    <g filter="url(#treme)">
+      <path d="M110 330 Q110 230 230 230 L640 230 Q760 230 760 330 L760 470 Q760 560 640 560 L380 560 L300 650 L320 560 L230 560 Q110 560 110 470 Z" fill="#fff" stroke="#1f1b2e" stroke-width="12"/>
+    </g>
+    <text x="435" y="375" text-anchor="middle" font-family="'Baloo 2'" font-weight="800" font-size="74" fill="#1f1b2e">TÁ ME</text>
+    <text x="435" y="470" text-anchor="middle" font-family="'Baloo 2'" font-weight="800" font-size="86" fill="#e8282b">OUVINDO?!</text>
+    <!-- onomatopeia -->
+    <text x="900" y="640" text-anchor="middle" font-family="'Baloo 2'" font-weight="800" font-size="90" fill="#ffd23f" stroke="#1f1b2e" stroke-width="10" paint-order="stroke" transform="rotate(12 900 640)">TRAVOU!</text>
+    <!-- wifi riscado -->
+    <g transform="translate(860 330)" fill="none" stroke="#1f1b2e" stroke-width="14" stroke-linecap="round">
+      <path d="M-90 -10 Q0 -90 90 -10 M-60 25 Q0 -25 60 25 M-30 60 Q0 35 30 60"/><circle cx="0" cy="92" r="10" fill="#1f1b2e"/>
+      <path d="M-100 -70 L100 120" stroke="#e8282b" stroke-width="18"/>
+    </g>
+  </svg>
+  <div class="tag" style="top:90px">QUANDO O WI-FI CAI NA REUNIÃO</div>
+  <div class="leg" style="top:1560px">"VOCÊ TÁ <b>MUDO</b>!"</div>
+</div>
+
+<!-- ================= F5 QUADRO-NEGRO ================= -->
+<div class="q" id="f5" style="background:#6b4423">
+  <svg class="full" width="1080" height="1920" viewBox="0 0 1080 1920">
+    <defs>
+      <filter id="giz"><feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="2" seed="5" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 -2.2 1.6" result="m"/><feComposite in="SourceGraphic" in2="m" operator="in"/></filter>
+      <radialGradient id="lousa" cx="50%" cy="40%" r="75%"><stop offset="0" stop-color="#3c6b4f"/><stop offset="1" stop-color="#22402f"/></radialGradient>
+      <linearGradient id="mad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9a6436"/><stop offset="1" stop-color="#5e3a1c"/></linearGradient>
+    </defs>
+    <rect width="1080" height="1920" fill="url(#mad)"/>
+    <rect x="40" y="40" width="1000" height="1840" rx="20" fill="url(#lousa)"/>
+    <g opacity=".08" fill="#fff"><ellipse cx="300" cy="1500" rx="260" ry="90"/><ellipse cx="760" cy="300" rx="220" ry="70"/></g>
+    <g filter="url(#giz)">
+      <text x="540" y="230" text-anchor="middle" font-family="'Baloo 2'" font-weight="700" font-size="104" fill="#f6f2e4">JUROS COMPOSTOS</text>
+      <path d="M140 270 Q540 300 940 262" stroke="#ffd23f" stroke-width="12" fill="none" stroke-linecap="round"/>
+      <g stroke="#f6f2e4" stroke-width="12" fill="none" stroke-linecap="round">
+        <path d="M170 1150 L170 420 M170 1150 L960 1150"/>
+        <path d="M150 450 L170 420 L190 450 M930 1130 L960 1150 L930 1170"/>
+      </g>
+      <path d="M180 1130 L920 860" stroke="#ff9ec8" stroke-width="12" fill="none" stroke-dasharray="34 22" stroke-linecap="round"/>
+      <path d="M180 1135 Q 620 1080 920 520" stroke="#ffd23f" stroke-width="16" fill="none" stroke-linecap="round"/>
+      <circle cx="905" cy="545" r="58" stroke="#ffd23f" stroke-width="10" fill="none"/>
+      <text x="640" y="850" font-family="'Baloo 2'" font-weight="700" font-size="64" fill="#ff9ec8" transform="rotate(-18 640 850)">simples</text>
+      <text x="560" y="640" font-family="'Baloo 2'" font-weight="700" font-size="70" fill="#ffd23f" transform="rotate(-30 560 640)">compostos!</text>
+      <text x="200" y="1230" font-family="'Baloo 2'" font-weight="700" font-size="54" fill="#f6f2e4">tempo →</text>
+      <text x="80" y="420" font-family="'Baloo 2'" font-weight="700" font-size="54" fill="#f6f2e4" transform="rotate(-90 80 520)">R$</text>
+      <text x="540" y="1700" text-anchor="middle" font-family="'Baloo 2'" font-weight="700" font-size="66" fill="#9fd8ff">o tempo MULTIPLICA o dinheiro</text>
+    </g>
+    <!-- giz e apagador -->
+    <rect x="770" y="1765" width="150" height="34" rx="16" fill="#f6f2e4" transform="rotate(-12 845 1782)"/>
+    <g transform="translate(150 1775) rotate(6)"><rect x="0" y="0" width="230" height="80" rx="14" fill="#c98b5e"/><rect x="0" y="52" width="230" height="28" rx="10" fill="#555"/></g>
+  </svg>
+  <div class="leg" style="top:1320px">O TEMPO <b>MULTIPLICA</b></div>
+</div>
+
+<!-- ================= F6 QUIZ ================= -->
+<div class="q" id="f6" style="background:linear-gradient(170deg,#2e6be6,#6c3df4)">
+  <svg class="full" width="1080" height="1920" viewBox="0 0 1080 1920">
+    <circle cx="960" cy="180" r="260" fill="#fff" opacity=".08"/><circle cx="80" cy="1500" r="300" fill="#fff" opacity=".07"/>
+    <g fill="#ffd23f" opacity=".9"><path d="M120 300 l14 30 32 3 -24 21 8 31 -30 -17 -30 17 8 -31 -24 -21 32 -3 Z"/><path d="M960 1180 l10 22 24 2 -18 16 6 23 -22 -13 -22 13 6 -23 -18 -16 24 -2 Z"/></g>
+  </svg>
+  <div style="position:absolute;left:0;right:0;top:120px;text-align:center;font-family:'Baloo 2';font-weight:800;font-size:76px;color:#ffd23f;-webkit-text-stroke:12px #1f1b2e;paint-order:stroke fill">SÓ 1% ACERTA TODAS!</div>
+  <div style="position:absolute;left:0;right:0;top:225px;text-align:center;font-family:'Nunito';font-weight:900;font-size:44px;color:#fff;letter-spacing:4px">PERGUNTA 3 / 5</div>
+  <div style="position:absolute;left:80px;right:80px;top:320px;background:#fff;border:10px solid #1f1b2e;border-radius:40px;box-shadow:0 16px 0 #1f1b2e;padding:40px 30px;text-align:center;font-family:'Baloo 2';font-weight:800;font-size:84px;line-height:1.05;color:#1f1b2e">Qual é o maior<br/>órgão do corpo?</div>
+  <div style="position:absolute;left:110px;right:110px;top:690px;font-family:'Baloo 2';font-weight:800;font-size:72px">
+    <div style="background:#c9d0dc;border:8px solid #1f1b2e;border-radius:30px;padding:14px 34px;margin-bottom:34px;color:#6b6b7a">A) Fígado <span style="float:right;color:#e8282b">✘</span></div>
+    <div style="background:#22a447;border:8px solid #1f1b2e;border-radius:30px;padding:14px 34px;margin-bottom:34px;color:#fff;transform:scale(1.07) rotate(-1.5deg);box-shadow:0 0 0 10px #ffd23f">B) Pele <span style="float:right">✔</span></div>
+    <div style="background:#c9d0dc;border:8px solid #1f1b2e;border-radius:30px;padding:14px 34px;color:#6b6b7a">C) Intestino <span style="float:right;color:#e8282b">✘</span></div>
+  </div>
+  <svg class="full" width="1080" height="1920" viewBox="0 0 1080 1920" style="pointer-events:none">
+    <g transform="translate(540 1330)"><circle r="110" fill="#1f1b2e"/><circle r="88" fill="none" stroke="#3a4a8a" stroke-width="22"/><path d="M0 -88 A88 88 0 0 1 76 44" fill="none" stroke="#ffd23f" stroke-width="22" stroke-linecap="round"/><text y="34" text-anchor="middle" font-family="'Baloo 2'" font-weight="800" font-size="100" fill="#fff">0</text></g>
+  </svg>
+  <div style="position:absolute;left:60px;right:60px;top:1500px;text-align:center;font-family:'Nunito';font-weight:900;font-size:50px;color:#fff">A pele pesa uns 4 kg num adulto!</div>
+  <div class="tag" style="top:1640px;background:#ffd23f">COMENTA QUANTAS ACERTOU!</div>
+</div>
+
+<!-- ================= F7 TEXTO CINÉTICO ================= -->
+<div class="q" id="f7" style="background:#121019">
+  <svg class="full" width="1080" height="1920" viewBox="0 0 1080 1920">
+    <circle cx="860" cy="420" r="330" fill="#e8282b"/>
+    <circle cx="860" cy="420" r="390" fill="none" stroke="#e8282b" stroke-width="10" opacity=".4"/>
+    <rect x="-100" y="1180" width="1300" height="190" fill="#ffd23f" transform="rotate(-8 540 1275)"/>
+    <g fill="#fff" opacity=".15"><circle cx="140" cy="1700" r="16"/><circle cx="220" cy="1640" r="10"/><circle cx="940" cy="1600" r="14"/></g>
+  </svg>
+  <div style="position:absolute;left:80px;top:430px;font-family:'Baloo 2';font-weight:800;line-height:.92;color:#fff">
+    <div style="font-size:120px">VOCÊ SABIA</div>
+    <div style="font-size:200px;color:#ffd23f;margin-left:20px">QUE O</div>
+    <div style="font-size:330px;letter-spacing:-6px;text-shadow:16px 16px 0 #e8282b">MEL</div>
+  </div>
+  <div style="position:absolute;left:0;right:0;top:1205px;text-align:center;transform:rotate(-8deg);font-family:'Baloo 2';font-weight:800;font-size:124px;color:#121019">NUNCA ESTRAGA?</div>
+  <div style="position:absolute;left:0;right:0;top:1500px;text-align:center;font-family:'Nunito';font-weight:900;font-size:50px;color:#b9b4cc">(acharam mel comestível em tumbas<br/>de milhares de anos)</div>
+</div>
+
+<!-- ================= F8 FITNESS ================= -->
+<div class="q" id="f8" style="background:linear-gradient(180deg,#0f2a1c,#123d27 60%,#0b1f15)">
+  <svg class="full" width="1080" height="1920" viewBox="0 0 1080 1920">
+    <defs>
+      <linearGradient id="chao" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b2b33"/><stop offset="1" stop-color="#17171d"/></linearGradient>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+    <rect y="1180" width="1080" height="740" fill="url(#chao)"/>
+    <rect y="1176" width="1080" height="10" fill="#3dff8a" opacity=".5"/>
+    <path d="M540 360 L540 1180" stroke="#fff" stroke-width="6" stroke-dasharray="20 18" opacity=".35"/>
+    <!-- anilhas de fundo -->
+    <g opacity=".25"><circle cx="110" cy="1080" r="80" fill="#000"/><circle cx="970" cy="1080" r="80" fill="#000"/></g>
+
+    <!-- ===== atleta CERTO (lado esquerdo), agachamento de perfil, olhando p/ direita ===== -->
+    <g transform="translate(285 0)" stroke="#1f1b2e" stroke-width="9" stroke-linejoin="round" stroke-linecap="round">
+      <!-- perna de trás -->
+      <path d="M-40 900 L70 960 L10 1160" fill="none" stroke="#1f1b2e" stroke-width="58"/>
+      <path d="M-40 900 L70 960 L10 1160" fill="none" stroke="#2e6be6" stroke-width="42"/>
+      <!-- tronco (inclinado ~35°, costas retas) -->
+      <path d="M-70 640 L60 640 L30 930 L-80 900 Z" fill="#ffd23f" transform="rotate(28 -20 900)"/>
+      <!-- glúteo/quadríceps acesos -->
+      <ellipse cx="20" cy="930" rx="70" ry="44" fill="#ff8c1a" opacity=".9" filter="url(#glow)" stroke="none"/>
+      <!-- perna da frente -->
+      <path d="M-30 910 L95 955 L45 1165" fill="none" stroke="#1f1b2e" stroke-width="62"/>
+      <path d="M-30 910 L95 955 L45 1165" fill="none" stroke="#2e6be6" stroke-width="46"/>
+      <path d="M-20 915 L85 952" fill="none" stroke="#ff8c1a" stroke-width="30" opacity=".95" filter="url(#glow)"/>
+      <path d="M10 1165 L110 1165" stroke="#e8282b" stroke-width="40"/>
+      <!-- cabeça -->
+      <circle cx="80" cy="610" r="62" fill="#c98b5e"/>
+      <path d="M25 585 Q60 520 130 560" fill="#3a2414" stroke="#3a2414" stroke-width="30"/>
+      <circle cx="105" cy="610" r="8" fill="#1f1b2e" stroke="none"/>
+      <path d="M95 645 Q110 655 122 642" fill="none" stroke-width="7"/>
+      <!-- braços estendidos à frente -->
+      <path d="M40 700 L200 720" fill="none" stroke="#1f1b2e" stroke-width="44"/>
+      <path d="M40 700 L200 720" fill="none" stroke="#c98b5e" stroke-width="30"/>
+      <!-- linha da coluna (verde) -->
+      <path d="M-95 910 L45 650" stroke="#3dff8a" stroke-width="7" stroke-dasharray="16 10" fill="none"/>
+    </g>
+
+    <!-- ===== atleta ERRADO (lado direito): coluna curvada, joelho passando ===== -->
+    <g transform="translate(790 0)" stroke="#1f1b2e" stroke-width="9" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M-40 900 L95 930 L20 1160" fill="none" stroke="#1f1b2e" stroke-width="58"/>
+      <path d="M-40 900 L95 930 L20 1160" fill="none" stroke="#2e6be6" stroke-width="42"/>
+      <path d="M-80 905 Q -120 760 0 650 L60 690 Q -40 780 30 930 Z" fill="#ffd23f"/>
+      <path d="M-30 910 L120 935 L55 1165" fill="none" stroke="#1f1b2e" stroke-width="62"/>
+      <path d="M-30 910 L120 935 L55 1165" fill="none" stroke="#2e6be6" stroke-width="46"/>
+      <path d="M20 1165 L120 1165" stroke="#e8282b" stroke-width="40"/>
+      <circle cx="70" cy="660" r="62" fill="#c98b5e"/>
+      <path d="M15 640 Q50 570 120 610" fill="#3a2414" stroke="#3a2414" stroke-width="30"/>
+      <circle cx="95" cy="665" r="8" fill="#1f1b2e" stroke="none"/>
+      <path d="M85 705 Q100 690 115 705" fill="none" stroke-width="7"/>
+      <path d="M20 740 L170 800" fill="none" stroke="#1f1b2e" stroke-width="44"/>
+      <path d="M20 740 L170 800" fill="none" stroke="#c98b5e" stroke-width="30"/>
+      <!-- coluna curvada (vermelho) e joelho passando -->
+      <path d="M-95 905 Q -135 760 -10 640" stroke="#ff4d5e" stroke-width="7" stroke-dasharray="16 10" fill="none"/>
+      <path d="M150 900 L150 1170" stroke="#ff4d5e" stroke-width="6" stroke-dasharray="12 10"/>
+    </g>
+  </svg>
+  <div style="position:absolute;left:0;right:0;top:0;height:200px;background:#22a447;border-bottom:10px solid #1f1b2e;text-align:center;font-family:'Baloo 2';font-weight:800;font-size:110px;line-height:200px;color:#fff;-webkit-text-stroke:12px #1f1b2e;paint-order:stroke fill">AGACHAMENTO</div>
+  <div style="position:absolute;left:60px;width:440px;top:250px;text-align:center;font-family:'Baloo 2';font-weight:800;font-size:84px;color:#3dff8a">CERTO ✔</div>
+  <div style="position:absolute;right:40px;width:460px;top:250px;text-align:center;font-family:'Baloo 2';font-weight:800;font-size:84px;color:#ff4d5e">ERRADO ✘</div>
+  <div style="position:absolute;left:50px;top:400px;background:#3dff8a;color:#0f2a1c;font-family:'Nunito';font-weight:900;font-size:36px;padding:8px 18px;border-radius:14px">coluna reta</div>
+  <div style="position:absolute;right:40px;top:470px;background:#ff4d5e;color:#fff;font-family:'Nunito';font-weight:900;font-size:36px;padding:8px 18px;border-radius:14px">costas curvadas</div>
+  <div style="position:absolute;left:150px;top:1010px;background:#ff8c1a;color:#1f1b2e;font-family:'Nunito';font-weight:900;font-size:34px;padding:6px 16px;border-radius:14px;border:5px solid #1f1b2e">glúteo + quadríceps</div>
+  <div class="leg" style="top:1290px">COSTAS <b>RETAS</b>!</div>
+  <div style="position:absolute;left:150px;right:150px;top:1560px;background:#fff;border:10px solid #1f1b2e;border-radius:34px;box-shadow:0 14px 0 #1f1b2e;text-align:center;padding:18px 10px">
+    <div style="font-family:'Baloo 2';font-weight:800;font-size:76px;color:#1f1b2e;line-height:1">3 SÉRIES × 12</div>
+    <div style="font-family:'Nunito';font-weight:900;font-size:40px;color:#22a447">descanso de 60 s</div>
+  </div>
+</div>
+
+</body></html>

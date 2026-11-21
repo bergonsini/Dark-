@@ -24,6 +24,7 @@
 
 * { box-sizing: border-box; }
 html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+html, body { background: #f6f2ff; }
 body { margin: 0; font-family: "Nunito", "DejaVu Sans", sans-serif; font-size: 10.6pt; line-height: 1.55; color: var(--tinta); }
 
 h1, h2, h3, h4 { font-family: "Baloo 2", "Nunito", sans-serif; font-weight: 800; line-height: 1.12; margin: 0; }
@@ -34,14 +35,15 @@ p { margin: 0 0 7pt; }
 ul, ol { margin: 0 0 8pt; padding-left: 16pt; }
 li { margin-bottom: 3pt; }
 strong { font-weight: 900; }
-code { font-family: "DejaVu Sans Mono", monospace; font-size: 8.8pt; background: var(--cinza); padding: 1pt 4pt; border-radius: 4pt; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 8.8pt; background: #e9e2fb; padding: 1pt 4pt; border-radius: 4pt; }
 pre { font-family: "DejaVu Sans Mono", monospace; font-size: 8.4pt; line-height: 1.45; background: #1f1b2e; color: #f6f3ff; padding: 9pt 11pt; border-radius: 8pt; white-space: pre-wrap; word-break: break-word; margin: 4pt 0 10pt; break-inside: avoid; }
 pre .c { color: #a99fd0; }
 a { color: var(--azul); text-decoration: none; }
 table { width: 100%; border-collapse: collapse; margin: 4pt 0 12pt; font-size: 9.6pt; break-inside: avoid; }
 th { background: var(--tinta); color: #fff; text-align: left; padding: 5pt 7pt; font-weight: 900; }
 td { border-bottom: 1px solid var(--linha); padding: 5pt 7pt; vertical-align: top; }
-tr:nth-child(even) td { background: #faf9fd; }
+td { background: #fff; }
+tr:nth-child(even) td { background: #fbf9ff; }
 
 /* ---------- capa ---------- */
 .capa { width: 210mm; height: 297mm; position: relative; overflow: hidden; background: linear-gradient(160deg, #2a1068 0%, #6c3df4 55%, #ff4fa3 100%); color: #fff; break-after: page; }
@@ -76,11 +78,11 @@ tr:nth-child(even) td { background: #faf9fd; }
 .formato .topo h1 { font-size: 24pt; }
 .formato .topo .linha2 { font-weight: 700; color: #6b6488; font-size: 10.5pt; }
 .ficha { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6pt; margin: 6pt 0 12pt; }
-.ficha div { background: var(--cinza); border-radius: 8pt; padding: 6pt 8pt; font-size: 8.8pt; }
+.ficha div { background: #fff; border-radius: 8pt; padding: 6pt 8pt; font-size: 8.8pt; }
 .ficha b { display: block; font-size: 7.6pt; letter-spacing: .8pt; color: #6b6488; text-transform: uppercase; }
 .duas { display: grid; grid-template-columns: 1fr 1fr; gap: 12pt; }
 .mock { background: #fff; border: 1.5pt solid var(--linha); border-radius: 12pt; padding: 8pt; text-align: center; break-inside: avoid; }
-.mock svg { width: 100%; height: auto; display: block; }
+.mock svg, .mock img { width: 100%; height: auto; display: block; border-radius: 8pt; }
 .mock small { display: block; color: #6b6488; font-weight: 700; margin-top: 4pt; }
 
 /* ---------- caixas ---------- */
@@ -115,7 +117,7 @@ tr:nth-child(even) td { background: #faf9fd; }
 .sumario .bloco span { display: block; padding-left: 8pt; color: #3f3960; }
 
 .fluxo { display: flex; align-items: stretch; gap: 4pt; margin: 8pt 0 12pt; break-inside: avoid; }
-.fluxo div { flex: 1; background: var(--cinza); border-radius: 10pt; padding: 8pt 6pt; text-align: center; font-size: 8.6pt; font-weight: 700; position: relative; }
+.fluxo div { flex: 1; background: #fff; border-radius: 10pt; padding: 8pt 6pt; text-align: center; font-size: 8.6pt; font-weight: 700; position: relative; }
 .fluxo div b { display: block; font-family: "Baloo 2"; font-size: 11pt; color: var(--roxo); }
 .fluxo i { align-self: center; font-style: normal; font-weight: 900; color: var(--roxo); }
 
@@ -123,3 +125,14 @@ tr:nth-child(even) td { background: #faf9fd; }
 .centro { text-align: center; }
 .mini { font-size: 8.6pt; color: #6b6488; }
 .destaque { background: linear-gradient(transparent 55%, #ffe79a 55%); }
+
+/* celular */
+.cel { background: linear-gradient(120deg, #1f1b2e, #4a3d78); color: #fff; border-radius: 14pt; padding: 14pt 16pt 12pt 78pt; position: relative; margin: 10pt 0 12pt; break-inside: avoid; }
+.cel .icone { position: absolute; left: 18pt; top: 14pt; width: 44pt; height: 74pt; border: 4pt solid #ffd23f; border-radius: 10pt; }
+.cel .icone::after { content: ""; position: absolute; left: 50%; bottom: 4pt; width: 10pt; height: 3pt; margin-left: -5pt; background: #ffd23f; border-radius: 2pt; }
+.cel h3 { color: #ffd23f; margin: 0 0 4pt; font-size: 15pt; }
+.cel p { margin: 0 0 5pt; }
+.caminhos { display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; margin: 6pt 0 12pt; }
+.caminhos > div { background: #fff; border: 2pt solid var(--linha); border-radius: 12pt; padding: 10pt 12pt; break-inside: avoid; }
+.caminhos > div.forte { border-color: var(--roxo); box-shadow: 0 4pt 0 #d8ccfb; }
+.caminhos h4 { margin: 0 0 4pt; font-size: 12.5pt; }
