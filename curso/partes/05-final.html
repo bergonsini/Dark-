@@ -1,0 +1,180 @@
+
+<!-- ======================================================= MÓDULO 7 -->
+<section class="modulo m7">
+  <div class="faixa"><div class="bolha"></div><div class="num">MÓDULO 7</div><h1>Qualidade e publicação</h1><p>A diferença entre um vídeo "feito por IA" e um vídeo profissional está na conferência.</p></div>
+
+  <h2>7.1 Conferência automática</h2>
+  <p>Peça ao Claude um "inspetor de qualidade" que roda depois de cada render e dá <strong>APROVADO</strong> ou <strong>REPROVADO</strong>, dizendo o que corrigir.</p>
+  <div class="prompt"><span class="rot">PROMPT · CONFERÊNCIA AUTOMÁTICA</span>
+    <p>Cria scripts/qa.py (npm run qa) que confere o MP4 final e imprime OK/FALHA para cada item:</p>
+    <p>formato MP4 H.264 + AAC, 1080x1920, 30 fps, pixel yuv420p; duração dentro do alvo; volume integrado entre −16 e −13 LUFS e pico ≤ −1 dBTP; nenhum silêncio maior que 2,5 s; nenhuma imagem congelada maior que 1,5 s; nenhuma tela preta; gancho (primeira frase termina em até 3,2 s); toda fala tem legenda e as palavras da legenda caem sobre a fala real; voz nítida (energia de 1–6 kHz). No fim, gera uma folha de contato (grade com 12 quadros do vídeo) e imprime APROVADO ou REPROVADO. Adiciona ao CLAUDE.md: "sempre rodar o qa e olhar a folha de contato antes de entregar".</p>
+  </div>
+  <p>A <strong>folha de contato</strong> é uma imagem com vários quadros do vídeo lado a lado. Você e o Claude batem o olho e veem na hora se algum texto está cortado, se o personagem sumiu ou se uma cena ficou vazia.</p>
+
+  <h2>7.2 Zonas seguras do 9:16</h2>
+  <p>O app cobre partes do seu vídeo com botões, nome do perfil, legenda do post e, quando a pessoa pausa, o ícone de play. Nada importante pode ficar nessas áreas.</p>
+  <div class="duas">
+    <div class="mock">
+      <svg viewBox="0 0 270 480"><rect width="270" height="480" fill="#eef2ff"/>
+        <rect x="0" y="0" width="270" height="40" fill="#ff4fa3" opacity=".25"/><text x="135" y="25" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="10" fill="#b0006a">barra do topo / status</text>
+        <rect x="225" y="250" width="45" height="190" fill="#ff8c1a" opacity=".3"/><text x="247" y="345" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="9" fill="#a34f00" transform="rotate(-90 247 345)">botões ♥ 💬 ↗</text>
+        <rect x="0" y="395" width="225" height="85" fill="#ff8c1a" opacity=".3"/><text x="112" y="440" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="10" fill="#a34f00">@perfil + legenda do post</text>
+        <circle cx="135" cy="240" r="30" fill="#e8282b" opacity=".3"/><path d="M127 226 L127 254 L150 240 Z" fill="#e8282b" opacity=".7"/><text x="135" y="290" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="9" fill="#a3001b">ícone de play (ao pausar)</text>
+        <rect x="18" y="55" width="200" height="140" rx="10" fill="none" stroke="#22a447" stroke-width="3" stroke-dasharray="6 4"/><text x="118" y="125" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="15" fill="#22a447">ZONA SEGURA</text>
+        <rect x="18" y="300" width="200" height="85" rx="10" fill="none" stroke="#22a447" stroke-width="3" stroke-dasharray="6 4"/><text x="118" y="346" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="13" fill="#22a447">zona segura</text></svg>
+      <small>Áreas cobertas pelo app (aproximadas)</small>
+    </div>
+    <div>
+      <ul>
+        <li><strong>Topo (≈ 0–8%)</strong>: barra de status e abas do app. Títulos começam um pouco abaixo.</li>
+        <li><strong>Direita, da metade para baixo</strong>: curtir, comentar, compartilhar, salvar.</li>
+        <li><strong>Rodapé (≈ últimos 18%)</strong>: nome do perfil, legenda do post, música.</li>
+        <li><strong>Centro</strong>: ícone de play/pause e de som aparecem quando a pessoa toca na tela. Atenção redobrada em desafios de pausar!</li>
+      </ul>
+      <div class="box dica"><span class="t">Teste real</span><p>Poste como rascunho ou "melhores amigos", pause no celular e tire um print. É o jeito mais garantido de ver o que fica coberto.</p></div>
+    </div>
+  </div>
+
+  <h2>7.3 Gancho e ritmo</h2>
+  <ul>
+    <li><strong>Os 3 primeiros segundos decidem tudo.</strong> Texto do gancho já visível no primeiro quadro (muita gente assiste sem som), frase curta e curiosa.</li>
+    <li><strong>Algo muda na tela a cada 1–3 s</strong>: corte, zoom, objeto novo, texto novo.</li>
+    <li><strong>Sem introdução</strong> ("Olá, pessoal, hoje vamos…"): comece pelo assunto.</li>
+    <li><strong>Final em loop:</strong> se a última frase "encaixa" no começo, mais gente assiste de novo.</li>
+  </ul>
+
+  <h2>7.4 Postando</h2>
+  <h3>Legenda do post</h3>
+  <p>Peça ao Claude: <em>"Escreve a legenda do post: gancho na primeira linha, 2–3 linhas de contexto, pergunta para gerar comentário e 5–8 hashtags do nicho."</em></p>
+  <h3>Frequência e consistência</h3>
+  <ul>
+    <li>Melhor <strong>1 vídeo por dia por 30 dias</strong> do que 10 num dia e nada no resto do mês.</li>
+    <li>Mantenha <strong>identidade fixa</strong> por canal: mesmo personagem, mesmas cores, mesma voz, mesmo tipo de gancho.</li>
+    <li>Repare nos números depois de 48 h (retenção, salvamentos, compartilhamentos) e <strong>faça mais do que funcionou</strong>.</li>
+  </ul>
+  <h3>Um formato por canal</h3>
+  <p>Cada formato deste curso pode virar um <strong>canal próprio</strong>. Misturar estilos no mesmo perfil confunde o público e o algoritmo. Se quiser testar vários, crie um perfil por formato.</p>
+</section>
+
+<!-- ======================================================= MÓDULO 8 -->
+<section class="modulo m8">
+  <div class="faixa"><div class="bolha"></div><div class="num">MÓDULO 8</div><h1>Problemas comuns</h1><p>Os tropeços que todo mundo tem, e como pedir a solução.</p></div>
+  <table>
+    <tr><th style="width:34%">Problema</th><th>O que fazer / o que pedir</th></tr>
+    <tr><td>"comando não encontrado" (node, python, ffmpeg)</td><td>Feche e reabra o terminal; reinicie o computador; no Windows, reinstale o Python marcando "Add to PATH".</td></tr>
+    <tr><td>Render muito lento ou travando</td><td>Renderize um vídeo por vez; feche outros programas; peça "renderiza com concurrency menor". No 3D, é normal levar vários minutos.</td></tr>
+    <tr><td>Texto ou personagem cortado na borda</td><td>"Gera a grade de quadros-chave e corrige tudo que estiver cortado na borda vertical."</td></tr>
+    <tr><td>Legenda fora de sincronia</td><td>"Confere as palavras que caem fora da fala e corrige os tempos." Às vezes uma risada ou suspiro desloca as marcações.</td></tr>
+    <tr><td>Áudio estourando (pico alto)</td><td>"Descobre em que segundo está o pico e abaixa os efeitos sonoros desse trecho." Não precisa regravar a voz.</td></tr>
+    <tr><td>Volume baixo</td><td>"Sobe a música e os efeitos até o vídeo ficar entre −16 e −13 LUFS."</td></tr>
+    <tr><td>Voz rápida/lenta demais em um trecho</td><td>"Acelera só a fala X em 10% localmente, sem gerar a voz de novo."</td></tr>
+    <tr><td>Gancho passou de 3 s</td><td>Antes da voz paga: encurte a frase. Depois: acelere só a primeira fala localmente.</td></tr>
+    <tr><td>Sobrou silêncio no fim</td><td>Escreva mais uma fala ou reduza a duração do vídeo para caber na narração.</td></tr>
+    <tr><td>A voz leu "[laughs]" em vez de rir</td><td>Troque por "hahaha" escrito na pronúncia ou remova a tag; em último caso, gere de novo só aquela frase.</td></tr>
+    <tr><td>Fato duvidoso no roteiro</td><td>"Confere esse dado em duas fontes confiáveis; se não confirmar, remove." Prefira "uma teoria diz…".</td></tr>
+    <tr><td>O Claude "esqueceu" uma regra</td><td>A regra precisa estar escrita no CLAUDE.md ou na skill do formato. Peça: "anota isso na skill".</td></tr>
+    <tr><td>Quebrou algo que funcionava</td><td>"Me mostra o que mudou desde o último commit" e "volta o arquivo X para a versão anterior".</td></tr>
+    <tr><td>Disco cheio</td><td>Apague vídeos antigos de <code>out/</code> e caches de render que não precisa mais.</td></tr>
+  </table>
+</section>
+
+<!-- ======================================================= BÔNUS A -->
+<section class="modulo mb">
+  <div class="faixa"><div class="bolha"></div><div class="num">BÔNUS A</div><h1>Biblioteca de prompts</h1><p>Copie, cole e troque o que está entre colchetes.</p></div>
+
+  <h3>Ideias</h3>
+  <div class="prompt"><span class="rot">IDEIAS</span><p>Me dá 15 ideias de vídeos [explicativos] para o nicho [culinária], com gancho de até 8 palavras para cada. Marca com ⭐ as 5 com mais potencial de compartilhamento e explica por quê.</p></div>
+  <h3>Roteiro</h3>
+  <div class="prompt"><span class="rot">ROTEIRO</span><p>Escreve o roteiro de [tema] no formato [F1]. 60 s (~130 palavras), frases curtas, gancho em até 3 s, uma piada no final, chamada para comentar. Separa "texto" (legenda) de "pronuncia" (com ênfases em MAIÚSCULAS). Lista as fontes. Ainda não gera áudio: quero aprovar o texto antes.</p></div>
+  <h3>Rascunho</h3>
+  <div class="prompt"><span class="rot">RASCUNHO</span><p>Aprovado. Gera o áudio com voz grátis, monta as cenas, confere os quadros-chave, renderiza, roda o qa e me manda o vídeo.</p></div>
+  <h3>Versão final</h3>
+  <div class="prompt"><span class="rot">FINAL</span><p>Autorizo a voz [nome da voz] ([X] caracteres). Gera, renderiza, roda o qa, salva como out/[nome].mp4 e faz o commit.</p></div>
+  <h3>Teste de voz barato</h3>
+  <div class="prompt"><span class="rot">TESTE DE VOZ</span><p>Antes de trocar a voz do canal, gera só uma frase de teste com as vozes [A], [B] e [C] e me manda os três áudios. Me diz o custo antes.</p></div>
+  <h3>Legenda do post</h3>
+  <div class="prompt"><span class="rot">POST</span><p>Escreve a legenda do post deste vídeo: gancho na primeira linha, contexto em 2 linhas, pergunta para comentários, 6 hashtags do nicho. Faz também uma versão curta para o TikTok.</p></div>
+  <h3>Thumbnail / capa</h3>
+  <div class="prompt"><span class="rot">CAPA</span><p>Gera um quadro do vídeo para usar de capa: o momento mais expressivo, com o título [texto] grande no terço superior, PNG 1080x1920.</p></div>
+  <h3>Série</h3>
+  <div class="prompt"><span class="rot">SÉRIE</span><p>Planeja 10 episódios da série [nome], cada um com título, resumo de 2 linhas e o gancho que deixa para o próximo. Salva em serie.md.</p></div>
+  <h3>Foto de perfil e identidade</h3>
+  <div class="prompt"><span class="rot">IDENTIDADE</span><p>Cria 3 opções de foto de perfil 1080x1080 no estilo do canal [descrição], legíveis em tamanho pequeno (círculo), e 3 sugestões de nome para o canal.</p></div>
+</section>
+
+<!-- ======================================================= BÔNUS B -->
+<section class="modulo mb">
+  <div class="faixa"><div class="bolha"></div><div class="num">BÔNUS B</div><h1>Plano de 30 dias</h1><p>Do computador vazio ao canal com 20 vídeos publicados.</p></div>
+  <table>
+    <tr><th style="width:18%">Dias</th><th>Meta</th><th style="width:30%">Entregável</th></tr>
+    <tr><td>1–2</td><td>Instalar tudo (Módulo 2) e criar o estúdio (Módulo 3).</td><td>Vídeo de teste renderizado</td></tr>
+    <tr><td>3</td><td>Montar a voz grátis, a legenda e a conferência (Módulos 4 e 7).</td><td>Pipeline de áudio funcionando</td></tr>
+    <tr><td>4–5</td><td>Escolher <strong>um</strong> formato ★☆☆ e fazer o primeiro vídeo.</td><td>1º vídeo + skill do formato</td></tr>
+    <tr><td>6</td><td>Nome do canal, foto de perfil, bio, 10 ideias de vídeo.</td><td>Perfil pronto</td></tr>
+    <tr><td>7–13</td><td>1 vídeo por dia no formato escolhido. Postar todos.</td><td>7 vídeos publicados</td></tr>
+    <tr><td>14</td><td>Analisar: quais tiveram mais retenção e salvamentos?</td><td>Lista do que repetir</td></tr>
+    <tr><td>15–16</td><td>Montar um segundo formato (★★☆) para testar.</td><td>Skill nova</td></tr>
+    <tr><td>17–27</td><td>1 vídeo por dia: 70% no formato vencedor, 30% testes.</td><td>+11 vídeos</td></tr>
+    <tr><td>28–29</td><td>Criar uma série (com gancho) no formato vencedor.</td><td>Roteiro de 10 episódios</td></tr>
+    <tr><td>30</td><td>Revisar o CLAUDE.md e as skills com tudo o que aprendeu.</td><td>Estúdio "treinado"</td></tr>
+  </table>
+  <div class="box dica"><span class="t">Produza em lote</span><p>Quando pegar o ritmo, separe um dia para <strong>roteiros</strong> (5–7 de uma vez, aprovados juntos) e outro para <strong>renderizar</strong>. Enquanto um vídeo renderiza, você aprova o roteiro do próximo.</p></div>
+</section>
+
+<!-- ======================================================= BÔNUS C -->
+<section class="modulo mb">
+  <div class="faixa"><div class="bolha"></div><div class="num">BÔNUS C</div><h1>Mais ideias de formatos</h1><p>Variações que usam as mesmas peças do estúdio.</p></div>
+  <table>
+    <tr><th style="width:28%">Formato</th><th>Como montar</th></tr>
+    <tr><td><strong>Ranking / Top 5</strong></td><td>Cartões numerados de 5 a 1 com contagem regressiva, música crescendo e "o nº 1 vai te surpreender".</td></tr>
+    <tr><td><strong>Terror / mistério</strong></td><td>2D escuro, vinheta, ruído, voz grave sussurrada, cortes lentos e um susto sonoro no fim. Use lendas e histórias originais.</td></tr>
+    <tr><td><strong>Papel recortado</strong></td><td>Personagens e cenários como recortes de papel (sombra suave, textura de papel, bordas irregulares), movimentos em "stop-motion" (12 fps).</td></tr>
+    <tr><td><strong>Ilusão de ótica / teste de visão</strong></td><td>Sem narração: "Quantos círculos você vê?", timer e revelação. Custo zero, muitos comentários.</td></tr>
+    <tr><td><strong>Lyric video</strong></td><td>Texto cinético sincronizado com a letra de uma música original sua.</td></tr>
+    <tr><td><strong>"Você vs. Você"</strong></td><td>Tela dividida comparando duas escolhas (ex.: "Você que dorme 8 h vs. você que dorme 4 h"), com palitinho ou cartoon.</td></tr>
+    <tr><td><strong>Linha do tempo</strong></td><td>Câmera passeando por uma linha do tempo horizontal, com datas e ícones: história, evolução de objetos.</td></tr>
+    <tr><td><strong>Receita animada</strong></td><td>Ingredientes caindo na panela, passos numerados, timer. Funciona muito bem com voz alegre.</td></tr>
+    <tr><td><strong>Mapa animado</strong></td><td>Países acendendo, rotas desenhadas e números crescendo, para geografia e curiosidades de viagem.</td></tr>
+    <tr><td><strong>Comercial fake</strong></td><td>Paródia de televendas de produtos absurdos, com filtro de TV antiga (VHS) e letrinhas miúdas no final.</td></tr>
+  </table>
+</section>
+
+<!-- ======================================================= BÔNUS D -->
+<section class="quebra">
+  <h2 style="margin-top:0">Bônus D · Glossário</h2>
+  <table>
+    <tr><th style="width:24%">Termo</th><th>Significado</th></tr>
+    <tr><td>9:16</td><td>Formato vertical de celular (1080 de largura por 1920 de altura).</td></tr>
+    <tr><td>fps</td><td>Quadros por segundo. Usamos 30.</td></tr>
+    <tr><td>Frame / quadro</td><td>Uma "foto" do vídeo. 1 segundo = 30 quadros.</td></tr>
+    <tr><td>Composição</td><td>No Remotion, um "tipo de vídeo" registrado (ex.: Quiz, Explicativo).</td></tr>
+    <tr><td>Render / renderizar</td><td>Transformar o código das cenas em arquivo de vídeo.</td></tr>
+    <tr><td>Timeline</td><td>Arquivo com o início e o fim de cada cena, fala e palavra.</td></tr>
+    <tr><td>Skill</td><td>Manual de um formato que o Claude segue automaticamente.</td></tr>
+    <tr><td>CLAUDE.md</td><td>Manual geral do estúdio, lido em toda conversa.</td></tr>
+    <tr><td>Commit</td><td>"Ponto de salvamento" do projeto no Git.</td></tr>
+    <tr><td>Prompt</td><td>O pedido que você escreve para a IA.</td></tr>
+    <tr><td>TTS</td><td>Text-to-speech: transformar texto em voz.</td></tr>
+    <tr><td>LUFS / dBTP</td><td>Medidas de volume médio e de pico do áudio.</td></tr>
+    <tr><td>SFX</td><td>Efeitos sonoros (whoosh, pop, boing…).</td></tr>
+    <tr><td>Low-poly</td><td>3D com poucas faces, visual facetado e "fofo".</td></tr>
+    <tr><td>Gancho</td><td>A frase/imagem dos primeiros 3 segundos que segura o espectador.</td></tr>
+    <tr><td>Folha de contato</td><td>Imagem com vários quadros do vídeo lado a lado, para conferência.</td></tr>
+    <tr><td>Zonas seguras</td><td>Áreas da tela que não são cobertas pelos botões e textos do app.</td></tr>
+  </table>
+
+  <div class="box dica" style="margin-top:10pt"><span class="t">Agora é com você</span><p>Monte o estúdio, escolha um formato e publique o primeiro vídeo ainda esta semana. O primeiro vai dar trabalho; o décimo vai sair quase sozinho. Bons vídeos! 🎬</p></div>
+
+  <h2>Licenças e avisos</h2>
+  <ul>
+    <li><strong>Remotion:</strong> gratuito para pessoas físicas, organizações sem fins lucrativos e empresas com até 3 funcionários. Empresas maiores precisam de licença de empresa. Confira os termos atuais em <code>remotion.dev/license</code>.</li>
+    <li><strong>Vozes:</strong> cada serviço tem regras próprias de uso comercial. Planos gratuitos podem exigir atribuição ou proibir monetização. O Kokoro é de código aberto; confira a licença do modelo e das vozes que usar.</li>
+    <li><strong>Claude / Claude Code:</strong> sujeito aos termos de uso da Anthropic. Planos, limites e formas de instalação podem mudar: use sempre a documentação oficial.</li>
+    <li><strong>Conteúdo:</strong> você é responsável pelo que publica. Não use personagens, músicas, marcas ou trechos de terceiros sem permissão, e confira fatos, principalmente em saúde, finanças e notícias.</li>
+    <li>Preços, nomes de planos e comandos citados refletem o momento em que esta apostila foi escrita e podem ter mudado.</li>
+  </ul>
+
+</section>
+
+</body>
+</html>

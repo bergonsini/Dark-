@@ -1,0 +1,219 @@
+
+<!-- ======================================================= MÓDULO 6 -->
+<section class="modulo m6">
+  <div class="faixa"><div class="bolha"></div><div class="num">MÓDULO 6</div><h1>Os 8 formatos</h1><p>Um capítulo por formato. Cada um traz: o que é, por que funciona, estrutura do roteiro, o prompt para montar o formato e o prompt para cada vídeo novo.</p></div>
+  <table>
+    <tr><th>#</th><th>Formato</th><th>Duração</th><th>Narração</th><th>Dificuldade</th></tr>
+    <tr><td>F1</td><td>Explicativo 2D cartoon</td><td>45–60 s</td><td>Sim</td><td>★★☆</td></tr>
+    <tr><td>F2</td><td>Humor absurdo 3D em série</td><td>60 s</td><td>Sim</td><td>★★★</td></tr>
+    <tr><td>F3</td><td>Desafio do pause (neon)</td><td>15–20 s, loop</td><td>Não</td><td>★★☆</td></tr>
+    <tr><td>F4</td><td>Animação de palitinho</td><td>20–60 s</td><td>Opcional</td><td>★☆☆</td></tr>
+    <tr><td>F5</td><td>Quadro-negro (giz)</td><td>45–90 s</td><td>Sim</td><td>★★☆</td></tr>
+    <tr><td>F6</td><td>Quiz</td><td>20–40 s</td><td>Opcional</td><td>★☆☆</td></tr>
+    <tr><td>F7</td><td>Texto cinético</td><td>15–45 s</td><td>Opcional</td><td>★☆☆</td></tr>
+    <tr><td>F8</td><td>Fitness: treino, exercícios e dieta</td><td>30–60 s</td><td>Sim</td><td>★★☆</td></tr>
+  </table>
+  <div class="box dica"><span class="t">Por onde começar</span><p>Comece por um formato ★☆☆ (palitinho, quiz ou texto cinético) para pegar o jeito do fluxo. Depois vá para o explicativo, e só então para o 3D.</p></div>
+  <h3>O roteiro em JSON (vale para todos os formatos)</h3>
+  <p>Todo vídeo narrado nasce de um arquivo de roteiro. Esse é o "molde" que o Claude preenche:</p>
+  <pre>{
+  "video": "pipoca",
+  "titulo": "Por que a pipoca estoura?",
+  "duracaoSegundos": 60,
+  "voz": { "motor": "kokoro", "voz": "pm_alex" },
+  "fontes": ["Fonte 1 ...", "Fonte 2 ..."],
+  "cenas": [
+    { "id": "gancho",
+      "falas": [ { "texto": "Por que a pipoca estoura?",
+                   "pronuncia": "[curious] Por que a pipoca ESTOURA?" } ] },
+    { "id": "grao",
+      "falas": [ { "texto": "Cada grão guarda um pouquinho de água…",
+                   "pronuncia": "Cada grão guarda um pouquinho de ÁGUA…" } ] }
+  ]
+}</pre>
+  <p>Cada <strong>cena</strong> vira uma função de animação. Cada <strong>fala</strong> vira áudio com tempo de cada palavra. O campo <code>id</code> liga as duas coisas.</p>
+</section>
+
+<!-- ---------------------------------------- F1 -->
+<section class="formato">
+  <div class="topo"><div class="selo" style="background:#ff8c1a">F1</div><div><h1>Explicativo 2D cartoon</h1><div class="linha2">"Por que o céu é azul?", explicado por um personagem carismático.</div></div></div>
+  <div class="ficha"><div><b>Duração</b>45–60 s</div><div><b>Narração</b>Sim (1 voz)</div><div><b>Custo</b>Grátis ou ~700 caracteres</div><div><b>Ideal para</b>Curiosidades, ciência, história</div></div>
+  <div class="duas">
+    <div>
+      <h3 style="margin-top:0">Por que funciona</h3>
+      <p>Uma pergunta que todo mundo já fez + uma resposta surpreendente + um personagem fixo que o público passa a reconhecer. É conteúdo "salvável" e compartilhável.</p>
+      <h3>Ingredientes visuais</h3>
+      <ul>
+        <li><strong>Personagem fixo</strong> 2D vetorial (contorno grosso, cores fortes), com expressões (feliz, surpreso, pensativo) e poses (apontando, explicando).</li>
+        <li><strong>Boca sincronizada</strong> com a voz (abre conforme o volume).</li>
+        <li><strong>Cenários</strong> simples (céu, cozinha, laboratório) e <strong>objetos explicativos</strong> grandes: o grão em corte, o planeta, o diafragma.</li>
+        <li><strong>Câmera</strong> com zoom e tremidinhas nos momentos fortes.</li>
+        <li><strong>Etiquetas</strong> (tags) e títulos que "batem" na tela.</li>
+      </ul>
+    </div>
+    <div class="mock">
+      <svg viewBox="0 0 270 480"><rect width="270" height="480" fill="#bfe6ff"/><path d="M0 360 Q 135 320 270 360 L270 480 L0 480 Z" fill="#7ed36b"/>
+        <rect x="40" y="40" width="190" height="34" rx="10" fill="#fff" stroke="#1f1b2e" stroke-width="4"/><text x="135" y="63" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="16" fill="#1f1b2e">POR QUE O CÉU É AZUL?</text>
+        <circle cx="200" cy="140" r="34" fill="#ffd23f" stroke="#1f1b2e" stroke-width="4"/>
+        <g transform="translate(110 250)"><circle cx="0" cy="0" r="38" fill="#c98b5e" stroke="#1f1b2e" stroke-width="4"/><circle cx="-13" cy="-4" r="9" fill="#fff" stroke="#1f1b2e" stroke-width="3"/><circle cx="13" cy="-4" r="9" fill="#fff" stroke="#1f1b2e" stroke-width="3"/><circle cx="-12" cy="-3" r="4" fill="#1f1b2e"/><circle cx="14" cy="-3" r="4" fill="#1f1b2e"/><path d="M-12 16 Q0 26 12 16" fill="none" stroke="#1f1b2e" stroke-width="4" stroke-linecap="round"/><rect x="-30" y="38" width="60" height="70" rx="14" fill="#ffd23f" stroke="#1f1b2e" stroke-width="4"/><path d="M30 55 L70 20" stroke="#1f1b2e" stroke-width="9" stroke-linecap="round"/></g>
+        <rect x="30" y="395" width="210" height="40" rx="12" fill="#1f1b2e" opacity=".75"/><text x="135" y="422" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="20" fill="#fff">A LUZ DO <tspan fill="#ffd23f">SOL</tspan></text></svg>
+      <small>Personagem + objeto explicativo + legenda</small>
+    </div>
+  </div>
+  <h3>Estrutura do roteiro (60 s, ~130 palavras)</h3>
+  <ol>
+    <li><strong>Gancho (0–3 s):</strong> a pergunta, com o texto já na tela no primeiro quadro.</li>
+    <li><strong>Explicação em 3 a 5 cenas curtas</strong>, uma ideia por cena.</li>
+    <li><strong>Fato surpresa</strong> ("o recorde de soluço durou 68 anos").</li>
+    <li><strong>Conclusão com piada</strong> que resume o assunto.</li>
+    <li><strong>Chamada</strong> ("E você, prefere doce ou salgada? Conta aí!").</li>
+  </ol>
+  <div class="prompt"><span class="rot">PROMPT · MONTAR O FORMATO (1ª VEZ)</span>
+    <p>Quero criar o formato "Explicativo 2D" no estúdio. Crie um personagem cartoon original 2D em SVG (contorno escuro grosso, cores vivas), com expressões (neutro, feliz, animado, surpreso, pensativo, preocupado), poses (parado, apontando, explicando, comemorando, assustado) e boca sincronizada com o volume da narração. Crie também: cenários simples (céu com colinas, cozinha), componente de câmera (zoom/tremida), etiquetas de texto que entram com mola, título grande de impacto e a legenda palavra por palavra. Depois faça um vídeo de teste de 60 s sobre "por que o céu é azul" (fatos conferidos em 2 fontes) com voz grátis, gere os quadros-chave numa grade, confira o enquadramento e renderize.</p>
+  </div>
+  <div class="prompt"><span class="rot">PROMPT · CADA VÍDEO NOVO</span>
+    <p>Faz um vídeo explicativo sobre [tema]. 60 s, gancho em até 3 s, piada no final do tipo [ideia], chamada para comentar. Confere os fatos em duas fontes e lista no roteiro. Cria os objetos visuais que precisar. Rascunho com voz grátis.</p>
+  </div>
+  <div class="box atencao"><span class="t">Armadilhas comuns</span>
+    <ul>
+      <li><strong>Fato errado</strong> destrói a credibilidade. Exija fontes e prefira dizer "uma teoria diz…" quando a ciência ainda debate.</li>
+      <li><strong>Texto em cima da legenda:</strong> reserve a faixa da legenda (≈ 65–75% da altura) só para ela.</li>
+      <li>Personagem <strong>pequeno demais</strong> no celular: ele deve ocupar pelo menos 1/3 da altura nas cenas em que fala.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ---------------------------------------- F2 -->
+<section class="formato">
+  <div class="topo"><div class="selo" style="background:#6c3df4">F2</div><div><h1>Humor absurdo 3D em série</h1><div class="linha2">Mini-novelas low-poly onde objetos têm emprego, sentimentos e fazem greve.</div></div></div>
+  <div class="ficha"><div><b>Duração</b>60 s</div><div><b>Narração</b>Sim (narrador)</div><div><b>Custo</b>~700 caracteres</div><div><b>Ideal para</b>Entretenimento, retenção, seguidores fiéis</div></div>
+  <div class="duas">
+    <div>
+      <h3 style="margin-top:0">Por que funciona</h3>
+      <p>O absurdo dito com cara séria é engraçado ("a geladeira pediu demissão"). E <strong>série com gancho</strong> faz a pessoa voltar para ver o próximo: é a mesma lógica das novelas.</p>
+      <h3>Ingredientes visuais</h3>
+      <ul>
+        <li><strong>3D low-poly</strong> (formas facetadas, cores chapadas), montado com peças simples: caixa, bola, cone, cilindro.</li>
+        <li><strong>Objetos com rostinho</strong>: olhos, sobrancelhas e boca em qualquer coisa.</li>
+        <li><strong>Cortes secos a cada 1–2 s</strong> e <strong>closes exagerados</strong> no rosto.</li>
+        <li><strong>Legenda de UMA palavra</strong> por vez e <strong>títulos de capítulo</strong> amarelos.</li>
+        <li><strong>Onomatopeias</strong> ("PLIM!", "CREC!") e placas.</li>
+      </ul>
+    </div>
+    <div class="mock">
+      <svg viewBox="0 0 270 480"><rect width="270" height="480" fill="#7fc8a9"/><polygon points="0,330 270,330 270,480 0,480" fill="#e8d3b0"/>
+        <text x="135" y="60" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="24" fill="#ffd23f" stroke="#1f1b2e" stroke-width="2">A GELADEIRA SE DEMITIU</text>
+        <polygon points="70,120 150,110 160,330 80,340" fill="#e8f1f6" stroke="#9db" stroke-width="2"/><polygon points="150,110 175,125 182,320 160,330" fill="#c9d8e2"/>
+        <circle cx="100" cy="190" r="12" fill="#fff"/><circle cx="135" cy="188" r="12" fill="#fff"/><circle cx="102" cy="192" r="6" fill="#1f1b2e"/><circle cx="137" cy="190" r="6" fill="#1f1b2e"/><path d="M90 168 L112 176 M146 172 L124 176" stroke="#1f1b2e" stroke-width="5"/>
+        <rect x="95" y="215" width="40" height="14" rx="4" fill="#8e2f2f"/>
+        <rect x="150" y="250" width="90" height="34" rx="6" fill="#ffd23f" stroke="#1f1b2e" stroke-width="3"/><text x="195" y="273" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="14" fill="#1f1b2e">PEÇO DEMISSÃO</text>
+        <text x="135" y="420" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="34" fill="#fff" stroke="#1f1b2e" stroke-width="3">DEMISSÃO</text></svg>
+      <small>Objeto com rostinho + capítulo + 1 palavra</small>
+    </div>
+  </div>
+  <h3>Estrutura do episódio</h3>
+  <ol>
+    <li><strong>Gancho (0–3 s):</strong> premissa absurda com o texto na tela ("O ovo rachou… e nasceu uma GELADEIRINHA!"). Na série, ele <strong>responde o mistério</strong> do episódio anterior.</li>
+    <li><strong>5 a 7 capítulos</strong> que <strong>escalam</strong>: cada um piora a situação de forma mais ridícula.</li>
+    <li><strong>Piadas recorrentes</strong>: o personagem que nunca se abala, o que sempre perde o cargo…</li>
+    <li><strong>Final com gancho de mistério</strong> ("Bateram na porta… quem é?") e "CONTINUA…".</li>
+  </ol>
+  <div class="box dica"><span class="t">A "bíblia da série"</span><p>Peça ao Claude para manter um arquivo <code>serie.md</code> com o elenco, as piadas recorrentes e a tabela de episódios (título + gancho deixado). Ele lê antes de escrever o próximo episódio, e a continuidade fica perfeita.</p></div>
+  <div class="prompt"><span class="rot">PROMPT · MONTAR O FORMATO (1ª VEZ)</span>
+    <p>Quero um formato de humor absurdo em 3D low-poly com @remotion/three. Monte: peças facetadas (caixa, bola, cone, cilindro com flatShading), um componente de "rostinho" (olhos, sobrancelhas e boca com expressões) aplicável a qualquer objeto, um protagonista original low-poly, um cenário de cozinha, uma câmera com cortes secos e uma função que posiciona a câmera de frente para o rosto de um personagem. Textos: legenda de UMA palavra por vez, título de capítulo amarelo, onomatopeias e placas. Regras: corte a cada 1–2 s, nenhum plano parado por mais de 2,5 s, animação só com useCurrentFrame (nada de useFrame). Faça um episódio piloto de 60 s, confira os quadros (nada cortado na borda vertical) e renderize. Crie também o arquivo serie.md.</p>
+  </div>
+  <div class="prompt"><span class="rot">PROMPT · PRÓXIMO EPISÓDIO</span>
+    <p>Faz o próximo episódio da série. Lê o serie.md, começa respondendo o gancho do último episódio, escala o absurdo em 6–7 capítulos e termina com um novo mistério + "CONTINUA…". Rascunho com voz grátis. Depois de aprovado, atualiza o serie.md.</p>
+  </div>
+  <div class="box atencao"><span class="t">Armadilhas do 3D</span>
+    <ul>
+      <li><strong>Câmera perto demais</strong> ou objeto na frente do rosto: confira sempre a grade de quadros.</li>
+      <li>A tela vertical é <strong>estreita</strong>: personagens a no máximo ~1,2 unidade do centro nos planos abertos.</li>
+      <li>Renderizar 3D é lento: faça só <strong>um render por vez</strong> e deixe rodando.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ---------------------------------------- F3 -->
+<section class="formato">
+  <div class="topo"><div class="selo" style="background:#ff4fa3">F3</div><div><h1>Desafio do pause (neon)</h1><div class="linha2">"Pause antes do foguete bater na Lua!": o espectador tenta pausar no 0:00.00.</div></div></div>
+  <div class="ficha"><div><b>Duração</b>15–20 s em loop</div><div><b>Narração</b>Não</div><div><b>Custo</b>Zero</div><div><b>Ideal para</b>Engajamento, comentários, replays</div></div>
+  <div class="duas">
+    <div>
+      <h3 style="margin-top:0">Por que funciona</h3>
+      <p>É um <strong>joguinho dentro do vídeo</strong>: a pessoa assiste várias vezes tentando acertar (replay conta muito para o algoritmo) e comenta o resultado. E custa zero, porque não tem voz.</p>
+      <h3>Ingredientes visuais</h3>
+      <ul>
+        <li>Estética <strong>neon/fliperama</strong>: fundo roxo escuro, grade em perspectiva, brilho.</li>
+        <li><strong>Cronômetro</strong> grande contando até 0:00.00.</li>
+        <li><strong>Painel ao vivo</strong> mostrando o resultado de quem pausar agora: CEDO DEMAIS / CEDO / PERTO / BATEU.</li>
+        <li>5 tentativas, cada uma mais rápida.</li>
+        <li><strong>Quadro secreto</strong>: no frame exato do 0:00.00 aparece "PERFEITO! Comenta SALVEI" por 1 frame só.</li>
+      </ul>
+    </div>
+    <div class="mock">
+      <svg viewBox="0 0 270 480"><rect width="270" height="480" fill="#1a0b3d"/><g stroke="#ff2bd6" stroke-width="1.5" opacity=".7"><path d="M0 380 L270 380 M0 400 L270 400 M0 430 L270 430 M0 470 L270 470 M135 370 L135 480 M95 370 L20 480 M175 370 L250 480"/></g><rect y="368" width="270" height="3" fill="#2bf3ff"/>
+        <text x="135" y="36" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="17" fill="#fff" stroke="#ff2bd6" stroke-width=".8">PAUSE ANTES DO FOGUETE</text>
+        <rect x="20" y="60" width="230" height="56" rx="8" fill="#0a0019" stroke="#3dff8a" stroke-width="2"/><text x="32" y="98" font-family="Baloo 2" font-weight="800" font-size="24" fill="#3dff8a">PERTO!</text><text x="238" y="98" text-anchor="end" font-family="DejaVu Sans Mono" font-size="13" fill="#3dff8a">-33 ms</text>
+        <rect x="55" y="126" width="160" height="42" rx="8" fill="#0a0019" stroke="#ff3b5c" stroke-width="2"/><text x="135" y="156" text-anchor="middle" font-family="DejaVu Sans Mono" font-weight="700" font-size="24" fill="#fff">0:00.03</text>
+        <circle cx="80" cy="215" r="34" fill="#2a1a40" stroke="#ffe45c" stroke-width="3"/><g stroke="#ff3b5c" stroke-width="3"><path d="M20 254 L30 254 M40 254 L50 254 M60 254 L70 254 M80 254 L90 254 M100 254 L110 254 M120 254 L130 254"/></g>
+        <path d="M80 262 C 95 275 96 300 94 320 L66 320 C 64 300 65 275 80 262 Z" fill="#12052a" stroke="#2bf3ff" stroke-width="3"/><path d="M70 322 Q80 360 90 322 Z" fill="#ff8a2b"/></svg>
+      <small>Painel ao vivo + cronômetro + ação fora do centro</small>
+    </div>
+  </div>
+  <h3>A regra mais importante</h3>
+  <p>O vídeo <strong>nunca pausa sozinho</strong>: ele roda em <strong>loop contínuo</strong> e quem pausa é o espectador. Por isso o painel precisa estar sempre "ao vivo", mostrando o que aconteceria se a pessoa pausasse naquele exato quadro.</p>
+  <div class="box atencao"><span class="t">Zonas seguras (aprendido na prática)</span><p>Ao pausar, o Instagram mostra um <strong>ícone de play no centro</strong> da tela, os botões ficam na <strong>direita</strong> e a legenda do post cobre o <strong>rodapé</strong>. Coloque o cronômetro no <strong>topo</strong> e o quadro secreto <strong>entre o centro e o rodapé</strong>, longe dos botões. Se a ação principal ficar no centro, garanta que o texto importante não fique embaixo do ícone de play. Veja o diagrama no Módulo 7.</p></div>
+  <div class="prompt"><span class="rot">PROMPT · MONTAR O FORMATO (1ª VEZ)</span>
+    <p>Cria um formato "desafio do pause" sem narração, estética neon/arcade (fundo roxo, grade em perspectiva rolando, estrelas, brilho neon). Tema: [pause antes do foguete bater na Lua]. 5 tentativas em LOOP contínuo, cada uma mais rápida; o vídeo nunca pausa sozinho. Cronômetro grande no topo que chega a 0:00.00 quando o objeto toca a linha-alvo; painel ao vivo (CEDO DEMAIS / CEDO / PERTO / BATEU + diferença em ms + régua). No frame exato do 0:00.00, quadro secreto de 1 frame: "PERFEITO! COMENTA 'SALVEI'", posicionado fora do ícone de play e dos botões do Instagram. Música arcade original gerada por código e efeitos. Sem intro e sem tela final. Duração 13–20 s.</p>
+  </div>
+  <div class="prompt"><span class="rot">PROMPT · NOVO DESAFIO</span>
+    <p>Faz um desafio novo com o tema [pause antes do balão estourar nos espinhos], mesmo formato e zonas seguras.</p>
+  </div>
+  <p class="mini">Ideias de temas: pare a bola antes de cair no buraco · pause quando o copo encher até a linha · salve o ovo antes da frigideira · pause o carro na beira do penhasco · pare o pêndulo no centro.</p>
+</section>
+
+<!-- ---------------------------------------- F4 -->
+<section class="formato">
+  <div class="topo"><div class="selo" style="background:#1f1b2e">F4</div><div><h1>Animação de palitinho</h1><div class="linha2">Bonequinhos de traço simples: histórias, piadas e "tipos de pessoa".</div></div></div>
+  <div class="ficha"><div><b>Duração</b>20–60 s</div><div><b>Narração</b>Opcional</div><div><b>Custo</b>Zero a ~600 caracteres</div><div><b>Ideal para</b>Humor do dia a dia, histórias, memes</div></div>
+  <div class="duas">
+    <div>
+      <h3 style="margin-top:0">Por que funciona</h3>
+      <p>O traço simples é <strong>universal</strong>: qualquer pessoa se vê no bonequinho. E é o formato <strong>mais rápido</strong> de produzir, porque o personagem é só linhas: dá para fazer muitos vídeos por semana.</p>
+      <h3>Ingredientes visuais</h3>
+      <ul>
+        <li><strong>Boneco de palito</strong> com articulações (ombro, cotovelo, quadril, joelho) animadas por ângulos: andar, correr, pular, cair, dançar.</li>
+        <li>Fundo branco ou papel quadriculado, com <strong>linhas "tremidas"</strong> (efeito desenhado à mão: o traço muda levemente a cada 3 quadros).</li>
+        <li><strong>Balões de fala</strong> e onomatopeias escritas à mão.</li>
+        <li>Poucos objetos, desenhados com o mesmo traço.</li>
+      </ul>
+    </div>
+    <div class="mock">
+      <svg viewBox="0 0 270 480"><rect width="270" height="480" fill="#fff"/><g stroke="#e4e4ef" stroke-width="1">
+        <path d="M0 40 H270 M0 80 H270 M0 120 H270 M0 160 H270 M0 200 H270 M0 240 H270 M0 280 H270 M0 320 H270 M0 360 H270 M0 400 H270 M0 440 H270"/></g>
+        <g fill="none" stroke="#1f1b2e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="80" cy="200" r="20"/><path d="M80 220 L82 290 M82 240 L55 268 M82 240 L112 222 M82 290 L60 340 M82 290 L104 338"/>
+          <circle cx="190" cy="205" r="20"/><path d="M190 225 L188 292 M188 245 L160 230 M188 245 L215 270 M188 292 L170 340 M188 292 L210 340"/>
+          <path d="M20 342 H250"/></g>
+        <path d="M110 120 Q 110 95 140 95 L 230 95 Q 255 95 255 120 L255 150 Q 255 172 230 172 L 160 172 L 140 190 L 145 172 Q 110 172 110 150 Z" fill="#fff" stroke="#1f1b2e" stroke-width="3"/>
+        <text x="182" y="128" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="14" fill="#1f1b2e">QUANDO O WI-FI</text><text x="182" y="150" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="14" fill="#1f1b2e">CAI NA REUNIÃO…</text>
+        <text x="135" y="420" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="26" fill="#1f1b2e">"TÁ ME OUVINDO?"</text></svg>
+      <small>Traço único + balão de fala</small>
+    </div>
+  </div>
+  <h3>Estruturas que funcionam</h3>
+  <ul>
+    <li><strong>"Tipos de pessoa":</strong> "Tipos de pessoa na academia", 4–5 cenas de 5–8 s, cada uma com um tipo.</li>
+    <li><strong>"Quando…":</strong> uma situação relatable com reviravolta no final ("Quando você fala 'só mais 5 minutinhos'…").</li>
+    <li><strong>Mini-história</strong> em 3 atos: situação → problema → final inesperado.</li>
+    <li><strong>Sem narração:</strong> só balões, efeitos e música, rápido e barato.</li>
+  </ul>
+  <div class="prompt"><span class="rot">PROMPT · MONTAR O FORMATO (1ª VEZ)</span>
+    <p>Cria o formato "palitinho": um boneco de palito em SVG com cabeça redonda e membros articulados (ombro/cotovelo/quadril/joelho por ângulos), com poses prontas (parado, andando, correndo, pulando, caindo, sentado, comemorando, apontando, de mãos na cabeça) e transição suave entre poses. Traço preto grosso com efeito "tremido de desenho à mão" (o traço muda levemente a cada 3 quadros). Fundo papel quadriculado. Componentes: balão de fala, onomatopeia escrita à mão, objetos simples com o mesmo traço. Legenda palavra por palavra opcional. Faça um vídeo teste de 30 s: "Tipos de pessoa no elevador", 4 tipos, sem narração, com balões e música.</p>
+  </div>
+  <div class="prompt"><span class="rot">PROMPT · CADA VÍDEO NOVO</span>
+    <p>Faz um palitinho "[Quando você acorda segunda-feira]", 25 s, [sem narração / com narração grátis], reviravolta no final, e uma frase para a legenda do post.</p>
+  </div>
+  <div class="box dica"><span class="t">Velocidade de produção</span><p>Depois que as poses estão prontas, um vídeo de palitinho é basicamente uma lista de "pose X do segundo 3 ao 5". Monte um "roteiro de ações" em JSON e o Claude anima direto dele.</p></div>
+</section>

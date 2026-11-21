@@ -1,0 +1,202 @@
+
+<!-- ---------------------------------------- F5 -->
+<section class="formato">
+  <div class="topo"><div class="selo" style="background:#2f4f3a">F5</div><div><h1>Quadro-negro (giz)</h1><div class="linha2">Aula desenhada ao vivo: o desenho vai "aparecendo" enquanto o professor explica.</div></div></div>
+  <div class="ficha"><div><b>Duração</b>45–90 s</div><div><b>Narração</b>Sim (calma)</div><div><b>Custo</b>Grátis ou ~800 caracteres</div><div><b>Ideal para</b>Aulas, matemática, história, finanças</div></div>
+  <div class="duas">
+    <div>
+      <h3 style="margin-top:0">Por que funciona</h3>
+      <p>O olho acompanha o traço se formando, e isso <strong>prende a atenção</strong> e passa sensação de "aula de verdade". É ótimo para assuntos que precisam de esquema: fórmulas, linhas do tempo, mapas, fluxogramas.</p>
+      <h3>Ingredientes visuais</h3>
+      <ul>
+        <li>Fundo de <strong>lousa verde-escura</strong> com moldura de madeira e marcas de apagador.</li>
+        <li>Traço de <strong>giz</strong>: branco/amarelo/rosa, com textura levemente "falhada" (filtro de ruído).</li>
+        <li><strong>Desenho progressivo</strong>: cada linha aparece como se estivesse sendo desenhada (técnica do <em>stroke-dashoffset</em> no SVG), sincronizada com a palavra falada.</li>
+        <li>Letra "de mão" para títulos e setas, círculos e sublinhados que aparecem na hora certa.</li>
+        <li>Pó de giz e um "apagão" com apagador para trocar de assunto.</li>
+      </ul>
+    </div>
+    <div class="mock">
+      <svg viewBox="0 0 270 480"><rect width="270" height="480" fill="#8a5a36"/><rect x="10" y="10" width="250" height="460" fill="#2f4f3a"/>
+        <g fill="none" stroke="#f4f1e8" stroke-width="3" stroke-linecap="round" opacity=".95">
+          <text x="135" y="60" text-anchor="middle" font-family="Baloo 2" font-weight="700" font-size="22" fill="#f4f1e8" stroke="none">JUROS COMPOSTOS</text>
+          <path d="M40 70 Q135 78 230 68"/>
+          <path d="M50 330 L50 120 M50 330 L240 330"/>
+          <path d="M55 320 Q 150 300 230 160" stroke="#ffd23f"/>
+          <path d="M55 320 L230 260" stroke="#ff9ec8" stroke-dasharray="6 6"/>
+          <circle cx="226" cy="166" r="14" stroke="#ffd23f"/>
+        </g>
+        <text x="150" y="240" font-family="Baloo 2" font-weight="700" font-size="14" fill="#ff9ec8">simples</text>
+        <text x="160" y="150" font-family="Baloo 2" font-weight="700" font-size="14" fill="#ffd23f">compostos!</text>
+        <text x="135" y="400" text-anchor="middle" font-family="Baloo 2" font-weight="700" font-size="18" fill="#f4f1e8">"o tempo multiplica"</text>
+        <path d="M200 420 l40 30 l-8 6 l-40 -30 Z" fill="#fff"/></svg>
+      <small>Traço de giz aparecendo + destaque colorido</small>
+    </div>
+  </div>
+  <h3>Estrutura do roteiro</h3>
+  <ol>
+    <li><strong>Pergunta-gancho</strong> escrita na lousa (0–3 s): "Por que o seu dinheiro na poupança rende tão pouco?".</li>
+    <li><strong>Desenho base</strong> (eixo, mapa, figura) enquanto contextualiza.</li>
+    <li><strong>2 a 4 passos</strong>, cada um com um elemento novo desenhado e um destaque colorido no momento-chave.</li>
+    <li><strong>Resumo</strong> circulado na lousa + chamada ("Salva pra estudar depois!").</li>
+  </ol>
+  <div class="prompt"><span class="rot">PROMPT · MONTAR O FORMATO (1ª VEZ)</span>
+    <p>Cria o formato "quadro-negro": fundo de lousa verde-escura com moldura de madeira e manchas de apagador; textura de giz (filtro SVG de ruído) nas linhas; componente que DESENHA qualquer caminho SVG progressivamente (stroke-dashoffset) entre dois frames; texto que aparece letra por letra como escrita à mão; setas, círculos e sublinhados que se desenham; cores de giz branco, amarelo, rosa e azul; efeito de apagador para trocar de cena. Cada elemento começa a ser desenhado na palavra exata da narração (use o timeline). Voz calma de professor. Faça um teste de 60 s: "Juros simples x compostos", fatos conferidos.</p>
+  </div>
+  <div class="prompt"><span class="rot">PROMPT · CADA VÍDEO NOVO</span>
+    <p>Faz um quadro-negro sobre [como funciona a fotossíntese], 60 s, desenhando [a planta, o sol, setas de CO₂ e O₂]. Fatos em duas fontes. Rascunho com voz grátis.</p>
+  </div>
+  <div class="box dica"><span class="t">Variação: whiteboard com mão</span><p>Troque a lousa por um <strong>quadro branco</strong> com caneta preta e uma <strong>mão desenhada</strong> seguindo a ponta do traço. Fica no estilo "explainer de empresa", ótimo para conteúdo de negócios e marketing.</p></div>
+</section>
+
+<!-- ---------------------------------------- F6 -->
+<section class="formato">
+  <div class="topo"><div class="selo" style="background:#2e6be6">F6</div><div><h1>Quiz</h1><div class="linha2">Pergunta, 3 alternativas, cronômetro… e a resposta.</div></div></div>
+  <div class="ficha"><div><b>Duração</b>20–40 s</div><div><b>Narração</b>Opcional</div><div><b>Custo</b>Zero a ~400 caracteres</div><div><b>Ideal para</b>Comentários, compartilhamento, séries</div></div>
+  <div class="duas">
+    <div>
+      <h3 style="margin-top:0">Por que funciona</h3>
+      <p>Todo mundo quer provar que sabe. O quiz <strong>gera comentários</strong> ("acertei!", "era a B, óbvio") e <strong>replays</strong>: a pessoa pausa para pensar. Também é um ótimo formato para qualquer nicho, de futebol a medicina.</p>
+      <h3>Ingredientes visuais</h3>
+      <ul>
+        <li><strong>Cartão da pergunta</strong> grande e legível (máx. 2 linhas).</li>
+        <li><strong>Alternativas</strong> A, B, C entrando em sequência.</li>
+        <li><strong>Timer</strong> circular de 3–5 s com tique-taque.</li>
+        <li><strong>Revelação:</strong> a certa fica verde e pula, as erradas ficam cinza; ✔ e ✘.</li>
+        <li><strong>Explicação</strong> de uma frase e placar ("Pergunta 2/5").</li>
+      </ul>
+    </div>
+    <div class="mock">
+      <svg viewBox="0 0 270 480"><rect width="270" height="480" fill="#2e6be6"/><circle cx="230" cy="40" r="80" fill="#3f7df0"/>
+        <text x="135" y="44" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="16" fill="#ffd23f">SÓ 1% ACERTA · 2/5</text>
+        <rect x="20" y="62" width="230" height="86" rx="14" fill="#fff"/><text x="135" y="98" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="18" fill="#1f1b2e">Qual é o maior</text><text x="135" y="124" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="18" fill="#1f1b2e">órgão do corpo?</text>
+        <g font-family="Baloo 2" font-weight="800" font-size="18">
+          <rect x="30" y="170" width="210" height="44" rx="12" fill="#c9d0dc"/><text x="50" y="199" fill="#555">A) Fígado</text>
+          <rect x="30" y="226" width="210" height="44" rx="12" fill="#22a447"/><text x="50" y="255" fill="#fff">B) Pele ✔</text>
+          <rect x="30" y="282" width="210" height="44" rx="12" fill="#c9d0dc"/><text x="50" y="311" fill="#555">C) Intestino</text></g>
+        <circle cx="135" cy="380" r="34" fill="none" stroke="#fff" stroke-width="7" opacity=".35"/><path d="M135 346 A34 34 0 0 1 169 380" fill="none" stroke="#ffd23f" stroke-width="7" stroke-linecap="round"/><text x="135" y="389" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="24" fill="#fff">0</text>
+        <text x="135" y="450" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="13" fill="#fff">Comenta quantas você acertou!</text></svg>
+      <small>Pergunta + alternativas + timer + revelação</small>
+    </div>
+  </div>
+  <h3>Estrutura</h3>
+  <ol>
+    <li><strong>Gancho:</strong> "Só 1% acerta todas!" ou "Teste: você é [nível]?".</li>
+    <li><strong>3 a 5 perguntas</strong> de 6–8 s: pergunta (1 s) → alternativas (1,5 s) → timer (3–4 s) → resposta (1,5 s).</li>
+    <li><strong>Dificuldade crescente</strong>, com a última "impossível".</li>
+    <li><strong>Chamada:</strong> "Comenta quantas você acertou!".</li>
+  </ol>
+  <div class="prompt"><span class="rot">PROMPT · MONTAR O FORMATO (1ª VEZ)</span>
+    <p>Cria o formato "quiz" guiado por um JSON de perguntas (pergunta, alternativas, índice da correta, explicação curta). Visual: fundo colorido com formas suaves, cartão branco da pergunta, alternativas A/B/C entrando em sequência com mola, timer circular de 4 s com tique-taque, revelação (certa verde com ✔ e pulo, erradas cinza), placar "2/5", gancho e chamada final. Narração opcional (voz grátis lê a pergunta). Música animada original. Teste: 5 perguntas sobre o corpo humano, respostas conferidas em duas fontes.</p>
+  </div>
+  <div class="prompt"><span class="rot">PROMPT · CADA VÍDEO NOVO</span>
+    <p>Faz um quiz com 5 perguntas sobre [capitais do mundo], dificuldade crescente, a última bem difícil. Confere as respostas. Sem narração.</p>
+  </div>
+  <div class="box atencao"><span class="t">Cuidado</span><p>Uma resposta errada no quiz vira avalanche de comentários negativos. Sempre exija conferência das respostas e evite perguntas com "depende".</p></div>
+</section>
+
+<!-- ---------------------------------------- F7 -->
+<section class="formato">
+  <div class="topo"><div class="selo" style="background:#e8282b">F7</div><div><h1>Texto cinético</h1><div class="linha2">Só tipografia em movimento: palavras que entram, giram, crescem e batem no ritmo.</div></div></div>
+  <div class="ficha"><div><b>Duração</b>15–45 s</div><div><b>Narração</b>Opcional</div><div><b>Custo</b>Zero</div><div><b>Ideal para</b>Frases, motivação, curiosidades rápidas, listas</div></div>
+  <div class="duas">
+    <div>
+      <h3 style="margin-top:0">Por que funciona</h3>
+      <p>Não tem personagem, cenário nem 3D: é o formato <strong>mais rápido e barato</strong> de todos e, bem feito, é muito estiloso. Funciona com narração ou só com música: o texto <em>é</em> o vídeo.</p>
+      <h3>Ingredientes visuais</h3>
+      <ul>
+        <li><strong>1 a 4 palavras por tela</strong>, fontes grossas, tamanhos bem diferentes para hierarquia.</li>
+        <li>Animações de entrada variadas: <strong>bater</strong> (escala), deslizar, girar, máquina de escrever, revelar com máscara.</li>
+        <li><strong>Batida da música</strong> guiando os cortes (todo texto entra num tempo da música).</li>
+        <li>Paleta de 2–3 cores; uma palavra-chave por tela em destaque.</li>
+        <li>Formas geométricas simples ao fundo (círculos, faixas) em movimento.</li>
+      </ul>
+    </div>
+    <div class="mock">
+      <svg viewBox="0 0 270 480"><rect width="270" height="480" fill="#111"/><circle cx="210" cy="110" r="90" fill="#e8282b"/><rect x="-20" y="330" width="320" height="40" fill="#ffd23f" transform="rotate(-8 135 350)"/>
+        <text x="30" y="150" font-family="Baloo 2" font-weight="800" font-size="30" fill="#fff">VOCÊ SABIA</text>
+        <text x="30" y="215" font-family="Baloo 2" font-weight="800" font-size="56" fill="#ffd23f">QUE O</text>
+        <text x="30" y="290" font-family="Baloo 2" font-weight="800" font-size="70" fill="#fff">MEL</text>
+        <text x="40" y="358" font-family="Baloo 2" font-weight="800" font-size="24" fill="#111" transform="rotate(-8 135 350)">NUNCA ESTRAGA?</text>
+        <text x="135" y="440" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="13" fill="#aaa">(potes de mel de milhares de anos)</text></svg>
+      <small>Hierarquia de tamanhos + palavra-chave em cor</small>
+    </div>
+  </div>
+  <h3>Ideias de uso</h3>
+  <ul>
+    <li><strong>"Você sabia?"</strong> com 3 fatos rápidos.</li>
+    <li><strong>Frase do dia / motivação</strong> no ritmo da música.</li>
+    <li><strong>Lista</strong> ("5 hábitos que…"), um item por batida.</li>
+    <li><strong>Trailer</strong> de um conteúdo maior ("amanhã no canal…").</li>
+  </ul>
+  <div class="prompt"><span class="rot">PROMPT · MONTAR O FORMATO (1ª VEZ)</span>
+    <p>Cria o formato "texto cinético" guiado por um JSON de "telas" (texto, estilo de entrada, palavra destacada, cor). Estilos de entrada: bater (escala com mola), deslizar, girar, máquina de escrever, revelar por máscara. Música original gerada por código com BPM definido; cada tela entra exatamente em uma batida. Formas geométricas em movimento ao fundo, paleta de 3 cores. Se houver narração, as palavras aparecem no tempo da voz (timeline). Teste: 20 s, "3 fatos sobre o mel", sem narração.</p>
+  </div>
+  <div class="prompt"><span class="rot">PROMPT · CADA VÍDEO NOVO</span>
+    <p>Faz um texto cinético de 20 s com [3 curiosidades sobre o polvo], paleta [preto, laranja e branco], música a [120] BPM, sem narração. Fatos conferidos.</p>
+  </div>
+</section>
+
+<!-- ---------------------------------------- F8 -->
+<section class="formato">
+  <div class="topo"><div class="selo" style="background:#22a447">F8</div><div><h1>Fitness: treino, exercícios e dieta</h1><div class="linha2">Dicas de academia explicadas por animação: execução correta, músculos, treinos e alimentação.</div></div></div>
+  <div class="ficha"><div><b>Duração</b>30–60 s</div><div><b>Narração</b>Sim (energética)</div><div><b>Custo</b>Grátis ou ~600 caracteres</div><div><b>Ideal para</b>Nicho fitness, personal trainers, nutrição</div></div>
+  <div class="duas">
+    <div>
+      <h3 style="margin-top:0">Por que funciona</h3>
+      <p>Fitness é um dos nichos mais buscados, e a animação tem uma vantagem enorme sobre o vídeo filmado: <strong>mostrar por dentro</strong>. Dá para destacar o músculo que está trabalhando, mostrar o ângulo certo da coluna e comparar "certo × errado" lado a lado, sem precisar de academia, câmera nem modelo.</p>
+      <h3>Ingredientes visuais</h3>
+      <ul>
+        <li><strong>Personagem atlético</strong> 2D (ou low-poly 3D) com articulações para executar exercícios em loop: agachamento, flexão, prancha, remada, supino, levantamento terra.</li>
+        <li><strong>Mapa muscular</strong>: o músculo trabalhado acende em vermelho/laranja durante o movimento.</li>
+        <li><strong>Comparação CERTO ✔ × ERRADO ✘</strong> em tela dividida, com linhas de ângulo (costas retas, joelho alinhado).</li>
+        <li><strong>Contador de repetições</strong>, séries e descanso.</li>
+        <li><strong>Cartões de dieta</strong>: prato montado, porções, ícones de proteína/carboidrato/gordura.</li>
+      </ul>
+    </div>
+    <div class="mock">
+      <svg viewBox="0 0 270 480"><rect width="270" height="480" fill="#0f2a1c"/><rect x="0" y="0" width="270" height="56" fill="#22a447"/><text x="135" y="37" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="20" fill="#fff">AGACHAMENTO</text>
+        <line x1="135" y1="70" x2="135" y2="360" stroke="#fff" stroke-width="2" stroke-dasharray="5 5" opacity=".4"/>
+        <text x="68" y="90" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="18" fill="#3dff8a">CERTO ✔</text><text x="202" y="90" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="18" fill="#ff5c5c">ERRADO ✘</text>
+        <g stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"><circle cx="58" cy="150" r="15" fill="#c98b5e"/><path d="M58 165 L45 230 M45 230 L85 248 M85 248 L60 300 M50 185 L95 195"/></g>
+        <path d="M45 230 L85 248" stroke="#ff8c1a" stroke-width="11" stroke-linecap="round" opacity=".85"/>
+        <g stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"><circle cx="210" cy="160" r="15" fill="#c98b5e"/><path d="M210 175 Q 175 205 180 235 M180 235 L215 252 M215 252 L205 300 M195 190 L240 200"/></g>
+        <path d="M66 200 L 58 166" stroke="#3dff8a" stroke-width="2"/><text x="20" y="212" font-family="Nunito" font-weight="900" font-size="10" fill="#3dff8a">coluna reta</text>
+        <text x="185" y="215" font-family="Nunito" font-weight="900" font-size="10" fill="#ff5c5c">curvou!</text>
+        <rect x="20" y="380" width="230" height="60" rx="14" fill="#fff"/><text x="135" y="406" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="16" fill="#1f1b2e">3 SÉRIES × 12 REP</text><text x="135" y="428" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="11" fill="#22a447">descanso 60 s</text></svg>
+      <small>Certo × errado + músculo em destaque + séries</small>
+    </div>
+  </div>
+  <h3>Séries de conteúdo que funcionam</h3>
+  <table>
+    <tr><th>Série</th><th>Exemplo de vídeo</th></tr>
+    <tr><td>Execução correta</td><td>"Você agacha errado? 3 erros que travam seu resultado"</td></tr>
+    <tr><td>Músculo da semana</td><td>"Glúteo: os 3 exercícios que mais ativam"</td></tr>
+    <tr><td>Treino pronto</td><td>"Treino de 20 min em casa, sem equipamento"</td></tr>
+    <tr><td>Mito × verdade</td><td>"Abdominal queima a gordura da barriga? MITO"</td></tr>
+    <tr><td>Dieta prática</td><td>"Monte um prato equilibrado em 3 passos"</td></tr>
+    <tr><td>Ciência simples</td><td>"Por que o músculo dói 2 dias depois do treino?"</td></tr>
+  </table>
+  <h3>Estrutura do roteiro (45 s)</h3>
+  <ol>
+    <li><strong>Gancho-erro (0–3 s):</strong> "Se você faz agachamento assim, PARE."</li>
+    <li><strong>O certo</strong> com o músculo em destaque e 2–3 pontos de atenção.</li>
+    <li><strong>Erro comum</strong> em comparação lado a lado.</li>
+    <li><strong>Dica prática</strong> (séries, repetições, descanso ou alimento).</li>
+    <li><strong>Chamada:</strong> "Salva para usar no seu próximo treino!".</li>
+  </ol>
+  <div class="prompt"><span class="rot">PROMPT · MONTAR O FORMATO (1ª VEZ)</span>
+    <p>Cria o formato "fitness" para vídeos de academia e nutrição. Personagem atlético 2D original (traço limpo, cores fortes) com esqueleto articulado (ombro, cotovelo, quadril, joelho, tornozelo, coluna) e animações em loop de exercícios: agachamento, flexão, prancha, afundo, remada, supino e levantamento terra. Camada de músculos que pode acender (peito, costas, ombro, bíceps, tríceps, abdômen, glúteo, quadríceps, posterior, panturrilha). Componentes: tela dividida CERTO ✔ x ERRADO ✘, linhas de ângulo, contador de repetições/séries/descanso, cartões de dieta (prato, porções, macros). Voz energética de treinador. Teste: 45 s "3 erros no agachamento", conteúdo conferido em fontes confiáveis.</p>
+  </div>
+  <div class="prompt"><span class="rot">PROMPT · CADA VÍDEO NOVO</span>
+    <p>Faz um vídeo fitness sobre [o erro mais comum na flexão de braço], 40 s, com comparação certo x errado e o músculo em destaque. Fontes confiáveis. Termina pedindo para salvar.</p>
+  </div>
+  <div class="box atencao"><span class="t">Responsabilidade (leia com atenção)</span>
+    <ul>
+      <li>Conteúdo de saúde exige <strong>cuidado redobrado</strong>: peça sempre fontes confiáveis (diretrizes de órgãos de saúde, artigos científicos, conselhos profissionais) e evite promessas ("perca 10 kg em 7 dias").</li>
+      <li>Não prescreva dieta individual nem trate doenças. Use frases como "consulte um profissional de educação física / nutricionista".</li>
+      <li>No Brasil, prescrição de treino é atividade de profissional de Educação Física e prescrição de dieta é de nutricionista. Se você não é da área, posicione o canal como <strong>conteúdo educativo geral</strong> ou convide um profissional para revisar os roteiros.</li>
+      <li>As redes sociais têm regras específicas para conteúdo de saúde e perda de peso: evite antes/depois sensacionalista e linguagem que gere culpa.</li>
+    </ul>
+  </div>
+</section>

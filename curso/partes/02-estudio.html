@@ -1,0 +1,213 @@
+
+<!-- ======================================================= MÓDULO 3 -->
+<section class="modulo m3">
+  <div class="faixa"><div class="bolha"></div><div class="num">MÓDULO 3</div><h1>Montando o seu estúdio</h1><p>Um único projeto que vai produzir todos os formatos. Você monta uma vez e reaproveita para sempre.</p></div>
+
+  <h2>3.1 Criando o projeto de vídeo</h2>
+  <p>Abra o Claude Code dentro da pasta do estúdio e cole o prompt abaixo. Ele cria o projeto Remotion, instala o que for preciso e faz um vídeo de teste.</p>
+  <div class="prompt"><span class="rot">PROMPT · CRIAR O ESTÚDIO</span>
+    <p>Quero montar um estúdio de vídeos animados verticais com Remotion nesta pasta.</p>
+    <p>1. Crie um projeto Remotion com TypeScript (formato 1080x1920, 30 fps).</p>
+    <p>2. Instale também @remotion/three (para cenas 3D) e fontes locais (Baloo 2 e Nunito via @fontsource), para não depender de internet ao renderizar.</p>
+    <p>3. Faça uma composição de teste de 5 segundos: fundo colorido, um círculo que entra quicando e o texto "ESTÚDIO PRONTO!".</p>
+    <p>4. Crie scripts no package.json: "studio" (abrir o Remotion Studio) e "render" (gerar out/teste.mp4).</p>
+    <p>5. Renderize o teste e me diga onde está o arquivo.</p>
+  </div>
+  <p>Abra o MP4 gerado. Se você viu o círculo quicando, <strong>o motor de animação está funcionando</strong>.</p>
+  <div class="box dica"><span class="t">Por que 1080x1920 e 30 fps?</span><p>É o padrão de Reels, TikTok e Shorts: vertical 9:16, Full HD, 30 quadros por segundo. Tudo neste curso usa esse formato.</p></div>
+
+  <h2>3.2 As pastas do estúdio</h2>
+  <p>Com o tempo, o estúdio cresce. Uma organização clara faz o Claude acertar mais e errar menos. Esta é a estrutura recomendada (peça ao Claude para seguir):</p>
+  <pre>estudio/
+├── CLAUDE.md                <span class="c">← manual do estúdio (regras gerais)</span>
+├── .claude/skills/          <span class="c">← um "manual" por formato</span>
+│   ├── explicativo/SKILL.md
+│   ├── quiz/SKILL.md
+│   └── ...
+├── roteiros/                <span class="c">← um JSON por vídeo (texto, cenas, voz)</span>
+├── src/
+│   ├── Root.tsx             <span class="c">← lista de composições (formatos)</span>
+│   ├── comum/               <span class="c">← peças reaproveitáveis: legenda, câmera, efeitos</span>
+│   ├── explicativo/         <span class="c">← personagem, cenários e cenas do formato 1</span>
+│   ├── quiz/                <span class="c">← formato 6</span>
+│   └── ...
+├── scripts/                 <span class="c">← gerar voz, legenda, música e conferência (Python)</span>
+├── public/audio/            <span class="c">← narração, música e efeitos gerados</span>
+└── out/                     <span class="c">← vídeos prontos (MP4)</span></pre>
+
+  <h2>3.3 O CLAUDE.md: o manual do estúdio</h2>
+  <p>O <code>CLAUDE.md</code> é um arquivo de texto na raiz do projeto que o Claude lê <strong>toda vez</strong> que começa a trabalhar. É ali que você escreve as regras do seu estúdio, como faria com um funcionário novo. Sem ele, você teria que repetir as mesmas instruções em todo pedido.</p>
+  <p>Exemplo de um bom CLAUDE.md (adapte):</p>
+  <pre># Meu Estúdio de Vídeos
+
+Responda sempre em português do Brasil.
+
+## Formatos (cada um tem uma skill em .claude/skills/)
+| Pedido                   | Skill        | Composição  |
+|--------------------------|--------------|-------------|
+| "vídeo explicativo"      | explicativo  | Explicativo |
+| "quiz"                   | quiz         | Quiz        |
+| "vídeo de treino"        | fitness      | Fitness     |
+
+## Regras de custo
+- Voz paga (ElevenLabs) SÓ com a minha autorização explícita ("autorizo"),
+  sempre dizendo antes quantos caracteres serão cobrados.
+- Rascunhos SEMPRE com a voz grátis.
+- Ajustes depois da voz paga: só locais (velocidade, pausas, volume).
+
+## Segurança
+- Nunca peça, mostre ou grave chaves de API em arquivos versionados.
+
+## Qualidade
+- Sempre rode a conferência (npm run qa) e olhe os quadros antes de entregar.
+- Fatos de vídeos educativos: confira em duas fontes e liste as fontes.</pre>
+  <div class="box dica"><span class="t">Comece pequeno</span><p>Você pode pedir: <em>"Cria um CLAUDE.md para este estúdio com regras de idioma, custo e qualidade."</em> Depois, sempre que corrigir o Claude em algo que vale para sempre, diga: <em>"Anota isso no CLAUDE.md."</em> O estúdio vai ficando mais inteligente a cada vídeo.</p></div>
+
+  <h2>3.4 Skills: ensinando cada formato</h2>
+  <p>Uma <strong>skill</strong> é um manual específico de um formato, guardado em <code>.claude/skills/&lt;nome&gt;/SKILL.md</code>. Quando você pede "faz um quiz", o Claude encontra a skill do quiz e segue a receita dela: duração, estilo, ritmo, regras de humor e passo a passo.</p>
+  <p>Estrutura de um SKILL.md:</p>
+  <pre>---
+name: quiz
+description: Vídeos de QUIZ (pergunta, 3 alternativas, timer de 5 s, resposta).
+  Use quando o usuário pedir "quiz", "pergunta e resposta" ou "teste seus
+  conhecimentos".
+---
+
+# Quiz
+
+## Especificação
+- 9:16, 1080x1920, 30 fps, 20–30 s, composição "Quiz".
+
+## Estrutura
+1. Gancho (0–2 s): "Só 1% acerta essa!"
+2. Pergunta + 3 alternativas (A, B, C).
+3. Timer de 5 s com tique-taque.
+4. Revela a resposta (verde) + explicação curta (1 frase).
+5. Chamada: "Comenta quantas você acertou!"
+
+## Fluxo
+1. Roteiro em roteiros/quiz-&lt;tema&gt;.json (fatos conferidos 2x).
+2. npm run audio -- --gratis  (rascunho)
+3. ... (render, conferência, entrega)</pre>
+  <p>Você não precisa escrever skills sozinho. O caminho mais fácil: faça o primeiro vídeo de um formato conversando com o Claude, ajuste até ficar bom e então peça:</p>
+  <div class="prompt"><span class="rot">PROMPT · TRANSFORMAR EM SKILL</span>
+    <p>Ficou ótimo. Transforma tudo o que fizemos neste vídeo em uma skill reutilizável em .claude/skills/[nome-do-formato]/SKILL.md: especificação, estrutura do roteiro, regras de estilo, componentes que criamos, comandos e os erros que corrigimos no caminho (para não repetir). Registre o formato também na tabela do CLAUDE.md.</p>
+  </div>
+
+  <h2>3.5 Visualizar e exportar</h2>
+  <ul>
+    <li><strong>Remotion Studio</strong> (<code>npx remotion studio</code>): abre no navegador uma prévia com linha do tempo, onde você arrasta e vê qualquer quadro. Ótimo para conferir enquadramento.</li>
+    <li><strong>Renderizar</strong> (<code>npx remotion render NomeDaComposicao out/video.mp4</code>): gera o arquivo final. O Claude roda isso para você.</li>
+    <li><strong>Quadros soltos</strong> (<code>npx remotion still NomeDaComposicao out/q.png --frame=120</code>): gera uma imagem de um instante específico. O Claude usa isso para "olhar" as cenas antes de renderizar tudo.</li>
+  </ul>
+  <div class="box info"><span class="t">O Claude consegue ver imagens</span><p>Esse é o segredo da qualidade: peça sempre <em>"gera os quadros-chave numa grade e confere o enquadramento antes de renderizar"</em>. Ele olha as imagens e corrige personagem cortado na borda, texto em cima de texto, câmera muito perto, e assim por diante.</p></div>
+
+  <h2>3.6 Salvando versões (Git)</h2>
+  <p>Peça ao Claude: <em>"Inicializa o Git neste projeto, cria um .gitignore (node_modules, out, arquivos de chave) e faz o primeiro commit."</em> A partir daí, ao final de cada vídeo diga <em>"faz o commit"</em>. Se um dia algo quebrar, é só pedir <em>"volta o projeto para como estava ontem"</em>.</p>
+  <p>Para ter uma cópia na nuvem, crie uma conta gratuita no <strong>GitHub</strong>, crie um repositório <strong>privado</strong> e peça ao Claude para conectar o projeto a ele.</p>
+  <div class="box atencao"><span class="t">Nunca suba chaves para o GitHub</span><p>Arquivos como <code>.env</code> ou <code>.env.local</code>, que guardam a chave do ElevenLabs, precisam estar no <code>.gitignore</code>. Confirme isso com o Claude antes do primeiro envio.</p></div>
+</section>
+
+<!-- ======================================================= MÓDULO 4 -->
+<section class="modulo m4">
+  <div class="faixa"><div class="bolha"></div><div class="num">MÓDULO 4</div><h1>Voz, música e som</h1><p>Metade da qualidade de um vídeo curto está no áudio. Aqui você monta a "cabine de som" do estúdio.</p></div>
+
+  <h2>4.1 Voz grátis para rascunho</h2>
+  <p>O <strong>Kokoro</strong> é um modelo de voz neural <strong>gratuito e de código aberto</strong> que roda no seu computador, sem internet e sem limite. Ele tem vozes em português do Brasil (por exemplo <code>pf_dora</code>, feminina, e <code>pm_alex</code> e <code>pm_santa</code>, masculinas). É perfeito para rascunhos e, em muitos formatos, até para a versão final.</p>
+  <div class="prompt"><span class="rot">PROMPT · MOTOR DE VOZ</span>
+    <p>Cria um script scripts/gerar_audio.py que lê o roteiro (JSON com cenas e falas) e gera:</p>
+    <p>(1) public/audio/narracao.wav com todas as falas e pequenas pausas entre cenas;</p>
+    <p>(2) src/timeline.json com o início e o fim de cada cena, de cada fala e de CADA PALAVRA (em frames, 30 fps), para sincronizar animação e legenda;</p>
+    <p>(3) ajuste a velocidade para o vídeo ter a duração do roteiro (campo duracaoSegundos).</p>
+    <p>Use o Kokoro (voz pt-BR) como motor padrão e GRÁTIS. Deixe preparado um segundo motor, ElevenLabs, que só roda com a flag --autorizo-custo e que antes imprime quantos caracteres serão cobrados. Guarde o áudio de cada fala em cache para nunca pagar duas vezes pelo mesmo texto.</p>
+  </div>
+
+  <h2>4.2 Voz profissional (ElevenLabs)</h2>
+  <ol class="passos">
+    <li>Crie uma conta em <code>elevenlabs.io</code> e escolha um plano. Planos gratuitos costumam ter limite de caracteres e <strong>restrições de uso comercial</strong>; para monetizar, confira os termos e use um plano pago.</li>
+    <li>Na <strong>Voice Library</strong>, filtre por idioma <em>Portuguese</em> e sotaque <em>Brazilian</em>. Ouça várias e anote o <strong>Voice ID</strong> das favoritas (um código como <code>xJ8U5HgW...</code>).</li>
+    <li>Crie uma <strong>chave de API</strong> (Profile → API Keys).</li>
+    <li>Guarde a chave numa <strong>variável de ambiente</strong> ou num arquivo <code>.env.local</code> que esteja no <code>.gitignore</code>. <strong>Nunca cole a chave na conversa com a IA</strong>: peça ao Claude para ler da variável <code>ELEVENLABS_API_KEY</code>.</li>
+  </ol>
+  <div class="box custo"><span class="t">Fazendo as contas</span><p>O ElevenLabs cobra por caractere enviado. Um roteiro de 60 s tem ~130 palavras ≈ 700 caracteres. Use o painel da sua conta para ver quantos caracteres o seu plano inclui por mês e divida: esse é o número de vídeos narrados por mês. Para economizar, use voz grátis nos formatos que não dependem de interpretação (quiz, texto cinético) e a voz premium nos que vivem de personagem (humor, explicativo).</p></div>
+  <h3>Escolhendo a voz certa por formato</h3>
+  <table>
+    <tr><th>Formato</th><th>Tipo de voz</th></tr>
+    <tr><td>Explicativo / curiosidades</td><td>Jovem, alegre, clara, ritmo médio</td></tr>
+    <tr><td>Humor absurdo</td><td>Dinâmica, expressiva, com "timing" de piada</td></tr>
+    <tr><td>Quadro-negro / aula</td><td>Calma, de professor, ritmo mais lento</td></tr>
+    <tr><td>Fitness</td><td>Energética, de treinador, frases curtas</td></tr>
+    <tr><td>Terror / mistério</td><td>Grave, sussurrada, pausas longas</td></tr>
+  </table>
+  <div class="box dica"><span class="t">Várias vozes no mesmo vídeo</span><p>Peça ao Claude para aceitar um campo <code>"quem"</code> em cada fala (ex.: <code>"apresentador"</code>, <code>"cliente"</code>), cada um com sua voz. Um truque grátis para criar uma voz "de bichinho" é pegar uma voz existente e <strong>afinar</strong> (subir o tom) localmente com o FFmpeg. Não custa nada a mais.</p></div>
+
+  <h2>4.3 Narração com emoção</h2>
+  <p>Separe no roteiro o <strong>texto</strong> (que vira legenda) da <strong>pronúncia</strong> (o que a voz lê). Na pronúncia você pode usar recursos que deixam a fala viva:</p>
+  <ul>
+    <li><strong>MAIÚSCULAS</strong> na palavra que leva ênfase: "a casca não AGUENTA e…".</li>
+    <li><strong>Reticências</strong> para suspense: "e no zero… PIM!".</li>
+    <li><strong>Tags de emoção</strong> dos modelos mais novos do ElevenLabs: <code>[excited]</code>, <code>[curious]</code>, <code>[laughs]</code>, <code>[sighs]</code>, <code>[deadpan]</code>.</li>
+    <li><strong>Números por extenso</strong>: "1935" vira "mil novecentos e trinta e cinco" para evitar leituras estranhas.</li>
+  </ul>
+  <pre>{
+  "texto": "E aí, risada!",
+  "pronuncia": "E aí, [laughs] RISADA!"
+}</pre>
+  <div class="box atencao"><span class="t">Confira as tags no ouvido</span><p>Às vezes a IA de voz <em>lê</em> a tag em vez de rir ou suspirar. Peça ao script para avisar quando uma tag ocupar tempo de fala, e escute esses trechos antes de publicar.</p></div>
+
+  <h2>4.4 Legendas palavra por palavra</h2>
+  <p>Legenda em vídeo curto é obrigatória: muita gente assiste sem som. O estilo que mais segura atenção é a <strong>legenda de 2 a 4 palavras por vez, com a palavra falada destacada</strong> (cor ou tamanho). Como o <code>timeline.json</code> já tem o tempo de cada palavra, o Claude monta isso automaticamente.</p>
+  <div class="prompt"><span class="rot">PROMPT · LEGENDA</span>
+    <p>Cria um componente de legenda que lê o timeline.json e mostra grupos de até 3 palavras por vez, centralizados na altura de 70% da tela, fonte Baloo 2 grossa, branca com contorno escuro, e a palavra que está sendo falada em amarelo e um pouco maior. Ela deve aparecer em todos os formatos narrados.</p>
+  </div>
+
+  <h2>4.5 Música e efeitos</h2>
+  <ul>
+    <li><strong>Música:</strong> use trilhas <strong>sem direitos autorais</strong> (bibliotecas royalty-free com licença clara) ou peça ao Claude para <strong>gerar uma trilha original por código</strong> (sintetizada em Python): batida simples, alegre, no andamento que você pedir. É 100% sua e sem risco de bloqueio.</li>
+    <li><strong>Efeitos (SFX):</strong> "whoosh" de transição, "pop" quando algo aparece, "boing", "ding", explosão, tique-taque. Também podem ser gerados por código ou baixados de bancos gratuitos com licença comercial.</li>
+    <li><strong>Abaixar a música quando alguém fala</strong> ("ducking") deixa a voz clara. Peça para a música baixar automaticamente durante as falas.</li>
+  </ul>
+  <div class="box atencao"><span class="t">Direitos autorais</span><p>Músicas famosas, trechos de filmes, personagens e marcas de terceiros podem derrubar o vídeo ou a conta. Crie tudo original: o estúdio deste curso foi pensado para isso.</p></div>
+
+  <h2>4.6 Volume certo</h2>
+  <p>As redes sociais normalizam o volume. Vídeo baixo demais parece "fraco"; alto demais distorce. Mire em:</p>
+  <table>
+    <tr><th>Medida</th><th>Alvo</th><th>Por quê</th></tr>
+    <tr><td>Volume integrado (LUFS)</td><td>entre −16 e −13</td><td>Fica no nível dos outros vídeos do feed.</td></tr>
+    <tr><td>Pico verdadeiro (dBTP)</td><td>no máximo −1</td><td>Evita estalo/distorção no celular.</td></tr>
+    <tr><td>Voz × música</td><td>voz bem na frente</td><td>Legenda ajuda, mas a voz precisa ser entendida.</td></tr>
+  </table>
+  <p>Não precisa decorar: no Módulo 7 o Claude cria uma <strong>conferência automática</strong> que mede tudo isso e reprova o vídeo se algo estiver fora.</p>
+</section>
+
+<!-- ======================================================= MÓDULO 5 -->
+<section class="modulo m5">
+  <div class="faixa"><div class="bolha"></div><div class="num">MÓDULO 5</div><h1>A receita de produção</h1><p>Todo vídeo, de qualquer formato, passa pelas mesmas 8 etapas.</p></div>
+
+  <ol class="passos">
+    <li><strong>Ideia:</strong> peça sugestões ("me dá 10 ideias de quiz sobre animais") ou traga a sua.</li>
+    <li><strong>Roteiro:</strong> o Claude escreve o roteiro em JSON (cenas, falas, pronúncia). Para conteúdo educativo, peça para <strong>conferir os fatos em duas fontes</strong> e listar as fontes.</li>
+    <li><strong>Voz de rascunho (grátis):</strong> gera a narração e o mapa de tempo de cada palavra.</li>
+    <li><strong>Cenas:</strong> o Claude escreve as animações usando os tempos das palavras (o pop acontece na palavra "pop").</li>
+    <li><strong>Quadros-chave:</strong> antes de renderizar, ele gera uma grade de imagens e confere enquadramento, textos e legibilidade.</li>
+    <li><strong>Render + conferência:</strong> gera o MP4 e roda a conferência automática (volume, duração, legenda, sincronia).</li>
+    <li><strong>Sua aprovação:</strong> você assiste no celular e pede ajustes. Repete até ficar bom.</li>
+    <li><strong>Versão final:</strong> com a sua autorização, gera a voz premium (se usar), renderiza, confere de novo e entrega. Por fim, salva tudo com um commit.</li>
+  </ol>
+
+  <h2>O pedido perfeito</h2>
+  <p>Quanto mais claro o pedido, menos idas e voltas. Um bom pedido tem: <strong>formato</strong>, <strong>tema</strong>, <strong>tom</strong>, <strong>duração</strong> e <strong>algo especial</strong> (piada, gancho, personagem).</p>
+  <div class="prompt"><span class="rot">MODELO DE PEDIDO</span>
+    <p>Faz um vídeo no formato [explicativo] sobre [por que a pipoca estoura]. Tom [divertido, para jovens]. Duração [60 s]. Quero uma piada no final do tipo [comparação com algo do dia a dia]. Confere os fatos em duas fontes. Gera o rascunho com voz grátis e me manda.</p>
+  </div>
+  <h3>Como pedir ajustes</h3>
+  <p>Seja específico, como um diretor:</p>
+  <table>
+    <tr><th>Em vez de…</th><th>Diga…</th></tr>
+    <tr><td>"Não gostei."</td><td>"O problema não ficou engraçado; quero que a solução dê errado de um jeito mais exagerado."</td></tr>
+    <tr><td>"Tá estranho."</td><td>"No segundo 12 o texto está em cima do personagem. Sobe o texto."</td></tr>
+    <tr><td>"Muda a voz."</td><td>"A voz está séria demais. Testa uma voz mais jovem e animada, só com uma frase, antes de gerar tudo."</td></tr>
+    <tr><td>"Tá lento."</td><td>"Corta a cena 4 pela metade e faz um corte de câmera a cada 1,5 s."</td></tr>
+  </table>
+  <div class="box dica"><span class="t">Ensine uma vez, use sempre</span><p>Quando uma correção valer para todos os vídeos do formato ("legenda nunca em cima do rosto", "nunca mais de 45 s"), termine com: <em>"Anota essa regra na skill."</em></p></div>
+</section>

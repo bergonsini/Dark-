@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<title>Estúdio de Bolso: crie vídeos animados com IA do zero</title>
+<link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+<!-- ======================================================= CAPA -->
+<section class="capa">
+  <div class="tag">APOSTILA COMPLETA · DO ZERO AO POST</div>
+  <h1>ESTÚDIO<br/>DE <span>BOLSO</span></h1>
+  <div class="sub">Crie vídeos animados com Inteligência Artificial, narrados, legendados e prontos para Reels, TikTok e Shorts, sem saber desenhar, programar ou editar.</div>
+  <svg class="ilus" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+    <!-- celular 9:16 -->
+    <g transform="translate(470 20) rotate(6)">
+      <rect x="0" y="0" width="230" height="410" rx="34" fill="#1f1b2e" />
+      <rect x="12" y="14" width="206" height="382" rx="24" fill="#bfe6ff" />
+      <circle cx="115" cy="140" r="60" fill="#ffd23f" stroke="#1f1b2e" stroke-width="7" />
+      <circle cx="96" cy="130" r="9" fill="#1f1b2e" /><circle cx="134" cy="130" r="9" fill="#1f1b2e" />
+      <path d="M92 158 Q115 178 138 158" fill="none" stroke="#1f1b2e" stroke-width="7" stroke-linecap="round" />
+      <rect x="40" y="250" width="150" height="34" rx="10" fill="#fff" stroke="#1f1b2e" stroke-width="5" />
+      <rect x="55" y="262" width="80" height="10" rx="5" fill="#6c3df4" />
+      <rect x="30" y="300" width="170" height="40" rx="12" fill="#ff4fa3" />
+      <text x="115" y="327" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="22" fill="#fff">LEGENDA!</text>
+    </g>
+    <!-- claquete -->
+    <g transform="translate(110 210) rotate(-8)">
+      <rect x="0" y="40" width="230" height="150" rx="12" fill="#fff" stroke="#1f1b2e" stroke-width="8" />
+      <g transform="rotate(-14 0 40)">
+        <rect x="0" y="0" width="230" height="40" rx="8" fill="#1f1b2e" />
+        <path d="M30 0 L60 40 M90 0 L120 40 M150 0 L180 40 M210 0 L230 26" stroke="#fff" stroke-width="14" />
+      </g>
+      <text x="115" y="130" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="40" fill="#6c3df4">AÇÃO!</text>
+    </g>
+    <!-- estrelinhas -->
+    <g fill="#ffd23f">
+      <path d="M60 80 l8 18 20 2 -15 13 5 20 -18 -11 -18 11 5 -20 -15 -13 20 -2 Z" />
+      <path d="M380 40 l6 13 14 1 -11 9 4 14 -13 -8 -13 8 4 -14 -11 -9 14 -1 Z" />
+      <path d="M400 360 l6 13 14 1 -11 9 4 14 -13 -8 -13 8 4 -14 -11 -9 14 -1 Z" />
+    </g>
+  </svg>
+  <div class="rodape"><span>Claude Code + Remotion + voz com IA</span><span>8 formatos de vídeo · biblioteca de prompts</span></div>
+</section>
+
+<!-- ======================================================= SUMÁRIO -->
+<section>
+  <h2 style="margin-top:0">Sumário</h2>
+  <div class="sumario">
+    <div class="bloco"><b>Boas-vindas</b><span>Como usar esta apostila</span><span>O que você vai conseguir fazer</span></div>
+    <div class="bloco"><b>Módulo 1 · Fundamentos</b><span>1.1 Como a mágica funciona</span><span>1.2 As ferramentas</span><span>1.3 Quanto custa</span><span>1.4 Do que você precisa</span></div>
+    <div class="bloco"><b>Módulo 2 · Instalação do zero</b><span>2.1 Conta no Claude</span><span>2.2 Node.js, Git, Python e FFmpeg</span><span>2.3 Instalando o Claude Code</span><span>2.4 Primeiro teste</span></div>
+    <div class="bloco"><b>Módulo 3 · Montando o seu estúdio</b><span>3.1 Criando o projeto de vídeo</span><span>3.2 As pastas do estúdio</span><span>3.3 O CLAUDE.md: o manual do estúdio</span><span>3.4 Skills: ensinando cada formato</span><span>3.5 Visualizar e exportar</span><span>3.6 Salvando versões</span></div>
+    <div class="bloco"><b>Módulo 4 · Voz, música e som</b><span>4.1 Voz grátis para rascunho</span><span>4.2 Voz profissional (ElevenLabs)</span><span>4.3 Narração com emoção</span><span>4.4 Legendas palavra por palavra</span><span>4.5 Música e efeitos</span><span>4.6 Volume certo</span></div>
+    <div class="bloco"><b>Módulo 5 · A receita de produção</b><span>As 8 etapas de todo vídeo</span><span>O pedido perfeito</span></div>
+    <div class="bloco"><b>Módulo 6 · Os 8 formatos</b><span>F1 Explicativo 2D cartoon</span><span>F2 Humor absurdo 3D em série</span><span>F3 Desafio do pause (neon)</span><span>F4 Animação de palitinho</span><span>F5 Quadro-negro (giz)</span><span>F6 Quiz</span><span>F7 Texto cinético</span><span>F8 Fitness: treino, exercícios e dieta</span></div>
+    <div class="bloco"><b>Módulo 7 · Qualidade e publicação</b><span>7.1 Conferência automática</span><span>7.2 Zonas seguras do 9:16</span><span>7.3 Gancho e ritmo</span><span>7.4 Postando</span></div>
+    <div class="bloco"><b>Módulo 8 · Problemas comuns</b><span>Erros e soluções rápidas</span></div>
+    <div class="bloco"><b>Bônus</b><span>A · Biblioteca de prompts</span><span>B · Plano de 30 dias</span><span>C · Mais ideias de formatos</span><span>D · Glossário</span><span>Licenças e avisos</span></div>
+  </div>
+
+  <h2>Boas-vindas!</h2>
+  <p>Este é um curso prático. Ao final, você vai ter no seu computador um <strong>estúdio de animação</strong> que transforma um pedido em português, como <em>"faz um vídeo explicando por que o céu é azul"</em>, em um <strong>vídeo MP4 vertical</strong>: animado, narrado, com legenda sincronizada, música e efeitos, pronto para postar.</p>
+  <p>Você não precisa saber desenhar, programar ou editar. Quem escreve o roteiro, o código da animação e os scripts é a <strong>IA (Claude)</strong>. O seu papel é o de <strong>diretor</strong>: escolher a ideia, aprovar o rascunho e dizer o que mudar.</p>
+
+  <h3>Como usar esta apostila</h3>
+  <ul>
+    <li><strong>Módulos 1 a 5</strong> são a base: faça na ordem, uma única vez. Depois que o estúdio está montado, você não volta mais neles.</li>
+    <li><strong>Módulo 6</strong> tem um capítulo por formato de vídeo. Escolha um ou dois para começar; não precisa fazer todos.</li>
+    <li>As caixas roxas tracejadas são <strong>prompts prontos</strong>: copie e cole no Claude, trocando o que está entre colchetes <code>[assim]</code>.</li>
+  </ul>
+  <div class="box dica"><span class="t">Dica</span><p>Leia um capítulo, faça o vídeo e só então avance. Na primeira vez o processo leva algumas horas; a partir do terceiro vídeo, um formato já montado costuma sair em menos de uma hora, a maior parte esperando a renderização.</p></div>
+  <div class="box info"><span class="t">Uma palavra sobre "IA que faz tudo"</span><p>A IA acelera muito, mas não substitui o seu olhar. Os melhores resultados vêm de quem <strong>confere</strong> cada rascunho (enquadramento, fatos, piada, ritmo) e pede ajustes. Este curso ensina justamente esse ciclo.</p></div>
+</section>
+
+<!-- ======================================================= MÓDULO 1 -->
+<section class="modulo m1">
+  <div class="faixa"><div class="bolha"></div><div class="num">MÓDULO 1</div><h1>Fundamentos</h1><p>Entenda como as peças se encaixam antes de instalar qualquer coisa.</p></div>
+
+  <h2>1.1 Como a mágica funciona</h2>
+  <p>Um vídeo animado tradicional é feito em programas de animação, quadro a quadro. Aqui fazemos diferente: <strong>o vídeo é escrito como código</strong>. Cada cena é uma pequena "receita" que diz onde está cada personagem, cor, texto e movimento em cada instante. Como é código, a IA consegue escrever, e um programa chamado <strong>Remotion</strong> transforma essa receita em vídeo.</p>
+  <div class="fluxo">
+    <div><b>Você</b>pede a ideia em português</div><i>→</i>
+    <div><b>Claude</b>escreve o roteiro e confere os fatos</div><i>→</i>
+    <div><b>Voz</b>a narração vira áudio com tempo de cada palavra</div><i>→</i>
+    <div><b>Claude</b>escreve as cenas animadas no tempo da fala</div><i>→</i>
+    <div><b>Remotion</b>renderiza o MP4 9:16</div><i>→</i>
+    <div><b>Você</b>confere, aprova e posta</div>
+  </div>
+  <p>O grande truque é a <strong>sincronia</strong>: quando a narração é gerada, guardamos o instante exato de cada palavra. As cenas usam esses instantes, então quando o narrador diz <em>"BOOM!"</em> a explosão acontece exatamente ali, e a legenda acende palavra por palavra.</p>
+
+  <h2>1.2 As ferramentas</h2>
+  <table>
+    <tr><th style="width:24%">Ferramenta</th><th>Para que serve</th><th style="width:18%">Custo</th></tr>
+    <tr><td><strong>Claude Code</strong></td><td>A IA que trabalha dentro do seu computador: cria pastas, escreve código, roda comandos, olha as imagens geradas e corrige o que estiver errado.</td><td>Assinatura do Claude</td></tr>
+    <tr><td><strong>Remotion</strong></td><td>Biblioteca que transforma código (React) em vídeo MP4. É o "motor de animação".</td><td>Grátis para uso individual*</td></tr>
+    <tr><td><strong>Node.js</strong></td><td>Programa que roda o Remotion e o Claude Code.</td><td>Grátis</td></tr>
+    <tr><td><strong>Python</strong></td><td>Roda os scripts de voz, legenda e conferência de qualidade.</td><td>Grátis</td></tr>
+    <tr><td><strong>FFmpeg</strong></td><td>"Canivete suíço" de áudio e vídeo: mede volume, junta faixas, extrai quadros.</td><td>Grátis</td></tr>
+    <tr><td><strong>Git</strong> (+ GitHub)</td><td>Guarda o histórico de versões do seu estúdio. Se algo quebrar, você volta atrás.</td><td>Grátis</td></tr>
+    <tr><td><strong>Voz grátis</strong> (Kokoro)</td><td>Narração neural gratuita, roda no seu computador. Ótima para rascunhos.</td><td>Grátis</td></tr>
+    <tr><td><strong>ElevenLabs</strong> (opcional)</td><td>Vozes profissionais e expressivas para a versão final.</td><td>Por caractere / plano mensal</td></tr>
+  </table>
+  <p class="mini">* O Remotion é gratuito para pessoas físicas, organizações sem fins lucrativos e empresas com até 3 funcionários; empresas maiores precisam de uma licença paga. Veja "Licenças e avisos" no final.</p>
+
+  <h2>1.3 Quanto custa</h2>
+  <div class="box custo"><span class="t">Resumo honesto dos custos</span>
+    <ul>
+      <li><strong>Obrigatório:</strong> uma assinatura do Claude que inclua o <strong>Claude Code</strong> (planos Pro ou Max). O Pro é suficiente para começar.</li>
+      <li><strong>Opcional:</strong> ElevenLabs para vozes premium. É cobrado por <strong>caracteres de texto narrado</strong>; um vídeo de 60 s usa algo entre 600 e 900 caracteres.</li>
+      <li><strong>Zero custo:</strong> formatos sem narração (desafio do pause, quiz só com texto, texto cinético com música) e rascunhos com voz grátis.</li>
+    </ul>
+    <p>Preços mudam: confira sempre nos sites oficiais antes de assinar.</p>
+  </div>
+  <p><strong>Regra de ouro para não desperdiçar dinheiro:</strong> todo vídeo nasce com <strong>voz grátis</strong>. Você assiste o rascunho, pede todas as mudanças de texto e imagem e só então gera a voz paga, <strong>uma única vez</strong>. Ajustes depois disso (velocidade de um trecho, volume, pausas) são feitos localmente, sem pagar de novo. Vamos configurar o estúdio para seguir essa regra sozinho.</p>
+
+  <h2>1.4 Do que você precisa</h2>
+  <ul class="check">
+    <li>Computador com <strong>Windows 10/11, macOS ou Linux</strong>.</li>
+    <li><strong>8 GB de RAM</strong> no mínimo (16 GB deixa a renderização bem mais rápida).</li>
+    <li>Uns <strong>10 GB livres</strong> no disco.</li>
+    <li>Internet (para a IA e para baixar as ferramentas).</li>
+    <li>Um celular para conferir como o vídeo fica na tela vertical.</li>
+  </ul>
+  <div class="box atencao"><span class="t">Placa de vídeo não é obrigatória</span><p>Mesmo os vídeos em 3D deste curso rodam sem placa de vídeo dedicada (o Remotion consegue desenhar o 3D pelo processador). Só fica mais lento: um vídeo 3D de 60 s pode levar de 10 a 30 minutos para renderizar.</p></div>
+</section>
+
+<!-- ======================================================= MÓDULO 2 -->
+<section class="modulo m2">
+  <div class="faixa"><div class="bolha"></div><div class="num">MÓDULO 2</div><h1>Instalação do zero</h1><p>Uma vez só. Siga na ordem e confira cada passo antes de ir para o próximo.</p></div>
+
+  <h2>2.1 Conta no Claude</h2>
+  <ol class="passos">
+    <li>Acesse <strong>claude.ai</strong> e crie sua conta (e-mail ou Google).</li>
+    <li>Assine um plano que inclua o <strong>Claude Code</strong> (Pro ou Max). Você vai usar o mesmo login no terminal.</li>
+  </ol>
+
+  <h2>2.2 Node.js, Git, Python e FFmpeg</h2>
+  <h3>Windows</h3>
+  <ol class="passos">
+    <li><strong>Node.js:</strong> baixe a versão <strong>LTS</strong> em <code>nodejs.org</code> e instale clicando em "Avançar".</li>
+    <li><strong>Git:</strong> baixe em <code>git-scm.com</code> e instale com as opções padrão (ele também instala o "Git Bash").</li>
+    <li><strong>Python 3:</strong> baixe em <code>python.org</code>. Na primeira tela, marque <strong>"Add Python to PATH"</strong>.</li>
+    <li><strong>FFmpeg:</strong> abra o PowerShell e rode <code>winget install ffmpeg</code>.</li>
+  </ol>
+  <h3>macOS</h3>
+  <p>Instale o Homebrew (instruções em <code>brew.sh</code>) e depois rode no Terminal:</p>
+  <pre>brew install node git python ffmpeg</pre>
+  <h3>Linux (Ubuntu/Debian)</h3>
+  <pre>sudo apt update && sudo apt install -y nodejs npm git python3 python3-pip ffmpeg</pre>
+  <h3>Conferindo</h3>
+  <p>Feche e abra o terminal de novo, depois rode cada linha. Todas precisam responder com um número de versão:</p>
+  <pre>node -v
+git --version
+python3 --version   <span class="c"># no Windows: python --version</span>
+ffmpeg -version</pre>
+  <div class="box atencao"><span class="t">Apareceu "comando não encontrado"?</span><p>Quase sempre é porque o terminal foi aberto <em>antes</em> da instalação. Feche todas as janelas do terminal e abra de novo. Se persistir, reinicie o computador.</p></div>
+
+  <h2>2.3 Instalando o Claude Code</h2>
+  <p>O Claude Code é a IA "de mangas arregaçadas": em vez de só conversar, ela mexe nos arquivos do seu projeto. A forma de instalar pode mudar com o tempo, então confira a página oficial (<code>docs.claude.com</code>, seção Claude Code). No momento em que esta apostila foi escrita, os comandos eram:</p>
+  <pre><span class="c"># macOS / Linux</span>
+curl -fsSL https://claude.ai/install.sh | bash
+
+<span class="c"># Windows (PowerShell)</span>
+irm https://claude.ai/install.ps1 | iex
+
+<span class="c"># alternativa em qualquer sistema (precisa do Node.js)</span>
+npm install -g @anthropic-ai/claude-code</pre>
+  <p>Depois, rode <code>claude</code> no terminal. Na primeira vez ele abre o navegador para você fazer login com a sua conta do Claude.</p>
+  <div class="box dica"><span class="t">Prefere uma janela bonita em vez do terminal?</span><p>O Claude Code também existe como <strong>extensão do VS Code</strong> e como <strong>aplicativo de computador</strong>. Funciona do mesmo jeito; use o que for mais confortável. Nesta apostila mostramos o terminal porque é igual em todos os sistemas.</p></div>
+
+  <h2>2.4 Primeiro teste</h2>
+  <ol class="passos">
+    <li>Crie uma pasta para o estúdio, por exemplo <code>Documentos/estudio</code>.</li>
+    <li>Abra o terminal <strong>dentro dessa pasta</strong> (no Windows: clique com o botão direito na pasta → "Abrir no Terminal").</li>
+    <li>Digite <code>claude</code> e aperte Enter.</li>
+    <li>Escreva: <em>"Olá! Confere se Node, Python, Git e FFmpeg estão instalados e me diz as versões."</em></li>
+  </ol>
+  <p>O Claude vai pedir permissão para rodar comandos. Leia o que ele quer fazer e aprove. Se algo estiver faltando, ele explica como instalar.</p>
+  <div class="box info"><span class="t">Permissões</span><p>Por segurança, o Claude Code pergunta antes de rodar comandos ou mexer em arquivos. No começo, aprove um por um e leia o que está sendo feito: é a melhor forma de aprender. Depois você pode liberar os comandos que se repetem (ex.: renderizar).</p></div>
+</section>
+
+<!-- ======================================================= MÓDULO 3 -->
+<section class="modulo m3">
+  <div class="faixa"><div class="bolha"></div><div class="num">MÓDULO 3</div><h1>Montando o seu estúdio</h1><p>Um único projeto que vai produzir todos os formatos. Você monta uma vez e reaproveita para sempre.</p></div>
+
+  <h2>3.1 Criando o projeto de vídeo</h2>
+  <p>Abra o Claude Code dentro da pasta do estúdio e cole o prompt abaixo. Ele cria o projeto Remotion, instala o que for preciso e faz um vídeo de teste.</p>
+  <div class="prompt"><span class="rot">PROMPT · CRIAR O ESTÚDIO</span>
+    <p>Quero montar um estúdio de vídeos animados verticais com Remotion nesta pasta.</p>
+    <p>1. Crie um projeto Remotion com TypeScript (formato 1080x1920, 30 fps).</p>
+    <p>2. Instale também @remotion/three (para cenas 3D) e fontes locais (Baloo 2 e Nunito via @fontsource), para não depender de internet ao renderizar.</p>
+    <p>3. Faça uma composição de teste de 5 segundos: fundo colorido, um círculo que entra quicando e o texto "ESTÚDIO PRONTO!".</p>
+    <p>4. Crie scripts no package.json: "studio" (abrir o Remotion Studio) e "render" (gerar out/teste.mp4).</p>
+    <p>5. Renderize o teste e me diga onde está o arquivo.</p>
+  </div>
+  <p>Abra o MP4 gerado. Se você viu o círculo quicando, <strong>o motor de animação está funcionando</strong>.</p>
+  <div class="box dica"><span class="t">Por que 1080x1920 e 30 fps?</span><p>É o padrão de Reels, TikTok e Shorts: vertical 9:16, Full HD, 30 quadros por segundo. Tudo neste curso usa esse formato.</p></div>
+
+  <h2>3.2 As pastas do estúdio</h2>
+  <p>Com o tempo, o estúdio cresce. Uma organização clara faz o Claude acertar mais e errar menos. Esta é a estrutura recomendada (peça ao Claude para seguir):</p>
+  <pre>estudio/
+├── CLAUDE.md                <span class="c">← manual do estúdio (regras gerais)</span>
+├── .claude/skills/          <span class="c">← um "manual" por formato</span>
+│   ├── explicativo/SKILL.md
+│   ├── quiz/SKILL.md
+│   └── ...
+├── roteiros/                <span class="c">← um JSON por vídeo (texto, cenas, voz)</span>
+├── src/
+│   ├── Root.tsx             <span class="c">← lista de composições (formatos)</span>
+│   ├── comum/               <span class="c">← peças reaproveitáveis: legenda, câmera, efeitos</span>
+│   ├── explicativo/         <span class="c">← personagem, cenários e cenas do formato 1</span>
+│   ├── quiz/                <span class="c">← formato 6</span>
+│   └── ...
+├── scripts/                 <span class="c">← gerar voz, legenda, música e conferência (Python)</span>
+├── public/audio/            <span class="c">← narração, música e efeitos gerados</span>
+└── out/                     <span class="c">← vídeos prontos (MP4)</span></pre>
+
+  <h2>3.3 O CLAUDE.md: o manual do estúdio</h2>
+  <p>O <code>CLAUDE.md</code> é um arquivo de texto na raiz do projeto que o Claude lê <strong>toda vez</strong> que começa a trabalhar. É ali que você escreve as regras do seu estúdio, como faria com um funcionário novo. Sem ele, você teria que repetir as mesmas instruções em todo pedido.</p>
+  <p>Exemplo de um bom CLAUDE.md (adapte):</p>
+  <pre># Meu Estúdio de Vídeos
+
+Responda sempre em português do Brasil.
+
+## Formatos (cada um tem uma skill em .claude/skills/)
+| Pedido                   | Skill        | Composição  |
+|--------------------------|--------------|-------------|
+| "vídeo explicativo"      | explicativo  | Explicativo |
+| "quiz"                   | quiz         | Quiz        |
+| "vídeo de treino"        | fitness      | Fitness     |
+
+## Regras de custo
+- Voz paga (ElevenLabs) SÓ com a minha autorização explícita ("autorizo"),
+  sempre dizendo antes quantos caracteres serão cobrados.
+- Rascunhos SEMPRE com a voz grátis.
+- Ajustes depois da voz paga: só locais (velocidade, pausas, volume).
+
+## Segurança
+- Nunca peça, mostre ou grave chaves de API em arquivos versionados.
+
+## Qualidade
+- Sempre rode a conferência (npm run qa) e olhe os quadros antes de entregar.
+- Fatos de vídeos educativos: confira em duas fontes e liste as fontes.</pre>
+  <div class="box dica"><span class="t">Comece pequeno</span><p>Você pode pedir: <em>"Cria um CLAUDE.md para este estúdio com regras de idioma, custo e qualidade."</em> Depois, sempre que corrigir o Claude em algo que vale para sempre, diga: <em>"Anota isso no CLAUDE.md."</em> O estúdio vai ficando mais inteligente a cada vídeo.</p></div>
+
+  <h2>3.4 Skills: ensinando cada formato</h2>
+  <p>Uma <strong>skill</strong> é um manual específico de um formato, guardado em <code>.claude/skills/&lt;nome&gt;/SKILL.md</code>. Quando você pede "faz um quiz", o Claude encontra a skill do quiz e segue a receita dela: duração, estilo, ritmo, regras de humor e passo a passo.</p>
+  <p>Estrutura de um SKILL.md:</p>
+  <pre>---
+name: quiz
+description: Vídeos de QUIZ (pergunta, 3 alternativas, timer de 5 s, resposta).
+  Use quando o usuário pedir "quiz", "pergunta e resposta" ou "teste seus
+  conhecimentos".
+---
+
+# Quiz
+
+## Especificação
+- 9:16, 1080x1920, 30 fps, 20–30 s, composição "Quiz".
+
+## Estrutura
+1. Gancho (0–2 s): "Só 1% acerta essa!"
+2. Pergunta + 3 alternativas (A, B, C).
+3. Timer de 5 s com tique-taque.
+4. Revela a resposta (verde) + explicação curta (1 frase).
+5. Chamada: "Comenta quantas você acertou!"
+
+## Fluxo
+1. Roteiro em roteiros/quiz-&lt;tema&gt;.json (fatos conferidos 2x).
+2. npm run audio -- --gratis  (rascunho)
+3. ... (render, conferência, entrega)</pre>
+  <p>Você não precisa escrever skills sozinho. O caminho mais fácil: faça o primeiro vídeo de um formato conversando com o Claude, ajuste até ficar bom e então peça:</p>
+  <div class="prompt"><span class="rot">PROMPT · TRANSFORMAR EM SKILL</span>
+    <p>Ficou ótimo. Transforma tudo o que fizemos neste vídeo em uma skill reutilizável em .claude/skills/[nome-do-formato]/SKILL.md: especificação, estrutura do roteiro, regras de estilo, componentes que criamos, comandos e os erros que corrigimos no caminho (para não repetir). Registre o formato também na tabela do CLAUDE.md.</p>
+  </div>
+
+  <h2>3.5 Visualizar e exportar</h2>
+  <ul>
+    <li><strong>Remotion Studio</strong> (<code>npx remotion studio</code>): abre no navegador uma prévia com linha do tempo, onde você arrasta e vê qualquer quadro. Ótimo para conferir enquadramento.</li>
+    <li><strong>Renderizar</strong> (<code>npx remotion render NomeDaComposicao out/video.mp4</code>): gera o arquivo final. O Claude roda isso para você.</li>
+    <li><strong>Quadros soltos</strong> (<code>npx remotion still NomeDaComposicao out/q.png --frame=120</code>): gera uma imagem de um instante específico. O Claude usa isso para "olhar" as cenas antes de renderizar tudo.</li>
+  </ul>
+  <div class="box info"><span class="t">O Claude consegue ver imagens</span><p>Esse é o segredo da qualidade: peça sempre <em>"gera os quadros-chave numa grade e confere o enquadramento antes de renderizar"</em>. Ele olha as imagens e corrige personagem cortado na borda, texto em cima de texto, câmera muito perto, e assim por diante.</p></div>
+
+  <h2>3.6 Salvando versões (Git)</h2>
+  <p>Peça ao Claude: <em>"Inicializa o Git neste projeto, cria um .gitignore (node_modules, out, arquivos de chave) e faz o primeiro commit."</em> A partir daí, ao final de cada vídeo diga <em>"faz o commit"</em>. Se um dia algo quebrar, é só pedir <em>"volta o projeto para como estava ontem"</em>.</p>
+  <p>Para ter uma cópia na nuvem, crie uma conta gratuita no <strong>GitHub</strong>, crie um repositório <strong>privado</strong> e peça ao Claude para conectar o projeto a ele.</p>
+  <div class="box atencao"><span class="t">Nunca suba chaves para o GitHub</span><p>Arquivos como <code>.env</code> ou <code>.env.local</code>, que guardam a chave do ElevenLabs, precisam estar no <code>.gitignore</code>. Confirme isso com o Claude antes do primeiro envio.</p></div>
+</section>
+
+<!-- ======================================================= MÓDULO 4 -->
+<section class="modulo m4">
+  <div class="faixa"><div class="bolha"></div><div class="num">MÓDULO 4</div><h1>Voz, música e som</h1><p>Metade da qualidade de um vídeo curto está no áudio. Aqui você monta a "cabine de som" do estúdio.</p></div>
+
+  <h2>4.1 Voz grátis para rascunho</h2>
+  <p>O <strong>Kokoro</strong> é um modelo de voz neural <strong>gratuito e de código aberto</strong> que roda no seu computador, sem internet e sem limite. Ele tem vozes em português do Brasil (por exemplo <code>pf_dora</code>, feminina, e <code>pm_alex</code> e <code>pm_santa</code>, masculinas). É perfeito para rascunhos e, em muitos formatos, até para a versão final.</p>
+  <div class="prompt"><span class="rot">PROMPT · MOTOR DE VOZ</span>
+    <p>Cria um script scripts/gerar_audio.py que lê o roteiro (JSON com cenas e falas) e gera:</p>
+    <p>(1) public/audio/narracao.wav com todas as falas e pequenas pausas entre cenas;</p>
+    <p>(2) src/timeline.json com o início e o fim de cada cena, de cada fala e de CADA PALAVRA (em frames, 30 fps), para sincronizar animação e legenda;</p>
+    <p>(3) ajuste a velocidade para o vídeo ter a duração do roteiro (campo duracaoSegundos).</p>
+    <p>Use o Kokoro (voz pt-BR) como motor padrão e GRÁTIS. Deixe preparado um segundo motor, ElevenLabs, que só roda com a flag --autorizo-custo e que antes imprime quantos caracteres serão cobrados. Guarde o áudio de cada fala em cache para nunca pagar duas vezes pelo mesmo texto.</p>
+  </div>
+
+  <h2>4.2 Voz profissional (ElevenLabs)</h2>
+  <ol class="passos">
+    <li>Crie uma conta em <code>elevenlabs.io</code> e escolha um plano. Planos gratuitos costumam ter limite de caracteres e <strong>restrições de uso comercial</strong>; para monetizar, confira os termos e use um plano pago.</li>
+    <li>Na <strong>Voice Library</strong>, filtre por idioma <em>Portuguese</em> e sotaque <em>Brazilian</em>. Ouça várias e anote o <strong>Voice ID</strong> das favoritas (um código como <code>xJ8U5HgW...</code>).</li>
+    <li>Crie uma <strong>chave de API</strong> (Profile → API Keys).</li>
+    <li>Guarde a chave numa <strong>variável de ambiente</strong> ou num arquivo <code>.env.local</code> que esteja no <code>.gitignore</code>. <strong>Nunca cole a chave na conversa com a IA</strong>: peça ao Claude para ler da variável <code>ELEVENLABS_API_KEY</code>.</li>
+  </ol>
+  <div class="box custo"><span class="t">Fazendo as contas</span><p>O ElevenLabs cobra por caractere enviado. Um roteiro de 60 s tem ~130 palavras ≈ 700 caracteres. Use o painel da sua conta para ver quantos caracteres o seu plano inclui por mês e divida: esse é o número de vídeos narrados por mês. Para economizar, use voz grátis nos formatos que não dependem de interpretação (quiz, texto cinético) e a voz premium nos que vivem de personagem (humor, explicativo).</p></div>
+  <h3>Escolhendo a voz certa por formato</h3>
+  <table>
+    <tr><th>Formato</th><th>Tipo de voz</th></tr>
+    <tr><td>Explicativo / curiosidades</td><td>Jovem, alegre, clara, ritmo médio</td></tr>
+    <tr><td>Humor absurdo</td><td>Dinâmica, expressiva, com "timing" de piada</td></tr>
+    <tr><td>Quadro-negro / aula</td><td>Calma, de professor, ritmo mais lento</td></tr>
+    <tr><td>Fitness</td><td>Energética, de treinador, frases curtas</td></tr>
+    <tr><td>Terror / mistério</td><td>Grave, sussurrada, pausas longas</td></tr>
+  </table>
+  <div class="box dica"><span class="t">Várias vozes no mesmo vídeo</span><p>Peça ao Claude para aceitar um campo <code>"quem"</code> em cada fala (ex.: <code>"apresentador"</code>, <code>"cliente"</code>), cada um com sua voz. Um truque grátis para criar uma voz "de bichinho" é pegar uma voz existente e <strong>afinar</strong> (subir o tom) localmente com o FFmpeg. Não custa nada a mais.</p></div>
+
+  <h2>4.3 Narração com emoção</h2>
+  <p>Separe no roteiro o <strong>texto</strong> (que vira legenda) da <strong>pronúncia</strong> (o que a voz lê). Na pronúncia você pode usar recursos que deixam a fala viva:</p>
+  <ul>
+    <li><strong>MAIÚSCULAS</strong> na palavra que leva ênfase: "a casca não AGUENTA e…".</li>
+    <li><strong>Reticências</strong> para suspense: "e no zero… PIM!".</li>
+    <li><strong>Tags de emoção</strong> dos modelos mais novos do ElevenLabs: <code>[excited]</code>, <code>[curious]</code>, <code>[laughs]</code>, <code>[sighs]</code>, <code>[deadpan]</code>.</li>
+    <li><strong>Números por extenso</strong>: "1935" vira "mil novecentos e trinta e cinco" para evitar leituras estranhas.</li>
+  </ul>
+  <pre>{
+  "texto": "E aí, risada!",
+  "pronuncia": "E aí, [laughs] RISADA!"
+}</pre>
+  <div class="box atencao"><span class="t">Confira as tags no ouvido</span><p>Às vezes a IA de voz <em>lê</em> a tag em vez de rir ou suspirar. Peça ao script para avisar quando uma tag ocupar tempo de fala, e escute esses trechos antes de publicar.</p></div>
+
+  <h2>4.4 Legendas palavra por palavra</h2>
+  <p>Legenda em vídeo curto é obrigatória: muita gente assiste sem som. O estilo que mais segura atenção é a <strong>legenda de 2 a 4 palavras por vez, com a palavra falada destacada</strong> (cor ou tamanho). Como o <code>timeline.json</code> já tem o tempo de cada palavra, o Claude monta isso automaticamente.</p>
+  <div class="prompt"><span class="rot">PROMPT · LEGENDA</span>
+    <p>Cria um componente de legenda que lê o timeline.json e mostra grupos de até 3 palavras por vez, centralizados na altura de 70% da tela, fonte Baloo 2 grossa, branca com contorno escuro, e a palavra que está sendo falada em amarelo e um pouco maior. Ela deve aparecer em todos os formatos narrados.</p>
+  </div>
+
+  <h2>4.5 Música e efeitos</h2>
+  <ul>
+    <li><strong>Música:</strong> use trilhas <strong>sem direitos autorais</strong> (bibliotecas royalty-free com licença clara) ou peça ao Claude para <strong>gerar uma trilha original por código</strong> (sintetizada em Python): batida simples, alegre, no andamento que você pedir. É 100% sua e sem risco de bloqueio.</li>
+    <li><strong>Efeitos (SFX):</strong> "whoosh" de transição, "pop" quando algo aparece, "boing", "ding", explosão, tique-taque. Também podem ser gerados por código ou baixados de bancos gratuitos com licença comercial.</li>
+    <li><strong>Abaixar a música quando alguém fala</strong> ("ducking") deixa a voz clara. Peça para a música baixar automaticamente durante as falas.</li>
+  </ul>
+  <div class="box atencao"><span class="t">Direitos autorais</span><p>Músicas famosas, trechos de filmes, personagens e marcas de terceiros podem derrubar o vídeo ou a conta. Crie tudo original: o estúdio deste curso foi pensado para isso.</p></div>
+
+  <h2>4.6 Volume certo</h2>
+  <p>As redes sociais normalizam o volume. Vídeo baixo demais parece "fraco"; alto demais distorce. Mire em:</p>
+  <table>
+    <tr><th>Medida</th><th>Alvo</th><th>Por quê</th></tr>
+    <tr><td>Volume integrado (LUFS)</td><td>entre −16 e −13</td><td>Fica no nível dos outros vídeos do feed.</td></tr>
+    <tr><td>Pico verdadeiro (dBTP)</td><td>no máximo −1</td><td>Evita estalo/distorção no celular.</td></tr>
+    <tr><td>Voz × música</td><td>voz bem na frente</td><td>Legenda ajuda, mas a voz precisa ser entendida.</td></tr>
+  </table>
+  <p>Não precisa decorar: no Módulo 7 o Claude cria uma <strong>conferência automática</strong> que mede tudo isso e reprova o vídeo se algo estiver fora.</p>
+</section>
+
+<!-- ======================================================= MÓDULO 5 -->
+<section class="modulo m5">
+  <div class="faixa"><div class="bolha"></div><div class="num">MÓDULO 5</div><h1>A receita de produção</h1><p>Todo vídeo, de qualquer formato, passa pelas mesmas 8 etapas.</p></div>
+
+  <ol class="passos">
+    <li><strong>Ideia:</strong> peça sugestões ("me dá 10 ideias de quiz sobre animais") ou traga a sua.</li>
+    <li><strong>Roteiro:</strong> o Claude escreve o roteiro em JSON (cenas, falas, pronúncia). Para conteúdo educativo, peça para <strong>conferir os fatos em duas fontes</strong> e listar as fontes.</li>
+    <li><strong>Voz de rascunho (grátis):</strong> gera a narração e o mapa de tempo de cada palavra.</li>
+    <li><strong>Cenas:</strong> o Claude escreve as animações usando os tempos das palavras (o pop acontece na palavra "pop").</li>
+    <li><strong>Quadros-chave:</strong> antes de renderizar, ele gera uma grade de imagens e confere enquadramento, textos e legibilidade.</li>
+    <li><strong>Render + conferência:</strong> gera o MP4 e roda a conferência automática (volume, duração, legenda, sincronia).</li>
+    <li><strong>Sua aprovação:</strong> você assiste no celular e pede ajustes. Repete até ficar bom.</li>
+    <li><strong>Versão final:</strong> com a sua autorização, gera a voz premium (se usar), renderiza, confere de novo e entrega. Por fim, salva tudo com um commit.</li>
+  </ol>
+
+  <h2>O pedido perfeito</h2>
+  <p>Quanto mais claro o pedido, menos idas e voltas. Um bom pedido tem: <strong>formato</strong>, <strong>tema</strong>, <strong>tom</strong>, <strong>duração</strong> e <strong>algo especial</strong> (piada, gancho, personagem).</p>
+  <div class="prompt"><span class="rot">MODELO DE PEDIDO</span>
+    <p>Faz um vídeo no formato [explicativo] sobre [por que a pipoca estoura]. Tom [divertido, para jovens]. Duração [60 s]. Quero uma piada no final do tipo [comparação com algo do dia a dia]. Confere os fatos em duas fontes. Gera o rascunho com voz grátis e me manda.</p>
+  </div>
+  <h3>Como pedir ajustes</h3>
+  <p>Seja específico, como um diretor:</p>
+  <table>
+    <tr><th>Em vez de…</th><th>Diga…</th></tr>
+    <tr><td>"Não gostei."</td><td>"O problema não ficou engraçado; quero que a solução dê errado de um jeito mais exagerado."</td></tr>
+    <tr><td>"Tá estranho."</td><td>"No segundo 12 o texto está em cima do personagem. Sobe o texto."</td></tr>
+    <tr><td>"Muda a voz."</td><td>"A voz está séria demais. Testa uma voz mais jovem e animada, só com uma frase, antes de gerar tudo."</td></tr>
+    <tr><td>"Tá lento."</td><td>"Corta a cena 4 pela metade e faz um corte de câmera a cada 1,5 s."</td></tr>
+  </table>
+  <div class="box dica"><span class="t">Ensine uma vez, use sempre</span><p>Quando uma correção valer para todos os vídeos do formato ("legenda nunca em cima do rosto", "nunca mais de 45 s"), termine com: <em>"Anota essa regra na skill."</em></p></div>
+</section>
+
+<!-- ======================================================= MÓDULO 6 -->
+<section class="modulo m6">
+  <div class="faixa"><div class="bolha"></div><div class="num">MÓDULO 6</div><h1>Os 8 formatos</h1><p>Um capítulo por formato. Cada um traz: o que é, por que funciona, estrutura do roteiro, o prompt para montar o formato e o prompt para cada vídeo novo.</p></div>
+  <table>
+    <tr><th>#</th><th>Formato</th><th>Duração</th><th>Narração</th><th>Dificuldade</th></tr>
+    <tr><td>F1</td><td>Explicativo 2D cartoon</td><td>45–60 s</td><td>Sim</td><td>★★☆</td></tr>
+    <tr><td>F2</td><td>Humor absurdo 3D em série</td><td>60 s</td><td>Sim</td><td>★★★</td></tr>
+    <tr><td>F3</td><td>Desafio do pause (neon)</td><td>15–20 s, loop</td><td>Não</td><td>★★☆</td></tr>
+    <tr><td>F4</td><td>Animação de palitinho</td><td>20–60 s</td><td>Opcional</td><td>★☆☆</td></tr>
+    <tr><td>F5</td><td>Quadro-negro (giz)</td><td>45–90 s</td><td>Sim</td><td>★★☆</td></tr>
+    <tr><td>F6</td><td>Quiz</td><td>20–40 s</td><td>Opcional</td><td>★☆☆</td></tr>
+    <tr><td>F7</td><td>Texto cinético</td><td>15–45 s</td><td>Opcional</td><td>★☆☆</td></tr>
+    <tr><td>F8</td><td>Fitness: treino, exercícios e dieta</td><td>30–60 s</td><td>Sim</td><td>★★☆</td></tr>
+  </table>
+  <div class="box dica"><span class="t">Por onde começar</span><p>Comece por um formato ★☆☆ (palitinho, quiz ou texto cinético) para pegar o jeito do fluxo. Depois vá para o explicativo, e só então para o 3D.</p></div>
+  <h3>O roteiro em JSON (vale para todos os formatos)</h3>
+  <p>Todo vídeo narrado nasce de um arquivo de roteiro. Esse é o "molde" que o Claude preenche:</p>
+  <pre>{
+  "video": "pipoca",
+  "titulo": "Por que a pipoca estoura?",
+  "duracaoSegundos": 60,
+  "voz": { "motor": "kokoro", "voz": "pm_alex" },
+  "fontes": ["Fonte 1 ...", "Fonte 2 ..."],
+  "cenas": [
+    { "id": "gancho",
+      "falas": [ { "texto": "Por que a pipoca estoura?",
+                   "pronuncia": "[curious] Por que a pipoca ESTOURA?" } ] },
+    { "id": "grao",
+      "falas": [ { "texto": "Cada grão guarda um pouquinho de água…",
+                   "pronuncia": "Cada grão guarda um pouquinho de ÁGUA…" } ] }
+  ]
+}</pre>
+  <p>Cada <strong>cena</strong> vira uma função de animação. Cada <strong>fala</strong> vira áudio com tempo de cada palavra. O campo <code>id</code> liga as duas coisas.</p>
+</section>
+
+<!-- ---------------------------------------- F1 -->
+<section class="formato">
+  <div class="topo"><div class="selo" style="background:#ff8c1a">F1</div><div><h1>Explicativo 2D cartoon</h1><div class="linha2">"Por que o céu é azul?", explicado por um personagem carismático.</div></div></div>
+  <div class="ficha"><div><b>Duração</b>45–60 s</div><div><b>Narração</b>Sim (1 voz)</div><div><b>Custo</b>Grátis ou ~700 caracteres</div><div><b>Ideal para</b>Curiosidades, ciência, história</div></div>
+  <div class="duas">
+    <div>
+      <h3 style="margin-top:0">Por que funciona</h3>
+      <p>Uma pergunta que todo mundo já fez + uma resposta surpreendente + um personagem fixo que o público passa a reconhecer. É conteúdo "salvável" e compartilhável.</p>
+      <h3>Ingredientes visuais</h3>
+      <ul>
+        <li><strong>Personagem fixo</strong> 2D vetorial (contorno grosso, cores fortes), com expressões (feliz, surpreso, pensativo) e poses (apontando, explicando).</li>
+        <li><strong>Boca sincronizada</strong> com a voz (abre conforme o volume).</li>
+        <li><strong>Cenários</strong> simples (céu, cozinha, laboratório) e <strong>objetos explicativos</strong> grandes: o grão em corte, o planeta, o diafragma.</li>
+        <li><strong>Câmera</strong> com zoom e tremidinhas nos momentos fortes.</li>
+        <li><strong>Etiquetas</strong> (tags) e títulos que "batem" na tela.</li>
+      </ul>
+    </div>
+    <div class="mock">
+      <svg viewBox="0 0 270 480"><rect width="270" height="480" fill="#bfe6ff"/><path d="M0 360 Q 135 320 270 360 L270 480 L0 480 Z" fill="#7ed36b"/>
+        <rect x="40" y="40" width="190" height="34" rx="10" fill="#fff" stroke="#1f1b2e" stroke-width="4"/><text x="135" y="63" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="16" fill="#1f1b2e">POR QUE O CÉU É AZUL?</text>
+        <circle cx="200" cy="140" r="34" fill="#ffd23f" stroke="#1f1b2e" stroke-width="4"/>
+        <g transform="translate(110 250)"><circle cx="0" cy="0" r="38" fill="#c98b5e" stroke="#1f1b2e" stroke-width="4"/><circle cx="-13" cy="-4" r="9" fill="#fff" stroke="#1f1b2e" stroke-width="3"/><circle cx="13" cy="-4" r="9" fill="#fff" stroke="#1f1b2e" stroke-width="3"/><circle cx="-12" cy="-3" r="4" fill="#1f1b2e"/><circle cx="14" cy="-3" r="4" fill="#1f1b2e"/><path d="M-12 16 Q0 26 12 16" fill="none" stroke="#1f1b2e" stroke-width="4" stroke-linecap="round"/><rect x="-30" y="38" width="60" height="70" rx="14" fill="#ffd23f" stroke="#1f1b2e" stroke-width="4"/><path d="M30 55 L70 20" stroke="#1f1b2e" stroke-width="9" stroke-linecap="round"/></g>
+        <rect x="30" y="395" width="210" height="40" rx="12" fill="#1f1b2e" opacity=".75"/><text x="135" y="422" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="20" fill="#fff">A LUZ DO <tspan fill="#ffd23f">SOL</tspan></text></svg>
+      <small>Personagem + objeto explicativo + legenda</small>
+    </div>
+  </div>
+  <h3>Estrutura do roteiro (60 s, ~130 palavras)</h3>
+  <ol>
+    <li><strong>Gancho (0–3 s):</strong> a pergunta, com o texto já na tela no primeiro quadro.</li>
+    <li><strong>Explicação em 3 a 5 cenas curtas</strong>, uma ideia por cena.</li>
+    <li><strong>Fato surpresa</strong> ("o recorde de soluço durou 68 anos").</li>
+    <li><strong>Conclusão com piada</strong> que resume o assunto.</li>
+    <li><strong>Chamada</strong> ("E você, prefere doce ou salgada? Conta aí!").</li>
+  </ol>
+  <div class="prompt"><span class="rot">PROMPT · MONTAR O FORMATO (1ª VEZ)</span>
+    <p>Quero criar o formato "Explicativo 2D" no estúdio. Crie um personagem cartoon original 2D em SVG (contorno escuro grosso, cores vivas), com expressões (neutro, feliz, animado, surpreso, pensativo, preocupado), poses (parado, apontando, explicando, comemorando, assustado) e boca sincronizada com o volume da narração. Crie também: cenários simples (céu com colinas, cozinha), componente de câmera (zoom/tremida), etiquetas de texto que entram com mola, título grande de impacto e a legenda palavra por palavra. Depois faça um vídeo de teste de 60 s sobre "por que o céu é azul" (fatos conferidos em 2 fontes) com voz grátis, gere os quadros-chave numa grade, confira o enquadramento e renderize.</p>
+  </div>
+  <div class="prompt"><span class="rot">PROMPT · CADA VÍDEO NOVO</span>
+    <p>Faz um vídeo explicativo sobre [tema]. 60 s, gancho em até 3 s, piada no final do tipo [ideia], chamada para comentar. Confere os fatos em duas fontes e lista no roteiro. Cria os objetos visuais que precisar. Rascunho com voz grátis.</p>
+  </div>
+  <div class="box atencao"><span class="t">Armadilhas comuns</span>
+    <ul>
+      <li><strong>Fato errado</strong> destrói a credibilidade. Exija fontes e prefira dizer "uma teoria diz…" quando a ciência ainda debate.</li>
+      <li><strong>Texto em cima da legenda:</strong> reserve a faixa da legenda (≈ 65–75% da altura) só para ela.</li>
+      <li>Personagem <strong>pequeno demais</strong> no celular: ele deve ocupar pelo menos 1/3 da altura nas cenas em que fala.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ---------------------------------------- F2 -->
+<section class="formato">
+  <div class="topo"><div class="selo" style="background:#6c3df4">F2</div><div><h1>Humor absurdo 3D em série</h1><div class="linha2">Mini-novelas low-poly onde objetos têm emprego, sentimentos e fazem greve.</div></div></div>
+  <div class="ficha"><div><b>Duração</b>60 s</div><div><b>Narração</b>Sim (narrador)</div><div><b>Custo</b>~700 caracteres</div><div><b>Ideal para</b>Entretenimento, retenção, seguidores fiéis</div></div>
+  <div class="duas">
+    <div>
+      <h3 style="margin-top:0">Por que funciona</h3>
+      <p>O absurdo dito com cara séria é engraçado ("a geladeira pediu demissão"). E <strong>série com gancho</strong> faz a pessoa voltar para ver o próximo: é a mesma lógica das novelas.</p>
+      <h3>Ingredientes visuais</h3>
+      <ul>
+        <li><strong>3D low-poly</strong> (formas facetadas, cores chapadas), montado com peças simples: caixa, bola, cone, cilindro.</li>
+        <li><strong>Objetos com rostinho</strong>: olhos, sobrancelhas e boca em qualquer coisa.</li>
+        <li><strong>Cortes secos a cada 1–2 s</strong> e <strong>closes exagerados</strong> no rosto.</li>
+        <li><strong>Legenda de UMA palavra</strong> por vez e <strong>títulos de capítulo</strong> amarelos.</li>
+        <li><strong>Onomatopeias</strong> ("PLIM!", "CREC!") e placas.</li>
+      </ul>
+    </div>
+    <div class="mock">
+      <svg viewBox="0 0 270 480"><rect width="270" height="480" fill="#7fc8a9"/><polygon points="0,330 270,330 270,480 0,480" fill="#e8d3b0"/>
+        <text x="135" y="60" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="24" fill="#ffd23f" stroke="#1f1b2e" stroke-width="2">A GELADEIRA SE DEMITIU</text>
+        <polygon points="70,120 150,110 160,330 80,340" fill="#e8f1f6" stroke="#9db" stroke-width="2"/><polygon points="150,110 175,125 182,320 160,330" fill="#c9d8e2"/>
+        <circle cx="100" cy="190" r="12" fill="#fff"/><circle cx="135" cy="188" r="12" fill="#fff"/><circle cx="102" cy="192" r="6" fill="#1f1b2e"/><circle cx="137" cy="190" r="6" fill="#1f1b2e"/><path d="M90 168 L112 176 M146 172 L124 176" stroke="#1f1b2e" stroke-width="5"/>
+        <rect x="95" y="215" width="40" height="14" rx="4" fill="#8e2f2f"/>
+        <rect x="150" y="250" width="90" height="34" rx="6" fill="#ffd23f" stroke="#1f1b2e" stroke-width="3"/><text x="195" y="273" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="14" fill="#1f1b2e">PEÇO DEMISSÃO</text>
+        <text x="135" y="420" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="34" fill="#fff" stroke="#1f1b2e" stroke-width="3">DEMISSÃO</text></svg>
+      <small>Objeto com rostinho + capítulo + 1 palavra</small>
+    </div>
+  </div>
+  <h3>Estrutura do episódio</h3>
+  <ol>
+    <li><strong>Gancho (0–3 s):</strong> premissa absurda com o texto na tela ("O ovo rachou… e nasceu uma GELADEIRINHA!"). Na série, ele <strong>responde o mistério</strong> do episódio anterior.</li>
+    <li><strong>5 a 7 capítulos</strong> que <strong>escalam</strong>: cada um piora a situação de forma mais ridícula.</li>
+    <li><strong>Piadas recorrentes</strong>: o personagem que nunca se abala, o que sempre perde o cargo…</li>
+    <li><strong>Final com gancho de mistério</strong> ("Bateram na porta… quem é?") e "CONTINUA…".</li>
+  </ol>
+  <div class="box dica"><span class="t">A "bíblia da série"</span><p>Peça ao Claude para manter um arquivo <code>serie.md</code> com o elenco, as piadas recorrentes e a tabela de episódios (título + gancho deixado). Ele lê antes de escrever o próximo episódio, e a continuidade fica perfeita.</p></div>
+  <div class="prompt"><span class="rot">PROMPT · MONTAR O FORMATO (1ª VEZ)</span>
+    <p>Quero um formato de humor absurdo em 3D low-poly com @remotion/three. Monte: peças facetadas (caixa, bola, cone, cilindro com flatShading), um componente de "rostinho" (olhos, sobrancelhas e boca com expressões) aplicável a qualquer objeto, um protagonista original low-poly, um cenário de cozinha, uma câmera com cortes secos e uma função que posiciona a câmera de frente para o rosto de um personagem. Textos: legenda de UMA palavra por vez, título de capítulo amarelo, onomatopeias e placas. Regras: corte a cada 1–2 s, nenhum plano parado por mais de 2,5 s, animação só com useCurrentFrame (nada de useFrame). Faça um episódio piloto de 60 s, confira os quadros (nada cortado na borda vertical) e renderize. Crie também o arquivo serie.md.</p>
+  </div>
+  <div class="prompt"><span class="rot">PROMPT · PRÓXIMO EPISÓDIO</span>
+    <p>Faz o próximo episódio da série. Lê o serie.md, começa respondendo o gancho do último episódio, escala o absurdo em 6–7 capítulos e termina com um novo mistério + "CONTINUA…". Rascunho com voz grátis. Depois de aprovado, atualiza o serie.md.</p>
+  </div>
+  <div class="box atencao"><span class="t">Armadilhas do 3D</span>
+    <ul>
+      <li><strong>Câmera perto demais</strong> ou objeto na frente do rosto: confira sempre a grade de quadros.</li>
+      <li>A tela vertical é <strong>estreita</strong>: personagens a no máximo ~1,2 unidade do centro nos planos abertos.</li>
+      <li>Renderizar 3D é lento: faça só <strong>um render por vez</strong> e deixe rodando.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ---------------------------------------- F3 -->
+<section class="formato">
+  <div class="topo"><div class="selo" style="background:#ff4fa3">F3</div><div><h1>Desafio do pause (neon)</h1><div class="linha2">"Pause antes do foguete bater na Lua!": o espectador tenta pausar no 0:00.00.</div></div></div>
+  <div class="ficha"><div><b>Duração</b>15–20 s em loop</div><div><b>Narração</b>Não</div><div><b>Custo</b>Zero</div><div><b>Ideal para</b>Engajamento, comentários, replays</div></div>
+  <div class="duas">
+    <div>
+      <h3 style="margin-top:0">Por que funciona</h3>
+      <p>É um <strong>joguinho dentro do vídeo</strong>: a pessoa assiste várias vezes tentando acertar (replay conta muito para o algoritmo) e comenta o resultado. E custa zero, porque não tem voz.</p>
+      <h3>Ingredientes visuais</h3>
+      <ul>
+        <li>Estética <strong>neon/fliperama</strong>: fundo roxo escuro, grade em perspectiva, brilho.</li>
+        <li><strong>Cronômetro</strong> grande contando até 0:00.00.</li>
+        <li><strong>Painel ao vivo</strong> mostrando o resultado de quem pausar agora: CEDO DEMAIS / CEDO / PERTO / BATEU.</li>
+        <li>5 tentativas, cada uma mais rápida.</li>
+        <li><strong>Quadro secreto</strong>: no frame exato do 0:00.00 aparece "PERFEITO! Comenta SALVEI" por 1 frame só.</li>
+      </ul>
+    </div>
+    <div class="mock">
+      <svg viewBox="0 0 270 480"><rect width="270" height="480" fill="#1a0b3d"/><g stroke="#ff2bd6" stroke-width="1.5" opacity=".7"><path d="M0 380 L270 380 M0 400 L270 400 M0 430 L270 430 M0 470 L270 470 M135 370 L135 480 M95 370 L20 480 M175 370 L250 480"/></g><rect y="368" width="270" height="3" fill="#2bf3ff"/>
+        <text x="135" y="36" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="17" fill="#fff" stroke="#ff2bd6" stroke-width=".8">PAUSE ANTES DO FOGUETE</text>
+        <rect x="20" y="60" width="230" height="56" rx="8" fill="#0a0019" stroke="#3dff8a" stroke-width="2"/><text x="32" y="98" font-family="Baloo 2" font-weight="800" font-size="24" fill="#3dff8a">PERTO!</text><text x="238" y="98" text-anchor="end" font-family="DejaVu Sans Mono" font-size="13" fill="#3dff8a">-33 ms</text>
+        <rect x="55" y="126" width="160" height="42" rx="8" fill="#0a0019" stroke="#ff3b5c" stroke-width="2"/><text x="135" y="156" text-anchor="middle" font-family="DejaVu Sans Mono" font-weight="700" font-size="24" fill="#fff">0:00.03</text>
+        <circle cx="80" cy="215" r="34" fill="#2a1a40" stroke="#ffe45c" stroke-width="3"/><g stroke="#ff3b5c" stroke-width="3"><path d="M20 254 L30 254 M40 254 L50 254 M60 254 L70 254 M80 254 L90 254 M100 254 L110 254 M120 254 L130 254"/></g>
+        <path d="M80 262 C 95 275 96 300 94 320 L66 320 C 64 300 65 275 80 262 Z" fill="#12052a" stroke="#2bf3ff" stroke-width="3"/><path d="M70 322 Q80 360 90 322 Z" fill="#ff8a2b"/></svg>
+      <small>Painel ao vivo + cronômetro + ação fora do centro</small>
+    </div>
+  </div>
+  <h3>A regra mais importante</h3>
+  <p>O vídeo <strong>nunca pausa sozinho</strong>: ele roda em <strong>loop contínuo</strong> e quem pausa é o espectador. Por isso o painel precisa estar sempre "ao vivo", mostrando o que aconteceria se a pessoa pausasse naquele exato quadro.</p>
+  <div class="box atencao"><span class="t">Zonas seguras (aprendido na prática)</span><p>Ao pausar, o Instagram mostra um <strong>ícone de play no centro</strong> da tela, os botões ficam na <strong>direita</strong> e a legenda do post cobre o <strong>rodapé</strong>. Coloque o cronômetro no <strong>topo</strong> e o quadro secreto <strong>entre o centro e o rodapé</strong>, longe dos botões. Se a ação principal ficar no centro, garanta que o texto importante não fique embaixo do ícone de play. Veja o diagrama no Módulo 7.</p></div>
+  <div class="prompt"><span class="rot">PROMPT · MONTAR O FORMATO (1ª VEZ)</span>
+    <p>Cria um formato "desafio do pause" sem narração, estética neon/arcade (fundo roxo, grade em perspectiva rolando, estrelas, brilho neon). Tema: [pause antes do foguete bater na Lua]. 5 tentativas em LOOP contínuo, cada uma mais rápida; o vídeo nunca pausa sozinho. Cronômetro grande no topo que chega a 0:00.00 quando o objeto toca a linha-alvo; painel ao vivo (CEDO DEMAIS / CEDO / PERTO / BATEU + diferença em ms + régua). No frame exato do 0:00.00, quadro secreto de 1 frame: "PERFEITO! COMENTA 'SALVEI'", posicionado fora do ícone de play e dos botões do Instagram. Música arcade original gerada por código e efeitos. Sem intro e sem tela final. Duração 13–20 s.</p>
+  </div>
+  <div class="prompt"><span class="rot">PROMPT · NOVO DESAFIO</span>
+    <p>Faz um desafio novo com o tema [pause antes do balão estourar nos espinhos], mesmo formato e zonas seguras.</p>
+  </div>
+  <p class="mini">Ideias de temas: pare a bola antes de cair no buraco · pause quando o copo encher até a linha · salve o ovo antes da frigideira · pause o carro na beira do penhasco · pare o pêndulo no centro.</p>
+</section>
+
+<!-- ---------------------------------------- F4 -->
+<section class="formato">
+  <div class="topo"><div class="selo" style="background:#1f1b2e">F4</div><div><h1>Animação de palitinho</h1><div class="linha2">Bonequinhos de traço simples: histórias, piadas e "tipos de pessoa".</div></div></div>
+  <div class="ficha"><div><b>Duração</b>20–60 s</div><div><b>Narração</b>Opcional</div><div><b>Custo</b>Zero a ~600 caracteres</div><div><b>Ideal para</b>Humor do dia a dia, histórias, memes</div></div>
+  <div class="duas">
+    <div>
+      <h3 style="margin-top:0">Por que funciona</h3>
+      <p>O traço simples é <strong>universal</strong>: qualquer pessoa se vê no bonequinho. E é o formato <strong>mais rápido</strong> de produzir, porque o personagem é só linhas: dá para fazer muitos vídeos por semana.</p>
+      <h3>Ingredientes visuais</h3>
+      <ul>
+        <li><strong>Boneco de palito</strong> com articulações (ombro, cotovelo, quadril, joelho) animadas por ângulos: andar, correr, pular, cair, dançar.</li>
+        <li>Fundo branco ou papel quadriculado, com <strong>linhas "tremidas"</strong> (efeito desenhado à mão: o traço muda levemente a cada 3 quadros).</li>
+        <li><strong>Balões de fala</strong> e onomatopeias escritas à mão.</li>
+        <li>Poucos objetos, desenhados com o mesmo traço.</li>
+      </ul>
+    </div>
+    <div class="mock">
+      <svg viewBox="0 0 270 480"><rect width="270" height="480" fill="#fff"/><g stroke="#e4e4ef" stroke-width="1">
+        <path d="M0 40 H270 M0 80 H270 M0 120 H270 M0 160 H270 M0 200 H270 M0 240 H270 M0 280 H270 M0 320 H270 M0 360 H270 M0 400 H270 M0 440 H270"/></g>
+        <g fill="none" stroke="#1f1b2e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="80" cy="200" r="20"/><path d="M80 220 L82 290 M82 240 L55 268 M82 240 L112 222 M82 290 L60 340 M82 290 L104 338"/>
+          <circle cx="190" cy="205" r="20"/><path d="M190 225 L188 292 M188 245 L160 230 M188 245 L215 270 M188 292 L170 340 M188 292 L210 340"/>
+          <path d="M20 342 H250"/></g>
+        <path d="M110 120 Q 110 95 140 95 L 230 95 Q 255 95 255 120 L255 150 Q 255 172 230 172 L 160 172 L 140 190 L 145 172 Q 110 172 110 150 Z" fill="#fff" stroke="#1f1b2e" stroke-width="3"/>
+        <text x="182" y="128" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="14" fill="#1f1b2e">QUANDO O WI-FI</text><text x="182" y="150" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="14" fill="#1f1b2e">CAI NA REUNIÃO…</text>
+        <text x="135" y="420" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="26" fill="#1f1b2e">"TÁ ME OUVINDO?"</text></svg>
+      <small>Traço único + balão de fala</small>
+    </div>
+  </div>
+  <h3>Estruturas que funcionam</h3>
+  <ul>
+    <li><strong>"Tipos de pessoa":</strong> "Tipos de pessoa na academia", 4–5 cenas de 5–8 s, cada uma com um tipo.</li>
+    <li><strong>"Quando…":</strong> uma situação relatable com reviravolta no final ("Quando você fala 'só mais 5 minutinhos'…").</li>
+    <li><strong>Mini-história</strong> em 3 atos: situação → problema → final inesperado.</li>
+    <li><strong>Sem narração:</strong> só balões, efeitos e música, rápido e barato.</li>
+  </ul>
+  <div class="prompt"><span class="rot">PROMPT · MONTAR O FORMATO (1ª VEZ)</span>
+    <p>Cria o formato "palitinho": um boneco de palito em SVG com cabeça redonda e membros articulados (ombro/cotovelo/quadril/joelho por ângulos), com poses prontas (parado, andando, correndo, pulando, caindo, sentado, comemorando, apontando, de mãos na cabeça) e transição suave entre poses. Traço preto grosso com efeito "tremido de desenho à mão" (o traço muda levemente a cada 3 quadros). Fundo papel quadriculado. Componentes: balão de fala, onomatopeia escrita à mão, objetos simples com o mesmo traço. Legenda palavra por palavra opcional. Faça um vídeo teste de 30 s: "Tipos de pessoa no elevador", 4 tipos, sem narração, com balões e música.</p>
+  </div>
+  <div class="prompt"><span class="rot">PROMPT · CADA VÍDEO NOVO</span>
+    <p>Faz um palitinho "[Quando você acorda segunda-feira]", 25 s, [sem narração / com narração grátis], reviravolta no final, e uma frase para a legenda do post.</p>
+  </div>
+  <div class="box dica"><span class="t">Velocidade de produção</span><p>Depois que as poses estão prontas, um vídeo de palitinho é basicamente uma lista de "pose X do segundo 3 ao 5". Monte um "roteiro de ações" em JSON e o Claude anima direto dele.</p></div>
+</section>
+
+<!-- ---------------------------------------- F5 -->
+<section class="formato">
+  <div class="topo"><div class="selo" style="background:#2f4f3a">F5</div><div><h1>Quadro-negro (giz)</h1><div class="linha2">Aula desenhada ao vivo: o desenho vai "aparecendo" enquanto o professor explica.</div></div></div>
+  <div class="ficha"><div><b>Duração</b>45–90 s</div><div><b>Narração</b>Sim (calma)</div><div><b>Custo</b>Grátis ou ~800 caracteres</div><div><b>Ideal para</b>Aulas, matemática, história, finanças</div></div>
+  <div class="duas">
+    <div>
+      <h3 style="margin-top:0">Por que funciona</h3>
+      <p>O olho acompanha o traço se formando, e isso <strong>prende a atenção</strong> e passa sensação de "aula de verdade". É ótimo para assuntos que precisam de esquema: fórmulas, linhas do tempo, mapas, fluxogramas.</p>
+      <h3>Ingredientes visuais</h3>
+      <ul>
+        <li>Fundo de <strong>lousa verde-escura</strong> com moldura de madeira e marcas de apagador.</li>
+        <li>Traço de <strong>giz</strong>: branco/amarelo/rosa, com textura levemente "falhada" (filtro de ruído).</li>
+        <li><strong>Desenho progressivo</strong>: cada linha aparece como se estivesse sendo desenhada (técnica do <em>stroke-dashoffset</em> no SVG), sincronizada com a palavra falada.</li>
+        <li>Letra "de mão" para títulos e setas, círculos e sublinhados que aparecem na hora certa.</li>
+        <li>Pó de giz e um "apagão" com apagador para trocar de assunto.</li>
+      </ul>
+    </div>
+    <div class="mock">
+      <svg viewBox="0 0 270 480"><rect width="270" height="480" fill="#8a5a36"/><rect x="10" y="10" width="250" height="460" fill="#2f4f3a"/>
+        <g fill="none" stroke="#f4f1e8" stroke-width="3" stroke-linecap="round" opacity=".95">
+          <text x="135" y="60" text-anchor="middle" font-family="Baloo 2" font-weight="700" font-size="22" fill="#f4f1e8" stroke="none">JUROS COMPOSTOS</text>
+          <path d="M40 70 Q135 78 230 68"/>
+          <path d="M50 330 L50 120 M50 330 L240 330"/>
+          <path d="M55 320 Q 150 300 230 160" stroke="#ffd23f"/>
+          <path d="M55 320 L230 260" stroke="#ff9ec8" stroke-dasharray="6 6"/>
+          <circle cx="226" cy="166" r="14" stroke="#ffd23f"/>
+        </g>
+        <text x="150" y="240" font-family="Baloo 2" font-weight="700" font-size="14" fill="#ff9ec8">simples</text>
+        <text x="160" y="150" font-family="Baloo 2" font-weight="700" font-size="14" fill="#ffd23f">compostos!</text>
+        <text x="135" y="400" text-anchor="middle" font-family="Baloo 2" font-weight="700" font-size="18" fill="#f4f1e8">"o tempo multiplica"</text>
+        <path d="M200 420 l40 30 l-8 6 l-40 -30 Z" fill="#fff"/></svg>
+      <small>Traço de giz aparecendo + destaque colorido</small>
+    </div>
+  </div>
+  <h3>Estrutura do roteiro</h3>
+  <ol>
+    <li><strong>Pergunta-gancho</strong> escrita na lousa (0–3 s): "Por que o seu dinheiro na poupança rende tão pouco?".</li>
+    <li><strong>Desenho base</strong> (eixo, mapa, figura) enquanto contextualiza.</li>
+    <li><strong>2 a 4 passos</strong>, cada um com um elemento novo desenhado e um destaque colorido no momento-chave.</li>
+    <li><strong>Resumo</strong> circulado na lousa + chamada ("Salva pra estudar depois!").</li>
+  </ol>
+  <div class="prompt"><span class="rot">PROMPT · MONTAR O FORMATO (1ª VEZ)</span>
+    <p>Cria o formato "quadro-negro": fundo de lousa verde-escura com moldura de madeira e manchas de apagador; textura de giz (filtro SVG de ruído) nas linhas; componente que DESENHA qualquer caminho SVG progressivamente (stroke-dashoffset) entre dois frames; texto que aparece letra por letra como escrita à mão; setas, círculos e sublinhados que se desenham; cores de giz branco, amarelo, rosa e azul; efeito de apagador para trocar de cena. Cada elemento começa a ser desenhado na palavra exata da narração (use o timeline). Voz calma de professor. Faça um teste de 60 s: "Juros simples x compostos", fatos conferidos.</p>
+  </div>
+  <div class="prompt"><span class="rot">PROMPT · CADA VÍDEO NOVO</span>
+    <p>Faz um quadro-negro sobre [como funciona a fotossíntese], 60 s, desenhando [a planta, o sol, setas de CO₂ e O₂]. Fatos em duas fontes. Rascunho com voz grátis.</p>
+  </div>
+  <div class="box dica"><span class="t">Variação: whiteboard com mão</span><p>Troque a lousa por um <strong>quadro branco</strong> com caneta preta e uma <strong>mão desenhada</strong> seguindo a ponta do traço. Fica no estilo "explainer de empresa", ótimo para conteúdo de negócios e marketing.</p></div>
+</section>
+
+<!-- ---------------------------------------- F6 -->
+<section class="formato">
+  <div class="topo"><div class="selo" style="background:#2e6be6">F6</div><div><h1>Quiz</h1><div class="linha2">Pergunta, 3 alternativas, cronômetro… e a resposta.</div></div></div>
+  <div class="ficha"><div><b>Duração</b>20–40 s</div><div><b>Narração</b>Opcional</div><div><b>Custo</b>Zero a ~400 caracteres</div><div><b>Ideal para</b>Comentários, compartilhamento, séries</div></div>
+  <div class="duas">
+    <div>
+      <h3 style="margin-top:0">Por que funciona</h3>
+      <p>Todo mundo quer provar que sabe. O quiz <strong>gera comentários</strong> ("acertei!", "era a B, óbvio") e <strong>replays</strong>: a pessoa pausa para pensar. Também é um ótimo formato para qualquer nicho, de futebol a medicina.</p>
+      <h3>Ingredientes visuais</h3>
+      <ul>
+        <li><strong>Cartão da pergunta</strong> grande e legível (máx. 2 linhas).</li>
+        <li><strong>Alternativas</strong> A, B, C entrando em sequência.</li>
+        <li><strong>Timer</strong> circular de 3–5 s com tique-taque.</li>
+        <li><strong>Revelação:</strong> a certa fica verde e pula, as erradas ficam cinza; ✔ e ✘.</li>
+        <li><strong>Explicação</strong> de uma frase e placar ("Pergunta 2/5").</li>
+      </ul>
+    </div>
+    <div class="mock">
+      <svg viewBox="0 0 270 480"><rect width="270" height="480" fill="#2e6be6"/><circle cx="230" cy="40" r="80" fill="#3f7df0"/>
+        <text x="135" y="44" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="16" fill="#ffd23f">SÓ 1% ACERTA · 2/5</text>
+        <rect x="20" y="62" width="230" height="86" rx="14" fill="#fff"/><text x="135" y="98" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="18" fill="#1f1b2e">Qual é o maior</text><text x="135" y="124" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="18" fill="#1f1b2e">órgão do corpo?</text>
+        <g font-family="Baloo 2" font-weight="800" font-size="18">
+          <rect x="30" y="170" width="210" height="44" rx="12" fill="#c9d0dc"/><text x="50" y="199" fill="#555">A) Fígado</text>
+          <rect x="30" y="226" width="210" height="44" rx="12" fill="#22a447"/><text x="50" y="255" fill="#fff">B) Pele ✔</text>
+          <rect x="30" y="282" width="210" height="44" rx="12" fill="#c9d0dc"/><text x="50" y="311" fill="#555">C) Intestino</text></g>
+        <circle cx="135" cy="380" r="34" fill="none" stroke="#fff" stroke-width="7" opacity=".35"/><path d="M135 346 A34 34 0 0 1 169 380" fill="none" stroke="#ffd23f" stroke-width="7" stroke-linecap="round"/><text x="135" y="389" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="24" fill="#fff">0</text>
+        <text x="135" y="450" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="13" fill="#fff">Comenta quantas você acertou!</text></svg>
+      <small>Pergunta + alternativas + timer + revelação</small>
+    </div>
+  </div>
+  <h3>Estrutura</h3>
+  <ol>
+    <li><strong>Gancho:</strong> "Só 1% acerta todas!" ou "Teste: você é [nível]?".</li>
+    <li><strong>3 a 5 perguntas</strong> de 6–8 s: pergunta (1 s) → alternativas (1,5 s) → timer (3–4 s) → resposta (1,5 s).</li>
+    <li><strong>Dificuldade crescente</strong>, com a última "impossível".</li>
+    <li><strong>Chamada:</strong> "Comenta quantas você acertou!".</li>
+  </ol>
+  <div class="prompt"><span class="rot">PROMPT · MONTAR O FORMATO (1ª VEZ)</span>
+    <p>Cria o formato "quiz" guiado por um JSON de perguntas (pergunta, alternativas, índice da correta, explicação curta). Visual: fundo colorido com formas suaves, cartão branco da pergunta, alternativas A/B/C entrando em sequência com mola, timer circular de 4 s com tique-taque, revelação (certa verde com ✔ e pulo, erradas cinza), placar "2/5", gancho e chamada final. Narração opcional (voz grátis lê a pergunta). Música animada original. Teste: 5 perguntas sobre o corpo humano, respostas conferidas em duas fontes.</p>
+  </div>
+  <div class="prompt"><span class="rot">PROMPT · CADA VÍDEO NOVO</span>
+    <p>Faz um quiz com 5 perguntas sobre [capitais do mundo], dificuldade crescente, a última bem difícil. Confere as respostas. Sem narração.</p>
+  </div>
+  <div class="box atencao"><span class="t">Cuidado</span><p>Uma resposta errada no quiz vira avalanche de comentários negativos. Sempre exija conferência das respostas e evite perguntas com "depende".</p></div>
+</section>
+
+<!-- ---------------------------------------- F7 -->
+<section class="formato">
+  <div class="topo"><div class="selo" style="background:#e8282b">F7</div><div><h1>Texto cinético</h1><div class="linha2">Só tipografia em movimento: palavras que entram, giram, crescem e batem no ritmo.</div></div></div>
+  <div class="ficha"><div><b>Duração</b>15–45 s</div><div><b>Narração</b>Opcional</div><div><b>Custo</b>Zero</div><div><b>Ideal para</b>Frases, motivação, curiosidades rápidas, listas</div></div>
+  <div class="duas">
+    <div>
+      <h3 style="margin-top:0">Por que funciona</h3>
+      <p>Não tem personagem, cenário nem 3D: é o formato <strong>mais rápido e barato</strong> de todos e, bem feito, é muito estiloso. Funciona com narração ou só com música: o texto <em>é</em> o vídeo.</p>
+      <h3>Ingredientes visuais</h3>
+      <ul>
+        <li><strong>1 a 4 palavras por tela</strong>, fontes grossas, tamanhos bem diferentes para hierarquia.</li>
+        <li>Animações de entrada variadas: <strong>bater</strong> (escala), deslizar, girar, máquina de escrever, revelar com máscara.</li>
+        <li><strong>Batida da música</strong> guiando os cortes (todo texto entra num tempo da música).</li>
+        <li>Paleta de 2–3 cores; uma palavra-chave por tela em destaque.</li>
+        <li>Formas geométricas simples ao fundo (círculos, faixas) em movimento.</li>
+      </ul>
+    </div>
+    <div class="mock">
+      <svg viewBox="0 0 270 480"><rect width="270" height="480" fill="#111"/><circle cx="210" cy="110" r="90" fill="#e8282b"/><rect x="-20" y="330" width="320" height="40" fill="#ffd23f" transform="rotate(-8 135 350)"/>
+        <text x="30" y="150" font-family="Baloo 2" font-weight="800" font-size="30" fill="#fff">VOCÊ SABIA</text>
+        <text x="30" y="215" font-family="Baloo 2" font-weight="800" font-size="56" fill="#ffd23f">QUE O</text>
+        <text x="30" y="290" font-family="Baloo 2" font-weight="800" font-size="70" fill="#fff">MEL</text>
+        <text x="40" y="358" font-family="Baloo 2" font-weight="800" font-size="24" fill="#111" transform="rotate(-8 135 350)">NUNCA ESTRAGA?</text>
+        <text x="135" y="440" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="13" fill="#aaa">(potes de mel de milhares de anos)</text></svg>
+      <small>Hierarquia de tamanhos + palavra-chave em cor</small>
+    </div>
+  </div>
+  <h3>Ideias de uso</h3>
+  <ul>
+    <li><strong>"Você sabia?"</strong> com 3 fatos rápidos.</li>
+    <li><strong>Frase do dia / motivação</strong> no ritmo da música.</li>
+    <li><strong>Lista</strong> ("5 hábitos que…"), um item por batida.</li>
+    <li><strong>Trailer</strong> de um conteúdo maior ("amanhã no canal…").</li>
+  </ul>
+  <div class="prompt"><span class="rot">PROMPT · MONTAR O FORMATO (1ª VEZ)</span>
+    <p>Cria o formato "texto cinético" guiado por um JSON de "telas" (texto, estilo de entrada, palavra destacada, cor). Estilos de entrada: bater (escala com mola), deslizar, girar, máquina de escrever, revelar por máscara. Música original gerada por código com BPM definido; cada tela entra exatamente em uma batida. Formas geométricas em movimento ao fundo, paleta de 3 cores. Se houver narração, as palavras aparecem no tempo da voz (timeline). Teste: 20 s, "3 fatos sobre o mel", sem narração.</p>
+  </div>
+  <div class="prompt"><span class="rot">PROMPT · CADA VÍDEO NOVO</span>
+    <p>Faz um texto cinético de 20 s com [3 curiosidades sobre o polvo], paleta [preto, laranja e branco], música a [120] BPM, sem narração. Fatos conferidos.</p>
+  </div>
+</section>
+
+<!-- ---------------------------------------- F8 -->
+<section class="formato">
+  <div class="topo"><div class="selo" style="background:#22a447">F8</div><div><h1>Fitness: treino, exercícios e dieta</h1><div class="linha2">Dicas de academia explicadas por animação: execução correta, músculos, treinos e alimentação.</div></div></div>
+  <div class="ficha"><div><b>Duração</b>30–60 s</div><div><b>Narração</b>Sim (energética)</div><div><b>Custo</b>Grátis ou ~600 caracteres</div><div><b>Ideal para</b>Nicho fitness, personal trainers, nutrição</div></div>
+  <div class="duas">
+    <div>
+      <h3 style="margin-top:0">Por que funciona</h3>
+      <p>Fitness é um dos nichos mais buscados, e a animação tem uma vantagem enorme sobre o vídeo filmado: <strong>mostrar por dentro</strong>. Dá para destacar o músculo que está trabalhando, mostrar o ângulo certo da coluna e comparar "certo × errado" lado a lado, sem precisar de academia, câmera nem modelo.</p>
+      <h3>Ingredientes visuais</h3>
+      <ul>
+        <li><strong>Personagem atlético</strong> 2D (ou low-poly 3D) com articulações para executar exercícios em loop: agachamento, flexão, prancha, remada, supino, levantamento terra.</li>
+        <li><strong>Mapa muscular</strong>: o músculo trabalhado acende em vermelho/laranja durante o movimento.</li>
+        <li><strong>Comparação CERTO ✔ × ERRADO ✘</strong> em tela dividida, com linhas de ângulo (costas retas, joelho alinhado).</li>
+        <li><strong>Contador de repetições</strong>, séries e descanso.</li>
+        <li><strong>Cartões de dieta</strong>: prato montado, porções, ícones de proteína/carboidrato/gordura.</li>
+      </ul>
+    </div>
+    <div class="mock">
+      <svg viewBox="0 0 270 480"><rect width="270" height="480" fill="#0f2a1c"/><rect x="0" y="0" width="270" height="56" fill="#22a447"/><text x="135" y="37" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="20" fill="#fff">AGACHAMENTO</text>
+        <line x1="135" y1="70" x2="135" y2="360" stroke="#fff" stroke-width="2" stroke-dasharray="5 5" opacity=".4"/>
+        <text x="68" y="90" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="18" fill="#3dff8a">CERTO ✔</text><text x="202" y="90" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="18" fill="#ff5c5c">ERRADO ✘</text>
+        <g stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"><circle cx="58" cy="150" r="15" fill="#c98b5e"/><path d="M58 165 L45 230 M45 230 L85 248 M85 248 L60 300 M50 185 L95 195"/></g>
+        <path d="M45 230 L85 248" stroke="#ff8c1a" stroke-width="11" stroke-linecap="round" opacity=".85"/>
+        <g stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"><circle cx="210" cy="160" r="15" fill="#c98b5e"/><path d="M210 175 Q 175 205 180 235 M180 235 L215 252 M215 252 L205 300 M195 190 L240 200"/></g>
+        <path d="M66 200 L 58 166" stroke="#3dff8a" stroke-width="2"/><text x="20" y="212" font-family="Nunito" font-weight="900" font-size="10" fill="#3dff8a">coluna reta</text>
+        <text x="185" y="215" font-family="Nunito" font-weight="900" font-size="10" fill="#ff5c5c">curvou!</text>
+        <rect x="20" y="380" width="230" height="60" rx="14" fill="#fff"/><text x="135" y="406" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="16" fill="#1f1b2e">3 SÉRIES × 12 REP</text><text x="135" y="428" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="11" fill="#22a447">descanso 60 s</text></svg>
+      <small>Certo × errado + músculo em destaque + séries</small>
+    </div>
+  </div>
+  <h3>Séries de conteúdo que funcionam</h3>
+  <table>
+    <tr><th>Série</th><th>Exemplo de vídeo</th></tr>
+    <tr><td>Execução correta</td><td>"Você agacha errado? 3 erros que travam seu resultado"</td></tr>
+    <tr><td>Músculo da semana</td><td>"Glúteo: os 3 exercícios que mais ativam"</td></tr>
+    <tr><td>Treino pronto</td><td>"Treino de 20 min em casa, sem equipamento"</td></tr>
+    <tr><td>Mito × verdade</td><td>"Abdominal queima a gordura da barriga? MITO"</td></tr>
+    <tr><td>Dieta prática</td><td>"Monte um prato equilibrado em 3 passos"</td></tr>
+    <tr><td>Ciência simples</td><td>"Por que o músculo dói 2 dias depois do treino?"</td></tr>
+  </table>
+  <h3>Estrutura do roteiro (45 s)</h3>
+  <ol>
+    <li><strong>Gancho-erro (0–3 s):</strong> "Se você faz agachamento assim, PARE."</li>
+    <li><strong>O certo</strong> com o músculo em destaque e 2–3 pontos de atenção.</li>
+    <li><strong>Erro comum</strong> em comparação lado a lado.</li>
+    <li><strong>Dica prática</strong> (séries, repetições, descanso ou alimento).</li>
+    <li><strong>Chamada:</strong> "Salva para usar no seu próximo treino!".</li>
+  </ol>
+  <div class="prompt"><span class="rot">PROMPT · MONTAR O FORMATO (1ª VEZ)</span>
+    <p>Cria o formato "fitness" para vídeos de academia e nutrição. Personagem atlético 2D original (traço limpo, cores fortes) com esqueleto articulado (ombro, cotovelo, quadril, joelho, tornozelo, coluna) e animações em loop de exercícios: agachamento, flexão, prancha, afundo, remada, supino e levantamento terra. Camada de músculos que pode acender (peito, costas, ombro, bíceps, tríceps, abdômen, glúteo, quadríceps, posterior, panturrilha). Componentes: tela dividida CERTO ✔ x ERRADO ✘, linhas de ângulo, contador de repetições/séries/descanso, cartões de dieta (prato, porções, macros). Voz energética de treinador. Teste: 45 s "3 erros no agachamento", conteúdo conferido em fontes confiáveis.</p>
+  </div>
+  <div class="prompt"><span class="rot">PROMPT · CADA VÍDEO NOVO</span>
+    <p>Faz um vídeo fitness sobre [o erro mais comum na flexão de braço], 40 s, com comparação certo x errado e o músculo em destaque. Fontes confiáveis. Termina pedindo para salvar.</p>
+  </div>
+  <div class="box atencao"><span class="t">Responsabilidade (leia com atenção)</span>
+    <ul>
+      <li>Conteúdo de saúde exige <strong>cuidado redobrado</strong>: peça sempre fontes confiáveis (diretrizes de órgãos de saúde, artigos científicos, conselhos profissionais) e evite promessas ("perca 10 kg em 7 dias").</li>
+      <li>Não prescreva dieta individual nem trate doenças. Use frases como "consulte um profissional de educação física / nutricionista".</li>
+      <li>No Brasil, prescrição de treino é atividade de profissional de Educação Física e prescrição de dieta é de nutricionista. Se você não é da área, posicione o canal como <strong>conteúdo educativo geral</strong> ou convide um profissional para revisar os roteiros.</li>
+      <li>As redes sociais têm regras específicas para conteúdo de saúde e perda de peso: evite antes/depois sensacionalista e linguagem que gere culpa.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================================================= MÓDULO 7 -->
+<section class="modulo m7">
+  <div class="faixa"><div class="bolha"></div><div class="num">MÓDULO 7</div><h1>Qualidade e publicação</h1><p>A diferença entre um vídeo "feito por IA" e um vídeo profissional está na conferência.</p></div>
+
+  <h2>7.1 Conferência automática</h2>
+  <p>Peça ao Claude um "inspetor de qualidade" que roda depois de cada render e dá <strong>APROVADO</strong> ou <strong>REPROVADO</strong>, dizendo o que corrigir.</p>
+  <div class="prompt"><span class="rot">PROMPT · CONFERÊNCIA AUTOMÁTICA</span>
+    <p>Cria scripts/qa.py (npm run qa) que confere o MP4 final e imprime OK/FALHA para cada item:</p>
+    <p>formato MP4 H.264 + AAC, 1080x1920, 30 fps, pixel yuv420p; duração dentro do alvo; volume integrado entre −16 e −13 LUFS e pico ≤ −1 dBTP; nenhum silêncio maior que 2,5 s; nenhuma imagem congelada maior que 1,5 s; nenhuma tela preta; gancho (primeira frase termina em até 3,2 s); toda fala tem legenda e as palavras da legenda caem sobre a fala real; voz nítida (energia de 1–6 kHz). No fim, gera uma folha de contato (grade com 12 quadros do vídeo) e imprime APROVADO ou REPROVADO. Adiciona ao CLAUDE.md: "sempre rodar o qa e olhar a folha de contato antes de entregar".</p>
+  </div>
+  <p>A <strong>folha de contato</strong> é uma imagem com vários quadros do vídeo lado a lado. Você e o Claude batem o olho e veem na hora se algum texto está cortado, se o personagem sumiu ou se uma cena ficou vazia.</p>
+
+  <h2>7.2 Zonas seguras do 9:16</h2>
+  <p>O app cobre partes do seu vídeo com botões, nome do perfil, legenda do post e, quando a pessoa pausa, o ícone de play. Nada importante pode ficar nessas áreas.</p>
+  <div class="duas">
+    <div class="mock">
+      <svg viewBox="0 0 270 480"><rect width="270" height="480" fill="#eef2ff"/>
+        <rect x="0" y="0" width="270" height="40" fill="#ff4fa3" opacity=".25"/><text x="135" y="25" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="10" fill="#b0006a">barra do topo / status</text>
+        <rect x="225" y="250" width="45" height="190" fill="#ff8c1a" opacity=".3"/><text x="247" y="345" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="9" fill="#a34f00" transform="rotate(-90 247 345)">botões ♥ 💬 ↗</text>
+        <rect x="0" y="395" width="225" height="85" fill="#ff8c1a" opacity=".3"/><text x="112" y="440" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="10" fill="#a34f00">@perfil + legenda do post</text>
+        <circle cx="135" cy="240" r="30" fill="#e8282b" opacity=".3"/><path d="M127 226 L127 254 L150 240 Z" fill="#e8282b" opacity=".7"/><text x="135" y="290" text-anchor="middle" font-family="Nunito" font-weight="900" font-size="9" fill="#a3001b">ícone de play (ao pausar)</text>
+        <rect x="18" y="55" width="200" height="140" rx="10" fill="none" stroke="#22a447" stroke-width="3" stroke-dasharray="6 4"/><text x="118" y="125" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="15" fill="#22a447">ZONA SEGURA</text>
+        <rect x="18" y="300" width="200" height="85" rx="10" fill="none" stroke="#22a447" stroke-width="3" stroke-dasharray="6 4"/><text x="118" y="346" text-anchor="middle" font-family="Baloo 2" font-weight="800" font-size="13" fill="#22a447">zona segura</text></svg>
+      <small>Áreas cobertas pelo app (aproximadas)</small>
+    </div>
+    <div>
+      <ul>
+        <li><strong>Topo (≈ 0–8%)</strong>: barra de status e abas do app. Títulos começam um pouco abaixo.</li>
+        <li><strong>Direita, da metade para baixo</strong>: curtir, comentar, compartilhar, salvar.</li>
+        <li><strong>Rodapé (≈ últimos 18%)</strong>: nome do perfil, legenda do post, música.</li>
+        <li><strong>Centro</strong>: ícone de play/pause e de som aparecem quando a pessoa toca na tela. Atenção redobrada em desafios de pausar!</li>
+      </ul>
+      <div class="box dica"><span class="t">Teste real</span><p>Poste como rascunho ou "melhores amigos", pause no celular e tire um print. É o jeito mais garantido de ver o que fica coberto.</p></div>
+    </div>
+  </div>
+
+  <h2>7.3 Gancho e ritmo</h2>
+  <ul>
+    <li><strong>Os 3 primeiros segundos decidem tudo.</strong> Texto do gancho já visível no primeiro quadro (muita gente assiste sem som), frase curta e curiosa.</li>
+    <li><strong>Algo muda na tela a cada 1–3 s</strong>: corte, zoom, objeto novo, texto novo.</li>
+    <li><strong>Sem introdução</strong> ("Olá, pessoal, hoje vamos…"): comece pelo assunto.</li>
+    <li><strong>Final em loop:</strong> se a última frase "encaixa" no começo, mais gente assiste de novo.</li>
+  </ul>
+
+  <h2>7.4 Postando</h2>
+  <h3>Legenda do post</h3>
+  <p>Peça ao Claude: <em>"Escreve a legenda do post: gancho na primeira linha, 2–3 linhas de contexto, pergunta para gerar comentário e 5–8 hashtags do nicho."</em></p>
+  <h3>Frequência e consistência</h3>
+  <ul>
+    <li>Melhor <strong>1 vídeo por dia por 30 dias</strong> do que 10 num dia e nada no resto do mês.</li>
+    <li>Mantenha <strong>identidade fixa</strong> por canal: mesmo personagem, mesmas cores, mesma voz, mesmo tipo de gancho.</li>
+    <li>Repare nos números depois de 48 h (retenção, salvamentos, compartilhamentos) e <strong>faça mais do que funcionou</strong>.</li>
+  </ul>
+  <h3>Um formato por canal</h3>
+  <p>Cada formato deste curso pode virar um <strong>canal próprio</strong>. Misturar estilos no mesmo perfil confunde o público e o algoritmo. Se quiser testar vários, crie um perfil por formato.</p>
+</section>
+
+<!-- ======================================================= MÓDULO 8 -->
+<section class="modulo m8">
+  <div class="faixa"><div class="bolha"></div><div class="num">MÓDULO 8</div><h1>Problemas comuns</h1><p>Os tropeços que todo mundo tem, e como pedir a solução.</p></div>
+  <table>
+    <tr><th style="width:34%">Problema</th><th>O que fazer / o que pedir</th></tr>
+    <tr><td>"comando não encontrado" (node, python, ffmpeg)</td><td>Feche e reabra o terminal; reinicie o computador; no Windows, reinstale o Python marcando "Add to PATH".</td></tr>
+    <tr><td>Render muito lento ou travando</td><td>Renderize um vídeo por vez; feche outros programas; peça "renderiza com concurrency menor". No 3D, é normal levar vários minutos.</td></tr>
+    <tr><td>Texto ou personagem cortado na borda</td><td>"Gera a grade de quadros-chave e corrige tudo que estiver cortado na borda vertical."</td></tr>
+    <tr><td>Legenda fora de sincronia</td><td>"Confere as palavras que caem fora da fala e corrige os tempos." Às vezes uma risada ou suspiro desloca as marcações.</td></tr>
+    <tr><td>Áudio estourando (pico alto)</td><td>"Descobre em que segundo está o pico e abaixa os efeitos sonoros desse trecho." Não precisa regravar a voz.</td></tr>
+    <tr><td>Volume baixo</td><td>"Sobe a música e os efeitos até o vídeo ficar entre −16 e −13 LUFS."</td></tr>
+    <tr><td>Voz rápida/lenta demais em um trecho</td><td>"Acelera só a fala X em 10% localmente, sem gerar a voz de novo."</td></tr>
+    <tr><td>Gancho passou de 3 s</td><td>Antes da voz paga: encurte a frase. Depois: acelere só a primeira fala localmente.</td></tr>
+    <tr><td>Sobrou silêncio no fim</td><td>Escreva mais uma fala ou reduza a duração do vídeo para caber na narração.</td></tr>
+    <tr><td>A voz leu "[laughs]" em vez de rir</td><td>Troque por "hahaha" escrito na pronúncia ou remova a tag; em último caso, gere de novo só aquela frase.</td></tr>
+    <tr><td>Fato duvidoso no roteiro</td><td>"Confere esse dado em duas fontes confiáveis; se não confirmar, remove." Prefira "uma teoria diz…".</td></tr>
+    <tr><td>O Claude "esqueceu" uma regra</td><td>A regra precisa estar escrita no CLAUDE.md ou na skill do formato. Peça: "anota isso na skill".</td></tr>
+    <tr><td>Quebrou algo que funcionava</td><td>"Me mostra o que mudou desde o último commit" e "volta o arquivo X para a versão anterior".</td></tr>
+    <tr><td>Disco cheio</td><td>Apague vídeos antigos de <code>out/</code> e caches de render que não precisa mais.</td></tr>
+  </table>
+</section>
+
+<!-- ======================================================= BÔNUS A -->
+<section class="modulo mb">
+  <div class="faixa"><div class="bolha"></div><div class="num">BÔNUS A</div><h1>Biblioteca de prompts</h1><p>Copie, cole e troque o que está entre colchetes.</p></div>
+
+  <h3>Ideias</h3>
+  <div class="prompt"><span class="rot">IDEIAS</span><p>Me dá 15 ideias de vídeos [explicativos] para o nicho [culinária], com gancho de até 8 palavras para cada. Marca com ⭐ as 5 com mais potencial de compartilhamento e explica por quê.</p></div>
+  <h3>Roteiro</h3>
+  <div class="prompt"><span class="rot">ROTEIRO</span><p>Escreve o roteiro de [tema] no formato [F1]. 60 s (~130 palavras), frases curtas, gancho em até 3 s, uma piada no final, chamada para comentar. Separa "texto" (legenda) de "pronuncia" (com ênfases em MAIÚSCULAS). Lista as fontes. Ainda não gera áudio: quero aprovar o texto antes.</p></div>
+  <h3>Rascunho</h3>
+  <div class="prompt"><span class="rot">RASCUNHO</span><p>Aprovado. Gera o áudio com voz grátis, monta as cenas, confere os quadros-chave, renderiza, roda o qa e me manda o vídeo.</p></div>
+  <h3>Versão final</h3>
+  <div class="prompt"><span class="rot">FINAL</span><p>Autorizo a voz [nome da voz] ([X] caracteres). Gera, renderiza, roda o qa, salva como out/[nome].mp4 e faz o commit.</p></div>
+  <h3>Teste de voz barato</h3>
+  <div class="prompt"><span class="rot">TESTE DE VOZ</span><p>Antes de trocar a voz do canal, gera só uma frase de teste com as vozes [A], [B] e [C] e me manda os três áudios. Me diz o custo antes.</p></div>
+  <h3>Legenda do post</h3>
+  <div class="prompt"><span class="rot">POST</span><p>Escreve a legenda do post deste vídeo: gancho na primeira linha, contexto em 2 linhas, pergunta para comentários, 6 hashtags do nicho. Faz também uma versão curta para o TikTok.</p></div>
+  <h3>Thumbnail / capa</h3>
+  <div class="prompt"><span class="rot">CAPA</span><p>Gera um quadro do vídeo para usar de capa: o momento mais expressivo, com o título [texto] grande no terço superior, PNG 1080x1920.</p></div>
+  <h3>Série</h3>
+  <div class="prompt"><span class="rot">SÉRIE</span><p>Planeja 10 episódios da série [nome], cada um com título, resumo de 2 linhas e o gancho que deixa para o próximo. Salva em serie.md.</p></div>
+  <h3>Foto de perfil e identidade</h3>
+  <div class="prompt"><span class="rot">IDENTIDADE</span><p>Cria 3 opções de foto de perfil 1080x1080 no estilo do canal [descrição], legíveis em tamanho pequeno (círculo), e 3 sugestões de nome para o canal.</p></div>
+</section>
+
+<!-- ======================================================= BÔNUS B -->
+<section class="modulo mb">
+  <div class="faixa"><div class="bolha"></div><div class="num">BÔNUS B</div><h1>Plano de 30 dias</h1><p>Do computador vazio ao canal com 20 vídeos publicados.</p></div>
+  <table>
+    <tr><th style="width:18%">Dias</th><th>Meta</th><th style="width:30%">Entregável</th></tr>
+    <tr><td>1–2</td><td>Instalar tudo (Módulo 2) e criar o estúdio (Módulo 3).</td><td>Vídeo de teste renderizado</td></tr>
+    <tr><td>3</td><td>Montar a voz grátis, a legenda e a conferência (Módulos 4 e 7).</td><td>Pipeline de áudio funcionando</td></tr>
+    <tr><td>4–5</td><td>Escolher <strong>um</strong> formato ★☆☆ e fazer o primeiro vídeo.</td><td>1º vídeo + skill do formato</td></tr>
+    <tr><td>6</td><td>Nome do canal, foto de perfil, bio, 10 ideias de vídeo.</td><td>Perfil pronto</td></tr>
+    <tr><td>7–13</td><td>1 vídeo por dia no formato escolhido. Postar todos.</td><td>7 vídeos publicados</td></tr>
+    <tr><td>14</td><td>Analisar: quais tiveram mais retenção e salvamentos?</td><td>Lista do que repetir</td></tr>
+    <tr><td>15–16</td><td>Montar um segundo formato (★★☆) para testar.</td><td>Skill nova</td></tr>
+    <tr><td>17–27</td><td>1 vídeo por dia: 70% no formato vencedor, 30% testes.</td><td>+11 vídeos</td></tr>
+    <tr><td>28–29</td><td>Criar uma série (com gancho) no formato vencedor.</td><td>Roteiro de 10 episódios</td></tr>
+    <tr><td>30</td><td>Revisar o CLAUDE.md e as skills com tudo o que aprendeu.</td><td>Estúdio "treinado"</td></tr>
+  </table>
+  <div class="box dica"><span class="t">Produza em lote</span><p>Quando pegar o ritmo, separe um dia para <strong>roteiros</strong> (5–7 de uma vez, aprovados juntos) e outro para <strong>renderizar</strong>. Enquanto um vídeo renderiza, você aprova o roteiro do próximo.</p></div>
+</section>
+
+<!-- ======================================================= BÔNUS C -->
+<section class="modulo mb">
+  <div class="faixa"><div class="bolha"></div><div class="num">BÔNUS C</div><h1>Mais ideias de formatos</h1><p>Variações que usam as mesmas peças do estúdio.</p></div>
+  <table>
+    <tr><th style="width:28%">Formato</th><th>Como montar</th></tr>
+    <tr><td><strong>Ranking / Top 5</strong></td><td>Cartões numerados de 5 a 1 com contagem regressiva, música crescendo e "o nº 1 vai te surpreender".</td></tr>
+    <tr><td><strong>Terror / mistério</strong></td><td>2D escuro, vinheta, ruído, voz grave sussurrada, cortes lentos e um susto sonoro no fim. Use lendas e histórias originais.</td></tr>
+    <tr><td><strong>Papel recortado</strong></td><td>Personagens e cenários como recortes de papel (sombra suave, textura de papel, bordas irregulares), movimentos em "stop-motion" (12 fps).</td></tr>
+    <tr><td><strong>Ilusão de ótica / teste de visão</strong></td><td>Sem narração: "Quantos círculos você vê?", timer e revelação. Custo zero, muitos comentários.</td></tr>
+    <tr><td><strong>Lyric video</strong></td><td>Texto cinético sincronizado com a letra de uma música original sua.</td></tr>
+    <tr><td><strong>"Você vs. Você"</strong></td><td>Tela dividida comparando duas escolhas (ex.: "Você que dorme 8 h vs. você que dorme 4 h"), com palitinho ou cartoon.</td></tr>
+    <tr><td><strong>Linha do tempo</strong></td><td>Câmera passeando por uma linha do tempo horizontal, com datas e ícones: história, evolução de objetos.</td></tr>
+    <tr><td><strong>Receita animada</strong></td><td>Ingredientes caindo na panela, passos numerados, timer. Funciona muito bem com voz alegre.</td></tr>
+    <tr><td><strong>Mapa animado</strong></td><td>Países acendendo, rotas desenhadas e números crescendo, para geografia e curiosidades de viagem.</td></tr>
+    <tr><td><strong>Comercial fake</strong></td><td>Paródia de televendas de produtos absurdos, com filtro de TV antiga (VHS) e letrinhas miúdas no final.</td></tr>
+  </table>
+</section>
+
+<!-- ======================================================= BÔNUS D -->
+<section class="quebra">
+  <h2 style="margin-top:0">Bônus D · Glossário</h2>
+  <table>
+    <tr><th style="width:24%">Termo</th><th>Significado</th></tr>
+    <tr><td>9:16</td><td>Formato vertical de celular (1080 de largura por 1920 de altura).</td></tr>
+    <tr><td>fps</td><td>Quadros por segundo. Usamos 30.</td></tr>
+    <tr><td>Frame / quadro</td><td>Uma "foto" do vídeo. 1 segundo = 30 quadros.</td></tr>
+    <tr><td>Composição</td><td>No Remotion, um "tipo de vídeo" registrado (ex.: Quiz, Explicativo).</td></tr>
+    <tr><td>Render / renderizar</td><td>Transformar o código das cenas em arquivo de vídeo.</td></tr>
+    <tr><td>Timeline</td><td>Arquivo com o início e o fim de cada cena, fala e palavra.</td></tr>
+    <tr><td>Skill</td><td>Manual de um formato que o Claude segue automaticamente.</td></tr>
+    <tr><td>CLAUDE.md</td><td>Manual geral do estúdio, lido em toda conversa.</td></tr>
+    <tr><td>Commit</td><td>"Ponto de salvamento" do projeto no Git.</td></tr>
+    <tr><td>Prompt</td><td>O pedido que você escreve para a IA.</td></tr>
+    <tr><td>TTS</td><td>Text-to-speech: transformar texto em voz.</td></tr>
+    <tr><td>LUFS / dBTP</td><td>Medidas de volume médio e de pico do áudio.</td></tr>
+    <tr><td>SFX</td><td>Efeitos sonoros (whoosh, pop, boing…).</td></tr>
+    <tr><td>Low-poly</td><td>3D com poucas faces, visual facetado e "fofo".</td></tr>
+    <tr><td>Gancho</td><td>A frase/imagem dos primeiros 3 segundos que segura o espectador.</td></tr>
+    <tr><td>Folha de contato</td><td>Imagem com vários quadros do vídeo lado a lado, para conferência.</td></tr>
+    <tr><td>Zonas seguras</td><td>Áreas da tela que não são cobertas pelos botões e textos do app.</td></tr>
+  </table>
+
+  <div class="box dica" style="margin-top:10pt"><span class="t">Agora é com você</span><p>Monte o estúdio, escolha um formato e publique o primeiro vídeo ainda esta semana. O primeiro vai dar trabalho; o décimo vai sair quase sozinho. Bons vídeos! 🎬</p></div>
+
+  <h2>Licenças e avisos</h2>
+  <ul>
+    <li><strong>Remotion:</strong> gratuito para pessoas físicas, organizações sem fins lucrativos e empresas com até 3 funcionários. Empresas maiores precisam de licença de empresa. Confira os termos atuais em <code>remotion.dev/license</code>.</li>
+    <li><strong>Vozes:</strong> cada serviço tem regras próprias de uso comercial. Planos gratuitos podem exigir atribuição ou proibir monetização. O Kokoro é de código aberto; confira a licença do modelo e das vozes que usar.</li>
+    <li><strong>Claude / Claude Code:</strong> sujeito aos termos de uso da Anthropic. Planos, limites e formas de instalação podem mudar: use sempre a documentação oficial.</li>
+    <li><strong>Conteúdo:</strong> você é responsável pelo que publica. Não use personagens, músicas, marcas ou trechos de terceiros sem permissão, e confira fatos, principalmente em saúde, finanças e notícias.</li>
+    <li>Preços, nomes de planos e comandos citados refletem o momento em que esta apostila foi escrita e podem ter mudado.</li>
+  </ul>
+
+</section>
+
+</body>
+</html>
