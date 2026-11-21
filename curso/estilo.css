@@ -158,3 +158,34 @@ tr:nth-child(even) td { background: #fbf9ff; }
 .colagem .selo-mp4 { position: absolute; right: 10mm; bottom: -4mm; width: 31mm; height: 31mm; flex-direction: column; border-radius: 50%; background: #ffd23f; color: #1f1b2e; font-family: "Baloo 2"; font-weight: 800; font-size: 8.5pt; line-height: 1; display: flex; align-items: center; justify-content: center; text-align: center; transform: rotate(12deg); border: 1.2mm solid #1f1b2e; z-index: 3; box-shadow: 0 2mm 0 rgba(0,0,0,.25); }
 .colagem .selo-mp4 b { font-size: 13pt; display: block; margin-top: .6mm; }
 .colagem .brilhos { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 4; pointer-events: none; }
+
+/* ---------- abertura de módulo (página inteira) ---------- */
+@page abertura { margin: 0; }
+.modulo { break-before: page; }
+.abertura { page: abertura; width: 210mm; height: 297mm; position: relative; overflow: hidden; color: #fff; break-after: page; margin: 0;
+  background: radial-gradient(120% 80% at 85% 90%, color-mix(in srgb, var(--c2) 85%, #fff 0%) 0%, transparent 60%), linear-gradient(165deg, var(--c1) 0%, var(--c2) 100%); }
+.abertura .ceu { position: absolute; inset: 0; opacity: .55;
+  background-image: radial-gradient(1.1px 1.1px at 12% 18%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 33% 72%, #fff 50%, transparent 51%), radial-gradient(1.4px 1.4px at 58% 24%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 81% 61%, #fff 50%, transparent 51%), radial-gradient(1.2px 1.2px at 22% 48%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 67% 88%, #fff 50%, transparent 51%), radial-gradient(1.3px 1.3px at 92% 12%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 45% 40%, #fff 50%, transparent 51%);
+  background-size: 140px 160px; }
+.abertura .brilho-m { position: absolute; right: -20mm; bottom: -10mm; width: 150mm; height: 150mm; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--ac) 55%, transparent) 0%, transparent 65%); opacity: .55; }
+.abertura .sp { position: absolute; color: var(--ac); font-size: 20pt; font-weight: 300; line-height: 1; opacity: .9; font-family: "DejaVu Sans"; }
+.abertura .sp.p { font-size: 13pt; }
+.abertura .ab-rot { position: absolute; left: 20mm; top: 28mm; font-family: "Nunito"; font-weight: 900; font-size: 11pt; letter-spacing: 3pt; color: var(--ac); text-transform: uppercase; }
+.abertura .ab-num { position: absolute; left: 17mm; top: 33mm; font-family: "Baloo 2"; font-weight: 800; font-size: 150pt; line-height: 1; color: transparent; -webkit-text-stroke: 2.2pt var(--ac); opacity: .95; }
+.abertura .ab-tit { position: absolute; left: 20mm; right: 20mm; top: 96mm; font-size: 36pt; line-height: 1.02; color: #fff; text-shadow: 0 0 18pt color-mix(in srgb, var(--ac) 45%, transparent); }
+.abertura .ab-sub { position: absolute; left: 20mm; width: 120mm; top: 118mm; font-size: 13pt; font-weight: 700; color: rgba(255,255,255,.82); margin: 0; }
+.abertura .ab-card { position: absolute; left: 20mm; width: 112mm; top: 138mm; background: rgba(8,5,25,.45); border: 1pt solid color-mix(in srgb, var(--ac) 45%, transparent); border-radius: 9pt; padding: 10pt 14pt 8pt; }
+.abertura .ab-card b { display: block; font-family: "Nunito"; font-weight: 900; color: var(--ac); font-size: 10.5pt; letter-spacing: .4pt; margin-bottom: 5pt; }
+.abertura .ab-card ul { list-style: none; padding: 0; margin: 0; }
+.abertura .ab-card li { position: relative; padding-left: 18pt; margin-bottom: 4pt; font-size: 11.5pt; font-weight: 700; }
+.abertura .ab-card li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--ac); font-weight: 900; }
+.abertura .ab-meta { position: absolute; left: 20mm; width: 112mm; top: 190mm; display: flex; gap: 14mm; }
+.abertura .ab-meta small { display: block; font-size: 8.5pt; color: rgba(255,255,255,.65); font-weight: 700; margin-bottom: 2pt; }
+.abertura .ab-meta strong { font-size: 12pt; font-weight: 900; }
+.abertura .ab-meta p { margin: 0; }
+.abertura .ab-meta span { display: inline-block; border: 1pt solid var(--ac); color: var(--ac); border-radius: 10pt; padding: 1.5pt 8pt; font-size: 8.5pt; font-weight: 900; margin: 0 4pt 4pt 0; }
+.abertura .ab-fim { position: absolute; left: 20mm; width: 112mm; top: 212mm; display: flex; gap: 8pt; align-items: center; border: 1pt solid color-mix(in srgb, var(--ac) 60%, transparent); background: color-mix(in srgb, var(--ac) 12%, transparent); border-radius: 9pt; padding: 8pt 12pt; }
+.abertura .ab-fim span { color: var(--ac); font-size: 16pt; }
+.abertura .ab-fim small { display: block; font-size: 8.5pt; color: var(--ac); font-weight: 700; }
+.abertura .ab-fim strong { font-size: 11.5pt; font-weight: 900; }
+.abertura .ab-masc { position: absolute; right: -4mm; bottom: 2mm; width: 100mm; height: 100mm; object-fit: contain; filter: drop-shadow(0 0 10mm color-mix(in srgb, var(--ac) 45%, transparent)) drop-shadow(0 4mm 6mm rgba(0,0,0,.45)); }
