@@ -1,9 +1,9 @@
 {
-  "desafio": "balao",
-  "titulo": "Pause antes do balão estourar",
-  "duracaoFrames": 407,
+  "desafio": "carro",
+  "titulo": "Pause antes do carro cair do penhasco",
+  "duracaoFrames": 417,
   "musica": {
-    "bpm": 140,
-    "tom": -2
+    "bpm": 145,
+    "tom": -4
   }
 }
