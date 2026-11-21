@@ -13,7 +13,7 @@ const { execFileSync } = require("child_process");
     format: "A4",
     printBackground: true,
     preferCSSPageSize: true,
-    displayHeaderFooter: true,
+    displayHeaderFooter: false,
     headerTemplate: "<span></span>",
     footerTemplate:
       '<div style="width:100%;font-size:8px;color:#8a83a8;font-family:sans-serif;padding:0 17mm;display:flex;justify-content:space-between"><span>Estúdio de Bolso · crie vídeos animados com IA</span><span class="pageNumber"></span></div>',

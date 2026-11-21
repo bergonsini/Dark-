@@ -256,3 +256,35 @@ th { background: linear-gradient(180deg, #4a0b3b, #2a0622); }
 .cel { box-shadow: inset 0 1pt 0 rgba(255,255,255,.15), 0 4pt 0 #0d0b16, 0 10pt 18pt rgba(0,0,0,.2); }
 .fluxo div { box-shadow: inset 0 1pt 0 #fff, 0 2.5pt 0 #e2d6f0, 0 5pt 10pt rgba(58,10,44,.07); }
 code { box-shadow: inset 0 -1pt 0 rgba(0,0,0,.06); }
+
+/* =================================================================== capa v3 (combina com as aberturas) */
+.capa.capa2 { page: abertura; background: radial-gradient(110% 70% at 50% 100%, #d0237f 0%, transparent 60%), linear-gradient(165deg, #26061f 0%, #8e1259 55%, #b0186f 100%); }
+.capa2 .padrao { position: absolute; inset: 0; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='90' height='90'><path d='M38 33 L56 45 L38 57 Z' fill='white' fill-opacity='0.07'/></svg>"); background-size: 26mm 26mm; transform: rotate(-12deg) scale(1.4); }
+.capa2 .filme { position: absolute; left: -30mm; right: -30mm; top: 118mm; height: 34mm; background: rgba(0,0,0,.22); transform: rotate(-9deg); border-top: 3mm dashed rgba(255,255,255,.10); border-bottom: 3mm dashed rgba(255,255,255,.10); display: flex; gap: 6mm; padding: 6mm 10mm; }
+.capa2 .filme i { flex: 0 0 30mm; height: 100%; border-radius: 2mm; background: rgba(255,255,255,.05); border: .6mm solid rgba(255,255,255,.08); }
+.capa2 .aneis { position: absolute; right: -46mm; top: -46mm; width: 140mm; height: 140mm; border-radius: 50%; border: 1.4mm solid rgba(255,210,63,.25); box-shadow: 0 0 0 11mm rgba(255,210,63,.06), 0 0 0 24mm rgba(255,255,255,.04); }
+.capa2 .aneis.a2 { right: auto; top: auto; left: -60mm; bottom: 40mm; width: 110mm; height: 110mm; border-color: rgba(255,255,255,.12); box-shadow: 0 0 0 9mm rgba(255,255,255,.04); }
+.capa2 .tag { top: 18mm; background: linear-gradient(180deg, #fff1a8, #ffd23f); box-shadow: inset 0 1pt 0 rgba(255,255,255,.8), 0 2.5pt 0 #b88a00; }
+.capa2 h1.tit3d { top: 30mm; font-size: 66pt; line-height: .9; text-shadow: none; }
+.capa2 .tit3d span { display: block; }
+.capa2 .tit3d .l1 { color: #fff; text-shadow: 0 1.5pt 0 #f1d6ea, 0 3pt 0 #d9a9c9, 0 4.5pt 0 #b77aa5, 0 6pt 0 #7a2a62, 0 10pt 14pt rgba(0,0,0,.35); }
+.capa2 .tit3d em { font-style: normal; color: #ffd23f; text-shadow: 0 1.5pt 0 #f3c21b, 0 3pt 0 #dba60a, 0 4.5pt 0 #b88a00, 0 6pt 0 #7a5a00, 0 10pt 14pt rgba(0,0,0,.35); }
+.capa2 .tit3d .l2 { color: #fff; text-shadow: 0 1.5pt 0 #f1d6ea, 0 3pt 0 #d9a9c9, 0 4.5pt 0 #b77aa5, 0 6pt 0 #7a2a62, 0 10pt 14pt rgba(0,0,0,.35); }
+.capa2 .sub { top: 96mm; right: 26mm; font-size: 14pt; line-height: 1.35; color: rgba(255,255,255,.92); }
+.capa2 .sub b { color: #ffd23f; }
+.capa2 .colagem { bottom: 34mm; height: 128mm; }
+/* sombras sólidas (as borradas viram retângulos no PDF) */
+.capa2 .colagem .card { box-shadow: 0 2.5mm 0 rgba(20,2,15,.55); }
+.capa2 .colagem .fone { box-shadow: 0 3.5mm 0 rgba(20,2,15,.6); }
+.capa2 .colagem .bolhap, .capa2 .colagem .onda { box-shadow: 0 2mm 0 rgba(20,2,15,.45); }
+.capa2 .colagem .selo-mp4 { right: 2mm; bottom: 70mm; transform: rotate(14deg); box-shadow: 0 2mm 0 rgba(20,2,15,.45); width: 27mm; height: 27mm; font-size: 7.5pt; }
+.capa2 .colagem .selo-mp4 b { font-size: 11.5pt; }
+.capa2 .masc { position: absolute; z-index: 5; object-fit: contain; }
+.capa2 .m-tito { left: -6mm; bottom: -16mm; width: 62mm; height: 62mm; }
+.capa2 .m-capi { right: -2mm; bottom: -12mm; width: 62mm; height: 62mm; }
+.capa2 .selos { position: absolute; left: 14mm; right: 14mm; bottom: 10mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; z-index: 6; }
+.capa2 .selos div { position: relative; background: linear-gradient(180deg, #3d0a32, #22051c); border: .4mm solid rgba(255,210,63,.45); border-radius: 10pt; padding: 3.2mm 3mm 3mm 14mm; color: #fff; box-shadow: inset 0 1pt 0 rgba(255,255,255,.18), 0 2.2mm 0 #12020e; }
+.capa2 .selos span { position: absolute; left: 3.2mm; top: 50%; margin-top: -4.2mm; font-size: 15pt; line-height: 1; }
+.capa2 .selos b { display: block; font-family: "Baloo 2"; font-weight: 800; font-size: 11pt; color: #ffd23f; line-height: 1.1; }
+.capa2 .selos small { display: block; font-size: 8pt; color: rgba(255,255,255,.75); font-weight: 700; }
+.capa2 .rodape { display: none; }
