@@ -1,6 +1,6 @@
 {
-  "video": "dedo-enrugado",
-  "titulo": "Por que o dedo enruga na água?",
+  "video": "gelo-boia",
+  "titulo": "Por que o gelo boia?",
   "fps": 30,
   "duracaoSegundos": 60,
   "personagem": "tito",
@@ -30,14 +30,14 @@
     "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
   },
   "musica": {
-    "bpm": 114,
-    "tom": 0
+    "bpm": 116,
+    "tom": 3
   },
   "fontes": [
-    "Smithsonian / NPR / Nature News — o enrugamento NÃO é a pele absorvendo água: o sistema nervoso (simpático) contrai os vasos sanguíneos sob a pele e ela se dobra",
-    "Smithsonian / Scientific American / Discover — desde 1935 médicos observaram que dedos com o nervo cortado (ex.: nervo mediano) não enrugam",
-    "Kareklas, Nettle & Smulders (Biology Letters, 2013) / Changizi (2011) — hipótese 'pneu de chuva': dedos enrugados passaram bolinhas/pesinhos molhados de um recipiente a outro mais rápido; ainda debatida (por isso 'uma teoria')",
-    "Binghamton University (2025, via Yahoo/ScienceAlert) — o padrão de rugas se repete do mesmo jeito em cada molho"
+    "USGS Water Science School (Water Density) — ao congelar, a densidade cai ~9%; cerca de 10% de um cubo de gelo/iceberg fica acima da água",
+    "University of Illinois (Q&A de física) / HyperPhysics — a água aumenta ~9% de volume ao congelar; máxima densidade a ~4 °C",
+    "Live Science / Lumen Learning — no gelo as pontes de hidrogênio formam uma rede hexagonal com espaços vazios; lagos congelam por cima e a camada de gelo isola a água líquida embaixo, onde os peixes sobrevivem",
+    "A maioria das substâncias fica mais densa no estado sólido; a água é exceção (Live Science / Lumen)"
   ],
   "cenas": [
     {
@@ -45,82 +45,74 @@
       "ato": "começo",
       "falas": [
         {
-          "texto": "Por que o dedo enruga na água?",
-          "pronuncia": "[curious] Por que o dedo ENRUGA na água?"
+          "texto": "Por que o gelo boia?",
+          "pronuncia": "[curious] Por que o gelo BOIA?"
         }
       ]
     },
     {
-      "id": "mito",
+      "id": "estranho",
       "ato": "começo",
       "falas": [
         {
-          "texto": "Muita gente acha que é a pele bebendo água.",
-          "pronuncia": "Muita gente acha que é a pele BEBENDO água."
+          "texto": "Era pra afundar! Quase tudo, quando vira sólido, fica mais apertado e mais pesado.",
+          "pronuncia": "Era pra AFUNDAR! Quase tudo, quando vira sólido, fica mais apertado e mais pesado."
         },
         {
-          "texto": "Mas não é!",
-          "pronuncia": "Mas NÃO é!"
+          "texto": "A água faz o contrário.",
+          "pronuncia": "A água faz o CONTRÁRIO."
         }
       ]
     },
     {
-      "id": "nervo",
+      "id": "ciranda",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Depois de uns minutinhos na água…",
-          "pronuncia": "Depois de uns minutinhos na água…"
+          "texto": "Quando congela, as moléculas de água se dão as mãos, tipo roda de ciranda.",
+          "pronuncia": "Quando congela, as moléculas de água se dão as MÃOS, tipo roda de ciranda."
         },
         {
-          "texto": "Quem manda é o sistema nervoso.",
-          "pronuncia": "Quem manda é o sistema NERVOSO."
-        },
-        {
-          "texto": "Ele aperta os vasinhos de sangue debaixo da pele… e ela enruga.",
-          "pronuncia": "Ele APERTA os vasinhos de sangue debaixo da pele… e ela enruga."
+          "texto": "Fica tudo espaçoso, com buraco no meio, e o gelo ocupa uns nove por cento a mais.",
+          "pronuncia": "Fica tudo ESPAÇOSO, com buraco no meio, e o gelo ocupa uns nove por cento a mais."
         }
       ]
     },
     {
-      "id": "prova",
+      "id": "boia",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "A prova: em 1935, médicos viram que dedo com o nervo cortado não enrugava.",
-          "pronuncia": "A prova: em mil novecentos e trinta e cinco, médicos viram que dedo com o nervo cortado NÃO enrugava."
+          "texto": "Mais espaço com o mesmo peso: o gelo fica mais leve que a água e flutua.",
+          "pronuncia": "Mais espaço com o mesmo peso: o gelo fica mais LEVE que a água e flutua."
+        },
+        {
+          "texto": "Só uns dez por cento ficam pra fora. É a famosa ponta do iceberg!",
+          "pronuncia": "Só uns dez por cento ficam pra fora. É a famosa [excited] PONTA do iceberg!"
         }
       ]
     },
     {
-      "id": "pneu",
+      "id": "garrafa",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "E pra que serve? Uma teoria diz que as rugas são tipo pneu de chuva…",
-          "pronuncia": "[curious] E pra que serve? Uma teoria diz que as rugas são tipo PNEU de chuva…"
-        },
-        {
-          "texto": "e ajudam a segurar coisas molhadas.",
-          "pronuncia": "e ajudam a SEGURAR coisas molhadas."
-        },
-        {
-          "texto": "Num teste, as pessoas passaram bolinhas molhadas de um pote pro outro mais rápido com o dedo enrugado!",
-          "pronuncia": "Num teste, as pessoas passaram bolinhas MOLHADAS de um pote pro outro mais rápido com o dedo enrugado!"
+          "texto": "É por isso que a garrafa de vidro esquecida no congelador estoura!",
+          "pronuncia": "É por isso que a garrafa de vidro esquecida no congelador ESTOURA!"
         }
       ]
     },
     {
-      "id": "digital",
+      "id": "peixes",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "E o mais curioso: o seu dedo enruga sempre do mesmo jeito!",
-          "pronuncia": "[excited] E o mais curioso: o seu dedo enruga SEMPRE do mesmo jeito!"
+          "texto": "E isso salva os peixes: o lago congela só em cima…",
+          "pronuncia": "E isso salva os PEIXES: o lago congela só em cima…"
         },
         {
-          "texto": "Tipo uma impressão digital… de banheira!",
-          "pronuncia": "Tipo uma impressão digital… de BANHEIRA!"
+          "texto": "e o gelo vira um cobertor pra água lá embaixo.",
+          "pronuncia": "e o gelo vira um COBERTOR pra água lá embaixo."
         }
       ]
     },
@@ -129,12 +121,12 @@
       "ato": "conclusão",
       "falas": [
         {
-          "texto": "Resumindo: no banho, seu dedo troca de pneu sozinho… e nem cobra a calibragem!",
-          "pronuncia": "Resumindo: no banho, seu dedo troca de PNEU sozinho… [laughs] e nem cobra a calibragem!"
+          "texto": "Resumindo: o gelo fica mais espaçoso no frio… diferente de mim, que viro bolinha debaixo da coberta!",
+          "pronuncia": "Resumindo: o gelo fica mais ESPAÇOSO no frio… diferente de mim, que viro [laughs] bolinha debaixo da coberta!"
         },
         {
-          "texto": "E você, demora muito no banho? Conta aí!",
-          "pronuncia": "[curious] E você, demora MUITO no banho? Conta aí!"
+          "texto": "E você, já esqueceu uma garrafa no congelador? Conta aí!",
+          "pronuncia": "[curious] E você, já esqueceu uma garrafa no congelador? Conta aí!"
         }
       ]
     }
