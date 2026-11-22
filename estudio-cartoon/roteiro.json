@@ -1,6 +1,6 @@
 {
-  "video": "gelo-boia",
-  "titulo": "Por que o gelo boia?",
+  "video": "pao-duro",
+  "titulo": "Por que o pão fica duro?",
   "fps": 30,
   "duracaoSegundos": 60,
   "personagem": "tito",
@@ -30,14 +30,14 @@
     "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
   },
   "musica": {
-    "bpm": 116,
-    "tom": 3
+    "bpm": 112,
+    "tom": 1
   },
   "fontes": [
-    "USGS Water Science School (Water Density) — ao congelar, a densidade cai ~9%; cerca de 10% de um cubo de gelo/iceberg fica acima da água",
-    "University of Illinois (Q&A de física) / HyperPhysics — a água aumenta ~9% de volume ao congelar; máxima densidade a ~4 °C",
-    "Live Science / Lumen Learning — no gelo as pontes de hidrogênio formam uma rede hexagonal com espaços vazios; lagos congelam por cima e a camada de gelo isola a água líquida embaixo, onde os peixes sobrevivem",
-    "A maioria das substâncias fica mais densa no estado sólido; a água é exceção (Live Science / Lumen)"
+    "BBC Science Focus / Wikipedia (Staling) / Red Star Yeast — o endurecimento é principalmente a RETROGRADAÇÃO do amido (amilose e amilopectina voltam a uma estrutura cristalina), não só perda de água",
+    "Wikipedia (Staling) / Chowhound — a retrogradação é mais rápida em temperatura fria acima de zero: na geladeira o pão endurece mais depressa",
+    "Wikipedia (Staling) / Yahoo Lifestyle — no freezer o processo praticamente para; guias indicam até ~3 meses",
+    "Chowhound / Wikipedia — reaquecer (umedecendo a casca) desfaz parte da retrogradação, mas é temporário: endurece de novo ao esfriar"
   ],
   "cenas": [
     {
@@ -45,74 +45,74 @@
       "ato": "começo",
       "falas": [
         {
-          "texto": "Por que o gelo boia?",
-          "pronuncia": "[curious] Por que o gelo BOIA?"
+          "texto": "Por que o pão fica duro no outro dia?",
+          "pronuncia": "[curious] Por que o pão fica DURO no outro dia?"
         }
       ]
     },
     {
-      "id": "estranho",
+      "id": "mito",
       "ato": "começo",
       "falas": [
         {
-          "texto": "Era pra afundar! Quase tudo, quando vira sólido, fica mais apertado e mais pesado.",
-          "pronuncia": "Era pra AFUNDAR! Quase tudo, quando vira sólido, fica mais apertado e mais pesado."
+          "texto": "Muita gente acha que ele só secou.",
+          "pronuncia": "Muita gente acha que ele só SECOU."
         },
         {
-          "texto": "A água faz o contrário.",
-          "pronuncia": "A água faz o CONTRÁRIO."
+          "texto": "Mas o culpado é outro: o amido!",
+          "pronuncia": "Mas o culpado é outro: o AMIDO!"
         }
       ]
     },
     {
-      "id": "ciranda",
+      "id": "forno",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Quando congela, as moléculas de água se dão as mãos, tipo roda de ciranda.",
-          "pronuncia": "Quando congela, as moléculas de água se dão as MÃOS, tipo roda de ciranda."
+          "texto": "No forno, o amido do pão bebe água, incha e fica molinho.",
+          "pronuncia": "No forno, o amido do pão bebe água, INCHA e fica molinho."
         },
         {
-          "texto": "Fica tudo espaçoso, com buraco no meio, e o gelo ocupa uns nove por cento a mais.",
-          "pronuncia": "Fica tudo ESPAÇOSO, com buraco no meio, e o gelo ocupa uns nove por cento a mais."
+          "texto": "Esfriando, ele vai se arrumando de novo, bem apertadinho, tipo cristal… e o pão endurece.",
+          "pronuncia": "Esfriando, ele vai se arrumando de novo, bem apertadinho, tipo CRISTAL… e o pão endurece."
         }
       ]
     },
     {
-      "id": "boia",
+      "id": "geladeira",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Mais espaço com o mesmo peso: o gelo fica mais leve que a água e flutua.",
-          "pronuncia": "Mais espaço com o mesmo peso: o gelo fica mais LEVE que a água e flutua."
+          "texto": "E guardar na geladeira? Piora!",
+          "pronuncia": "E guardar na geladeira? [excited] PIORA!"
         },
         {
-          "texto": "Só uns dez por cento ficam pra fora. É a famosa ponta do iceberg!",
-          "pronuncia": "Só uns dez por cento ficam pra fora. É a famosa [excited] PONTA do iceberg!"
+          "texto": "No friozinho, esse endurecimento acontece mais rápido.",
+          "pronuncia": "No friozinho, esse endurecimento acontece MAIS rápido."
         }
       ]
     },
     {
-      "id": "garrafa",
+      "id": "freezer",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "É por isso que a garrafa de vidro esquecida no congelador estoura!",
-          "pronuncia": "É por isso que a garrafa de vidro esquecida no congelador ESTOURA!"
+          "texto": "Já no freezer, quase tudo para. O pão congelado aguenta meses!",
+          "pronuncia": "Já no freezer, quase tudo PARA. O pão congelado aguenta MESES!"
         }
       ]
     },
     {
-      "id": "peixes",
+      "id": "truque",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "E isso salva os peixes: o lago congela só em cima…",
-          "pronuncia": "E isso salva os PEIXES: o lago congela só em cima…"
+          "texto": "E o truque: um pinguinho de água na casca e forno quente.",
+          "pronuncia": "E o truque: um pinguinho de água na casca e forno QUENTE."
         },
         {
-          "texto": "e o gelo vira um cobertor pra água lá embaixo.",
-          "pronuncia": "e o gelo vira um COBERTOR pra água lá embaixo."
+          "texto": "O calor desmancha os cristais e o pão amolece… mas só por um tempinho!",
+          "pronuncia": "O calor desmancha os cristais e o pão amolece… mas só por um TEMPINHO!"
         }
       ]
     },
@@ -121,12 +121,12 @@
       "ato": "conclusão",
       "falas": [
         {
-          "texto": "Resumindo: o gelo fica mais espaçoso no frio… diferente de mim, que viro bolinha debaixo da coberta!",
-          "pronuncia": "Resumindo: o gelo fica mais ESPAÇOSO no frio… diferente de mim, que viro [laughs] bolinha debaixo da coberta!"
+          "texto": "Resumindo: pão amanhecido é tipo a gente de manhã: duro… mas um calorzinho resolve!",
+          "pronuncia": "Resumindo: pão amanhecido é tipo a gente de manhã: DURO… [laughs] mas um calorzinho resolve!"
         },
         {
-          "texto": "E você, já esqueceu uma garrafa no congelador? Conta aí!",
-          "pronuncia": "[curious] E você, já esqueceu uma garrafa no congelador? Conta aí!"
+          "texto": "E você, guarda o pão onde? Conta aí!",
+          "pronuncia": "[curious] E você, guarda o pão ONDE? Conta aí!"
         }
       ]
     }
