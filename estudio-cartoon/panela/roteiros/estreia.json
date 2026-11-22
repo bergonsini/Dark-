@@ -1,0 +1,207 @@
+{
+  "projeto": "panela",
+  "fps": 30,
+  "saida": {
+    "timeline": "src/panela/timeline.json",
+    "audio": "public/panela/audio"
+  },
+  "video": "estreia",
+  "titulo": "Panela Depressão · Ep. 1: A estreia",
+  "episodio": 1,
+  "duracaoSegundos": 60,
+  "pausas": {
+    "entreCenas": 0.25,
+    "final": 1.4
+  },
+  "musica": {
+    "bpm": 128,
+    "tom": -2
+  },
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_santa",
+      "velocidade": 1.08
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "+8%"
+    },
+    "elevenlabs": {
+      "voiceId": "xJ8U5HgW3Zps75qgYrFw",
+      "nome": "(a definir) — APRESENTADOR",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.35,
+      "similaridade": 0.75
+    },
+    "estiloInterpretacao": "programa de TV trash: apresentador berrando, jurados dramáticos"
+  },
+  "personagens": {
+    "apresentador": {},
+    "juninho": {
+      "kokoro": {
+        "voz": "pm_alex",
+        "velocidade": 1.05
+      },
+      "afinar": 1.12
+    },
+    "zica": {
+      "kokoro": {
+        "voz": "pf_dora",
+        "velocidade": 0.95
+      },
+      "afinar": 0.93
+    },
+    "francois": {
+      "kokoro": {
+        "voz": "pm_santa",
+        "velocidade": 0.92
+      },
+      "afinar": 0.88
+    },
+    "vo": {
+      "kokoro": {
+        "voz": "pf_dora",
+        "velocidade": 0.9
+      },
+      "afinar": 1.06
+    }
+  },
+  "cenas": [
+    {
+      "id": "gancho",
+      "capitulo": "PANELA DEPRESSÃO",
+      "falas": [
+        {
+          "quem": "apresentador",
+          "texto": "Miojo com chiclete e sardinha… e alguém vai comer!",
+          "pronuncia": "Miojo com chiclete e sardinha… e alguém vai COMER!"
+        }
+      ]
+    },
+    {
+      "id": "abertura",
+      "falas": [
+        {
+          "quem": "apresentador",
+          "texto": "Bem-vindos ao Panela Depressão! O programa onde a comida chora… e o jurado também!",
+          "pronuncia": "[excited] Bem-vindos ao PANELA DEPRESSÃO! O programa onde a comida chora… e o jurado TAMBÉM!"
+        }
+      ]
+    },
+    {
+      "id": "participantes",
+      "capitulo": "OS COZINHEIROS",
+      "falas": [
+        {
+          "quem": "apresentador",
+          "texto": "Hoje: Juninho, que já perdeu catorze vezes… e Dona Zica, que nunca cozinhou na vida!",
+          "pronuncia": "Hoje: Juninho, que já perdeu CATORZE vezes… e Dona Zica, que nunca cozinhou na VIDA!"
+        },
+        {
+          "quem": "juninho",
+          "texto": "Dessa vez eu ganho!",
+          "pronuncia": "[excited] Dessa vez eu GANHO!"
+        }
+      ]
+    },
+    {
+      "id": "caixa",
+      "capitulo": "CAIXA MISTERIOSA",
+      "falas": [
+        {
+          "quem": "apresentador",
+          "texto": "Na caixa misteriosa: miojo, chiclete, sardinha e gelatina de uva!",
+          "pronuncia": "Na caixa misteriosa: miojo, chiclete, sardinha e gelatina de UVA!"
+        },
+        {
+          "quem": "apresentador",
+          "texto": "Vocês têm… trinta segundos!",
+          "pronuncia": "Vocês têm… [excited] TRINTA SEGUNDOS!"
+        }
+      ]
+    },
+    {
+      "id": "preparo",
+      "capitulo": "VALENDO!",
+      "falas": [
+        {
+          "quem": "apresentador",
+          "texto": "O Juninho bateu tudo no liquidificador! A Dona Zica… pôs fogo na água!",
+          "pronuncia": "O Juninho bateu TUDO no liquidificador! A Dona Zica… pôs FOGO na água!"
+        }
+      ]
+    },
+    {
+      "id": "pratos",
+      "capitulo": "OS PRATOS",
+      "falas": [
+        {
+          "quem": "juninho",
+          "texto": "Mousse de Sardinha com Chiclete Flambado!",
+          "pronuncia": "Mousse de Sardinha com Chiclete FLAMBADO!"
+        },
+        {
+          "quem": "zica",
+          "texto": "Miojo Sentimental ao Molho de Gelatina!",
+          "pronuncia": "Miojo SENTIMENTAL ao molho de gelatina!"
+        }
+      ]
+    },
+    {
+      "id": "degustacao",
+      "capitulo": "DEGUSTAÇÃO",
+      "falas": [
+        {
+          "quem": "apresentador",
+          "texto": "Jurados… podem provar.",
+          "pronuncia": "[whispers] Jurados… podem provar."
+        },
+        {
+          "quem": "francois",
+          "texto": "Isto é um crime contra a culinária!",
+          "pronuncia": "Isto é um CRIME contra a culinária!"
+        },
+        {
+          "quem": "vo",
+          "texto": "Ai, que delícia, meu filho!",
+          "pronuncia": "Ai, que DELÍCIA, meu filho!"
+        },
+        {
+          "quem": "apresentador",
+          "texto": "E o jurado misterioso… desmaiou!",
+          "pronuncia": "E o jurado misterioso… DESMAIOU!"
+        }
+      ]
+    },
+    {
+      "id": "veredito",
+      "capitulo": "ELIMINAÇÃO",
+      "falas": [
+        {
+          "quem": "apresentador",
+          "texto": "Quem sai hoje é… o Juninho! De novo!",
+          "pronuncia": "Quem sai hoje é… o JUNINHO! De novo!"
+        },
+        {
+          "quem": "juninho",
+          "texto": "Quinze…",
+          "pronuncia": "[sighs] Quinze…"
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "capitulo": "PRÓXIMO EPISÓDIO",
+      "falas": [
+        {
+          "quem": "apresentador",
+          "texto": "Semana que vem, o ingrediente quem escolhe é você! Comenta o mais nojento!",
+          "pronuncia": "Semana que vem, o ingrediente quem escolhe é VOCÊ! Comenta o mais NOJENTO!"
+        }
+      ]
+    }
+  ]
+}

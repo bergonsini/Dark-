@@ -9,6 +9,8 @@ import { InutilidadesVideo } from "./inutilidades/InutilidadesVideo";
 import { timeline as timelineInu } from "./inutilidades/timeline";
 import { DesafioVideo, desafioAtivo } from "./desafio/DesafioVideo";
 import { Mascote } from "./curso/Mascote";
+import { PanelaVideo } from "./panela/PanelaVideo";
+import { timeline as timelinePanela } from "./panela/timeline";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -28,6 +30,8 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="Inutilidades" component={InutilidadesVideo} durationInFrames={timelineInu.durationInFrames} fps={FPS} width={WIDTH} height={HEIGHT} />
       {/* 4º canal (nome a definir): DESAFIO DO PAUSE, neon/arcade, sem narração (skill desafio) */}
       <Composition id="Desafio" component={DesafioVideo} durationInFrames={desafioAtivo().duracao} fps={FPS} width={WIDTH} height={HEIGHT} />
+      {/* 5º PANELA DEPRESSÃO: competição de culinária trash em massinha 3D */}
+      <Composition id="PanelaDepressao" component={PanelaVideo} durationInFrames={timelinePanela.durationInFrames} fps={FPS} width={WIDTH} height={HEIGHT} />
       {/* Apostila "Estúdio de Bolso": mascotes com fundo transparente para as aberturas de módulo */}
       <Composition id="CursoMascote" component={Mascote} durationInFrames={1} fps={FPS} width={1080} height={1080} defaultProps={{ m: "tito-explicando" as const }} />
     </>
