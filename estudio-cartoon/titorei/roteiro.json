@@ -32,108 +32,107 @@
     "eq": "highpass=f=150,equalizer=f=200:t=q:w=1.0:g=-6,equalizer=f=380:t=q:w=1.0:g=-4,equalizer=f=2800:t=q:w=1.0:g=4,equalizer=f=5500:t=q:w=1.4:g=3,treble=g=2.5:f=9000,deesser=i=0.3,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60:makeup=1.5"
   },
   "musica": {
-    "bpm": 124,
-    "tom": 1
+    "bpm": 120,
+    "tom": -3
   },
   "pausas": {
     "entreCenas": 0.25,
     "final": 1.4
   },
-  "video": "geladeirinha",
-  "titulo": "Nasceu a geladeirinha",
-  "episodio": 7,
+  "video": "exame-dna",
+  "titulo": "O exame de DNA",
+  "episodio": 8,
   "duracaoSegundos": 60,
   "cenas": [
     {
       "id": "gancho",
-      "capitulo": "O OVO RACHOU",
+      "capitulo": "O PAI?",
       "falas": [
         {
-          "texto": "O ovo rachou… e nasceu uma geladeirinha!",
-          "pronuncia": "O ovo rachou… e nasceu uma [excited] GELADEIRINHA!",
-          "aceleraLocal": 1.33
+          "texto": "Era um freezer… dizendo que era o pai!",
+          "pronuncia": "Era um FREEZER… dizendo que era o PAI!"
         }
       ]
     },
     {
-      "id": "mamae",
-      "capitulo": "MAMÃE?",
+      "id": "novela",
+      "capitulo": "NOVELA",
       "falas": [
         {
-          "texto": "Ela olhou pra geladeira e disse: mamãe!",
-          "pronuncia": "Ela olhou pra geladeira e disse: MAMÃE!"
+          "texto": "A geladeira desmaiou. O leite derrubou tudo.",
+          "pronuncia": "A geladeira DESMAIOU. O leite derrubou TUDO."
         },
         {
-          "texto": "A geladeira chorou… cubos de gelo.",
-          "pronuncia": "A geladeira chorou… [deadpan] cubos de GELO."
+          "texto": "O sorvete chorou de emoção.",
+          "pronuncia": "O sorvete chorou de EMOÇÃO."
+        },
+        {
+          "texto": "E a capivara… nem piscou.",
+          "pronuncia": "[deadpan] E a capivara… nem piscou."
         }
       ]
     },
     {
-      "id": "fome",
-      "capitulo": "BEBÊ COM FOME",
+      "id": "exame",
+      "capitulo": "EXAME DE DNA",
       "falas": [
         {
-          "texto": "Só que bebê geladeira come gelo. Muito gelo.",
-          "pronuncia": "Só que bebê geladeira come gelo. MUITO gelo."
+          "texto": "A rainha capivara mandou fazer um exame de DNA.",
+          "pronuncia": "A rainha capivara mandou fazer um exame de DNA."
         },
         {
-          "texto": "E congelou a cozinha inteira.",
-          "pronuncia": "E CONGELOU a cozinha inteira."
+          "texto": "Ou melhor… de temperatura.",
+          "pronuncia": "[deadpan] Ou melhor… de TEMPERATURA."
         },
         {
-          "texto": "O leite virou picolé.",
-          "pronuncia": "[deadpan] O leite virou PICOLÉ."
+          "texto": "O resultado levou três dias. Quem abriu o envelope foi a capivara… bem devagarinho.",
+          "pronuncia": "O resultado levou TRÊS dias. Quem abriu o envelope foi a capivara… [deadpan] bem devagarinho."
         }
       ]
     },
     {
-      "id": "microondas",
-      "capitulo": "MINISTRO AO RESGATE",
+      "id": "resultado",
+      "capitulo": "RESULTADO",
       "falas": [
         {
-          "texto": "O ministro da pipoca tentou esquentar tudo…",
-          "pronuncia": "O ministro da pipoca tentou ESQUENTAR tudo…"
+          "texto": "Resultado: o freezer não é o pai!",
+          "pronuncia": "Resultado: o freezer NÃO é o pai!"
         },
         {
-          "texto": "e estourou pipoca de novo.",
-          "pronuncia": "[sighs] e estourou pipoca de NOVO."
+          "texto": "O pai é… o micro-ondas!",
+          "pronuncia": "O pai é… [excited] o MICRO-ONDAS!"
         },
         {
-          "texto": "A geladeirinha bateu palma e pediu bis!",
-          "pronuncia": "A geladeirinha bateu palma e pediu [excited] BIS!"
+          "texto": "E ele apitou de alegria!",
+          "pronuncia": "E ele APITOU de alegria!"
         }
       ]
     },
     {
-      "id": "batismo",
-      "capitulo": "BATISMO REAL",
+      "id": "explica",
+      "capitulo": "FAZ SENTIDO",
       "falas": [
         {
-          "texto": "A rainha capivara escolheu o nome dela… bem devagarinho.",
-          "pronuncia": "A rainha capivara escolheu o nome dela… [deadpan] bem devagarinho."
+          "texto": "Por isso a Gelinha ama pipoca!",
+          "pronuncia": "Por isso a Gelinha ama PIPOCA!"
         },
         {
-          "texto": "Demorou três dias. O nome é Gelinha.",
-          "pronuncia": "Demorou TRÊS dias. O nome é… GELINHA."
+          "texto": "Ela é meio gelada… e meio quentinha. Morna.",
+          "pronuncia": "Ela é meio gelada… e meio quentinha. [deadpan] MORNA."
         }
       ]
     },
     {
-      "id": "baba",
-      "capitulo": "VAGA DE BABÁ",
+      "id": "freezer",
+      "capitulo": "CORAÇÃO PARTIDO",
       "falas": [
         {
-          "texto": "E o Tito? Ganhou mais um cargo: babá.",
-          "pronuncia": "E o Tito? Ganhou mais um cargo: [deadpan] BABÁ."
+          "texto": "O freezer ficou tão triste que desligou da tomada…",
+          "pronuncia": "O freezer ficou tão triste que desligou da tomada…"
         },
         {
-          "texto": "Trocar fralda de geladeira é só degelar.",
-          "pronuncia": "Trocar fralda de geladeira é só DEGELAR."
-        },
-        {
-          "texto": "Ministro do piruá e babá. Sem salário.",
-          "pronuncia": "Ministro do piruá e babá. [sighs] Sem salário."
+          "texto": "e virou só um armário.",
+          "pronuncia": "[sighs] e virou só um ARMÁRIO."
         }
       ]
     },
@@ -142,16 +141,16 @@
       "capitulo": "CONTINUA…",
       "falas": [
         {
-          "texto": "Mas se a geladeira é a mãe…",
-          "pronuncia": "Mas se a geladeira é a MÃE…"
+          "texto": "Mas aí a Gelinha falou a primeira palavra…",
+          "pronuncia": "Mas aí a Gelinha falou a PRIMEIRA palavra…"
         },
         {
-          "texto": "quem é o pai?",
-          "pronuncia": "quem é o PAI?"
+          "texto": "e congelou o Tito inteiro!",
+          "pronuncia": "e CONGELOU o Tito inteiro!"
         },
         {
-          "texto": "Bateram na porta. Descobre no próximo episódio!",
-          "pronuncia": "Bateram na porta. [excited] Descobre no próximo episódio!"
+          "texto": "Como descongelar o Tito? Descobre no próximo episódio!",
+          "pronuncia": "[excited] Como descongelar o Tito? Descobre no próximo episódio!"
         }
       ]
     }
