@@ -1,0 +1,158 @@
+{
+  "projeto": "titorei",
+  "fps": 30,
+  "saida": {
+    "timeline": "src/titorei/timeline.json",
+    "audio": "public/titorei/audio"
+  },
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "wTABSOIKENuRDeLiHYDF",
+      "nome": "Jonas (pt-BR, dinâmico, Titorei)",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.35,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências",
+    "eq": "highpass=f=150,equalizer=f=200:t=q:w=1.0:g=-6,equalizer=f=380:t=q:w=1.0:g=-4,equalizer=f=2800:t=q:w=1.0:g=4,equalizer=f=5500:t=q:w=1.4:g=3,treble=g=2.5:f=9000,deesser=i=0.3,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60:makeup=1.5"
+  },
+  "musica": {
+    "bpm": 120,
+    "tom": -3
+  },
+  "pausas": {
+    "entreCenas": 0.25,
+    "final": 1.4
+  },
+  "video": "exame-dna",
+  "titulo": "O exame de DNA",
+  "episodio": 8,
+  "duracaoSegundos": 60,
+  "cenas": [
+    {
+      "id": "gancho",
+      "capitulo": "O PAI?",
+      "falas": [
+        {
+          "texto": "Era um freezer… dizendo que era o pai!",
+          "pronuncia": "Era um FREEZER… dizendo que era o PAI!"
+        }
+      ]
+    },
+    {
+      "id": "novela",
+      "capitulo": "NOVELA",
+      "falas": [
+        {
+          "texto": "A geladeira desmaiou. O leite derrubou tudo.",
+          "pronuncia": "A geladeira DESMAIOU. O leite derrubou TUDO."
+        },
+        {
+          "texto": "O sorvete chorou de emoção.",
+          "pronuncia": "O sorvete chorou de EMOÇÃO."
+        },
+        {
+          "texto": "E a capivara… nem piscou.",
+          "pronuncia": "[deadpan] E a capivara… nem piscou."
+        }
+      ]
+    },
+    {
+      "id": "exame",
+      "capitulo": "EXAME DE DNA",
+      "falas": [
+        {
+          "texto": "A rainha capivara mandou fazer um exame de DNA.",
+          "pronuncia": "A rainha capivara mandou fazer um exame de DNA."
+        },
+        {
+          "texto": "Ou melhor… de temperatura.",
+          "pronuncia": "[deadpan] Ou melhor… de TEMPERATURA."
+        },
+        {
+          "texto": "O resultado levou três dias. Quem abriu o envelope foi a capivara… bem devagarinho.",
+          "pronuncia": "O resultado levou TRÊS dias. Quem abriu o envelope foi a capivara… [deadpan] bem devagarinho."
+        }
+      ]
+    },
+    {
+      "id": "resultado",
+      "capitulo": "RESULTADO",
+      "falas": [
+        {
+          "texto": "Resultado: o freezer não é o pai!",
+          "pronuncia": "Resultado: o freezer NÃO é o pai!"
+        },
+        {
+          "texto": "O pai é… o micro-ondas!",
+          "pronuncia": "O pai é… [excited] o MICRO-ONDAS!"
+        },
+        {
+          "texto": "E ele apitou de alegria!",
+          "pronuncia": "E ele APITOU de alegria!"
+        }
+      ]
+    },
+    {
+      "id": "explica",
+      "capitulo": "FAZ SENTIDO",
+      "falas": [
+        {
+          "texto": "Por isso a Gelinha ama pipoca!",
+          "pronuncia": "Por isso a Gelinha ama PIPOCA!"
+        },
+        {
+          "texto": "Ela é meio gelada… e meio quentinha. Morna.",
+          "pronuncia": "Ela é meio gelada… e meio quentinha. [deadpan] MORNA."
+        }
+      ]
+    },
+    {
+      "id": "freezer",
+      "capitulo": "CORAÇÃO PARTIDO",
+      "falas": [
+        {
+          "texto": "O freezer ficou tão triste que desligou da tomada…",
+          "pronuncia": "O freezer ficou tão triste que desligou da tomada…"
+        },
+        {
+          "texto": "e virou só um armário.",
+          "pronuncia": "[sighs] e virou só um ARMÁRIO."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "capitulo": "CONTINUA…",
+      "falas": [
+        {
+          "texto": "Mas aí a Gelinha falou a primeira palavra…",
+          "pronuncia": "Mas aí a Gelinha falou a PRIMEIRA palavra…"
+        },
+        {
+          "texto": "e congelou o Tito inteiro!",
+          "pronuncia": "e CONGELOU o Tito inteiro!"
+        },
+        {
+          "texto": "Como descongelar o Tito? Descobre no próximo episódio!",
+          "pronuncia": "[excited] Como descongelar o Tito? Descobre no próximo episódio!"
+        }
+      ]
+    }
+  ]
+}

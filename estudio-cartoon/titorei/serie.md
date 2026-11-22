@@ -28,6 +28,8 @@ Leia ANTES de escrever um episódio novo e ATUALIZE depois de entregar.
 - **Gelinha (GELADEIRINHA)** — nasceu do ovo gigante (ep. 7); chama a geladeira de MAMÃE, come gelo e congela tudo; adora pipoca ("BIS!").
   O nome levou 3 dias (a rainha capivara escolhe bem devagarinho). Componente: `Geladeira` em escala 0.38 + chupeta (dentro de `episodios/geladeirinha`).
   O Tito agora é Ministro do Piruá E BABÁ (sem salário). Objetos novos: `CascaOvo`, `Congelada` (k), `SilhuetaFreezer` em `objetos/Pipoca.tsx`.
+- **Freezer** (ep. 8) — apareceu dizendo ser o pai da Gelinha; o "exame de DNA… de temperatura" deu NÃO. Ficou tão triste que desligou da tomada e virou um ARMÁRIO. Componente `Freezer` (`desligado`, `armario`).
+  O **pai da Gelinha é o MICRO-ONDAS** (por isso ela ama pipoca; ela é MORNA). Objetos novos em `objetos/Familia.tsx`: `Geladeirinha`, `Freezer`, `Termometro`, `Envelope`, `BlocoGelo`.
 - **Leite** — medroso, sua de nervoso (mas desceu o arco-íris gritando de alegria). **Queijo** — medita flutuando. **Manteiga** — faz ioga. **Sorvete** — pediu pra ficar.
 
 ## Piadas recorrentes
@@ -50,3 +52,4 @@ Leia ANTES de escrever um episódio novo e ATUALIZE depois de entregar.
 | 5 | grande-eleicao | A grande eleição | A capivara virou rainha; o **micro-ondas não aceitou a derrota e começou uma CONTAGEM REGRESSIVA** (00:10, 00:09…). "O que acontece no zero? Descobre no próximo episódio!" |
 | 6 | golpe-pipoca | O golpe da pipoca | Depois da enchente de pipoca, apareceu um **OVO GIGANTE** no fundo da pipoca e ele **começou a rachar**. "O que vai nascer? Descobre no próximo episódio!" |
 | 7 | geladeirinha | Nasceu a geladeirinha | "Se a geladeira é a mãe… quem é o PAI?" Bateram na porta: **silhueta de um FREEZER** com olhinhos azuis. "Descobre no próximo episódio!" |
+| 8 | exame-dna | O exame de DNA | A Gelinha falou a primeira palavra… e **CONGELOU O TITO INTEIRO** (bloco de gelo). "Como descongelar o Tito? Descobre no próximo episódio!" |
