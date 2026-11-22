@@ -2,7 +2,7 @@
   "video": "pao-duro",
   "titulo": "Por que o pão fica duro?",
   "fps": 30,
-  "duracaoSegundos": 60,
+  "duracaoSegundos": 56,
   "personagem": "tito",
   "voz": {
     "motor": "elevenlabs",
