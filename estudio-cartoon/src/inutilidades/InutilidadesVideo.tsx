@@ -62,7 +62,7 @@ export const InutilidadesVideo: React.FC = () => {
           <Audio src={staticFile("inutilidades/audio/sfx/vhs.wav")} volume={0.35} />
         </Sequence>
       ))}
-      <Audio src={staticFile("inutilidades/audio/narration.wav")} />
+      <Audio src={staticFile("inutilidades/audio/narration.wav")} volume={(fr) => ((ep.mudos ? ep.mudos() : []).some(([a, b]) => fr >= a && fr <= b) ? 0 : 1)} />
       <Audio
         src={staticFile("inutilidades/audio/music.wav")}
         volume={(fr) =>

@@ -29,3 +29,8 @@ export const bocaDe = (g: number, quem: string) => {
   const get = (f: number) => (f >= 0 && f < m.length ? m[f] : 0);
   return Math.min(1, (get(g) * 0.6 + get(g - 1) * 0.25 + get(g + 1) * 0.15) * 1.2);
 };
+export const getScene = (id: string) => {
+  const s = timeline.scenes.find((x) => x.id === id);
+  if (!s) throw new Error(`Cena não encontrada: ${id}`);
+  return s;
+};

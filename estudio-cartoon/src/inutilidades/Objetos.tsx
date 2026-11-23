@@ -1129,3 +1129,96 @@ export const CapaChuva: React.FC<{ x: number; y: number; escala?: number }> = ({
     ))}
   </g>
 );
+
+/* ------------------------------------------------------------------ Ep. 9 — Fone Antirruído Extremo */
+
+/** Broca de furadeira atravessando a parede (o vizinho!), com pó voando. `liga` faz girar e tremer. */
+export const BrocaNaParede: React.FC<{ x: number; y: number; escala?: number; liga?: boolean }> = ({ x, y, escala = 1, liga = true }) => {
+  const f = useCurrentFrame();
+  const t = liga ? Math.sin(f * 2.5) * 4 : 0;
+  return (
+    <g transform={`translate(${x + t} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={7} strokeLinejoin="round" strokeLinecap="round">
+      <circle r={70} fill="#5a3a2a" />
+      <path d={`M0 0 L${-180} 0`} stroke="#9aa3ae" strokeWidth={26} />
+      {[0, 1, 2, 3].map((i) => (
+        <path key={i} d={`M${-40 - i * 35} -13 L${-55 - i * 35} 13`} stroke={TINTA} strokeWidth={5} opacity={0.7} transform={`translate(${liga ? (f * 6) % 35 : 0} 0)`} />
+      ))}
+      <path d="M-180 -13 L-215 0 L-180 13 Z" fill="#9aa3ae" />
+      {liga &&
+        [0, 1, 2, 3, 4].map((i) => {
+          const q = ((f * 2 + i * 7) % 24) / 24;
+          return <circle key={i} cx={-20 - q * 160} cy={-30 + Math.sin(i * 2 + f) * 60 * q} r={10 - q * 6} fill="#c9a27a" stroke="none" opacity={1 - q} />;
+        })}
+    </g>
+  );
+};
+
+/** O FONE ANTIRRUÍDO EXTREMO: conchas gigantes, antena parabólica e luz "MUTE". `ligado` acende. */
+export const FoneExtremo: React.FC<{ x: number; y: number; escala?: number; ligado?: boolean; rot?: number }> = ({ x, y, escala = 1, ligado = false, rot = 0 }) => {
+  const f = useCurrentFrame();
+  return (
+    <g transform={`translate(${x} ${y}) scale(${escala}) rotate(${rot})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round" strokeLinecap="round">
+      <path d="M-200 0 Q -200 -260 0 -260 Q 200 -260 200 0" fill="none" stroke={TINTA} strokeWidth={40} />
+      <path d="M-200 0 Q -200 -260 0 -260 Q 200 -260 200 0" fill="none" stroke="#e8282b" strokeWidth={26} />
+      {[-1, 1].map((l) => (
+        <g key={l} transform={`translate(${l * 215} 30)`}>
+          <ellipse rx={95} ry={130} fill="#1f1b2e" />
+          <ellipse rx={70} ry={100} fill="#e8282b" />
+          <circle r={30} fill={ligado && f % 20 < 12 ? "#3dff8a" : "#2a5a3a"} />
+        </g>
+      ))}
+      <path d="M0 -260 L0 -340" strokeWidth={10} />
+      <path d="M-70 -350 Q 0 -420 70 -350 Z" fill="#c9d0dc" />
+      {ligado &&
+        [0, 1].map((i) => {
+          const q = ((f * 1.5 + i * 15) % 30) / 30;
+          return <path key={i} d={`M${-60 - q * 60} ${-400 - q * 40} Q 0 ${-470 - q * 60} ${60 + q * 60} ${-400 - q * 40}`} fill="none" stroke="#3dff8a" strokeWidth={8} opacity={1 - q} />;
+        })}
+    </g>
+  );
+};
+
+/** Chamas de desenho (incêndio de mentirinha). */
+export const Chamas: React.FC<{ x: number; y: number; escala?: number; n?: number }> = ({ x, y, escala = 1, n = 5 }) => {
+  const f = useCurrentFrame();
+  return (
+    <g transform={`translate(${x} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={7} strokeLinejoin="round">
+      {Array.from({ length: n }).map((_, i) => {
+        const h = 160 + Math.sin(f * 0.7 + i * 1.9) * 50;
+        const cx = (i - (n - 1) / 2) * 90;
+        return (
+          <g key={i}>
+            <path d={`M${cx - 55} 0 Q ${cx - 60} ${-h * 0.6} ${cx} ${-h} Q ${cx + 60} ${-h * 0.6} ${cx + 55} 0 Z`} fill="#ff6b1a" />
+            <path d={`M${cx - 28} 0 Q ${cx - 30} ${-h * 0.35} ${cx} ${-h * 0.6} Q ${cx + 30} ${-h * 0.35} ${cx + 28} 0 Z`} fill="#ffd23f" stroke="none" />
+          </g>
+        );
+      })}
+    </g>
+  );
+};
+
+/** Jato de mangueira dos bombeiros (vem da esquerda) com gotas. */
+export const JatoBombeiro: React.FC<{ x: number; y: number; escala?: number }> = ({ x, y, escala = 1 }) => {
+  const f = useCurrentFrame();
+  return (
+    <g transform={`translate(${x} ${y}) scale(${escala})`}>
+      <path d={`M-700 -80 Q -300 ${-160 + Math.sin(f) * 10} 0 0`} fill="none" stroke="#3da5ff" strokeWidth={70} strokeLinecap="round" opacity={0.85} />
+      <path d={`M-700 -80 Q -300 ${-160 + Math.sin(f) * 10} 0 0`} fill="none" stroke="#bfe6ff" strokeWidth={22} strokeLinecap="round" />
+      {Array.from({ length: 10 }).map((_, i) => {
+        const q = ((f * 2 + i * 7) % 30) / 30;
+        const a = -1.2 + (i / 10) * 2.4;
+        return <circle key={i} cx={Math.cos(a) * q * 260} cy={Math.sin(a) * q * 260} r={18} fill="#3da5ff" stroke={TINTA} strokeWidth={4} opacity={1 - q} />;
+      })}
+    </g>
+  );
+};
+
+/** Extintor vermelho (brinde). */
+export const Extintor: React.FC<{ x: number; y: number; escala?: number }> = ({ x, y, escala = 1 }) => (
+  <g transform={`translate(${x} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round" strokeLinecap="round">
+    <rect x={-70} y={-280} width={140} height={300} rx={60} fill="#e8282b" />
+    <rect x={-50} y={-180} width={100} height={70} rx={10} fill="#fff" strokeWidth={5} />
+    <path d="M-30 -280 L-30 -330 L40 -330 L70 -310" fill="none" strokeWidth={14} />
+    <path d="M70 -310 Q 130 -300 120 -200" fill="none" strokeWidth={14} />
+  </g>
+);

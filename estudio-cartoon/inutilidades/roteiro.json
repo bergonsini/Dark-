@@ -5,17 +5,17 @@
     "timeline": "src/inutilidades/timeline.json",
     "audio": "public/inutilidades/audio"
   },
-  "video": "liquidificador-sem-tampa",
-  "titulo": "Liquidificador Sem Tampa Pro Max",
-  "episodio": 8,
+  "video": "fone-antirruido",
+  "titulo": "Fone Antirruído Extremo",
+  "episodio": 9,
   "duracaoSegundos": 42,
   "pausas": {
     "entreCenas": 0.2,
     "final": 1.2
   },
   "musica": {
-    "bpm": 132,
-    "tom": -3
+    "bpm": 126,
+    "tom": 0
   },
   "voz": {
     "motor": "elevenlabs",
@@ -81,13 +81,13 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Cansada de liquidificador que não tritura nada?",
-          "pronuncia": "Cansada de liquidificador que não TRITURA nada?"
+          "texto": "Cansado do vizinho furando a parede todo domingo?",
+          "pronuncia": "Cansado do vizinho FURANDO a parede todo domingo?"
         },
         {
           "quem": "doutor",
-          "texto": "Você aperta, aperta… e o morango continua inteiro!",
-          "pronuncia": "Você aperta, aperta… e o morango continua INTEIRO!"
+          "texto": "Às sete da manhã!",
+          "pronuncia": "Às SETE da manhã!"
         }
       ]
     },
@@ -101,8 +101,8 @@
         },
         {
           "quem": "doutor",
-          "texto": "Apresento o Liquidificador Sem Tampa Pro Max!",
-          "pronuncia": "Apresento o LIQUIDIFICADOR SEM TAMPA Pro Max!"
+          "texto": "Apresento o Fone Antirruído Extremo!",
+          "pronuncia": "Apresento o FONE ANTIRRUÍDO EXTREMO!"
         }
       ]
     },
@@ -111,24 +111,24 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Tritura em um segundo!",
-          "pronuncia": "Tritura em UM segundo!",
-          "pausaDepois": 1.0
+          "texto": "Coloca e… silêncio total!",
+          "pronuncia": "Coloca e… SILÊNCIO total!",
+          "pausaDepois": 0.8
         },
         {
           "quem": "cleide",
-          "texto": "Ficou ótimo… mas cadê o suco?",
-          "pronuncia": "[surprised] Ficou ótimo… mas cadê o SUCO?"
+          "texto": "Kuka, a casa tá pegando fogo!",
+          "pronuncia": "[shouting] KUKA, a casa tá pegando FOGO!"
         },
         {
           "quem": "kuka",
-          "texto": "Tá no teto. E em mim!",
-          "pronuncia": "Tá no TETO. E em MIM!"
+          "texto": "Que paz! Não escuto nada!",
+          "pronuncia": "[happy] Que PAZ! Não escuto NADA!"
         },
         {
           "quem": "doutor",
-          "texto": "Vitamina distribuída por igual!",
-          "pronuncia": "[excited] Vitamina DISTRIBUÍDA por igual!"
+          "texto": "Não ouve nem os bombeiros!",
+          "pronuncia": "Não ouve nem os BOMBEIROS!"
         }
       ]
     },
@@ -137,18 +137,18 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "De 999 por apenas 44,90!",
-          "pronuncia": "De novecentos e noventa e nove por apenas QUARENTA E QUATRO E NOVENTA!"
+          "texto": "De 999 por apenas 39,90!",
+          "pronuncia": "De novecentos e noventa e nove por apenas TRINTA E NOVE E NOVENTA!"
         },
         {
           "quem": "doutor",
-          "texto": "E ligando AGORA, ganhe uma capa de chuva de brinde!",
-          "pronuncia": "E ligando AGORA, ganhe uma CAPA DE CHUVA de brinde!"
+          "texto": "E ligando AGORA, ganhe um extintor de brinde!",
+          "pronuncia": "E ligando AGORA, ganhe um EXTINTOR de brinde!"
         },
         {
           "quem": "kuka",
-          "texto": "Manda dois… e um canudo bem comprido!",
-          "pronuncia": "[excited] Manda DOIS… e um canudo bem COMPRIDO!"
+          "texto": "MANDA DOIS! O quê? MANDA DOIS!",
+          "pronuncia": "[shouting] MANDA DOIS! O quê? MANDA DOIS!"
         },
         {
           "quem": "doutor",
@@ -162,8 +162,8 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Tampa vendida separadamente. Teto não incluso. Lave a casa após o uso.",
-          "pronuncia": "Tampa vendida separadamente. Teto não incluso. Lave a casa após o uso.",
+          "texto": "Não ouve campainha, alarme nem a sua mãe. Vizinho não incluso.",
+          "pronuncia": "Não ouve campainha, alarme nem a sua mãe. Vizinho não incluso.",
           "velocidade": 1.15
         }
       ]
