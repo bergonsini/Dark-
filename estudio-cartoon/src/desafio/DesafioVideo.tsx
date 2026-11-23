@@ -5,6 +5,7 @@ import ativo from "../../desafios/ativo.json";
 import { DesafioFoguete, DURACAO as DUR_FOGUETE } from "./desafios/foguete";
 import { DesafioBalao, DURACAO as DUR_BALAO } from "./desafios/balao";
 import { DesafioCarro, DURACAO as DUR_CARRO } from "./desafios/carro";
+import { DesafioCopo, DURACAO as DUR_COPO } from "./desafios/copo";
 
 /**
  * CANAL 4 — desafio do pause (nome a definir). Neon/arcade, sem personagem fixo, SEM narração.
@@ -14,6 +15,7 @@ export const DESAFIOS: Record<string, { Comp: React.FC; duracao: number }> = {
   foguete: { Comp: DesafioFoguete, duracao: DUR_FOGUETE },
   balao: { Comp: DesafioBalao, duracao: DUR_BALAO },
   carro: { Comp: DesafioCarro, duracao: DUR_CARRO },
+  copo: { Comp: DesafioCopo, duracao: DUR_COPO },
 };
 
 export const desafioAtivo = () => {

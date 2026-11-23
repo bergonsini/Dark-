@@ -1,9 +1,9 @@
 {
-  "desafio": "carro",
-  "titulo": "Pause antes do carro cair do penhasco",
-  "duracaoFrames": 417,
+  "desafio": "copo",
+  "titulo": "Pause antes do copo transbordar",
+  "duracaoFrames": 407,
   "musica": {
-    "bpm": 145,
-    "tom": -4
+    "bpm": 138,
+    "tom": 2
   }
 }
