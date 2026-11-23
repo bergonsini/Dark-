@@ -1,8 +1,8 @@
 {
-  "video": "pao-duro",
-  "titulo": "Por que o pão fica duro?",
+  "video": "bocejo",
+  "titulo": "Por que o bocejo é contagioso?",
   "fps": 30,
-  "duracaoSegundos": 56,
+  "duracaoSegundos": 60,
   "personagem": "tito",
   "voz": {
     "motor": "elevenlabs",
@@ -30,14 +30,16 @@
     "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
   },
   "musica": {
-    "bpm": 112,
-    "tom": 1
+    "bpm": 108,
+    "tom": -1
   },
   "fontes": [
-    "BBC Science Focus / Wikipedia (Staling) / Red Star Yeast — o endurecimento é principalmente a RETROGRADAÇÃO do amido (amilose e amilopectina voltam a uma estrutura cristalina), não só perda de água",
-    "Wikipedia (Staling) / Chowhound — a retrogradação é mais rápida em temperatura fria acima de zero: na geladeira o pão endurece mais depressa",
-    "Wikipedia (Staling) / Yahoo Lifestyle — no freezer o processo praticamente para; guias indicam até ~3 meses",
-    "Chowhound / Wikipedia — reaquecer (umedecendo a casca) desfaz parte da retrogradação, mas é temporário: endurece de novo ao esfriar"
+    "Smithsonian / Cleveland Clinic / Britannica — não se sabe com certeza por que bocejamos; a hipótese mais apoiada hoje é o RESFRIAMENTO do cérebro (Gallup & Eldakar, PMC 2011/2013)",
+    "Frontiers for Young Minds / PMC — o ar entrando e o alongamento da mandíbula ajudariam a esfriar o sangue que vai pro cérebro; bocejos são mais longos em animais com cérebro maior",
+    "Cleveland Clinic / Weizmann Institute — bebês já bocejam dentro da barriga, antes de respirar",
+    "Smithsonian / Frontiers / Cleveland Clinic — o bocejo contagioso parece ligado à EMPATIA (áreas do cérebro de processar emoções); ainda debatido — por isso 'cientistas acham'",
+    "Joly-Mascheroni, Senju & Shepherd (Biology Letters, 2008; PMC2610100) / National Geographic — 21 de 29 cães bocejaram ao ver uma pessoa bocejar; réplicas depois foram mistas",
+    "Norscia & Palagi (PLoS ONE 2011) / Smithsonian — o contágio é maior entre parentes e amigos do que entre estranhos"
   ],
   "cenas": [
     {
@@ -45,74 +47,70 @@
       "ato": "começo",
       "falas": [
         {
-          "texto": "Por que o pão fica duro no outro dia?",
-          "pronuncia": "[curious] Por que o pão fica DURO no outro dia?"
+          "texto": "Aposto que você vai bocejar!",
+          "pronuncia": "[curious] Aposto que você vai BOCEJAR!"
         }
       ]
     },
     {
-      "id": "mito",
+      "id": "misterio",
       "ato": "começo",
       "falas": [
         {
-          "texto": "Muita gente acha que ele só secou.",
-          "pronuncia": "Muita gente acha que ele só SECOU."
-        },
-        {
-          "texto": "Mas o culpado é outro: o amido!",
-          "pronuncia": "Mas o culpado é outro: o AMIDO!"
+          "texto": "E a ciência ainda nem sabe direito por que a gente boceja!",
+          "pronuncia": "E a ciência ainda nem sabe DIREITO por que a gente boceja!"
         }
       ]
     },
     {
-      "id": "forno",
+      "id": "cerebro",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "No forno, o amido do pão bebe água, incha e fica molinho.",
-          "pronuncia": "No forno, o amido do pão bebe água, INCHA e fica molinho."
+          "texto": "A ideia mais aceita: o bocejo resfria o cérebro.",
+          "pronuncia": "A ideia mais aceita: o bocejo RESFRIA o cérebro."
         },
         {
-          "texto": "Esfriando, ele vai se arrumando de novo, bem apertadinho, tipo cristal… e o pão endurece.",
-          "pronuncia": "Esfriando, ele vai se arrumando de novo, bem apertadinho, tipo CRISTAL… e o pão endurece."
+          "texto": "A boca abre, entra ar, a mandíbula estica… e o sangue que vai pra cabeça esfria.",
+          "pronuncia": "A boca abre, entra ar, a mandíbula estica… e o sangue que vai pra cabeça ESFRIA."
         }
       ]
     },
     {
-      "id": "geladeira",
+      "id": "barriga",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "E guardar na geladeira? Piora!",
-          "pronuncia": "E guardar na geladeira? [excited] PIORA!"
-        },
-        {
-          "texto": "No friozinho, esse endurecimento acontece mais rápido.",
-          "pronuncia": "No friozinho, esse endurecimento acontece MAIS rápido."
+          "texto": "Até bebê boceja dentro da barriga, antes de respirar!",
+          "pronuncia": "Até bebê boceja dentro da BARRIGA, antes de respirar!"
         }
       ]
     },
     {
-      "id": "freezer",
+      "id": "contagio",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Já no freezer, quase tudo para. O pão congelado aguenta meses!",
-          "pronuncia": "Já no freezer, quase tudo PARA. O pão congelado aguenta MESES!"
+          "texto": "E por que ele pega?",
+          "pronuncia": "[curious] E por que ele PEGA?"
+        },
+        {
+          "texto": "Cientistas acham que tem a ver com empatia: o cérebro copia quem a gente gosta.",
+          "pronuncia": "Cientistas acham que tem a ver com EMPATIA: o cérebro copia quem a gente gosta."
+        },
+        {
+          "texto": "Por isso pega mais de família e amigo do que de estranho.",
+          "pronuncia": "Por isso pega mais de FAMÍLIA e amigo do que de estranho."
         }
       ]
     },
     {
-      "id": "truque",
+      "id": "cachorro",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "E o truque: um pinguinho de água na casca e forno quente.",
-          "pronuncia": "E o truque: um pinguinho de água na casca e forno QUENTE."
-        },
-        {
-          "texto": "O calor desmancha os cristais e o pão amolece… mas só por um tempinho!",
-          "pronuncia": "O calor desmancha os cristais e o pão amolece… mas só por um TEMPINHO!"
+          "texto": "E num estudo, cachorros bocejaram depois de ver gente bocejar!",
+          "pronuncia": "E num estudo, CACHORROS bocejaram depois de ver gente bocejar!"
         }
       ]
     },
@@ -121,12 +119,12 @@
       "ato": "conclusão",
       "falas": [
         {
-          "texto": "Resumindo: pão amanhecido é tipo a gente de manhã: duro… mas um calorzinho resolve!",
-          "pronuncia": "Resumindo: pão amanhecido é tipo a gente de manhã: DURO… [laughs] mas um calorzinho resolve!"
+          "texto": "Resumindo: bocejo é o ar-condicionado do cérebro… e é tipo fofoca: um começa e todo mundo passa pra frente!",
+          "pronuncia": "Resumindo: bocejo é o ar-condicionado do cérebro… e é tipo FOFOCA: um começa e todo mundo passa pra frente!"
         },
         {
-          "texto": "E você, guarda o pão onde? Conta aí!",
-          "pronuncia": "[curious] E você, guarda o pão ONDE? Conta aí!"
+          "texto": "E aí, bocejou? Conta aí!",
+          "pronuncia": "[curious] E aí, BOCEJOU? Conta aí!"
         }
       ]
     }
