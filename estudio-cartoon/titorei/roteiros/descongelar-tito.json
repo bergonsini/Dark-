@@ -1,0 +1,158 @@
+{
+  "projeto": "titorei",
+  "fps": 30,
+  "saida": {
+    "timeline": "src/titorei/timeline.json",
+    "audio": "public/titorei/audio"
+  },
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "wTABSOIKENuRDeLiHYDF",
+      "nome": "Jonas (pt-BR, dinâmico, Titorei)",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.35,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências",
+    "eq": "highpass=f=150,equalizer=f=200:t=q:w=1.0:g=-6,equalizer=f=380:t=q:w=1.0:g=-4,equalizer=f=2800:t=q:w=1.0:g=4,equalizer=f=5500:t=q:w=1.4:g=3,treble=g=2.5:f=9000,deesser=i=0.3,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60:makeup=1.5"
+  },
+  "musica": {
+    "bpm": 126,
+    "tom": 0
+  },
+  "pausas": {
+    "entreCenas": 0.25,
+    "final": 1.4
+  },
+  "video": "descongelar-tito",
+  "titulo": "Descongelando o Tito",
+  "episodio": 9,
+  "duracaoSegundos": 60,
+  "cenas": [
+    {
+      "id": "gancho",
+      "capitulo": "PICOLÉ DE TITO",
+      "falas": [
+        {
+          "texto": "O Tito virou picolé!",
+          "pronuncia": "O Tito virou PICOLÉ!"
+        },
+        {
+          "texto": "E ninguém sabia descongelar.",
+          "pronuncia": "E ninguém sabia descongelar."
+        }
+      ]
+    },
+    {
+      "id": "tentativa1",
+      "capitulo": "TENTATIVA 1",
+      "falas": [
+        {
+          "texto": "O micro-ondas tentou esquentar.",
+          "pronuncia": "O micro-ondas tentou ESQUENTAR."
+        },
+        {
+          "texto": "Mas o Tito não coube na porta.",
+          "pronuncia": "[deadpan] Mas o Tito não COUBE na porta."
+        },
+        {
+          "texto": "Só esquentou a coroa… que ele nem tem.",
+          "pronuncia": "[deadpan] Só esquentou a coroa… que ele nem TEM."
+        }
+      ]
+    },
+    {
+      "id": "tentativa2",
+      "capitulo": "TENTATIVA 2",
+      "falas": [
+        {
+          "texto": "A capivara sentou em cima pra esquentar… bem devagarinho.",
+          "pronuncia": "A capivara sentou em cima pra esquentar… [deadpan] bem devagarinho."
+        },
+        {
+          "texto": "Em três horas, derreteu um centímetro.",
+          "pronuncia": "Em TRÊS horas, derreteu UM centímetro."
+        }
+      ]
+    },
+    {
+      "id": "praia",
+      "capitulo": "PLANO DA GELADEIRA",
+      "falas": [
+        {
+          "texto": "Aí a geladeira teve uma ideia: praia! Ela entende de bronzeado.",
+          "pronuncia": "Aí a geladeira teve uma ideia: [excited] PRAIA! Ela entende de bronzeado."
+        },
+        {
+          "texto": "E empurraram o bloco de gelo até a areia.",
+          "pronuncia": "E EMPURRARAM o bloco de gelo até a areia."
+        }
+      ]
+    },
+    {
+      "id": "derrete",
+      "capitulo": "DESCONGELOU!",
+      "falas": [
+        {
+          "texto": "Em dois minutos de sol, o Tito derreteu…",
+          "pronuncia": "Em dois minutos de sol, o Tito DERRETEU…"
+        },
+        {
+          "texto": "e saiu espirrando: atchim!",
+          "pronuncia": "e saiu espirrando: [excited] ATCHIM!"
+        },
+        {
+          "texto": "O leite trouxe uma toalha. O sorvete… derreteu junto.",
+          "pronuncia": "O leite trouxe uma toalha. O sorvete… [sighs] derreteu junto."
+        }
+      ]
+    },
+    {
+      "id": "abraco",
+      "capitulo": "PEDIDO DE DESCULPAS",
+      "falas": [
+        {
+          "texto": "A Gelinha pediu desculpa e deu um abraço quentinho.",
+          "pronuncia": "A Gelinha pediu desculpa e deu um abraço QUENTINHO."
+        },
+        {
+          "texto": "Morno, na verdade.",
+          "pronuncia": "[deadpan] Morno, na verdade."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "capitulo": "CONTINUA…",
+      "falas": [
+        {
+          "texto": "Mas na água do gelo derretido boiava um bilhete…",
+          "pronuncia": "Mas na água do gelo derretido boiava um BILHETE…"
+        },
+        {
+          "texto": "assinado: o verdadeiro rei.",
+          "pronuncia": "assinado: o VERDADEIRO rei."
+        },
+        {
+          "texto": "Quem é? Descobre no próximo episódio!",
+          "pronuncia": "[excited] Quem é? Descobre no próximo episódio!"
+        }
+      ]
+    }
+  ]
+}
