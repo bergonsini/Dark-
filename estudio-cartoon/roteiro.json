@@ -2,7 +2,7 @@
   "video": "bocejo",
   "titulo": "Por que o bocejo é contagioso?",
   "fps": 30,
-  "duracaoSegundos": 60,
+  "duracaoSegundos": 54,
   "personagem": "tito",
   "voz": {
     "motor": "elevenlabs",
