@@ -1,0 +1,136 @@
+{
+  "video": "bocejo",
+  "titulo": "Por que o bocejo é contagioso?",
+  "fps": 30,
+  "duracaoSegundos": 54,
+  "personagem": "tito",
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "tS45q0QcrDHqHoaWdCDR",
+      "nome": "Lax (pt-BR, jovem e alegre) — voz do TITO",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.4,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
+  },
+  "musica": {
+    "bpm": 108,
+    "tom": -1
+  },
+  "fontes": [
+    "Smithsonian / Cleveland Clinic / Britannica — não se sabe com certeza por que bocejamos; a hipótese mais apoiada hoje é o RESFRIAMENTO do cérebro (Gallup & Eldakar, PMC 2011/2013)",
+    "Frontiers for Young Minds / PMC — o ar entrando e o alongamento da mandíbula ajudariam a esfriar o sangue que vai pro cérebro; bocejos são mais longos em animais com cérebro maior",
+    "Cleveland Clinic / Weizmann Institute — bebês já bocejam dentro da barriga, antes de respirar",
+    "Smithsonian / Frontiers / Cleveland Clinic — o bocejo contagioso parece ligado à EMPATIA (áreas do cérebro de processar emoções); ainda debatido — por isso 'cientistas acham'",
+    "Joly-Mascheroni, Senju & Shepherd (Biology Letters, 2008; PMC2610100) / National Geographic — 21 de 29 cães bocejaram ao ver uma pessoa bocejar; réplicas depois foram mistas",
+    "Norscia & Palagi (PLoS ONE 2011) / Smithsonian — o contágio é maior entre parentes e amigos do que entre estranhos"
+  ],
+  "cenas": [
+    {
+      "id": "gancho",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Aposto que você vai bocejar!",
+          "pronuncia": "[curious] Aposto que você vai BOCEJAR!"
+        }
+      ]
+    },
+    {
+      "id": "misterio",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "E a ciência ainda nem sabe direito por que a gente boceja!",
+          "pronuncia": "E a ciência ainda nem sabe DIREITO por que a gente boceja!"
+        }
+      ]
+    },
+    {
+      "id": "cerebro",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "A ideia mais aceita: o bocejo resfria o cérebro.",
+          "pronuncia": "A ideia mais aceita: o bocejo RESFRIA o cérebro."
+        },
+        {
+          "texto": "A boca abre, entra ar, a mandíbula estica… e o sangue que vai pra cabeça esfria.",
+          "pronuncia": "A boca abre, entra ar, a mandíbula estica… e o sangue que vai pra cabeça ESFRIA."
+        }
+      ]
+    },
+    {
+      "id": "barriga",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Até bebê boceja dentro da barriga, antes de respirar!",
+          "pronuncia": "Até bebê boceja dentro da BARRIGA, antes de respirar!"
+        }
+      ]
+    },
+    {
+      "id": "contagio",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E por que ele pega?",
+          "pronuncia": "[curious] E por que ele PEGA?"
+        },
+        {
+          "texto": "Cientistas acham que tem a ver com empatia: o cérebro copia quem a gente gosta.",
+          "pronuncia": "Cientistas acham que tem a ver com EMPATIA: o cérebro copia quem a gente gosta."
+        },
+        {
+          "texto": "Por isso pega mais de família e amigo do que de estranho.",
+          "pronuncia": "Por isso pega mais de FAMÍLIA e amigo do que de estranho."
+        }
+      ]
+    },
+    {
+      "id": "cachorro",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E num estudo, cachorros bocejaram depois de ver gente bocejar!",
+          "pronuncia": "E num estudo, CACHORROS bocejaram depois de ver gente bocejar!"
+        }
+      ]
+    },
+    {
+      "id": "conclusao",
+      "ato": "conclusão",
+      "falas": [
+        {
+          "texto": "Resumindo: bocejo é o ar-condicionado do cérebro… e é tipo fofoca: um começa e todo mundo passa pra frente!",
+          "pronuncia": "Resumindo: bocejo é o ar-condicionado do cérebro… e é tipo FOFOCA: um começa e todo mundo passa pra frente!"
+        },
+        {
+          "texto": "E aí, bocejou? Conta aí!",
+          "pronuncia": "[curious] E aí, BOCEJOU? Conta aí!"
+        }
+      ]
+    }
+  ],
+  "pausas": {
+    "entreCenas": 0.4,
+    "final": 1.8
+  }
+}
