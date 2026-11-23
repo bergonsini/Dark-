@@ -1,9 +1,9 @@
 {
-  "desafio": "copo",
-  "titulo": "Pause antes do copo transbordar",
-  "duracaoFrames": 407,
+  "desafio": "ovo",
+  "titulo": "Pause antes do ovo cair na frigideira",
+  "duracaoFrames": 417,
   "musica": {
-    "bpm": 138,
-    "tom": 2
+    "bpm": 144,
+    "tom": -1
   }
 }
