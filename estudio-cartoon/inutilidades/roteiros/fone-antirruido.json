@@ -1,0 +1,172 @@
+{
+  "projeto": "inutilidades",
+  "fps": 30,
+  "saida": {
+    "timeline": "src/inutilidades/timeline.json",
+    "audio": "public/inutilidades/audio"
+  },
+  "video": "fone-antirruido",
+  "titulo": "Fone Antirruído Extremo",
+  "episodio": 9,
+  "duracaoSegundos": 42,
+  "pausas": {
+    "entreCenas": 0.2,
+    "final": 1.2
+  },
+  "musica": {
+    "bpm": 126,
+    "tom": 0
+  },
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_santa",
+      "velocidade": 1.05
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "+8%"
+    },
+    "elevenlabs": {
+      "voiceId": "xJ8U5HgW3Zps75qgYrFw",
+      "nome": "Carlos (pt-BR, ofertas) — DOUTOR OFERTA",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.35,
+      "similaridade": 0.75
+    },
+    "estiloInterpretacao": "televendas: empolgado, rápido, MAIÚSCULAS na ênfase"
+  },
+  "personagens": {
+    "doutor": {},
+    "kuka": {
+      "kokoro": {
+        "voz": "pm_alex",
+        "velocidade": 0.95
+      },
+      "elevenlabs": {
+        "voiceId": "mP51FBaz7jxNEIeFJwxX",
+        "nome": "Silas (pt-BR, interior) — SEU KUKA BELUDO",
+        "estabilidade": 0.45
+      }
+    },
+    "rato": {
+      "kokoro": {
+        "voz": "pm_alex",
+        "velocidade": 0.9
+      },
+      "elevenlabs": {
+        "voiceId": "mP51FBaz7jxNEIeFJwxX",
+        "nome": "Silas afinado — RATO",
+        "estabilidade": 0.45
+      },
+      "afinar": 1.45
+    },
+    "cleide": {
+      "kokoro": {
+        "voz": "pf_dora",
+        "velocidade": 1.0
+      },
+      "elevenlabs": {
+        "voiceId": "CS2gH5fPqUCmkVNpHsy4",
+        "nome": "Raquel (pt-BR, 55 anos, interior) — DONA CLEIDE",
+        "estabilidade": 0.45
+      }
+    }
+  },
+  "cenas": [
+    {
+      "id": "problema",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Cansado do vizinho furando a parede todo domingo?",
+          "pronuncia": "Cansado do vizinho FURANDO a parede todo domingo?"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Às sete da manhã!",
+          "pronuncia": "Às SETE da manhã!"
+        }
+      ]
+    },
+    {
+      "id": "produto",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Seus problemas ACABARAM!",
+          "pronuncia": "[excited] Seus problemas ACABARAM!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Apresento o Fone Antirruído Extremo!",
+          "pronuncia": "Apresento o FONE ANTIRRUÍDO EXTREMO!"
+        }
+      ]
+    },
+    {
+      "id": "demonstracao",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Coloca e… silêncio total!",
+          "pronuncia": "Coloca e… SILÊNCIO total!",
+          "pausaDepois": 0.8
+        },
+        {
+          "quem": "cleide",
+          "texto": "Kuka, a casa tá pegando fogo!",
+          "pronuncia": "[shouting] KUKA, a casa tá pegando FOGO!"
+        },
+        {
+          "quem": "kuka",
+          "texto": "Que paz! Não escuto nada!",
+          "pronuncia": "[happy] Que PAZ! Não escuto NADA!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Não ouve nem os bombeiros!",
+          "pronuncia": "Não ouve nem os BOMBEIROS!"
+        }
+      ]
+    },
+    {
+      "id": "oferta",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "De 999 por apenas 39,90!",
+          "pronuncia": "De novecentos e noventa e nove por apenas TRINTA E NOVE E NOVENTA!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "E ligando AGORA, ganhe um extintor de brinde!",
+          "pronuncia": "E ligando AGORA, ganhe um EXTINTOR de brinde!"
+        },
+        {
+          "quem": "kuka",
+          "texto": "MANDA DOIS! O quê? MANDA DOIS!",
+          "pronuncia": "[shouting] MANDA DOIS! O quê? MANDA DOIS!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Ligue já!",
+          "pronuncia": "LIGUE JÁ!"
+        }
+      ]
+    },
+    {
+      "id": "letrinhas",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Não ouve campainha, alarme nem a sua mãe. Vizinho não incluso.",
+          "pronuncia": "Não ouve campainha, alarme nem a sua mãe. Vizinho não incluso.",
+          "velocidade": 1.15
+        }
+      ]
+    }
+  ]
+}
