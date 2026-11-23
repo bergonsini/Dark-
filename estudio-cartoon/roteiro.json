@@ -1,8 +1,8 @@
 {
-  "video": "bocejo",
-  "titulo": "Por que o bocejo é contagioso?",
+  "video": "estalar-dedos",
+  "titulo": "Por que o dedo estala?",
   "fps": 30,
-  "duracaoSegundos": 54,
+  "duracaoSegundos": 60,
   "personagem": "tito",
   "voz": {
     "motor": "elevenlabs",
@@ -30,16 +30,14 @@
     "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
   },
   "musica": {
-    "bpm": 108,
-    "tom": -1
+    "bpm": 118,
+    "tom": -2
   },
   "fontes": [
-    "Smithsonian / Cleveland Clinic / Britannica — não se sabe com certeza por que bocejamos; a hipótese mais apoiada hoje é o RESFRIAMENTO do cérebro (Gallup & Eldakar, PMC 2011/2013)",
-    "Frontiers for Young Minds / PMC — o ar entrando e o alongamento da mandíbula ajudariam a esfriar o sangue que vai pro cérebro; bocejos são mais longos em animais com cérebro maior",
-    "Cleveland Clinic / Weizmann Institute — bebês já bocejam dentro da barriga, antes de respirar",
-    "Smithsonian / Frontiers / Cleveland Clinic — o bocejo contagioso parece ligado à EMPATIA (áreas do cérebro de processar emoções); ainda debatido — por isso 'cientistas acham'",
-    "Joly-Mascheroni, Senju & Shepherd (Biology Letters, 2008; PMC2610100) / National Geographic — 21 de 29 cães bocejaram ao ver uma pessoa bocejar; réplicas depois foram mistas",
-    "Norscia & Palagi (PLoS ONE 2011) / Smithsonian — o contágio é maior entre parentes e amigos do que entre estranhos"
+    "Kawchuk et al. (PLOS ONE, 2015, PMC4398549) / University of Alberta / NPR / Science News — ressonância em tempo real: o estalo vem da formação RÁPIDA de uma cavidade de gás no líquido sinovial (efeito ventosa), não do estouro de uma bolha",
+    "Smithsonian / JSTOR Daily — o líquido sinovial lubrifica a articulação; teoria de 1947 (formação de bolha) x 1971 (colapso) — o estudo de 2015 apoiou a de formação",
+    "Unsworth et al. (1971) / Science News — depois de estalar, leva cerca de 20 minutos para o mesmo dedo estalar de novo",
+    "Donald Unger (1998, Arthritis & Rheumatism) — estalou só a mão esquerda por ~60 anos; nenhuma das mãos teve artrite; ganhou o Ig Nobel de Medicina (2009)"
   ],
   "cenas": [
     {
@@ -47,70 +45,70 @@
       "ato": "começo",
       "falas": [
         {
-          "texto": "Aposto que você vai bocejar!",
-          "pronuncia": "[curious] Aposto que você vai BOCEJAR!"
+          "texto": "Por que o dedo estala?",
+          "pronuncia": "[curious] Por que o dedo ESTALA?"
         }
       ]
     },
     {
-      "id": "misterio",
+      "id": "dentro",
       "ato": "começo",
       "falas": [
         {
-          "texto": "E a ciência ainda nem sabe direito por que a gente boceja!",
-          "pronuncia": "E a ciência ainda nem sabe DIREITO por que a gente boceja!"
-        }
-      ]
-    },
-    {
-      "id": "cerebro",
-      "ato": "desenvolvimento",
-      "falas": [
-        {
-          "texto": "A ideia mais aceita: o bocejo resfria o cérebro.",
-          "pronuncia": "A ideia mais aceita: o bocejo RESFRIA o cérebro."
+          "texto": "Dentro da junta do dedo tem um líquido que funciona como óleo.",
+          "pronuncia": "Dentro da junta do dedo tem um líquido que funciona como ÓLEO."
         },
         {
-          "texto": "A boca abre, entra ar, a mandíbula estica… e o sangue que vai pra cabeça esfria.",
-          "pronuncia": "A boca abre, entra ar, a mandíbula estica… e o sangue que vai pra cabeça ESFRIA."
+          "texto": "Ele deixa tudo deslizando liso.",
+          "pronuncia": "Ele deixa tudo deslizando LISO."
         }
       ]
     },
     {
-      "id": "barriga",
+      "id": "ventosa",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Até bebê boceja dentro da barriga, antes de respirar!",
-          "pronuncia": "Até bebê boceja dentro da BARRIGA, antes de respirar!"
-        }
-      ]
-    },
-    {
-      "id": "contagio",
-      "ato": "desenvolvimento",
-      "falas": [
-        {
-          "texto": "E por que ele pega?",
-          "pronuncia": "[curious] E por que ele PEGA?"
+          "texto": "Quando você puxa o dedo, os ossos se afastam…",
+          "pronuncia": "Quando você puxa o dedo, os ossos se AFASTAM…"
         },
         {
-          "texto": "Cientistas acham que tem a ver com empatia: o cérebro copia quem a gente gosta.",
-          "pronuncia": "Cientistas acham que tem a ver com EMPATIA: o cérebro copia quem a gente gosta."
-        },
-        {
-          "texto": "Por isso pega mais de família e amigo do que de estranho.",
-          "pronuncia": "Por isso pega mais de FAMÍLIA e amigo do que de estranho."
+          "texto": "e abre, de repente, uma bolha de gás nesse líquido. Tipo ventosa saindo do vidro: ploc!",
+          "pronuncia": "e abre, de repente, uma bolha de gás nesse líquido. Tipo ventosa saindo do vidro: [excited] PLOC!"
         }
       ]
     },
     {
-      "id": "cachorro",
+      "id": "mri",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "E num estudo, cachorros bocejaram depois de ver gente bocejar!",
-          "pronuncia": "E num estudo, CACHORROS bocejaram depois de ver gente bocejar!"
+          "texto": "Cientistas filmaram isso numa ressonância, ao vivo, em 2015!",
+          "pronuncia": "Cientistas filmaram isso numa ressonância, AO VIVO, em dois mil e quinze!"
+        }
+      ]
+    },
+    {
+      "id": "espera",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E depois do estalo, o mesmo dedo leva uns vinte minutos pra estalar de novo.",
+          "pronuncia": "E depois do estalo, o mesmo dedo leva uns VINTE minutos pra estalar de novo."
+        }
+      ]
+    },
+    {
+      "id": "artrite",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Dá artrite? Um médico estalou só uma das mãos por uns sessenta anos.",
+          "pronuncia": "[curious] Dá artrite? Um médico estalou só UMA das mãos por uns sessenta anos."
+        },
+        {
+          "texto": "Resultado: nenhuma das duas teve artrite. E ele ainda ganhou um prêmio!",
+          "pronuncia": "Resultado: NENHUMA das duas teve artrite. E ele ainda ganhou um PRÊMIO!"
         }
       ]
     },
@@ -119,12 +117,12 @@
       "ato": "conclusão",
       "falas": [
         {
-          "texto": "Resumindo: bocejo é o ar-condicionado do cérebro… e é tipo fofoca: um começa e todo mundo passa pra frente!",
-          "pronuncia": "Resumindo: bocejo é o ar-condicionado do cérebro… e é tipo FOFOCA: um começa e todo mundo passa pra frente!"
+          "texto": "Resumindo: estalar o dedo é tipo abrir pote de pepino: ploc! E depois tem que esperar a tampa fechar.",
+          "pronuncia": "Resumindo: estalar o dedo é tipo abrir pote de pepino: [laughs] PLOC! E depois tem que esperar a tampa fechar."
         },
         {
-          "texto": "E aí, bocejou? Conta aí!",
-          "pronuncia": "[curious] E aí, BOCEJOU? Conta aí!"
+          "texto": "E você, estala os dedos? Conta aí!",
+          "pronuncia": "[curious] E você, estala os DEDOS? Conta aí!"
         }
       ]
     }
