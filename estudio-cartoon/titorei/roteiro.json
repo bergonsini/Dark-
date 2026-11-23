@@ -32,107 +32,107 @@
     "eq": "highpass=f=150,equalizer=f=200:t=q:w=1.0:g=-6,equalizer=f=380:t=q:w=1.0:g=-4,equalizer=f=2800:t=q:w=1.0:g=4,equalizer=f=5500:t=q:w=1.4:g=3,treble=g=2.5:f=9000,deesser=i=0.3,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60:makeup=1.5"
   },
   "musica": {
-    "bpm": 120,
-    "tom": -3
+    "bpm": 126,
+    "tom": 0
   },
   "pausas": {
     "entreCenas": 0.25,
     "final": 1.4
   },
-  "video": "exame-dna",
-  "titulo": "O exame de DNA",
-  "episodio": 8,
+  "video": "descongelar-tito",
+  "titulo": "Descongelando o Tito",
+  "episodio": 9,
   "duracaoSegundos": 60,
   "cenas": [
     {
       "id": "gancho",
-      "capitulo": "O PAI?",
+      "capitulo": "PICOLÉ DE TITO",
       "falas": [
         {
-          "texto": "Era um freezer… dizendo que era o pai!",
-          "pronuncia": "Era um FREEZER… dizendo que era o PAI!"
+          "texto": "O Tito virou picolé!",
+          "pronuncia": "O Tito virou PICOLÉ!"
+        },
+        {
+          "texto": "E ninguém sabia descongelar.",
+          "pronuncia": "E ninguém sabia descongelar."
         }
       ]
     },
     {
-      "id": "novela",
-      "capitulo": "NOVELA",
+      "id": "tentativa1",
+      "capitulo": "TENTATIVA 1",
       "falas": [
         {
-          "texto": "A geladeira desmaiou. O leite derrubou tudo.",
-          "pronuncia": "A geladeira DESMAIOU. O leite derrubou TUDO."
+          "texto": "O micro-ondas tentou esquentar.",
+          "pronuncia": "O micro-ondas tentou ESQUENTAR."
         },
         {
-          "texto": "O sorvete chorou de emoção.",
-          "pronuncia": "O sorvete chorou de EMOÇÃO."
+          "texto": "Mas o Tito não coube na porta.",
+          "pronuncia": "[deadpan] Mas o Tito não COUBE na porta."
         },
         {
-          "texto": "E a capivara… nem piscou.",
-          "pronuncia": "[deadpan] E a capivara… nem piscou."
+          "texto": "Só esquentou a coroa… que ele nem tem.",
+          "pronuncia": "[deadpan] Só esquentou a coroa… que ele nem TEM."
         }
       ]
     },
     {
-      "id": "exame",
-      "capitulo": "EXAME DE DNA",
+      "id": "tentativa2",
+      "capitulo": "TENTATIVA 2",
       "falas": [
         {
-          "texto": "A rainha capivara mandou fazer um exame de DNA.",
-          "pronuncia": "A rainha capivara mandou fazer um exame de DNA."
+          "texto": "A capivara sentou em cima pra esquentar… bem devagarinho.",
+          "pronuncia": "A capivara sentou em cima pra esquentar… [deadpan] bem devagarinho."
         },
         {
-          "texto": "Ou melhor… de temperatura.",
-          "pronuncia": "[deadpan] Ou melhor… de TEMPERATURA."
-        },
-        {
-          "texto": "O resultado levou três dias. Quem abriu o envelope foi a capivara… bem devagarinho.",
-          "pronuncia": "O resultado levou TRÊS dias. Quem abriu o envelope foi a capivara… [deadpan] bem devagarinho."
+          "texto": "Em três horas, derreteu um centímetro.",
+          "pronuncia": "Em TRÊS horas, derreteu UM centímetro."
         }
       ]
     },
     {
-      "id": "resultado",
-      "capitulo": "RESULTADO",
+      "id": "praia",
+      "capitulo": "PLANO DA GELADEIRA",
       "falas": [
         {
-          "texto": "Resultado: o freezer não é o pai!",
-          "pronuncia": "Resultado: o freezer NÃO é o pai!"
+          "texto": "Aí a geladeira teve uma ideia: praia! Ela entende de bronzeado.",
+          "pronuncia": "Aí a geladeira teve uma ideia: [excited] PRAIA! Ela entende de bronzeado."
         },
         {
-          "texto": "O pai é… o micro-ondas!",
-          "pronuncia": "O pai é… [excited] o MICRO-ONDAS!"
-        },
-        {
-          "texto": "E ele apitou de alegria!",
-          "pronuncia": "E ele APITOU de alegria!"
+          "texto": "E empurraram o bloco de gelo até a areia.",
+          "pronuncia": "E EMPURRARAM o bloco de gelo até a areia."
         }
       ]
     },
     {
-      "id": "explica",
-      "capitulo": "FAZ SENTIDO",
+      "id": "derrete",
+      "capitulo": "DESCONGELOU!",
       "falas": [
         {
-          "texto": "Por isso a Gelinha ama pipoca!",
-          "pronuncia": "Por isso a Gelinha ama PIPOCA!"
+          "texto": "Em dois minutos de sol, o Tito derreteu…",
+          "pronuncia": "Em dois minutos de sol, o Tito DERRETEU…"
         },
         {
-          "texto": "Ela é meio gelada… e meio quentinha. Morna.",
-          "pronuncia": "Ela é meio gelada… e meio quentinha. [deadpan] MORNA."
+          "texto": "e saiu espirrando: atchim!",
+          "pronuncia": "e saiu espirrando: [excited] ATCHIM!"
+        },
+        {
+          "texto": "O leite trouxe uma toalha. O sorvete… derreteu junto.",
+          "pronuncia": "O leite trouxe uma toalha. O sorvete… [sighs] derreteu junto."
         }
       ]
     },
     {
-      "id": "freezer",
-      "capitulo": "CORAÇÃO PARTIDO",
+      "id": "abraco",
+      "capitulo": "PEDIDO DE DESCULPAS",
       "falas": [
         {
-          "texto": "O freezer ficou tão triste que desligou da tomada…",
-          "pronuncia": "O freezer ficou tão triste que desligou da tomada…"
+          "texto": "A Gelinha pediu desculpa e deu um abraço quentinho.",
+          "pronuncia": "A Gelinha pediu desculpa e deu um abraço QUENTINHO."
         },
         {
-          "texto": "e virou só um armário.",
-          "pronuncia": "[sighs] e virou só um ARMÁRIO."
+          "texto": "Morno, na verdade.",
+          "pronuncia": "[deadpan] Morno, na verdade."
         }
       ]
     },
@@ -141,16 +141,16 @@
       "capitulo": "CONTINUA…",
       "falas": [
         {
-          "texto": "Mas aí a Gelinha falou a primeira palavra…",
-          "pronuncia": "Mas aí a Gelinha falou a PRIMEIRA palavra…"
+          "texto": "Mas na água do gelo derretido boiava um bilhete…",
+          "pronuncia": "Mas na água do gelo derretido boiava um BILHETE…"
         },
         {
-          "texto": "e congelou o Tito inteiro!",
-          "pronuncia": "e CONGELOU o Tito inteiro!"
+          "texto": "assinado: o verdadeiro rei.",
+          "pronuncia": "assinado: o VERDADEIRO rei."
         },
         {
-          "texto": "Como descongelar o Tito? Descobre no próximo episódio!",
-          "pronuncia": "[excited] Como descongelar o Tito? Descobre no próximo episódio!"
+          "texto": "Quem é? Descobre no próximo episódio!",
+          "pronuncia": "[excited] Quem é? Descobre no próximo episódio!"
         }
       ]
     }
