@@ -101,8 +101,8 @@ const Tentativa: React.FC<{ r: Rodada; n: number }> = ({ r, n }) => {
       )}
       <Som at={0} nome="whoosh" vol={0.3} dur={20} />
       {[16, 10, 6, 3].map((d) => (r.T - d > 0 ? <Som key={d} at={r.T - d} nome="click" vol={0.4} dur={8} /> : null))}
-      <Som at={quebra} nome="pop" vol={0.7} dur={10} />
-      <Som at={quebra + 4} nome="borbulha" vol={0.45} dur={POS - 6} />
+      <Som at={quebra} nome="pop" vol={0.45} dur={10} />
+      <Som at={quebra + 4} nome="borbulha" vol={0.3} dur={POS - 6} />
     </AbsoluteFill>
   );
 };
