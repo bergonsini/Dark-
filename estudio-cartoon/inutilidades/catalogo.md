@@ -25,6 +25,7 @@ Loja de televendas fictícia. Comerciais em 2D + VHS, 30–45 s.
 | 7 | despertador-soco | Despertador com Soco | de R$ 999 por R$ 34,90 (+ travesseiro de capacete) | 0800-POW-POW | Kuka 16 ("Manda dois… um é pra segunda-feira!"); saiu pela janela e acordou no quintal do vizinho; no modo soneca o Doutor levou soco duplo |
 | 8 | liquidificador-sem-tampa | Liquidificador Sem Tampa Pro Max | de R$ 999 por R$ 44,90 (+ capa de chuva) | 0800-SPLASH | Kuka 18 ("Manda dois… e um canudo bem comprido!"); a vitamina foi pro teto e cobriu a Dona Cleide e o Kuka de laranja |
 | 9 | fone-antirruido | Fone Antirruído Extremo | de R$ 999 por R$ 39,90 (+ extintor) | 0800-SHHHH | Kuka 20 ("MANDA DOIS! O quê? MANDA DOIS!"); não ouviu a Dona Cleide avisando do incêndio (fala MUDA no vídeo) nem os bombeiros |
+| 10 | gps-pessimista | GPS Pessimista | de R$ 999 por R$ 29,90 (+ lencinho) | 0800-NEM-VAI | Kuka 22 ("Então eu nem vou!"; "Manda dois… mas acho que nem chega."); o GPS só fala verdade pessimista e suspira; nunca mais se perdeu porque nunca mais saiu de casa; Doutor estreia o topete de galã |
 
 ## Ideias na fila (lista aprovada pelo usuário; ✅ = já virou vídeo)
 - **Casa:** ~~Guarda-chuva de Peneira~~ (rascunho feito e descartado: o usuário não gostou do problema/solução "cabeça abafada") · Travesseiro de Pedra · Ventilador Reverso · Cortina de Vidro Transparente · ✅ Tapete Escorregador Turbo ·
@@ -33,7 +34,7 @@ Loja de televendas fictícia. Comerciais em 2D + VHS, 30–45 s.
   Geladeira Aquecida · Garfo de Sopa · Torradeira Lança-Pão 3000
 - **Saúde e beleza:** ✅ Escova de Dentes Turbo V8 · ✅ Secador de Cabelo a Jato · Academia de Bolso · Protetor Solar de Tinta Branca ·
   Shampoo Fortalecedor de Cimento · Óculos Escuros de Tijolo
-- **Tecnologia:** GPS Pessimista · Celular de Madeira · ✅ Despertador com Soco · ✅ Controle Remoto Universal de Verdade · Wi-Fi de Fio · ✅ Fone Antirruído Extremo
+- **Tecnologia:** ✅ GPS Pessimista · Celular de Madeira · ✅ Despertador com Soco · ✅ Controle Remoto Universal de Verdade · Wi-Fi de Fio · ✅ Fone Antirruído Extremo
 - **Transporte e lazer:** Sapato com Rodinha na Ponta · Kit Escada de 1 Degrau · Bicicleta Quadrada · Boia de Chumbo · Paraquedas de Abrir no Chão · Pipa de Concreto
 - **Pets e jardim:** Coleira para Peixe · ✅ Ratoeira Explosiva 3000 · Seguro contra a Ratoeira Explosiva · Regador de Fogo · Grama Sintética de Plantar
 - **Especiais:** Kit "Tudo que o Kuka Comprou" · Garantia Estendida de 5 Minutos · O Próprio Comercial
