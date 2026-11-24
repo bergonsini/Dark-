@@ -94,12 +94,14 @@
         {
           "quem": "doutor",
           "texto": "Cansado do GPS te mandando pro meio do mato?",
-          "pronuncia": "Cansado do GPS te mandando pro meio do MATO?"
+          "pronuncia": "Cansado do GPS te mandando pro meio do MATO?",
+          "aceleraLocal": 1.08
         },
         {
           "quem": "doutor",
           "texto": "Recalculando… recalculando… e você no meio do rio!",
-          "pronuncia": "Recalculando… recalculando… e você no meio do RIO!"
+          "pronuncia": "Recalculando… recalculando… e você no meio do RIO!",
+          "aceleraLocal": 1.08
         }
       ]
     },
@@ -109,12 +111,14 @@
         {
           "quem": "doutor",
           "texto": "Seus problemas ACABARAM!",
-          "pronuncia": "[excited] Seus problemas ACABARAM!"
+          "pronuncia": "[excited] Seus problemas ACABARAM!",
+          "aceleraLocal": 1.08
         },
         {
           "quem": "doutor",
           "texto": "Apresento o GPS Pessimista!",
-          "pronuncia": "Apresento o GPS PESSIMISTA!"
+          "pronuncia": "Apresento o GPS PESSIMISTA!",
+          "aceleraLocal": 1.08
         }
       ]
     },
@@ -124,7 +128,8 @@
         {
           "quem": "doutor",
           "texto": "Ele fala a verdade!",
-          "pronuncia": "Ele fala a VERDADE!"
+          "pronuncia": "Ele fala a VERDADE!",
+          "aceleraLocal": 1.08
         },
         {
           "quem": "gps",
@@ -139,7 +144,8 @@
         {
           "quem": "doutor",
           "texto": "Nunca mais se perdeu… porque nunca mais saiu de casa!",
-          "pronuncia": "Nunca mais se perdeu… porque nunca mais saiu de CASA!"
+          "pronuncia": "Nunca mais se perdeu… porque nunca mais saiu de CASA!",
+          "aceleraLocal": 1.08
         }
       ]
     },
@@ -149,12 +155,14 @@
         {
           "quem": "doutor",
           "texto": "De 999 por apenas 29,90!",
-          "pronuncia": "De novecentos e noventa e nove por apenas VINTE E NOVE E NOVENTA!"
+          "pronuncia": "De novecentos e noventa e nove por apenas VINTE E NOVE E NOVENTA!",
+          "aceleraLocal": 1.08
         },
         {
           "quem": "doutor",
           "texto": "E ligando AGORA, ganhe um lencinho de brinde!",
-          "pronuncia": "E ligando AGORA, ganhe um LENCINHO de brinde!"
+          "pronuncia": "E ligando AGORA, ganhe um LENCINHO de brinde!",
+          "aceleraLocal": 1.08
         },
         {
           "quem": "kuka",
@@ -164,7 +172,8 @@
         {
           "quem": "doutor",
           "texto": "Ligue já!",
-          "pronuncia": "LIGUE JÁ!"
+          "pronuncia": "LIGUE JÁ!",
+          "aceleraLocal": 1.08
         }
       ]
     },
@@ -175,7 +184,8 @@
           "quem": "doutor",
           "texto": "Destino não garantido. Vontade de sair também não. Lencinho de uso único.",
           "pronuncia": "Destino não garantido. Vontade de sair também não. Lencinho de uso único.",
-          "velocidade": 1.15
+          "velocidade": 1.15,
+          "aceleraLocal": 1.25
         }
       ]
     }
