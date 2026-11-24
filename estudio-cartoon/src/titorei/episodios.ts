@@ -9,6 +9,7 @@ import * as pipoca from "./episodios/golpe-pipoca";
 import * as geladeirinha from "./episodios/geladeirinha";
 import * as exame from "./episodios/exame-dna";
 import * as descongelar from "./episodios/descongelar-tito";
+import * as verdadeiro from "./episodios/verdadeiro-rei";
 
 /** Catálogo de episódios do Titorei: pasta ./episodios/<video>/ com index.ts exportando CENAS. */
 export const EPISODIOS: Record<string, { id: string; Comp: React.FC<CenaProps> }[]> = {
@@ -21,4 +22,5 @@ export const EPISODIOS: Record<string, { id: string; Comp: React.FC<CenaProps> }
   geladeirinha: geladeirinha.CENAS,
   "exame-dna": exame.CENAS,
   "descongelar-tito": descongelar.CENAS,
+  "verdadeiro-rei": verdadeiro.CENAS,
 };

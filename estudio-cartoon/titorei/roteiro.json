@@ -32,107 +32,93 @@
     "eq": "highpass=f=150,equalizer=f=200:t=q:w=1.0:g=-6,equalizer=f=380:t=q:w=1.0:g=-4,equalizer=f=2800:t=q:w=1.0:g=4,equalizer=f=5500:t=q:w=1.4:g=3,treble=g=2.5:f=9000,deesser=i=0.3,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60:makeup=1.5"
   },
   "musica": {
-    "bpm": 126,
-    "tom": 0
+    "bpm": 124,
+    "tom": -3
   },
   "pausas": {
     "entreCenas": 0.25,
     "final": 1.4
   },
-  "video": "descongelar-tito",
-  "titulo": "Descongelando o Tito",
-  "episodio": 9,
+  "video": "verdadeiro-rei",
+  "titulo": "O verdadeiro rei",
+  "episodio": 10,
   "duracaoSegundos": 60,
   "cenas": [
     {
       "id": "gancho",
-      "capitulo": "PICOLÉ DE TITO",
+      "capitulo": "O VERDADEIRO REI",
       "falas": [
         {
-          "texto": "O Tito virou picolé!",
-          "pronuncia": "O Tito virou PICOLÉ!"
+          "texto": "O verdadeiro rei era… uma panela!",
+          "pronuncia": "O verdadeiro rei era… [excited] uma PANELA!"
         },
         {
-          "texto": "E ninguém sabia descongelar.",
-          "pronuncia": "E ninguém sabia descongelar."
+          "texto": "De pressão.",
+          "pronuncia": "[deadpan] De pressão."
         }
       ]
     },
     {
-      "id": "tentativa1",
-      "capitulo": "TENTATIVA 1",
+      "id": "armario",
+      "capitulo": "SAIU DO ARMÁRIO",
       "falas": [
         {
-          "texto": "O micro-ondas tentou esquentar.",
-          "pronuncia": "O micro-ondas tentou ESQUENTAR."
+          "texto": "Ela saiu do armário apitando: essa cozinha era minha antes de vocês!",
+          "pronuncia": "Ela saiu do armário APITANDO: essa cozinha era minha antes de VOCÊS!"
         },
         {
-          "texto": "Mas o Tito não coube na porta.",
-          "pronuncia": "[deadpan] Mas o Tito não COUBE na porta."
-        },
-        {
-          "texto": "Só esquentou a coroa… que ele nem tem.",
-          "pronuncia": "[deadpan] Só esquentou a coroa… que ele nem TEM."
+          "texto": "Cozinhou feijão por quarenta anos… e se aposentou.",
+          "pronuncia": "Cozinhou feijão por QUARENTA anos… [deadpan] e se aposentou."
         }
       ]
     },
     {
-      "id": "tentativa2",
-      "capitulo": "TENTATIVA 2",
+      "id": "duelo",
+      "capitulo": "DUELO NA COZINHA",
       "falas": [
         {
-          "texto": "A capivara sentou em cima pra esquentar… bem devagarinho.",
-          "pronuncia": "A capivara sentou em cima pra esquentar… [deadpan] bem devagarinho."
+          "texto": "A rainha capivara decidiu: duelo de culinária!",
+          "pronuncia": "A rainha capivara decidiu: [excited] DUELO de culinária!"
         },
         {
-          "texto": "Em três horas, derreteu um centímetro.",
-          "pronuncia": "Em TRÊS horas, derreteu UM centímetro."
+          "texto": "Quem cozinhar melhor fica com a coroa.",
+          "pronuncia": "Quem cozinhar melhor fica com a COROA."
         }
       ]
     },
     {
-      "id": "praia",
-      "capitulo": "PLANO DA GELADEIRA",
+      "id": "pratos",
+      "capitulo": "OS PRATOS",
       "falas": [
         {
-          "texto": "Aí a geladeira teve uma ideia: praia! Ela entende de bronzeado.",
-          "pronuncia": "Aí a geladeira teve uma ideia: [excited] PRAIA! Ela entende de bronzeado."
+          "texto": "O micro-ondas fez pipoca em trinta segundos.",
+          "pronuncia": "O micro-ondas fez pipoca em TRINTA segundos."
         },
         {
-          "texto": "E empurraram o bloco de gelo até a areia.",
-          "pronuncia": "E EMPURRARAM o bloco de gelo até a areia."
+          "texto": "A panela fez feijão em quarenta minutos.",
+          "pronuncia": "A panela fez feijão em QUARENTA minutos."
+        },
+        {
+          "texto": "E a capivara não cozinhou nada… pediu pizza.",
+          "pronuncia": "E a capivara não cozinhou nada… [deadpan] pediu PIZZA."
         }
       ]
     },
     {
-      "id": "derrete",
-      "capitulo": "DESCONGELOU!",
+      "id": "juri",
+      "capitulo": "O JURADO",
       "falas": [
         {
-          "texto": "Em dois minutos de sol, o Tito derreteu…",
-          "pronuncia": "Em dois minutos de sol, o Tito DERRETEU…"
+          "texto": "O jurado foi o Tito. Ele comeu tudo… e votou na pizza.",
+          "pronuncia": "O jurado foi o Tito. Ele comeu TUDO… e votou na PIZZA."
         },
         {
-          "texto": "e saiu espirrando: atchim!",
-          "pronuncia": "e saiu espirrando: [excited] ATCHIM!"
+          "texto": "O micro-ondas apitou de raiva. A Gelinha congelou o feijão.",
+          "pronuncia": "O micro-ondas apitou de RAIVA. A Gelinha congelou o FEIJÃO."
         },
         {
-          "texto": "O leite trouxe uma toalha. O sorvete… derreteu junto.",
-          "pronuncia": "O leite trouxe uma toalha. O sorvete… [sighs] derreteu junto."
-        }
-      ]
-    },
-    {
-      "id": "abraco",
-      "capitulo": "PEDIDO DE DESCULPAS",
-      "falas": [
-        {
-          "texto": "A Gelinha pediu desculpa e deu um abraço quentinho.",
-          "pronuncia": "A Gelinha pediu desculpa e deu um abraço QUENTINHO."
-        },
-        {
-          "texto": "Morno, na verdade.",
-          "pronuncia": "[deadpan] Morno, na verdade."
+          "texto": "A capivara continuou rainha. Sem fazer nada.",
+          "pronuncia": "[deadpan] A capivara continuou rainha. Sem fazer NADA."
         }
       ]
     },
@@ -141,16 +127,16 @@
       "capitulo": "CONTINUA…",
       "falas": [
         {
-          "texto": "Mas na água do gelo derretido boiava um bilhete…",
-          "pronuncia": "Mas na água do gelo derretido boiava um BILHETE…"
+          "texto": "Mas a panela ficou tão brava que começou a apitar mais alto…",
+          "pronuncia": "Mas a panela ficou tão BRAVA que começou a apitar mais alto…"
         },
         {
-          "texto": "assinado: o verdadeiro rei.",
-          "pronuncia": "assinado: o VERDADEIRO rei."
+          "texto": "e mais alto…",
+          "pronuncia": "e MAIS alto…"
         },
         {
-          "texto": "Quem é? Descobre no próximo episódio!",
-          "pronuncia": "[excited] Quem é? Descobre no próximo episódio!"
+          "texto": "Ela vai explodir? Descobre no próximo episódio!",
+          "pronuncia": "[excited] Ela vai EXPLODIR? Descobre no próximo episódio!"
         }
       ]
     }

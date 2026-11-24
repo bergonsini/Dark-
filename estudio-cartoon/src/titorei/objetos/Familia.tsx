@@ -93,3 +93,83 @@ export const BlocoGelo: React.FC<{ pos?: V3; k: number; alto?: number }> = ({ po
       <Caixa p={[-0.45, alto * k * 0.7, 0.51]} s={[0.08, alto * k * 0.4, 0.01]} c="#ffffff" o={0.7} />
     </group>
   );
+
+/**
+ * PANELA DE PRESSÃO (a "verdadeira rainha"): corpo prateado, tampa com alça, válvula que apita e gira.
+ * `apito` 0..1 intensidade (vapor + tremor + válvula girando); `inchada` 0..1 estufa (vai explodir?); `coroa` antiga.
+ */
+export const PanelaPressao: React.FC<{ pos?: V3; rotY?: number; escala?: number; expr?: Expr; boca?: number; apito?: number; inchada?: number; coroa?: boolean }> = ({
+  pos = [0, 0, 0],
+  rotY = 0,
+  escala = 1,
+  expr = "bravo",
+  boca = 0,
+  apito = 0,
+  inchada = 0,
+  coroa = false,
+}) => {
+  const f = useCurrentFrame();
+  const tr = apito > 0 ? Math.sin(f * 2.6) * 0.025 * apito : 0;
+  const inf = 1 + inchada * 0.25;
+  return (
+    <group position={[pos[0] + tr, pos[1], pos[2]]} rotation={[0, rotY, tr * 2]} scale={escala}>
+      <group scale={[inf, 1 + inchada * 0.12, inf]}>
+        <Cilindro p={[0, 0.5, 0]} r1={0.62} r2={0.6} h={1.0} lados={14} c={inchada > 0.6 ? "#d98c8c" : "#c9d0d8"} />
+        <Cilindro p={[0, 1.05, 0]} r1={0.66} r2={0.5} h={0.14} lados={14} c="#aeb7c0" />
+      </group>
+      <Caixa p={[0.95, 0.85, 0]} s={[0.75, 0.12, 0.16]} c="#2b2b2b" />
+      <Caixa p={[-0.85, 0.85, 0]} s={[0.4, 0.12, 0.16]} c="#2b2b2b" />
+      <group position={[0, 1.18 + inchada * 0.1, 0]} rotation={[0, apito > 0 ? f * 0.9 * apito : 0, 0]}>
+        <Cilindro p={[0, 0.06, 0]} r1={0.07} h={0.14} lados={8} c="#555" />
+        <Caixa p={[0, 0.16, 0]} s={[0.22, 0.05, 0.05]} c="#333" />
+      </group>
+      {apito > 0 &&
+        [0, 1, 2, 3].map((i) => {
+          const q = ((f * (1 + apito) + i * 8) % 30) / 30;
+          return <Bola key={i} p={[Math.sin(i * 2.1) * 0.15 * q, 1.35 + q * 1.1 * (0.6 + apito), Math.cos(i * 1.3) * 0.1]} raio={0.09 + q * 0.18} d={0} c="#f4f8fb" o={(1 - q) * 0.9} />;
+        })}
+      <Rostinho p={[0, 0.55, 0.62 * inf]} s={1.5} boca={boca} expr={expr} seed={33} />
+      {coroa && (
+        <group position={[0, 1.45 + inchada * 0.1, 0]}>
+          {[0, 1, 2, 3, 4].map((i) => (
+            <mesh key={i} position={[Math.cos((i / 5) * Math.PI * 2) * 0.22, 0.12, Math.sin((i / 5) * Math.PI * 2) * 0.22]}>
+              <coneGeometry args={[0.07, 0.28, 4]} />
+              <meshStandardMaterial color="#b8952a" flatShading />
+            </mesh>
+          ))}
+          <Cilindro p={[0, 0, 0]} r1={0.28} h={0.08} lados={10} c="#b8952a" />
+        </group>
+      )}
+    </group>
+  );
+};
+
+/** Caixa de pizza aberta (ou fechada) com a pizza. */
+export const CaixaPizza: React.FC<{ pos?: V3; aberta?: number; escala?: number; rotY?: number }> = ({ pos = [0, 0, 0], aberta = 1, escala = 1, rotY = 0 }) => (
+  <group position={pos} scale={escala} rotation={[0, rotY, 0]}>
+    <Caixa p={[0, 0.05, 0]} s={[0.9, 0.1, 0.9]} c="#d9b07a" />
+    <Cilindro p={[0, 0.12, 0]} r1={0.4} h={0.04} lados={14} c="#f2b632" />
+    {[[0.15, 0.1], [-0.12, 0.18], [0.05, -0.17], [-0.2, -0.05], [0.22, -0.12]].map(([x, z], i) => (
+      <Cilindro key={i} p={[x, 0.15, z]} r1={0.06} h={0.02} lados={8} c="#c62828" />
+    ))}
+    <group position={[0, 0.1, -0.45]} rotation={[-aberta * 1.9, 0, 0]}>
+      <Caixa p={[0, 0, 0.45]} s={[0.9, 0.04, 0.9]} c="#e2bd86" />
+    </group>
+  </group>
+);
+
+/** Prato de feijão (com vapor). */
+export const PratoFeijao: React.FC<{ pos?: V3; escala?: number; congelado?: boolean }> = ({ pos = [0, 0, 0], escala = 1, congelado = false }) => {
+  const f = useCurrentFrame();
+  return (
+    <group position={pos} scale={escala}>
+      <Cilindro p={[0, 0.04, 0]} r1={0.4} r2={0.32} h={0.08} lados={14} c="#ffffff" />
+      <Cilindro p={[0, 0.1, 0]} r1={0.3} h={0.06} lados={14} c={congelado ? "#bfe6f5" : "#5a2e1a"} />
+      {!congelado &&
+        [0, 1].map((i) => {
+          const q = ((f + i * 15) % 30) / 30;
+          return <Bola key={i} p={[(i - 0.5) * 0.2, 0.2 + q * 0.5, 0]} raio={0.05 + q * 0.06} d={0} c="#f4f8fb" o={1 - q} />;
+        })}
+    </group>
+  );
+};
