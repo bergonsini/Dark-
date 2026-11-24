@@ -32,6 +32,7 @@ Leia ANTES de escrever um episódio novo e ATUALIZE depois de entregar.
   O **pai da Gelinha é o MICRO-ONDAS** (por isso ela ama pipoca; ela é MORNA). Objetos novos em `objetos/Familia.tsx`: `Geladeirinha`, `Freezer`, `Termometro`, `Envelope`, `BlocoGelo`.
 - Ep. 9: o Tito foi descongelado na PRAIA (micro-ondas não coube; capivara derreteu 1 cm em 3 h). Saiu espirrando, molhado. O sorvete derreteu junto.
   Mistério novo: bilhete "Essa cozinha é minha. — O VERDADEIRO REI 👑".
+- **Panela de Pressão** (ep. 10) — o "verdadeiro rei" do bilhete: velha rainha aposentada (40 anos de feijão), mora no armário, usa coroa antiga. Perdeu o duelo de culinária (o Tito votou na PIZZA que a capivara pediu). Componentes em `objetos/Familia.tsx`: `PanelaPressao` (`apito`, `inchada`, `coroa`), `CaixaPizza`, `PratoFeijao`.
 - **Leite** — medroso, sua de nervoso (mas desceu o arco-íris gritando de alegria). **Queijo** — medita flutuando. **Manteiga** — faz ioga. **Sorvete** — pediu pra ficar.
 
 ## Piadas recorrentes
@@ -56,3 +57,4 @@ Leia ANTES de escrever um episódio novo e ATUALIZE depois de entregar.
 | 7 | geladeirinha | Nasceu a geladeirinha | "Se a geladeira é a mãe… quem é o PAI?" Bateram na porta: **silhueta de um FREEZER** com olhinhos azuis. "Descobre no próximo episódio!" |
 | 8 | exame-dna | O exame de DNA | A Gelinha falou a primeira palavra… e **CONGELOU O TITO INTEIRO** (bloco de gelo). "Como descongelar o Tito? Descobre no próximo episódio!" |
 | 9 | descongelar-tito | Descongelando o Tito | Na água do gelo derretido boiava um **bilhete**: "Essa cozinha é minha. — O VERDADEIRO REI". "Quem é? Descobre no próximo episódio!" |
+| 10 | verdadeiro-rei | O verdadeiro rei | A panela de pressão ficou tão brava que começou a **apitar cada vez mais alto e inchar**. "Ela vai EXPLODIR? Descobre no próximo episódio!" |

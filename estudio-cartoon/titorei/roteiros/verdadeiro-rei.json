@@ -1,0 +1,145 @@
+{
+  "projeto": "titorei",
+  "fps": 30,
+  "saida": {
+    "timeline": "src/titorei/timeline.json",
+    "audio": "public/titorei/audio"
+  },
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "wTABSOIKENuRDeLiHYDF",
+      "nome": "Jonas (pt-BR, dinâmico, Titorei)",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.35,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências",
+    "eq": "highpass=f=150,equalizer=f=200:t=q:w=1.0:g=-6,equalizer=f=380:t=q:w=1.0:g=-4,equalizer=f=2800:t=q:w=1.0:g=4,equalizer=f=5500:t=q:w=1.4:g=3,treble=g=2.5:f=9000,deesser=i=0.3,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60:makeup=1.5"
+  },
+  "musica": {
+    "bpm": 124,
+    "tom": -3
+  },
+  "pausas": {
+    "entreCenas": 0.25,
+    "final": 1.4
+  },
+  "video": "verdadeiro-rei",
+  "titulo": "O verdadeiro rei",
+  "episodio": 10,
+  "duracaoSegundos": 60,
+  "cenas": [
+    {
+      "id": "gancho",
+      "capitulo": "O VERDADEIRO REI",
+      "falas": [
+        {
+          "texto": "O verdadeiro rei era… uma panela!",
+          "pronuncia": "O verdadeiro rei era… [excited] uma PANELA!",
+          "aceleraLocal": 1.15
+        },
+        {
+          "texto": "De pressão.",
+          "pronuncia": "[deadpan] De pressão."
+        }
+      ]
+    },
+    {
+      "id": "armario",
+      "capitulo": "SAIU DO ARMÁRIO",
+      "falas": [
+        {
+          "texto": "Ela saiu do armário apitando: essa cozinha era minha antes de vocês!",
+          "pronuncia": "Ela saiu do armário APITANDO: essa cozinha era minha antes de VOCÊS!"
+        },
+        {
+          "texto": "Cozinhou feijão por quarenta anos… e se aposentou.",
+          "pronuncia": "Cozinhou feijão por QUARENTA anos… [deadpan] e se aposentou."
+        }
+      ]
+    },
+    {
+      "id": "duelo",
+      "capitulo": "DUELO NA COZINHA",
+      "falas": [
+        {
+          "texto": "A rainha capivara decidiu: duelo de culinária!",
+          "pronuncia": "A rainha capivara decidiu: [excited] DUELO de culinária!"
+        },
+        {
+          "texto": "Quem cozinhar melhor fica com a coroa.",
+          "pronuncia": "Quem cozinhar melhor fica com a COROA."
+        }
+      ]
+    },
+    {
+      "id": "pratos",
+      "capitulo": "OS PRATOS",
+      "falas": [
+        {
+          "texto": "O micro-ondas fez pipoca em trinta segundos.",
+          "pronuncia": "O micro-ondas fez pipoca em TRINTA segundos."
+        },
+        {
+          "texto": "A panela fez feijão em quarenta minutos.",
+          "pronuncia": "A panela fez feijão em QUARENTA minutos."
+        },
+        {
+          "texto": "E a capivara não cozinhou nada… pediu pizza.",
+          "pronuncia": "E a capivara não cozinhou nada… [deadpan] pediu PIZZA."
+        }
+      ]
+    },
+    {
+      "id": "juri",
+      "capitulo": "O JURADO",
+      "falas": [
+        {
+          "texto": "O jurado foi o Tito. Ele comeu tudo… e votou na pizza.",
+          "pronuncia": "O jurado foi o Tito. Ele comeu TUDO… e votou na PIZZA."
+        },
+        {
+          "texto": "O micro-ondas apitou de raiva. A Gelinha congelou o feijão.",
+          "pronuncia": "O micro-ondas apitou de RAIVA. A Gelinha congelou o FEIJÃO."
+        },
+        {
+          "texto": "A capivara continuou rainha. Sem fazer nada.",
+          "pronuncia": "[deadpan] A capivara continuou rainha. Sem fazer NADA."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "capitulo": "CONTINUA…",
+      "falas": [
+        {
+          "texto": "Mas a panela ficou tão brava que começou a apitar mais alto…",
+          "pronuncia": "Mas a panela ficou tão BRAVA que começou a apitar mais alto…"
+        },
+        {
+          "texto": "e mais alto…",
+          "pronuncia": "e MAIS alto…"
+        },
+        {
+          "texto": "Ela vai explodir? Descobre no próximo episódio!",
+          "pronuncia": "[excited] Ela vai EXPLODIR? Descobre no próximo episódio!"
+        }
+      ]
+    }
+  ]
+}
