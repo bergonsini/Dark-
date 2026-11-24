@@ -35,7 +35,6 @@ const PM: V3 = [-1.4, 0, -0.6]; // micro-ondas
 const PC: V3 = [-0.1, 0, 1.4]; // capivara
 const PCj: V3 = [-2.0, 0, 0.3]; // capivara no júri (fora da frente do Tito)
 const PT: V3 = [1.6, 0, 1.1]; // Tito
-const PB: V3 = [-1.6, 0, 1.3]; // Gelinha
 const ROSTO_P = 0.55;
 
 /** Armário de madeira (a panela sai dele). `abre` 0..1. */
