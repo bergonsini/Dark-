@@ -2,7 +2,7 @@
   "video": "estalar-dedos",
   "titulo": "Por que o dedo estala?",
   "fps": 30,
-  "duracaoSegundos": 60,
+  "duracaoSegundos": 57,
   "personagem": "tito",
   "voz": {
     "motor": "elevenlabs",
