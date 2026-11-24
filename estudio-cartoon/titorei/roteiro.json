@@ -50,7 +50,8 @@
       "falas": [
         {
           "texto": "O verdadeiro rei era… uma panela!",
-          "pronuncia": "O verdadeiro rei era… [excited] uma PANELA!"
+          "pronuncia": "O verdadeiro rei era… [excited] uma PANELA!",
+          "aceleraLocal": 1.15
         },
         {
           "texto": "De pressão.",
