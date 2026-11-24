@@ -15,6 +15,7 @@ Loja de televendas **fictícia** (nada é vendido de verdade, é só humor). Cad
 - **Personagens fixos** (`src/inutilidades/Personagens.tsx` — use sempre estes componentes):
   - **Doutor Oferta** (`DoutorOferta`): apresentador, terno roxo, gravata dourada, topete, sorrisão brilhante, microfone de cabeça.
     Poses: parado, apontando, bracosAbertos, apresentando, joinha. Expr: sorriso, piscando, gritando, chocado. `queimado`.
+    **Desde o ep. 10 usa o TOPETE DE GALÃ (cabelo bonito, sem `curativo`)**, a pedido do usuário. Só use `curativo` se a piada pedir.
     Voz: **Carlos** (ElevenLabs `xJ8U5HgW3Zps75qgYrFw`) — locutor de oferta empolgado.
   - **Seu Kuka Beludo** (`SeuKuka`): cliente fiel, black power volumoso (o "Beludo"), bigodão, camiseta verde.
     Compra TUDO e sempre se dá mal; o cabelo termina destruído. Estados: normal, faminto, tostado (sem sobrancelha!).

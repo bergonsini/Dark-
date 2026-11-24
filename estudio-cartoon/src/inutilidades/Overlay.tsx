@@ -268,7 +268,7 @@ export const Legenda: React.FC<{ y?: number; pular?: string[] }> = ({ y = 1360, 
       const grupo = ws.slice(bloco * 3, bloco * 3 + 3);
       const ini = grupo[0].startFrame;
       const sIn = spring({ frame: f - ini, fps, config: { damping: 12, stiffness: 300, mass: 0.5 } });
-      const cor = l.quem === "kuka" ? "#B8F5C4" : l.quem === "rato" ? "#FFC2CC" : l.quem === "cleide" ? "#F8C6FF" : "#FFFFFF";
+      const cor = l.quem === "kuka" ? "#B8F5C4" : l.quem === "rato" ? "#FFC2CC" : l.quem === "cleide" ? "#F8C6FF" : l.quem === "gps" ? "#C9D0DC" : "#FFFFFF";
       return (
         <div style={{ position: "absolute", left: 40, right: 40, top: y, textAlign: "center", transform: `scale(${0.7 + sIn * 0.3})` }}>
           {grupo.map((w, k) => {

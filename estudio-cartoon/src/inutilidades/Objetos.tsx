@@ -1222,3 +1222,75 @@ export const Extintor: React.FC<{ x: number; y: number; escala?: number }> = ({ 
     <path d="M70 -310 Q 130 -300 120 -200" fill="none" strokeWidth={14} />
   </g>
 );
+
+/* ------------------------------------------------------------------ Ep. 10 — GPS Pessimista */
+
+/** Carro visto de frente (cabine), para o Kuka ficar "dentro": capô, para-brisa e volante. Use na frente do personagem. */
+export const CarroFrente: React.FC<{ x: number; y: number; escala?: number; afundando?: number }> = ({ x, y, escala = 1, afundando = 0 }) => {
+  const f = useCurrentFrame();
+  return (
+    <g transform={`translate(${x} ${y + afundando * 120}) scale(${escala}) rotate(${afundando * Math.sin(f * 0.2) * 3})`} stroke={TINTA} strokeWidth={9} strokeLinejoin="round">
+      <path d="M-420 -40 L-360 -200 L360 -200 L420 -40 L440 220 L-440 220 Z" fill="#e8282b" />
+      <rect x={-380} y={-40} width={760} height={120} rx={20} fill="#c41e22" />
+      <circle cx={-270} cy={20} r={48} fill="#fff7c2" />
+      <circle cx={270} cy={20} r={48} fill="#fff7c2" />
+      <rect x={-140} y={60} width={280} height={60} rx={12} fill="#9aa3ae" />
+      <path d="M-300 -200 L-250 -420 L250 -420 L300 -200" fill="none" strokeWidth={10} />
+      <circle cx={0} cy={-150} r={0} />
+    </g>
+  );
+};
+
+/** Água de rio subindo (cobre a parte de baixo da tela). `nivel` 0..1. */
+export const Rio: React.FC<{ nivel: number }> = ({ nivel }) => {
+  const f = useCurrentFrame();
+  if (nivel <= 0) return null;
+  const y = 1920 - nivel * 560;
+  return (
+    <g>
+      <path d={`M0 ${y} Q 135 ${y - 20 + Math.sin(f * 0.2) * 8} 270 ${y} T 540 ${y} T 810 ${y} T 1080 ${y} L1080 1920 L0 1920 Z`} fill="#3da5ff" opacity={0.85} stroke={TINTA} strokeWidth={8} />
+      {[0, 1, 2].map((i) => {
+        const q = ((f + i * 15) % 45) / 45;
+        return <circle key={i} cx={200 + i * 340} cy={y + 60 - q * 80} r={10 + q * 14} fill="none" stroke="#fff" strokeWidth={5} opacity={1 - q} />;
+      })}
+    </g>
+  );
+};
+
+/** O GPS PESSIMISTA: aparelhinho com tela cinza, nuvem de chuva em cima e carinha tristonha. `fala` mexe a boca. */
+export const GPSPessimista: React.FC<{ x: number; y: number; escala?: number; fala?: number; chuva?: boolean }> = ({ x, y, escala = 1, fala = 0, chuva = true }) => {
+  const f = useCurrentFrame();
+  return (
+    <g transform={`translate(${x} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round" strokeLinecap="round">
+      {chuva && (
+        <g>
+          <path d="M-120 -330 Q -150 -400 -80 -410 Q -60 -470 10 -450 Q 70 -490 110 -430 Q 170 -420 150 -350 Z" fill="#8a8a99" />
+          {[0, 1, 2, 3].map((i) => {
+            const q = ((f + i * 7) % 20) / 20;
+            return <path key={i} d={`M${-90 + i * 60} ${-330 + q * 70} l -8 22`} stroke="#3da5ff" strokeWidth={8} opacity={1 - q} />;
+          })}
+        </g>
+      )}
+      <rect x={-200} y={-260} width={400} height={300} rx={36} fill="#2a2833" />
+      <rect x={-170} y={-230} width={340} height={240} rx={20} fill="#9aa3ae" />
+      <circle cx={-60} cy={-140} r={14} fill={TINTA} />
+      <circle cx={60} cy={-140} r={14} fill={TINTA} />
+      <path d="M-90 -175 L-35 -165 M90 -175 L35 -165" strokeWidth={7} />
+      {fala > 0.08 ? <ellipse cx={0} cy={-75} rx={34} ry={8 + fala * 26} fill="#5a1a1a" /> : <path d="M-40 -60 Q 0 -90 40 -60" fill="none" strokeWidth={8} />}
+      <path d="M110 -100 q 10 22 0 32 q -10 -10 0 -32 Z" fill="#7fd6ff" strokeWidth={4} />
+      <rect x={-30} y={40} width={60} height={90} fill="#2a2833" />
+      <rect x={-90} y={120} width={180} height={30} rx={12} fill="#2a2833" />
+    </g>
+  );
+};
+
+/** Lencinho de papel (brinde). */
+export const Lencinho: React.FC<{ x: number; y: number; escala?: number }> = ({ x, y, escala = 1 }) => {
+  const f = useCurrentFrame();
+  return (
+    <g transform={`translate(${x} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={7} strokeLinejoin="round">
+      <rect x={-120} y={-60} width={240} height={120} rx={18} fill="#9bd0ff" />
+      <path d={`M-50 -60 Q ${-20 + Math.sin(f * 0.3) * 10} -180 30 -150 Q 70 -140 50 -60`} fill="#fff" />
+    </g>
+  );
+};
