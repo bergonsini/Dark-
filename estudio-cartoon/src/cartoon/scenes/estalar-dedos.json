@@ -1,0 +1,134 @@
+{
+  "video": "estalar-dedos",
+  "titulo": "Por que o dedo estala?",
+  "fps": 30,
+  "duracaoSegundos": 57,
+  "personagem": "tito",
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "tS45q0QcrDHqHoaWdCDR",
+      "nome": "Lax (pt-BR, jovem e alegre) — voz do TITO",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.4,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
+  },
+  "musica": {
+    "bpm": 118,
+    "tom": -2
+  },
+  "fontes": [
+    "Kawchuk et al. (PLOS ONE, 2015, PMC4398549) / University of Alberta / NPR / Science News — ressonância em tempo real: o estalo vem da formação RÁPIDA de uma cavidade de gás no líquido sinovial (efeito ventosa), não do estouro de uma bolha",
+    "Smithsonian / JSTOR Daily — o líquido sinovial lubrifica a articulação; teoria de 1947 (formação de bolha) x 1971 (colapso) — o estudo de 2015 apoiou a de formação",
+    "Unsworth et al. (1971) / Science News — depois de estalar, leva cerca de 20 minutos para o mesmo dedo estalar de novo",
+    "Donald Unger (1998, Arthritis & Rheumatism) — estalou só a mão esquerda por ~60 anos; nenhuma das mãos teve artrite; ganhou o Ig Nobel de Medicina (2009)"
+  ],
+  "cenas": [
+    {
+      "id": "gancho",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Por que o dedo estala?",
+          "pronuncia": "[curious] Por que o dedo ESTALA?"
+        }
+      ]
+    },
+    {
+      "id": "dentro",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Dentro da junta do dedo tem um líquido que funciona como óleo.",
+          "pronuncia": "Dentro da junta do dedo tem um líquido que funciona como ÓLEO."
+        },
+        {
+          "texto": "Ele deixa tudo deslizando liso.",
+          "pronuncia": "Ele deixa tudo deslizando LISO."
+        }
+      ]
+    },
+    {
+      "id": "ventosa",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Quando você puxa o dedo, os ossos se afastam…",
+          "pronuncia": "Quando você puxa o dedo, os ossos se AFASTAM…"
+        },
+        {
+          "texto": "e abre, de repente, uma bolha de gás nesse líquido. Tipo ventosa saindo do vidro: ploc!",
+          "pronuncia": "e abre, de repente, uma bolha de gás nesse líquido. Tipo ventosa saindo do vidro: [excited] PLOC!"
+        }
+      ]
+    },
+    {
+      "id": "mri",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Cientistas filmaram isso numa ressonância, ao vivo, em 2015!",
+          "pronuncia": "Cientistas filmaram isso numa ressonância, AO VIVO, em dois mil e quinze!"
+        }
+      ]
+    },
+    {
+      "id": "espera",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E depois do estalo, o mesmo dedo leva uns vinte minutos pra estalar de novo.",
+          "pronuncia": "E depois do estalo, o mesmo dedo leva uns VINTE minutos pra estalar de novo."
+        }
+      ]
+    },
+    {
+      "id": "artrite",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Dá artrite? Um médico estalou só uma das mãos por uns sessenta anos.",
+          "pronuncia": "[curious] Dá artrite? Um médico estalou só UMA das mãos por uns sessenta anos."
+        },
+        {
+          "texto": "Resultado: nenhuma das duas teve artrite. E ele ainda ganhou um prêmio!",
+          "pronuncia": "Resultado: NENHUMA das duas teve artrite. E ele ainda ganhou um PRÊMIO!"
+        }
+      ]
+    },
+    {
+      "id": "conclusao",
+      "ato": "conclusão",
+      "falas": [
+        {
+          "texto": "Resumindo: estalar o dedo é tipo abrir pote de pepino: ploc! E depois tem que esperar a tampa fechar.",
+          "pronuncia": "Resumindo: estalar o dedo é tipo abrir pote de pepino: [laughs] PLOC! E depois tem que esperar a tampa fechar."
+        },
+        {
+          "texto": "E você, estala os dedos? Conta aí!",
+          "pronuncia": "[curious] E você, estala os DEDOS? Conta aí!"
+        }
+      ]
+    }
+  ],
+  "pausas": {
+    "entreCenas": 0.4,
+    "final": 1.8
+  }
+}
