@@ -1,0 +1,172 @@
+{
+  "projeto": "inutilidades",
+  "fps": 30,
+  "saida": {
+    "timeline": "src/inutilidades/timeline.json",
+    "audio": "public/inutilidades/audio"
+  },
+  "video": "torradeira-lanca-pao",
+  "titulo": "Torradeira Lança-Pão 3000",
+  "episodio": 11,
+  "duracaoSegundos": 42,
+  "pausas": {
+    "entreCenas": 0.2,
+    "final": 1.2
+  },
+  "musica": {
+    "bpm": 126,
+    "tom": 1
+  },
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_santa",
+      "velocidade": 1.05
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "+8%"
+    },
+    "elevenlabs": {
+      "voiceId": "xJ8U5HgW3Zps75qgYrFw",
+      "nome": "Carlos (pt-BR, ofertas) — DOUTOR OFERTA",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.35,
+      "similaridade": 0.75
+    },
+    "estiloInterpretacao": "televendas: empolgado, rápido, MAIÚSCULAS na ênfase"
+  },
+  "personagens": {
+    "doutor": {},
+    "kuka": {
+      "kokoro": {
+        "voz": "pm_alex",
+        "velocidade": 0.95
+      },
+      "elevenlabs": {
+        "voiceId": "mP51FBaz7jxNEIeFJwxX",
+        "nome": "Silas (pt-BR, interior) — SEU KUKA BELUDO",
+        "estabilidade": 0.45
+      }
+    },
+    "rato": {
+      "kokoro": {
+        "voz": "pm_alex",
+        "velocidade": 0.9
+      },
+      "elevenlabs": {
+        "voiceId": "mP51FBaz7jxNEIeFJwxX",
+        "nome": "Silas afinado — RATO",
+        "estabilidade": 0.45
+      },
+      "afinar": 1.45
+    },
+    "cleide": {
+      "kokoro": {
+        "voz": "pf_dora",
+        "velocidade": 1.0
+      },
+      "elevenlabs": {
+        "voiceId": "CS2gH5fPqUCmkVNpHsy4",
+        "nome": "Raquel (pt-BR, 55 anos, interior) — DONA CLEIDE",
+        "estabilidade": 0.45
+      }
+    }
+  },
+  "cenas": [
+    {
+      "id": "problema",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Cansado de torradeira que não solta o pão?",
+          "pronuncia": "Cansado de torradeira que não SOLTA o pão?"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Você espera, espera… e ele queima lá dentro!",
+          "pronuncia": "Você espera, espera… e ele QUEIMA lá dentro!"
+        }
+      ]
+    },
+    {
+      "id": "produto",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Seus problemas ACABARAM!",
+          "pronuncia": "[excited] Seus problemas ACABARAM!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Apresento a Torradeira Lança-Pão 3000!",
+          "pronuncia": "Apresento a Torradeira LANÇA-PÃO três mil!"
+        }
+      ]
+    },
+    {
+      "id": "demonstracao",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Ela entrega a torrada direto na sua mão!",
+          "pronuncia": "Ela entrega a torrada DIRETO na sua mão!"
+        },
+        {
+          "quem": "kuka",
+          "texto": "Quero no nível máximo!",
+          "pronuncia": "[excited] Quero no nível MÁXIMO!",
+          "pausaDepois": 1.1
+        },
+        {
+          "quem": "cleide",
+          "texto": "Ué… tá chovendo pão?",
+          "pronuncia": "[surprised] Ué… tá chovendo PÃO?"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Entrega rápida… no apartamento de cima!",
+          "pronuncia": "Entrega rápida… no apartamento de CIMA!"
+        }
+      ]
+    },
+    {
+      "id": "oferta",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "De 999 por apenas 34,90!",
+          "pronuncia": "De novecentos e noventa e nove por apenas TRINTA E QUATRO E NOVENTA!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "E ligando AGORA, ganhe uma luva de goleiro!",
+          "pronuncia": "E ligando AGORA, ganhe uma LUVA DE GOLEIRO!"
+        },
+        {
+          "quem": "kuka",
+          "texto": "Manda duas! Uma é pra Dona Cleide!",
+          "pronuncia": "Manda DUAS! Uma é pra Dona Cleide!"
+        },
+        {
+          "quem": "doutor",
+          "texto": "Ligue já!",
+          "pronuncia": "[excited] LIGUE JÁ!"
+        }
+      ]
+    },
+    {
+      "id": "letrinhas",
+      "falas": [
+        {
+          "quem": "doutor",
+          "texto": "Torrada pode chegar antes de você. Teto não incluso. Vizinha de cima também não.",
+          "pronuncia": "Torrada pode chegar antes de você. Teto não incluso. Vizinha de cima também não.",
+          "aceleraLocal": 1.25
+        }
+      ]
+    }
+  ]
+}
