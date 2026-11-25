@@ -1,0 +1,143 @@
+{
+  "fps": 30,
+  "personagem": "tito",
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "tS45q0QcrDHqHoaWdCDR",
+      "nome": "Lax (pt-BR, jovem e alegre) — voz do TITO",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.4,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
+  },
+  "pausas": {
+    "entreCenas": 0.4,
+    "final": 1.8
+  },
+  "video": "espirro-sol",
+  "titulo": "Por que o sol faz espirrar?",
+  "duracaoSegundos": 54,
+  "musica": {
+    "bpm": 116,
+    "tom": 1
+  },
+  "fontes": [
+    "Live Science (2019, estudo chinês com ~3.400 pessoas: ~25%) / PBS / Cleveland Clinic / Scientific American — reflexo do espirro fótico atinge cerca de 1 em cada 4 pessoas (estimativas de 10% a 35%)",
+    "Cleveland Clinic / Scientific American (nome proposto em 1978) — ACHOO = Autosomal dominant Compelling Helio-Ophthalmic Outburst; 'achoo' é o 'atchim' em inglês",
+    "Scientific American / PBS — explicação mais aceita: 'fios cruzados' no cérebro; o sinal da luz forte (nervo óptico) vaza para o nervo que dispara o espirro (trigêmeo); o mecanismo exato ainda não é certo",
+    "Cleveland Clinic / NCBI Medical Genetics / Wikipedia — passa de pais para filhos (herança dominante)",
+    "Live Science / Wikipedia — Aristóteles (séc. IV a.C.) já perguntava por que o sol faz espirrar"
+  ],
+  "cenas": [
+    {
+      "id": "gancho",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Por que o sol faz espirrar?",
+          "pronuncia": "[curious] Por que o sol faz ESPIRRAR?"
+        }
+      ]
+    },
+    {
+      "id": "cinema",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Você sai do cinema, bate aquele sol na cara…",
+          "pronuncia": "Você sai do cinema, bate aquele SOL na cara…"
+        },
+        {
+          "texto": "e: atchim!",
+          "pronuncia": "e: [laughs] ATCHIM!"
+        }
+      ]
+    },
+    {
+      "id": "um-em-quatro",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Isso acontece com mais ou menos uma em cada quatro pessoas.",
+          "pronuncia": "Isso acontece com mais ou menos UMA em cada QUATRO pessoas."
+        },
+        {
+          "texto": "Se não é você, é o amigo do lado.",
+          "pronuncia": "Se não é você, é o amigo do LADO."
+        }
+      ]
+    },
+    {
+      "id": "fios",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "A explicação mais aceita: fios cruzados no cérebro.",
+          "pronuncia": "A explicação mais aceita: fios CRUZADOS no cérebro."
+        },
+        {
+          "texto": "A luz forte chega pelo olho… e o sinal vaza pro nervo do espirro!",
+          "pronuncia": "A luz forte chega pelo olho… e o sinal VAZA pro nervo do espirro!"
+        }
+      ]
+    },
+    {
+      "id": "nome",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E o nome científico parece piada: síndrome ACHOO!",
+          "pronuncia": "E o nome científico parece piada: [laughs] síndrome ACHOO!"
+        },
+        {
+          "texto": "Que é justamente o atchim em inglês.",
+          "pronuncia": "Que é justamente o ATCHIM em inglês."
+        }
+      ]
+    },
+    {
+      "id": "familia",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E passa de pai pra filho.",
+          "pronuncia": "E passa de pai pra FILHO."
+        },
+        {
+          "texto": "Até Aristóteles já estranhava isso, há mais de dois mil anos!",
+          "pronuncia": "Até Aristóteles já estranhava isso, há mais de DOIS MIL anos!"
+        }
+      ]
+    },
+    {
+      "id": "conclusao",
+      "ato": "conclusão",
+      "falas": [
+        {
+          "texto": "Resumindo: o sol não te deixa doente… só dá um curto-circuito no seu nariz.",
+          "pronuncia": "Resumindo: o sol não te deixa doente… só dá um CURTO-CIRCUITO no seu nariz."
+        },
+        {
+          "texto": "E você, espirra no sol? Conta aí!",
+          "pronuncia": "[curious] E você, espirra no SOL? Conta aí!"
+        }
+      ]
+    }
+  ]
+}

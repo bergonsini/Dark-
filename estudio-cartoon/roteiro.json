@@ -26,22 +26,23 @@
     "espeakPitch": 48,
     "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
   },
-  "musica": {
-    "bpm": 112,
-    "tom": 0
-  },
   "pausas": {
     "entreCenas": 0.4,
     "final": 1.8
   },
-  "video": "barriga-ronca",
-  "titulo": "Por que a barriga ronca?",
-  "duracaoSegundos": 51,
+  "video": "espirro-sol",
+  "titulo": "Por que o sol faz espirrar?",
+  "duracaoSegundos": 54,
+  "musica": {
+    "bpm": 116,
+    "tom": 1
+  },
   "fontes": [
-    "Scientific American / Live Science / Wikipedia (Borborygmi) — o ronco vem das contrações dos músculos do estômago e do intestino delgado empurrando gás e líquido; pode acontecer de barriga cheia ou vazia",
-    "Colorado State Univ. (Pathophysiology of the Digestive System) / Wikipedia (Migrating motor complex) / Deloose et al. 2012 — entre refeições, o complexo motor migratório (MMC) varre estômago e intestino: o 'faxineiro' do intestino; é barulhento e causa o ronco; comer interrompe",
-    "Live Science / GoodRx / Time — de barriga vazia o ronco fica mais alto porque não tem comida para abafar o som",
-    "Wikipedia / Merriam-Webster — 'borborigmo' vem do grego borborygmos, palavra que imita o próprio barulho"
+    "Live Science (2019, estudo chinês com ~3.400 pessoas: ~25%) / PBS / Cleveland Clinic / Scientific American — reflexo do espirro fótico atinge cerca de 1 em cada 4 pessoas (estimativas de 10% a 35%)",
+    "Cleveland Clinic / Scientific American (nome proposto em 1978) — ACHOO = Autosomal dominant Compelling Helio-Ophthalmic Outburst; 'achoo' é o 'atchim' em inglês",
+    "Scientific American / PBS — explicação mais aceita: 'fios cruzados' no cérebro; o sinal da luz forte (nervo óptico) vaza para o nervo que dispara o espirro (trigêmeo); o mecanismo exato ainda não é certo",
+    "Cleveland Clinic / NCBI Medical Genetics / Wikipedia — passa de pais para filhos (herança dominante)",
+    "Live Science / Wikipedia — Aristóteles (séc. IV a.C.) já perguntava por que o sol faz espirrar"
   ],
   "cenas": [
     {
@@ -49,64 +50,50 @@
       "ato": "começo",
       "falas": [
         {
-          "texto": "Por que a barriga ronca?",
-          "pronuncia": "[curious] Por que a barriga RONCA?"
+          "texto": "Por que o sol faz espirrar?",
+          "pronuncia": "[curious] Por que o sol faz ESPIRRAR?"
         }
       ]
     },
     {
-      "id": "prova",
+      "id": "cinema",
       "ato": "começo",
       "falas": [
         {
-          "texto": "Sala em silêncio, prova valendo nota…",
-          "pronuncia": "[whispers] Sala em silêncio, prova valendo nota…"
+          "texto": "Você sai do cinema, bate aquele sol na cara…",
+          "pronuncia": "Você sai do cinema, bate aquele SOL na cara…"
         },
         {
-          "texto": "e a sua barriga resolve fazer um show!",
-          "pronuncia": "e a sua barriga resolve fazer um SHOW!"
+          "texto": "e: atchim!",
+          "pronuncia": "e: [laughs] ATCHIM!"
         }
       ]
     },
     {
-      "id": "tubo",
+      "id": "um-em-quatro",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Seu intestino é um tubo de músculo que aperta e empurra tudo lá dentro.",
-          "pronuncia": "Seu intestino é um tubo de MÚSCULO que aperta e empurra tudo lá dentro."
+          "texto": "Isso acontece com mais ou menos uma em cada quatro pessoas.",
+          "pronuncia": "Isso acontece com mais ou menos UMA em cada QUATRO pessoas."
         },
         {
-          "texto": "Quando ele espreme gás e líquido, sai o ronco!",
-          "pronuncia": "Quando ele espreme gás e líquido, sai o [laughs] RONCO!"
+          "texto": "Se não é você, é o amigo do lado.",
+          "pronuncia": "Se não é você, é o amigo do LADO."
         }
       ]
     },
     {
-      "id": "faxina",
+      "id": "fios",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Com a barriga vazia, começa uma faxina:",
-          "pronuncia": "[excited] Com a barriga vazia, começa uma FAXINA:"
+          "texto": "A explicação mais aceita: fios cruzados no cérebro.",
+          "pronuncia": "A explicação mais aceita: fios CRUZADOS no cérebro."
         },
         {
-          "texto": "ondas fortes varrem os restinhos de comida. É a equipe da limpeza passando!",
-          "pronuncia": "ondas fortes varrem os restinhos de comida. É a equipe da LIMPEZA passando!"
-        }
-      ]
-    },
-    {
-      "id": "eco",
-      "ato": "desenvolvimento",
-      "falas": [
-        {
-          "texto": "E por que ronca mais alto com fome?",
-          "pronuncia": "[curious] E por que ronca mais ALTO com fome?"
-        },
-        {
-          "texto": "Sem comida dentro, não tem nada pra abafar o barulho.",
-          "pronuncia": "Sem comida dentro, não tem NADA pra abafar o barulho."
+          "texto": "A luz forte chega pelo olho… e o sinal vaza pro nervo do espirro!",
+          "pronuncia": "A luz forte chega pelo olho… e o sinal VAZA pro nervo do espirro!"
         }
       ]
     },
@@ -115,12 +102,26 @@
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "E esse ronco tem nome chique: borborigmo!",
-          "pronuncia": "E esse ronco tem nome chique: [laughs] BORBORIGMO!"
+          "texto": "E o nome científico parece piada: síndrome ACHOO!",
+          "pronuncia": "E o nome científico parece piada: [laughs] síndrome ACHOO!"
         },
         {
-          "texto": "Uma palavra grega que imita o próprio barulho.",
-          "pronuncia": "Uma palavra grega que imita o PRÓPRIO barulho."
+          "texto": "Que é justamente o atchim em inglês.",
+          "pronuncia": "Que é justamente o ATCHIM em inglês."
+        }
+      ]
+    },
+    {
+      "id": "familia",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E passa de pai pra filho.",
+          "pronuncia": "E passa de pai pra FILHO."
+        },
+        {
+          "texto": "Até Aristóteles já estranhava isso, há mais de dois mil anos!",
+          "pronuncia": "Até Aristóteles já estranhava isso, há mais de DOIS MIL anos!"
         }
       ]
     },
@@ -129,12 +130,12 @@
       "ato": "conclusão",
       "falas": [
         {
-          "texto": "Resumindo: a barriga ronca porque tá fazendo faxina… e o show é de graça.",
-          "pronuncia": "Resumindo: a barriga ronca porque tá fazendo FAXINA… e o show é de graça."
+          "texto": "Resumindo: o sol não te deixa doente… só dá um curto-circuito no seu nariz.",
+          "pronuncia": "Resumindo: o sol não te deixa doente… só dá um CURTO-CIRCUITO no seu nariz."
         },
         {
-          "texto": "E a sua, já roncou na hora errada? Conta aí!",
-          "pronuncia": "[curious] E a sua, já roncou na hora ERRADA? Conta aí!"
+          "texto": "E você, espirra no sol? Conta aí!",
+          "pronuncia": "[curious] E você, espirra no SOL? Conta aí!"
         }
       ]
     }
