@@ -32,94 +32,113 @@
     "eq": "highpass=f=150,equalizer=f=200:t=q:w=1.0:g=-6,equalizer=f=380:t=q:w=1.0:g=-4,equalizer=f=2800:t=q:w=1.0:g=4,equalizer=f=5500:t=q:w=1.4:g=3,treble=g=2.5:f=9000,deesser=i=0.3,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60:makeup=1.5"
   },
   "musica": {
-    "bpm": 124,
-    "tom": -3
+    "bpm": 128,
+    "tom": -1
   },
   "pausas": {
     "entreCenas": 0.25,
     "final": 1.4
   },
-  "video": "verdadeiro-rei",
-  "titulo": "O verdadeiro rei",
-  "episodio": 10,
+  "video": "tampa-coroa",
+  "titulo": "A coroa de tampa",
+  "episodio": 11,
   "duracaoSegundos": 60,
   "cenas": [
     {
       "id": "gancho",
-      "capitulo": "O VERDADEIRO REI",
+      "capitulo": "VAI EXPLODIR!",
       "falas": [
         {
-          "texto": "O verdadeiro rei era… uma panela!",
-          "pronuncia": "O verdadeiro rei era… [excited] uma PANELA!",
-          "aceleraLocal": 1.15
+          "texto": "A panela de pressão ia explodir!",
+          "pronuncia": "[excited] A panela de pressão ia EXPLODIR!"
         },
         {
-          "texto": "De pressão.",
-          "pronuncia": "[deadpan] De pressão."
+          "texto": "E ninguém sabia desligar.",
+          "pronuncia": "[deadpan] E ninguém sabia desligar."
         }
       ]
     },
     {
-      "id": "armario",
-      "capitulo": "SAIU DO ARMÁRIO",
+      "id": "panico",
+      "capitulo": "PÂNICO NA COZINHA",
       "falas": [
         {
-          "texto": "Ela saiu do armário apitando: essa cozinha era minha antes de vocês!",
-          "pronuncia": "Ela saiu do armário APITANDO: essa cozinha era minha antes de VOCÊS!"
+          "texto": "O relógio acordou gritando: evacuar!",
+          "pronuncia": "O relógio acordou gritando: [excited] EVACUAR!"
         },
         {
-          "texto": "Cozinhou feijão por quarenta anos… e se aposentou.",
-          "pronuncia": "Cozinhou feijão por QUARENTA anos… [deadpan] e se aposentou."
+          "texto": "O leite suou tanto que virou iogurte.",
+          "pronuncia": "O leite suou tanto que virou… [deadpan] IOGURTE."
+        },
+        {
+          "texto": "E a Gelinha congelou de medo.",
+          "pronuncia": "E a Gelinha CONGELOU de medo."
         }
       ]
     },
     {
-      "id": "duelo",
-      "capitulo": "DUELO NA COZINHA",
+      "id": "capivara",
+      "capitulo": "OPERAÇÃO CALMA",
       "falas": [
         {
-          "texto": "A rainha capivara decidiu: duelo de culinária!",
-          "pronuncia": "A rainha capivara decidiu: [excited] DUELO de culinária!"
+          "texto": "Só a rainha capivara não correu.",
+          "pronuncia": "Só a rainha capivara NÃO correu."
         },
         {
-          "texto": "Quem cozinhar melhor fica com a coroa.",
-          "pronuncia": "Quem cozinhar melhor fica com a COROA."
+          "texto": "Ela foi até a panela… bem devagarinho. Um centímetro por hora.",
+          "pronuncia": "Ela foi até a panela… bem devagarinho. [deadpan] Um centímetro por HORA."
         }
       ]
     },
     {
-      "id": "pratos",
-      "capitulo": "OS PRATOS",
+      "id": "abraco",
+      "capitulo": "O ABRAÇO",
       "falas": [
         {
-          "texto": "O micro-ondas fez pipoca em trinta segundos.",
-          "pronuncia": "O micro-ondas fez pipoca em TRINTA segundos."
+          "texto": "Mas chegou. E deu um abraço na panela.",
+          "pronuncia": "Mas chegou. E deu um ABRAÇO na panela."
         },
         {
-          "texto": "A panela fez feijão em quarenta minutos.",
-          "pronuncia": "A panela fez feijão em QUARENTA minutos."
-        },
-        {
-          "texto": "E a capivara não cozinhou nada… pediu pizza.",
-          "pronuncia": "E a capivara não cozinhou nada… [deadpan] pediu PIZZA."
+          "texto": "A panela soltou todo o vapor de uma vez!",
+          "pronuncia": "A panela soltou TODO o vapor de uma vez!"
         }
       ]
     },
     {
-      "id": "juri",
-      "capitulo": "O JURADO",
+      "id": "sauna",
+      "capitulo": "SAUNA REAL",
       "falas": [
         {
-          "texto": "O jurado foi o Tito. Ele comeu tudo… e votou na pizza.",
-          "pronuncia": "O jurado foi o Tito. Ele comeu TUDO… e votou na PIZZA."
+          "texto": "A cozinha virou uma sauna. O queijo adorou.",
+          "pronuncia": "A cozinha virou uma SAUNA. [laughs] O queijo adorou."
+        }
+      ]
+    },
+    {
+      "id": "coroa",
+      "capitulo": "COROA DE TAMPA",
+      "falas": [
+        {
+          "texto": "E a tampa voou, girou… e caiu na cabeça do Tito!",
+          "pronuncia": "E a tampa voou, girou… e caiu na cabeça do TITO!"
         },
         {
-          "texto": "O micro-ondas apitou de raiva. A Gelinha congelou o feijão.",
-          "pronuncia": "O micro-ondas apitou de RAIVA. A Gelinha congelou o FEIJÃO."
+          "texto": "O Tito tem coroa de novo! De alumínio.",
+          "pronuncia": "[excited] O Tito tem coroa de NOVO! [deadpan] De alumínio."
+        }
+      ]
+    },
+    {
+      "id": "obrigado",
+      "capitulo": "OBRIGADO, PANELA",
+      "falas": [
+        {
+          "texto": "A panela chorou: quarenta anos de feijão e ninguém nunca disse obrigado.",
+          "pronuncia": "[sighs] A panela chorou: quarenta anos de feijão e ninguém nunca disse OBRIGADO."
         },
         {
-          "texto": "A capivara continuou rainha. Sem fazer nada.",
-          "pronuncia": "[deadpan] A capivara continuou rainha. Sem fazer NADA."
+          "texto": "Todo mundo agradeceu. E ela parou de apitar.",
+          "pronuncia": "Todo mundo AGRADECEU. E ela parou de apitar."
         }
       ]
     },
@@ -128,16 +147,12 @@
       "capitulo": "CONTINUA…",
       "falas": [
         {
-          "texto": "Mas a panela ficou tão brava que começou a apitar mais alto…",
-          "pronuncia": "Mas a panela ficou tão BRAVA que começou a apitar mais alto…"
+          "texto": "Mas no fundo da panela tinha um mapa… com um X atrás da geladeira.",
+          "pronuncia": "Mas no fundo da panela tinha um MAPA… com um X atrás da geladeira."
         },
         {
-          "texto": "e mais alto…",
-          "pronuncia": "e MAIS alto…"
-        },
-        {
-          "texto": "Ela vai explodir? Descobre no próximo episódio!",
-          "pronuncia": "[excited] Ela vai EXPLODIR? Descobre no próximo episódio!"
+          "texto": "O que tem lá? Descobre no próximo episódio!",
+          "pronuncia": "[excited] O que tem lá? Descobre no próximo episódio!"
         }
       ]
     }

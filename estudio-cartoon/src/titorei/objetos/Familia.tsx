@@ -98,7 +98,7 @@ export const BlocoGelo: React.FC<{ pos?: V3; k: number; alto?: number }> = ({ po
  * PANELA DE PRESSÃO (a "verdadeira rainha"): corpo prateado, tampa com alça, válvula que apita e gira.
  * `apito` 0..1 intensidade (vapor + tremor + válvula girando); `inchada` 0..1 estufa (vai explodir?); `coroa` antiga.
  */
-export const PanelaPressao: React.FC<{ pos?: V3; rotY?: number; escala?: number; expr?: Expr; boca?: number; apito?: number; inchada?: number; coroa?: boolean }> = ({
+export const PanelaPressao: React.FC<{ pos?: V3; rotY?: number; escala?: number; expr?: Expr; boca?: number; apito?: number; inchada?: number; coroa?: boolean; semTampa?: boolean; chora?: boolean }> = ({
   pos = [0, 0, 0],
   rotY = 0,
   escala = 1,
@@ -107,6 +107,8 @@ export const PanelaPressao: React.FC<{ pos?: V3; rotY?: number; escala?: number;
   apito = 0,
   inchada = 0,
   coroa = false,
+  semTampa = false,
+  chora = false,
 }) => {
   const f = useCurrentFrame();
   const tr = apito > 0 ? Math.sin(f * 2.6) * 0.025 * apito : 0;
@@ -115,11 +117,19 @@ export const PanelaPressao: React.FC<{ pos?: V3; rotY?: number; escala?: number;
     <group position={[pos[0] + tr, pos[1], pos[2]]} rotation={[0, rotY, tr * 2]} scale={escala}>
       <group scale={[inf, 1 + inchada * 0.12, inf]}>
         <Cilindro p={[0, 0.5, 0]} r1={0.62} r2={0.6} h={1.0} lados={14} c={inchada > 0.6 ? "#d98c8c" : "#c9d0d8"} />
-        <Cilindro p={[0, 1.05, 0]} r1={0.66} r2={0.5} h={0.14} lados={14} c="#aeb7c0" />
+        {!semTampa && <Cilindro p={[0, 1.05, 0]} r1={0.66} r2={0.5} h={0.14} lados={14} c="#aeb7c0" />}
+        {semTampa && <Cilindro p={[0, 1.0, 0]} r1={0.56} r2={0.56} h={0.02} lados={14} c="#7a4a2a" />}
       </group>
+      {chora &&
+        [-1, 1].map((l) =>
+          [0, 1].map((i) => {
+            const q = ((f + i * 12 + (l > 0 ? 6 : 0)) % 24) / 24;
+            return <Bola key={`${l}${i}`} p={[l * 0.32, 0.62 - q * 0.6, 0.66 * inf]} raio={0.06} d={0} c="#7fd6ff" o={1 - q * 0.6} />;
+          }),
+        )}
       <Caixa p={[0.95, 0.85, 0]} s={[0.75, 0.12, 0.16]} c="#2b2b2b" />
       <Caixa p={[-0.85, 0.85, 0]} s={[0.4, 0.12, 0.16]} c="#2b2b2b" />
-      <group position={[0, 1.18 + inchada * 0.1, 0]} rotation={[0, apito > 0 ? f * 0.9 * apito : 0, 0]}>
+      <group visible={!semTampa} position={[0, 1.18 + inchada * 0.1, 0]} rotation={[0, apito > 0 ? f * 0.9 * apito : 0, 0]}>
         <Cilindro p={[0, 0.06, 0]} r1={0.07} h={0.14} lados={8} c="#555" />
         <Caixa p={[0, 0.16, 0]} s={[0.22, 0.05, 0.05]} c="#333" />
       </group>
@@ -173,3 +183,27 @@ export const PratoFeijao: React.FC<{ pos?: V3; escala?: number; congelado?: bool
     </group>
   );
 };
+
+/** Tampa da panela de pressão sozinha (vira a "coroa de alumínio" do Tito). Origem na base da tampa. */
+export const TampaPanela: React.FC<{ pos?: V3; rot?: V3; escala?: number }> = ({ pos = [0, 0, 0], rot = [0, 0, 0], escala = 1 }) => (
+  <group position={pos} rotation={rot} scale={escala}>
+    <Cilindro p={[0, 0.07, 0]} r1={0.66} r2={0.5} h={0.14} lados={14} c="#c9d0d8" />
+    <Cilindro p={[0, 0.2, 0]} r1={0.07} h={0.14} lados={8} c="#555" />
+    <Caixa p={[0.7, 0.08, 0]} s={[0.5, 0.1, 0.14]} c="#2b2b2b" />
+  </group>
+);
+
+/** Mapa do tesouro de papel (low-poly), com o X vermelho. `abre` 0..1 desenrola. */
+export const MapaTesouro: React.FC<{ pos?: V3; rot?: V3; escala?: number; abre?: number }> = ({ pos = [0, 0, 0], rot = [0, 0, 0], escala = 1, abre = 1 }) => (
+  <group position={pos} rotation={rot} scale={escala}>
+    <Caixa p={[0, 0, 0]} s={[1.2 * Math.max(0.15, abre), 0.9, 0.02]} c="#F2DFB4" />
+    {abre > 0.6 && (
+      <>
+        <Caixa p={[-0.3, 0.15, 0.02]} s={[0.4, 0.04, 0.01]} c="#8a6a3a" />
+        <Caixa p={[-0.1, -0.15, 0.02]} s={[0.04, 0.4, 0.01]} c="#8a6a3a" />
+        <Caixa p={[0.3, 0.05, 0.02]} s={[0.3, 0.06, 0.01]} c="#E8282B" r={[0, 0, 0.785]} />
+        <Caixa p={[0.3, 0.05, 0.02]} s={[0.3, 0.06, 0.01]} c="#E8282B" r={[0, 0, -0.785]} />
+      </>
+    )}
+  </group>
+);
