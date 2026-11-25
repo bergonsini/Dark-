@@ -181,7 +181,7 @@ export const Abraco: React.FC<CenaProps> = ({ scene }) => {
         <CameraRig
           keys={[
             { f: 0, pos: [0.2, 2.2, 5.6], alvo: [0.3, 0.9, -0.3], fov: 40 },
-            { f: abr, ...frente([PP[0] - 0.5, 0, PP[2]], 0, 3.8, 0.8, 30), corte: true },
+            { f: abr, ...frente([PP[0] - 0.5, 0, PP[2]], 0, 5.8, 0.8, 34, 0.7), corte: true },
             { f: l1, ...frente(PP, 0, 4.4, ROSTO_P + 0.5, 32), corte: true },
             { f: vap, pos: [0.4, 2.4, 6.0], alvo: [0.6, 1.5, -0.5], fov: 46, corte: true },
           ]}
