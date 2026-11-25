@@ -7,6 +7,7 @@ import { DesafioBalao, DURACAO as DUR_BALAO } from "./desafios/balao";
 import { DesafioCarro, DURACAO as DUR_CARRO } from "./desafios/carro";
 import { DesafioCopo, DURACAO as DUR_COPO } from "./desafios/copo";
 import { DesafioOvo, DURACAO as DUR_OVO } from "./desafios/ovo";
+import { DesafioSorvete, DURACAO as DUR_SORVETE } from "./desafios/sorvete";
 
 /**
  * CANAL 4 — desafio do pause (nome a definir). Neon/arcade, sem personagem fixo, SEM narração.
@@ -18,6 +19,7 @@ export const DESAFIOS: Record<string, { Comp: React.FC; duracao: number }> = {
   carro: { Comp: DesafioCarro, duracao: DUR_CARRO },
   copo: { Comp: DesafioCopo, duracao: DUR_COPO },
   ovo: { Comp: DesafioOvo, duracao: DUR_OVO },
+  sorvete: { Comp: DesafioSorvete, duracao: DUR_SORVETE },
 };
 
 export const desafioAtivo = () => {

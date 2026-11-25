@@ -1,9 +1,9 @@
 {
-  "desafio": "ovo",
-  "titulo": "Pause antes do ovo cair na frigideira",
-  "duracaoFrames": 417,
+  "desafio": "sorvete",
+  "titulo": "Pause antes do sorvete cair no chão",
+  "duracaoFrames": 405,
   "musica": {
-    "bpm": 144,
-    "tom": -1
+    "bpm": 128,
+    "tom": 2
   }
 }
