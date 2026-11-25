@@ -36,6 +36,8 @@ MELHORADO: arte própria neon/arcade, tensão sonora, quadro secreto de vitória
 | # | id | Desafio |
 |---|---|---|
 | 1 | foguete | Pause antes do foguete bater na Lua (0:00.00), 5 tentativas em loop, painel ao vivo, quadro secreto "SALVEI" |
+| — | balao, carro, copo, ovo | (neon) |
+| 6 | sorvete | Pause antes do sorvete cair no chão — 1º em ESTILO CARTOON (pedido do usuário: mudar o tipo de animação). Kit `src/desafio/cartoon.tsx`: `FundoParque`, `PainelToon`, `CronometroToon`, `textoToon`, cores `TOON` |
 
 ## Zonas seguras (pedido do usuário, depois do 1º post)
 Ao pausar, o Instagram/TikTok põe o **ícone de PLAY no centro** da tela (e o de som logo acima); os **botões** (curtir,
