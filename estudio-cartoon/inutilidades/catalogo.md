@@ -26,12 +26,13 @@ Loja de televendas fictícia. Comerciais em 2D + VHS, 30–45 s.
 | 8 | liquidificador-sem-tampa | Liquidificador Sem Tampa Pro Max | de R$ 999 por R$ 44,90 (+ capa de chuva) | 0800-SPLASH | Kuka 18 ("Manda dois… e um canudo bem comprido!"); a vitamina foi pro teto e cobriu a Dona Cleide e o Kuka de laranja |
 | 9 | fone-antirruido | Fone Antirruído Extremo | de R$ 999 por R$ 39,90 (+ extintor) | 0800-SHHHH | Kuka 20 ("MANDA DOIS! O quê? MANDA DOIS!"); não ouviu a Dona Cleide avisando do incêndio (fala MUDA no vídeo) nem os bombeiros |
 | 10 | gps-pessimista | GPS Pessimista | de R$ 999 por R$ 29,90 (+ lencinho) | 0800-NEM-VAI | Kuka 22 ("Então eu nem vou!"; "Manda dois… mas acho que nem chega."); o GPS só fala verdade pessimista e suspira; nunca mais se perdeu porque nunca mais saiu de casa; Doutor estreia o topete de galã |
+| 11 | torradeira-lanca-pao | Torradeira Lança-Pão 3000 | de R$ 999 por R$ 34,90 (+ luva de goleiro) | 0800-VOA-PAO | Kuka 24 ("Manda DUAS! Uma é pra Dona Cleide!"); no nível MÁXIMO a torrada furou o teto, o Kuka ficou tostado e choveu pão no apartamento da Dona Cleide ("Ué… tá chovendo pão?") |
 
 ## Ideias na fila (lista aprovada pelo usuário; ✅ = já virou vídeo)
 - **Casa:** ~~Guarda-chuva de Peneira~~ (rascunho feito e descartado: o usuário não gostou do problema/solução "cabeça abafada") · Travesseiro de Pedra · Ventilador Reverso · Cortina de Vidro Transparente · ✅ Tapete Escorregador Turbo ·
   Lâmpada que Apaga · Porta Giratória Doméstica 2000 · Cama Elástica de Teto
 - **Cozinha:** Pipoca Pré-Mastigada · Garrafa de Água Vazia · Panela Antiaderente de Tudo · ✅ Liquidificador Sem Tampa Pro Max ·
-  Geladeira Aquecida · Garfo de Sopa · Torradeira Lança-Pão 3000
+  Geladeira Aquecida · Garfo de Sopa · ✅ Torradeira Lança-Pão 3000
 - **Saúde e beleza:** ✅ Escova de Dentes Turbo V8 · ✅ Secador de Cabelo a Jato · Academia de Bolso · Protetor Solar de Tinta Branca ·
   Shampoo Fortalecedor de Cimento · Óculos Escuros de Tijolo
 - **Tecnologia:** ✅ GPS Pessimista · Celular de Madeira · ✅ Despertador com Soco · ✅ Controle Remoto Universal de Verdade · Wi-Fi de Fio · ✅ Fone Antirruído Extremo
