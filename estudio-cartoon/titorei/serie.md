@@ -33,7 +33,8 @@ Leia ANTES de escrever um episódio novo e ATUALIZE depois de entregar.
 - Ep. 9: o Tito foi descongelado na PRAIA (micro-ondas não coube; capivara derreteu 1 cm em 3 h). Saiu espirrando, molhado. O sorvete derreteu junto.
   Mistério novo: bilhete "Essa cozinha é minha. — O VERDADEIRO REI 👑".
 - **Panela de Pressão** (ep. 10) — o "verdadeiro rei" do bilhete: velha rainha aposentada (40 anos de feijão), mora no armário, usa coroa antiga. Perdeu o duelo de culinária (o Tito votou na PIZZA que a capivara pediu). Componentes em `objetos/Familia.tsx`: `PanelaPressao` (`apito`, `inchada`, `coroa`), `CaixaPizza`, `PratoFeijao`.
-- **Leite** — medroso, sua de nervoso (mas desceu o arco-íris gritando de alegria). **Queijo** — medita flutuando. **Manteiga** — faz ioga. **Sorvete** — pediu pra ficar.
+- Ep. 11: a panela NÃO explodiu: a capivara chegou (1 cm por hora) e deu um ABRAÇO; ela soltou todo o vapor (cozinha virou sauna). A TAMPA voou e caiu na cabeça do Tito: ele agora usa **COROA DE TAMPA (de alumínio)** (`TampaPanela` sobre o Tito `semCoroa`, escala 0.62, y 2.42). A panela só queria um OBRIGADO (40 anos de feijão). No fundo dela: um **MAPA com X atrás da geladeira**. Objetos novos em `objetos/Familia.tsx`: `TampaPanela`, `MapaTesouro`; `PanelaPressao` ganhou `semTampa` e `chora`.
+- **Leite** — medroso (ep. 11: suou tanto que virou IOGURTE), sua de nervoso (mas desceu o arco-íris gritando de alegria). **Queijo** — medita flutuando. **Manteiga** — faz ioga. **Sorvete** — pediu pra ficar.
 
 ## Piadas recorrentes
 - Objetos com emprego/burocracia (demissão, férias, entrevista, aumento, contrato).
@@ -58,3 +59,4 @@ Leia ANTES de escrever um episódio novo e ATUALIZE depois de entregar.
 | 8 | exame-dna | O exame de DNA | A Gelinha falou a primeira palavra… e **CONGELOU O TITO INTEIRO** (bloco de gelo). "Como descongelar o Tito? Descobre no próximo episódio!" |
 | 9 | descongelar-tito | Descongelando o Tito | Na água do gelo derretido boiava um **bilhete**: "Essa cozinha é minha. — O VERDADEIRO REI". "Quem é? Descobre no próximo episódio!" |
 | 10 | verdadeiro-rei | O verdadeiro rei | A panela de pressão ficou tão brava que começou a **apitar cada vez mais alto e inchar**. "Ela vai EXPLODIR? Descobre no próximo episódio!" |
+| 11 | tampa-coroa | A coroa de tampa | No fundo da panela havia um **MAPA com um X atrás da geladeira**. "O que tem lá? Descobre no próximo episódio!" |
