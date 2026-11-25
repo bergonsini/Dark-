@@ -17,6 +17,7 @@ import * as gelo from "./scenes/gelo-boia";
 import * as pao from "./scenes/pao-duro";
 import * as bocejo from "./scenes/bocejo";
 import * as estalar from "./scenes/estalar-dedos";
+import * as barriga from "./scenes/barriga-ronca";
 
 /**
  * Catálogo de vídeos. Cada vídeo tem sua pasta em ./scenes/<id>/ com um index.ts que exporta CENAS
@@ -43,6 +44,7 @@ export const VIDEOS: Record<string, Cena[]> = {
   "pao-duro": pao.CENAS,
   bocejo: bocejo.CENAS,
   "estalar-dedos": estalar.CENAS,
+  "barriga-ronca": barriga.CENAS,
 };
 
 export const cenasDoVideo = (video?: string): Cena[] => {

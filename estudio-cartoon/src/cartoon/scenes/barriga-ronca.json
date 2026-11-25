@@ -1,0 +1,142 @@
+{
+  "fps": 30,
+  "personagem": "tito",
+  "voz": {
+    "motor": "elevenlabs",
+    "estilo": "documentario",
+    "kokoro": {
+      "voz": "pm_alex",
+      "velocidade": 0.9
+    },
+    "edge": {
+      "voz": "pt-BR-AntonioNeural",
+      "velocidade": "-6%",
+      "tom": "-3Hz"
+    },
+    "elevenlabs": {
+      "voiceId": "tS45q0QcrDHqHoaWdCDR",
+      "nome": "Lax (pt-BR, jovem e alegre) — voz do TITO",
+      "modelo": "eleven_v4",
+      "idioma": "pt",
+      "estabilidade": 0.4,
+      "similaridade": 0.75
+    },
+    "mbrola": "mb-br3",
+    "espeakSpeed": 160,
+    "espeakPitch": 48,
+    "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
+  },
+  "musica": {
+    "bpm": 112,
+    "tom": 0
+  },
+  "pausas": {
+    "entreCenas": 0.4,
+    "final": 1.8
+  },
+  "video": "barriga-ronca",
+  "titulo": "Por que a barriga ronca?",
+  "duracaoSegundos": 56,
+  "fontes": [
+    "Scientific American / Live Science / Wikipedia (Borborygmi) — o ronco vem das contrações dos músculos do estômago e do intestino delgado empurrando gás e líquido; pode acontecer de barriga cheia ou vazia",
+    "Colorado State Univ. (Pathophysiology of the Digestive System) / Wikipedia (Migrating motor complex) / Deloose et al. 2012 — entre refeições, o complexo motor migratório (MMC) varre estômago e intestino: o 'faxineiro' do intestino; é barulhento e causa o ronco; comer interrompe",
+    "Live Science / GoodRx / Time — de barriga vazia o ronco fica mais alto porque não tem comida para abafar o som",
+    "Wikipedia / Merriam-Webster — 'borborigmo' vem do grego borborygmos, palavra que imita o próprio barulho"
+  ],
+  "cenas": [
+    {
+      "id": "gancho",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Por que a barriga ronca?",
+          "pronuncia": "[curious] Por que a barriga RONCA?"
+        }
+      ]
+    },
+    {
+      "id": "prova",
+      "ato": "começo",
+      "falas": [
+        {
+          "texto": "Sala em silêncio, prova valendo nota…",
+          "pronuncia": "[whispers] Sala em silêncio, prova valendo nota…"
+        },
+        {
+          "texto": "e a sua barriga resolve fazer um show!",
+          "pronuncia": "e a sua barriga resolve fazer um SHOW!"
+        }
+      ]
+    },
+    {
+      "id": "tubo",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Seu intestino é um tubo de músculo que aperta e empurra tudo lá dentro.",
+          "pronuncia": "Seu intestino é um tubo de MÚSCULO que aperta e empurra tudo lá dentro."
+        },
+        {
+          "texto": "Quando ele espreme gás e líquido, sai o ronco!",
+          "pronuncia": "Quando ele espreme gás e líquido, sai o [laughs] RONCO!"
+        }
+      ]
+    },
+    {
+      "id": "faxina",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "Com a barriga vazia, começa uma faxina:",
+          "pronuncia": "[excited] Com a barriga vazia, começa uma FAXINA:"
+        },
+        {
+          "texto": "ondas fortes varrem os restinhos de comida. É a equipe da limpeza passando!",
+          "pronuncia": "ondas fortes varrem os restinhos de comida. É a equipe da LIMPEZA passando!"
+        }
+      ]
+    },
+    {
+      "id": "eco",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E por que ronca mais alto com fome?",
+          "pronuncia": "[curious] E por que ronca mais ALTO com fome?"
+        },
+        {
+          "texto": "Sem comida dentro, não tem nada pra abafar o barulho.",
+          "pronuncia": "Sem comida dentro, não tem NADA pra abafar o barulho."
+        }
+      ]
+    },
+    {
+      "id": "nome",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E esse ronco tem nome chique: borborigmo!",
+          "pronuncia": "E esse ronco tem nome chique: [laughs] BORBORIGMO!"
+        },
+        {
+          "texto": "Uma palavra grega que imita o próprio barulho.",
+          "pronuncia": "Uma palavra grega que imita o PRÓPRIO barulho."
+        }
+      ]
+    },
+    {
+      "id": "conclusao",
+      "ato": "conclusão",
+      "falas": [
+        {
+          "texto": "Resumindo: a barriga ronca porque tá fazendo faxina… e o show é de graça.",
+          "pronuncia": "Resumindo: a barriga ronca porque tá fazendo FAXINA… e o show é de graça."
+        },
+        {
+          "texto": "E a sua, já roncou na hora errada? Conta aí!",
+          "pronuncia": "[curious] E a sua, já roncou na hora ERRADA? Conta aí!"
+        }
+      ]
+    }
+  ]
+}

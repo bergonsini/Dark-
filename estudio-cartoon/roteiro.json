@@ -1,8 +1,5 @@
 {
-  "video": "estalar-dedos",
-  "titulo": "Por que o dedo estala?",
   "fps": 30,
-  "duracaoSegundos": 57,
   "personagem": "tito",
   "voz": {
     "motor": "elevenlabs",
@@ -30,14 +27,21 @@
     "estiloInterpretacao": "vivo: tags de emoção do eleven_v4 + ênfase em MAIÚSCULAS + exclamações/reticências"
   },
   "musica": {
-    "bpm": 118,
-    "tom": -2
+    "bpm": 112,
+    "tom": 0
   },
+  "pausas": {
+    "entreCenas": 0.4,
+    "final": 1.8
+  },
+  "video": "barriga-ronca",
+  "titulo": "Por que a barriga ronca?",
+  "duracaoSegundos": 56,
   "fontes": [
-    "Kawchuk et al. (PLOS ONE, 2015, PMC4398549) / University of Alberta / NPR / Science News — ressonância em tempo real: o estalo vem da formação RÁPIDA de uma cavidade de gás no líquido sinovial (efeito ventosa), não do estouro de uma bolha",
-    "Smithsonian / JSTOR Daily — o líquido sinovial lubrifica a articulação; teoria de 1947 (formação de bolha) x 1971 (colapso) — o estudo de 2015 apoiou a de formação",
-    "Unsworth et al. (1971) / Science News — depois de estalar, leva cerca de 20 minutos para o mesmo dedo estalar de novo",
-    "Donald Unger (1998, Arthritis & Rheumatism) — estalou só a mão esquerda por ~60 anos; nenhuma das mãos teve artrite; ganhou o Ig Nobel de Medicina (2009)"
+    "Scientific American / Live Science / Wikipedia (Borborygmi) — o ronco vem das contrações dos músculos do estômago e do intestino delgado empurrando gás e líquido; pode acontecer de barriga cheia ou vazia",
+    "Colorado State Univ. (Pathophysiology of the Digestive System) / Wikipedia (Migrating motor complex) / Deloose et al. 2012 — entre refeições, o complexo motor migratório (MMC) varre estômago e intestino: o 'faxineiro' do intestino; é barulhento e causa o ronco; comer interrompe",
+    "Live Science / GoodRx / Time — de barriga vazia o ronco fica mais alto porque não tem comida para abafar o som",
+    "Wikipedia / Merriam-Webster — 'borborigmo' vem do grego borborygmos, palavra que imita o próprio barulho"
   ],
   "cenas": [
     {
@@ -45,70 +49,78 @@
       "ato": "começo",
       "falas": [
         {
-          "texto": "Por que o dedo estala?",
-          "pronuncia": "[curious] Por que o dedo ESTALA?"
+          "texto": "Por que a barriga ronca?",
+          "pronuncia": "[curious] Por que a barriga RONCA?"
         }
       ]
     },
     {
-      "id": "dentro",
+      "id": "prova",
       "ato": "começo",
       "falas": [
         {
-          "texto": "Dentro da junta do dedo tem um líquido que funciona como óleo.",
-          "pronuncia": "Dentro da junta do dedo tem um líquido que funciona como ÓLEO."
+          "texto": "Sala em silêncio, prova valendo nota…",
+          "pronuncia": "[whispers] Sala em silêncio, prova valendo nota…"
         },
         {
-          "texto": "Ele deixa tudo deslizando liso.",
-          "pronuncia": "Ele deixa tudo deslizando LISO."
+          "texto": "e a sua barriga resolve fazer um show!",
+          "pronuncia": "e a sua barriga resolve fazer um SHOW!"
         }
       ]
     },
     {
-      "id": "ventosa",
+      "id": "tubo",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Quando você puxa o dedo, os ossos se afastam…",
-          "pronuncia": "Quando você puxa o dedo, os ossos se AFASTAM…"
+          "texto": "Seu intestino é um tubo de músculo que aperta e empurra tudo lá dentro.",
+          "pronuncia": "Seu intestino é um tubo de MÚSCULO que aperta e empurra tudo lá dentro."
         },
         {
-          "texto": "e abre, de repente, uma bolha de gás nesse líquido. Tipo ventosa saindo do vidro: ploc!",
-          "pronuncia": "e abre, de repente, uma bolha de gás nesse líquido. Tipo ventosa saindo do vidro: [excited] PLOC!"
+          "texto": "Quando ele espreme gás e líquido, sai o ronco!",
+          "pronuncia": "Quando ele espreme gás e líquido, sai o [laughs] RONCO!"
         }
       ]
     },
     {
-      "id": "mri",
+      "id": "faxina",
       "ato": "desenvolvimento",
       "falas": [
         {
-          "texto": "Cientistas filmaram isso numa ressonância, ao vivo, em 2015!",
-          "pronuncia": "Cientistas filmaram isso numa ressonância, AO VIVO, em dois mil e quinze!"
-        }
-      ]
-    },
-    {
-      "id": "espera",
-      "ato": "desenvolvimento",
-      "falas": [
-        {
-          "texto": "E depois do estalo, o mesmo dedo leva uns vinte minutos pra estalar de novo.",
-          "pronuncia": "E depois do estalo, o mesmo dedo leva uns VINTE minutos pra estalar de novo."
-        }
-      ]
-    },
-    {
-      "id": "artrite",
-      "ato": "desenvolvimento",
-      "falas": [
-        {
-          "texto": "Dá artrite? Um médico estalou só uma das mãos por uns sessenta anos.",
-          "pronuncia": "[curious] Dá artrite? Um médico estalou só UMA das mãos por uns sessenta anos."
+          "texto": "Com a barriga vazia, começa uma faxina:",
+          "pronuncia": "[excited] Com a barriga vazia, começa uma FAXINA:"
         },
         {
-          "texto": "Resultado: nenhuma das duas teve artrite. E ele ainda ganhou um prêmio!",
-          "pronuncia": "Resultado: NENHUMA das duas teve artrite. E ele ainda ganhou um PRÊMIO!"
+          "texto": "ondas fortes varrem os restinhos de comida. É a equipe da limpeza passando!",
+          "pronuncia": "ondas fortes varrem os restinhos de comida. É a equipe da LIMPEZA passando!"
+        }
+      ]
+    },
+    {
+      "id": "eco",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E por que ronca mais alto com fome?",
+          "pronuncia": "[curious] E por que ronca mais ALTO com fome?"
+        },
+        {
+          "texto": "Sem comida dentro, não tem nada pra abafar o barulho.",
+          "pronuncia": "Sem comida dentro, não tem NADA pra abafar o barulho."
+        }
+      ]
+    },
+    {
+      "id": "nome",
+      "ato": "desenvolvimento",
+      "falas": [
+        {
+          "texto": "E esse ronco tem nome chique: borborigmo!",
+          "pronuncia": "E esse ronco tem nome chique: [laughs] BORBORIGMO!"
+        },
+        {
+          "texto": "Uma palavra grega que imita o próprio barulho.",
+          "pronuncia": "Uma palavra grega que imita o PRÓPRIO barulho."
         }
       ]
     },
@@ -117,18 +129,14 @@
       "ato": "conclusão",
       "falas": [
         {
-          "texto": "Resumindo: estalar o dedo é tipo abrir pote de pepino: ploc! E depois tem que esperar a tampa fechar.",
-          "pronuncia": "Resumindo: estalar o dedo é tipo abrir pote de pepino: [laughs] PLOC! E depois tem que esperar a tampa fechar."
+          "texto": "Resumindo: a barriga ronca porque tá fazendo faxina… e o show é de graça.",
+          "pronuncia": "Resumindo: a barriga ronca porque tá fazendo FAXINA… e o show é de graça."
         },
         {
-          "texto": "E você, estala os dedos? Conta aí!",
-          "pronuncia": "[curious] E você, estala os DEDOS? Conta aí!"
+          "texto": "E a sua, já roncou na hora errada? Conta aí!",
+          "pronuncia": "[curious] E a sua, já roncou na hora ERRADA? Conta aí!"
         }
       ]
     }
-  ],
-  "pausas": {
-    "entreCenas": 0.4,
-    "final": 1.8
-  }
+  ]
 }
