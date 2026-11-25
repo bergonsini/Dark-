@@ -10,6 +10,7 @@ import * as despertador from "./episodios/despertador-soco";
 import * as liquidificador from "./episodios/liquidificador-sem-tampa";
 import * as fone from "./episodios/fone-antirruido";
 import * as gps from "./episodios/gps-pessimista";
+import * as torradeira from "./episodios/torradeira-lanca-pao";
 
 export type Episodio = {
   cenas: { id: string; Comp: React.FC<CenaProps>; glitch?: boolean; glitchEm?: number }[];
@@ -33,4 +34,5 @@ export const EPISODIOS: Record<string, Episodio> = {
   "liquidificador-sem-tampa": liquidificador.EPISODIO,
   "fone-antirruido": fone.EPISODIO,
   "gps-pessimista": gps.EPISODIO,
+  "torradeira-lanca-pao": torradeira.EPISODIO,
 };

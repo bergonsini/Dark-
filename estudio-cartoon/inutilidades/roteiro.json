@@ -5,17 +5,17 @@
     "timeline": "src/inutilidades/timeline.json",
     "audio": "public/inutilidades/audio"
   },
-  "video": "gps-pessimista",
-  "titulo": "GPS Pessimista",
-  "episodio": 10,
+  "video": "torradeira-lanca-pao",
+  "titulo": "Torradeira Lança-Pão 3000",
+  "episodio": 11,
   "duracaoSegundos": 42,
   "pausas": {
     "entreCenas": 0.2,
     "final": 1.2
   },
   "musica": {
-    "bpm": 122,
-    "tom": -2
+    "bpm": 126,
+    "tom": 1
   },
   "voz": {
     "motor": "elevenlabs",
@@ -73,18 +73,6 @@
         "nome": "Raquel (pt-BR, 55 anos, interior) — DONA CLEIDE",
         "estabilidade": 0.45
       }
-    },
-    "gps": {
-      "kokoro": {
-        "voz": "pf_dora",
-        "velocidade": 0.92
-      },
-      "elevenlabs": {
-        "voiceId": "CS2gH5fPqUCmkVNpHsy4",
-        "nome": "Raquel grave — GPS PESSIMISTA",
-        "estabilidade": 0.6
-      },
-      "afinar": 0.9
     }
   },
   "cenas": [
@@ -93,15 +81,13 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Cansado do GPS te mandando pro meio do mato?",
-          "pronuncia": "Cansado do GPS te mandando pro meio do MATO?",
-          "aceleraLocal": 1.08
+          "texto": "Cansado de torradeira que não solta o pão?",
+          "pronuncia": "Cansado de torradeira que não SOLTA o pão?"
         },
         {
           "quem": "doutor",
-          "texto": "Recalculando… recalculando… e você no meio do rio!",
-          "pronuncia": "Recalculando… recalculando… e você no meio do RIO!",
-          "aceleraLocal": 1.08
+          "texto": "Você espera, espera… e ele queima lá dentro!",
+          "pronuncia": "Você espera, espera… e ele QUEIMA lá dentro!"
         }
       ]
     },
@@ -111,14 +97,12 @@
         {
           "quem": "doutor",
           "texto": "Seus problemas ACABARAM!",
-          "pronuncia": "[excited] Seus problemas ACABARAM!",
-          "aceleraLocal": 1.08
+          "pronuncia": "[excited] Seus problemas ACABARAM!"
         },
         {
           "quem": "doutor",
-          "texto": "Apresento o GPS Pessimista!",
-          "pronuncia": "Apresento o GPS PESSIMISTA!",
-          "aceleraLocal": 1.08
+          "texto": "Apresento a Torradeira Lança-Pão 3000!",
+          "pronuncia": "Apresento a Torradeira LANÇA-PÃO três mil!"
         }
       ]
     },
@@ -127,25 +111,24 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Ele fala a verdade!",
-          "pronuncia": "Ele fala a VERDADE!",
-          "aceleraLocal": 1.08
-        },
-        {
-          "quem": "gps",
-          "texto": "Vire à direita. Ou não. Você vai se atrasar de qualquer jeito.",
-          "pronuncia": "[sighs] Vire à direita. Ou não. Você vai se atrasar de qualquer jeito."
+          "texto": "Ela entrega a torrada direto na sua mão!",
+          "pronuncia": "Ela entrega a torrada DIRETO na sua mão!"
         },
         {
           "quem": "kuka",
-          "texto": "Então eu nem vou!",
-          "pronuncia": "[sad] Então eu nem VOU!"
+          "texto": "Quero no nível máximo!",
+          "pronuncia": "[excited] Quero no nível MÁXIMO!",
+          "pausaDepois": 1.1
+        },
+        {
+          "quem": "cleide",
+          "texto": "Ué… tá chovendo pão?",
+          "pronuncia": "[surprised] Ué… tá chovendo PÃO?"
         },
         {
           "quem": "doutor",
-          "texto": "Nunca mais se perdeu… porque nunca mais saiu de casa!",
-          "pronuncia": "Nunca mais se perdeu… porque nunca mais saiu de CASA!",
-          "aceleraLocal": 1.08
+          "texto": "Entrega rápida… no apartamento de cima!",
+          "pronuncia": "Entrega rápida… no apartamento de CIMA!"
         }
       ]
     },
@@ -154,26 +137,23 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "De 999 por apenas 29,90!",
-          "pronuncia": "De novecentos e noventa e nove por apenas VINTE E NOVE E NOVENTA!",
-          "aceleraLocal": 1.08
+          "texto": "De 999 por apenas 34,90!",
+          "pronuncia": "De novecentos e noventa e nove por apenas TRINTA E QUATRO E NOVENTA!"
         },
         {
           "quem": "doutor",
-          "texto": "E ligando AGORA, ganhe um lencinho de brinde!",
-          "pronuncia": "E ligando AGORA, ganhe um LENCINHO de brinde!",
-          "aceleraLocal": 1.08
+          "texto": "E ligando AGORA, ganhe uma luva de goleiro!",
+          "pronuncia": "E ligando AGORA, ganhe uma LUVA DE GOLEIRO!"
         },
         {
           "quem": "kuka",
-          "texto": "Manda dois… mas acho que nem chega.",
-          "pronuncia": "[sighs] Manda dois… mas acho que nem CHEGA."
+          "texto": "Manda duas! Uma é pra Dona Cleide!",
+          "pronuncia": "Manda DUAS! Uma é pra Dona Cleide!"
         },
         {
           "quem": "doutor",
           "texto": "Ligue já!",
-          "pronuncia": "LIGUE JÁ!",
-          "aceleraLocal": 1.08
+          "pronuncia": "[excited] LIGUE JÁ!"
         }
       ]
     },
@@ -182,9 +162,8 @@
       "falas": [
         {
           "quem": "doutor",
-          "texto": "Destino não garantido. Vontade de sair também não. Lencinho de uso único.",
-          "pronuncia": "Destino não garantido. Vontade de sair também não. Lencinho de uso único.",
-          "velocidade": 1.15,
+          "texto": "Torrada pode chegar antes de você. Teto não incluso. Vizinha de cima também não.",
+          "pronuncia": "Torrada pode chegar antes de você. Teto não incluso. Vizinha de cima também não.",
           "aceleraLocal": 1.25
         }
       ]

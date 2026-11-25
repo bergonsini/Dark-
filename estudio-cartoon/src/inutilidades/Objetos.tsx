@@ -1294,3 +1294,104 @@ export const Lencinho: React.FC<{ x: number; y: number; escala?: number }> = ({ 
     </g>
   );
 };
+
+/** Fatia de torrada (miolo claro, casca marrom). `queimada` 0..1 escurece. Origem no centro da fatia. */
+export const Torrada: React.FC<{ x: number; y: number; escala?: number; rot?: number; queimada?: number }> = ({ x, y, escala = 1, rot = 0, queimada = 0 }) => {
+  const miolo = queimada > 0.6 ? "#3A2418" : queimada > 0.3 ? "#B9773A" : "#F2C77A";
+  const casca = queimada > 0.6 ? "#1E120C" : "#9C5A22";
+  return (
+    <g transform={`translate(${x} ${y}) scale(${escala}) rotate(${rot})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
+      <path d="M-80 110 L-80 -40 Q -120 -60 -110 -100 Q -95 -140 -40 -130 Q 0 -150 40 -130 Q 95 -140 110 -100 Q 120 -60 80 -40 L80 110 Z" fill={casca} />
+      <path d="M-62 92 L-62 -42 Q -95 -58 -88 -88 Q -78 -118 -38 -110 Q 0 -126 38 -110 Q 78 -118 88 -88 Q 95 -58 62 -42 L62 92 Z" fill={miolo} strokeWidth={0} />
+      {queimada < 0.6 && [[-30, -40], [20, 10], [-10, 50], [35, -70]].map(([cx, cy], i) => <circle key={i} cx={cx} cy={cy} r={6} fill="#D9A55A" strokeWidth={0} />)}
+    </g>
+  );
+};
+
+/** Torradeira velha bege: o pão nem aparece direito; `fumaca` solta fumaça preta (queimando lá dentro). */
+export const TorradeiraVelha: React.FC<{ x: number; y: number; escala?: number; fumaca?: boolean }> = ({ x, y, escala = 1, fumaca = false }) => {
+  const f = useCurrentFrame();
+  return (
+    <g transform={`translate(${x} ${y}) scale(${escala})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round" strokeLinecap="round">
+      {fumaca &&
+        [0, 1, 2].map((i) => {
+          const q = ((f + i * 14) % 42) / 42;
+          return <circle key={i} cx={-40 + i * 40 + Math.sin(q * 6 + i) * 20} cy={-280 - q * 380} r={30 + q * 50} fill="#555" opacity={(1 - q) * 0.85} strokeWidth={0} />;
+        })}
+      <Torrada x={-60} y={-250} escala={0.55} queimada={fumaca ? 1 : 0.3} />
+      <Torrada x={60} y={-250} escala={0.55} queimada={fumaca ? 1 : 0.3} />
+      <rect x={-190} y={-280} width={380} height={280} rx={60} fill="#D8CDB0" />
+      <rect x={-120} y={-290} width={90} height={26} rx={10} fill="#3A3026" />
+      <rect x={30} y={-290} width={90} height={26} rx={10} fill="#3A3026" />
+      <rect x={180} y={-180} width={40} height={60} rx={10} fill="#8A8270" />
+      <rect x={-170} y={-10} width={340} height={22} rx={8} fill="#8A8270" />
+    </g>
+  );
+};
+
+/**
+ * A TORRADEIRA LANÇA-PÃO 3000: cromada e vermelha, com aletas de foguete, botão "MÁX" e chamas embaixo.
+ * `dispara` (frame local do disparo, ou -1) faz tremer antes e soltar fogo/fumaça depois.
+ */
+export const TorradeiraLancaPao: React.FC<{ x: number; y: number; escala?: number; rot?: number; ligada?: boolean; fogo?: number }> = ({ x, y, escala = 1, rot = 0, ligada = false, fogo = 0 }) => {
+  const f = useCurrentFrame();
+  const tr = ligada ? Math.sin(f * 2.9) * 7 : 0;
+  return (
+    <g transform={`translate(${x + tr} ${y}) scale(${escala}) rotate(${rot})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round" strokeLinecap="round">
+      {fogo > 0 && (
+        <g>
+          {[-130, 0, 130].map((dx, i) => (
+            <path key={i} d={`M${dx - 50} -300 Q ${dx + Math.sin(f + i) * 30} ${-300 - 260 * fogo - (i % 2) * 60} ${dx + 50} -300 Z`} fill={i === 1 ? "#FFD23F" : "#FF7A1A"} />
+          ))}
+          {[0, 1, 2, 3].map((i) => {
+            const q = ((f * 1.5 + i * 8) % 32) / 32;
+            return <circle key={i} cx={-150 + i * 100 + Math.sin(q * 5 + i) * 30} cy={-360 - q * 500 * fogo} r={36 + q * 50} fill="#666" opacity={(1 - q) * 0.8} strokeWidth={0} />;
+          })}
+        </g>
+      )}
+      {/* aletas */}
+      <path d="M-210 -60 L-300 40 L-200 20 Z" fill="#E8282B" />
+      <path d="M210 -60 L300 40 L200 20 Z" fill="#E8282B" />
+      <rect x={-220} y={-300} width={440} height={320} rx={70} fill="#C9D0DC" />
+      <path d="M-180 -260 Q -190 -60 -150 -20" fill="none" stroke="#fff" strokeWidth={14} opacity={0.8} />
+      <rect x={-150} y={-312} width={110} height={30} rx={12} fill="#2A2A33" />
+      <rect x={40} y={-312} width={110} height={30} rx={12} fill="#2A2A33" />
+      <rect x={-220} y={-160} width={440} height={70} fill="#E8282B" />
+      <text y={-107} textAnchor="middle" fontSize={50} fill="#FFD23F" stroke={TINTA} strokeWidth={4} paintOrder="stroke" fontFamily="'Baloo 2'" fontWeight={800}>
+        LANÇA-PÃO 3000
+      </text>
+      {/* botão MÁX */}
+      <circle cx={140} cy={-40} r={40} fill={ligada ? "#FF3B3B" : "#FFD23F"} />
+      <text x={140} y={-28} textAnchor="middle" fontSize={30} fill={TINTA} strokeWidth={0} fontFamily="'Baloo 2'" fontWeight={800}>
+        MÁX
+      </text>
+      <circle cx={-140} cy={-40} r={16} fill={ligada ? "#3DFF8A" : "#555"} />
+      <rect x={-200} y={10} width={400} height={26} rx={10} fill="#8A8F9C" />
+    </g>
+  );
+};
+
+/** Buraco irregular no teto (por onde a torrada saiu), com farelos caindo. */
+export const BuracoTeto: React.FC<{ x: number; y?: number; escala?: number; chao?: boolean }> = ({ x, y = 0, escala = 1, chao = false }) => {
+  const f = useCurrentFrame();
+  return (
+    <g transform={`translate(${x} ${y}) scale(${escala}) ${chao ? "scale(1 -1)" : ""}`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
+      <path d="M-170 0 L-140 70 L-90 50 L-60 120 L0 90 L50 130 L90 60 L140 80 L170 0 Z" fill="#2A1E16" />
+      {!chao &&
+        [0, 1, 2, 3].map((i) => {
+          const q = ((f + i * 11) % 40) / 40;
+          return <rect key={i} x={-80 + i * 50} y={110 + q * 500} width={14} height={14} rx={3} fill="#C9A06A" strokeWidth={3} opacity={1 - q} />;
+        })}
+    </g>
+  );
+};
+
+/** Luva de goleiro (o brinde). */
+export const LuvaGoleiro: React.FC<{ x: number; y: number; escala?: number; rot?: number }> = ({ x, y, escala = 1, rot = 0 }) => (
+  <g transform={`translate(${x} ${y}) scale(${escala}) rotate(${rot})`} stroke={TINTA} strokeWidth={8} strokeLinejoin="round">
+    <rect x={-90} y={40} width={180} height={110} rx={24} fill="#22A447" />
+    <path d="M-110 60 L-110 -60 Q -110 -90 -80 -90 Q -60 -90 -60 -60 L-60 -150 Q -60 -180 -30 -180 Q 0 -180 0 -150 L0 -170 Q 0 -200 30 -200 Q 60 -200 60 -170 L60 -140 Q 60 -170 90 -170 Q 120 -170 120 -140 L120 60 Z" fill="#FFD23F" />
+    <path d="M-60 -60 L-60 0 M0 -150 L0 0 M60 -140 L60 0" stroke={TINTA} strokeWidth={6} fill="none" />
+    <rect x={-90} y={70} width={180} height={30} fill="#fff" strokeWidth={5} />
+  </g>
+);
